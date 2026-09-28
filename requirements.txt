@@ -1,0 +1,11 @@
+openpyxl>=3.1.0
+rapidfuzz>=3.0.0
+requests>=2.31.0
+google-genai>=1.0.0
+python-dotenv>=1.0.0
+unstructured-transform-client>=1.0.0
+scikit-learn
+pypdfium2
+Pillow
+pywebview
+fastapi

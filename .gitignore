@@ -1,0 +1,53 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# ===== Virtual Environment =====
+venv/
+.venv/
+env/
+.env
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== Project-specific =====
+data/output/
+*.log
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local credentials, warehouse data, session history and generated artifacts
+.env.*
+!.env.example
+/data/
+/output/
+/CHAT/
+/scratch/
+scratch_*
+/dist_production/
+Check_out_this_chat.md
+*.db
+*.sqlite*
+*.pdf
+*.xlsx
+*.xls
+*.xlsm
+*.pem
+*.key
+.pytest_cache/
+/[{]classify_pair*
