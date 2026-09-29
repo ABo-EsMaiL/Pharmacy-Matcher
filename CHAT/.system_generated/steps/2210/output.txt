@@ -1,0 +1,105 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -379,7 +379,7 @@
+                 self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: false, error: \"{err_msg}\"}}}}));")
+ 
+     def get_process_result(self, process_id: str) -> dict:
+-        proc = self.db.get_process(process_id)
++        proc = self._db.get_process(process_id)
+         if proc:
+             proc['shortage_files'] = json.loads(proc['shortage_files'])
+             proc['warehouse_files'] = json.loads(proc['warehouse_files'])
+@@ -386,7 +386,7 @@
+         return {"success": False, "error": "Process not found"}
+ 
+     def open_excel(self, process_id: str) -> dict:
+-        proc = self.db.get_process(process_id)
++        proc = self._db.get_process(process_id)
+         if proc and proc.get('output_file') and os.path.exists(proc['output_file']):
+             try:
+                 os.startfile(proc['output_file'])
+@@ -396,7 +396,7 @@
+ 
+     def open_folder(self, process_id: str) -> dict:
+         try:
+-            folder = self.db.get_process_dir(process_id)
++            folder = self._db.get_process_dir(process_id)
+             if folder.exists():
+                 os.startfile(str(folder))
+                 return {"success": True}
+@@ -413,7 +413,7 @@
+             return {"success": False, "error": str(e)}
+ 
+     def apply_reviews(self, process_id: str) -> dict:
+-        proc = self.db.get_process(process_id)
++        proc = self._db.get_process(process_id)
+         if not proc or not proc.get('output_file') or not os.path.exists(proc['output_file']):
+             return {"success": False, "error": "ملف النتائج غير موجود"}
+             
+@@ -420,7 +420,7 @@
+             wb = openpyxl.load_workbook(proc['output_file'])
+             if 'يحتاج مراجعة' not in wb.sheetnames:
+                 return {"success": False, "error": "شيت المراجعة غير موجود"}
+-                
++            
+             review_ws = wb['يحتاج مراجعة']
+             not_found_ws = wb['لم يُعثر عليه'] if 'لم يُعثر عليه' in wb.sheetnames else None
+             
+@@ -472,7 +472,7 @@
+             new_review = remaining
+             status = 'completed' if remaining == 0 else 'reviewing'
+             
+-            self.db.update_process(
++            self._db.update_process(
+                 process_id,
+                 matched_count=new_matched,
+                 not_found_count=new_not_found,
+@@ -490,10 +490,10 @@
+             return {"success": False, "error": str(e)}
+ 
+     def get_history(self) -> str:
+-        return json.dumps(self.db.get_all_processes())
++        return json.dumps(self._db.get_all_processes())
+ 
+     def get_process_details(self, process_id: str) -> str:
+-        proc = self.db.get_process(process_id)
++        proc = self._db.get_process(process_id)
+         if proc:
+             proc['shortage_files'] = json.loads(proc['shortage_files'])
+             proc['warehouse_files'] = json.loads(proc['warehouse_files'])
+@@ -501,7 +501,7 @@
+ 
+     def delete_process(self, process_id: str) -> dict:
+         try:
+-            self.db.delete_process(process_id)
++            self._db.delete_process(process_id)
+             return {"success": True}
+         except Exception as e:
+             return {"success": False, "error": str(e)}
+@@ -508,6 +508,6 @@
+     def open_result_file(self, process_id: str) -> dict:
+         try:
+-            proc = self.db.get_process(process_id)
++            proc = self._db.get_process(process_id)
+             if proc and proc.get('output_file') and Path(proc['output_file']).exists():
+                 os.startfile(proc['output_file'])
+                 return {"success": True}
+@@ -516,7 +516,7 @@
+ 
+     def open_result_folder(self, process_id: str) -> dict:
+         try:
+-            proc_dir = self.db.get_process_dir(process_id)
++            proc_dir = self._db.get_process_dir(process_id)
+             if proc_dir.exists():
+                 os.startfile(str(proc_dir))
+                 return {"success": True}
+@@ -530,5 +530,5 @@
+         return self.open_result_folder(process_id)
+ 
+     def on_closing(self):
+-        self.server_manager.cleanup()
++        self._server_manager.cleanup()
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+req brand: ديكساتوبرين
+wh brand: ديكسا توبيرين
+fuzz ratio: 91.66666666666666
+token sort: 50.0
+first_r: ديكساتوبرين first_w: ديكسا
+first ratio: 62.5
+

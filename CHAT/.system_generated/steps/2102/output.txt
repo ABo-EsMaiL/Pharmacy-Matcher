@@ -1,0 +1,82 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1593,10 +1593,22 @@
+ 
+     const t = I18N[lang] || I18N.ar;
+ 
+-    // Update label on toggle button
++    // Update label on toggle button in sidebar
+     const labelEl = document.getElementById('lang-label');
+     if (labelEl) labelEl.textContent = t.lang_btn;
+ 
++    // Update top-bar pills
++    const pillAr = document.getElementById('pill-lang-ar');
++    const pillEn = document.getElementById('pill-lang-en');
++    if (pillAr) pillAr.classList.toggle('active', lang === 'ar');
++    if (pillEn) pillEn.classList.toggle('active', lang === 'en');
++
++    // Update settings language cards
++    const cardAr = document.getElementById('card-lang-ar');
++    const cardEn = document.getElementById('card-lang-en');
++    if (cardAr) cardAr.classList.toggle('active', lang === 'ar');
++    if (cardEn) cardEn.classList.toggle('active', lang === 'en');
++
+     // Update all elements with data-i18n
+     document.querySelectorAll('[data-i18n]').forEach(el => {
+         const key = el.getAttribute('data-i18n');
+@@ -1610,6 +1610,12 @@
+     const optBalanced = document.querySelector('#setting-unstructured-profile option[value="balanced"]');
+     if (optBalanced) optBalanced.textContent = t.opt_profile_balanced;
+ 
++    // Update active screen heading in top bar
++    const activeScreen = document.querySelector('.screen.active');
++    if (activeScreen) {
++        updateTopBarHeading(activeScreen.id);
++    }
++
+     // Update server status text if currently static
+     updateServerStatusTextOnly();
+ }
+@@ -1616,3 +1616,19 @@
++function updateTopBarHeading(screenId) {
++    const headingEl = document.getElementById('top-bar-heading');
++    if (!headingEl) return;
++    const t = I18N[currentLang] || I18N.ar;
++    const titles = {
++        'screen-new': t.new_title,
++        'screen-results': t.results_title,
++        'screen-history': t.history_title,
++        'screen-settings': t.settings_title,
++        'screen-logs': t.terminal_title
++    };
++    if (titles[screenId]) {
++        headingEl.textContent = titles[screenId];
++    }
++}
++
+ function toggleLanguage() {
+     setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+ }
+@@ -1619,6 +1619,7 @@
+ function updateServerStatusTextOnly() {
+     const text = document.getElementById('server-status-text');
+     const btn = document.getElementById('btn-toggle-server');
++    const topText = document.getElementById('top-bar-server-text');
+     const t = I18N[currentLang] || I18N.ar;
+     if (isServerRunning) {
+         if (text) text.textContent = t.server_running;
+@@ -1625,6 +1625,8 @@
+-    } else {
+-        if (text) text.textContent = t.server_stopped;
+-        if (btn) btn.innerHTML = `<i class="ph ph-play"></i> ${t.btn_start_server}`;
++        if (topText) topText.textContent = t.server_running;
++    } else {
++        if (text) text.textContent = t.server_stopped;
++        if (btn) btn.innerHTML = `<i class="ph ph-play"></i> ${t.btn_start_server}`;
++        if (topText) topText.textContent = t.server_stopped;
+     }
+ }
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

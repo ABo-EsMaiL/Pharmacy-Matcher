@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+75 cases: {'initial_start_timeout': 120.0, 'first_token_timeout': 240.0, 'stagnation_timeout': 120.0, 'stability_duration': 4.5, 'hard_ceiling': 480.0, 'tier': '51-75+ cases (75 cases)'}
+State 1: NO_RESPONSE_STARTED
+State 2: RESPONSE_IN_PROGRESS
+State 3: RESPONSE_COMPLETED
+

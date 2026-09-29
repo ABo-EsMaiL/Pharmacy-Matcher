@@ -1,0 +1,20 @@
+
+The command exited with code 0.
+Output:
+1. Servers info:
+{"servers": {"chatgpt": {"key": "chatgpt", "name": "MSEMAX (ChatGPT / OpenAI)", "running": true, "pid": null, "port": 8000, "dir": "D:\\AI_Engineer\\MSEMAX", "model": "gpt-4o", "url": "http://127.0.0.1:8000/v1/chat/completions", "is_active": false}, "gaistudio": {"key": "gaistudio", "name": "MSEMAX (Google AI Studio)", "running": false, "pid": null, "port": 8001, "dir": "D:\\AI_Engineer\\MSEMAX-GAIStudio", "model": "gemini-3.8-flash", "url": "http://127.0.0.1:8001/v1/chat/completions", "is_active": true}}, "active_server": "gaistudio", "current_url": "http://127.0.0.1:8001/v1/chat/completions", "current_model": "gemini-3.8-flash"}
+
+2. Initial Server logs:
+[]
+
+3. Testing stopped GAISTudio (port 8001):
+Result: {'success': False, 'latency_ms': 0, 'error': "السيرفر متوقف حالياً. يرجى الضغط على 'تشغيل السيرفر' أولاً ثم إعادة فحص الاتصال.", 'is_stopped': True, 'name': 'MSEMAX (Google AI Studio)', 'port': 8001}
+
+4. Server logs after test:
+[]
+
+5. Testing clear server logs:
+Cleared logs: []
+
+ALL VERIFICATIONS PASSED!
+

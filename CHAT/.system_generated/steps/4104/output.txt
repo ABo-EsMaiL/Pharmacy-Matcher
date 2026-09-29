@@ -1,0 +1,22 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+[لم يُعثر عليه] found 'فنتال': ('برونكولين اس بخاخ/فنتال', '0913.xlsx')
+[لم يُعثر عليه] found 'جرانتريل': ('جرانتريل 3مجم 6 امبول س ج', '0913.xlsx')
+[لم يُعثر عليه] found 'فنتال': ('فنتال بخاخ العربية', '0913.xlsx')
+[لم يُعثر عليه] found 'ليفانوكس': ('ليفانوكس2شريط س ج', '0913.xlsx')
+
+Form group check:
+ليفانوكس2شريط س ج -> form: tablet | brand: ليفانوكس
+ليفانوكس كبسول/باكت 200 -> form: None | brand: ليفانوكس
+
+Grantril check:
+جرانتريل 3مجم 6 امبول س ج -> form: injection | brand: جرانتريل
+جرانتيل امبول مجم تاريخ بعيد -> form: injection | brand: جرانتيل
+
+Vental check:
+فنتال بخاخ العربية -> form: spray | brand: فنتال العربيه
+فتال عادى بخاخ -> form: spray | brand: فتال عادى
+

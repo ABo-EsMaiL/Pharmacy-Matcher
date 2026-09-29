@@ -1,0 +1,789 @@
+{
+  "page": 2,
+  "items": [
+    {
+      "item_name_raw": "ايمباكوزا ٢٥مجم قرص",
+      "trade_name": "ايمباكوزا",
+      "strength": "٢٥مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايمباكوزا بلس ٥/١٠مجم ج/دولاب",
+      "trade_name": "ايمباكوزا بلس",
+      "strength": "٥/١٠مجم",
+      "form": "",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايمباكوزا تريو ١٠/٥/١٠٠٠مجم",
+      "trade_name": "ايمباكوزا تريو",
+      "strength": "١٠/٥/١٠٠٠مجم",
+      "form": "",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايموكسكلاف ١جم قرص",
+      "trade_name": "ايموكسكلاف",
+      "strength": "١جم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايموكسكلاف ٤٥٧ مجم شراب",
+      "trade_name": "ايموكسكلاف",
+      "strength": "٤٥٧ مجم",
+      "form": "شراب",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اينوديب كبسول/جلوب",
+      "trade_name": "اينوديب",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايه اى جى ايزوميبرازول ٤٠مجم ۲ شريط",
+      "trade_name": "ايه اى جى ايزوميبرازول",
+      "strength": "٤٠مجم",
+      "form": "شريط",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بارامول ١جم اقراص جديد",
+      "trade_name": "بارامول",
+      "strength": "١جم",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "باروفين ۳۰ قرص",
+      "trade_name": "باروفين",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "باروكسيتين ١٢,٥ مجم سى ار",
+      "trade_name": "باروكسيتين سى ار",
+      "strength": "١٢,٥ مجم",
+      "form": "",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بانادول ادفانس ٤ شريط",
+      "trade_name": "بانادول ادفانس",
+      "strength": "",
+      "form": "شريط",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بانثينول ۳۰ جم كريم /روتكس جديد",
+      "trade_name": "بانثينول روتكس",
+      "strength": "۳۰ جم",
+      "form": "كريم",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بانجيستازول ٤٠مجم اقراص جديد",
+      "trade_name": "بانجيستازول",
+      "strength": "٤٠مجم",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بايولجام ٦٠/١٠٠مجم٨قرص",
+      "trade_name": "بايولجام",
+      "strength": "٦٠/١٠٠مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برافاماكس ۲۰۰مجم اقراص",
+      "trade_name": "برافاماكس",
+      "strength": "۲۰۰مجم",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برافوتين ٣٠ كيس",
+      "trade_name": "برافوتين",
+      "strength": "",
+      "form": "كيس",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بران كبسول جديد ميباكو",
+      "trade_name": "بران ميباكو",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برايم روز بلاس كبسول جديد",
+      "trade_name": "برايم روز بلاس",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برناسورس مرهم ١٥ جرام",
+      "trade_name": "برناسورس",
+      "strength": "١٥ جرام",
+      "form": "مرهم",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برناسورس مرهم ۳۰ جرام جديد",
+      "trade_name": "برناسورس",
+      "strength": "۳۰ جرام",
+      "form": "مرهم",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بروباميثون كريم",
+      "trade_name": "بروباميثون",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بروتوفيكس ٤٠ مجم اقراص",
+      "trade_name": "بروتوفيكس",
+      "strength": "٤٠ مجم",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بروجست ۱۰۰ مجم كبسول",
+      "trade_name": "بروجست",
+      "strength": "۱۰۰ مجم",
+      "form": "كبسول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بروجستيرون ۱۰۰ مجم امبول",
+      "trade_name": "بروجستيرون",
+      "strength": "۱۰۰ مجم",
+      "form": "امبول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بروفين ٤٠٠ مجم قرص",
+      "trade_name": "بروفين",
+      "strength": "٤٠٠ مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بروفين ٦٠٠ مجم قرص",
+      "trade_name": "بروفين",
+      "strength": "٦٠٠ مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بروفين شراب جديد",
+      "trade_name": "بروفين",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برونتو بلس اقراص",
+      "trade_name": "برونتو بلس",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برونتوجست ۱۰۰ مجم امبول جديد",
+      "trade_name": "برونتوجست",
+      "strength": "۱۰۰ مجم",
+      "form": "امبول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برونتوجست ٤٠٠ مجم لبوس جديد",
+      "trade_name": "برونتوجست",
+      "strength": "٤٠٠ مجم",
+      "form": "لبوس",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برونكوبرو ريتارد",
+      "trade_name": "برونكوبرو ريتارد",
+      "strength": "",
+      "form": "",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برونكوبرو شراب",
+      "trade_name": "برونكوبرو",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برونكوبرو نقط",
+      "trade_name": "برونكوبرو",
+      "strength": "",
+      "form": "نقط",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برونكوبيونير بلس بخاخه",
+      "trade_name": "برونكوبيونير بلس",
+      "strength": "",
+      "form": "بخاخه",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بريجناستيب ١ مجم اقراص",
+      "trade_name": "بريجناستيب",
+      "strength": "١ مجم",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بريدوكايين ١٥جم كريم",
+      "trade_name": "بريدوكايين",
+      "strength": "١٥جم",
+      "form": "كريم",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بريزولين قطره",
+      "trade_name": "بريزولين",
+      "strength": "",
+      "form": "قطره",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برين باور ك/جنكوبيلوبا",
+      "trade_name": "برين باور جنكوبيلوبا",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "برينجو لوسيون / ماكرو",
+      "trade_name": "برينجو ماكرو",
+      "strength": "",
+      "form": "لوسيون",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بلوكاتينس ١٦٠/١٠ مجم اقراص جديد",
+      "trade_name": "بلوكاتينس",
+      "strength": "١٦٠/١٠ مجم",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بلوكاتينس ١٦٠/٥مجم قرص",
+      "trade_name": "بلوكاتينس",
+      "strength": "١٦٠/٥مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بلوكيوم ديو ١٥كبسوله",
+      "trade_name": "بلوكيوم ديو",
+      "strength": "",
+      "form": "كبسوله",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بنجرايد ۳۰ كبسول/ الاسراء",
+      "trade_name": "بنجرايد الاسراء",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بولى تار شامبو جديد",
+      "trade_name": "بولى تار",
+      "strength": "",
+      "form": "شامبو",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بولى فريش قطرة ادفانس",
+      "trade_name": "بولى فريش ادفانس",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بولى فريش اكسترا",
+      "trade_name": "بولى فريش اكسترا",
+      "strength": "",
+      "form": "",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بولى فريش قطرة عاديه",
+      "trade_name": "بولى فريش",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بونو فورت قرص",
+      "trade_name": "بونو فورت",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيبرا قرص ٤ شريط كببرر",
+      "trade_name": "بيبرا",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "انماكس حقنه شرجيه",
+      "trade_name": "انماكس",
+      "strength": "",
+      "form": "حقنه شرجيه",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "او ار اس اكياس جفاف",
+      "trade_name": "او ار اس",
+      "strength": "",
+      "form": "اكياس",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوبتامينس ١٥٠مجم قرص",
+      "trade_name": "اوبتامينس",
+      "strength": "١٥٠مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوبتست قطره",
+      "trade_name": "اوبتست",
+      "strength": "",
+      "form": "قطره",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوبتيريد قطره /جمجوم",
+      "trade_name": "اوبتيريد جمجوم",
+      "strength": "",
+      "form": "قطره",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوبيدال سيرم للشعر / ماكرو",
+      "trade_name": "اوبيدال ماكرو",
+      "strength": "",
+      "form": "سيرم",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوبيكس نيرف ۲۰ قرص",
+      "trade_name": "اوبيكس نيرف",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوترفين بيبى سالين",
+      "trade_name": "اوترفين بيبى سالين",
+      "strength": "",
+      "form": "",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوجرام ۱مجم ۲شريط",
+      "trade_name": "اوجرام",
+      "strength": "۱مجم",
+      "form": "شريط",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوجرام ٤٥٧مجم شراب",
+      "trade_name": "اوجرام",
+      "strength": "٤٥٧مجم",
+      "form": "شراب",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوجرام شراب ٦٤٢ مجم قديم",
+      "trade_name": "اوجرام",
+      "strength": "٦٤٢ مجم",
+      "form": "شراب",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوراكيور جل كبير",
+      "trade_name": "اوراكيور",
+      "strength": "",
+      "form": "جل",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اورسوفالك كبسول",
+      "trade_name": "اورسوفالك",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اورلى ۱۲۰ مجم كبسول",
+      "trade_name": "اورلى",
+      "strength": "۱۲۰ مجم",
+      "form": "كبسول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوروجارد ٦٠مل اسبراى",
+      "trade_name": "اوروجارد",
+      "strength": "٦٠مل",
+      "form": "اسبراى",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوروفيكس ٢٥٠مل اتش مضمضه",
+      "trade_name": "اوروفيكس اتش",
+      "strength": "٢٥٠مل",
+      "form": "مضمضه",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوروفيكس ٢٥٠مل قرنفل مضمضه",
+      "trade_name": "اوروفيكس قرنفل",
+      "strength": "٢٥٠مل",
+      "form": "مضمضه",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوروفيكس ٢٥٠مل نعناع مضمضه",
+      "trade_name": "اوروفيكس نعناع",
+      "strength": "٢٥٠مل",
+      "form": "مضمضه",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوستوماب اقراص",
+      "trade_name": "اوستوماب",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوستيوكير اقراص",
+      "trade_name": "اوستيوكير",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوكاربون اقراص",
+      "trade_name": "اوكاربون",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوكسيسيولا ۳۰قرص =سينترم",
+      "trade_name": "اوكسيسيولا سينترم",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اومنيفورا امبول",
+      "trade_name": "اومنيفورا",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اومنيك اوكايس قرص",
+      "trade_name": "اومنيك اوكايس",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوميباك ٢٠مجم ١٤ كبسوله",
+      "trade_name": "اوميباك",
+      "strength": "٢٠مجم",
+      "form": "كبسوله",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوميبيور نقط",
+      "trade_name": "اوميبيور",
+      "strength": "",
+      "form": "نقط",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوميجا 3 بلس جديد",
+      "trade_name": "اوميجا 3 بلس",
+      "strength": "",
+      "form": "",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوميز ٤٠ مجم اقراص جديد",
+      "trade_name": "اوميز",
+      "strength": "٤٠ مجم",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوندالينز ٤مجم لزقه",
+      "trade_name": "اوندالينز",
+      "strength": "٤مجم",
+      "form": "لزقه",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "اوندالينز٨مجم لزقه",
+      "trade_name": "اوندالينز",
+      "strength": "٨مجم",
+      "form": "لزقه",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايجيكوكسيب ۹۰ م ق ( ٩/٢٧ )",
+      "trade_name": "ايجيكوكسيب",
+      "strength": "۹۰ م",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايجيكيوستات بلس اقراص بديل مينالاكس",
+      "trade_name": "ايجيكيوستات بلس",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايراستابكس بلس ۲۰مجم قرص",
+      "trade_name": "ايراستابكس بلس",
+      "strength": "۲۰مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايراستابكس تريو ٠/٤٠/٢٥ ١قرص",
+      "trade_name": "ايراستابكس تريو",
+      "strength": "١٠/٤٠/٢٥",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايراستابكس تريو ١٢,٥/٥/٢٠قرص",
+      "trade_name": "ايراستابكس تريو",
+      "strength": "١٢,٥/٥/٢٠",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايراستابكس كو ٢٠/٥مجم قرص",
+      "trade_name": "ايراستابكس كو",
+      "strength": "٢٠/٥مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايراستابكس كو ٤٠/١٠ مجم قرص",
+      "trade_name": "ايراستابكس كو",
+      "strength": "٤٠/١٠ مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايراستابكس كو ٤٠/٥مجم قرص",
+      "trade_name": "ايراستابكس كو",
+      "strength": "٤٠/٥مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايروكسول مرهم",
+      "trade_name": "ايروكسول",
+      "strength": "",
+      "form": "مرهم",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايرولامين قرص",
+      "trade_name": "ايرولامين",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايريس ٥ مجم ۲ شريط",
+      "trade_name": "ايريس",
+      "strength": "٥ مجم",
+      "form": "شريط",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايزابريل ۲۰ مجم اقراص",
+      "trade_name": "ايزابريل",
+      "strength": "۲۰ مجم",
+      "form": "اقراص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايزابريل ۱۰ مجم قرص",
+      "trade_name": "ايزابريل",
+      "strength": "۱۰ مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايزامول سى - ۲ شريط جديد",
+      "trade_name": "ايزامول سى",
+      "strength": "",
+      "form": "شريط",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايزوبتن ٢٤٠ ريتارد ۳۰ قرص",
+      "trade_name": "ايزوبتن ريتارد",
+      "strength": "٢٤٠",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايزوجاست ٤٠ مجم ١٤ كبسول",
+      "trade_name": "ايزوجاست",
+      "strength": "٤٠ مجم",
+      "form": "كبسول",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايزوجاست ۲۰ مجم ١٤ كبسوله",
+      "trade_name": "ايزوجاست",
+      "strength": "۲۰ مجم",
+      "form": "كبسوله",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايفرزين كريم",
+      "trade_name": "ايفرزين",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ايمباكوزا ۱۰مجم قرص",
+      "trade_name": "ايمباكوزا",
+      "strength": "۱۰مجم",
+      "form": "قرص",
+      "source_page": 2,
+      "source_file": "كيور فارما خاص.pdf"
+    }
+  ]
+}

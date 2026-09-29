@@ -1,0 +1,13 @@
+
+The command exited with code 1.
+Output:
+
+   Id ProcessName MainWindowTitle
+   -- ----------- ---------------
+ 9568 cmd                        
+16324 powershell                 
+17536 powershell                 
+27848 powershell                 
+
+
+

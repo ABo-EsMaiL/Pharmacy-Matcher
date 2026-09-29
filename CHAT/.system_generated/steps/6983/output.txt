@@ -1,0 +1,94 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -147,6 +147,7 @@
+                 '.run-settings-panel mat-select',
+             ]
+             
++            # Wait a few seconds for selector to be attached/visible
+             model_select = None
+             for sel in selectors:
+                 loc = self.page.locator(sel)
+@@ -153,16 +153,23 @@
+-                    model_select = loc.first
+-                    break
+-                    
+-            if not model_select:
+-                all_selects = self.page.locator('mat-select:visible')
+-                cnt = await all_selects.count()
+-                for i in range(cnt):
+-                    s = all_selects.nth(i)
+-                    label = (await s.get_attribute("aria-label") or "").lower()
+-                    txt = (await s.inner_text() or "").lower()
+-                    if "model" in label or any(m in txt for m in ["gemini", "flash", "pro"]):
+-                        model_select = s
+-                        break
++                    try:
++                        await loc.first.wait_for(state="visible", timeout=3000)
++                        model_select = loc.first
++                        break
++                    except Exception:
++                        pass
++                    
++            if not model_select:
++                try:
++                    all_selects = self.page.locator('mat-select')
++                    cnt = await all_selects.count()
++                    for i in range(cnt):
++                        s = all_selects.nth(i)
++                        label = (await s.get_attribute("aria-label") or "").lower()
++                        txt = (await s.inner_text() or "").lower()
++                        if "model" in label or any(m in txt for m in ["gemini", "flash", "pro"]):
++                            model_select = s
++                            break
++                except Exception:
++                    pass
+                         
+             if not model_select:
+                 logger.debug(f"Model selector not found in AI Studio UI.")
+@@ -169,5 +169,6 @@
+ 
+             current_model = (await model_select.inner_text() or "").strip()
++            self.active_model = current_model
+             norm_target = target_model.lower().replace("gemini-", "").replace("gemini ", "").strip()
+             
+             if norm_target in current_model.lower() or target_model.lower() in current_model.lower():
+@@ -174,3 +174,4 @@
++                self.active_model = current_model
+                 return
+ 
+             logger.info(f"Changing Model from '{current_model}' to '{target_model}'...")
+@@ -191,6 +191,7 @@
+                     (norm_target.split("-")[0] in text_lower and "flash" in text_lower)):
+                     await opt.click()
+                     clicked = True
++                    self.active_model = text
+                     logger.info(f"Model successfully changed to '{text}'.")
+                     await asyncio.sleep(0.3)
+                     break
+@@ -216,6 +216,7 @@
+ 
+             if await thinking_select.count() > 0:
+                 current_thinking = (await thinking_select.first.inner_text() or "").strip()
++                self.active_thinking = current_thinking
+                 if THINKING_MODE.lower() not in current_thinking.lower():
+                     logger.info(f"Changing Thinking Level from '{current_thinking}' to '{THINKING_MODE}'...")
+                     await thinking_select.first.click()
+@@ -231,6 +231,7 @@
+                         if THINKING_MODE.lower() in text.lower():
+                             await opt.click()
+                             clicked = True
++                            self.active_thinking = text
+                             logger.info(f"Thinking Level set to '{text}'.")
+                             await asyncio.sleep(0.3)
+                             break
+@@ -238,6 +238,7 @@
+                         logger.warning(f"Could not find a Thinking Level option matching '{THINKING_MODE}'. Available: {available}")
+                         await self.page.keyboard.press("Escape")
+                 else:
++                    self.active_thinking = current_thinking
+                     logger.info(f"Thinking Level already verified as '{current_thinking}'.")
+         except Exception as e:
+             logger.warning(f"Failed to set Thinking Mode: {e}")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

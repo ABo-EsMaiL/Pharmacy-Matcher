@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Candidates found for 'ديكساتوبرين مرهم س ج':
+  - W_2: 'ابيكوبريد 5مجم س ع' (Score: 0.162, Brand Sim: 60.0)
+

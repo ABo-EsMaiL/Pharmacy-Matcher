@@ -1,0 +1,68 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Helper functions defined successfully.
+=== TEST PAIRS RESULTS ===
+[زنكترون 30كبسولة س ج]  <--->  [زنكترون اقراص باكت 160]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[ماريفان3مجم3شريط س ج]  <--->  [ماريفان ٣ مجم/جلاكسو]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[باروفين 30قرص س ج]  <--->  [باروفين ٢٠ قرص]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[ب ك ميرز كبسول س ج]  <--->  [ميرز كبسول/باكت 30]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[ديوراسيف  250مجم شراب س ج]  <--->  [ديوراسيف ٢٥٠ شراب/سكويب]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[ادولور 30مجم 3امبول]  <--->  [ادولور - ٣٠مجم/٢ مللي ٣ امبول]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[جوسبرين اقراص 3شريط]  <--->  [جوسبرين اقراص/اجفار]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[سيديبروكت كريم س ج]  <--->  [سيديبروك كريم/المهن]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[نيتروماك ريتارد2.5مجم كبسول]  <--->  [نيتروماك ريتارد كبسول/التنشيط]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[كلوسول سبراي س ج]  <--->  [كولوسول بخاخة/الاوروبيه]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[فانو كريم]  <--->  [فانو کریم/باکت 50]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[كوفي زنك شامبو]  <--->  [کوف زنگ شامپو ج]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[اسبوسيد 20قرص اطفال س ج]  <--->  [اسبوبسيد 75 مج اقراص/باكت 120]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[سينوبريل كواقراص س ج]  <--->  [سینوبریل 2 مجم اقراص/باکت 90]
+   -> Result: SEND TO LEVEL 3 (LLM/Review) (Reason: co_mismatch)
+
+[تادالاندرو5جم30قرص]  <--->  [تادالونج 5 مج 30 قرص/باکت 25]
+   -> Result: SEND TO LEVEL 3 (LLM/Review) (Reason: low_brand_sim)
+
+[بروتولوك40مجم اقراص س ج]  <--->  [کونترولوک ۴۰مجم اقراص]
+   -> Result: SEND TO LEVEL 3 (LLM/Review) (Reason: low_brand_sim)
+
+[برونكوفين شراب]  <--->  [برونفين 400مجم]
+   -> Result: SEND TO LEVEL 3 (LLM/Review) (Reason: syrup_solid_conflict)
+
+[كابرجامون 5مجم اقراص س ج]  <--->  [کابریامون ۰.۵ جم اقراص]
+   -> Result: SEND TO LEVEL 3 (LLM/Review) (Reason: strength_mismatch_5_vs_۰.۵)
+
+[سكينورين كريم]  <--->  [سکینوریتش کریم]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+
+[بالموكورت  25. مجم امبول س ج]  <--->  [بالمكيرت ربع]
+   -> Result: SEND TO LEVEL 3 (LLM/Review) (Reason: low_brand_sim)
+
+

@@ -1,0 +1,159 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\output\excel_writer.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -97,6 +97,38 @@
+     Args:
+         results: قاموس النتائج من المنسِّق (Coordinator) يحتوي على:
+             - warehouse_results: نتائج كل مخزن
++def _format_confidence(conf_raw: str) -> str:
++    """تحويل قيم درجة التطابق الإنجليزية والتقنية إلى مصطلحات عربية واضحة."""
++    if not conf_raw:
++        return ""
++    conf_str = str(conf_raw).strip()
++    conf_lower = conf_str.lower()
++    if conf_lower == "exact":
++        return "تطابق تام (100%)"
++    elif conf_lower == "llm":
++        return "مطابقة ذكية (AI)"
++    elif conf_lower.startswith("high"):
++        m = re.search(r"([\d\.]+)", conf_str)
++        if m:
++            pct = int(float(m.group(1)) * 100)
++            return f"تطابق نصي دقيق ({pct}%)"
++        return "تطابق نصي دقيق"
++    elif conf_str == "تأكيد يدوي (مراجعة)":
++        return conf_str
++    return conf_str
++
++
++def create_excel_report(results: dict, output_path: Path) -> Path:
++    """
++    إنشاء ملف Excel منظم يحتوي على:
++        - ملخص ديناميكي مربوط بمعادلات Excel التلقائية
++        - ورقة لكل مخزن تحتوي على المطابقات المؤكدة
++        - ورقة للأصناف التي تحتاج مراجعة
++        - ورقة للأصناف التي لم يُعثر عليها
++
++    المعاملات:
++        results: قاموس يحتوي على:
++            - warehouse_results: نتائج كل مخزن
+             - not_found: الأصناف غير الموجودة
+             - summary: ملخص إحصائي
+         output_path: مسار ملف Excel الناتج.
+@@ -103,7 +103,7 @@
+     wb = Workbook()
+ 
+     # ────────────────────────────────────────
+-    # ورقة الملخص
++    # ورقة الملخص (ديناميكية مربوطة بالمعادلات)
+     # ────────────────────────────────────────
+     ws_summary = wb.active
+     ws_summary.title = "ملخص"
+@@ -114,47 +114,57 @@
+     ws_summary.append(summary_headers)
+     _apply_header_style(ws_summary, len(summary_headers))
+ 
+-    total = summary.get("total_shortages", 0)
+-    matched = summary.get("matched_count", 0)
+-    not_found = summary.get("not_found_count", 0)
+-    review = summary.get("review_count", 0)
+-
+-    summary_data = [
+-        ["إجمالي الأصناف المطلوبة", total, ""],
+-        [
+-            "تم مطابقتها",
+-            matched,
+-            f"{matched / total * 100:.1f}%" if total > 0 else "0%",
+-        ],
+-        [
+-            "لم يُعثر عليها",
+-            not_found,
+-            f"{not_found / total * 100:.1f}%" if total > 0 else "0%",
+-        ],
+-        [
+-            "تحتاج مراجعة",
+-            review,
+-            f"{review / total * 100:.1f}%" if total > 0 else "0%",
+-        ],
+-        [],  # صف فارغ
+-        ["─── تفاصيل المخازن ───", "", ""],
+-    ]
+-    _add_data_rows(ws_summary, summary_data)
+-
+-    # تفاصيل كل مخزن
+-    detail_row = len(summary_data) + 3
+-    for wh_name, wh_data in warehouse_results.items():
+-        wh_matched = len(wh_data.get("matched", []))
+-        wh_review = len(wh_data.get("needs_review", []))
+-        ws_summary.cell(row=detail_row, column=1, value=wh_name).font = _CELL_FONT
+-        ws_summary.cell(
+-            row=detail_row, column=2, value=f"مطابق: {wh_matched}"
+-        ).font = _CELL_FONT
+-        ws_summary.cell(
+-            row=detail_row, column=3, value=f"مراجعة: {wh_review}"
+-        ).font = _CELL_FONT
++    # Row 2: إجمالي الأصناف المطلوبة = المطابقة + غير الموجود + المراجعة
++    ws_summary.append(["إجمالي الأصناف المطلوبة", "=B3+B4+B5", "100%"])
++
++    # Row 3: تم مطابقتها (مجموع مطابقة المخازن من جدول التفاصيل بالأسفل)
++    num_wh = len(warehouse_results)
++    wh_sum_formula = f"=SUM(B8:B{7 + num_wh})" if num_wh > 0 else "0"
++    ws_summary.append(["تم مطابقتها", wh_sum_formula, "=IF(B2>0, B3/B2, 0)"])
++
++    # Row 4: لم يُعثر عليها
++    ws_summary.append(["لم يُعثر عليها", "=MAX(0, COUNTA('لم يُعثر عليه'!A:A)-1)", "=IF(B2>0, B4/B2, 0)"])
++
++    # Row 5: تحتاج مراجعة
++    ws_summary.append(["تحتاج مراجعة", "=MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)", "=IF(B2>0, B5/B2, 0)"])
++
++    # Row 6: صف فارغ
++    ws_summary.append([])
++
++    # Row 7: جدول تفاصيل كل مخزن
++    ws_summary.append(["─── تفاصيل المخازن ───", "عدد المطابقات", "أصناف للمراجعة"])
++    for c_idx in range(1, 4):
++        c = ws_summary.cell(row=7, column=c_idx)
++        c.fill = _HEADER_FILL
++        c.font = _HEADER_FONT
++        c.alignment = _HEADER_ALIGNMENT
++        c.border = _THIN_BORDER
++
++    # صفوف المخازن (Rows 8+)
++    detail_row = 8
++    for wh_name in warehouse_results.keys():
++        sheet_name = _truncate_sheet_name(wh_name)
++        matched_formula = f"=MAX(0, COUNTA('{sheet_name}'!A:A)-1)"
++        review_formula = f'=COUNTIF(\'يحتاج مراجعة\'!D:D, "{wh_name}")'
++        ws_summary.append([wh_name, matched_formula, review_formula])
+         detail_row += 1
+ 
++    # تطبيق التنسيق والخطوط على كل خلايا الملخص
++    for r in range(2, detail_row):
++        if r == 6 or r == 7:
++            continue
++        for c in range(1, 4):
++            cell = ws_summary.cell(row=r, column=c)
++            cell.font = _CELL_FONT
++            cell.alignment = _CELL_ALIGNMENT
++            cell.border = _THIN_BORDER
++
++    # تنسيق النسب المئوية كـ %
++    ws_summary.cell(row=2, column=3).alignment = _CELL_ALIGNMENT
++    ws_summary.cell(row=3, column=3).number_format = "0.0%"
++    ws_summary.cell(row=4, column=3).number_format = "0.0%"
++    ws_summary.cell(row=5, column=3).number_format = "0.0%"
++
+     _format_sheet(ws_summary, len(summary_headers))
+ 
+     # ────────────────────────────────────────
+@@ -172,7 +172,7 @@
+         for match in matched_items:
+             shortage_name = match.get("shortage_item", "")
+             warehouse_item = match.get("warehouse_item", "")
+-            confidence = match.get("confidence", "")
++            confidence = _format_confidence(match.get("confidence", ""))
+             rows.append([shortage_name, warehouse_item, confidence])
+ 
+         _add_data_rows(ws_wh, rows)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

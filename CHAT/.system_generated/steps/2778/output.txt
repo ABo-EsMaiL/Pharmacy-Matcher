@@ -1,0 +1,38 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -431,14 +431,14 @@
+ 
+ /* -------------------- PROGRESS OVERLAY -------------------- */
+ #progress-modal {
+-    position: absolute; 
+-    top: 0; left: 0; right: 0; bottom: 0;
+-    width: 100%; height: 100%; 
+-    background: rgba(255, 255, 255, 0.85); 
+-    z-index: 9998; 
++    position: fixed; 
++    top: 0; left: 0; right: 0; bottom: 0;
++    width: 100vw; height: 100vh; 
++    background: rgba(15, 23, 42, 0.7); 
++    z-index: 99999; 
+     align-items: center; 
+     justify-content: center;
+-    backdrop-filter: blur(5px);
++    backdrop-filter: blur(6px);
+     display: none;
+ }
+ #progress-modal .progress-box {
+@@ -445,8 +445,8 @@
+     padding: 30px; 
+-    border-radius: 12px; 
+-    max-width: 500px; 
++    border-radius: 14px; 
++    max-width: 520px; 
+     width: 90%; 
+-    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
++    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35); 
+     text-align: center;
+ }
+ #progress-modal h3 {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

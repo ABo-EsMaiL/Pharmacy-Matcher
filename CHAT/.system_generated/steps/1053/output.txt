@@ -1,0 +1,37 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -173,7 +173,12 @@
+         else:
+             file_types = ('Shortage Files (*.pdf;*.xlsx;*.xls)', 'All Files (*.*)')
+         
+-        dialog_type = getattr(webview, 'FileDialog', webview).OPEN if hasattr(webview, 'FileDialog') else webview.OPEN_DIALOG
++        try:
++            from webview import FileDialog
++            dialog_type = FileDialog.OPEN
++        except ImportError:
++            import webview
++            dialog_type = webview.OPEN_DIALOG
+         
+         result = self.window.create_file_dialog(
+             dialog_type,
+@@ -190,8 +190,13 @@
+         if not self.window:
+             return ""
+             
+-        dialog_type = getattr(webview, 'FileDialog', webview).FOLDER if hasattr(webview, 'FileDialog') else webview.FOLDER_DIALOG
+-        
++        try:
++            from webview import FileDialog
++            dialog_type = FileDialog.FOLDER
++        except ImportError:
++            import webview
++            dialog_type = webview.FOLDER_DIALOG
++            
+         result = self.window.create_file_dialog(dialog_type)
+         if result and len(result) > 0:
+             return str(result[0])
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

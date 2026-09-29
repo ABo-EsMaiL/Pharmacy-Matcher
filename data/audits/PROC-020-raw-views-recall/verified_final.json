@@ -1,0 +1,2082 @@
+{
+  "summary": {
+    "pages": 46,
+    "warehouse_items": 2718,
+    "cases": 42,
+    "retrieved_targets": 40,
+    "candidate_pairs_before_gate": 114156,
+    "candidate_pairs": 131,
+    "no_candidate_cases": 1,
+    "retrieved_target_routes": {
+      "review": 7,
+      "match": 7,
+      "ambiguous": 26
+    },
+    "llm_calls": 0
+  },
+  "source_hashes": {
+    "data\\processes\\PROC-020\\cache\\vision\\السلام_شبين_d44b79aaae\\results\\page_1.json": "66ce518f159dac76b79dff8d65767c277dd145f100417c28ca135a7fa695e7b6",
+    "data\\processes\\PROC-020\\cache\\vision\\السلام_شبين_d44b79aaae\\results\\page_2.json": "fde9dfec026287761372cb33e04c8a8dfca8030cffb5d6bae3ff46dec33027cf",
+    "data\\processes\\PROC-020\\cache\\vision\\السلام_شبين_d44b79aaae\\results\\page_3.json": "c9b8033aae3472f547f003279e6fa87fdfd48ec371558640e2faa2bf80dfe84d",
+    "data\\processes\\PROC-020\\cache\\vision\\السلام_شبين_d44b79aaae\\results\\page_4.json": "be4ebd8cbd68e52ba6b0f00d8c3f5a8b5741f1d25f0ecae665cad5fc8d367420",
+    "data\\processes\\PROC-020\\cache\\vision\\السلام_شبين_d44b79aaae\\results\\page_5.json": "6f3608222136feeece87b8aa2fc60721b2b074dbc0a5e233728e95c4ce76cb79",
+    "data\\processes\\PROC-020\\cache\\vision\\السلام_شبين_d44b79aaae\\results\\page_6.json": "f3d3dae73a34d19269836af8055d880e7ff677ad7fde504bec8a0cc273932b1a",
+    "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_1.json": "2bd7c606eccf4aa713a0877cf4b4f5e6ba731e47e9a76f1b6ab1876661f901ab",
+    "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_2.json": "33221a46870e291db8cd288cd3c3d6df9e22050d8e9a98761bf29c0b13496a0e",
+    "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_3.json": "93015522e613a4a52e6e5e6199ca7f84eaa0548853ff0770268aef4c8da71554",
+    "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_4.json": "574a9a30fe8f694217ab7fc71628f6f209d4a2251dde880a4222b48fd77d50c8",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_1.json": "553b40baa9433112f7444e06b10f3d4acaca0a15a75e626c1c558bb1ce04b915",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_2.json": "c6a1b66fd7b1b7f82a74e1afcc35ae2885a72760b93a394dd54bd96f0e0c7aee",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_3.json": "54e44aee01342df728dd095eca32c85ed5377b8955d51d7bba611bb86ec1a8b6",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_4.json": "73e215e98df2fff4a381ee696ef0525baa5c5130cbb76ce3b74f5ff7a156435e",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_5.json": "a2379864b28cac65aa6d26c5526da1823a025b62a54949d0c8f85a6f11dc50d5",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_6.json": "6e53080442dfc483c758d2585710635a0ac69aecbeeb5783f583943eb736b31b",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_7.json": "a63a7fe7926a12a1430969432c0fcaeb737a217d5684efce6f731707430b8875",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_8.json": "55b795fab249c7e4da9b8da34647e9c9b4767bfa258699c9cb09a715821f1ef1",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_9.json": "66e14fd6c95e5a540a31f2c54d902b43d029a7c3d9ca14db3f83f2e07d105bf4",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_10.json": "1e849761486d44776084a5389e82dcfc4d8f90278764a3c1f1fb162b4aae6950",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_11.json": "d7d16647be384e2086338515b2c7ca208049a1480e60dcc30e960a2c2d898de1",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_12.json": "3f8617f761e0b91e6bc2568b30ad24ac425c98bd1d5827c51024026dc89acb7d",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_13.json": "826f7b1b4e6162542accbe07265cdd825afd3b077378e4fa4df7c3fd18f139f4",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_14.json": "98a655822ba89caf2422d30130454d0824f30e538fed83b0de87460e1e2c08e8",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_15.json": "e3f2d239ee36644373bb416c8c840648870d08f602908899ff7fd80602e09ce8",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_16.json": "766d581e2708a471e17e9056bc5a898ee03f7f02449300109d63fb2f4507d31e",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_17.json": "5757b59244faff0dc869fdd1eaf3a9669e17cc0b32d9fbf6d8c4d8b69866633e",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_18.json": "5eb26c2dc1fbe65f169cdddc0c2447de28204119b09e5ae13536251382255410",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_19.json": "a71073d171fdefa410741cd51de4d0fd8bdf0e2a3d9f3b27edfc084efe5eb88b",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_20.json": "53ddf497a523997bc0b2cb1b350d3396270c9623b6c13121aa47dfd572afa001",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_21.json": "6331efb36b4059465d58c67df81a14f0995c26f039a618596fc33db65a3619f9",
+    "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_22.json": "2c3948e25585577b590fce5c6d380061f84425264d295e7e54a3498de1d2f519",
+    "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json": "c2bf654a55f94475c47da8376e71a71c848c8774bd3c3f13d7da5e367ea90810",
+    "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_1.json": "358063a48ecb490cdb5ff8759eb001c9455de0464f0a0104ec071e69b6e47717",
+    "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_2.json": "e35c97921d5f0bf6dad2cd97eba429f498b100e5561dab4e8a80593517475206",
+    "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_3.json": "a732ef4e1b906426a3f3bdaaa33ab56fb6dba3a5d61d7229ea6165205447b60f",
+    "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_4.json": "3751c84783ec0e3ce5c6547c46c21b0588d486058f2dfb7d6525bca2c608090c",
+    "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_5.json": "55e8453e1dcea5c06b64811d1e770383a6a0a07988f84d16f56fe5e64bef430e",
+    "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_6.json": "372b45a5fc2dbe4074fae6e4a9b347e1584132fe5db54cf2686f02b14f82f858",
+    "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_7.json": "4fff227cb2e26cc003fa9c8defcc88c0a44f2714334abcf26f43cfbd6efc8d0a",
+    "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_8.json": "f9a64f06686531b122f0a0333fbc698da9f682ebc3defda7f7bf54c670f31540",
+    "data\\processes\\PROC-020\\cache\\vision\\مخزن_الحياة_فارم_اسكندريه_a10483ec7d\\results\\page_1.json": "739646639519d9fee9798d6817e8b42a4be14b461bf5aa53e7e89a9d73d824ba",
+    "data\\processes\\PROC-020\\cache\\vision\\مخزن_الحياة_فارم_اسكندريه_a10483ec7d\\results\\page_2.json": "3528389f8da7e97ef437ab5dbed2c83fd5b96d77c1f76953c4e26d486973a39e",
+    "data\\processes\\PROC-020\\cache\\vision\\مخزن_الحياة_فارم_اسكندريه_a10483ec7d\\results\\page_3.json": "7acc2c9f12087928e086abc1faf9a1dac70039d2726023a46906dea7929985e5",
+    "data\\processes\\PROC-020\\cache\\vision\\مخزن_الحياة_فارم_اسكندريه_a10483ec7d\\results\\page_4.json": "1045cd68c5619a931db09ad4bc92832cef702d8da5c17885ed12f7f149727bd7",
+    "data\\processes\\PROC-020\\cache\\vision\\مخزن_الحياة_فارم_اسكندريه_a10483ec7d\\results\\page_5.json": "5ba793cd6371c83ee4e44eda12f0b9e0b918ede616f2e031ae4c53ca9f143a48"
+  },
+  "results": [
+    {
+      "requested": "انوكسيكام 20مجم 20قرص س ج",
+      "target": {
+        "item_name_raw": "انوكسيكام لبوس باكت 54",
+        "trade_name": "انوكسيكام",
+        "strength": "",
+        "form": "لبوس",
+        "source_page": 3,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I0823"
+      },
+      "retrieved": true,
+      "views": [
+        "انوكسيكام"
+      ],
+      "target_trade": "انوكسيكام",
+      "route": [
+        "review",
+        "different_form_tablet_vs_suppository"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2008,
+          "insufficient_full_name_coverage": 709
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0823",
+          "raw": "انوكسيكام لبوس باكت 54",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "اوجرام457مجم بودره60مل",
+      "target": {
+        "item_name_raw": "اوجرام ٤٥٧مجم شراب",
+        "trade_name": "اوجرام",
+        "strength": "٤٥٧مجم",
+        "form": "شراب",
+        "source_page": 2,
+        "source_file": "كيور فارما خاص.pdf",
+        "id": "I1936"
+      },
+      "retrieved": true,
+      "views": [
+        "اوجرام"
+      ],
+      "target_trade": "اوجرام",
+      "route": [
+        "review",
+        "different_form_powder_vs_syrup"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 8,
+        "after_top_k": 8,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1575,
+          "insufficient_full_name_coverage": 1131,
+          "weak_full_name_character_evidence": 4
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0271",
+          "raw": "اوجرام ۱جم ١٤ قرص ١٥٢ج",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0834",
+          "raw": "اوجرام 1 جم 14 قرص /باكت 32",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0835",
+          "raw": "اوجرام 228 مج شراب/باكت 48",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0836",
+          "raw": "اوجرام 457 شراب 80 مل ج باكت 20",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0837",
+          "raw": "اوجرام 642 مج شراب قديم /باكت 48",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1935",
+          "raw": "اوجرام ۱مجم ۲شريط",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1936",
+          "raw": "اوجرام ٤٥٧مجم شراب",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1937",
+          "raw": "اوجرام شراب ٦٤٢ مجم قديم",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "اورامكس 30مل اسبراي س ج",
+      "target": {
+        "item_name_raw": "اورامكس بخاخ كبار/باكت 56",
+        "trade_name": "اورامكس",
+        "strength": "",
+        "form": "بخاخ",
+        "source_page": 4,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I0840"
+      },
+      "retrieved": true,
+      "views": [
+        "اورامكس"
+      ],
+      "target_trade": "اورامكس",
+      "route": [
+        "match",
+        "same_item_compatible_fields"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 4,
+        "after_top_k": 4,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1807,
+          "insufficient_full_name_coverage": 907
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0840",
+          "raw": "اورامكس بخاخ كبار/باكت 56",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0841",
+          "raw": "اورامكس بي سبراي/باكت 56",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0857",
+          "raw": "اوريكس سبراي/ باكت 56",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0302",
+          "raw": "اترا بكس ٤ كبسوله/ايبكس",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "ايجيكوستات بلس /مينالاكس",
+      "target": {
+        "item_name_raw": "ايجيكيوستات بلس اقراص بديل مينالاكس",
+        "trade_name": "ايجيكيوستات بلس",
+        "strength": "",
+        "form": "اقراص",
+        "source_page": 2,
+        "source_file": "كيور فارما خاص.pdf",
+        "id": "I1958"
+      },
+      "retrieved": true,
+      "views": [
+        "ايجيكوستات بلس مينالاكس",
+        "ايجيكوستات بلس"
+      ],
+      "target_trade": "ايجيكيوستات بلس",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "insufficient_full_name_coverage": 2587,
+          "full_name_edit_budget_exceeded": 130
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1958",
+          "raw": "ايجيكيوستات بلس اقراص بديل مينالاكس",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "ايفرزين لوشن",
+      "target": {
+        "item_name_raw": "ايفرزين كريم",
+        "trade_name": "ايفرزين",
+        "strength": "",
+        "form": "كريم",
+        "source_page": 2,
+        "source_file": "كيور فارما خاص.pdf",
+        "id": "I1974"
+      },
+      "retrieved": true,
+      "views": [
+        "ايفرزين"
+      ],
+      "target_trade": "ايفرزين",
+      "route": [
+        "review",
+        "different_form_topical_solution_vs_cream"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 7,
+        "after_top_k": 7,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1804,
+          "insufficient_full_name_coverage": 907
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0923",
+          "raw": "ايفرزين 24 قرص باكت 180",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0924",
+          "raw": "ايفرزين كريم/باكت 100",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1974",
+          "raw": "ايفرزين كريم",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1169",
+          "raw": "دايفوزين لوسيون /باكت 25",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0290",
+          "raw": "ایبریزین ۱۰ جم/ايبكو",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0291",
+          "raw": "ایبریزین نقط سعر ۲۹ ج",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1604",
+          "raw": "ليفرين كبسول/كرتونه192",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "بانثينول النيل2%كريم وسط",
+      "target": {
+        "item_name_raw": "بانثينول كريم كبييير سعر قدييم باكو 25",
+        "trade_name": "بانثينول",
+        "strength": "",
+        "form": "كريم",
+        "source_page": 1,
+        "source_file": "جملة العمروووو.pdf",
+        "id": "I1767"
+      },
+      "retrieved": true,
+      "views": [
+        "بانثينول النيل"
+      ],
+      "target_trade": "بانثينول",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 2,
+        "after_top_k": 2,
+        "rejected_reasons": {
+          "insufficient_full_name_coverage": 2060,
+          "full_name_edit_budget_exceeded": 656
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1767",
+          "raw": "بانثينول كريم كبييير سعر قدييم باكو 25",
+          "reason": "whole_token_extension_requires_adjudication"
+        },
+        {
+          "id": "I1889",
+          "raw": "بانثينول ۳۰ جم كريم /روتكس جديد",
+          "reason": "whole_token_extension_requires_adjudication"
+        }
+      ]
+    },
+    {
+      "requested": "برونشيكم شراب س ج",
+      "target": {
+        "item_name_raw": "برونشيكم شراب اليكسير/افنتس",
+        "trade_name": "برونشيكم",
+        "strength": "",
+        "form": "شراب",
+        "source_page": 1,
+        "source_file": "السلام شبين.pdf",
+        "id": "I0027"
+      },
+      "retrieved": true,
+      "views": [
+        "برونشيكم"
+      ],
+      "target_trade": "برونشيكم",
+      "route": [
+        "match",
+        "same_item_compatible_fields"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2059,
+          "insufficient_full_name_coverage": 658
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0027",
+          "raw": "برونشيكم شراب اليكسير/افنتس",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "بيتادين دش مهبلي س ج",
+      "target": {
+        "item_name_raw": "بيتادين مطهر/النيل",
+        "trade_name": "بيتادين",
+        "strength": "",
+        "form": "مطهر",
+        "source_page": 2,
+        "source_file": "السلام شبين.pdf",
+        "id": "I0041"
+      },
+      "retrieved": true,
+      "views": [
+        "بيتادين دش مهبلي",
+        "بيتادين"
+      ],
+      "target_trade": "بيتادين",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 9,
+        "after_top_k": 9,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1802,
+          "insufficient_full_name_coverage": 907
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0041",
+          "raw": "بيتادين مطهر/النيل",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I0042",
+          "raw": "بيتادين منظف جلد/النيل",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I0437",
+          "raw": "بيتادين غرغرة",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I0039",
+          "raw": "بيتاديرم كريم كبير",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I0040",
+          "raw": "بيتاديرم كريم/ايبيكو",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I0436",
+          "raw": "بيتاديرم كريم ١٥ جم س.ج ۱۸ ج",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I2028",
+          "raw": "بيتاديرم ١٥ جم كريم صغير",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I1549",
+          "raw": "كيتادان سبراى /باكت40",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I2319",
+          "raw": "فيتا دى ٣- ٤٠٠٠ مجم لصقات",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "بيتادين شامبو120مل س ج",
+      "target": {
+        "item_name_raw": "بيتادين مطهر/النيل",
+        "trade_name": "بيتادين",
+        "strength": "",
+        "form": "مطهر",
+        "source_page": 2,
+        "source_file": "السلام شبين.pdf",
+        "id": "I0041"
+      },
+      "retrieved": true,
+      "views": [
+        "بيتادين"
+      ],
+      "target_trade": "بيتادين",
+      "route": [
+        "review",
+        "structured_raw_fields_uncertain"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 9,
+        "after_top_k": 9,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1802,
+          "insufficient_full_name_coverage": 907
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0041",
+          "raw": "بيتادين مطهر/النيل",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0042",
+          "raw": "بيتادين منظف جلد/النيل",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0437",
+          "raw": "بيتادين غرغرة",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0039",
+          "raw": "بيتاديرم كريم كبير",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0040",
+          "raw": "بيتاديرم كريم/ايبيكو",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0436",
+          "raw": "بيتاديرم كريم ١٥ جم س.ج ۱۸ ج",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2028",
+          "raw": "بيتاديرم ١٥ جم كريم صغير",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1549",
+          "raw": "كيتادان سبراى /باكت40",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2319",
+          "raw": "فيتا دى ٣- ٤٠٠٠ مجم لصقات",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "بيتادين شامبو60مل س ج",
+      "target": {
+        "item_name_raw": "بيتادين مطهر/النيل",
+        "trade_name": "بيتادين",
+        "strength": "",
+        "form": "مطهر",
+        "source_page": 2,
+        "source_file": "السلام شبين.pdf",
+        "id": "I0041"
+      },
+      "retrieved": true,
+      "views": [
+        "بيتادين"
+      ],
+      "target_trade": "بيتادين",
+      "route": [
+        "review",
+        "structured_raw_fields_uncertain"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 9,
+        "after_top_k": 9,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1802,
+          "insufficient_full_name_coverage": 907
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0041",
+          "raw": "بيتادين مطهر/النيل",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0042",
+          "raw": "بيتادين منظف جلد/النيل",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0437",
+          "raw": "بيتادين غرغرة",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0039",
+          "raw": "بيتاديرم كريم كبير",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0040",
+          "raw": "بيتاديرم كريم/ايبيكو",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0436",
+          "raw": "بيتاديرم كريم ١٥ جم س.ج ۱۸ ج",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2028",
+          "raw": "بيتاديرم ١٥ جم كريم صغير",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1549",
+          "raw": "كيتادان سبراى /باكت40",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2319",
+          "raw": "فيتا دى ٣- ٤٠٠٠ مجم لصقات",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "بيدرو اسبراي مطهر س ق",
+      "target": {
+        "item_name_raw": "بيدرو سبراى للفم /باكت 96",
+        "trade_name": "بيدرو",
+        "strength": "",
+        "form": "سبراى",
+        "source_page": 7,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1025"
+      },
+      "retrieved": true,
+      "views": [
+        "بيدرو مطهر ق",
+        "بيدرو",
+        "بيدرو ق"
+      ],
+      "target_trade": "بيدرو",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 2,
+        "after_top_k": 2,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1583,
+          "insufficient_full_name_coverage": 1131,
+          "weak_full_name_character_evidence": 2
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1025",
+          "raw": "بيدرو سبراى للفم /باكت 96",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I1026",
+          "raw": "بيدرو غسول/بليزا",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "بيدرو كريم تفتيح",
+      "target": {
+        "item_name_raw": "بيدرو غسول/بليزا",
+        "trade_name": "بيدرو",
+        "strength": "",
+        "form": "غسول",
+        "source_page": 7,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1026"
+      },
+      "retrieved": true,
+      "views": [
+        "بيدرو تفتيح",
+        "بيدرو"
+      ],
+      "target_trade": "بيدرو",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 2,
+        "after_top_k": 2,
+        "rejected_reasons": {
+          "insufficient_full_name_coverage": 2211,
+          "full_name_edit_budget_exceeded": 502,
+          "weak_full_name_character_evidence": 3
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1025",
+          "raw": "بيدرو سبراى للفم /باكت 96",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I1026",
+          "raw": "بيدرو غسول/بليزا",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "دابسوكيرل 50مجم جيل",
+      "target": {
+        "item_name_raw": "دابسوكيريل جيل 30 جم",
+        "trade_name": "دابسوكيريل",
+        "strength": "30 جم",
+        "form": "جيل",
+        "source_page": 10,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1160"
+      },
+      "retrieved": true,
+      "views": [
+        "دابسوكيرل"
+      ],
+      "target_trade": "دابسوكيريل",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2008,
+          "insufficient_full_name_coverage": 709
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1160",
+          "raw": "دابسوكيريل جيل 30 جم",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "ديكلوفين 100مجم5لبوسة كبار ث س ج",
+      "target": {
+        "item_name_raw": "ديكلوفين امبول سعر جديد ٣٦ ج",
+        "trade_name": "ديكلوفين",
+        "strength": "",
+        "form": "امبول",
+        "source_page": 2,
+        "source_file": "المكرومي المنصورة.pdf",
+        "id": "I0345"
+      },
+      "retrieved": true,
+      "views": [
+        "ديكلوفين 5 كبار ث",
+        "ديكلوفين 5 ث"
+      ],
+      "target_trade": "ديكلوفين",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2008,
+          "insufficient_full_name_coverage": 709
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0345",
+          "raw": "ديكلوفين امبول سعر جديد ٣٦ ج",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "ديورافوس 1 امبول",
+      "target": {
+        "item_name_raw": "ديورافوس امبول = ديبروفوس",
+        "trade_name": "ديورافوس",
+        "strength": "",
+        "form": "امبول",
+        "source_page": 4,
+        "source_file": "كيور فارما خاص.pdf",
+        "id": "I2082"
+      },
+      "retrieved": true,
+      "views": [
+        "ديورافوس"
+      ],
+      "target_trade": "ديورافوس",
+      "route": [
+        "match",
+        "same_item_compatible_fields"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2059,
+          "insufficient_full_name_coverage": 658
+        }
+      },
+      "candidates": [
+        {
+          "id": "I2082",
+          "raw": "ديورافوس امبول = ديبروفوس",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "ريبايون اسبراي",
+      "target": {
+        "item_name_raw": "ريبايون ان جيل بديل ريباريل ٥٠ جم",
+        "trade_name": "ريبايون ان",
+        "strength": "٥٠ جم",
+        "form": "جيل",
+        "source_page": 2,
+        "source_file": "المكرومي المنصورة.pdf",
+        "id": "I0357"
+      },
+      "retrieved": true,
+      "views": [
+        "ريبايون"
+      ],
+      "target_trade": "ريبايون ان",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1810,
+          "insufficient_full_name_coverage": 907
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0357",
+          "raw": "ريبايون ان جيل بديل ريباريل ٥٠ جم",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "زانوجليد4/30اقراص س ج",
+      "target": {
+        "item_name_raw": "زانوجليد 4 مج اقراص/ باكت 60",
+        "trade_name": "زانوجليد",
+        "strength": "4 مج",
+        "form": "اقراص",
+        "source_page": 12,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1253"
+      },
+      "retrieved": true,
+      "views": [
+        "زانوجليد 4"
+      ],
+      "target_trade": "زانوجليد",
+      "route": [
+        "ambiguous",
+        "missing_product_variant"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2059,
+          "insufficient_full_name_coverage": 658
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1253",
+          "raw": "زانوجليد 4 مج اقراص/ باكت 60",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "زوفيراكس10 مجم كريم جلد س ج",
+      "target": {
+        "item_name_raw": "زوفيراكس شراب/باكو24",
+        "trade_name": "زوفيراكس",
+        "strength": "",
+        "form": "شراب",
+        "source_page": 3,
+        "source_file": "مخزن الحياة فارم اسكندريه-170.pdf",
+        "id": "I2611"
+      },
+      "retrieved": true,
+      "views": [
+        "زوفيراكس جلد",
+        "زوفيراكس"
+      ],
+      "target_trade": "زوفيراكس",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 6,
+        "after_top_k": 6,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2054,
+          "insufficient_full_name_coverage": 658
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0093",
+          "raw": "زوفيراكس شراب/جلاكسو",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I0094",
+          "raw": "زوفيراكس ٤٠٠مجم اقراص/جلاكسو",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I2110",
+          "raw": "زوفيراكس ۱۰۰ مل شراب",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I2611",
+          "raw": "زوفيراكس شراب/باكو24",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I0633",
+          "raw": "موبيراكس مرهم كبير ۱۱۸ ج",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I2455",
+          "raw": "موبيراكس مرهم",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "سولو لوسيون مرطب",
+      "target": {
+        "item_name_raw": "سولو لوسيون/باكت 25",
+        "trade_name": "سولو",
+        "strength": "",
+        "form": "لوسيون",
+        "source_page": 13,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1307"
+      },
+      "retrieved": true,
+      "views": [
+        "سولو مرطب",
+        "سولو"
+      ],
+      "target_trade": "سولو",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 2,
+        "after_top_k": 2,
+        "rejected_reasons": {
+          "insufficient_full_name_coverage": 2503,
+          "full_name_edit_budget_exceeded": 213
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1306",
+          "raw": "سولو كريم 60 جم/باكت 12",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I1307",
+          "raw": "سولو لوسيون/باكت 25",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "سيبروفلوكساسين محلول وريدي",
+      "target": {
+        "item_name_raw": "بيروفلوكساسين 500 مج قرص اورجانو",
+        "trade_name": "بيروفلوكساسين",
+        "strength": "500 مج",
+        "form": "قرص",
+        "source_page": 13,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1320"
+      },
+      "retrieved": true,
+      "views": [
+        "سيبروفلوكساسين"
+      ],
+      "target_trade": "بيروفلوكساسين",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 3,
+        "after_top_k": 3,
+        "rejected_reasons": {
+          "insufficient_full_name_coverage": 2300,
+          "full_name_edit_budget_exceeded": 415
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1321",
+          "raw": "سيبروفلوكساسين 750 مج اورجانو",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1320",
+          "raw": "بيروفلوكساسين 500 مج قرص اورجانو",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1108",
+          "raw": "تينوفلوكساسين اقراص ج باكت 200",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "سيفيتيل 1جم",
+      "target": {
+        "item_name_raw": "سيفيتيل اجم اقراص فوار",
+        "trade_name": "سيفيتيل",
+        "strength": "اجم",
+        "form": "اقراص فوار",
+        "source_page": 5,
+        "source_file": "كيور فارما خاص.pdf",
+        "id": "I2266"
+      },
+      "retrieved": true,
+      "views": [
+        "سيفيتيل"
+      ],
+      "target_trade": "سيفيتيل",
+      "route": [
+        "review",
+        "structured_raw_fields_uncertain"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 2,
+        "after_top_k": 2,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1809,
+          "insufficient_full_name_coverage": 907
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0606",
+          "raw": "سيفيتيل فوار ايبكو",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2266",
+          "raw": "سيفيتيل اجم اقراص فوار",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "سينوبريل كواقراص س ج",
+      "target": {
+        "item_name_raw": "سينوبريل كو اقراص/جلوبال باكت 90",
+        "trade_name": "سينوبريل كو",
+        "strength": "",
+        "form": "اقراص",
+        "source_page": 14,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1352"
+      },
+      "retrieved": true,
+      "views": [
+        "سينوبريل كو"
+      ],
+      "target_trade": "سينوبريل كو",
+      "route": [
+        "match",
+        "same_item_compatible_fields"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 3,
+        "after_top_k": 3,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2057,
+          "insufficient_full_name_coverage": 658
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1352",
+          "raw": "سينوبريل كو اقراص/جلوبال باكت 90",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1351",
+          "raw": "سينوبريل 5 مجم اقراص/باكت 90",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1350",
+          "raw": "سينوبريت اقراص عادى/باكت150",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "فلابو 600 اقراص",
+      "target": {
+        "item_name_raw": "فلابو نقط/دلتا فارم",
+        "trade_name": "فلابو",
+        "strength": "",
+        "form": "نقط",
+        "source_page": 4,
+        "source_file": "السلام شبين.pdf",
+        "id": "I0112"
+      },
+      "retrieved": true,
+      "views": [
+        "فلابو"
+      ],
+      "target_trade": "فلابو",
+      "route": [
+        "review",
+        "different_form_tablet_vs_drops"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "insufficient_full_name_coverage": 2211,
+          "full_name_edit_budget_exceeded": 506
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0112",
+          "raw": "فلابو نقط/دلتا فارم",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "فيتا دي ثري4000ميكروفيلم",
+      "target": {
+        "item_name_raw": "فيتا د 3 4000 لزقة باكت 200",
+        "trade_name": "فيتا د 3",
+        "strength": "4000",
+        "form": "لزقة",
+        "source_page": 15,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1429"
+      },
+      "retrieved": false,
+      "views": [
+        "فيتا دي ثري 4000 ميكروفيلم"
+      ],
+      "target_trade": "فيتا د 3",
+      "route": [
+        "reject",
+        "no_meaningful_name_evidence"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 0,
+        "after_top_k": 0,
+        "rejected_reasons": {
+          "insufficient_full_name_coverage": 2588,
+          "full_name_edit_budget_exceeded": 130
+        }
+      },
+      "candidates": []
+    },
+    {
+      "requested": "فيتا زنك  كبسول",
+      "target": {
+        "item_name_raw": "فيتازنك ان كبسول\\ايبيكو",
+        "trade_name": "فيتازنك ان",
+        "strength": "",
+        "form": "كبسول",
+        "source_page": 15,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1431"
+      },
+      "retrieved": true,
+      "views": [
+        "فيتا زنك"
+      ],
+      "target_trade": "فيتازنك ان",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1810,
+          "insufficient_full_name_coverage": 907
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1431",
+          "raw": "فيتازنك ان كبسول\\ايبيكو",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "قرفة بالجنزبيل ايزيس",
+      "target": {
+        "item_name_raw": "ايزيس زنجبيل بالقرفه 12 فلتر",
+        "trade_name": "ايزيس زنجبيل بالقرفه",
+        "strength": "",
+        "form": "فلتر",
+        "source_page": 5,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I0901"
+      },
+      "retrieved": true,
+      "views": [
+        "قرفه بالجنزبيل ايزيس",
+        "قرفه جنزبيل ايزيس"
+      ],
+      "target_trade": "ايزيس زنجبيل بالقرفه",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 3,
+        "after_top_k": 3,
+        "rejected_reasons": {
+          "insufficient_full_name_coverage": 2587,
+          "full_name_edit_budget_exceeded": 128
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0901",
+          "raw": "ايزيس زنجبيل بالقرفه 12 فلتر",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I0902",
+          "raw": "ايزيس زنجبيل بالقرفه 20 فلتر جديد",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I0907",
+          "raw": "ايزيس قرفه صغير باكو 144",
+          "reason": "whole_token_extension_requires_adjudication"
+        }
+      ]
+    },
+    {
+      "requested": "كارنيتول بلس برطمان س ج",
+      "target": {
+        "item_name_raw": "كارنيتول بلس كبسول جديد",
+        "trade_name": "كارنيتول بلس",
+        "strength": "",
+        "form": "كبسول",
+        "source_page": 6,
+        "source_file": "كيور فارما خاص.pdf",
+        "id": "I2357"
+      },
+      "retrieved": true,
+      "views": [
+        "كارنيتول بلس برطمان",
+        "كارنيتول بلس"
+      ],
+      "target_trade": "كارنيتول بلس",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 6,
+        "after_top_k": 6,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2054,
+          "insufficient_full_name_coverage": 658
+        }
+      },
+      "candidates": [
+        {
+          "id": "I2357",
+          "raw": "كارنيتول بلس كبسول جديد",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I2358",
+          "raw": "كارنيتول ٥٠٠ مجم ۳۰ ك\"جديد",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I1466",
+          "raw": "كارديلول 25 مج اقراص/باكت48",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I1467",
+          "raw": "كارديلول 6.25 سى اى اقراص",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I2660",
+          "raw": "كارديلول6.25مجم اقراص",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I2507",
+          "raw": "ال كارنتين بلس كبسول/باكو30",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "كانديكيور لبوس مهبلي",
+      "target": {
+        "item_name_raw": "كاندكيور كريم عادي/باكت 10",
+        "trade_name": "كاندكيور",
+        "strength": "",
+        "form": "كريم",
+        "source_page": 17,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1488"
+      },
+      "retrieved": true,
+      "views": [
+        "كانديكيور مهبلي",
+        "كانديكيور"
+      ],
+      "target_trade": "كاندكيور",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2008,
+          "insufficient_full_name_coverage": 709
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1488",
+          "raw": "كاندكيور كريم عادي/باكت 10",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "لاكسيول بي ملين اقراص",
+      "target": {
+        "item_name_raw": "لاكسيول بي ۲ شريط",
+        "trade_name": "لاكسيول بي",
+        "strength": "",
+        "form": "",
+        "source_page": 7,
+        "source_file": "كيور فارما خاص.pdf",
+        "id": "I2420"
+      },
+      "retrieved": true,
+      "views": [
+        "لاكسيول بي ملين",
+        "لاكسيول بي"
+      ],
+      "target_trade": "لاكسيول بي",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2008,
+          "insufficient_full_name_coverage": 709
+        }
+      },
+      "candidates": [
+        {
+          "id": "I2420",
+          "raw": "لاكسيول بي ۲ شريط",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "لبن بيبيلاك 3 بيبي جونيور",
+      "target": {
+        "item_name_raw": "بيبيلاك 3 بيبي جونيور/باكت 12 تشغيل",
+        "trade_name": "بيبيلاك 3 بيبي جونيور",
+        "strength": "",
+        "form": "",
+        "source_page": 7,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1017"
+      },
+      "retrieved": true,
+      "views": [
+        "بيبيلاك 3 بيبي جونيور"
+      ],
+      "target_trade": "بيبيلاك 3 بيبي جونيور",
+      "route": [
+        "match",
+        "same_item_compatible_fields"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "insufficient_full_name_coverage": 2524,
+          "full_name_edit_budget_exceeded": 193
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1017",
+          "raw": "بيبيلاك 3 بيبي جونيور/باكت 12 تشغيل",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "ليليبل10مجم اقراص",
+      "target": {
+        "item_name_raw": "ليلبيل اكياس /باكت42",
+        "trade_name": "ليلبيل",
+        "strength": "",
+        "form": "اكياس",
+        "source_page": 19,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1610"
+      },
+      "retrieved": true,
+      "views": [
+        "ليليبل"
+      ],
+      "target_trade": "ليلبيل",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1586,
+          "insufficient_full_name_coverage": 1131
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1610",
+          "raw": "ليلبيل اكياس /باكت42",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "ماريفان3مجم3شريط س ج",
+      "target": {
+        "item_name_raw": "ماريفان 3 مجم/جلاكسو",
+        "trade_name": "ماريفان",
+        "strength": "3 مجم",
+        "form": "",
+        "source_page": 5,
+        "source_file": "السلام شبين.pdf",
+        "id": "I0152"
+      },
+      "retrieved": true,
+      "views": [
+        "ماريفان"
+      ],
+      "target_trade": "ماريفان",
+      "route": [
+        "match",
+        "same_item_compatible_fields"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 3,
+        "after_top_k": 3,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1808,
+          "insufficient_full_name_coverage": 907
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0151",
+          "raw": "ماريفان 1ملجم/جلاكسو",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0152",
+          "raw": "ماريفان 3 مجم/جلاكسو",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0153",
+          "raw": "ماريفان 5 ملجم/جلاكسو",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "موفليكس نانو اسبراي",
+      "target": {
+        "item_name_raw": "موف ليكس سبراى /باكت41",
+        "trade_name": "موف ليكس",
+        "strength": "",
+        "form": "سبراى",
+        "source_page": 20,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1646"
+      },
+      "retrieved": true,
+      "views": [
+        "موفليكس نانو",
+        "موفليكس"
+      ],
+      "target_trade": "موف ليكس",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 4,
+        "after_top_k": 4,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1807,
+          "insufficient_full_name_coverage": 907
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1646",
+          "raw": "موف ليكس سبراى /باكت41",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I0639",
+          "raw": "موفلوكس ٤٠٠ مجم",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I1647",
+          "raw": "موفلوكس 400 مج اقراص /باكت 40",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I2460",
+          "raw": "موفلوكس ٤٠٠ مجم - ۲ شريط",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "ميلجا ماكس30قرص",
+      "target": {
+        "item_name_raw": "ليمتلس ميلجا ماكس",
+        "trade_name": "ليمتلس ميلجا ماكس",
+        "strength": "",
+        "form": "",
+        "source_page": 7,
+        "source_file": "كيور فارما خاص.pdf",
+        "id": "I2448"
+      },
+      "retrieved": true,
+      "views": [
+        "ميلجا ماكس"
+      ],
+      "target_trade": "ليمتلس ميلجا ماكس",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 9,
+        "after_top_k": 9,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2001,
+          "insufficient_full_name_coverage": 708
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0642",
+          "raw": "ميجاموكس ۱جم ۱۷۸ ج جديد",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0643",
+          "raw": "ميجاموكس ۲۲۸ شراب",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0644",
+          "raw": "ميجاموكس ٦٢٥ اقراص/التنشيط",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0645",
+          "raw": "ميجاموكس ٦٤٢ شراب",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1662",
+          "raw": "ميجاموكس 1 جم اقراص /باكت 120",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1663",
+          "raw": "ميجاموكس 228 مج شراب/باكت 48",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1664",
+          "raw": "ميجاموكس 457 مج شراب/باكت 48",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2699",
+          "raw": "ميجاموكس1مجم اقراص / باكت120",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2448",
+          "raw": "ليمتلس ميلجا ماكس",
+          "reason": "whole_token_extension_requires_adjudication"
+        }
+      ]
+    },
+    {
+      "requested": "ميوكوسول شراب اطفال س ج",
+      "target": {
+        "item_name_raw": "ميوكوسول كبسول/ باكت 20",
+        "trade_name": "ميوكوسول",
+        "strength": "",
+        "form": "كبسول",
+        "source_page": 20,
+        "source_file": "الهضبة الاثنين نقدى0.pdf",
+        "id": "I1683"
+      },
+      "retrieved": true,
+      "views": [
+        "ميوكوسول اطفال",
+        "ميوكوسول"
+      ],
+      "target_trade": "ميوكوسول",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 2,
+        "after_top_k": 2,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2058,
+          "insufficient_full_name_coverage": 658
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1683",
+          "raw": "ميوكوسول كبسول/ باكت 20",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I1682",
+          "raw": "ميوكوستا اقراص /باكت 12",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "ناتريلكس اس ار 30قرص س ج",
+      "target": {
+        "item_name_raw": "ناتريليكس اس ار سعرجديد",
+        "trade_name": "ناتريليكس اس ار",
+        "strength": "",
+        "form": "",
+        "source_page": 5,
+        "source_file": "مخزن الحياة فارم اسكندريه-170.pdf",
+        "id": "I2702"
+      },
+      "retrieved": true,
+      "views": [
+        "ناتريلكس"
+      ],
+      "target_trade": "ناتريليكس اس ار",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 2,
+        "after_top_k": 2,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2059,
+          "insufficient_full_name_coverage": 657
+        }
+      },
+      "candidates": [
+        {
+          "id": "I2702",
+          "raw": "ناتريليكس اس ار سعرجديد",
+          "reason": "raw_name_fallback"
+        },
+        {
+          "id": "I0527",
+          "raw": "ماتريكس ۳۰ قرص/سعر جديد",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "نيتروماك ريتارد2.5مجم كبسول",
+      "target": {
+        "item_name_raw": "نيتروماك ريتارد كبسول/التنشيط",
+        "trade_name": "نيتروماك ريتارد",
+        "strength": "",
+        "form": "كبسول",
+        "source_page": 5,
+        "source_file": "السلام شبين.pdf",
+        "id": "I0172"
+      },
+      "retrieved": true,
+      "views": [
+        "نيتروماك"
+      ],
+      "target_trade": "نيتروماك ريتارد",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 2,
+        "after_top_k": 2,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2059,
+          "insufficient_full_name_coverage": 657
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1699",
+          "raw": "نيتروماك 5 مج اقراص/باكت 60",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0172",
+          "raw": "نيتروماك ريتارد كبسول/التنشيط",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "نيتروماك ريتارد2.5مجم كبسول س ج",
+      "target": {
+        "item_name_raw": "نيتروماك ريتارد كبسول/التنشيط",
+        "trade_name": "نيتروماك ريتارد",
+        "strength": "",
+        "form": "كبسول",
+        "source_page": 5,
+        "source_file": "السلام شبين.pdf",
+        "id": "I0172"
+      },
+      "retrieved": true,
+      "views": [
+        "نيتروماك"
+      ],
+      "target_trade": "نيتروماك ريتارد",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 2,
+        "after_top_k": 2,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2059,
+          "insufficient_full_name_coverage": 657
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1699",
+          "raw": "نيتروماك 5 مج اقراص/باكت 60",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0172",
+          "raw": "نيتروماك ريتارد كبسول/التنشيط",
+          "reason": "raw_name_fallback"
+        }
+      ]
+    },
+    {
+      "requested": "نيفيلوب12.5/5مجم بلاس20قرص",
+      "target": {
+        "item_name_raw": "نيفيلوب بلس ١٢٫٥/٥مجم قرص",
+        "trade_name": "نيفيلوب بلس",
+        "strength": "١٢٫٥/٥مجم",
+        "form": "قرص",
+        "source_page": 7,
+        "source_file": "كيور فارما خاص.pdf",
+        "id": "I2407"
+      },
+      "retrieved": true,
+      "views": [
+        "نيفيلوب بلاس"
+      ],
+      "target_trade": "نيفيلوب بلس",
+      "route": [
+        "match",
+        "same_item_compatible_fields"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 10,
+        "after_top_k": 10,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1802,
+          "insufficient_full_name_coverage": 906
+        }
+      },
+      "candidates": [
+        {
+          "id": "I1705",
+          "raw": "نيفيلوب 5/25 مج بلاس اقراص",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0667",
+          "raw": "نيفيلوب ٢,٥ سعر جديد ٤٦ ج",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0668",
+          "raw": "نيفيلوب ٥ ساده سعر جديد",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1703",
+          "raw": "نيفيلوب 2.5 مج اقراص ج/باكت 48",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I1704",
+          "raw": "نيفيلوب 5 مج قرص عادى/باكت 48",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2404",
+          "raw": "نيفيلوب ٢٫٥مجم قرص",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2405",
+          "raw": "نيفيلوب ٥ مجم اقراص",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2407",
+          "raw": "نيفيلوب بلس ١٢٫٥/٥مجم قرص",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2408",
+          "raw": "نيفيلوب بلس ٥/٢٥ مجم قرص",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2406",
+          "raw": "نيفيلوب املو ٥/٥مجم ۳۰ قرص",
+          "reason": "whole_token_extension_requires_adjudication"
+        }
+      ]
+    },
+    {
+      "requested": "هيدروكين 200مجم 20قرص س ج",
+      "target": {
+        "item_name_raw": "هيدروكين\\مينا",
+        "trade_name": "هيدروكين",
+        "strength": "",
+        "form": "",
+        "source_page": 5,
+        "source_file": "السلام شبين.pdf",
+        "id": "I0177"
+      },
+      "retrieved": true,
+      "views": [
+        "هيدروكين"
+      ],
+      "target_trade": "هيدروكين",
+      "route": [
+        "ambiguous",
+        "missing_strength"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 2,
+        "after_top_k": 2,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2058,
+          "insufficient_full_name_coverage": 658
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0177",
+          "raw": "هيدروكين\\مينا",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2472",
+          "raw": "هيدروسيف اكياس جديد",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "هيرو دي3+كي2 نقط",
+      "target": {
+        "item_name_raw": "هيرو فى اى دى ثرى كيه نقط\"جديد",
+        "trade_name": "هيرو فى اى دى ثرى كيه",
+        "strength": "",
+        "form": "نقط",
+        "source_page": 8,
+        "source_file": "كيور فارما خاص.pdf",
+        "id": "I2482"
+      },
+      "retrieved": false,
+      "views": [
+        "هيرو دي 3 كي 2"
+      ],
+      "target_trade": "هيرو فى اى دى ثرى كيه",
+      "route": [
+        "reject",
+        "no_meaningful_name_evidence"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 3,
+        "after_top_k": 3,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 2057,
+          "insufficient_full_name_coverage": 658
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0680",
+          "raw": "هيرو بيبي ١",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I0681",
+          "raw": "هيرو بيبي ٢",
+          "reason": "full_name_evidence"
+        },
+        {
+          "id": "I2478",
+          "raw": "هيرو بيبي ١ عادى",
+          "reason": "full_name_evidence"
+        }
+      ]
+    },
+    {
+      "requested": "ون تو ثري 20قرص س ج",
+      "target": {
+        "item_name_raw": "وان تو ثرى شراب\\الكان فارما",
+        "trade_name": "وان تو ثرى",
+        "strength": "",
+        "form": "شراب",
+        "source_page": 5,
+        "source_file": "السلام شبين.pdf",
+        "id": "I0179"
+      },
+      "retrieved": true,
+      "views": [
+        "ون تو ثري"
+      ],
+      "target_trade": "وان تو ثرى",
+      "route": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ],
+      "diagnostics": {
+        "before_gate": 2718,
+        "after_gate": 1,
+        "after_top_k": 1,
+        "rejected_reasons": {
+          "full_name_edit_budget_exceeded": 1810,
+          "insufficient_full_name_coverage": 907
+        }
+      },
+      "candidates": [
+        {
+          "id": "I0179",
+          "raw": "وان تو ثرى شراب\\الكان فارما",
+          "reason": "full_name_evidence"
+        }
+      ]
+    }
+  ]
+}

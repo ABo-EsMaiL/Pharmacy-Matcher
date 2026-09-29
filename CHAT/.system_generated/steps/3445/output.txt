@@ -1,0 +1,83 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -205,6 +205,12 @@
+ 
+         items = parse_structured_result(result_data, filepath.name)
+ 
++        if len(items) == 0 and gemini_api_key:
++            print(f"[*] 0 items from Unstructured for {filepath.name}. Trying Gemini fallback...")
++            items = _extract_with_gemini_fallback(filepath, gemini_api_key)
++            if items:
++                result_data = {"extracted_data": [{"data": {"items": items}}]}
++
+         # Cache only if items extracted
+         if len(items) > 0:
+             with open(cache_file, "w", encoding="utf-8") as f:
+@@ -223,6 +223,64 @@
+ 
+     except Exception as e:
+         print(f"[!] Extraction error for {filepath.name}: {e}")
++        if gemini_api_key:
++            print(f"[*] Trying Gemini fallback extraction for {filepath.name}...")
++            items = _extract_with_gemini_fallback(filepath, gemini_api_key)
++            if items:
++                res_dict = {"extracted_data": [{"data": {"items": items}}]}
++                try:
++                    with open(cache_file, "w", encoding="utf-8") as f:
++                        json.dump(res_dict, f, ensure_ascii=False, indent=2, default=str)
++                    with open(filepath.with_suffix(".json"), "w", encoding="utf-8") as f:
++                        json.dump(res_dict, f, ensure_ascii=False, indent=2, default=str)
++                    print(f"[+] Saved valid local cache via Gemini for: {filepath.name} ({len(items)} items)")
++                except Exception:
++                    pass
++                return items
++        return []
++
++
++def _extract_with_gemini_fallback(filepath: Path, gemini_api_key: str) -> list[dict]:
++    """Fallback extraction using Gemini 3.6 Flash if Unstructured fails or returns unparseable content."""
++    try:
++        from google import genai
++        from google.genai import types
++        print(f"[*] Calling Gemini 3.6 Flash fallback for {filepath.name}...")
++        client = genai.Client(api_key=gemini_api_key)
++        with open(filepath, "rb") as f:
++            pdf_bytes = f.read()
++
++        prompt = (
++            "Extract all drug product names from this pharmacy invoice/catalog PDF.\n"
++            "Preserve the correct Arabic drug names, dosage forms and strengths.\n"
++            "Return JSON with a list of items:\n"
++            "{\"items\": [{\"item_name_raw\": \"...\", \"source_page\": 1}]}"
++        )
++        response = client.models.generate_content(
++            model="gemini-3.6-flash",
++            contents=[
++                types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf"),
++                prompt
++            ],
++            config=types.GenerateContentConfig(
++                response_mime_type="application/json"
++            )
++        )
++        data = json.loads(response.text)
++        raw_items = data.get("items", [])
++        items = []
++        for it in raw_items:
++            name = it.get("item_name_raw")
++            if name:
++                items.append({
++                    "item_name_raw": str(name).strip(),
++                    "source_page": it.get("source_page", 1),
++                    "source_file": filepath.name
++                })
++        print(f"[+] Gemini fallback successfully extracted {len(items)} items from {filepath.name}")
++        return items
++    except Exception as gemini_err:
++        print(f"[!] Gemini fallback failed for {filepath.name}: {gemini_err}")
+         return []
+ 
+ def parse_structured_result(result_data: dict, filename: str) -> list[dict]:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

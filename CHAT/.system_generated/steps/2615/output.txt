@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Current DB state:
+  ('PROC-002', 'reviewing', 993, 19, 552, 20)
+  ('PROC-003', 'processing', 200, 127, 44, 14)
+
+After update:
+  ('PROC-002', 'reviewing')
+  ('PROC-003', 'reviewing')
+

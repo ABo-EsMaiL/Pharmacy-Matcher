@@ -1,0 +1,24 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+[*] Processing PDF file: السلام شبين.pdf
+[+] Loaded 187 items from alongside JSON: السلام شبين.json
+Total unique shortages: 591
+Warehouse items: 187
+Threshold 0.10: 591 shortage items have candidates
+Threshold 0.20: 567 shortage items have candidates
+Threshold 0.25: 474 shortage items have candidates
+Threshold 0.30: 330 shortage items have candidates
+Threshold 0.35: 188 shortage items have candidates
+Threshold 0.40: 105 shortage items have candidates
+Threshold 0.45: 56 shortage items have candidates
+Threshold 0.50: 36 shortage items have candidates
+

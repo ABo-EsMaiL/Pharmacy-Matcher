@@ -1,0 +1,36 @@
+{
+  "process_id": "PROC-018",
+  "checks": {
+    "blocked: دولفين 50مجم لبوس 2شريط -> دولفين 25لبوس 2شريط/باكو90": true,
+    "blocked: دولفين 12.5مجم لبوس 2شريط س ق -> دولفين 25لبوس 2شريط/باكو90": true,
+    "blocked: لبن هيرو بيبي 2 -> هيرو بيبي ١ عادى": true,
+    "Flavisef 30ml -> 60ml MATCH": true,
+    "all_matches_pass_python": true,
+    "all_reviews_pass_python": true,
+    "all_identity_audit_is_unverified": true,
+    "all_unique_shortages_accounted_for": true,
+    "batch_75_search_off_thinking_high": true,
+    "no_rejected_candidate_sent_to_llm": true,
+    "source_process_unchanged": true,
+    "run_used_current_code": true,
+    "excel_match_count": true,
+    "excel_missing_count": true,
+    "excel_review_count": true,
+    "excel_identity_audit_count": true,
+    "excel_regression_flavisef": true
+  },
+  "passed": true,
+  "summary": {
+    "total_shortages": 993,
+    "unique_shortages": 591,
+    "matched_count": 68,
+    "not_found_count": 130,
+    "review_count": 31,
+    "brand_identity_unverified_count": 388
+  },
+  "identity_audit_pairs": 1867,
+  "llm_batches": 19,
+  "unique_matched": 56,
+  "unique_review_only": 17,
+  "unique_unverified_only": 388
+}

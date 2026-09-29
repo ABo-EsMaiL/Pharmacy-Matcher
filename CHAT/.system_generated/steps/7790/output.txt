@@ -1,0 +1,29 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -567,6 +567,7 @@
+         case_count = len(inputs.get("cases", []))
+         read_timeout = max(300, case_count * 6 + 120)
+         
++        t_call_start = time.time()
+         try:
+             response = http_requests.post(
+                 url,
+@@ -581,6 +581,15 @@
+             self._log_provider_error(url, model, inputs, str(conn_err), "NETWORK_CONNECTION_FAILED")
+             raise RuntimeError(f"Connection to local LLM failed ({url}): {conn_err}")
+ 
++        t_call_dur = time.time() - t_call_start
++        pre_exec = response.headers.get("X-Timing-PreExec", "N/A")
++        gen_time = response.headers.get("X-Timing-Generation", "N/A")
++        gw_total = response.headers.get("X-Timing-Total", "N/A")
++        logger.info(
++            f"[{case_count} cases] Local API roundtrip: {t_call_dur:.2f}s | "
++            f"Gateway Pre-exec: {pre_exec} | Model Gen: {gen_time} | Gateway Total: {gw_total}"
++        )
++
+         if response.status_code != 200:
+             err_msg = f"HTTP {response.status_code}: {response.text[:300]}"
+             self._log_provider_error(url, model, inputs, response.text, f"HTTP_{response.status_code}")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

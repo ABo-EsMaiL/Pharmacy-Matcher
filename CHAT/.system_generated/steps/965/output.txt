@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+796: <button class="nav-item" onclick="showScreen('screen-settings', this)">
+978: <div id="screen-settings" class="screen">
+

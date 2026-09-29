@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+1. Parsing document with client.parse.run(document=f)...
+Traceback (most recent call last):
+  File "d:\AI_Engineer\Pharmacy-agy\test_two_step.py", line 48, in <module>
+    parsed = client.parse.run(document=f, wait_seconds=600)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: _Parse.run() got an unexpected keyword argument 'document'
+

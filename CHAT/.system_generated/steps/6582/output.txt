@@ -1,0 +1,56 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\server_manager.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -157,24 +157,32 @@
+                         f'netstat -ano | findstr ":{self.port} "',
+                         shell=True, capture_output=True, text=True
+                     )
+-                    for line in res.stdout.strip().splitlines():
+-                        parts = line.strip().split()
+-                        if len(parts) >= 5 and "LISTENING" in line:
+-                            pid = parts[-1]
+-                            r_kill = subprocess.run(['taskkill', '/F', '/PID', pid], capture_output=True, text=True)
+-                            if "Access is denied" in r_kill.stderr:
+-                                try:
+-                                    import ctypes
+-                                    self.log(f"Process {pid} requires elevation. Requesting administrator kill...")
+-                                    ctypes.windll.shell32.ShellExecuteW(
+-                                        None, "runas", "cmd.exe", f"/c taskkill /F /PID {pid}", None, 0
+-                                    )
+-                                except Exception:
+-                                    pass
+-                except Exception:
+-                    pass
+-
+-            time.sleep(0.5)
++                    pids_to_kill = set()
++                    for line in res.stdout.strip().splitlines():
++                        parts = line.strip().split()
++                        if len(parts) >= 5 and "LISTENING" in line:
++                            pids_to_kill.add(parts[-1])
++
++                    pids_needing_elevation = set()
++                    for pid in pids_to_kill:
++                        r_kill = subprocess.run(['taskkill', '/F', '/PID', pid], capture_output=True, text=True)
++                        if "Access is denied" in r_kill.stderr or r_kill.returncode != 0:
++                            pids_needing_elevation.add(pid)
++
++                    if pids_needing_elevation:
++                        try:
++                            import ctypes
++                            pid_args = " ".join([f"/PID {p}" for p in pids_needing_elevation])
++                            self.log(f"Process {pid_args} requires administrator privileges. Requesting elevation...")
++                            ctypes.windll.shell32.ShellExecuteW(
++                                None, "runas", "cmd.exe", f"/c taskkill /F {pid_args}", None, 0
++                            )
++                        except Exception as ce:
++                            self.log(f"Elevation request failed: {ce}")
++                except Exception as e:
++                    self.log(f"Error checking port {self.port}: {e}")
++
++            time.sleep(1.2)
+             if is_port_listening(self.port):
+                 self.log(f"⚠️ Port {self.port} is still in use by an external elevated process.")
+                 return {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

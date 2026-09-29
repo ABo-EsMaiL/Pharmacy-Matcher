@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+['.env', '.env.example', '.github', 'app.py', 'chrome_profile', 'docker-compose.yml', 'Dockerfile', 'get_session.py', 'LICENSE', 'mse.bat', 'pow_solver.py', 'README.md', 'requirements.txt', 'session_data.json', '__pycache__']
+

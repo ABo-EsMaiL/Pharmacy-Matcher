@@ -1,0 +1,11 @@
+    def add_log(self, message: str):
+        self.logs.append(message)
+        if len(self.logs) > 1000:
+            self.logs.pop(0)
+        
+        if self.window:
+            try:
+                safe_msg = message.replace("'", "\\'").replace('\n', '\\n').replace('\r', '')
+                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('new_log', {{detail: '{safe_msg}'}}));")
+            except:
+

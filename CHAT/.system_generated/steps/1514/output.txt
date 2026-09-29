@@ -1,0 +1,25 @@
+
+The command exited with code 0.
+Output:
+Job ID: c62b0beb-a35a-47eb-adae-f0f788a8678d
+Initial result type: <class 'unstructured_transform_client._generated.models.job_accepted.JobAccepted'>
+Initial result dict/dump: {'id': 'c62b0beb-a35a-47eb-adae-f0f788a8678d', 'status': 'queued', 'poll_url': '/api/v2/jobs/c62b0beb-a35a-47eb-adae-f0f788a8678d', 'profile': None, 'prompt': None, 'source': {'file_id': 'جملة-العمروووو-40aed4e7.pdf', 'filename': 'جملة العمروووو.pdf', 'mimetype': 'application/pdf', 'expires_at': datetime.datetime(2026, 9, 23, 10, 10, 14, 329428, tzinfo=TzInfo(0))}}
+Polling 0: JobStatus.PROCESSING
+Polling 1: JobStatus.PROCESSING
+Polling 2: JobStatus.PROCESSING
+Polling 3: JobStatus.PROCESSING
+Polling 4: JobStatus.PROCESSING
+Polling 5: JobStatus.PROCESSING
+Polling 6: JobStatus.PROCESSING
+Polling 7: JobStatus.PROCESSING
+Polling 8: JobStatus.COMPLETED
+Completed data keys: dict_keys(['id', 'status', 'filename', 'file_id', 'cancellation_requested', 'source', 'error', 'result'])
+Key: id, Type: <class 'str'>, Val preview: c62b0beb-a35a-47eb-adae-f0f788a8678d
+Key: status, Type: <enum 'JobStatus'>, Val preview: JobStatus.COMPLETED
+Key: filename, Type: <class 'str'>, Val preview: جملة العمروووو.pdf
+Key: file_id, Type: <class 'str'>, Val preview: جملة-العمروووو-40aed4e7.pdf
+Key: cancellation_requested, Type: <class 'bool'>, Val preview: False
+Key: source, Type: <class 'dict'>, Val preview: {'file_id': 'جملة-العمروووو-40aed4e7.pdf', 'filename': 'جملة العمروووو.pdf', 'mimetype': 'application/pdf', 'expires_at': datetime.datetime(2026, 9, 23, 10, 10, 14, 329428, tzinfo=TzInfo(0))}
+Key: error, Type: <class 'NoneType'>, Val preview: None
+Key: result, Type: <class 'dict'>, Val preview: {'id': 'c62b0beb-a35a-47eb-adae-f0f788a8678d', 'status': <TransformStatus.COMPLETED: 'completed'>, 'profile': 'balanced', 'markdown': 'مخزن العمرو فارما للأدوية و المستلزمات الطبية بالجملة\nشارع الادي
+

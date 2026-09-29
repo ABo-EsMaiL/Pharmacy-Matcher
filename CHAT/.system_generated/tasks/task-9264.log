@@ -1,0 +1,21 @@
+Testing MultiServerManager with ChatGPT...
+[MSEMAX (ChatGPT / OpenAI)] Starting server in D:\AI_Engineer\MSEMAX on port 8000 with D:\miniconda3\envs\venv\python.exe...
+[MSEMAX (ChatGPT / OpenAI)] Server process started successfully (PID: 33632).
+Start result: {'success': True, 'message': 'started', 'pid': 33632, 'port': 8000}
+Server listening after 0.5s
+is_running: True
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Will watch for changes in these directories: ['D:\\AI_Engineer\\MSEMAX']
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Started reloader process [33632] using WatchFiles
+Server status: {'key': 'chatgpt', 'name': 'MSEMAX (ChatGPT / OpenAI)', 'running': True, 'is_managed': True, 'is_external': False, 'pid': 33632, 'port': 8000, 'dir': 'D:\\AI_Engineer\\MSEMAX', 'model': 'gpt-4o', 'url': 'http://127.0.0.1:8000/v1/chat/completions', 'is_active': True}
+[MSEMAX (ChatGPT / OpenAI)] Stopping MSEMAX (ChatGPT / OpenAI) on port 8000...
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Started server process [33200]
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Waiting for application startup.
+[MSEMAX (ChatGPT / OpenAI)] 2026-09-25 14:14:22,799 - msemax.api - INFO - Starting up MSEMAX FastAPI server...
+[MSEMAX (ChatGPT / OpenAI)] 2026-09-25 14:14:22,799 - msemax.api - INFO - Rate limit: 10/minute | Max concurrent: 3
+[MSEMAX (ChatGPT / OpenAI)] 2026-09-25 14:14:22,814 - msemax.pow - INFO - [POW] ProcessPool started with 4 workers
+[MSEMAX (ChatGPT / OpenAI)] 2026-09-25 14:14:22,814 - msemax.api - INFO - Concurrency semaphore initialized: max 3 simultaneous requests
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Application startup complete.
+[MSEMAX (ChatGPT / OpenAI)] MSEMAX (ChatGPT / OpenAI) stopped successfully.
+Stop result: {'success': True, 'message': 'stopped'}
+Post-stop is_running: False

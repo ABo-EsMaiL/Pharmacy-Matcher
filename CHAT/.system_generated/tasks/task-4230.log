@@ -1,0 +1,6 @@
+Successfully scheduled one-shot timer.
+Expected to fire at: 2026-09-23T02:02:56+03:00
+Prompt: Wait for task-4222
+Early Termination: 916274de-7f92-49fc-a0a8-d291664b474a/task-4222
+
+[2026-09-23T02:02:56+03:00] Timer fired.

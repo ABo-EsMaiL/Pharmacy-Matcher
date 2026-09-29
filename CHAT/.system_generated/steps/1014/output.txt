@@ -1,0 +1,20 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\file_handler.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -78,7 +78,7 @@
+     return items
+ 
+ 
+-def _process_json_file(filepath: Path) -> list[dict]:
++def _process_json_file(filepath: Path, gemini_api_key: str | None = None) -> list[dict]:
+     """Process cached Unstructured JSON to save API limits."""
+     with open(filepath, "r", encoding="utf-8-sig") as f:
+         data = json.load(f)
+@@ -85,4 +85,4 @@
+-    items = parse_items_from_response(data)
++    items = parse_items_from_response(data, gemini_api_key)
+     
+     doc_name = filepath.name
+     if isinstance(data, dict):
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

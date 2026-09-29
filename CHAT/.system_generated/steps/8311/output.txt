@@ -1,0 +1,50 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -477,14 +477,26 @@
+                                 "warehouse_item": warehouse_item,
+                                 "reason": reason
+                             })
+-                        print(f"      [✓] Batch {chunk_name} ({len(cases_chunk)} items) done: {matched_in_chunk} matched, {review_in_chunk} review.")
++                        meta = getattr(self, "last_batch_meta", {})
++                        search_flag = meta.get("search_enabled", "false")
++                        tool_calls = meta.get("tool_calls", "0")
++                        thinking_lvl = meta.get("thinking_level", "High")
++                        gen_time = meta.get("gen_time", "N/A")
++                        no_match_in_chunk = len(cases_chunk) - (matched_in_chunk + review_in_chunk)
++
++                        print(f"      [✓] Batch {chunk_name} ({len(cases_chunk)} items) done in {gen_time}:")
++                        print(f"          - Google Search: {search_flag.upper()} | Tool Calls: {tool_calls} | Thinking: {thinking_lvl}")
++                        print(f"          - Results: {matched_in_chunk} matched, {review_in_chunk} review, {no_match_in_chunk} no_match.")
+                         return parsed
+                     except Exception as e:
++                        last_error = e
+                         err_str = str(e)
++                        if "too_many_tool_calls" in err_str.lower():
++                            print(f"      [!] CRITICAL: too_many_tool_calls error on batch {chunk_name}: {err_str}")
+                         if "session might be expired" in err_str or "Session expired" in err_str:
+                             print(f"      [!] خطأ في جلسة MSEMAX: انتهت صلاحية الجلسة على السيرفر.")
+                             print(f"      [!] يرجى تشغيل python get_session.py في مجلد MSEMAX لتحديث الجلسة.")
+-                            break
++                            raise RuntimeError(f"Session expired on Batch {chunk_name}: {e}")
+                         if "413" in err_str and len(cases_chunk) > 20:
+                             mid = len(cases_chunk) // 2
+                             print(f"      [!] 413 Payload too large on batch {chunk_name}. Adaptively splitting into ({mid} + {len(cases_chunk)-mid})...")
+@@ -497,11 +497,13 @@
+                             time.sleep(5)
+                         elif "STAGNATION_TIMEOUT" in err_str or "FIRST_TOKEN_TIMEOUT" in err_str or "HARD_CEILING_TIMEOUT" in err_str:
+                             print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} timed out after model turn started ({e}). Aborting batch without retry.")
+-                            break
++                            raise RuntimeError(f"Batch {chunk_name} timed out: {e}")
+                         else:
+                             print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} error: {e}")
+                             time.sleep(5)
+-                return [{"shortage_name": c["requested_name"], "status": "no_match", "warehouse_item": "", "reason": ""} for c in cases_chunk]
++                # NO SILENT FALLBACK TO NO_MATCH! Surface provider failure clearly.
++                print(f"      [X] PROVIDER FAILURE on Batch {chunk_name} after {max_retries} attempts ({last_error}).")
++                raise RuntimeError(f"Provider failed on Batch {chunk_name}: {last_error}")
+ 
+             for idx, batch in enumerate(batches):
+                 print(f"      [*] Sending Batch {idx + 1}/{len(batches)} ({len(batch)} items)...")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

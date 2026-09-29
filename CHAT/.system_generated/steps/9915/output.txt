@@ -1,0 +1,28 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\server_manager.py","LineNumber":296,"LineContent":"                creationflags = subprocess.CREATE_NEW_CONSOLE"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":1897,"LineContent":"                \u003c!-- Dedicated Full-Height AI Server Live Console (flex: 1) --\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":1903,"LineContent":"                                \u003cspan class=\"terminal-title\" data-i18n=\"server_terminal_title\"\u003eشاشة سجلات وخادم الذكاء الاصطناعي (AI Server Console)\u003c/span\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":1909,"LineContent":"                            \u003cspan id=\"server-terminal-status\" class=\"terminal-badge-live\"\u003eLive Console\u003c/span\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":2069,"LineContent":"        server_terminal_title: \"شاشة سجلات وخادم الذكاء الاصطناعي (AI Server Console)\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":2194,"LineContent":"        server_terminal_title: \"AI Server Console\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":2373,"LineContent":"        console.error(e);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":2415,"LineContent":"        console.error(e);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":2563,"LineContent":"        console.error(error);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":2963,"LineContent":"        console.error(e);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3001,"LineContent":"        console.error(e);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3022,"LineContent":"        console.error(error);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3040,"LineContent":"        console.error('Failed to load settings', error);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3070,"LineContent":"        console.error(error);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3124,"LineContent":"            console.error('Failed to get server status', error);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3167,"LineContent":"        console.error('Error updating active server label:', e);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3315,"LineContent":"        console.error('Failed to load servers UI:', e);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3357,"LineContent":"        console.error(e);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3380,"LineContent":"        console.error(e);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3401,"LineContent":"            term.value = '--- شاشة سجلات وخادم الذكاء الاصطناعي (AI Server Console) جاهزة ---\\nاضغط على \"اختبار الاتصال\" أو قم بتشغيل أي سيرفر لمشاهدة المخرجات هنا مباشرة.\\n';"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3405,"LineContent":"        console.error('Failed to load server logs', e);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3418,"LineContent":"        console.error(e);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\app.js","LineNumber":48,"LineContent":"        console.error(e);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\app.js","LineNumber":78,"LineContent":"        console.error(error);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\app.js","LineNumber":140,"LineContent":"        console.error(error);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\app.js","LineNumber":270,"LineContent":"        console.error('Failed to load settings', error);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\app.js","LineNumber":300,"LineContent":"        console.error(error);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\app.js","LineNumber":360,"LineContent":"            console.error('Failed to get server status', error);"}

@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+{'case_id': 'C04', 'status': 'no_match', 'item_ids': [], 'reason': 'اختلاف الاسم التجاري'}
+

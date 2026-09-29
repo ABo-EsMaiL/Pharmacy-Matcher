@@ -1,0 +1,40 @@
+                    </div>
+
+                </div>
+
+                <div class="history-actions">
+
+                    ${item.status !== 'processing' ? `
+
+                        ${item.status === 'processing' 
+
+                            ? `<button class="btn btn-primary" onclick="alert('العملية ما زالت قيد التشغيل')"><i class="ph-fill ph-spinner-gap spinner"></i> جاري التشغيل...</button>`
+
+                            : (item.status === 'error'
+
+                                ? `<button class="btn btn-warning" onclick="restartProcess('${item.id}')"><i class="ph-fill ph-arrow-counter-clockwise"></i> إعادة تشغيل</button>
+
+                                   <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
+
+                                : `<button class="btn btn-primary" onclick="viewProcess('${item.id}')"><i class="ph-fill ph-eye"></i> عرض النتائج</button>
+
+                                   <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
+
+                            )
+
+                        }
+
+                    ` : ''}
+
+                </div>
+
+            `;
+
+            listEl.appendChild(card);
+
+        });
+
+    } catch (e) {
+
+        console.error(e);
+

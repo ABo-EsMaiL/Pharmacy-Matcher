@@ -1,0 +1,116 @@
+[
+  {
+    "case_id": "A0450",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق للاسم المطلوب"
+  },
+  {
+    "case_id": "A0451",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق للاسم المطلوب"
+  },
+  {
+    "case_id": "A0452",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق للاسم المطلوب"
+  },
+  {
+    "case_id": "A0453",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق للاسم المطلوب"
+  },
+  {
+    "case_id": "A0454",
+    "status": "review",
+    "item_id": "I0179",
+    "plausible_ids": [
+      "I0179"
+    ],
+    "no_match_basis": "",
+    "reason": "اختلاف الشكل الدوائي من أقراص لشراب"
+  },
+  {
+    "case_id": "A0455",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق للاسم المطلوب"
+  },
+  {
+    "case_id": "A0456",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق للاسم المطلوب"
+  },
+  {
+    "case_id": "A0457",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق للاسم المطلوب"
+  },
+  {
+    "case_id": "A0458",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق للاسم المطلوب"
+  },
+  {
+    "case_id": "A0459",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1757"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "تعارض لاختلاف المتغير بوجود كلمة فورت"
+  },
+  {
+    "case_id": "A0460",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق للاسم المطلوب"
+  },
+  {
+    "case_id": "A0461",
+    "status": "match",
+    "item_id": "I0251",
+    "plausible_ids": [
+      "I1763",
+      "I0251"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام في الاسم والشكل الصيدلي"
+  },
+  {
+    "case_id": "A0462",
+    "status": "match",
+    "item_id": "I1866",
+    "plausible_ids": [
+      "I1762",
+      "I1866"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام في الاسم والتركيز والشكل"
+  }
+]

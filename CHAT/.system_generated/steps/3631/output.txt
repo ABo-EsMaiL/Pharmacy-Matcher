@@ -1,0 +1,17 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -112,10 +112,8 @@
+         total_wh_matched = sum(len(wh["matched"]) for wh in all_warehouse_results.values())
+         total_review_items = sum(len(wh["needs_review"]) for wh in all_warehouse_results.values())
+         total_not_found = len(not_found_items)
+-        total_calculated = total_wh_matched + total_not_found + total_review_items
+-
+         summary = {
+-            "total_shortages": total_calculated,
++            "total_shortages": len(shortage_items),
+             "unique_shortages": len(deduped_shortages),
+             "matched_count": total_wh_matched,
+             "not_found_count": total_not_found,
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

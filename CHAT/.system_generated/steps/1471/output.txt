@@ -1,0 +1,21 @@
+{"name":"0913.xlsx","sizeBytes":"41471"}
+{"name":"chatgpt-chat-2026-09-20.md","sizeBytes":"29087"}
+{"name":"review","isDir":true}
+{"name":"review_excel.py","sizeBytes":"2175"}
+{"name":"review_pdfs.py","sizeBytes":"1087"}
+{"name":"review_quality.py","sizeBytes":"1511"}
+{"name":"transform-result-5adb330b-3b30-4894-9d61-d31e1197080a.json","sizeBytes":"70819"}
+{"name":"transform-result-5adb330b-3b30-4894-9d61-d31e1197080a.txt","sizeBytes":"16968"}
+{"name":"transform-result-7e5dd06f-d3bb-4f7c-ba56-a7fb5ad902a8.json","sizeBytes":"11909"}
+{"name":"transform-result-7e5dd06f-d3bb-4f7c-ba56-a7fb5ad902a8.md","sizeBytes":"2011"}
+{"name":"transform-result-7e5dd06f-d3bb-4f7c-ba56-a7fb5ad902a8.txt","sizeBytes":"2011"}
+{"name":"transform-result-f5254d99-e492-48f1-8a36-1688af690395.json","sizeBytes":"12437"}
+{"name":"transform-result-f5254d99-e492-48f1-8a36-1688af690395.txt","sizeBytes":"1785"}
+{"name":"السلام شبين.pdf","sizeBytes":"87499"}
+{"name":"المكرومي المنصورة.pdf","sizeBytes":"407697"}
+{"name":"الهضبة الاثنين نقدى0.pdf","sizeBytes":"199787"}
+{"name":"جملة العمروووو.pdf","sizeBytes":"58850"}
+{"name":"كيور فارما خاص.pdf","sizeBytes":"299097"}
+{"name":"مخزن الحياة فارم اسكندريه-170.pdf","sizeBytes":"228520"}
+
+Summary: This directory contains 1 subdirectories and 18 files.

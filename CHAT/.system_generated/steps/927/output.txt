@@ -1,0 +1,20 @@
+
+The command exited with code 0.
+Output:
+        
+        items = []
+        for name in extracted:
+            if isinstance(name, str) and name.strip():
+                items.append({"item_name_raw": name.strip(), "source_page": 1})
+        return items
+    except Exception as e:
+        print(f"     -> Gemini extraction failed: {e}")
+        return []
+
+def extract_items_from_pdf(
+    filepath: Path,
+    api_key: str,
+    base_url: str = "https://transform.unstructured.io",
+    gemini_api_key: str = None,
+
+

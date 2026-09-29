@@ -1,0 +1,124 @@
+
+The command exited with code 0.
+Output:
+0: """
+1: (C) 2014-2019 Roman Sirokov and contributors
+2: Licensed under BSD license
+3: 
+4: http://github.com/r0x0r/pywebview/
+5: """
+6: 
+7: from __future__ import annotations
+8: 
+9: import inspect
+10: import json
+11: import logging
+12: import os
+13: import re
+14: import sys
+15: import traceback
+16: import urllib.parse
+17: from collections import UserDict
+18: from glob import glob
+19: from http.cookies import SimpleCookie
+20: from platform import architecture
+21: from threading import Thread
+22: from typing import TYPE_CHECKING, Any
+23: from uuid import uuid4
+24: 
+25: import webview
+26: from webview.dom import _dnd_state
+27: from webview.errors import WebViewException
+28: 
+29: if TYPE_CHECKING:
+30:     from webview.window import Window
+31: 
+32: _TOKEN = uuid4().hex
+33: 
+34: DEFAULT_HTML = """
+35:     <!doctype html>
+36:     <html>
+37:         <head>
+38:             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+39:         </head>
+40:         <body></body>
+41:     </html>
+42: """
+43: 
+44: logger = logging.getLogger('pywebview')
+45: 
+46: 
+47: class ImmutableDict(UserDict):
+48:     """ "
+49:     A dictionary that does not allow adding new keys or deleting existing ones.
+50:     Only existing keys can be modified.
+51:     """
+52: 
+53:     def __init__(self, initial_data=None, **kwargs):
+54:         self.data = {}
+55:         if initial_data:
+56:             self.data.update(initial_data)
+57:         if kwargs:
+58:             self.data.update(kwargs)
+59: 
+60:     def __setitem__(self, key, value):
+61:         if key not in self.data:
+62:             raise KeyError(f"Cannot add new key '{key}'. Only existing keys can be modified.")
+63:         super().__setitem__(key, value)
+64: 
+65:     def __delitem__(self, key):
+66:         raise KeyError('Deleting keys is not allowed.')
+67: 
+68: 
+69: def is_app(url: str | callable | None) -> bool:
+70:     """Returns true if 'url' is a WSGI or ASGI app."""
+71:     return callable(url)
+72: 
+73: 
+74: def is_local_url(url: str | callable | None) -> bool:
+75:     return not (
+76:         (is_app(url))
+77:         or (
+78:             (not url)
+79:             or (url.startswith('http://'))
+80:             or (url.startswith('https://'))
+81:             or url.startswith('file://')
+82:         )
+83:     )
+84: 
+85: 
+86: def needs_server(urls: list[str]) -> bool:
+87:     return bool([url for url in urls if (is_app(url) or is_local_url(url))])
+88: 
+89: 
+90: def get_app_root() -> str:
+91:     """
+92:     Gets the file root of the application.
+93:     """
+94: 
+95:     if hasattr(sys, '_MEIPASS'):  # Pyinstaller
+96:         return sys._MEIPASS
+97: 
+98:     if os.getenv('RESOURCEPATH'):  # py2app
+99:         return os.getenv('RESOURCEPATH')
+100: 
+101:     if getattr(sys, 'frozen', False):  # cx_freeze
+102:         return os.path.dirname(sys.executable)
+103: 
+104:     if 'pytest' in sys.modules and os.getenv('PYWEBVIEW_TEST'):
+105:         return os.path.join(os.path.dirname(__file__), '..', 'tests')
+106: 
+107:     if hasattr(sys, 'getandroidapilevel'):
+108:         return os.getenv('ANDROID_APP_PATH')
+109: 
+110:     return os.path.dirname(os.path.realpath(sys.argv[0]))
+111: 
+112: 
+113: def abspath(path: str) -> str:
+114:     """
+115:     Make path absolute, using the application root
+116:     """
+117:     path = os.fspath(path)
+118:     if not os.path.isabs(path):
+119:         path = os.path.join(get_app_root(), path)
+

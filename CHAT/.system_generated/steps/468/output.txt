@@ -1,0 +1,139 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -856,67 +856,81 @@
+             <div id="screen-settings" class="screen">
+                 <header class="page-header">
+                     <h2><i class="ph-fill ph-gear"></i> إعدادات النظام</h2>
+-                    <p>تهيئة الاتصال بالذكاء الاصطناعي وإعدادات السيرفر المحلي.</p>
+-                </header>
+-                
++                    <p>قم بضبط إعدادات الربط مع سيرفر الذكاء الاصطناعي (MSEMAX) و Unstructured API.</p>
++                </header>
++
+                 <div class="settings-grid">
+-                    <div class="settings-card">
+-                        <div class="card-header dark">
+-                            <i class="ph-fill ph-plugs"></i>
+-                            <h3>إعدادات الربط والـ APIs</h3>
+-                        </div>
+-                        <div class="card-body form-grid">
+-                            <div class="form-group full-width">
+-                                <label>Unstructured.io API Key (لقراءة الـ PDF)</label>
+-                                <input type="text" id="setting-unstructured-key" class="form-control" placeholder="أدخل مفتاح Unstructured">
+-                            </div>
+-                            <div class="form-group">
+-                                <label>رابط الخادم المحلي (MSEMAX URL)</label>
+-                                <input type="text" id="setting-local-url" class="form-control" value="http://127.0.0.1:8000/v1/chat/completions" dir="ltr">
+-                            </div>
+-                            <div class="form-group">
+-                                <label>مفتاح الخادم المحلي (Local Key)</label>
+-                                <input type="password" id="setting-local-key" class="form-control" placeholder="أدخل المفتاح">
++                    <!-- General API Settings -->
++                    <div class="settings-card">
++                        <div class="card-header dark">
++                            <i class="ph-fill ph-key"></i>
++                            <h3>مفاتيح الربط (API Keys)</h3>
++                        </div>
++                        <div class="card-body form-grid">
++                            <div class="form-group">
++                                <label>Unstructured API Key</label>
++                                <input type="password" id="setting-unstructured-key" class="form-control" placeholder="Enter Unstructured.io Key...">
++                            </div>
++                            <div class="form-group mt-2">
++                                <label>Local AI URL (MSEMAX / vLLM)</label>
++                                <input type="text" id="setting-local-url" class="form-control" placeholder="http://127.0.0.1:8000/v1/chat/completions">
++                            </div>
++                            <div class="form-group">
++                                <label>Local AI Key (إن وجد)</label>
++                                <input type="password" id="setting-local-key" class="form-control" placeholder="Optional API Key">
+                             </div>
+                             <div class="form-group">
+                                 <label>اسم الموديل (Model Name)</label>
+-                                <input type="text" id="setting-model-name" class="form-control" value="gpt-4o-mini" dir="ltr">
+-                            </div>
+-                            <div class="form-group full-width mt-3">
+-                                <button class="btn btn-primary" onclick="saveSettings()"><i class="ph-fill ph-floppy-disk"></i> حفظ الإعدادات</button>
+-                            </div>
+-                        </div>
+-                    </div>
+-
+-                    <div class="settings-card">
+-                        <div class="card-header warning">
++                                <input type="text" id="setting-model-name" class="form-control" placeholder="gpt-4o-mini, llama3, etc...">
++                            </div>
++                        </div>
++                    </div>
++
++                    <!-- Server Settings -->
++                    <div class="settings-card">
++                        <div class="card-header dark">
+                             <i class="ph-fill ph-hard-drives"></i>
+-                            <h3>إدارة سيرفر الذكاء الاصطناعي (MSEMAX)</h3>
+-                        </div>
+-                        <div class="card-body">
+-                            <p class="text-muted mb-4">هذه الإعدادات تستخدم لتشغيل وإعداد سيرفر MSEMAX المحلي على هذا الجهاز.</p>
+-                            
++                            <h3>إعدادات سيرفر (MSEMAX)</h3>
++                        </div>
++                        <div class="card-body form-grid">
+                             <div class="form-group mb-4">
+                                 <label>مسار مجلد MSEMAX</label>
+                                 <div class="input-group">
+-                                    <input type="text" id="setting-msemax-dir" class="form-control" readonly dir="ltr">
+-                                    <button class="btn btn-outline" onclick="selectMsemaxDir()"><i class="ph-fill ph-folder-notch-open"></i> تصفح...</button>
++                                    <input type="text" id="setting-msemax-dir" class="form-control" readonly>
++                                    <button class="btn btn-outline-secondary" onclick="selectMsemaxDir()">تحديد المجلد</button>
+                                 </div>
+                             </div>
+-                            
++
+                             <div class="btn-group-vertical">
+-                                <button class="btn btn-outline-secondary" onclick="setupRequirements()">
+-                                    <i class="ph-fill ph-download-simple"></i>
+-                                    <span>تثبيت المتطلبات الأساسية (Requirements + Playwright)</span>
+-                                    <span id="req-status" class="status-icon"></span>
+-                                </button>
+-                                <button class="btn btn-outline-secondary" onclick="getSession()">
+-                                    <i class="ph-fill ph-key"></i>
+-                                    <span>تجديد جلسة المتصفح (Get Session)</span>
+-                                    <span id="session-status" class="status-icon"></span>
+-                                </button>
+-                            </div>
+-                        </div>
++                                <button class="btn btn-outline" onclick="setupRequirements()">
++                                    <i class="ph ph-download-simple"></i>
++                                    <span>تثبيت متطلبات الجهاز الأساسية</span>
++                                    <span id="req-status" style="margin-right:auto"></span>
++                                </button>
++                                <button class="btn btn-outline" onclick="getSession()">
++                                    <i class="ph ph-browser"></i>
++                                    <span>تجديد الجلسة (Get Session)</span>
++                                    <span id="session-status" style="margin-right:auto"></span>
++                                </button>
++                            </div>
++                        </div>
++                    </div>
++                </div>
++
++                <div class="action-bar-bottom mt-3">
++                    <button class="btn btn-primary btn-massive" onclick="saveSettings()">
++                        <i class="ph-fill ph-floppy-disk"></i> حفظ الإعدادات
++                    </button>
++                </div>
++                
++                <!-- System Logs Viewer -->
++                <div class="settings-card" style="margin-top: 32px; border-color: var(--border);">
++                    <div class="card-header" style="background: var(--text-main); color: white;">
++                        <i class="ph-fill ph-terminal-window"></i>
++                        <h3>سجل النظام (System Logs)</h3>
++                    </div>
++                    <div style="background: #1e1e1e; padding: 12px;">
++                        <textarea id="system-logs" readonly style="width: 100%; height: 250px; background: #1e1e1e; color: #00ff00; border: none; font-family: monospace; font-size: 13px; outline: none; resize: vertical; direction: ltr; text-align: left;"></textarea>
+                     </div>
+                 </div>
+             </div>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

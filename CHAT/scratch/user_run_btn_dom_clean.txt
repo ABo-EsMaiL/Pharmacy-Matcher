@@ -1,0 +1,24 @@
+<USER_REQUEST>
+أنت لما بتيجي تبعت الرسالة بتعمل Submit ورا على طول، بس للأسف عشان خاطر أنت بنستخدم Gateway Web، الويبسايت بتاعهم، فالمفروض إن المعلم جوه الـ AI Studio بيتعرف على الصورة فبيحسب الـ Tokens بتاعها، فلازم ننتظر لحد أما يجمع الـ Tokens ويحسب الـ Tokens اللي في الـ Input، وبعد كده زرار Run Control ده بيبدأ يتفعل. عشان خاطر كده ظهر مشكلة إن هو مش عارف ما اشتغلش أو الـ Generation ما فيش Generation، ما يقدرش إنه يعمل Generation. فالمفروض يا حاجة من اتنين، يا أنت تبقى عامل Hook على الصورة أول ما يحسب الـ أول ما يحسب الـ Input بتاعها يضغط Submit، أو تعمل Hook على الزرار بتاع الـ Run بحيث أول ما يبقى Active يضغط عليه، وده اللي أنا هفضله طبعا، أو إن أنت تعمل Timer كده مثلا 10 ثواني وبعد كده يعمل Submit، وده ما أحبوش لأن ممكن الرسالة تكون طويلة فيحسب الـ Input أكتر من 10 ثواني، بس ما أعتقدش الحتة دي يعني. بس أنا أفضل لو الخيار الثاني لو تعرف تعمله، ما عرفتش تعملها خلاص ممكن أبعت لك الـ DOM بتاع الـ Text Box اللي تحت ده، بس أنا هبعته لك بس وهشيل الرسالة منه عشان يبقى الـ Button Inactive عشان تبقى عارف الفرق بينهم. 
+
+(venv) PS D:\AI_Engineer\Pharmacy-agy> python C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_endpoint_vision.py
+[*] جاري قراءة ملف: المكرومي المنصورة.pdf
+[*] تحويل الصفحة الأولى إلى صورة WebP عالية الدقة...
+[+] تم إنشاء الصورة: temp_page1_test.webp (الحجم: 299.8 KB)
+[*] إرسال الطلب إلى الـ Endpoint (http://127.0.0.1:8001/v1/chat/completions)...
+    راقب الآن نافذة المتصفح المفتوحة أمامك لترى هل استلم الصورة والبرومبت!
+[+] Response Status: 200 (استغرق 51.2 ثانية)
+
+=== الرد المستلم من الـ Endpoint ===
+[Error: NO_RESPONSE_STARTED - Google AI Studio did not start generating within 45s]...
+(باقي الرد تم استلامه بنجاح)
+(venv) PS D:\AI_Engineer\Pharmacy-agy>
+
+
+
+
+
+<div _ngcontent-ng-c3784311355="" class="mat-mdc-tooltip-trigger prompt-box-container"><div _ngcontent-ng-c3784311355="" class="textarea-row ng-star-inserted"><div _ngcontent-ng-c3784311355="" class="text-wrapper ng-valid ng-touched ng-dirty"><textarea _ngcontent-ng-c3784311355="" rows="1" cdktextareaautosize="" formcontrolname="promptText" msfilecopypaste="" class="cdk-textarea-autosize textarea ng-valid ng-touched ng-dirty" placeholder="Start typing a prompt to see what our models can do" aria-label="Enter a prompt" style="min-height: 21px; max-height: 210px; height: 126px;"></textarea></div><!----></div><!----><div _ngcontent-ng-c3784311355="" class="multi-media-row ng-star-inserted"><ms-prompt-media _ngcontent-ng-c3784311355="" _nghost-ng-c3024117888="" class="ng-star-inserted"><div _ngcontent-ng-c3024117888="" data-test-id="prompt-media-container" class="prompt-media-item-container ng-star-inserted"><div _ngcontent-ng-c3024117888="" class="preview-container"><!----><!----><ms-prompt-image _ngcontent-ng-c3024117888="" _nghost-ng-c3917618837="" class="ng-star-inserted"><img _ngcontent-ng-c3917618837="" class="loaded-image ng-star-inserted" alt="upload_99ecfac92c61.webp" src="data:image/...[BASE64]...
+<truncated 235456 bytes>
+
+NOTE: The output was truncated because it was too long. Use a more targeted query or a smaller range to get the information you need.

@@ -1,0 +1,25 @@
+
+The command exited with code 0.
+Output:
+    def start_process(self, shortage_paths_json: str, warehouse_paths_json: str) -> dict:
+        try:
+            shortage_paths = json.loads(shortage_paths_json)
+            warehouse_paths = json.loads(warehouse_paths_json)
+            
+            shortage_filenames = [Path(p).name for p in shortage_paths]
+            warehouse_filenames = [Path(p).name for p in warehouse_paths]
+            
+            # Check for existing process with same files
+            existing_processes = self.db.get_all_processes()
+            for p in existing_processes:
+                if sorted(p.get('shortage_files', [])) == sorted(shortage_filenames) and sorted(p.get('warehouse_files', [])) == sorted(warehouse_filenames):
+                    if p.get('status') in ['completed', 'reviewing']:
+                        # It's an identical process that finished
+                        stats = self.db.get_process_stats(p['id'])
+                        return {"success": True, "existing": True, "process_id": p['id'], "stats": stats}
+            
+            process_id = self.db.create_process(shortage_filenames, warehouse_filenames)
+            
+            thread = threading.Thread(target=self._process_worker, args=(process_id, shortage_paths, warehouse_paths))
+
+

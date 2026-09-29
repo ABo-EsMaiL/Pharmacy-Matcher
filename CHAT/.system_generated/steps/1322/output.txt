@@ -1,0 +1,23 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -120,7 +120,7 @@
+         with open(json_path, "w", encoding="utf-8") as f:
+             json.dump(result_data, f, ensure_ascii=False, indent=2)
+ 
+-        items = _parse_structured_result(result_data, filepath.name)
++        items = parse_structured_result(result_data, filepath.name)
+         print(f"  ✅ تم استخراج {len(items)} عنصر من {filepath.name}")
+         return items
+ 
+@@ -127,7 +127,7 @@
+         print(f"❌ خطأ أثناء الاستخراج: {e}")
+         raise
+ 
+-def _parse_structured_result(result_data: dict, filename: str) -> list[dict]:
++def parse_structured_result(result_data: dict, filename: str) -> list[dict]:
+     items = []
+     
+     # result_data contains "extracted_data" array. 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

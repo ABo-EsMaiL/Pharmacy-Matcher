@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+
+desktop_app\templates\index.html:1009:.servers-grid {
+desktop_app\templates\index.html:1611:                <div class="servers-grid">
+
+
+

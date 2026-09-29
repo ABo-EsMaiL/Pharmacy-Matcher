@@ -1,0 +1,84 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -16,61 +16,26 @@
+ CRITICAL PHARMACEUTICAL RULES:
+ 1. STRICT BRAND IDENTITY (NO GENERICS / NO ALTERNATIVES):
+    - You MUST match the EXACT SAME commercial trade brand name.
+-   - NEVER suggest or accept alternative brand names, different trade names, or generics (e.g. Panadol is NOT Cetal, Brufen is NOT Cataflam, Augmentin is NOT Curam).
+-   - If the trade brand name is a completely different commercial brand or generic substitute (e.g. Panadol is NOT Cetal, Brufen is NOT Cataflam, Augmentin is NOT Curam, Ricoxen is NOT Etoricox, Antopral is NOT Pantoprazole, Serovar is NOT Ciprobay, New Carbon is NOT Eucarbon), YOU MUST RETURN "status": "no_match" (or omit it). NEVER mark different brands as "match" or "review"!
+-   - Distinct commercial prefixes (like "نيو" / "New") or distinct trade endings/suffixes signify different trade brands (e.g. "New X" is NOT "X", a brand ending in "-rich" is NOT "-ren"). Return "no_match".
+-   - Allow common OCR scanning artifacts, dropped letters/syllables, phonetic variants, and Arabic/Persian letter substitutions of the SAME exact brand (e.g. فيوسيدين/فيوسيدل where connected 'ين' is read as 'ل', ميبو/ميو where 'ب' is dropped, جرانتريل/جرانتيل, امبوفير/اميفير, ديباكين/ديبيكان, or dropped initial 'ا', dropped single letters or missing dots like 'ن' or 'ب', Persian/Urdu letters like پ for ب or ک for ك or گ for ك/ج, visually confused OCR letters like 'ف' vs 'د', or slight vowel variations).
+-   - EXACT BRAND CERTAINTY: If the primary trade brand word is identical on both sides, DO NOT doubt it, DO NOT suspect that it is a typo for a different drug, and DO NOT send it to "review" because of trade name doubt! Treat it as a 100% MATCH directly!
+-   - BRAND PREFIX INTEGRITY: Different brand prefixes in single-word trade names (e.g. "ابيكو-" vs "الـ-" or distinct therapeutic prefixes) indicate completely different commercial brands. They MUST NEVER match (return "no_match").
+-
+-2. DOSAGE FORM & FORMULATION (ZERO TOLERANCE FOR CONFLICTS):
+-   - Dosage forms MUST be strictly compatible:
+-     - Tablets/Capsules (اقراص, كبسول, حبوب, فيلم, شريط) ONLY match Tablets/Capsules.
+-     - Syrups/Suspensions (شراب, شرب, معلق) ONLY match Syrups. NEVER match tablets with syrup.
+-     - Creams (كريم) ONLY match Creams. NEVER match cream with ointment or suppository.
+-     - Ointments (مرهم, دهان) ONLY match Ointments. Ointment and Cream are strictly different forms!
+-     - Injections/Ampoules (امبول, حقن, فيال) ONLY match Injections.
+-     - Suppositories (لبوس) ONLY match Suppositories.
+-     - Drops (نقط, قطرة) ONLY match Drops. NEVER match drops with tablets or plain numbers without drops (e.g. كتافلام نقط does NOT match كتافلام 50).
+-     - Sprays (بخاخ, سبراي) ONLY match Sprays.
+-   - LIQUIDS VS SOLID STRENGTHS (Syrups vs Plain mg):
+-     - Liquid dosage forms (شراب, معلق, نقط) are formulated by volume (مل) or concentration per dose (/5مل). Plain numeric strengths (like 400mg, 500mg, 1000mg) without "/5ml" or "شراب" or "مل" signify solid tablets/capsules.
+-     - If one side explicitly specifies a syrup (شراب), it MUST NEVER match a candidate that specifies a plain tablet strength (like 400مجم, 500مجم) without the word "شراب" or "مل" or "/5مل". This is a strict form conflict -> return "status": "no_match".
+-   - COMBINATION PRODUCTS (Zero Tolerance): Commercial suffixes like "كو" (Co), "كومب" (Comp), "بلس" (Plus) denote a multi-ingredient combination product (e.g. adding a diuretic or second active agent). A combination product (e.g. "دواء كو" / "Drug Co") MUST NEVER match a single-ingredient plain product ("دواء" / "Drug"). Return "no_match".
+-   - If dosage forms or combination types conflict, YOU MUST RETURN "status": "no_match".
+-   - If dosage form is not mentioned on one side, assume compatible if brand matches, EXCEPT for Drops (نقط/قطرة) which strictly require drops on both sides.
+-
+-3. STRENGTH / CONCENTRATION:
+-   - MULTI-STRENGTH COMBINATIONS: Strengths with slashes like 4/30, 10/20, 12.5/5 represent multi-active ingredient formulations. A multi-strength (e.g. 4/30) MUST NEVER match a single strength (e.g. 4) -> RETURN "status": "no_match".
+-   - CONFLICTING NUMERIC STRENGTH (Zero Tolerance): If BOTH sides explicitly specify DIFFERENT, CONFLICTING numeric strengths (e.g. requested 500mg vs candidate explicitly specifies 1000mg or 250mg, or 40mg vs 20mg): YOU MUST RETURN "status": "no_match".
+-   - MISSING STRENGTH IN WAREHOUSE (Default MATCH): If the requested shortage specifies a strength (e.g. 25mg, 500mg, 40mg), but the warehouse candidate lists the SAME drug and form WITHOUT specifying any strength:
+-     THIS IS A 100% MATCH ("status": "match")! Warehouse listings frequently omit standard strengths. Do NOT reject an item when the warehouse simply omits the strength!
++   - NEVER suggest or accept alternative brand names, different trade names, or generics (e.g. Panadol is NOT Cetal, Brufen is NOT Cataflam, Augmentin is NOT Curam, Ebastine is NOT Loratadine, Triactin is NOT Claritin, Sinopril is NOT Sinupret, Depozine is NOT Diosmin).
++   - If the trade brand is a different commercial brand or generic substitute, YOU MUST RETURN "status": "no_match" (or omit it).
++   - Allow common Arabic OCR scanning artifacts, dropped letters/syllables, phonetic variants, and Arabic/Persian letter substitutions of the SAME exact commercial brand (e.g. فيوسيدين/فيوسيدل where connected 'ين' is read as 'ل', ميبو/ميو where 'ب' is dropped, بروفين/برونفين, امبوفير/اميفير, ديباكين/ديبيكان, or dropped initial 'ا', dropped single letters or missing dots like 'ن' or 'ب', Persian/Urdu letters like پ for ب or ک for ك or گ for ك/ج, visually confused OCR letters like 'ف' vs 'د', or slight vowel variations).
++
++2. STRENGTH IS A RED LINE (ZERO TOLERANCE):
++   - If BOTH sides explicitly specify DIFFERENT, CONFLICTING numeric strengths (e.g. requested 500mg vs candidate specifies 1000mg or 250mg, or 300mg vs 100mg, or 40mg vs 20mg):
++     YOU MUST RETURN "status": "no_match". A different concentration cannot be dispensed without doctor approval.
++   - MISSING STRENGTH IN WAREHOUSE: If the requested shortage specifies a strength, but the warehouse lists the SAME drug without specifying strength: THIS IS A MATCH ("status": "match")!
+    - Note vernacular and fractional equivalencies:
+      - 1000mg = 1gm (1000مجم = 1جم).
+      - 500mg = 0.5gm = نص (نصف).
+-     - 0.25mg = 250mcg = 25. مجم = ربع (e.g. "ربع" equals 0.25mg / 250mcg).
+-
+-4. PACKAGING, PACK SIZE & QUANTITY (DOES NOT MATTER -> 100% MATCH!):
+-   - In pharmacy shortage ordering, different tablet counts, pack counts, strip counts, ampoule counts, or wholesale packaging lot sizes (باكت, باكو, كرتونة, 32ب) DO NOT matter for product availability!
+-   - As long as the trade brand name, dosage form, and strength match:
+-     - Different ampoule counts (e.g. 3 ampoules vs 6 ampoules vs 1 ampoule vs 25 ampoules / 6امبول vs 3امبول) -> THIS IS A 100% MATCH ("status": "match")!
+-     - Different pack counts (e.g. 20 tablets vs 30 tablets vs 60 tablets vs 5 tablets) -> THIS IS A 100% MATCH ("status": "match")!
+-     - Different strip counts (e.g. 2 strips vs 3 strips vs 5 strips) -> THIS IS A 100% MATCH ("status": "match")!
+-     - Retail unit vs wholesale carton/bundle (e.g. 20 tablets vs باكت 32, باكت 200, 32ب) -> THIS IS A 100% MATCH ("status": "match")!
+-     - Strips vs total tablets (e.g. 3 strips vs 12 tablets) -> THIS IS A 100% MATCH ("status": "match")!
+-     - Missing pack count or quantity on either side -> THIS IS A 100% MATCH ("status": "match")!
+-     - Manufacturer suffixes (/فاركو, /جلاكسو), commercial indicators ("س ج", "سعر جديد", "سعر قديم") do not change the product.
+-     - NEVER mark tablet count, ampoule count, pack count, or wholesale carton differences as "review" or "no_match"!
+-
+-5. THE "REVIEW" (يحتاج مراجعة) SAFETY NET:
+-   - "review" is the essential SAFETY NET for the pharmacist to manually inspect borderline cases.
+-   - If there is any doubt, borderline OCR scanning, minor ambiguity, or 25%–70% plausibility:
+-     ALWAYS ROUTE TO "review" instead of rejecting to "no_match"!
+-   - A potential match in "review" allows the pharmacist to verify availability in the warehouse, whereas dropping an item into "no_match" causes the pharmacy to lose an available medicine.
+-   - Examples for "review":
+-     - Conflicting bottle/tube volume of liquids/semi-solids when BOTH sides explicitly specify different numbers (e.g. requested 15ml drops vs candidate writes 5ml drops).
+-     - Borderline OCR where brand letters are slightly ambiguous but plausibly the same drug.
+-     - When you are uncertain between "review" and "no_match": ALWAYS CHOOSE "review".
++     - 0.25mg = 250mcg = 25. مجم = ربع.
++
++3. DOSAGE FORM (SAME DRUG BUT DIFFERENT FORM -> "review"):
++   - If the candidate is the EXACT SAME commercial drug with the SAME strength, but has a DIFFERENT dosage form (e.g. requested Cream and warehouse has Ointment, or requested Drops and warehouse has Tablets/Ampoules, or requested Tablets and warehouse has Injections):
++     RETURN "status": "review" with Arabic reason (e.g. "نفس الدواء والتركيز ولكن الهيئة مختلفة: مطلوب كريم والمخزن عنده مرهم").
++   - If dosage forms are identical or compatible (tablets vs capsules, or cream vs cream) -> RETURN "status": "match".
++
++4. PACKAGING, PACK SIZE & QUANTITY (DOES NOT MATTER -> MATCH!):
++   - Different tablet counts (20 vs 30 vs 60 tablets), strip counts (2 strips vs 3 strips), ampoule counts (3 vs 6 ampoules), wholesale packaging lot sizes (باكت, باكو, كرتونة, 32ب), and commercial price indicators ("س ج", "سعر جديد") DO NOT prevent a match. As long as brand and strength match, THIS IS A 100% MATCH ("status": "match").
+ 
+ SCHEMA:
+ Return ONLY a valid JSON object matching this schema:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

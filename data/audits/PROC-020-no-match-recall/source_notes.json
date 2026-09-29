@@ -1,0 +1,16 @@
+[
+  {
+    "scope": "Amr warehouse page 1",
+    "source": "data/processes/PROC-020/cache/vision/جملة_العمروووو_0fbca8b95b/pages/page_1.webp",
+    "observation": "Visual inspection confirms the commercial descriptions with repeated letters exist in the source page. Their survival in product-name comparison is a parsing/retrieval issue, not proven new corruption introduced by Vision."
+  },
+  {
+    "case_id": "A0044",
+    "source": "data/processes/PROC-020/cache/vision/كيور_فارما_خاص_6532a22310/pages/page_1.webp",
+    "observation": "The source page itself displays انتودين 20جم, while the request says 20مجم. The audit model silently interpreted the source as mg. Do not count this selected pair as a confirmed recovered MATCH. A source unit typo is possible but not proven by this audit. Check other candidates separately."
+  },
+  {
+    "case_id": "A0041",
+    "observation": "The request and candidate display the same three numerical values in reversed order, 40/12.5/5 versus 5/12.5/40. The production guard treats ordered vectors as conflicting; the audit model treated them as equivalent. Keep this disagreement explicit rather than changing combination-strength rules during the audit."
+  }
+]

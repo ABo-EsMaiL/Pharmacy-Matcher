@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+Total Salam items: 187
+Matches >= 80%: 2
+Matches >= 60%: 79
+Matches >= 40%: 187
+

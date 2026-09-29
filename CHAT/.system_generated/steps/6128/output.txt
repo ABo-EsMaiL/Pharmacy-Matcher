@@ -1,0 +1,34 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1225,12 +1225,16 @@
+             </nav>
+ 
+             <div class="sidebar-footer">
+-                <div class="server-status-card">
+-                    <div class="status-header">
++                <div class="server-status-card" style="cursor: pointer;" onclick="showScreen('screen-servers'); loadServersUI();" title="اضغط لفتح إدارة السيرفرات">
++                    <div class="status-header" style="margin-bottom: 8px;">
+                         <div id="server-indicator" class="status-indicator"></div>
+                         <span id="server-status-text" data-i18n="server_checking">جاري التحقق...</span>
+                     </div>
+-                    <button id="btn-toggle-server" class="btn btn-small btn-full" data-i18n="btn_start_server">تشغيل السيرفر</button>
++                    <div style="font-size: 12px; font-weight: 700; color: var(--primary); margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
++                        <span id="sidebar-active-server-name">Google AI Studio</span>
++                        <i class="ph ph-arrow-left" style="font-size: 14px;"></i>
++                    </div>
++                    <button id="btn-toggle-server" class="btn btn-small btn-full" onclick="event.stopPropagation(); toggleServer();" data-i18n="btn_start_server">تشغيل السيرفر</button>
+                 </div>
+                 <button class="nav-item text-danger mt-2" onclick="exitApp()">
+                     <i class="ph ph-sign-out"></i> <span data-i18n="btn_exit_app">إغلاق البرنامج</span>
+@@ -1245,7 +1245,7 @@
+                     <span id="top-bar-heading" data-i18n="new_title">مطابقة نواقص ومخازن جديدة</span>
+                 </div>
+                 <div class="top-bar-actions">
+-                    <div id="top-bar-server-badge" class="server-badge-pill stopped">
++                    <div id="top-bar-server-badge" class="server-badge-pill stopped" style="cursor: pointer;" onclick="showScreen('screen-servers'); loadServersUI();" title="اضغط لإدارة السيرفرات">
+                         <span class="status-dot"></span>
+                         <span id="top-bar-server-text" data-i18n="server_stopped">السيرفر متوقف</span>
+                     </div>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

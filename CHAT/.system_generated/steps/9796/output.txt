@@ -1,0 +1,20 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio-vision\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -451,11 +451,11 @@
+         """
+         if case_count <= 10:
+             return {
+-                "initial_start_timeout": 45.0,
+-                "first_token_timeout": 75.0,
++                "initial_start_timeout": 60.0,
++                "first_token_timeout": 90.0,
+                 "stagnation_timeout": 60.0,
+                 "stability_duration": 3.0,
+-                "hard_ceiling": 180.0,
++                "hard_ceiling": 240.0,
+                 "tier": f"1-10 cases ({case_count} cases)"
+             }
+         elif case_count <= 25:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

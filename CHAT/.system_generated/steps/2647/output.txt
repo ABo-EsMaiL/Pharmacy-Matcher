@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Copied updated data\test_shortages_200.xlsx to data\processes\PROC-003\input_shortages\test_shortages_200.xlsx
+Copied السلام شبين.json cache to PROC-003/input_warehouses/
+Copied جملة العمروووو.json cache to PROC-003/input_warehouses/
+

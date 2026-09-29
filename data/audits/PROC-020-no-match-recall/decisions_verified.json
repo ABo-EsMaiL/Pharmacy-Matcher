@@ -1,0 +1,654 @@
+[
+  {
+    "case_id": "A0030",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0327",
+      "I2505",
+      "I2506",
+      "I0326"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف في نوع المستحضر والتركيز"
+  },
+  {
+    "case_id": "A0155",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0391"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز ۲ ملجم مقابل ۳"
+  },
+  {
+    "case_id": "A0157",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2009"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز 5/1000 مقابل 5/500"
+  },
+  {
+    "case_id": "A0167",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2593",
+      "I2592"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز 25 مجم مقابل 12.5"
+  },
+  {
+    "case_id": "A0168",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2593",
+      "I2592"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز 25 مجم مقابل 50"
+  },
+  {
+    "case_id": "A0169",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2593",
+      "I2592"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز 25 مجم مقابل 75"
+  },
+  {
+    "case_id": "A0181",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0429",
+      "I0430",
+      "I2166",
+      "I1207"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز والشكل الصيدلي"
+  },
+  {
+    "case_id": "A0249",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2628",
+      "I0101",
+      "I2629",
+      "I2252",
+      "I1325",
+      "I1324",
+      "I2253",
+      "I2254",
+      "I0599",
+      "I0598"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز 500 مجم مقابل 1 جم"
+  },
+  {
+    "case_id": "A0250",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1326"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز 8 مجم مقابل 4"
+  },
+  {
+    "case_id": "A0300",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0301",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0302",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0303",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0304",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0305",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0306",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0333",
+      "I2167",
+      "I1209",
+      "I1208",
+      "I0431"
+    ],
+    "no_match_basis": "different_product",
+    "reason": "منتج تجاري مختلف وبديل دوائي"
+  },
+  {
+    "case_id": "A0307",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0310",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0311",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0312",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0313",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0314",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0315",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0316",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0317",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0318",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0319",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0320",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0321",
+    "status": "match",
+    "item_id": "I2340",
+    "plausible_ids": [
+      "I2340",
+      "I2341",
+      "I2658"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق الصنف والشكل الصيدلي مع خطأ بصري"
+  },
+  {
+    "case_id": "A0324",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0325",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0326",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0327",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0328",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0329",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0330",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0555"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز 6.25 مجم مقابل 25"
+  },
+  {
+    "case_id": "A0332",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0333",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0334",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0335",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0337",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0338",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0339",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0340",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0341",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0342",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0343",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0345",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0346",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0347",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0348",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0349",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0351",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0352",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0353",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0354",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0355",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0356",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0357",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0358",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0360",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0361",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0362",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0364",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0365",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0367",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0368",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0369",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0372",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1577"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف في المرحلة رقم 1 مقابل 2"
+  },
+  {
+    "case_id": "A0373",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0374",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة للاسم المطلوب"
+  },
+  {
+    "case_id": "A0375",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2434",
+      "I0515",
+      "I1585"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز 500 مجم مقابل 250"
+  },
+  {
+    "case_id": "A0376",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1592",
+      "I2439"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف في نوع المستحضر سوبرا والتركيز"
+  },
+  {
+    "case_id": "A0377",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1592",
+      "I2439"
+    ],
+    "no_match_basis": "insufficient_information",
+    "reason": "نقص بيانات التركيز يمنع تأكيد المطابقة"
+  }
+]

@@ -1,0 +1,5 @@
+{"name":"chunks","isDir":true}
+{"name":"transcript.jsonl","sizeBytes":"2943230"}
+{"name":"transcript_full.jsonl","sizeBytes":"4708884"}
+
+Summary: This directory contains 1 subdirectories and 2 files.

@@ -1,0 +1,80 @@
+                <button class="nav-item" onclick="loadHistory(); showScreen('screen-history', this)">
+
+                    <i class="ph ph-clock-counter-clockwise"></i> سجل العمليات
+
+                </button>
+
+                <button class="nav-item" onclick="showScreen('screen-settings', this)">
+
+                    <i class="ph ph-gear"></i> إعدادات النظام
+
+                </button>
+
+                <button class="nav-item" onclick="showScreen('screen-logs', this)">
+
+                    <i class="ph ph-terminal"></i> سجل النظام (Terminal)
+
+                </button>
+
+            </nav>
+
+
+
+            <div class="sidebar-footer">
+
+                <div class="server-status-card">
+
+                    <div class="status-header">
+
+                        <div id="server-indicator" class="status-indicator"></div>
+
+                        <span id="server-status-text">جاري التحقق...</span>
+
+                    </div>
+
+                    <button id="btn-toggle-server" class="btn btn-small btn-full">تشغيل السيرفر</button>
+
+                </div>
+
+                <button class="nav-item text-danger mt-2" onclick="exitApp()">
+
+                    <i class="ph ph-sign-out"></i> إغلاق البرنامج
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- Main Content Area -->
+
+        <main class="main-content">
+
+            
+
+            <!-- Screen 1: New Process (Default) -->
+
+            <div id="screen-new" class="screen active">
+
+                <header class="page-header">
+
+                    <h2><i class="ph-fill ph-magic-wand"></i> مطابقة نواقص ومخازن جديدة</h2>
+
+                    <p>قم بإدراج ملفات النواقص وملفات المخازن للبدء في المطابقة الذكية.</p>
+
+                </header>
+
+                
+
+                <div class="upload-grid">
+
+                    <!-- Shortages -->
+
+                    <div class="upload-card">
+
+                        <div class="card-header primary">
+
+                            <i class="ph-fill ph-clipboard-text"></i>
+

@@ -1,0 +1,18 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX\.env. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -23,10 +23,10 @@
+ 
+ # Per-IP rate limit. Format: N/second | N/minute | N/hour
+ # Examples: 5/second, 30/minute, 100/hour
+-MSE_RATE_LIMIT=10/minute
++MSE_RATE_LIMIT=60/minute
+ 
+ # Total request timeout in seconds (includes upstream response time).
+-MSE_REQUEST_TIMEOUT=120
++MSE_REQUEST_TIMEOUT=480
+ 
+ # Number of POW solver worker processes.
+ # Defaults to CPU core count if not set. Increase for faster POW solving.
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

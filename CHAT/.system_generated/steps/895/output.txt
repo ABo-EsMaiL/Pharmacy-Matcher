@@ -1,0 +1,40 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1565,6 +1565,34 @@
+     }
+ }
+ 
++async function restartProcess(processId) {
++    try {
++        const res = await window.pywebview.api.restart_process(processId);
++        if (res.success) {
++            currentProcessId = res.process_id;
++            switchScreen('screen-new');
++            
++            const btn = document.getElementById('btn-submit');
++            const progressModal = document.getElementById('progress-modal');
++            
++            btn.classList.add('hidden');
++            progressModal.style.display = 'flex';
++            document.getElementById('progress-text').innerText = 'جاري تهيئة العملية...';
++            document.getElementById('progress-bar-fill').style.width = '5%';
++            
++            const termEl = document.getElementById('pipeline-log-terminal');
++            if (termEl) termEl.innerHTML = `[System] Restarted process ${processId}...\n`;
++            
++            showToast('تم بدء العملية من جديد', 'success');
++        } else {
++            showToast(res.error || 'حدث خطأ أثناء إعادة التشغيل', 'error');
++        }
++    } catch (e) {
++        showToast('خطأ في الاتصال بالبرنامج', 'error');
++        console.error(e);
++    }
++}
++
+ async function viewProcess(processId) {
+     try {
+         const dataStr = await window.pywebview.api.get_process_details(processId);
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

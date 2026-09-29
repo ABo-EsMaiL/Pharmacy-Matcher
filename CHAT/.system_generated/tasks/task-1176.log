@@ -1,0 +1,1 @@
+1120: window.addEventListener('new_log', function(e) {

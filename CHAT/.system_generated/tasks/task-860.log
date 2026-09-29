@@ -1,0 +1,30 @@
+    font-weight: 700;
+
+}
+
+
+
+.status-indicator {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background-color: var(--text-muted);
+
+    transition: all 0.3s ease;
+
+}
+
+.status-indicator.running { background-color: var(--success); box-shadow: 0 0 10px var(--success); }
+
+.status-indicator.stopped { background-color: var(--danger); box-shadow: 0 0 10px rgba(239, 68, 68, 0.4); }
+
+
+
+/* -------------------- MAIN CONTENT -------------------- */
+
+.main-content {
+

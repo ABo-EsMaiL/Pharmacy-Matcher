@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+  File "<string>", line 1
+    import requests; r = requests.get('https://transform.unstructured.io/api/v2/jobs', headers={'unstructured-api-key': '[REDACTED_CREDENTIAL]'}); jobs = r.json() if isinstance(r.json(), list) else r.json().get('jobs', []); print(jobs); [requests.delete(f'https://transform.unstructured.io/api/v2/jobs/{j[" id\]}',
+                                                                                                                                                                                                                                                                                                                          ^
+SyntaxError: unterminated string literal (detected at line 1)
+

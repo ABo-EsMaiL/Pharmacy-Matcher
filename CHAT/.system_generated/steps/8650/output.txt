@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\search.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -11,7 +11,7 @@
+     'مرهم', 'كريم', 'جل', 'جيل', 'امبول', 'امبوله', 'امبولات', 'حقن', 'فيال',
+     'لبوس', 'لبوسة', 'لبوسه', 'تحاميل', 'اقماع', 'نقط', 'قطرة', 'قطره',
+     'بخاخ', 'بخاخة', 'بخاخه', 'سبراي', 'فوار', 'اكياس', 'كيس',
+-    'شامبو', 'غسول', 'صابون', 'صابونة', 'صابونه', 'محلول', 'مس', 'دهان', 'فيلم', 'شريط',
++    'شامبو', 'غسول', 'صابون', 'صابونة', 'صابونه', 'محلول', 'مس', 'دهان', 'فيلم', 'شريط', 'لبن', 'حليب',
+     # units & numbers
+     'مجم', 'جم', 'جرام', 'مل', 'مللي', 'ملل', 'لتر', 'ميكرو', 'علبه', 'علبة',
+     'باكت', 'باكو', 'كرتونه', 'كرتونة', 'فلتر', 'مج',
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

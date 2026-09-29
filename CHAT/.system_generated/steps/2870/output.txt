@@ -1,0 +1,2 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":402,"LineContent":".main-content {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\style.css","LineNumber":169,"LineContent":".main-content {"}

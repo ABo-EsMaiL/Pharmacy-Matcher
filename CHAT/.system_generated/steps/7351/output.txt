@@ -1,0 +1,28 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_inject_cookies.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -15,19 +15,11 @@
+     
+     for name, value in cookies_dict.items():
+         if any(k in name.lower() for k in ["sid", "hsid", "ssid", "apisid", "sapisid", "nid", "account_chooser"]):
+-            cookie = {
++            google_cookies.append({
+                 "name": name,
+                 "value": str(value),
+-                "path": "/"
+-            }
+-            if name.startswith("__Host-"):
+-                cookie["url"] = "https://google.com"
+-                cookie["secure"] = True
+-            else:
+-                cookie["domain"] = ".google.com"
+-            if name.startswith("__Secure-"):
+-                cookie["secure"] = True
+-            google_cookies.append(cookie)
++                "url": "https://google.com"
++            })
+ 
+     print(f"Loaded {len(google_cookies)} Google auth cookies.")
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

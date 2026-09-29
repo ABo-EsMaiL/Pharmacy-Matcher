@@ -1,0 +1,29 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\match\text_match.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -51,8 +51,21 @@
+     # 5. توحيد الياء والألف المقصورة والياء الفارسية (OCR)
+     result = re.sub(r"[ىي\u06CC]", "ي", result)
+ 
+-    # 6. توحيد حروف الـ OCR الشائعة في ملفات PDF (الكاف والباء والهاء الفارسية)
+-    result = result.replace("\u06A9", "ك").replace("\u067E", "ب").replace("\u06C0", "ه").replace("\u06C1", "ه")
++    # 6. توحيد حروف الـ OCR الشائعة في ملفات PDF (الكاف والباء والتاء والدال والجيم والهاء الفارسية/الأردية)
++    ocr_replacements = {
++        "\u06A9": "ك",  # ک -> ك
++        "\u067E": "ب",  # پ -> ب
++        "\u06AF": "ك",  # گ -> ك (مثل کوف زنگ -> كوف زنك)
++        "\u0686": "ج",  # چ -> ج (مثل زانوچيلد -> زانوجيلد)
++        "\u06BA": "ن",  # ں -> ن
++        "\u0679": "ت",  # ٹ -> ت
++        "\u0688": "د",  # ڈ -> د
++        "\u0698": "ز",  # ژ -> ز
++        "\u06C0": "ه",  # ۀ -> ه
++        "\u06C1": "ه",  # ہ -> ه
++    }
++    for k_char, v_char in ocr_replacements.items():
++        result = result.replace(k_char, v_char)
+ 
+     # 7. تحويل التاء المربوطة إلى هاء
+     result = result.replace("ة", "ه")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

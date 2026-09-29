@@ -1,0 +1,24 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\forensic_audit_not_found.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -37,10 +37,17 @@
+     from src.extract.file_handler import read_input_files
+     from src.match.text_match import normalize_text
+     
++    # Load settings
++    import json
++    settings_path = r"D:\AI_Engineer\Pharmacy-agy\data\settings.json"
++    with open(settings_path, "r", encoding="utf-8") as f:
++        settings = json.load(f)
++    api_key = settings.get("unstructured_api_key")
++    
+     wh_dir = r"D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-014\input_warehouses"
+     wh_files = [os.path.join(wh_dir, f) for f in os.listdir(wh_dir) if f.endswith('.pdf')]
+     
+-    wh_data = read_input_files(wh_files, role='warehouse')
++    wh_data = read_input_files(wh_files, role='warehouse', api_key=api_key)
+     print("Loaded warehouse catalogs:")
+     total_wh_items = 0
+     all_wh_by_file = {}
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

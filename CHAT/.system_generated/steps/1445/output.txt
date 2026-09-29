@@ -1,0 +1,36 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -150,9 +150,13 @@
+                 if attempts >= 120:
+                     raise RuntimeError("Timeout reached (20 minutes) without job completion on server.")
+ 
+-        # Cache the raw result
+-        with open(cache_file, "w", encoding="utf-8") as f:
+-            json.dump(result_data, f, ensure_ascii=False, indent=2, default=str)
++        items = parse_structured_result(result_data, filepath.name)
++        
++        # Cache only if we actually extracted items
++        if len(items) > 0:
++            with open(cache_file, "w", encoding="utf-8") as f:
++                json.dump(result_data, f, ensure_ascii=False, indent=2, default=str)
++            print(f"[+] Saved valid cache for: {filepath.name} ({len(items)} items)")
+ 
+         # Save locally for debugging too
+         json_path = filepath.with_suffix(".json")
+@@ -159,11 +159,10 @@
+             json.dump(result_data, f, ensure_ascii=False, indent=2, default=str)
+ 
+-        items = parse_structured_result(result_data, filepath.name)
+-        print(f"  ✅ Extracted {len(items)} items from {filepath.name}")
++        print(f"[+] Successfully extracted {len(items)} items from {filepath.name}")
+         return items
+ 
+     except Exception as e:
+-        print(f"❌ Extraction error: {e}")
++        print(f"[!] Extraction error for {filepath.name}: {e}")
+         raise
+ 
+ def parse_structured_result(result_data: dict, filename: str) -> list[dict]:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

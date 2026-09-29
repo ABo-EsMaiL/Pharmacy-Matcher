@@ -1,0 +1,83 @@
+================================================================================
+RUNTIME VERIFICATION: 75-CASE BATCH (SEARCH OFF + THINKING HIGH)
+================================================================================
+[1] Gateway: MSEMAX (AIStudio Web Hook)
+[2] Active Model: Gemini 3.8 Flash
+gemini-3.8-flash
+O... (Verified: True)
+[3] Thinking Level: High (Verified: True)
+[4] Google Search: DISABLED (OFF) (Verified: True)
+[5] Fresh Chat / Session per request: True
+
+[+] Built batch of exactly 75 cases (15 replicates of 5 canonical rules).
+
+[*] Dispatching 75 cases to MSEMAX Gateway (Search OFF, Thinking High)...
+
+================================================================================
+EXECUTION RESULTS & METRICS
+================================================================================
+[*] Total Roundtrip Time: 32.88s
+[*] Gateway Generation Time: 27.43s
+[*] Gateway Pre-Exec Time: 5.43s
+[*] Gateway Final Status: RESPONSE_COMPLETED
+[*] Google Search Enabled in Gateway: false
+[*] Tool Calls Count (DOM Chips): 6
+[*] Thinking Mode: High
+[*] Returned Cases Count: 75 / 75
+[*] Raw Response Length: 8567 characters
+[✓] Zero tool calls / No 'too_many_tool_calls' error detected.
+[✓] EXACT 75/75 MATCH: Every single case ID was returned by Gemini!
+[✓] Schema Compliance: 100% (all 75 items have valid case_id and valid status)
+
+================================================================================
+CANONICAL RULES COMPLIANCE (15 REPLICATES EACH = 75 TOTAL)
+================================================================================
+1. Strength mismatch -> no_match:  PASS (15/15 compliant)
+2. Dosage form diff  -> review:    PASS (15/15 compliant)
+3. Pack size diff    -> match:     PASS (15/15 compliant)
+4. OCR corruption    -> match:     PASS (15/15 compliant)
+5. Generic alt       -> no_match:  PASS (15/15 compliant)
+
+[✓] ALL 75 CASES (100%) PERFECTLY COMPLIANT WITH PHARMACEUTICAL RULES!
+
+================================================================================
+RAW RESPONSE PREVIEW (First 3 & Last 3 items):
+================================================================================
+[
+  {
+    "case_id": "TEST-01",
+    "status": "no_match",
+    "item_id": "",
+    "reason": "اختلاف في التركيز: المطلوب 250 مجم والمتاح بالمخزن 500 مجم"
+  },
+  {
+    "case_id": "TEST-02",
+    "status": "review",
+    "item_id": "W1-002",
+    "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة: مطلوب مرهم والمخزن عنده كريم"
+  },
+  {
+    "case_id": "TEST-03",
+    "status": "match",
+    "item_id": "W1-003",
+    "reason": ""
+  },
+  {
+    "case_id": "TEST-73",
+    "status": "match",
+    "item_id": "W1-003",
+    "reason": ""
+  },
+  {
+    "case_id": "TEST-74",
+    "status": "match",
+    "item_id": "W1-004",
+    "reason": ""
+  },
+  {
+    "case_id": "TEST-75",
+    "status": "no_match",
+    "item_id": "",
+    "reason": "اسم تجاري مختلف وبديل جنيس: بنادول لا يطابق سيتال"
+  }
+]

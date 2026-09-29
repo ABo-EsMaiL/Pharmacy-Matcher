@@ -1,0 +1,5 @@
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":74,"LineContent":"        self.active_thinking = \"\""}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":235,"LineContent":"                self.active_thinking = current_thinking"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":252,"LineContent":"                            self.active_thinking = text"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":261,"LineContent":"                    self.active_thinking = current_thinking"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":1051,"LineContent":"        \"active_thinking\": browser_manager.active_thinking,"}

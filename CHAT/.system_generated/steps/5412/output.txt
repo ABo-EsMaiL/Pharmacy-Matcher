@@ -1,0 +1,73 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -265,10 +265,11 @@
+         catalog_by_id = {item["id"]: item["name"] for item in wh_catalog}
+         wh_normalized = {normalize_text(name): name for name in [i["name"] for i in wh_catalog]}
+ 
+-        # 2. Filter cases: exact match vs TF-IDF vs LLM required
++        # 2. Filter cases: exact match vs Level 2 Auto-Match vs Level 3 LLM
+         exact_count = 0
+-        tfidf_match_count = 0
++        auto_match_count = 0
+         llm_cases = []
++        candidates_by_shortage = {}
+         
+         for idx, item in enumerate(shortage_items):
+             shortage_name = item.get("item_name_raw", "")
+@@ -282,9 +282,7 @@
+                 })
+                 exact_count += 1
+             else:
+-                # Get top candidates locally in milliseconds (already validated for brand & dosage form!)
+                 top_candidates = finder.search(shortage_name, top_k=5)
+-                
+                 if not top_candidates:
+                     continue
+                     
+@@ -291,8 +291,16 @@
+                 best_name = top_candidates[0]["name"]
+                 best_brand_sim = top_candidates[0].get("brand_sim", 0)
+                 
+-                # Rule 1: Very high confidence -> Auto Match (Bypass API entirely!)
++                # Level 2: Deterministic High-Confidence Auto-Match
++                is_auto = False
+                 if best_score >= 0.88 and best_brand_sim >= 80:
++                    is_auto = True
++                else:
++                    is_auto_safe, _ = is_safe_auto_match(shortage_name, best_name)
++                    if is_auto_safe:
++                        is_auto = True
++                        
++                if is_auto:
+                     matched.append({
+                         "shortage_item": shortage_name,
+                         "warehouse_item": best_name,
+@@ -299,9 +299,8 @@
+-                        "method": "fast_tfidf"
+-                    })
+-                    tfidf_match_count += 1
+-                
+-                # Rule 2: Plausible candidate -> Ask LLM to evaluate with clinical rules
+-                else:
++                        "method": "auto_rule"
++                    })
++                    auto_match_count += 1
++                else:
++                    # Level 3: Ambiguous items sent to LLM with Safety Net
+                     candidates_for_llm = [{"id": c["id"], "name": c["name"]} for c in top_candidates[:3]]
+                     llm_cases.append({
+                         "case_id": f"Q{idx:05}",
+@@ -308,8 +308,9 @@
+                         "candidates": candidates_for_llm
+                     })
++                    candidates_by_shortage[shortage_name] = top_candidates
+ 
+         print(f"  -> Exact Matches: {exact_count}")
+-        print(f"  -> TF-IDF Auto-Matches (>88%): {tfidf_match_count}")
++        print(f"  -> Deterministic Auto-Matches: {auto_match_count}")
+         
+         # 3. Process via LLM in large optimal chunks (75 items per message)
+         if llm_cases and hasattr(self.config, 'local_api_url'):
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

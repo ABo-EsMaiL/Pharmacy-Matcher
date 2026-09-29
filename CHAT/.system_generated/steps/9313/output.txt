@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\comparative_audit.py", line 9, in <module>
+    cursor.execute('SELECT id, created_at, status, total_shortages, matched_count, review_count, not_found_count, output_file FROM processes ORDER BY id DESC LIMIT 10')
+sqlite3.OperationalError: no such table: processes
+

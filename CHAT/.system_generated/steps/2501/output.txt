@@ -1,0 +1,13 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1528,6 +1528,7 @@
+         step3_desc: "Click here to transfer items to warehouse sheets and clean the list.",
+         btn_apply_reviews: "Apply Changes",
+         btn_open_folder: "Open Results Folder",
++        btn_rerun_match: "Re-run Matching",
+ 
+         // Screen History
+         history_title: "Process History",
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

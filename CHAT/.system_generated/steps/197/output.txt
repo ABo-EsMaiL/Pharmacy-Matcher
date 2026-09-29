@@ -1,0 +1,28 @@
+The search for ""oc_sk_" API key" returned the following summary:
+An API key with the prefix `oc_sk_` is a format used by several different services for authentication via Bearer tokens[1][2][3]. Because this prefix is used by multiple platforms, the specific service depends on the context in which you encountered the key:
+
+*   **Orbit Commerce:** Orbit uses `oc_sk_` for store API keys, which merchants create to connect their own systems (like ERP or warehouse software) to the Orbit API[4][5].
+*   **OpenCode:** The OpenCode Console uses `oc_sk_` for service account API keys to authenticate requests to its Usage and Inference APIs[6][7].
+*   **OpenClaw CRM:** OpenClaw uses `oc_sk_` prefix API keys for its REST API, which allows AI agents and other integrations to interact with the CRM[1][8].
+*   **Omniloy (OlivIA):** The OlivIA API also utilizes `oc_sk_` personal API keys for authentication[2].
+*   **ShipmentBot (OpenClaw SellerCentral API):** This service uses `oc_sk_` bearer tokens to scope API access to specific seller business contexts[3][9].
+
+### Important Security Note
+Regardless of the service, an API key starting with `oc_sk_` is a **secret credential**[10][11]. 
+*   **Keep it private:** Never share it, commit it to public repositories (like GitHub), or include it in client-side code (browsers or mobile apps)[10][12].
+*   **Usage:** These keys are intended to be used in server-side environments[10][11].
+*   **Exposure:** If you believe your key has been exposed, you should immediately revoke it in the respective service's dashboard and generate a new one[4][12].
+
+Sources:
+[1] [github.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvz2aSRRiwu1weCawLa3jl924jwqqIZFAb276_LfJ7AB8kXF1lS0jfNLrUftz-JC9dv5VV8CauHX0PWJDiEdrl11Dh_lQ1E_TJRYWnp2t6la1g2-thB7hxoahwiKQ=)
+[2] [mintlify.app](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYsW2deqoQPhuzEg3Sjy4WAgqgKW9W2Tl3ojLt44V--m8DQQSDgkAwVQY-V3Sbbn6xoYu2y1McZeXpbukmGXbXPhl6xDfOVPlFqQHMljymCplGonBtcVyBc9nlMoJbdTYuf5R_)
+[3] [shipmentbot.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN6HssunfHwVI7tkEnljXimFeN0ZwxGWKcMOGndP8iCqikepF4o0k6Tp5l1bbvqYf0pjZ93KKcCxFfZDgx5QScbtEV-3M1P6lLUReCCXljW4xWugqsG6wrtYwnf9LQ3Y9Z-_XG)
+[4] [orbitcommerce.net](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnq4alCW2kDezwer2lh7yDw8gFKLykXSVRPYUgz14emvHZdRchmxqPqgKLGbWUBalSFtree871ZI2J-ye3XzSEZPuy7xQyVrs5iazvhy2-bd_uZugsUnnp9ZiKPJb0tLm7AcGYOBKi_Gk=)
+[5] [orbitcommerce.net](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGD8cs25aWXeS6zncEVJR4XcjIUKGTzCauGy52r-tFamoWsIG8GeIoZ_A2Rlfsk_Ss2Phv2O5UsOu5WGImGsjn_6KYrRcCigrI_4kjlzKsYAXnWdnnhvDNh_eLejDUSUI0XNcpHfQXZTWDAfmWvjjMM70VmYA==)
+[6] [opencode.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYrv9bvV3tHBpKbpIWkRbBLXEHaL1QcqN5wPuAVYPAdV4LD8aI4ump_ai8taOB9klQBaASt5j6FhFR14t0bQ1uf6gP7NgQf32dQsecbsqrEfNaQcvYgkej6mtC3ws=)
+[7] [opencode.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYrv9bvV3tHBpKbpIWkRbBLXEHaL1QcqN5wPuAVYPAdV4LD8aI4ump_ai8taOB9klQBaASt5j6FhFR14t0bQ1uf6gP7NgQf32dQsecbsqrEfNaQcvYgkej6mtC3ws=)
+[8] [github.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvz2aSRRiwu1weCawLa3jl924jwqqIZFAb276_LfJ7AB8kXF1lS0jfNLrUftz-JC9dv5VV8CauHX0PWJDiEdrl11Dh_lQ1E_TJRYWnp2t6la1g2-thB7hxoahwiKQ=)
+[9] [shipmentbot.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN6HssunfHwVI7tkEnljXimFeN0ZwxGWKcMOGndP8iCqikepF4o0k6Tp5l1bbvqYf0pjZ93KKcCxFfZDgx5QScbtEV-3M1P6lLUReCCXljW4xWugqsG6wrtYwnf9LQ3Y9Z-_XG)
+[10] [orbitcommerce.net](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnq4alCW2kDezwer2lh7yDw8gFKLykXSVRPYUgz14emvHZdRchmxqPqgKLGbWUBalSFtree871ZI2J-ye3XzSEZPuy7xQyVrs5iazvhy2-bd_uZugsUnnp9ZiKPJb0tLm7AcGYOBKi_Gk=)
+[11] [orbitcommerce.net](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnq4alCW2kDezwer2lh7yDw8gFKLykXSVRPYUgz14emvHZdRchmxqPqgKLGbWUBalSFtree871ZI2J-ye3XzSEZPuy7xQyVrs5iazvhy2-bd_uZugsUnnp9ZiKPJb0tLm7AcGYOBKi_Gk=)
+[12] [orbitcommerce.net](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnq4alCW2kDezwer2lh7yDw8gFKLykXSVRPYUgz14emvHZdRchmxqPqgKLGbWUBalSFtree871ZI2J-ye3XzSEZPuy7xQyVrs5iazvhy2-bd_uZugsUnnp9ZiKPJb0tLm7AcGYOBKi_Gk=)

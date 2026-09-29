@@ -1,0 +1,13 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\inspect_unstructured_jobs.py", line 8, in <module>
+    client = TransformClient(
+             ^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_client.py", line 87, in __init__
+    raise ValueError(
+ValueError: pass exactly one of api_key or bearer_token, or set UNSTRUCTURED_API_KEY — they are different identities, not interchangeable spellings of one credential
+

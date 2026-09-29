@@ -1,0 +1,24 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_client.py", line 300, in from_document
+    return post_multipart(
+           ^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_multipart.py", line 100, in post_multipart
+    return api_client.response_deserialize(response, _RESPONSE_TYPES).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_generated\api_client.py", line 328, in response_deserialize
+    raise ApiException.from_response(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_generated\exceptions.py", line 141, in from_response
+    raise BadRequestException(http_resp=http_resp, body=body, data=data)
+unstructured_transform_client._generated.exceptions.BadRequestException: (400)
+Reason: Bad Request
+HTTP response headers: HTTPHeaderDict({'Date': 'Tue, 22 Sep 2026 10:52:07 GMT', 'Content-Type': 'application/json', 'Content-Length': '225', 'Connection': 'keep-alive', 'server': 'uvicorn'})
+HTTP response body: {"code":"invalid_schema","message":"schema does not satisfy the extraction engine's constraints: \"additionalProperties\" must be present and set to false; \"required\" must list every key in \"properties\"; missing: items."}
+HTTP response data: code=<ErrorCode.INVALID_SCHEMA: 'invalid_schema'> message='schema does not satisfy the extraction engine\'s constraints: "additionalProperties" must be present and set to false; "required" must list every key in "properties"; missing: items.'
+
+Testing with profile=balanced...
+

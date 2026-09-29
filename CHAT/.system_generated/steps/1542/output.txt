@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+JobResult fields: ['id', 'status', 'filename', 'file_id', 'cancellation_requested', 'source', 'error', 'result']
+ExtractionResult fields: ['data', 'field_metadata']
+

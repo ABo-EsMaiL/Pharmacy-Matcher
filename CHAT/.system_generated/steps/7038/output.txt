@@ -1,0 +1,67 @@
+
+The command exited with code 1.
+Output:
+===========================================================================
+           PHARMACY & MSEMAX END-TO-END RUNTIME VERIFICATION
+===========================================================================
+
+[Step 1] Querying Gateway Health...
+  -> Gateway: MSEMAX (AIStudio Web Hook)
+  -> Browser Ready: True
+  -> Active Thinking Level: High
+  -> Context Isolation (Fresh Chat): True
+  -> Default Model: gemini-3.8-flash
+
+[Step 2] Sending 5 Test Cases through Pharmacy Coordinator...
+  -> Total final prompt length: 4460 characters
+  -> Target URL: http://127.0.0.1:8001/v1/chat/completions
+  -> Model: gemini-3.8-flash
+
+[Step 3] Pharmacy Coordinator Call Completed in 16.76 seconds!
+
+===========================================================================
+                    RUNTIME VERIFICATION REPORT
+===========================================================================
+1. Actual Model inside AI Studio: gemini-3.8-flash (active)
+2. Actual Thinking Level:         High
+3. Fresh Chat/Session per Batch:  True
+4. Final Prompt Length:           4460 characters
+5. Raw Final Response from AI Studio:
+{
+"results": [
+{
+"case_id": "TEST-02-DOSAGE-FORM",
+"status": "review",
+"item_id": "W1-002",
+"reason": "نفس الدواء ولكن الهيئة مختلفة: مطلوب مرهم والمخزن عنده كريم"
+},
+{
+"case_id": "TEST-03-PACK-SIZE",
+"status": "match",
+"item_id": "W1-003",
+"reason": ""
+},
+{
+"case_id": "TEST-04-OCR-CORRUPTION",
+"status": "match",
+"item_id": "W1-004",
+"reason": ""
+}
+]
+}
+
+6. Valid JSON from AI Studio:     True
+7. Required Schema Conformance:   True (Contains 'results' array with case_id, status, item_id)
+8. Cases Sent vs Returned:        Sent: 5 cases | Parsed decisions: 5
+
+---------------------------------------------------------------------------
+           TEST CASES VERIFICATION (EVALUATING 5 RULES)
+---------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\e2e_runtime_verification.py", line 207, in <module>
+    run_verification()
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\e2e_runtime_verification.py", line 182, in run_verification
+    dec = res_map.get(cid, {})
+          ^^^^^^^
+NameError: name 'res_map' is not defined
+

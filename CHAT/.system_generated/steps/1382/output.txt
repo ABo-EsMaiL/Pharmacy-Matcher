@@ -1,0 +1,81 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -37,7 +37,7 @@
+     cache_file = cache_dir / f"{file_hash}_extract.json"
+     
+     if cache_file.exists():
+-        print(f"📄 تم العثور على الملف في الذاكرة المؤقتة (Cache): {filepath.name}")
++        print(f"📄 Found file in cache: {filepath.name}")
+         try:
+             with open(cache_file, "r", encoding="utf-8") as f:
+                 result_data = json.load(f)
+@@ -44,6 +44,6 @@
+             return items
+         except json.JSONDecodeError:
+-            print("⚠️ ملف الـ Cache تالف (ربما بسبب توقف سابق). سيتم تجاهله ومعالجة الملف من جديد.")
++            print("⚠️ Cache file is corrupted (likely from a previous crash). Ignoring and re-processing.")
+             # Continue to re-process the file
+ 
+     try:
+@@ -50,7 +50,7 @@
+     except ImportError:
+-        print("⚠️ لم يتم العثور على مكتبة unstructured-transform-client. يرجى تثبيتها:")
++        print("⚠️ unstructured-transform-client not found. Please install it:")
+         print("pip install unstructured-transform-client")
+-        raise RuntimeError("مكتبة unstructured-transform-client مطلوبة لمعالجة ملفات PDF")
++        raise RuntimeError("unstructured-transform-client is required to process PDFs")
+ 
+     client = TransformClient(
+         api_key=api_key,
+@@ -95,7 +95,7 @@
+     }
+ 
+     try:
+-        print(f"  ⏳ جاري رفع واستخراج البيانات من {filepath.name} ... قد يستغرق الأمر بعض الوقت.")
++        print(f"  ⏳ Uploading and extracting data from {filepath.name} ... This may take some time.")
+         with open(filepath, "rb") as f:
+             # We wait up to 10 minutes (600 seconds) for the extraction job
+             result = client.extract.from_document(
+@@ -116,7 +116,7 @@
+         if result_data.get("status") in ["queued", "processing", "in_progress"]:
+             job_id = result_data.get("id") or result_data.get("job_id")
+             if job_id:
+-                print(f"  ⏳ جاري المعالجة على الخادم (رقم المهمة: {job_id}). جاري الانتظار...")
++                print(f"  ⏳ Processing on server (Job ID: {job_id}). Waiting...")
+                 import time
+                 attempts = 0
+                 while attempts < 120:  # 20 minutes max (120 * 10s)
+@@ -135,13 +135,13 @@
+                         result_data = job_data
+                         break
+                     elif status in ["failed", "error"]:
+-                        raise RuntimeError(f"فشلت عملية الاستخراج في الخادم: {job_data.get('error', '')}")
++                        raise RuntimeError(f"Extraction failed on server: {job_data.get('error', '')}")
+                     
+                     if attempts % 3 == 0:
+-                        print(f"  ⏳ الحالة الحالية: {status} ... (محاولة {attempts}/120)")
++                        print(f"  ⏳ Current status: {status} ... (Attempt {attempts}/120)")
+                         
+                 if attempts >= 120:
+-                    raise RuntimeError("انتهت مهلة الانتظار (20 دقيقة) دون اكتمال المهمة على الخادم.")
++                    raise RuntimeError("Timeout reached (20 minutes) without job completion on server.")
+ 
+         # Cache the raw result
+         with open(cache_file, "w", encoding="utf-8") as f:
+@@ -152,11 +152,11 @@
+             json.dump(result_data, f, ensure_ascii=False, indent=2, default=str)
+ 
+         items = parse_structured_result(result_data, filepath.name)
+-        print(f"  ✅ تم استخراج {len(items)} عنصر من {filepath.name}")
++        print(f"  ✅ Extracted {len(items)} items from {filepath.name}")
+         return items
+ 
+     except Exception as e:
+-        print(f"❌ خطأ أثناء الاستخراج: {e}")
++        print(f"❌ Extraction error: {e}")
+         raise
+ 
+ def parse_structured_result(result_data: dict, filename: str) -> list[dict]:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

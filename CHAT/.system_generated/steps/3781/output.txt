@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\sim_all_warehouses.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -103,7 +103,7 @@
+                 if req_brand.startswith(cand_brand) or cand_brand.startswith(req_brand):
+                     sim = max(sim, 80)
+                     
+-            if sim >= 55 or c["score"] >= 0.50:
++            if sim >= 60 or c["score"] >= 0.50:
+                 valid.append(cand_name)
+                 
+         if valid:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,22 @@
+
+The command exited with code 0.
+Output:
+    def delete_process(self, process_id: str) -> dict:
+
+        try:
+
+            self.db.delete_process(process_id)
+
+            return {"success": True}
+
+        except Exception as e:
+
+            return {"success": False, "error": str(e)}
+
+
+
+    def on_closing(self):
+
+        self.server_manager.cleanup()
+
+

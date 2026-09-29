@@ -1,0 +1,266 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -532,11 +532,30 @@
+         except Exception as e:
+             logger.warning(f"Error during native submission: {e}")
+ 
+-        # 7. Smart completion detection: stream response tokens until model message is complete
++        # Determine case count from batch_size or prompt inspection
++        case_count = batch_size if (batch_size is not None and batch_size > 0) else None
++        if not case_count:
++            cid_count = prompt.count('"case_id"') or prompt.count("'case_id'")
++            case_count = cid_count if cid_count > 0 else 1
++
++        t_cfg = self.get_adaptive_timeouts(case_count)
++
++        # Lifecycle State Tracking
++        current_state = self.STATE_NO_RESPONSE_STARTED
++        t_submit = time.time()
++        t_turn_detected: Optional[float] = None
++        t_first_token: Optional[float] = None
++        t_last_growth = t_submit
++        stability_start_time: Optional[float] = None
+         prev_text = ""
+-        start_time = time.time()
+-        generation_started = False
+-        consecutive_stable_count = 0
++        consecutive_js_errors = 0
++
++        logger.info(
++            f"[{case_count} cases] Prompt submitted ({len(prompt)} chars). "
++            f"Timeout Tier: {t_cfg['tier']} | Start: {t_cfg['initial_start_timeout']:.0f}s | "
++            f"First Token: {t_cfg['first_token_timeout']:.0f}s | Stagnation: {t_cfg['stagnation_timeout']:.0f}s | "
++            f"Ceiling: {t_cfg['hard_ceiling']:.0f}s"
++        )
+ 
+         js_fetch_state = '''(initialCount) => {
+             // 1. Generation Running Check (Stop button or active spinners)
+@@ -564,10 +564,24 @@
+             }
+ 
+             // Find all chat turns
+-            const allTurns = Array.from(document.querySelectorAll('ms-chat-turn'));
++            const allTurns = Array.from(document.querySelectorAll('ms-chat-turn, .chat-turn-container, .chat-turn, [data-turn-role]'));
+             if (allTurns.length === 0) {
+-                return { text: "", is_running: isRunning, is_done: false, has_error: false, new_turn_started: false, model_count: 0 };
+-            }
++                return { text: "", is_running: isRunning, is_done: false, has_error: false, new_turn_started: isRunning, model_count: 0 };
++            }
++
++            // Count model turns
++            const modelTurns = allTurns.filter(t => {
++                const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
++                const cls = (t.getAttribute('class') || '').toLowerCase();
++                const author = (t.querySelector('.author-label, .turn-author, .role-label')?.innerText || '').toLowerCase();
++                const hasUserChild = t.querySelector('[data-turn-role="User"], .user-prompt-container, .user') !== null;
++                const isUser = role === 'user' || cls.includes('user') || author.includes('user') || hasUserChild;
++                if (isUser) return false;
++                return role === 'model' || cls.includes('model') || author.includes('model') || Boolean(t.querySelector('ms-thought-chunk, .thought-activity-host, ms-prompt-chunk, .model-prompt-container'));
++            });
++
++            const currentModelCount = modelTurns.length;
++            const newTurnStarted = (currentModelCount > initialCount) || isRunning;
+ 
+             // Iterate backwards to find all consecutive model turns at the end of the chat
+             const modelTurnsToExtract = [];
+@@ -634,12 +634,15 @@
+                 is_running: isRunning,
+                 is_done: isDone,
+                 has_error: false,
+-                new_turn_started: true,
+-                model_count: 0
++                new_turn_started: newTurnStarted,
++                model_count: currentModelCount
+             };
+         }'''
+ 
+-        while time.time() - start_time < REQUEST_TIMEOUT:
++        while (time.time() - t_submit) < t_cfg["hard_ceiling"]:
++            now = time.time()
++            elapsed = now - t_submit
++
+             if not self.page or self.page.is_closed() or self.is_shutting_down:
+                 logger.info("Browser session closed or shutting down. Exiting stream.")
+                 break
+@@ -646,5 +646,6 @@
+             try:
+                 state = await self.page.evaluate(js_fetch_state, initial_model_count)
++                consecutive_js_errors = 0
+             except Exception as e:
+                 err_msg = str(e).lower()
+                 if "closed" in err_msg or "destroyed" in err_msg or "target" in err_msg or self.is_shutting_down:
+@@ -651,13 +651,11 @@
+                     break
+                 logger.error(f"JS Extraction Error: {e}")
+-                await asyncio.sleep(0.15)
+-                
+-                # Prevent infinite loops on persistent JS errors
+-                elapsed = time.time() - start_time
+-                if elapsed > 25:
+-                    logger.error("JS failed persistently for 25 seconds. Aborting.")
++                consecutive_js_errors += 1
++                if consecutive_js_errors >= 30:
++                    logger.error("JS failed persistently for 30 consecutive attempts. Aborting.")
+                     yield {"delta": "", "text": "[Error: Internal extraction logic failed persistently.]"}
+                     break
++                await asyncio.sleep(0.15)
+                 continue
+ 
+             current_text = state.get("text", "")
+@@ -664,12 +664,8 @@
+             is_done = state.get("is_done", False)
+             new_turn_started = state.get("new_turn_started", False)
+             has_error = state.get("has_error", False)
+-            elapsed = time.time() - start_time
+-
+-            if is_running or new_turn_started or len(current_text) > 0:
+-                generation_started = True
+-
+-            # If the turn stopped with an internal error / permission denied:
++
++            # Check for fatal error banner in AI Studio
+             if has_error and not is_running and elapsed > 1.5:
+                 logger.error("Turn ended with an error ('permission denied' / 'internal error') from Google AI Studio. Aborting without retry.")
+                 yield {"delta": "", "text": "[Error: Google AI Studio encountered an error ('permission denied' / 'internal error'). Please check chat or try again.]"}
+@@ -676,35 +676,107 @@
+ 
+-            # Stream delta tokens to client
+-            if len(current_text) > len(prev_text):
+-                delta = current_text[len(prev_text):]
+-                prev_text = current_text
+-                yield {"delta": delta, "text": current_text}
+-                consecutive_stable_count = 0
+-            else:
+-                if generation_started and not is_running:
+-                    consecutive_stable_count += 1
+-                # Always yield the current state so non-streaming can grab the absolute final text
+-                yield {"delta": "", "text": current_text}
+-
+-            # SMART EVENT-DRIVEN COMPLETION:
+-            # 1. Generation finished (Stop button gone), text is non-empty and stable for 50 checks (~5.0s)
+-            if generation_started and not is_running and len(current_text) > 0 and consecutive_stable_count >= 50:
+-                logger.info(f"Model response completed via stability! Total characters: {len(current_text)}")
+-                break
+-
+-            # 2. If finished generating without text or errored out
+-            if generation_started and not is_running and len(current_text) == 0 and elapsed > 60.0:
+-                logger.error("Generation finished with empty output. Aborting.")
+-                yield {"delta": "", "text": "[Error: Google AI Studio did not produce a response.]"}
+-                break
+-
+-            # 4. If nothing started within 25 seconds, abort
+-            if not generation_started and elapsed > 25:
+-                logger.error("Generation failed to start within 25 seconds. Aborting request.")
+-                yield {"delta": "", "text": "[Error: Google AI Studio did not respond. Check browser window.]"}
+-                break
+-
+-            await asyncio.sleep(0.1)
++            # ------------------------------------------------------------------
++            # 1. State: NO_RESPONSE_STARTED
++            # ------------------------------------------------------------------
++            if current_state == self.STATE_NO_RESPONSE_STARTED:
++                if is_running or new_turn_started or len(current_text) > 0:
++                    current_state = self.STATE_RESPONSE_IN_PROGRESS
++                    t_turn_detected = now
++                    t_last_growth = now
++                    logger.info(
++                        f"[{case_count} cases] State -> RESPONSE_IN_PROGRESS at {t_turn_detected - t_submit:.2f}s "
++                        f"(is_running={is_running}, new_turn={new_turn_started}, initial_chars={len(current_text)})"
++                    )
++                else:
++                    if elapsed > t_cfg["initial_start_timeout"]:
++                        logger.error(f"[{case_count} cases] Generation failed to start within {t_cfg['initial_start_timeout']:.0f}s. State: NO_RESPONSE_STARTED.")
++                        yield {"delta": "", "text": f"[Error: NO_RESPONSE_STARTED - Google AI Studio did not start generating within {t_cfg['initial_start_timeout']:.0f}s]"}
++                        break
++
++            # ------------------------------------------------------------------
++            # 2. State: RESPONSE_IN_PROGRESS
++            # ------------------------------------------------------------------
++            if current_state == self.STATE_RESPONSE_IN_PROGRESS:
++                # Milestone: First token/character detected
++                if len(current_text) > 0 and t_first_token is None:
++                    t_first_token = now
++                    logger.info(f"[{case_count} cases] First token/character detected at {t_first_token - t_submit:.2f}s (len: {len(current_text)})")
++
++                # Character growth detection
++                if len(current_text) > len(prev_text):
++                    delta = current_text[len(prev_text):]
++                    prev_text = current_text
++                    t_last_growth = now
++                    stability_start_time = None  # Reset stability timer when text actively grows
++                    yield {"delta": delta, "text": current_text}
++                else:
++                    # No character growth on this tick
++                    if len(current_text) == 0:
++                        # Model is still thinking / waiting to emit first token
++                        if (now - t_submit) > t_cfg["first_token_timeout"]:
++                            if not is_running:
++                                logger.error(f"[{case_count} cases] Model stopped without producing tokens after {now - t_submit:.1f}s.")
++                                yield {"delta": "", "text": f"[Error: FIRST_TOKEN_TIMEOUT - Model finished without producing any text after {now - t_submit:.1f}s]"}
++                            else:
++                                logger.error(f"[{case_count} cases] Model thinking exceeded first_token_timeout ({t_cfg['first_token_timeout']:.0f}s).")
++                                yield {"delta": "", "text": f"[Error: FIRST_TOKEN_TIMEOUT - Model stayed in thinking for >{t_cfg['first_token_timeout']:.0f}s without generating tokens]"}
++                            break
++                    else:
++                        # Text has been emitted (len > 0), but did not grow on this tick
++                        if not is_running:
++                            # Generation has stopped running: check stability duration
++                            if stability_start_time is None:
++                                stability_start_time = now
++                            elif (now - stability_start_time) >= t_cfg["stability_duration"]:
++                                # Stable for required duration!
++                                current_state = self.STATE_RESPONSE_COMPLETED
++                                logger.info(
++                                    f"[{case_count} cases] State -> RESPONSE_COMPLETED via stability "
++                                    f"({t_cfg['stability_duration']:.1f}s stable at {len(current_text)} chars)"
++                                )
++                                yield {"delta": "", "text": current_text}
++                                break
++                        else:
++                            # is_running is True: NEVER timeout while running, EXCEPT stagnation guardrail
++                            stability_start_time = None
++                            if (now - t_last_growth) > t_cfg["stagnation_timeout"]:
++                                logger.error(f"[{case_count} cases] Stagnation: no character growth for {t_cfg['stagnation_timeout']:.0f}s while running.")
++                                yield {"delta": "", "text": f"[Error: STAGNATION_TIMEOUT - Text generation stalled for {t_cfg['stagnation_timeout']:.0f}s]"}
++                                break
++
++                    # Always yield the current state so non-streaming callers can access text
++                    yield {"delta": "", "text": current_text}
++
++            await asyncio.sleep(0.1)
++        else:
++            # Loop ended due to hard_ceiling
++            if current_state != self.STATE_RESPONSE_COMPLETED:
++                logger.error(f"[{case_count} cases] Hard ceiling reached ({t_cfg['hard_ceiling']:.0f}s). State: {current_state}. Aborting.")
++                yield {"delta": "", "text": f"[Error: HARD_CEILING_TIMEOUT - Request exceeded safe upper bound {t_cfg['hard_ceiling']:.0f}s]"}
++
++        # ----------------------------------------------------------------------
++        # Detailed Timing Milestones Logging
++        # ----------------------------------------------------------------------
++        total_duration = time.time() - t_submit
++        turn_str = f"{t_turn_detected - t_submit:.1f}s" if t_turn_detected else "N/A"
++        first_token_str = f"{t_first_token - t_submit:.1f}s" if t_first_token else "N/A"
++        last_growth_str = f"{t_last_growth - t_submit:.1f}s" if (t_last_growth != t_submit) else "N/A"
++        completed_str = f"{total_duration:.1f}s" if current_state == self.STATE_RESPONSE_COMPLETED else "INCOMPLETE"
++
++        timing_summary = (
++            f"{case_count} cases | "
++            f"first token: {first_token_str} | "
++            f"completed: {completed_str} | "
++            f"timeout: {t_cfg['first_token_timeout']:.0f}s"
++        )
++        logger.info(f"[TIMING] {timing_summary}")
++        logger.info(
++            f"[TIMING_DETAILS] {case_count} cases | state: {current_state} | "
++            f"turn detected: {turn_str} | first token: {first_token_str} | "
++            f"last growth: {last_growth_str} | completed: {completed_str} | "
++            f"total: {total_duration:.1f}s | chars: {len(prev_text)} | "
++            f"tier: {t_cfg['tier']}"
++        )
++        print(f"\n[AI STUDIO TIMING] {timing_summary}\n")
+ 
+         elapsed_total = time.time() - start_time
+         is_json = False
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+
+ProcessId CommandLine                                                                                                  
+--------- -----------                                                                                                  
+    25532 "D:\miniconda3\python.exe" C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\s...
+
+
+

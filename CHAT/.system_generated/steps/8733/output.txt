@@ -1,0 +1,26 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -604,14 +604,13 @@
+             # Update the Summary (ملخص) sheet formulas and structure
+             if 'ملخص' in wb.sheetnames:
+                 ws_summary = wb['ملخص']
+-                ws_summary['B2'] = "=B3+B4+B5"
+                 num_wh = len(wh_sheet_names)
+-                ws_summary['B3'] = f"=SUM(B8:B{7 + num_wh})" if num_wh > 0 else "0"
+-                ws_summary['B4'] = "=MAX(0, COUNTA('لم يُعثر عليه'!A:A)-1)"
+-                ws_summary['B5'] = "=MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)"
+-                
+-                # Update warehouse detail rows (Row 8+)
+-                for r in range(8, ws_summary.max_row + 1):
++                ws_summary['B4'] = f"=SUM(B9:B{8 + num_wh})" if num_wh > 0 else "0"
++                ws_summary['B5'] = "=MAX(0, COUNTA('لم يُعثر عليه'!A:A)-1)"
++                ws_summary['B6'] = "=MAX(0, COUNTA('يحتاج مراجعة'!B:B)-1)"
++                
++                # Update warehouse detail rows (Row 9+)
++                for r in range(9, ws_summary.max_row + 1):
+                     wh_title = ws_summary.cell(row=r, column=1).value
+                     if wh_title:
+                         safe_title = wh_title
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

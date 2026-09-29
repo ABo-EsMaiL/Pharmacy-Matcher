@@ -1,0 +1,33 @@
+
+The command exited with code 0.
+Output:
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy-vision\data\processes\PROC-017\cache\vision\السلام_شبين_d44b79aaae
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         9/25/2026   5:17 PM                pages                                                                
+d-----         9/25/2026   5:17 PM                results                                                              
+-a----         9/25/2026   5:17 PM            312 manifest.json                                                        
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy-vision\data\processes\PROC-017\cache\vision\السلام_شبين_d44b79aaae\pages
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         9/25/2026   5:17 PM         117596 page_1.webp                                                          
+-a----         9/25/2026   5:17 PM         108858 page_2.webp                                                          
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy-vision\data\processes\PROC-017\cache\vision\السلام_شبين_d44b79aaae\results
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         9/25/2026   5:17 PM           2279 page_1.json                                                          
+
+
+

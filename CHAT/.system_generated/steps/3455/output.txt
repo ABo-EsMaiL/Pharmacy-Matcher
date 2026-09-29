@@ -1,0 +1,24 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+============================================================
+[*] Packaging Pharmacy Matcher for Production Deployment
+============================================================
+[-] Removing existing dist_production...
+[+] Copying desktop_app/ ...
+[+] Copying src/ ...
+[+] Copying requirements.txt ...
+[+] Copying .env.example ...
+[+] Copying fast_main.py ...
+[+] Initialized clean history.db in data/
+[+] Created default settings.json
+[+] Created run_app.bat launcher
+[+] Created README_SETUP.md
+
+============================================================
+[SUCCESS] Production package successfully created at:
+  D:\AI_Engineer\Pharmacy-agy\dist_production
+============================================================
+

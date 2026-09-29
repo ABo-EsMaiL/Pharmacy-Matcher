@@ -1,0 +1,18 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -186,6 +186,12 @@
+                             item_id = decision.get("item_id", "")
+                             warehouse_item = catalog_by_id.get(item_id, "")
+                             
++                            if status in ("match", "review") and not warehouse_item:
++                                if case.get("candidates"):
++                                    warehouse_item = case["candidates"][0]["name"]
++                                else:
++                                    status = "no_match"
++                                    
+                             parsed.append({
+                                 "shortage_name": shortage_name,
+                                 "status": status,
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

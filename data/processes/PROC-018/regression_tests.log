@@ -1,0 +1,21 @@
+test_llm_cannot_override_strength_or_combination (test_fast_match_regressions.GuardTests.test_llm_cannot_override_strength_or_combination) ... ok
+test_outside_or_invalid_ids_and_status_fail (test_fast_match_regressions.GuardTests.test_outside_or_invalid_ids_and_status_fail) ... ok
+test_python_owns_form_decision (test_fast_match_regressions.GuardTests.test_python_owns_form_decision) ... ok
+test_unverified_identity_is_not_match_or_review (test_fast_match_regressions.GuardTests.test_unverified_identity_is_not_match_or_review) ... ok
+test_digits_and_decimals (test_fast_match_regressions.ParsingTests.test_digits_and_decimals) ... ok
+test_forms_and_packaging (test_fast_match_regressions.ParsingTests.test_forms_and_packaging) ... ok
+test_pack_volume_price_are_not_strength (test_fast_match_regressions.ParsingTests.test_pack_volume_price_are_not_strength) ... ok
+test_proc017_decisions (test_fast_match_regressions.ParsingTests.test_proc017_decisions) ... ok
+test_product_variants_survive (test_fast_match_regressions.ParsingTests.test_product_variants_survive) ... ok
+test_retrieval_preserves_form_difference (test_fast_match_regressions.ParsingTests.test_retrieval_preserves_form_difference) ... ok
+test_strength_equivalence_and_concentration (test_fast_match_regressions.ParsingTests.test_strength_equivalence_and_concentration) ... ok
+test_deterministic_path_no_provider (test_fast_match_regressions.PipelineTests.test_deterministic_path_no_provider) ... ok
+test_identity_audit_is_separate_in_excel (test_fast_match_regressions.PipelineTests.test_identity_audit_is_separate_in_excel) ... ok
+test_llm_no_match_does_not_hide_unverified_identity (test_fast_match_regressions.PipelineTests.test_llm_no_match_does_not_hide_unverified_identity) ... ok
+test_provider_failure_never_becomes_review (test_fast_match_regressions.PipelineTests.test_provider_failure_never_becomes_review) ... ok
+test_rejected_candidates_removed_sixth_preserved (test_fast_match_regressions.PipelineTests.test_rejected_candidates_removed_sixth_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.074s
+
+OK

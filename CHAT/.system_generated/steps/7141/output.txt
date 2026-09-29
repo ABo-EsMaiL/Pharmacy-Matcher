@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+=== INSPECTING AI STUDIO SELECTORS ===
+Found 0 mat-select elements:
+
+=== LOOKING FOR MODEL TEXT/SELECTORS ===
+Found 0 candidate model elements:
+

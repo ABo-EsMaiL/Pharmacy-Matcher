@@ -1,0 +1,11 @@
+
+The command exited with code 1.
+Output:
+Start-Process : This command cannot be run due to the error: The request is not supported.
+At line:1 char:1
++ Start-Process -FilePath "$env:SystemRoot\System32\WindowsPowerShell\v ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process], InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+

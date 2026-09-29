@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -149,7 +149,7 @@
+         remaining = still_remaining
+         print(f"  -> Exact Text Match: {exact_count}")
+ 
+-        if remaining and self.opencode_api_key:
++        if remaining and self.openrouter_api_key:
+             llm_results = self._llm_batch_match(remaining, warehouse_items, warehouse_name)
+             for result in llm_results:
+                 if result["status"] == "m":
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

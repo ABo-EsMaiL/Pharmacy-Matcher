@@ -1,0 +1,18 @@
+
+The command exited with code 0.
+Output:
+    with open(filepath, "r", encoding="utf-8-sig") as f:
+        data = json.load(f)
+    
+    items = parse_items_from_response(data)
+    
+    doc_name = filepath.name
+    if isinstance(data, dict):
+        doc_name = (data.get("source") or {}).get("filename") or doc_name
+    elif isinstance(data, list) and data:
+        doc_name = (data[0].get("metadata") or {}).get("filename") or doc_name
+
+    for item in items:
+        item["source_file"] = doc_name
+
+

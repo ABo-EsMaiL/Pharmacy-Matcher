@@ -1,0 +1,21 @@
+                </div>
+
+                <div class="action-bar-bottom">
+                    <button id="btn-submit" class="btn btn-primary btn-massive" onclick="submitProcess()" disabled>
+                        <i class="ph-fill ph-play-circle"></i> بدء عملية المطابقة
+                    </button>
+                </div>
+
+                <!-- PROGRESS MODAL -->
+                <div id="progress-modal" style="display: none;">
+                    <div class="progress-box">
+                        <div class="spinner" style="margin-bottom: 20px;"></div>
+                        <h3 id="progress-text">جاري معالجة الملفات...</h3>
+                        <div style="width: 100%; max-width: 400px; height: 8px; background: #e2e8f0; border-radius: 4px; margin: 15px auto; overflow: hidden;">
+                            <div id="progress-bar-fill" style="width: 10%; height: 100%; background: var(--primary); transition: width 0.5s ease;"></div>
+                        </div>
+                        <p style="color: var(--text-muted);">يرجى الانتظار، قد تستغرق العملية بعض الوقت حسب حجم الملفات.</p>
+                    </div>
+                </div>
+            </div>
+

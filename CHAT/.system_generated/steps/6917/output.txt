@@ -1,0 +1,4 @@
+{"File":"D:\\AI_Engineer\\Pharmacy\\review\\build_orders.py","LineNumber":1,"LineContent":"r\"\"\"Build a complete name-only workbook for the suppliers in orders.config.json."}
+{"File":"D:\\AI_Engineer\\Pharmacy\\review\\build_orders.py","LineNumber":281,"LineContent":"    parser.add_argument(\"--config\", type=Path, default=ROOT / \"orders.config.json\")"}
+{"File":"D:\\AI_Engineer\\Pharmacy\\review\\build_orders.py","LineNumber":284,"LineContent":"    parser.add_argument(\"--model\", help=\"Explicit model override; otherwise use orders.config.json\")"}
+{"File":"D:\\AI_Engineer\\Pharmacy\\review\\ORDERS_RUN.md","LineNumber":5,"LineContent":"الإعداد الحالي في `orders.config.json` يستخدم `0913.xlsx` كله، والعمرو والسلام شبين من نتائج Extract الموجودة. المخازن الأربعة الأخرى لم تُضف لهذا الإعداد؛ «غير موجود» يخص المخزنين المختارين فقط."}

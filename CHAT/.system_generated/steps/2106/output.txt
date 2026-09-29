@@ -1,0 +1,52 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2359,6 +2359,16 @@
+         if (btn) btn.innerHTML = `<i class="ph ph-play"></i> ${t.btn_start_server}`;
+         isServerRunning = false;
+     }
++    
++    // Update top bar server badge
++    const topBadge = document.getElementById('top-bar-server-badge');
++    const topText = document.getElementById('top-bar-server-text');
++    if (topBadge) {
++        topBadge.className = isRunning ? 'server-badge-pill running' : 'server-badge-pill stopped';
++    }
++    if (topText) {
++        topText.textContent = isRunning ? t.server_running : t.server_stopped;
++    }
+ }
+ 
+ async function toggleServer() {
+@@ -2398,6 +2398,11 @@
+                 element.classList.add('active');
+             }
+ 
++            // Update top bar heading
++            if (typeof updateTopBarHeading === 'function') {
++                updateTopBarHeading(screenId);
++            }
++
+             if (screenId === 'screen-new') {
+                 resetNewProcessForm();
+             }
+@@ -2404,4 +2404,4 @@
+-        // Auto select first nav item
++        // Auto select first nav item and initialize language
+         document.addEventListener("DOMContentLoaded", () => {
+             setLanguage(currentLang);
+             const firstNav = document.querySelector('.nav-item');
+@@ -2408,4 +2408,11 @@
+         });
++
++        // Enable F5 / Ctrl+R reload shortcut in desktop webview
++        window.addEventListener('keydown', (e) => {
++            if (e.key === 'F5' || (e.ctrlKey && e.key.toLowerCase() === 'r')) {
++                location.reload();
++            }
++        });
+     </script>
+ </body>
+ </html>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,17 @@
+
+The command exited with code 1.
+Output:
+  File "<string>", line 1
+    import sqlite3; conn = sqlite3.connect(r'D:\AI_Engineer\Pharmacy-agy\data\history.db'); print(conn.execute(" SELECT name FROM sqlite_master WHERE type=table
+                                                                                                               ^
+SyntaxError: unterminated string literal (detected at line 1)
+\).fetchall()) : The term '\).fetchall())' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+again.
+At line:1 char:171
++ ... (\"SELECT name FROM sqlite_master WHERE type='table';\").fetchall())"
++                                                          ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (\).fetchall()):String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+

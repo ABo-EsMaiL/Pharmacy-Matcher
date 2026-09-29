@@ -1,0 +1,21 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -25,10 +25,11 @@
+ 
+ 3. PACKAGING, PACK SIZE, TABLET COUNT & WHOLESALE UNITS (MATCH vs REVIEW):
+    - "match": Exact same active drug brand, same strength, same dosage form.
+-     If pack size/count is identical (e.g. "فولتارين ٣ امبولات" matching "فولتارين ٣ امبولات/نوفارتس", "كونتافين ١ شريط" matching "كونتافين ١ شريط/اكاديميا") OR not specified in the requested shortage (e.g. "سيتال اقراص" matching "سيتال اقراص 20 قرص", or "كليكسان 40 حقن" matching "كليكسان 40مجم-84"), return "status": "match".
+-     CRITICAL: If the numbers/counts are identical (even if written in Arabic numerals ٣ vs 3) or the only difference is the manufacturer name (/نوفارتس, /اكاديميا, /ايبيكو), THIS IS A 100% MATCH. NEVER mark as review!
+-   - "review": Same active drug brand, same strength, same dosage form, BUT different pack size, tablet count, or packaging variant (e.g. requested 15 tablets vs candidate 60 tablets, requested 24 tablets vs candidate 48 tablets, requested medium vs candidate large / باكو 25).
+-     In this case, return "status": "review" AND provide a clear Arabic explanation in "reason" (e.g. "اختلاف عدد الأقراص: المطلوب 15 قرص والمرشح 60 قرص" or "اختلاف الحجم: المطلوب وسط والمرشح كبير باكو 25").
++     CRITICAL RULE (STANDARD PACKS): If the requested shortage specifies a pack count (e.g. "ديجستين 20قرص", "كيتولاك 5 امبوله", "كولونا 3شريط", "تادانيرفي 20فيلم", "ايفاستين 2 شريط") and the warehouse candidate has the same drug, form, and strength but does not explicitly state the pack size (e.g. "ديجستين اقراص/فاركو", "كيتولاك امبول/العامريه", "كولونا اقراص ٦٢ج", "تادانيرفي ٥ مجم سعر جديد"):
++     THIS IS A 100% MATCH ("status": "match")! NEVER mark this as review!
++     CRITICAL RULE: If the numbers/counts are identical (even if written in Arabic numerals ٣ vs 3) or the only difference is the manufacturer name (/نوفارتس, /اكاديميا, /ايبيكو), THIS IS A 100% MATCH. NEVER mark as review!
++   - "review": ONLY mark review when there is an EXPLICIT, CONFLICTING number on BOTH sides (e.g. requested 15 tablets vs candidate explicitly writes 60 tablets, requested 24 tablets vs candidate explicitly writes 48 tablets).
++     In this case, return "status": "review" AND provide a clear Arabic explanation in "reason" (e.g. "اختلاف عدد الأقراص: المطلوب 15 قرص والمرشح 60 قرص").
+ 
+ 4. TRADE BRAND vs GENERIC / ALTERNATIVE (بديل أو مثيل):
+    - "match": Both items must have the SAME commercial trade brand name (e.g. Panadol matching Panadol, Zovirax matching Zovirax).
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

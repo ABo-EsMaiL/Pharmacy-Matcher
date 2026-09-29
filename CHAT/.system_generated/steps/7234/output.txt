@@ -1,0 +1,19 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -126,9 +126,12 @@
+         logger.info(f"Navigating to {TARGET_URL} to ensure clean environment...")
+         try:
+             await self.page.goto(TARGET_URL, timeout=60000, wait_until="domcontentloaded")
+-            await asyncio.sleep(2)
++            ta = self.page.locator('.prompt-box-container textarea, textarea[formcontrolname="promptText"], textarea[aria-label*="prompt" i], textarea[placeholder*="Type" i]').first
++            await ta.wait_for(state="attached", timeout=25000)
++            await asyncio.sleep(1.5)
+         except Exception as e:
+             logger.warning(f"Initial page navigation warning: {e}. Page will be ready on demand.")
++            await asyncio.sleep(3.0)
+ 
+         self.is_ready = True
+         logger.info("Google AI Studio web page ready!")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

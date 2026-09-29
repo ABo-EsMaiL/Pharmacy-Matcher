@@ -1,0 +1,69 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1130,22 +1130,48 @@
+             e.preventDefault();
+             zone.style.borderColor = '';
+             zone.style.background = '';
+-            // We do not set activeDragZone to null here, 
+-            // because dragleave fires right before the native drop event!
+-        });
+-
+-        // The native JS drop is blocked by Edge WebView2, 
+-        // but we intercept the drop in Python and call handleNativeDrop!
+-        zone.addEventListener('drop', (e) => {
+-            e.preventDefault();
+-            // Just in case Edge *does* expose path on a future update or on Mac:
++        });
++
++        zone.addEventListener('drop', async (e) => {
++            e.preventDefault();
++            zone.style.borderColor = '';
++            zone.style.background = '';
++            
+             if (e.dataTransfer && e.dataTransfer.files) {
+-                const files = Array.from(e.dataTransfer.files).map(f => f.path || f.name).filter(p => p);
+-                const hasPath = files.length > 0 && (files[0].includes('\\') || files[0].includes('/'));
+-                if (hasPath) {
+-                    handleNativeDrop(files);
+-                }
+-            }
++                const files = Array.from(e.dataTransfer.files);
++                const savedPaths = [];
++                
++                // Show a mini loading toast if dropping many files
++                if (files.length > 2) {
++                    showToast('جاري معالجة الملفات المسحوبة...', 'success');
++                }
++                
++                for (let file of files) {
++                    // if it happens to have a path, use it directly (e.g. Mac/Linux or specific pywebview configs)
++                    if (file.path && (file.path.includes('\\') || file.path.includes('/'))) {
++                        savedPaths.push(file.path);
++                    } else {
++                        // Otherwise fallback to Base64 (Perfect for Edge WebView2)
++                        await new Promise((resolve) => {
++                            const reader = new FileReader();
++                            reader.onload = async (event) => {
++                                const base64 = event.target.result.split(',')[1];
++                                const tempPath = await window.pywebview.api.save_dropped_file(file.name, base64);
++                                if (tempPath) {
++                                    savedPaths.push(tempPath);
++                                }
++                                resolve();
++                            };
++                            reader.readAsDataURL(file);
++                        });
++                    }
++                }
++                
++                if (savedPaths.length > 0) {
++                    processSelectedFiles(savedPaths, type);
++                }
++            }
++            window.activeDragZone = null;
+         });
+     });
+ }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

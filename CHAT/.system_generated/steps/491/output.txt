@@ -1,0 +1,36 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -20,6 +20,7 @@
+         self.db = HistoryDB()
+         self.settings_file = PROJECT_ROOT / 'data' / 'settings.json'
+         self.logs = []
++        self.dropped_files = []
+         
+         settings = self.get_settings()
+         msemax_dir = settings.get('msemax_dir', '')
+@@ -41,10 +41,19 @@
+     def get_logs(self) -> str:
+         return json.dumps(self.logs)
+ 
++    def get_dropped_files(self) -> str:
++        """Called by JS to retrieve the list of files dropped."""
++        files = self.dropped_files
++        self.dropped_files = []
++        return json.dumps(files)
++
+     def exit_app(self):
+-        self.on_closing()
+-        if self.window:
+-            self.window.destroy()
++        try:
++            self.on_closing()
++        except:
++            pass
++        # os._exit guarantees immediate shutdown without blocking background threads like uvicorn
++        os._exit(0)
+             
+     def get_settings(self) -> dict:
+         if self.settings_file.exists():
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,7 @@
+{"name":".env.example","sizeBytes":"291"}
+{"name":".gitignore","sizeBytes":"306"}
+{"name":"Check_out_this_chat.md","sizeBytes":"71465"}
+{"name":"requirements.txt","sizeBytes":"91"}
+{"name":"src","isDir":true}
+
+Summary: This directory contains 1 subdirectories and 4 files.

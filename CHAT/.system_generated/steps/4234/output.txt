@@ -1,0 +1,29 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-4222
+Status: DONE
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-4222.log
+Log output:
+<truncated 857 lines>
+88888888888889 | form=tablet vs tablet
+
+22. [الهضبة الاثنين نقدى0]
+    المطلوب: 'لبن بيديا ستارت 2'
+    المخزن : 'لبن بدیا ستارت رقم 1/ باکت 24'
+    الدرجة : ts=65.21739130434783 | b_ratio=84.84848484848484 | form=None vs None
+
+23. [كيور فارما خاص]
+    المطلوب: 'لوسيدريل250مجم 20قرص'
+    المخزن : 'لوسیدریل ۲۰۰ مجم قرص'
+    الدرجة : ts=65.0 | b_ratio=100.0 | form=tablet vs tablet
+
+24. [كيور فارما خاص]
+    المطلوب: 'فلوبادكس 8مجم اقراص'
+    المخزن : 'فلوبيادکس ٤ مجم اقراص'
+    الدرجة : ts=65.0 | b_ratio=94.11764705882352 | form=tablet vs tablet
+
+25. [الهضبة الاثنين نقدى0]
+    المطلوب: 'ب ك ميرز كبسول س ج'
+    المخزن : 'ميرز كبسول/باكت 30'
+    الدرجة : ts=61.111111111111114 | b_ratio=100.0 | form=tablet vs tablet
+
+
+Last progress: 12s ago

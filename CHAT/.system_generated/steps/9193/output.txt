@@ -1,0 +1,28 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -449,6 +449,22 @@
+             
+             self.add_log(f"[PROCESS] Extracted total {len(all_shortages)} shortage items. Starting coordinator...")
+             
++            # Ensure local AI server is active & responsive before matching
++            active_server_key = settings.get("active_server", "chatgpt" if "8000" in getattr(config, 'local_api_url', '') else "gaistudio")
++            srv = self._server_manager.get_server(active_server_key)
++            if srv and hasattr(config, 'local_api_url') and config.local_api_url:
++                if not srv.is_running():
++                    self.add_log(f"[PROCESS] Local AI server ({srv.name}) on port {srv.port} is not running. Auto-starting...")
++                    start_res = srv.start()
++                    if start_res.get("success"):
++                        self.add_log(f"[PROCESS] Server spawned (PID: {start_res.get('pid')}). Waiting for port readiness...")
++                        for _ in range(12):
++                            time.sleep(0.5)
++                            if srv.is_running():
++                                break
++                    else:
++                        self.add_log(f"[PROCESS WARNING] Could not auto-start {srv.name}: {start_res.get('message')}")
++
+             if self._window:
+                 self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Matching {len(all_shortages)} items...'}}}}));")
+             
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

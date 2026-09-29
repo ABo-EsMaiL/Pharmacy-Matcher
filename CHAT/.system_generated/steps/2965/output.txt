@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+2238 const statusClass = item.status === 'completed' ? 'badge-completed' : (item.status === 'processing' ? 'badge-processing' : 'badge-reviewing');
+

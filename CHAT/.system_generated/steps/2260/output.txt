@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+Sheets: ['ورقة2', 'ورقة1']
+Max row: 999 Max col: 4
+1 ['اصناف تم طلبها و لم تكن متوفره\n14/09/2026', None, None, None]
+2 [None, None, None, None]
+3 [None, None, None, None]
+4 [None, None, None, None]
+5 [None, None, None, None]
+6 ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+7 ['ص ايه شكر/الحدين 3', 'ماريفان3مجم3شريط س ج', datetime.datetime(2026, 9, 13, 0, 0), 2]
+8 ['ص ايه شكر/الحدين 3', 'تريامريكان500مجم فيال س ج', datetime.datetime(2026, 9, 13, 0, 0), 2]
+9 ['ص ايه شكر/الحدين 3', 'فلوتن 14 كبسول', datetime.datetime(2026, 9, 13, 0, 0), 2]
+

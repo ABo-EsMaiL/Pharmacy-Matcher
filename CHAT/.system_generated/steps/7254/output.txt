@@ -1,0 +1,11 @@
+
+The command exited with code 0.
+Output:
+{
+  "url": "https://accounts.google.com/v3/signin/identifier?continue=https://aistudio.google.com/prompts/new_chat&followup=https://aistudio.google.com/prompts/new_chat&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-333380123:1790262725976611",
+  "title": "Sign in - Google Accounts",
+  "matSelects": [],
+  "buttonsCount": 5,
+  "modelKeywords": []
+}
+

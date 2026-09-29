@@ -1,0 +1,23 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Amr items added: 15
+Warning duplicate name skipped: فورسيجا ١٠مجم س ج
+Total Salam items added: 150
+Warning duplicate name skipped: بيليبوسيس 20 قرص
+Warning duplicate name skipped: بيليبوسيس 20 قرص
+Warning duplicate name skipped: دافاليندي5000جم اقراص س ج
+Warning duplicate name skipped: ترايملازما كريم س ج
+Warning duplicate name skipped: جستيكول10مجم 14قرص
+Warning duplicate name skipped: بيتابرونيت بلس كريم
+Warning duplicate name skipped: بيتابرونيت بلس كريم
+Warning duplicate name skipped: ريستيبرو نقط
+Warning duplicate name skipped: كارنيفيتا ادفانس للرجال30كيس س ج
+Warning duplicate name skipped: ابيفيناك قطرة س ج
+Unmatched items added: 25
+Grand Total Unique Items: 190
+Successfully saved 190 unique items to: d:/AI_Engineer/Pharmacy-agy/data/test_shortages_200.xlsx
+Saved audit metadata to: data/test_shortages_200_audit.json
+

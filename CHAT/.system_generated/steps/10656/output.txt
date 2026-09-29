@@ -1,0 +1,85 @@
+
+The command exited with code 0.
+Output:
+Total structure matches in PLANNER_RESPONSE: 41
+
+==================== Line 3530 ====================
+{
+  "cases": [
+    {
+      "case_id": "Q00001",
+      "requested_name": "فولتارين 75 حقن",
+      "candidates": [
+        {"id": "WH_012", "name": "فولتارين 75 مجم 3 امبول / نوفارتس"},
+        {"id": "WH_088", "name": "فولتارين 100 مجم اقراص"},
+        {"id": "WH_104", "name": "كيتولاك 30 مجم حقن"}
+      ]
+    },
+    {
+      "case_id": "Q00002",
+      "requested_name": "رو اكيتان 20 كبسول",
+      "candidates": [
+        {"id": "WH_055", "name": "ايزوتريتينوين 20 مجم كبسول"},
+        {"id": "WH_09
+---
+{
+  "results": [
+    {
+      "case_id": "Q00001",
+      "status": "match",
+      "item_id": "WH_012",
+      "reason": ""
+    },
+    {
+      "case_id": "Q00002",
+      "status": "review",
+      "item_id": "WH_055",
+      "reason": "بديل تجاري: نفس المادة الفعالة والتركيز ولكن الاسم التجاري مختلف"
+    }
+  ]
+}
+---
+
+==================== Line 7018 ====================
+{
+  "results": [
+    {
+      "case_id": "TEST-02-DOSAGE-FORM",
+      "status": "review",
+      "item_id": "W1-002",
+      "reason": "نفس الدواء ولكن الهيئة مختلفة: مطلوب مرهم والمخزن عنده كريم"
+    },
+    {
+      "case_id": "TEST-03-PACK-SIZE",
+      "status": "match",
+      "item_id": "W1-003",
+      "reason": ""
+    },
+    {
+      "case_id": "TEST-04-OCR-CORRUPTION",
+      "status": "match",
+      "item_id": "W1-004",
+      "reason": ""
+    }
+  ]
+}
+---
+
+==================== Line 9531 ====================
+{
+  "items": [
+    {
+      "item_name_raw": "الاسم المكتوب في الفاتورة نصاً وبالحرف دون أي تعديل أو توحيد",
+      "trade_name": "الاسم التجاري فقط (مثال: دوليبرين)",
+      "strength": "التركيز كما هو مكتوب (مثال: 1000 مجم أو 1 جم)",
+      "form": "الهيئة (أقراص / شراب / كريم / ...)",
+      "source_page": 1
+    }
+  ]
+}
+---
+
+==================== Line 10079 ====================
+{"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+---
+

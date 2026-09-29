@@ -1,0 +1,59 @@
+
+The command exited with code 0.
+Output:
+<truncated 602 lines>
+  <span class="hljs-string">"items"</span>: [
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديفيتون ۲۰۰ نقط سعر جديد"</span>,
+      <span class="hljs-string">"source_page"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديكالديرم مرهم"</span>,
+      <span class="hljs-string">"source_page"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديكساترول قطرة س.ج ۲۷ ج"</span>,
+      <span class="hljs-string">"source_page"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديكساترول مرهم"</span>,
+      <span class="hljs-string">"source_page"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديكستوبرين قطرة سعر ٣٧"</span>,
+      <span class="hljs-string">"source_page"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديكسازون اقراص س.ج ٥١ ج"</span>,
+      <span class="hljs-string">"source_page"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديكساميثازون ٥امبول/سيجما"</span>,
+      <span class="hljs-string">"source_page"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديكساميثازون العامريه سعر ٣٦"</span>,
+      <span class="hljs-string">"source_page"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديكساميثازون المهن سعر ٦٥"</span>,
+      <span class="hljs-string">"source_page"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديكلاك ٧٥مجم ٣٠ قرص ١٣٥ج"</span>,
+      <span class="hljs-string">"source_page"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديكلاك امبول سعر جديد ٥٥ ج"</span>,
+      <span class="hljs-string">"source_page"</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-string">"item_name_raw"</span>: <span class="hljs-string">"ديكلاك جل ٥٠ جم سعر جديد"</span>,
+      <span class="hljs-s
+<truncated 217750 bytes>
+
+NOTE: The output was truncated because it was too long. Use a more targeted query or a smaller range to get the information you need.
+
+================================================================================
+
+

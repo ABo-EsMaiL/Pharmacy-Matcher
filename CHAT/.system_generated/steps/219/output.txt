@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -200,7 +200,7 @@
+             end = min(start + batch_size, len(cases))
+             batch_cases = cases[start:end]
+ 
+-            print(f"  -> [OpenCode DeepSeek] Batch {batch_idx+1}/{total_batches} ({len(batch_cases)} items)... ", end="", flush=True)
++            print(f"  -> [OpenRouter] Batch {batch_idx+1}/{total_batches} ({len(batch_cases)} items)... ", end="", flush=True)
+ 
+             inputs = {"catalogs": {wid: catalog}, "cases": batch_cases}
+             
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

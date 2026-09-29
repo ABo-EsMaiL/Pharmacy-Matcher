@@ -1,0 +1,110 @@
+
+The command exited with code 0.
+Output:
+<truncated 1 lines>
+[*] Processing PDF file: المكرومي المنصورة.pdf
+
+  -> [START] Processing file: الهضبة الاثنين نقدى0.pdf (Type: .pdf)
+[*] Processing PDF file: الهضبة الاثنين نقدى0.pdf
+
+  -> [START] Processing file: جملة العمروووو.pdf (Type: .pdf)
+
+  -> [START] Processing file: كيور فارما خاص.pdf (Type: .pdf)
+[*] Processing PDF file: جملة العمروووو.pdf
+[*] Processing PDF file: كيور فارما خاص.pdf
+
+  -> [START] Processing file: مخزن الحياة فارم اسكندريه-170.pdf (Type: .pdf)
+[+] Loaded 187 items from local cache: السلام شبين.pdf
+  -> [DONE] السلام شبين.pdf: 187 items extracted.
+[*] Processing PDF file: مخزن الحياة فارم اسكندريه-170.pdf
+[+] Loaded 19 items from local cache: جملة العمروووو.pdf
+  -> [DONE] جملة العمروووو.pdf: 19 items extracted.
+[+] Loaded 1071 items from local cache: الهضبة الاثنين نقدى0.pdf
+  -> [DONE] الهضبة الاثنين نقدى0.pdf: 1071 items extracted.
+[+] Loaded 503 items from local cache: المكرومي المنصورة.pdf
+  -> [DONE] المكرومي المنصورة.pdf: 503 items extracted.
+[+] Loaded 715 items from local cache: كيور فارما خاص.pdf
+  -> [DONE] كيور فارما خاص.pdf: 715 items extracted.
+[+] Loaded 222 items from local cache: مخزن الحياة فارم اسكندريه-170.pdf
+  -> [DONE] مخزن الحياة فارم اسكندريه-170.pdf: 222 items extracted.
+
+============================================================
+[+] Completed Warehouse: 2717 items from 6 file(s)
+============================================================
+
+================================================================================
+SIMULATING CANDIDATE RETRIEVAL & CLASSIFICATION
+================================================================================
+
+Shortage: 'لبن هيرو بيبي 2' -> Warehouse: [المكرومي المنصورة.pdf]
+  Top candidates found (3):
+    1. [Score: 0.83] 'هيرو بيبي ٢' => Status: reject (brand_family_conflict) | BrandSim: 84.2
+    2. [Score: 0.76] 'هيرو بيبي ١' => Status: reject (brand_family_conflict) | BrandSim: 84.2
+    3. [Score: 0.55] 'بيبيلك ١ لبن' => Status: reject (brand_family_conflict) | BrandSim: 69.6
+
+Shortage: 'نيوروفيت اقراص  3 شريط' -> Warehouse: [المكرومي المنصورة.pdf]
+  Top candidates found (2):
+    1. [Score: 0.52] 'نيروفيت اقراص سعر جديد' => Status: ambiguous (ocr_check_needed_93.3%) | BrandSim: 93.3
+    2. [Score: 0.20] 'سيروفيتام كبسول ١١٨ج' => Status: ambiguous (ocr_check_needed_70.6%) | BrandSim: 70.6
+
+Shortage: 'نيوروفيت اقراص  3 شريط' -> Warehouse: [الهضبة الاثنين نقدى0.pdf]
+  Top candidates found (5):
+    1. [Score: 0.25] 'نیکسوروف 10 مج اقراص' => Status: ambiguous (ocr_check_needed_75.0%) | BrandSim: 75.0
+    2. [Score: 0.23] 'نیروپفیت اقراص/باكت 15' => Status: ambiguous (ocr_check_needed_87.5%) | BrandSim: 87.5
+    3. [Score: 0.21] 'باني فيت اقراص ج/باكت 200' => Status: ambiguous (ocr_check_needed_62.5%) | BrandSim: 66.7
+    4. [Score: 0.20] 'کونوفیتال اقراص باکت 40' => Status: reject (low_brand_sim_58.8%) | BrandSim: 58.8
+    5. [Score: 0.16] 'سیپروفین 750 مج اقراص/باکت100' => Status: ambiguous (ocr_check_needed_62.5%) | BrandSim: 62.5
+
+Shortage: 'تربتيزول10 مجم اقراص' -> Warehouse: [الهضبة الاثنين نقدى0.pdf]
+  Top candidates found (3):
+    1. [Score: 0.22] 'تریپتازول 10 مج اقراس/باکت 200' => Status: ambiguous (ocr_check_needed_60.9%) | BrandSim: 63.6
+    2. [Score: 0.20] 'پنزول 40 مجم 14 کپسول/باکت 32' => Status: reject (strength_conflict_10_vs_40) | BrandSim: 61.5
+    3. [Score: 0.19] 'تریپتازول 25 مج اقراس/باکت 200' => Status: reject (strength_conflict_10_vs_25) | BrandSim: 63.6
+
+Shortage: 'بقدونس وكرفس ايزيس' -> Warehouse: [الهضبة الاثنين نقدى0.pdf]
+  Top candidates found (2):
+    1. [Score: 0.71] 'ایزیز بقدونس وکرکس 20 فلتر' => Status: ambiguous (ocr_check_needed_61.1%) | BrandSim: 88.9
+    2. [Score: 0.20] 'بوتنس ايزي كريم 5 سر باكت 240' => Status: ambiguous (ocr_check_needed_64.5%) | BrandSim: 71.0
+
+Shortage: 'ينسون ايزيس س ج' -> Warehouse: [الهضبة الاثنين نقدى0.pdf]
+  Top candidates found (8):
+    1. [Score: 0.55] 'زيس ينسون 12 فلتر صغير ج/باكو 6' => Status: reject (low_brand_sim_50.0%) | BrandSim: 90.0
+    2. [Score: 0.49] 'زيس ينسون 20 فتلة كبير/پاکت120' => Status: reject (low_brand_sim_48.0%) | BrandSim: 72.0
+    3. [Score: 0.48] 'ایزس ينسون بالليمون 20 فلتر' => Status: reject (low_brand_sim_53.3%) | BrandSim: 66.7
+    4. [Score: 0.47] 'ایزس ينسون بالليمون 12 فلتر' => Status: reject (low_brand_sim_53.3%) | BrandSim: 66.7
+    5. [Score: 0.21] 'بوتنس ايزي كريم 5 سر باكت 240' => Status: ambiguous (ocr_check_needed_66.7%) | BrandSim: 66.7
+    6. [Score: 0.10] 'ایزس نعناع 20 فلتر' => Status: reject (low_brand_sim_38.1%) | BrandSim: 66.7
+    7. [Score: 0.10] 'ایزس تیلیو 12 فلتر/ پاکت 6' => Status: reject (low_brand_sim_47.6%) | BrandSim: 66.7
+    8. [Score: 0.10] 'ایزس تیلیو 20 فلتر پاکت 90' => Status: reject (low_brand_sim_47.6%) | BrandSim: 66.7
+
+Shortage: 'تورسامولكس10مجم اقراص س ج' -> Warehouse: [كيور فارما خاص.pdf]
+  Top candidates found (7):
+    1. [Score: 0.64] 'تورساموکس ۱۰ جم اقراص' => Status: reject (strength_conflict_10_vs_10000.0) | BrandSim: 94.7
+    2. [Score: 0.63] 'تورساموکس ۲۰ جم اقراص' => Status: reject (strength_conflict_10_vs_20000.0) | BrandSim: 94.7
+    3. [Score: 0.27] 'اوستامول اقراص' => Status: ambiguous (ocr_check_needed_66.7%) | BrandSim: 66.7
+    4. [Score: 0.26] 'تورسیبک ۵ جم قرص' => Status: reject (strength_conflict_10_vs_5000.0) | BrandSim: 58.8
+    5. [Score: 0.25] 'بارامول ١جم اقراص جديد' => Status: reject (strength_conflict_10_vs_1000.0) | BrandSim: 58.8
+    6. [Score: 0.25] 'تورسیبک ۱ جم قرص جدید' => Status: reject (strength_conflict_10_vs_1000.0) | BrandSim: 58.8
+    7. [Score: 0.24] 'تورسیبک ۲۰ جم قرص جدید' => Status: reject (strength_conflict_10_vs_20000.0) | BrandSim: 58.8
+
+Shortage: 'سكينورين كريم' -> Warehouse: [الهضبة الاثنين نقدى0.pdf]
+  Top candidates found (1):
+    1. [Score: 0.77] 'سکینوریتش کریم' => Status: ambiguous (ocr_check_needed_82.4%) | BrandSim: 82.4
+
+Shortage: 'ابيفيناك قطرة س ج' -> Warehouse: [كيور فارما خاص.pdf]
+  Top candidates found (0):
+
+Shortage: 'كارنيفيتا ادفانس للرجال30كيس س ج' -> Warehouse: [مخزن الحياة فارم اسكندريه-170.pdf]
+  Top candidates found (1):
+    1. [Score: 0.57] 'کارنتینا ادفانس رجال/باکت16' => Status: ambiguous (ocr_check_needed_83.7%) | BrandSim: 83.7
+
+Shortage: 'ليمتلس كروماكس كت30كيس س ج' -> Warehouse: [الهضبة الاثنين نقدى0.pdf]
+  Top candidates found (1):
+    1. [Score: 0.53] 'يمتليس كروماتكس كت 30 كيس جديد' => Status: ambiguous (ocr_check_needed_91.4%) | BrandSim: 91.4
+
+Shortage: 'نيوكاربون30قرص س ج' -> Warehouse: [كيور فارما خاص.pdf]
+  Top candidates found (3):
+    1. [Score: 0.46] 'اوكاربون اقراص' => Status: ambiguous (ocr_check_needed_82.4%) | BrandSim: 82.4
+    2. [Score: 0.45] 'نیوکاربن ۳۰کپسول' => Status: ambiguous (ocr_check_needed_94.1%) | BrandSim: 94.1
+    3. [Score: 0.20] 'نیوربین ۱۰ جم اقراص' => Status: ambiguous (ocr_check_needed_75.0%) | BrandSim: 75.0
+

@@ -1,0 +1,17 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2037,8 +2037,9 @@
+         btn_stop_instance: "Stop Server",
+         btn_test_connection: "Test Ping",
+         btn_login_session: "Open Session (Login)",
+-        test_panel_title: "Live Server Diagnostic Log:",
+-        btn_refresh: "Refresh Status",
++        server_terminal_title: "AI Server Console",
++        server_terminal_sub: "Live Uvicorn output, connectivity ping, and server startup/shutdown logs",
++        btn_refresh: "Refresh",
+         btn_clear: "Clear",
+ 
+         // Dialogs & Confirmations
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

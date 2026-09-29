@@ -1,0 +1,17 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy-vision\src\extract\gemini_vision_extractor.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -65,6 +65,11 @@
+ def _clean_json_response(raw_text: str) -> dict:
+     """Cleans markdown fences or surrounding noise to extract valid JSON."""
+     text = raw_text.strip()
++    if not text:
++        raise ValueError("Empty response text received from model.")
++    if text.startswith("[Error:"):
++        raise RuntimeError(f"Gateway reported error: {text}")
++
+     # Strip markdown codeblocks
+     if "```" in text:
+         match = re.search(r"```(?:json)?\s*([\s\S]*?)\s*```", text)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

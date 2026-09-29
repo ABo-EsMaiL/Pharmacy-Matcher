@@ -1,0 +1,92 @@
+
+The command exited with code 0.
+Output:
+<truncated 500 lines>
+-a----         9/10/2026   5:51 AM            233 next-env.d.ts                                                        
+-a----         9/10/2026  10:54 AM           1452 package.json                                                         
+-a----         9/10/2026   7:34 AM           1089 playwright.config.ts                                                 
+-a----         9/10/2026  10:54 AM         172277 pnpm-lock.yaml                                                       
+-a----         9/10/2026   7:34 AM             51 pnpm-workspace.yaml                                                  
+-a----         9/10/2026   7:34 AM             89 postcss.config.js                                                    
+-a----          9/9/2026   1:51 PM         128084 PROJECT_BATTLE_CHAT_HISTORY.md                                       
+-a----         9/10/2026  10:47 AM           1370 tailwind.config.ts                                                   
+-a----         9/10/2026   5:43 AM            705 tsconfig.json                                                        
+-a----         9/10/2026  10:53 AM         184442 tsconfig.tsbuildinfo                                                 
+-a----         9/10/2026   7:34 AM            461 vitest.config.ts                                                     
+-a----         9/10/2026   7:34 AM            325 vitest.db.config.ts                                                  
+-a----         9/10/2026   7:34 AM            302 vitest.unit.config.ts                                                
+
+
+    Directory: D:\AI_Engineer\psoriasis-api
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         5/31/2026  12:50 PM                .mypy_cache                                                          
+d-----         5/25/2026   8:28 AM                .vscode                                                              
+d-----         5/26/2026   2:48 AM                models                                                               
+d-----         5/26/2026   1:39 AM                __pycache__                                                          
+-a----         5/26/2026   4:35 AM           3699 .gitignore                                                           
+-a----         5/26/2026   1:52 AM            203 Dockerfile                                                           
+-a----         5/26/2026   2:47 AM           1990 inference.py                                                         
+-a----         5/26/2026   2:47 AM           1117 main.py                                                              
+-a----         5/26/2026   4:23 AM           2214 README.md                                                            
+-a----         5/26/2026   1:51 AM            109 requirements.txt                                                     
+-a----        11/22/2023  10:29 PM          21187 test_image.jpg                                                       
+
+
+    Directory: D:\AI_Engineer\rag-playground
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         5/31/2026   1:59 PM                .mypy_cache                                                          
+d-----         5/29/2026   7:30 AM                .vscode                                                              
+-a----         5/29/2026  11:31 AM           2031 test_arabic_rag.py                                                   
+-a----         5/29/2026   7:11 AM            680 test_embeddings.py                                                   
+-a----         5/28/2026   7:15 PM            319 test_llm.py                                                          
+-a----         5/29/2026   3:15 PM           1887 test_super_prompt.py                                                 
+-a----         5/29/2026   7:54 AM            680 test_vectordb.py                                                     
+
+
+    Directory: D:\AI_Engineer\RAGbot
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         6/15/2026   5:27 AM                .mypy_cache                                                          
+d-----         6/15/2026  12:00 AM                .vscode                                                              
+d-----         6/15/2026   1:49 AM                src                                                                  
+
+
+    Directory: D:\AI_Engineer\smart-rag-api
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         7/28/2026   2:46 PM                .mypy_cache                                                          
+d-----         7/28/2026   2:24 PM                .vscode                                                              
+d-----         7/28/2026   1:42 PM                New folder                                                           
+d-----         7/28/2026   2:31 PM                __pycache__                                                          
+-a----         7/28/2026   1:47 PM            126 .env                                                                 
+-a----         5/31/2026   3:39 PM           4846 .gitignore                                                           
+-a----         7/28/2026   3:01 PM       14017298 2026-07-28 15-00-24.mp4                                              
+-a----         7/28/2026   3:01 PM        2460871 2026-07-28 15-01-14.mp4                                              
+-a----         7/28/2026   3:02 PM       15354384 2026-07-28 15-01-23.mp4                                              
+-a----         7/28/2026   3:03 PM       21521078 2026-07-28 15-02-14.mp4                                              
+-a----         7/28/2026   3:03 PM        3734518 2026-07-28 15-03-21.mp4                                              
+-a----         7/28/2026   3:04 PM       19097801 2026-07-28 15-03-34.mp4                                              
+-a----         7/28/2026   3:08 PM       46040743 2026-07-28 15-05-45.mp4                                              
+-a----         7/28/2026   3:34 PM      522731428 2026-07-28 15-08-07.mp4                                              
+-a----         7/28/2026   2:57 PM          46551 8-Embeddings-.png                                                    
+-a----          8/1/2026   1:50 PM            967 main.py                                                              
+-a----         6/13/2026   6:20 AM           9514 Q1.md                                                                
+-a----         6/13/2026   6:20 AM        3132236 Q1_origin.pdf                                                        
+-a----         7/28/2026   2:29 PM        1159155 RAG.png                                                              
+-a----         7/28/2026   2:24 PM           4051 rag_engine.py                                                        
+-a----         5/31/2026   3:39 PM           1951 README.md                                                            
+-a----         7/28/2026   1:47 PM            147 requirements.txt                                                     
+-a----         7/28/2026   4:19 PM      409191022 Video Project 3.mp4                                                  
+
+
+

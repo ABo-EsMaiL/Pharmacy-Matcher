@@ -1,0 +1,43 @@
+
+The command exited with code 0.
+Output:
+
+
+    Directory: D:\AI_Engineer
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         9/13/2026   2:28 PM                AKTB                                                                 
+d-----         6/21/2026  11:04 AM                Book                                                                 
+d-----         8/15/2026   7:03 AM                Football Player Career Simulator                                     
+d-----          8/6/2026   4:11 PM                huggingface                                                          
+d-----         8/20/2026   4:26 PM                MSEMAX                                                               
+d-----          9/7/2026   7:51 AM                MSEMAX - Copy                                                        
+d-----         9/23/2026   5:49 PM                MSEMAX-AIStudio                                                      
+d-----         9/24/2026   8:43 PM                MSEMAX-GAIStudio                                                     
+d-----         9/25/2026   3:57 PM                MSEMAX-GAIStudio-vision                                              
+d-----         6/16/2026   2:17 PM                N8N                                                                  
+d-----          6/3/2026  12:00 PM                omni-agent                                                           
+da----          7/5/2026   1:51 AM                OpusClip                                                             
+d-----         9/23/2026   1:57 AM                Pharmacy                                                             
+d-----         9/25/2026   3:40 PM                Pharmacy-agy                                                         
+d-----         9/25/2026   4:37 PM                Pharmacy-agy-vision                                                  
+d-----         9/20/2026   1:39 PM                Portfolio                                                            
+d-----         9/10/2026  10:54 AM                ProjectBattle                                                        
+d-----         5/28/2026   6:53 PM                psoriasis-api                                                        
+d-----         5/29/2026   3:10 PM                rag-playground                                                       
+d-----         6/15/2026   1:44 AM                RAGbot                                                               
+d-----         7/28/2026   4:21 PM                smart-rag-api                                                        
+-a----         6/14/2026   6:15 AM     2510583272 cuda_13.3.0_windows.exe                                              
+-a----         6/14/2026   6:17 AM        2178112 favorites_6_14_26.html                                               
+-a----         6/14/2026   1:59 PM      296602766 Miniconda3-latest-Linux-x86_64.sh                                    
+-a----         9/23/2026   5:42 PM           9520 MSEMAX-AIStudio.zip                                                  
+-a----         9/24/2026   3:19 PM        8040044 MSEMAX-GAIStudio.zip                                                 
+-a----         8/20/2026   3:33 PM          21181 MSEMAX-main.zip                                                      
+-a----          7/4/2026  10:23 PM         823381 OpusClip.zip                                                         
+-a----         9/24/2026   6:24 PM        7428441 Pharmacy (2).zip                                                     
+-a----         9/24/2026   3:19 PM        7416869 Pharmacy.zip                                                         
+
+
+

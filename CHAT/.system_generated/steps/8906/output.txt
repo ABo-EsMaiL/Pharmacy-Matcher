@@ -1,0 +1,18 @@
+
+The command exited with code 0.
+Output:
+WARNING: TCP connect to (127.0.0.1 : 8000) failed
+
+
+ComputerName           : 127.0.0.1
+RemoteAddress          : 127.0.0.1
+RemotePort             : 8000
+InterfaceAlias         : Loopback Pseudo-Interface 1
+SourceAddress          : 127.0.0.1
+PingSucceeded          : True
+PingReplyDetails (RTT) : 0 ms
+TcpTestSucceeded       : False
+
+
+
+

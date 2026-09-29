@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+1379 To keep app.js happy if it references screen-home, we add a dummy hidden div -->
+

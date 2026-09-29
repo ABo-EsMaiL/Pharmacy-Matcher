@@ -1,0 +1,26 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\deep_diff_p7_p8.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -64,10 +64,14 @@
+         diffs.append((k, st7, st8))
+ 
+ print(f"Total differences found: {len(diffs)}")
+-print("\n" + "="*80)
+-for k, st7, st8 in sorted(diffs, key=lambda x: (x[1][0], x[2][0])):
+-    print(f"الصنف: [{k}]")
+-    print(f"   PROC-007: الحالة={st7[0]} | المخزن={st7[1]} | التفاصيل={st7[2]}")
+-    print(f"   PROC-008: الحالة={st8[0]} | المخزن={st8[1]} | التفاصيل={st8[2]}")
+-    print("-" * 80)
++
++with open("scratch_diffs.txt", "w", encoding="utf-8") as f:
++    f.write(f"Total differences found: {len(diffs)}\n\n")
++    for k, st7, st8 in sorted(diffs, key=lambda x: (x[1][0], x[2][0])):
++        f.write(f"الصنف: [{k}]\n")
++        f.write(f"   PROC-007: الحالة={st7[0]} | المخزن={st7[1]} | التفاصيل={st7[2]}\n")
++        f.write(f"   PROC-008: الحالة={st8[0]} | المخزن={st8[1]} | التفاصيل={st8[2]}\n")
++        f.write("-" * 80 + "\n")
++print("Saved to scratch_diffs.txt")
++
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

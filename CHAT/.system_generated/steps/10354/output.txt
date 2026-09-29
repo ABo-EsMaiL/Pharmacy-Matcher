@@ -1,0 +1,2 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\backend.py","LineNumber":291,"LineContent":"        result = self._window.create_file_dialog("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\backend.py","LineNumber":314,"LineContent":"        result = self._window.create_file_dialog(dialog_type)"}

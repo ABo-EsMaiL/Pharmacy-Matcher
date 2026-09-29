@@ -1,0 +1,25 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_hierarchy.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -40,7 +40,6 @@
+ for target in test_targets:
+     target_brand = extract_brand_tokens(target)
+     target_form = extract_form_group(target)
+-    target_str = extract_strength(target)
+     
+     found_candidates = []
+     for wh_name, wh_items in wh_data.items():
+@@ -55,9 +55,10 @@
+         top = found_candidates[0]
+         cand_brand = extract_brand_tokens(top[1])
+         cand_form = extract_form_group(top[1])
+-        cand_str = extract_strength(top[1])
+         print(f"\nالصنف: [{target}]")
+         print(f"   أفضل مرشح: [{top[1]}] في ({top[0]}) | BrandSim={top[3]:.1f}")
++        print(f"   تحليل: Target(brand={target_brand}, form={target_form}) vs Cand(brand={cand_brand}, form={cand_form})")
++        print(f"   أفضل مرشح: [{top[1]}] في ({top[0]}) | BrandSim={top[3]:.1f}")
+         print(f"   تحليل: Target(brand={target_brand}, form={target_form}, str={target_str}) vs Cand(brand={cand_brand}, form={cand_form}, str={cand_str})")
+         # Can it ever go to "لم يتم العثور عليه"?
+         print(f"   -> النتيجة المنطقية: خرج تماماً من 'لم يتم العثور عليه'! إما مطابقة مباشرة أو مراجعة.")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

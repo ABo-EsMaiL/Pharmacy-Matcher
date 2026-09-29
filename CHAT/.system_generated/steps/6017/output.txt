@@ -1,0 +1,7 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ImportError: cannot import name 'PharmacyBackend' from 'desktop_app.backend' (D:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py)
+

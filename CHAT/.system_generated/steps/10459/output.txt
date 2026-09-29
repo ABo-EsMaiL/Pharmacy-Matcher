@@ -1,0 +1,73 @@
+
+The command exited with code 0.
+Output:
+معك حق تماماً، وأعتذر عن هذا السهو! بيئة العمل الأساسية هي بالتأكيد **بيئة الكوندَا (`D:\miniconda3\envs\venv`)**، وقد تحققت منها الآن للتأكد من حزم معالجة الملفات والصور.
+
+التزاماً بأمرك الصارم: **لن نقوم بتعديل أي كود في السيستم حالياً، بل سنخطط معاً خطوة بخطوة، ونفحص كل التفاصيل، وسأعطيك كود اختبار منفصل (Standalone Test Script) تجربه بنفسك يدوياً وتراقبه بعينيك.**
+
+إليك خطة العمل والبحث التقني الشامل:
+
+---
+
+### 1. البحث عن أفضل جودة للصور وأقل حجم (PDF $\rightarrow$ Image)
+
+قمت بفحص مكتبات الكوندَا في `venv`، ووجدت كنزاً تقنياً جاهزاً ومثبتاً بالفعل: مكتبة **`pypdfium2`**.
+* **ما هي `pypdfium2`؟** هي المحرك الأصلي الرسمي لشركة Google Chrome في قراءة وعرض ملفات الـ PDF (مكتوب بـ C++، فائق السرعة، ولا يحتاج أي برامج خارجية كـ Poppler).
+* **نتائج التجربة الفعلية التي قمت بها الآن على الصفحة الأولى من ملف `المكرومي المنصورة.pdf`:**
+  1. **الدقة العالية (Scale 2.5x / أبعاد 1489 × 2105 بكسل):** تظهر الحروف العربية الدوائية والنقاط والكسور العشرية بحواف فائقة الحدة، وكأنك تقرأ الـ PDF الأصلي تماماً دون أي ضبابية أو تشويش.
+  2. **الحجم الصغير جداً:**
+     * بصيغة **WebP (بجودة 85%):** حجم الصورة الناتجة **299 كيلوبايت فقط!** (أقل من ثلث ميجا).
+     * بصيغة **JPEG (بجودة 85%):** حجم الصورة الناتجة **580 كيلوبايت فقط!**
+  3. **السرعة:** يستغرق تحويل الص
+<truncated 6711 bytes>
+r",
+            "content": [
+                {"type": "text", "text": prompt_text},
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"data:image/webp;base64,{img_b64}"
+                    }
+                }
+            ]
+        }
+    ],
+    "stream": False
+}
+
+headers = {
+    "Authorization": f"Bearer {API_KEY}",
+    "Content-Type": "application/json"
+}
+
+print(f"[*] إرسال الطلب إلى الـ Endpoint ({ENDPOINT_URL})...")
+print("    راقب الآن نافذة المتصفح المفتوحة أمامك لترى هل استلم الصورة والبرومبت!")
+
+t0 = time.time()
+try:
+    resp = requests.post(ENDPOINT_URL, json=payload, headers=headers, timeout=180)
+    print(f"[+] Response Status: {resp.status_code} (استغرق {time.time() - t0:.1f} ثانية)")
+    
+    if resp.status_code == 200:
+        data = resp.json()
+        content = data["choices"][0]["message"]["content"]
+        print("\n=== الرد المستلم من الـ Endpoint ===")
+        print(content[:500] + "...\n(باقي الرد تم استلامه بنجاح)")
+    else:
+        print(f"[!] خطأ من الـ Gateway: {resp.status_code}")
+        print(resp.text)
+except Exception as e:
+    print(f"[!] فشل الاتصال بالـ Endpoint: {e}")
+```
+
+---
+
+### خطوتنا التالية:
+1. افتح سيرفر `MSEMAX-GAIStudio` على جهازك (بورت 8001).
+2. شغل كود الاختبار أعلاه عبر تيرمينال الكوندَا:
+   ```bash
+   python C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_endpoint_vision.py
+   ```
+3. راقب نافذة المتصفح المفتوحة أمامك: هل تم إرفاق الصورة وحقن الـ Prompt؟
+4. أخبرني بما تراه بعينيك في المتصفح وما يطبعه التيرمينال، وبناءً على ملاحظاتك سنقوم بضبط الـ Injection الخاص بالصور في الـ Gateway وننطلق!
+

@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+JobResult.result annotation: typing.Optional[unstructured_transform_client._generated.models.parse_result.ParseResult]
+

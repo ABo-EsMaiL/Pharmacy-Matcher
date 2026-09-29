@@ -1,0 +1,405 @@
+{
+  "page": 20,
+  "items": [
+    {
+      "item_name_raw": "ماليندا غسول جيل",
+      "trade_name": "ماليندا",
+      "strength": "",
+      "form": "غسول جيل",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ماليندا كريم",
+      "trade_name": "ماليندا",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "مامي فيتال كبسول",
+      "trade_name": "مامي فيتال",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "مايوكول 100 مج كريم/ باكت 50",
+      "trade_name": "مايوكول",
+      "strength": "100 مج",
+      "form": "كريم",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موبيتيل 15 مج اقراص ج/باكت 20",
+      "trade_name": "موبيتيل",
+      "strength": "15 مج",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موبيتيل 7.5 مجم اقراص/المهن",
+      "trade_name": "موبيتيل",
+      "strength": "7.5 مجم",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موداسوميل 200 مج اقراص/باكت 60",
+      "trade_name": "موداسوميل",
+      "strength": "200 مج",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موديوريتك اقراص ج/ باكت 40",
+      "trade_name": "موديوريتك",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موزابريد 5 مج اقراص",
+      "trade_name": "موزابريد",
+      "strength": "5 مج",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موف ليكس ادفانس كبسول دولاب",
+      "trade_name": "موف ليكس ادفانس",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موف ليكس التراكبسول",
+      "trade_name": "موف ليكس الترا",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موف ليكس سبراى /باكت41",
+      "trade_name": "موف ليكس",
+      "strength": "",
+      "form": "سبراى",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موفلوكس 400 مج اقراص /باكت 40",
+      "trade_name": "موفلوكس",
+      "strength": "400 مج",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موفيكسير 50/500 مج اقراص",
+      "trade_name": "موفيكسير",
+      "strength": "50/500 مج",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موفينتور اقراص عادى ركزرز/ باكت 20",
+      "trade_name": "موفينتور",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موكسيسارو محلول/باكت 60",
+      "trade_name": "موكسيسارو",
+      "strength": "",
+      "form": "محلول",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "كسيفلوكس 400 مج اقراص/ باكت 20",
+      "trade_name": "كسيفلوكس",
+      "strength": "400 مج",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "موندو كريم/باكت 50",
+      "trade_name": "موندو",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "مونوريل اكياس/باكت144",
+      "trade_name": "مونوريل",
+      "strength": "",
+      "form": "اكياس",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "مووف مساج كريم ايفا/باكت 80",
+      "trade_name": "مووف مساج",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميبيفاك 200 اس ار اقراص/باكت60",
+      "trade_name": "ميبيفاك",
+      "strength": "200 اس ار",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميتفورمين 1000 مج اقراص اكس ار",
+      "trade_name": "ميتفورمين",
+      "strength": "1000 مج",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميتافيرون امبول بديل بيتافوس",
+      "trade_name": "ميتافيرون",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميثوكويك اقراص / باكت 50",
+      "trade_name": "ميثوكويك",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميثيل تكنو ب 12/باكت 200",
+      "trade_name": "ميثيل تكنو",
+      "strength": "ب 12",
+      "form": "",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميثيل فولات اوركيديا برطمان جديد",
+      "trade_name": "ميثيل فولات",
+      "strength": "",
+      "form": "",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميجاليز اقراص /باكت 35",
+      "trade_name": "ميجاليز",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميجاموكس 1 جم اقراص /باكت 120",
+      "trade_name": "ميجاموكس",
+      "strength": "1 جم",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميجاموكس 228 مج شراب/باكت 48",
+      "trade_name": "ميجاموكس",
+      "strength": "228 مج",
+      "form": "شراب",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميجاموكس 457 مج شراب/باكت 48",
+      "trade_name": "ميجاموكس",
+      "strength": "457 مج",
+      "form": "شراب",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "يجاموكس 625 مج اقراص /باكت 20",
+      "trade_name": "يجاموكس",
+      "strength": "625 مج",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميدكورفال 100 مل بخاخ/84",
+      "trade_name": "ميدكورفال",
+      "strength": "100 مل",
+      "form": "بخاخ",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميدهيالو كريم",
+      "trade_name": "ميدهيالو",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميدودرين اقراص/النيل",
+      "trade_name": "ميدودرين",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميرالجو 20 كبسولة/باكت20",
+      "trade_name": "ميرالجو",
+      "strength": "20",
+      "form": "كبسولة",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميرتى كبسول/ باكت 30",
+      "trade_name": "ميرتى",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميرتيماش اقراص ج/ باكت 60",
+      "trade_name": "ميرتيماش",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميروكسنوريك 10 مج 30 قرص",
+      "trade_name": "ميروكسنوريك",
+      "strength": "10 مج",
+      "form": "قرص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميروكسينوريك 5 مج 30 قرص",
+      "trade_name": "ميروكسينوريك",
+      "strength": "5 مج",
+      "form": "قرص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميكوناز اورال جيل/باكت 60",
+      "trade_name": "ميكوناز",
+      "strength": "",
+      "form": "اورال جيل",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميلانثينول لوشن",
+      "trade_name": "ميلانثينول",
+      "strength": "",
+      "form": "لوشن",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "يلتوفيكس ميت 500/12.5 مج اقراط",
+      "trade_name": "يلتوفيكس ميت",
+      "strength": "500/12.5 مج",
+      "form": "اقراط",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميلجا ادفانس اقراص/ باكت 78",
+      "trade_name": "ميلجا ادفانس",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميلوباك 25 مج اقراص/باكت 100",
+      "trade_name": "ميلوباك",
+      "strength": "25 مج",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميمونتكس اقراص جديد / باكت 12",
+      "trade_name": "ميمونتكس",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "مينفيتروس اقراص/باكت120",
+      "trade_name": "مينفيتروس",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميوجريل عادى اقراص",
+      "trade_name": "ميوجريل",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميوكوستا اقراص /باكت 12",
+      "trade_name": "ميوكوستا",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ميوكوسول كبسول/ باكت 20",
+      "trade_name": "ميوكوسول",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ناي فيت اقراص ج/ باكت 200",
+      "trade_name": "ناي فيت",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 20,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    }
+  ]
+}

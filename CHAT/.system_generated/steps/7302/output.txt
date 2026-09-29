@@ -1,0 +1,20 @@
+
+The command exited with code 0.
+Output:
+URL: https://accounts.google.com/v3/signin/identifier?continue=https://aistudio.google.com/prompts/new_chat&followup=https://aistudio.google.com/prompts/new_chat&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-785690809:1790262939440528
+Title: Sign in - Google Accounts
+Body text snippet:
+ Loading
+Sign in
+Use your Google Account
+Email or phone
+Forgot email?
+Not your computer? Use Guest mode to sign in privately. Learn more about using Guest mode
+Next
+Create account
+English (United States)
+Help
+Privacy
+Terms
+Screenshot saved to debug_screen.png
+

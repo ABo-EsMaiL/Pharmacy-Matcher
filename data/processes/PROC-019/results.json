@@ -1,0 +1,2823 @@
+{
+  "warehouse_results": {
+    "السلام شبين.pdf": {
+      "matched": [
+        {
+          "shortage_item": "بيتادين  مطهر النيل 60مل صغير س ج",
+          "warehouse_item": "بيتادين مطهر/النيل",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "دوليبران1000مجم 15قرص",
+          "warehouse_item": "دوليبران ۱جم ٦٠قرص",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "رانديل10مجم اقراص",
+          "warehouse_item": "رانديل١٠مجم",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "بالموكورت  25. مجم امبول س ج",
+          "warehouse_item": "بالميكورت ربع",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "كوللوماك محلول س ج",
+          "warehouse_item": "كوللومالك مس",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "فاست فلام 50مجم 20قرص س ج",
+          "warehouse_item": "فاستفلام ٥٠ مجم",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "needs_review": [
+        {
+          "shortage_item": "ميديكسافلام لبوس س ج",
+          "warehouse_item": "ميديكسافلام امبول",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "بيتاديرم مرهم س ج",
+          "warehouse_item": "بيتاديرم كريم كبير",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        }
+      ]
+    },
+    "المكرومي المنصورة.pdf": {
+      "matched": [
+        {
+          "shortage_item": "جاراميسين كريم 15 جرام",
+          "warehouse_item": "جاراميسين كريم سعر ۳۷ ج",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "سيرفيتولكا ادفانس 20كبسوله س ج",
+          "warehouse_item": "سيرفيتولكا ادفانس ۲۰ كبسولة",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "امبوفير 5امبول س ج",
+          "warehouse_item": "امبوفير امبول",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "نيوروفيت اقراص  3 شريط",
+          "warehouse_item": "نيوروفيت اقراص سعر جديد",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "جوسبرين اقراص 3شريط",
+          "warehouse_item": "جوسبرين اقراص س.ج ۸۱ ج",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "لبن هيرو بيبي 2",
+          "warehouse_item": "هيرو بيبي ٢",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "ليمتلس كروماكس كت30كيس س ج",
+          "warehouse_item": "ليمتلس كروماكس كت ۳۰ كيس",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "ميبو مرهم 15جم صغير س ج",
+          "warehouse_item": "ميبو صغير",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "سيالس 2قرص س ج",
+          "warehouse_item": "سیالیس ۲ قرص ۲۳۷ ج",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "لاكتيز 15 ملل نقط 750مجم",
+          "warehouse_item": "لاكتيز نقط بالفم ١٥ مل ١٩٠ج",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "سيستون  اقراص س ج",
+          "warehouse_item": "سيستون سسعر ۱۲۳ ج",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "تادانيرفي5مجم20فيلم س ج",
+          "warehouse_item": "تادانير في ٥ مجم سعر جديد ۲۷۰ ج",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "كولونا  3شريط",
+          "warehouse_item": "كولونا اقراص ۹۲ ج",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "جابيميدرا 10مجم اقراص",
+          "warehouse_item": "جابيمدرا ۱۰ مجم",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "ايفاستين اقراص2 شريط س ج",
+          "warehouse_item": "ايفاستين اقراص / سعر جديد",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "بروتولوك40مجم اقراص س ج",
+          "warehouse_item": "بروتولوك ٤٠ ق سعر جديد",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "اوجمنتين  457 شراب",
+          "warehouse_item": "اوجمنتتين ٤٥٧ شراب",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "اوجمنتين  625مجم اقراص",
+          "warehouse_item": "اوجمنتتين ٦٢٥ مجم اقراص س. ج ۱۱۷ ج",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "اسبوسيد 20قرص اطفال س ج",
+          "warehouse_item": "اسبوسيد اطفال ٣٥ جنية",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "جينوفيل 50قرص اوريجنال س ج",
+          "warehouse_item": "جينوفيل اوريجينال ٥٠ قرص ۳۱۰ ج",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "كاندلكان 4مجم 14 قرص س ج",
+          "warehouse_item": "كاندلكان ٤ سعر جديد",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "سيبروسين500مجم10قرص س ج",
+          "warehouse_item": "سيبروسين ٥٠٠ اقراص سعر جديد",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "اسبوسيد 20قرص اطفال",
+          "warehouse_item": "اسبوسيد اطفال ٣٥ جنية",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "كوتارج 160/12.5مجم4شريط س ج",
+          "warehouse_item": "كوتارج ١٦٠/١٢٫٥ ١٥٠ جنيه",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "سيديرال بمبي10كيس س ج",
+          "warehouse_item": "سيدرال بيمبي ۱۰ اكياس سعر جديد = 125",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "كولوسلازين500 مجم20 قرص س ج",
+          "warehouse_item": "كولوسلازين ٢٠ق",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "needs_review": [
+        {
+          "shortage_item": "ليفست 20قرص",
+          "warehouse_item": "ليفست شراب",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "ليفست 20قرص س ج",
+          "warehouse_item": "ليفست شراب",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "بيتاديرم مرهم س ج",
+          "warehouse_item": "بيتاديرم كريم ١٥ جم س.ج ۱۸ ج",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "ديكساتوبرين مرهم س ج",
+          "warehouse_item": "ديكستابورين قطرة سعر ۳۷",
+          "reason": "اختلاف الشكل الدوائي بين مرهم وقطرة"
+        },
+        {
+          "shortage_item": "فاركوسين مرهم س ج",
+          "warehouse_item": "فاركوسين كريم ۲۳ ج جديد",
+          "reason": "اختلاف الشكل الدوائي بين مرهم وكريم"
+        },
+        {
+          "shortage_item": "كتافلام  نقط",
+          "warehouse_item": "كتافلام 6 امبول س.ج ۱۲۰ج",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "كلينداسول جل",
+          "warehouse_item": "كلاينداسول محلول",
+          "reason": "اختلاف الشكل الدوائي بين جل ومحلول"
+        }
+      ]
+    },
+    "الهضبة الاثنين نقدى0.pdf": {
+      "matched": [
+        {
+          "shortage_item": "ديكلوبرو150مجم 20قرص",
+          "warehouse_item": "ديكلوبرو 150 مج اقراص/باكت10",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "فانو كريم",
+          "warehouse_item": "فانو كريم / باكت 50",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "لاكتيز 15 ملل نقط 750مجم",
+          "warehouse_item": "لاكتيز 750 نقط",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "ازيلاست بلس بخاخ",
+          "warehouse_item": "ازيلاست بلس بخاخ/باكت 48",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "ازيلاست بلس بخاخ س ج",
+          "warehouse_item": "ازيلاست بلس بخاخ/باكت 48",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "بنداكس  شرب س ج",
+          "warehouse_item": "بنداكس شراب/باكت 20",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "فلافيسيف شراب30مل",
+          "warehouse_item": "فلافيسيف 60 مل شراب باكت 48",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "بران كبسول س ج",
+          "warehouse_item": "بران كبسولات/باكت 15",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "سيرفيتولكا ادفانس 20كبسوله س ج",
+          "warehouse_item": "سيرفيتولكا ادفانس كبسول/باكت 60",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "زنكترون 30كبسولة س ج",
+          "warehouse_item": "زنكترون اقراص/باكت 160",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "نيوروفيت اقراص  3 شريط",
+          "warehouse_item": "نيوروفيت اقراص/باكت 15",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "بلانكا كريم 5 جرام",
+          "warehouse_item": "بلانكا كريم عادى جديد/باكت 92",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "سينوبريت اقراص",
+          "warehouse_item": "سينوبريت اقراص عادى/باكت150",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "ديكلوبرو150مجم 20قرص س ج",
+          "warehouse_item": "ديكلوبرو 150 مج اقراص/باكت10",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "فاستر جيل",
+          "warehouse_item": "فاستر جيل /باكت25",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "ميتفورمين1000مجم اكس ار اقراص",
+          "warehouse_item": "ميتفورمين 1000 مج اقراص اكس ار",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "كوفي زنك لوسيون",
+          "warehouse_item": "كوفى زنك لوسيون جديد",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "فاستر جيل س ج",
+          "warehouse_item": "فاستر جيل /باكت25",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "فيوسيدرم كريم ايفا 15جم",
+          "warehouse_item": "فيوسيدرم كريم ايفا/باكت 84",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "ماجيك اويل  60 ملل زيت",
+          "warehouse_item": "ماجيك اويل 120 مل زيت /باكت20",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "جستيكول10مجم 14قرص",
+          "warehouse_item": "جاستيكول 10 مج 14 قرص ج",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "جستيكول10مجم 4 شريط س ج",
+          "warehouse_item": "جاستيكول 10 مج 14 قرص ج",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "جنكو بلاس اقراص",
+          "warehouse_item": "جنكو بلس كبسول /باكت 30",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "بقدونس وكرفس ايزيس",
+          "warehouse_item": "ايزيس بقدونس وكرفس 20 فلتر",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "دابسوكيرل 50مجم جيل",
+          "warehouse_item": "دابسوكيريل جيل 30 جم",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "ليفانوكس2شريط س ج",
+          "warehouse_item": "ليفانوكس كبسول /باكت 200",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "دوكسي بروكت بلس مرهم س ج",
+          "warehouse_item": "دوكسيبروكت بلس مرهم/باكت 100",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "اليرزون كريم س ج",
+          "warehouse_item": "اليزرون كريم/ باكت 80",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "ايزوميم 40مجم اقراص",
+          "warehouse_item": "ايزومومب 40 مج اقراص باكت 144",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "لانتانون30مجم 10كبسوله س ج",
+          "warehouse_item": "لانتانون كبسول /باكت 160",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "فايركتا 3 شريط س ج",
+          "warehouse_item": "فايركتا 12 قرص /باكت 72",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "تربتيزول10 مجم اقراص",
+          "warehouse_item": "تريبتزول 10 مج اقراص/باكت 200",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "سيديرال بمبي10كيس س ج",
+          "warehouse_item": "سيدرال بمبى جديد/ باكت 10",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "نيوكاربون30قرص س ج",
+          "warehouse_item": "نيوكاربون 30 كبسول /باكت 50",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "دانست  4 مجم 3 امبول س ج",
+          "warehouse_item": "دانسيت 4 مج 6 امبول",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "بايولجام60/100 8قرص",
+          "warehouse_item": "بايولجام 100/60 مج اقراص",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "ليمتلس كروماكس كت30كيس س ج",
+          "warehouse_item": "يمتليس كروماكس كت 30 كيس جديد",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "ارموويك50مجم20قرص س ج",
+          "warehouse_item": "ارموويك 50 مج 20 قرص باكت 65",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "كولميتيدين  10شريط",
+          "warehouse_item": "كولميديتين اقراص/باكت 63",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "ينسون ايزيس س ج",
+          "warehouse_item": "يزيس ينسون 12 فلتر صغير ج/ باكو 6",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "needs_review": [
+        {
+          "shortage_item": "ابيفيناك قطرة س ج",
+          "warehouse_item": "ابيفيناك امبول / باكت 10",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "ديكساتوبرين مرهم س ج",
+          "warehouse_item": "ديكساتوبرين قطرة/باكت 81",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "فاركوتيليام شراب",
+          "warehouse_item": "فاركوتيليام كبسول/باكت60",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "فيتونكس شراب",
+          "warehouse_item": "فيتونکس كبسول/ باكت 20",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "بيتاديرم مرهم س ج",
+          "warehouse_item": "يتاديرم كريم 15 جم صغير/باكت 200",
+          "reason": "اختلاف في الشكل الدوائي (مرهم مقابل كريم)"
+        }
+      ]
+    },
+    "جملة العمروووو.pdf": {
+      "matched": [],
+      "needs_review": [
+        {
+          "shortage_item": "ستيمولان امبول",
+          "warehouse_item": "ستيميولان 400مجم كبسول",
+          "reason": "اختلاف في الشكل الدوائي بين المطلوب والمتاح (أمبول مقابل كبسول)"
+        }
+      ]
+    },
+    "كيور فارما خاص.pdf": {
+      "matched": [
+        {
+          "shortage_item": "ترايملازما كريم س ج",
+          "warehouse_item": "ترايملازما كريم جديد",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "دولوكسبرين 30مجم 28قرص س ج",
+          "warehouse_item": "دولوكسبرين ۳۰ مجم اقراص",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "ديكلوبرو150مجم 20قرص",
+          "warehouse_item": "ديكلوبرو ١٥٠ مجم اقراص",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "برونكوبرو نقط س ج",
+          "warehouse_item": "برونكوبرو نقط",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "سيستون  اقراص س ج",
+          "warehouse_item": "سيستون اقراص",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "كيردالود 30قرص س ج",
+          "warehouse_item": "كيردالود اس ار ۳۰ قرص",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "اليرزون كريم س ج",
+          "warehouse_item": "اليرزون ٢٥ جم كريم",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "سكارو جيل",
+          "warehouse_item": "سكارو جيل",
+          "confidence": "exact",
+          "method": "exact_text"
+        },
+        {
+          "shortage_item": "كولونا  3شريط",
+          "warehouse_item": "كولونا - ٤ شريط جديد",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "سيرفيتولكا ادفانس 20كبسوله س ج",
+          "warehouse_item": "سيرفيتولكا ادفانس ۲۰ قرص",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "زوكوزيت 20/10مجم اقراص",
+          "warehouse_item": "زوكوزيت ۲۰/۱۰ مجم قرص",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "جينتازون كريم",
+          "warehouse_item": "جينتازون كريم",
+          "confidence": "exact",
+          "method": "exact_text"
+        },
+        {
+          "shortage_item": "ديكلوبرو150مجم 20قرص س ج",
+          "warehouse_item": "ديكلوبرو ١٥٠ مجم اقراص",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "برايم روز بلاس اقراص",
+          "warehouse_item": "برايم روز بلاس كبسول جديد",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "بينوكس قطره س ج",
+          "warehouse_item": "بينوكس قطرة جديد",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "باروفين 30قرص س ج",
+          "warehouse_item": "باروفين ۳۰ قرص",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "يوريفين فوار",
+          "warehouse_item": "يوريفين فوار",
+          "confidence": "exact",
+          "method": "exact_text"
+        },
+        {
+          "shortage_item": "نابيبرادين 7.5 مجم 30 قرص س ج",
+          "warehouse_item": "نابيبيرادين ٧,٥ مجم قرص",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "لانتانون30مجم 10كبسوله س ج",
+          "warehouse_item": "لانتانون كبسول",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "فايركتا 3 شريط س ج",
+          "warehouse_item": "فايركتا ۱۰۰ مجم ۱۲ قرص جديد",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "جينوفيل 50قرص اوريجنال س ج",
+          "warehouse_item": "جينوفيل اوريجينال",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "نيوكاربون30قرص س ج",
+          "warehouse_item": "نيوكاربون ۳۰ كبسوله",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "دانست  4 مجم 3 امبول س ج",
+          "warehouse_item": "دانست ٤ مجم ٦ امبول س١٦٥",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "تيرز جارد قطرة عين س ج",
+          "warehouse_item": "تيرز جارد قطره عاديه جديد",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "نانازوكسيد500مجم18قرص س ج",
+          "warehouse_item": "نانازوكسيد اقراص",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "زيستريل10مجم10قرص",
+          "warehouse_item": "زيستريل ۱۰ مجم قرص",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "كولميتيدين  10شريط",
+          "warehouse_item": "كولميديتين ٠,٥ مجم ۱۰ شريط",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "تريبليكسام10/2.5/10مجم15قرص",
+          "warehouse_item": "تريبيليكسام ١٠/٢,٥/١٠ مجم ۳۰ قرص",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "افيروكوكسيب90مجم20قرص س ج",
+          "warehouse_item": "افيروكوكسيب ۹۰ مجم ۲۰قرص",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "مكسيدرم30جم كريم كبير س ج",
+          "warehouse_item": "ميكسيدرم كريم ۳۰ جم كبير",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "كيروفيت 3شريط",
+          "warehouse_item": "كيروفيت كبسول",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "needs_review": [
+        {
+          "shortage_item": "ديكساتوبرين مرهم س ج",
+          "warehouse_item": "ديكساتوبرين قطرة",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "نيتازود اقراص س ج",
+          "warehouse_item": "نيتازود ۱۰۰مل شراب جديد",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "دافاليندي5000جم اقراص س ج",
+          "warehouse_item": "دافاليندى حقن",
+          "reason": "اختلاف في الشكل الصيدلي (أقراص مقابل حقن)"
+        },
+        {
+          "shortage_item": "ابيفيناك قطرة س ج",
+          "warehouse_item": "ابيفينا ك حقن",
+          "reason": "اختلاف في الشكل الصيدلي (قطرة مقابل حقن)"
+        },
+        {
+          "shortage_item": "انتي كوكس 6امبول",
+          "warehouse_item": "انتی کوکس ١٥ مجم - ۳ شريط",
+          "reason": "اختلاف في الشكل الصيدلي (أمبولات مقابل أقراص/شرائط)"
+        },
+        {
+          "shortage_item": "ديكلوبرو50جم جيل س ج",
+          "warehouse_item": "ديكلوبرو ١٥٠ مجم اقراص",
+          "reason": "اختلاف في الشكل الصيدلي (جيل مقابل أقراص)"
+        },
+        {
+          "shortage_item": "فيتونكس شراب",
+          "warehouse_item": "فيتونكس ۳ شريط\"جديد",
+          "reason": "اختلاف في الشكل الصيدلي (شراب مقابل شرائط)"
+        },
+        {
+          "shortage_item": "ديباكين شراب س ج",
+          "warehouse_item": "ديباكين ۲۰۰ مجم اقراص",
+          "reason": "اختلاف في الشكل الصيدلي (شراب مقابل أقراص)"
+        },
+        {
+          "shortage_item": "زوفيراكس400مجم اقراص س ج",
+          "warehouse_item": "زوفيراكس ۱۰۰ مل شراب",
+          "reason": "اختلاف في الشكل الصيدلي (أقراص مقابل شراب)"
+        },
+        {
+          "shortage_item": "فاكتو مرهم",
+          "warehouse_item": "فاكتو لبوس",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "بروفين 200مجم 30قرص س ج",
+          "warehouse_item": "بروفين شراب جديد",
+          "reason": "اختلاف في الشكل الصيدلي (أقراص مقابل شراب)"
+        },
+        {
+          "shortage_item": "كتافلام  نقط",
+          "warehouse_item": "كتافلام ٥٠ مجم قرص",
+          "reason": "اختلاف في الشكل الصيدلي (نقط مقابل أقراص)"
+        },
+        {
+          "shortage_item": "جينوزول كريم س ج",
+          "warehouse_item": "جينوزول ٤٠٠ مجم لبوس جديد",
+          "reason": "اختلاف في الشكل الصيدلي (كريم مقابل لبوس)"
+        },
+        {
+          "shortage_item": "بيتاديرم مرهم س ج",
+          "warehouse_item": "بيتاديرم ١٥ جم كريم صغير",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "ترايتون امبول ث س ج",
+          "warehouse_item": "ترايتون ۲۰۰مجم ۳ شريط",
+          "reason": "اختلاف في الشكل الصيدلي (أمبولات مقابل أقراص/شرائط)"
+        },
+        {
+          "shortage_item": "فيوسيدين 15جم مرهم صغير",
+          "warehouse_item": "فيوسيدين ۲۰جم كريم/ وسط",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "ستيمولان امبول",
+          "warehouse_item": "ستيمبولان ۸۰۰ مجم قرص",
+          "reason": "اختلاف في الشكل الصيدلي (أمبولات مقابل أقراص)"
+        }
+      ]
+    },
+    "مخزن الحياة فارم اسكندريه-170.pdf": {
+      "matched": [
+        {
+          "shortage_item": "ليفابيون 6امبول",
+          "warehouse_item": "ليفابيون أمبول باكت 25",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "فاكتو مرهم",
+          "warehouse_item": "فاكتو مرهم / باكت56",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "زنكترون 30كبسولة س ج",
+          "warehouse_item": "زنكترون اقراص باكت 160",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "يوريفين فوار",
+          "warehouse_item": "يوريفين فوار / باكت 25",
+          "confidence": "high (1.00)",
+          "method": "auto_rule"
+        },
+        {
+          "shortage_item": "كارنيفيتا ادفانس للرجال30كيس س ج",
+          "warehouse_item": "كارنيفيتا ادفانس رجال/باكو16",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "اسبوسيد 20قرص اطفال س ج",
+          "warehouse_item": "اسبوسيد اطفال سعر جديد باكت 60",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "سيديبروكت كريم س ج",
+          "warehouse_item": "سيدوبروكت كريم",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "ليمتلس ماغنسيوم 30 قرص س ج",
+          "warehouse_item": "ليمتلس ماغنيسوم باكت48",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "اسبوسيد 20قرص اطفال",
+          "warehouse_item": "اسبوسيد اطفال سعر جديد باكت 60",
+          "confidence": "llm",
+          "method": "fast_llm"
+        },
+        {
+          "shortage_item": "ليمتلس كروماكس كت30كيس س ج",
+          "warehouse_item": "ليمتلس كروماكس كت",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "needs_review": [
+        {
+          "shortage_item": "فيوسيدين 15جم مرهم صغير",
+          "warehouse_item": "فيوسيدين كريم 20 جرام وسط",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        },
+        {
+          "shortage_item": "جاراميسين كريم 15 جرام",
+          "warehouse_item": "جاراميسين80امبول",
+          "reason": "اختلاف في الشكل الدوائي لنفس المنتج (كريم مقابل أمبولات)"
+        },
+        {
+          "shortage_item": "زوفيراكس400مجم اقراص س ج",
+          "warehouse_item": "زوفيراكس شراب/باكو24",
+          "reason": "اختلاف في الشكل الدوائي لنفس المنتج (أقراص مقابل شراب)"
+        },
+        {
+          "shortage_item": "بروفين 200مجم 30قرص س ج",
+          "warehouse_item": "بروفين شراب سعر جديد باكت 30",
+          "reason": "اختلاف في الشكل الدوائي لنفس المنتج (أقراص مقابل شراب)"
+        },
+        {
+          "shortage_item": "كتافلام  نقط",
+          "warehouse_item": "كتافلام 6 امبول/باكو15",
+          "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+        }
+      ]
+    }
+  },
+  "not_found": [
+    {
+      "name": "XXكال فود د3 30قرص برطمانXX",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ابيتنس اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ابيسفين 1جم عضل فيال",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ابيكوتيل  5لبوسة ث",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ابيكوجيل 180مل شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ابيكوفلوسين200مجم10قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ابيماج فوار",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ابيمول اطفال 5 لبوسه",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ابيمول اطفال 5 لبوسه س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اتلابسلس نقط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اتلانتو ثري كبسولات",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اتلانتيكو30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اتميبرازول 40مجم 20 قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اجيولاكس  حبيبات",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ادرينوكورتين1مجم امبول ث س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ادولور 30مجم 3امبول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ادويفلام50مجم جل س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اريببركس100مل شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اريثركس200مجم2شريط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ازارجا قطره س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ازمازون اسبراي للفطريات",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اسبروتكت100مجم30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اسبرين بروتكت 100مجم3شريط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اسبوسيد سي 12قرص فوار",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "استرامارك21قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "استربسلز  عسل وليمون س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "استربسلز  فيتامين سي س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اسيكلوفير 5%10 جم كريم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "افاندروكس شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "افروزوليد150 مل شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "افروزوليد600مجم10قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "افيل حقن  6امبول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اكسبتو برو كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اكسترا بروتين اكياس فانيليا",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اكسفورج 10مجم اتش سي تي س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اكني اكت كريم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "البيوستكس 8مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "التراسولف شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "الفابرينزيما قطره",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "الفاثرومب5مجم20قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "الكابرس تريو5/160/12.5مجم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "الكابرس10مجم30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "الكابرس160/5 بلاس س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "الكافتابرو قطره",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "الليرديب بخاخ للانف 60 ملل",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "املوسازايد40/12.5/5مجم30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اميبريد50مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "انترستو 100مجم 28قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "انتودين 20مجم30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "انتي كرامب حقن",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اندرال10مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اندوديرما صن سكرين لوشن",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "انزيماتريبس30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "انزيماكس ديوبايوتكس كبسول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "انسولين لانتوس سولوستار 1قلم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "انسولين نوفورابيد قلم خرطوشه",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "انسيلاكوكس 60 مجم 30 قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "انوكسيكام 20مجم 20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "انونا لوسيون للشعر",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اوبتاديرول بلس 30كبسوله س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اوبتك سالين قطرة س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اوجرام312.5مجم10قرص مضغ",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اوجرام457مجم بودره60مل",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اورامكس 30مل اسبراي س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اوسوبان800مجم 20قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اوفيونهيبيتا28قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اوكسازوليد600مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اوكيوسيليرج فورت قطره",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اوكيوميثيل  نقط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اولانفيكسا10مجم30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اولفن100مجم اس ار10كبسول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اولوجنت اكياس",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اولوهيستين فورت محلول عين",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اومنيك 0.4مجم30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اوني 5مجم مل شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اي يست كبسول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايبويتين4000وحدة  امبول ث س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايبياكتو كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايتوريكوكس90مجم30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايجيكوستات بلس /مينالاكس",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايرون جلور",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايرون ليبوزومال شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايستوزا اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايفرزين لوشن",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايكاندرا بلس اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايليديل 1% 15جم كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايليديل كريم30جم كبير",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايموكس 250مجم شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايموكسكلاف 625 مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايموكسكلاف642مجم شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ايميرست اقراص 8 مجم 10 قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "اينوفاجار نقط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ب ك ميرز كبسول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "باروكسيديب37.5اكس ار اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بانتروجلوب40مجم فيال",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بانتوبرازول 40 مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بانثينول النيل2%كريم وسط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "باولوكير نقط س ج/بيكولاكس",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "براديبيكت 5 مجم 28 قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "برايم روز اي اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بروستيترول 10مجم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بروليفز شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "برونشيكم شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "برونكوفين شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "برونكوفين شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "برونكولين اس بخاخ/فنتال",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بريجناستيب 2 30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بلاكونيل 60قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بليتال 50مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بنتافليكس كريم مساج100جم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بنتافليكس كريم مساج50جم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بنتاكولد120مل شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بنتاكولد120مل شراب س ق",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بوديكسان 0.5مجم حقن",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بون كير .5ميكروجرام 30كبسوله س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بي كوم 6 امبولات س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيا 400مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيتابرونيت بلس كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيتادين دش مهبلي س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيتادين شامبو120مل س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيتادين شامبو60مل س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيتافوس امبول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيتاكاروتين فورت 20كبسوله",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيدرو اسبراي مطهر س ق",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيدرو كريم تفتيح",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيدورا كالسيوم 20 كبسوله",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيرافين امبول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيسلفون120مل شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيكوزيم امبول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "بيليبوسيس 20 قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تادالاندرو5جم30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تاريفلوكس200مجم10قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تاريفيد 200مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تاموكسيفين 10مجم30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تجريتول200 سي ار 20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تجريتول400 سي ار 20قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تراي بيتابرونات كريم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ترايتكت اطفال صابونه",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ترايلبتال300مجم50قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ترايمدفلو 20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تربين كريم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ترياكور 5مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تريامريكان500مجم فيال س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تريتاس 1.25مجم 14قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تريتاس 2.5 مجم 14قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تشيكس اميون شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "توب جنج ادفانس30كبسوله س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تورسامولكس10مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "توسيستوب شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "تي 4 ثيرو100ميكرو100قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جابتن 300مجم 30كبسوله",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جابتن 300مجم 30كبسوله س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جابتن400مجم 30كبسوله",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جاستروبيوتك 550 مج 20 قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جاناتون 50مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جانوفيا 100مجم 28قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جانيوميت1000/50مجم 56قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جانيوميت500/50مجم 56قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جاوتيفيد80مجم  3 شريط س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جراليبنتين300مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جرانتريل 3مجم 6 امبول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جلوتاثايون 16كبسولة",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جليبوفين500/5مجم30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جلينسيرت 20مجم كريم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جي سي فارم غسول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جيت وايت كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "جيوكاند بلس21قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "دال دروب نقط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "دايسينون 3امبول س ق",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "دورفين 30كبسولة",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "دوزين2مجم20قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "دولفين 12.5مجم لبوس 2شريط س ق",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "دولفين 50مجم لبوس 2شريط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "دولفين 75مجم لبوس س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "دي 3 تاج نقط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "دي جي كير مضمضه س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديافانس 5مجم 30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديافانس 5مجم 30قرص س ق",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديباكين كرونو500مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديبوفيت  5امبول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديبوفيت  5امبول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديجستين 20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديديرا نقط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديرموفيت  كريم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديسبركام  20مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديسبروديرم كريم 30 جرام",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديفارول امبول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديفلوكان 2مجم 50ملل فيال",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديكابرينو200مجم2امبول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديكسافين شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديكلوتازين 10كيس",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديكلوفلام10قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديكلوفين 100مجم5لبوسة كبار ث س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديمانكورتيل امبول/ديبروفوس",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديوراسيف  250مجم شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديورافوس 1 امبول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ديوزمين 30 قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "راميكسول 1جم30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "راميكسول25مجم30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "رايوفيت شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "روزاسيف 30 كبسوله/ برايم روز",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "روزوكوليست 10 مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "روزينول   كبسول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "روكسيكام 8مجم 20قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "رونكس دش مهبلي س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "رويال جيلي1000مجم12كبسولة س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "رويال ريجيم كبير50كيس س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ريبايون اسبراي",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ريتشي بانثينول كريم ادفانس",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ريستيبرو نقط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ريلاكومب جيل مساج100جم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ريلاكومب جيل مساج50جم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "رينومول شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "زادميسن20مجم مرهم/جاراميسين",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "زاكاجلون امبول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "زانثيبوكس 80مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "زانوجليد4/30اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "زنكو بلاس شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "زوركال20مجم14قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "زوفيراكس10 مجم كريم جلد س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "زولمسولان5مجم6فيلم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "زيثروماكس 600 شرب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "زيستريل 20مجم 20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سالبين  1500 مجم فيال",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سالميتوكورت50/500ميكرو60ك",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سانسو بي كومبلكس 3شريط س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سانسو نيوروتيك28قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سايبنتولا قطره",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سبازموفري امبول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سبازموفين امبول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سباسكولون 100مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سبكتراسيف 1 مجم امبول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سبلفكت 30كبسولة",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ستارفيل رول اون لايت بينك",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ستارفيل كريم تفتيح60مل س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ستاركوبينا5مجم20قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ستاركوبينا5مجم3شريط س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سترونج فيل سبراي",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ستلاسيل 5 جم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سفيرا لوشن",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سكروفير امبول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سكينورين كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سليب ايز 3مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سنوليفا اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سوبرانيل 25مجم كبسول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سوكابريكسام5/1.25/10مجم30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سوكير اسبري للفم اطفال س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سولو لوسيون مرطب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سوليوبريد 5مجم30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سومازينا سوبرا كبسول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سومازينا نقط س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سوميناليتا شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سي اتش الفا بلس س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيالونج5مجم30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيبانوين جيل",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيبروباي 750مجم10قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيبروفلوكساسين محلول وريدي",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيبروفلوكسميت 500مجم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيتال1جم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيترونوميت 4 مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيرازيت اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيرباس 50مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيردالود 2 مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيردالود 4 مجم20قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيريلاك 125جم تمر وقمح",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيريلاك 150جم قمح ساده",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيستان قطره",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيفاثرد 300 مجم 10 كبسول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيفاكسون  1جم عضل فيال",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيفاكسون  500مجم عضل فيال",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيفاكسون1جرام وريد فيال",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيفزيم 1 جم فيال س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيفيبم 1جم  فيال عضل فاركو",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيفيتيل 1جم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيفيكسيم 100مجم 30مل شرب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيكلوبروجينوفا اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيكلور  125مل شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيكلور 250مل شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيكوسيتام 500مجم20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيلجون لبوس س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيلفازين كريم حروق",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيلفر سيز شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيلكتيفال كبسول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيلينيكس شامبو س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سيلينيوم فيت 30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سينتروباكس ادفانس اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سينمت  250/25مجم 20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "سينوبريل كواقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "شان سيكا كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "صابون سنسودرم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "صابون هاي ديرم مرطب80جم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "صن توب كريم50مجم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "صن دراي صن سكرين كريم جيل",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فاتروكسيم200مجم10قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فاردي 20مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فاركولين محلول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فاموتاك 40مجم 20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فانج رير جل شاور",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فايركتا بلاس 4قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فاينال تو شامبو 240ملل س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فلابو 600 اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فلوادجست25مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فلوب شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فلوبادكس 8مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فلوتاك 75مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فلوتن 14 كبسول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فلورست ان اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فلوروكينومكس .5 نقط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فلوكسيبسي400مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فليبوتون حقن 3امبولات س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فليبوفينال جل40جم/ريباريل",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فنتال بخاخ العربية",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فنستيل 15مجم نقط س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فور كيدز باروت شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فوراديل كبسول 3شرايط بخاخ",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فوراديل كبسول 6شرايط بخاخ",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فورتازيديم 1جم فيال عضل",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فورتيفيروم14كيس س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فوركيدز 3د 15نقط مل/دايفيتون",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "في اند كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيتا دي ثري4000ميكروفيلم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيتا زنك  كبسول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيرنيلار اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيروديونال كبسوله",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيزومير بيبي يونيدوز امبولات س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيفيدول سبراي",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيلافوريا20مجم30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيلدافورمين50/1000مجم 30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيلكسوفان كبسول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيلوسيف 1جم 8قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيلوسيف500مجم كبسول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيوتابان 1فيال س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيوتك نقط س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "فيوسيدل كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "قرفة بالجنزبيل ايزيس",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كابرجامون 5مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كابوتن 25مجم 20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كابوزايد 30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كاتونيك مضمضه",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كاتيفاروكس10مجم شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كارديوتون اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كارفيبرس25مجم2شريط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كارفيد 25مجم 2شريط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كارنيتول بلس برطمان س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كالدين سي كي اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كالسيزوم د 60 كبسوله",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كالوبين  نقط س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كاندي بلوك دي 20اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كانديكيور لبوس مهبلي",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كلاريتين اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كلاريتين شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كلافوران 1جم فيال",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كلوزابكس 25 مجم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كلوزابين100 اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كلوسول سبراي س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كوادريدرم كريم30جم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كوراسور  15مل نقط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كورتكس شامبو للقشره",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كورتوبكت 30كبسوله س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كورفيبيك20كبسوله س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كوفرسيل 5مجم 30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كوفرسيل1.25/5 بلس اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كوفرسيل2.5/10 بلس اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كوفي زنك شامبو",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كولشيسين0.5مجم100قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كولوفيرين  أيه 30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كونجي كلير فورت قطرة س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كونجيستال شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كونجيستال20قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كونفاجران100مجم30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كونفنتين300اقراص اكس ار3شريط س ق",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كونفنتين300اقراص3شريط س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كونفنتين400مجم 30كبسوله",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كونفنتين400مجم 30كبسوله س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كويتابين 25مجم 30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كويتكول200مجم30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كيتاديل25مجم30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كيتوبريك 75مجم 20كبسولة س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كيتوفان25مجم30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كيتولاك 5 امبوله",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "كيمبوكسون 1جم فيال عضل",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لاكتوديل20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لاكسيول بي ملين اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لبن ابتاميل 1 ادفانس",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لبن ان شور فانيليا 400 مجم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لبن انفاتريني",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لبن بيبيلاك 3 بيبي جونيور",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لبن بيبيلاك بريماتيور",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لبن بيديا ستارت 2",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لوبيكونت8مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لورنوكسيكام 8 مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لوسيدريل250مجم 20قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليبانتيل 300مجم 3شريط س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليبانتيل145اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليبترين 10/10مجم 14قراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليبراكس اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليبوفيريك فوليك 120 مل شرب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليبونكس 25مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليسيد  لوسيون",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليفانيك500مجم 7قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليفوفلوكساسين500مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليفوفلوكساسين750مجم 5قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليليبل10مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليمتلس بي كومبلكس لزقه",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ليمتلس ليبوفيركس40مجم كبسولات",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "لينتوجيستون250مجم1امبول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ماء غريب سمايل س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ماء نونو شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "مارفيل كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "مارفيلون 21قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ماريفان3مجم3شريط س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ماكسفول كبسول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ماكسوفاج1جم اكس ار اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "مالكون كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "مامي كير50جم كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "مانوفيبركين بلس اسبراي س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ماي سويت بيبي شراب س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "موفليكس نانو اسبراي",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "موكسيسيارو بلس قطرة",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "مونتيلوراما 10مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "مونودكسين 1% قطرة عين",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "مويست 1 كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "مياكلسيك 100  وحدةامبول ث",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ميثوريلاكس 30 قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ميديفا ميون شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ميراج 500مجم حقن",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ميلجا ماكس30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ميلوسكار جل15جم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "مينرو10كيس",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "مينوفللين ان امبول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ميوكوسول شراب اطفال س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ناتريلكس اس ار 30قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نايت كالم 3جرام اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نت لوك 20مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نت لوك40مجم20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نودي بخاخ انف",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نورجيستادول21قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نورجيسك اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نوريجنسين امبول/ميزوسيبت",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نوفالجين ابلونج 10قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نوفوكوبال30قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نوليفر كريم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نويوريك300مجم اقراص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيبليت 5مجم 14قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيتروماك ريتارد2.5مجم كبسول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيتروماك ريتارد2.5مجم كبسول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيرهافلكس40مجم20فيلم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيفروميد ادفانس 14كيس س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيفيلوب12.5/5مجم بلاس20قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيكسكيور10مجم14كيس",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيكسكيور5مجم28كيس",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيكسيبرازول 40مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيكسيبرونش شراب200مل بالعسل س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيل 15مل محلول اظافر س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيورازين25مجم اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيوروتون30قرص س ق",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيوزوليد 600 مجم3قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "نيوكلاف642اكسترا شراب100مل س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيالوكونكس سيرم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيباتوفورت 30كبسولة امون س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيدروكين 200مجم 20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيرباك 5% لوسيون اخضر",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيرباك بلس فوم",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيرو دي3+كي2 نقط",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيستازين نقط  للفم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيلاريوم 15جم كريم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيلسك 20مجم14كبسول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيمالتوز شراب120مل",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيموجيت 6  امبول س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيموستوب 3امبول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "هيموكلار كريم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ون تو ثري 20قرص س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "ويستابريث.5مجم20قرص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "يورينكس كبسول",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "يوكيراتو كريم س ج",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "يونايتد فيت اقراص",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "يونيبريدول100مل شراب",
+      "source": "0913.xlsx"
+    },
+    {
+      "name": "يونيلوكسام500مجم2شريط س ج",
+      "source": "0913.xlsx"
+    }
+  ],
+  "summary": {
+    "total_shortages": 993,
+    "unique_shortages": 591,
+    "matched_count": 113,
+    "not_found_count": 478,
+    "review_count": 35
+  }
+}

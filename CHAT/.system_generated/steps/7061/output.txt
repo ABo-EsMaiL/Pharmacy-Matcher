@@ -1,0 +1,46 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\e2e_runtime_verification.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -105,30 +105,6 @@
+ 
+     coordinator = FastCoordinator(dummy_config)
+ 
+-    # Direct raw request to inspect the exact payload returned by the gateway
+-    raw_response_text = ""
+-    try:
+-        raw_http = requests.post(
+-            API_URL,
+-            headers={
+-                "Authorization": f"Bearer {API_KEY}",
+-                "Content-Type": "application/json",
+-            },
+-            json={
+-                "model": "gemini-3.8-flash",
+-                "messages": [
+-                    {"role": "system", "content": SYSTEM_PROMPT},
+-                    {"role": "user", "content": prompt_json}
+-                ],
+-                "stream": False
+-            },
+-            timeout=120
+-        )
+-        raw_response_json = raw_http.json()
+-        raw_response_text = raw_response_json.get("choices", [{}])[0].get("message", {}).get("content", "")
+-    except Exception as e:
+-        print(f"[!] Warning fetching raw response directly: {e}")
+-
+     t0 = time.time()
+     try:
+         # Call the actual coordinator _call_local_api method (End-to-End Pharmacy Flow)
+@@ -135,5 +135,9 @@
+         elapsed = time.time() - t0
+         print(f"\n[Step 3] Pharmacy Coordinator Call Completed in {elapsed:.2f} seconds!")
++        raw_response_text = getattr(coordinator, 'last_raw_response', '')
++    except Exception as e:
++        print(f"\n[FAIL] Coordinator call failed: {e}")
++        return
+     except Exception as e:
+         print(f"\n[FAIL] Coordinator call failed: {e}")
+         return
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

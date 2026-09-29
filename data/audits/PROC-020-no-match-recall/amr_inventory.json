@@ -1,0 +1,648 @@
+[
+  {
+    "id": "I1762",
+    "name": "افيروكوكسيب 90مجم-32ب",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "افيروكوكسيب",
+    "nearest_requests": [
+      {
+        "requested": "افيروكوكسيب90مجم20قرص س ج",
+        "score": 1.0,
+        "current_classifier": [
+          "reject",
+          "product_variant_conflict"
+        ]
+      },
+      {
+        "requested": "فاركوسين مرهم س ج",
+        "score": 0.5713,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "افروزوليد150 مل شراب",
+        "score": 0.5618,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1763",
+    "name": "امبوفير حقن جديدد",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "امبوفير",
+    "nearest_requests": [
+      {
+        "requested": "امبوفير 5امبول س ج",
+        "score": 1.0,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "اسيكلوفير 5%10 جم كريم س ج",
+        "score": 0.5764,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "ديبوفيت  5امبول س ج",
+        "score": 0.5714,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1764",
+    "name": "ايزوتريتينوين 10 مجم 3 شرييبط -28",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "ايزوتريتينوين",
+    "nearest_requests": [
+      {
+        "requested": "ايبويتين4000وحدة  امبول ث س ج",
+        "score": 0.5769,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "يوريفين فوار",
+        "score": 0.5031,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "نيوروتون30قرص س ق",
+        "score": 0.4945,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1765",
+    "name": "ايزوتريتينوين 20م جديديد -50",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "ايزوتريتينوين",
+    "nearest_requests": [
+      {
+        "requested": "ايبويتين4000وحدة  امبول ث س ج",
+        "score": 0.5769,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "يوريفين فوار",
+        "score": 0.5031,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "نيوروتون30قرص س ق",
+        "score": 0.4945,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1766",
+    "name": "بانادول اكسترا 48 قرص-96ب",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "بانادول اكسترا",
+    "nearest_requests": [
+      {
+        "requested": "نيوكلاف642اكسترا شراب100مل س ج",
+        "score": 0.5374,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "ريبايون اسبراي",
+        "score": 0.4714,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "كارنيتول بلس برطمان س ج",
+        "score": 0.4425,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1767",
+    "name": "بانثينول كريم كبييير سعر قدييم باكو 25",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "بانثينول",
+    "nearest_requests": [
+      {
+        "requested": "بانثينول النيل2%كريم وسط",
+        "score": 0.75,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "ريتشي بانثينول كريم ادفانس",
+        "score": 0.7308,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "زانثيبوكس 80مجم اقراص",
+        "score": 0.5654,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1768",
+    "name": "ترايكوبافيت 100مجم 3شريط",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "ترايكوبافيت",
+    "nearest_requests": [
+      {
+        "requested": "رايوفيت شراب س ج",
+        "score": 0.6788,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "ترايتكت اطفال صابونه",
+        "score": 0.5,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "ترايلبتال300مجم50قرص",
+        "score": 0.4982,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1769",
+    "name": "رانسيف 500 مجم قرص جديديد45",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "رانسيف",
+    "nearest_requests": [
+      {
+        "requested": "رانديل10مجم اقراص",
+        "score": 0.6667,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "روزاسيف 30 كبسوله/ برايم روز",
+        "score": 0.6308,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "ديوراسيف  250مجم شراب س ج",
+        "score": 0.5643,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1770",
+    "name": "ستيميولان 400مجم كبسول",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "ستيميولان",
+    "nearest_requests": [
+      {
+        "requested": "ستيمولان امبول",
+        "score": 0.9046,
+        "current_classifier": [
+          "ambiguous",
+          "ocr_or_incomplete_name"
+        ]
+      },
+      {
+        "requested": "سيريلاك 150جم قمح ساده",
+        "score": 0.5764,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "سيريلاك 125جم تمر وقمح",
+        "score": 0.5764,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1771",
+    "name": "كليكسان 40مجم-84",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "كليكسان",
+    "nearest_requests": [
+      {
+        "requested": "بوديكسان 0.5مجم حقن",
+        "score": 0.6375,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "موفليكس نانو اسبراي",
+        "score": 0.5713,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "ديكسافين شراب",
+        "score": 0.55,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1772",
+    "name": "لوفير 400 سعر جديديد باكو 45",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "لوفير",
+    "nearest_requests": [
+      {
+        "requested": "اسيكلوفير 5%10 جم كريم س ج",
+        "score": 0.6032,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "سكروفير امبول",
+        "score": 0.6,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "امبوفير 5امبول س ج",
+        "score": 0.6,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1773",
+    "name": "لوفير 800 سعرجدديد-باكو25",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "لوفير",
+    "nearest_requests": [
+      {
+        "requested": "اسيكلوفير 5%10 جم كريم س ج",
+        "score": 0.6032,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "سكروفير امبول",
+        "score": 0.6,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "امبوفير 5امبول س ج",
+        "score": 0.6,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1774",
+    "name": "ليفوفلوتانيت 750 فيال باكو 12 كرتونه 144",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "ليفوفلوتانيت",
+    "nearest_requests": [
+      {
+        "requested": "ليفوفلوكساسين750مجم 5قرص س ج",
+        "score": 0.7006,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "ليفوفلوكساسين500مجم اقراص",
+        "score": 0.7006,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "سيبروفلوكسميت 500مجم",
+        "score": 0.5449,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1775",
+    "name": "هيرو 111 عادى جديد -12ب لا يفرط",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "هيرو 111 عادى",
+    "nearest_requests": [
+      {
+        "requested": "هيرو دي3+كي2 نقط",
+        "score": 0.825,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "لبن هيرو بيبي 2",
+        "score": 0.7375,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "مينرو10كيس",
+        "score": 0.62,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1776",
+    "name": "هيرو 222 نيوتراديفنس 384",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "هيرو 222 نيوتراديفنس",
+    "nearest_requests": [
+      {
+        "requested": "هيرو دي3+كي2 نقط",
+        "score": 0.7667,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "لبن هيرو بيبي 2",
+        "score": 0.65,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "مينرو10كيس",
+        "score": 0.62,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1777",
+    "name": "هيرو اتش ايه جديد 499",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "هيرو اتش ايه",
+    "nearest_requests": [
+      {
+        "requested": "هيرو دي3+كي2 نقط",
+        "score": 0.5682,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "لبن هيرو بيبي 2",
+        "score": 0.5346,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "بيدرو اسبراي مطهر س ق",
+        "score": 0.4417,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1778",
+    "name": "هيرو اف ال جديدج ك 12 لايفرط",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "هيرو اف ال",
+    "nearest_requests": [
+      {
+        "requested": "هيرو دي3+كي2 نقط",
+        "score": 0.5682,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "لبن هيرو بيبي 2",
+        "score": 0.5346,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "ميوكوسول شراب اطفال س ج",
+        "score": 0.4981,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1779",
+    "name": "هيرو ايه ار جديددد لايفرط",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "هيرو ايه ار",
+    "nearest_requests": [
+      {
+        "requested": "هيرو دي3+كي2 نقط",
+        "score": 0.6071,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "لبن هيرو بيبي 2",
+        "score": 0.5735,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "فيرنيلار اقراص",
+        "score": 0.4889,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I1780",
+    "name": "هيرو دايجست 12 لايفرط",
+    "warehouse": "جملة العمروووو.pdf",
+    "page": 1,
+    "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+    "trade_name": "هيرو دايجست",
+    "nearest_requests": [
+      {
+        "requested": "هيرو دي3+كي2 نقط",
+        "score": 0.6533,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "لبن هيرو بيبي 2",
+        "score": 0.5346,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "requested": "جيت وايت كريم",
+        "score": 0.4763,
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ]
+  }
+]

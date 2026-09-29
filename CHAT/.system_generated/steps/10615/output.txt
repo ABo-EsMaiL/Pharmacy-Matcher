@@ -1,0 +1,17 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -3288,9 +3288,9 @@
+             const badgeActive = document.getElementById(`badge-active-${key}`);
+             const btnActive = document.getElementById(`btn-active-${key}`);
+             const btnToggle = document.getElementById(`btn-toggle-${key}`);
+-            const valModel = document.getElementById(`val-model-${key}`);
+-
+             if (valModel) valModel.textContent = srv.default_model;
++            const valDir = document.getElementById(`val-dir-${key}`);
++            if (valDir && srv.dir) valDir.textContent = srv.dir;
+ 
+             const isRunning = !!srv.running;
+             const isExternal = !!srv.is_external;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

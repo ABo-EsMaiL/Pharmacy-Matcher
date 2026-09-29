@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+client dir: ['close', 'extract', 'jobs', 'parse', 'upload']
+client.extract dir: ['from_document', 'run']
+client.jobs dir: ['cancel', 'delete', 'get', 'iterate', 'list', 'stream']
+

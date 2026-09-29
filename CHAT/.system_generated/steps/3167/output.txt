@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Status code: 200
+Scripts found: ['/keycloak/resources/s1bxv/login/custom/js/favicon.js', '/keycloak/resources/s1bxv/login/custom/js/resend-timer.js', '/keycloak/resources/s1bxv/login/custom/js/menu-button-links.js']
+

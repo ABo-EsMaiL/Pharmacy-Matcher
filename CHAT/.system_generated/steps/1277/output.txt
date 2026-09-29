@@ -1,0 +1,420 @@
+
+The command exited with code 0.
+Output:
+<truncated 425 lines>
+
+        self._client = client
+
+
+
+
+
+class _Parse(_Namespace):
+
+    def run(
+
+        self,
+
+        *,
+
+        input: FileInput | None = None,
+
+        file_id: str | None = None,
+
+        schema: dict[str, Any] | str | None = None,
+
+        prompt: str | None = None,
+
+        output: str | None = None,
+
+        include: list[str] | None = None,
+
+        profile: str | None = None,
+
+        wait_seconds: int | None = None,
+
+    ) -> Any:
+
+        """Parse a document. Supplying `schema` extracts in the same job.
+
+
+
+        `schema` is accepted as a dict and serialized here. The wire format is
+
+        a JSON *string* on this operation and a JSON *object* on extract.run —
+
+        an inconsistency in the contract that callers should not have to know,
+
+        so both take a dict.
+
+        """
+
+        if (input is None) == (file_id is None):
+
+            raise ValueError("pass exactly one of input or file_id")
+
+
+
+        return ParseApi(self._client._api_client).parse_run(
+
+            prefer=_prefer(wait_seconds),
+
+            include=include,
+
+            input=as_file_part(input) if input is not None else None,
+
+            file_id=file_id,
+
+            output=output,
+
+            # `var_schema` is the generator's rename of `schema`; a str is
+
+            # passed through so a caller holding a pre-serialized schema is not
+
+            # forced to round-trip it through json.loads.
+
+            var_schema=schema if isinstance(schema, str) or schema is None else json.dumps(schema),
+
+            prompt=prompt,
+
+            profile=profile,
+
+        )
+
+
+
+
+
+class _Extract(_Namespace):
+
+    def run(
+
+        self,
+
+        *,
+
+        parse_id: str,
+
+        schema: dict[str, Any],
+
+        prompt: str | None = None,
+
+        wait_seconds: int | None = None,
+
+    ) -> Any:
+
+        """Extract against an existing parse. The document is not parsed again."""
+
+        api = ExtractApi(self._client._api_client)
+
+        return api.extract_run(
+
+            ExtractRequest(parse_id=parse_id, var_schema=schema, prompt=prompt),
+
+            prefer=_prefer(wait_seconds),
+
+        )
+
+
+
+    def from_document(
+
+        self,
+
+        *,
+
+        input: FileInput | None = None,
+
+        file_id: str | None = None,
+
+        filename: str | None = None,
+
+        schema: dict[str, Any],
+
+        prompt: str | None = None,
+
+        profile: str | None = None,
+
+        wait_seconds: int | None = None,
+
+    ) -> Any:
+
+        """Extract directly from a document, in one call.
+
+
+
+        The multipart variant of POST /api/v2/extract. Reconstructed over the
+
+        generated transport because openapi-generator emits only the JSON body
+
+        for this path — see this module's docstring.
+
+
+
+        Takes a document OR the id of one already uploaded, exactly as
+
+        parse.run does: ExtractDocumentRequest declares both `input` and
+
+        `file_id`, so requiring the bytes would have made an already-uploaded
+
+        file unusable here and forced a needless re-upload. `filename` only
+
+        applies to the `file_id` path — a raw `input` upload already carries
+
+        its own name.
+
+        """
+
+        if (input is None) == (file_id is None):
+
+            raise ValueError("pass exactly one of input or file_id")
+
+        if input is not None and filename is not None:
+
+            raise ValueError("filename only applies to file_id; input already carries its name")
+
+
+
+        return post_multipart(
+
+            self._client,
+
+            path="/api/v2/extract",
+
+            file_field="input",
+
+            file_value=None if input is None else as_file_part(input),
+
+            fields={
+
+                "file_id": file_id,
+
+                "filename": filename,
+
+                "schema": json.dumps(schema),
+
+                "prompt": prompt,
+
+                "profile": profile,
+
+            },
+
+            wait_seconds=wait_seconds,
+
+        )
+
+
+
+
+
+class _Jobs(_Namespace):
+
+    def get(
+
+        self,
+
+        job_id: str,
+
+        *,
+
+        output: str | None = None,
+
+        include: list[str] | None = None,
+
+    ) -> Any:
+
+        """The job's status, and its parsed content once available.
+
+
+
+        `output` and `include` select the representation, exactly as on
+
+        parse.run — omitting them here would have made the job route able to
+
+        return only the server default, so a caller who asked for elements on
+
+        the original request could not retrieve them.
+
+        """
+
+        return JobsApi(self._client._api_client).jobs_get(
+
+            job_id, output=output, include=include
+
+        )
+
+
+
+    def list(
+
+        self,
+
+        *,
+
+        cursor: str | None = None,
+
+        limit: int | None = None,
+
+        status: str | None = None,
+
+    ) -> Any:
+
+        return JobsApi(self._client._api_client).jobs_list(
+
+            cursor=cursor, limit=limit, status=status
+
+        )
+
+
+
+    def iterate(
+
+        self,
+
+        *,
+
+        cursor: str | None = None,
+
+        limit: int | None = None,
+
+        status: str | None = None,
+
+    ) -> Iterator[Any]:
+
+        while True:
+
+            page = self.list(cursor=cursor, limit=limit, status=status)
+
+            yield from page.jobs
+
+            cursor = page.next_cursor
+
+            if cursor is None:
+
+                return
+
+
+
+    def cancel(self, job_id: str) -> Any:
+
+        return JobsApi(self._client._api_client).jobs_cancel(job_id)
+
+
+
+    def delete(self, job_id: str) -> None:
+
+        JobsApi(self._client._api_client).jobs_delete(job_id)
+
+
+
+    def stream(
+
+        self,
+
+        job_id: str,
+
+        *,
+
+        output: str | None = None,
+
+        include: list[str] | None = None,
+
+    ) -> Iterator[JobEvent]:
+
+        """Progress events for a running job, as they happen.
+
+
+
+        The same resource as `get(job_id)`, selected by Accept — not a second
+
+        route. Yields `status` events on every public status change and then
+
+        exactly one terminal `result` or `error`, after which the stream ends.
+
+        Keep-alive comments are consumed here and never surface as events.
+
+        """
+
+        # The terminal `result` event carries the same representation the
+
+        # JSON path would return, so these have to reach the stream too — a
+
+        # stream that could only ever deliver the server default would be a
+
+        # second-class way to read the same resource.
+
+        query: dict[str, Any] = {}
+
+        if output is not None:
+
+            query["output"] = output
+
+        if include:
+
+            query["include"] = include
+
+
+
+        url = f"{self._client._server_url}/api/v2/jobs/{quote(job_id, safe='')}"
+
+        if query:
+
+            url = f"{url}?{urlencode(query, doseq=True)}"
+
+
+
+        return stream_job_events(
+
+            url=url,
+
+            headers=self._client._request_headers(),
+
+            timeout_seconds=self._client._timeout_seconds,
+
+            retries=self._client._retries,
+
+        )
+
+
+
+
+
+class _Upload(_Namespace):
+
+    def run(self, input: FileInput) -> Any:
+
+        return UploadApi(self._client._api_client).upload_run(as_file_part(input))
+
+
+
+    def get(self, file_id: str) -> Any:
+
+        return UploadApi(self._client._api_client).upload_get(file_id)
+
+
+
+    def delete(self, file_id: str) -> None:
+
+        UploadApi(self._client._api_client).upload_delete(file_id)
+
+
+
+
+
+def _prefer(wait_seconds: int | None) -> str | None:
+
+    """`Prefer: wait=N`, the contract's spelling for "block for up to N seconds".
+
+
+
+    Exposed as `wait_seconds=` rather than making callers hand-build a header
+
+    value; `wait_seconds=0` is meaningful (return the job handle immediately),
+
+    so the check is against None rather than falsiness.
+
+    """
+
+    return None if wait_seconds is None else f"wait={wait_seconds}"
+
+

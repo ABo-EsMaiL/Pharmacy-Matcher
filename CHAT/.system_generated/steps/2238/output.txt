@@ -1,0 +1,6 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1141,"LineContent":"            \u003cdiv id=\"screen-results\" class=\"screen\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1642,"LineContent":"        'screen-results': t.results_title,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2076,"LineContent":"            window.showScreen('screen-results');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2241,"LineContent":"        window.showScreen('screen-results');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":134,"LineContent":"            showScreen('screen-results');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":249,"LineContent":"        showScreen('screen-results');"}

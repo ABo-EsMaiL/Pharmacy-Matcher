@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+File: d:\AI_Engineer\Pharmacy-agy\data\processes\PROC-001\input_warehouses\الهضبة الاثنين نقدى0.pdf Size: 199787
+Total pages: 22
+Page 1 text length: 1321
+Page 2 text length: 1349
+Page 3 text length: 1592
+Page 4 text length: 1466
+Page 5 text length: 1318
+Sample text from page 1:
+'رﻗﻢ اﻟﺼﻨﻒ إﺳﻢ اﻟﺼﻨﻒ اﻟﺴﻌﺮ  ﺧﺼﻢ اﺳﺎ \n9902 120 ᗷ / ا80 33 \n2538 45 ᗷ /  ﻣﺞ ﻛ 500 اﺑ 45 37 \n8240 81 ᗷ / اﺑ 70 31 \n2275  ﻣﺞ اﻗﺮاص 40 اﺑ41.5 40 \n11921 اﻳ /  ﻣﺞ اﻗﺮاص ج 20 اﺑ76 33 \n4782 10 ᗷ  / اﺑ 36 34 \n8609  ﻣﺞ اﻗﺮاص 2.5 اﺑ 366 42 \n5576  ﻣﺞ اﻗﺮاص 5 اﺑ 366 44 \n12385 10 ᗷ /  ﻣﺞ اﻗﺮاص 20 اﺑ 104 34 \n561 اﺑ '
+

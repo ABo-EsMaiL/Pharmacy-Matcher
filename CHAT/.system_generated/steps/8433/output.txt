@@ -1,0 +1,17 @@
+
+The command exited with code 0.
+Output:
+Page URL: https://aistudio.google.com/prompts/new_chat
+Page Title: Google AI Studio
+Body snippet: 'Skip to main content\nmenu_open\nEXPLORE\nchat_spark\nPlayground\nhistory\nHistory\nBUILD\nadd\nNew app\nwidgets\nMy apps\ngallery_thumbnail\nGallery\nMANAGE\nspeed\nDashboard\nchevron_right\ndeveloper_guide\nDocumentation\nchevron_right\nUpgrade to unlock more\nAccess higher limits, Pro models, and more.\nnotifications\ns'
+Found 1 mat-select elements:
+  mat-select[0]: aria='Thinking Level', text='Medium', snippet: <mat-select _ngcontent-ng-c1237938147="" role="combobox" aria-haspopup="listbox" aria-label="Thinking Level" class="mat-mdc-select" jslog="334163;trac
+
+=== LOOKING FOR MODEL TEXT/SELECTORS ===
+Found 5 candidate model elements:
+  cand[0]: tag=BUTTON, aria='', class='upgrade-card', text='Upgrade to unlock more Access higher limits, Pro models, and more.'
+  cand[1]: tag=MS-MODEL-GRID, aria='Model category grid', class='ng-star-inserted', text='star Featured  Test out our most advanced and newest models.  chat_bubble Code and Chat  Build chatbots, agents, and code with Gemini 3.  image Image Generation  Create and edit images with Nano Banana and Imagen.  movie Video Generation  Generate videos with Veo models, our state of the art video generation models.  mic Speech and Music  Explore our text to speech and music generation models.  bolt Real-time  Real-time voice and video with Live API.'
+  cand[2]: tag=BUTTON, aria='', class='category-card ng-star-inserted', text='chat_bubble Code and Chat  Build chatbots, agents, and code with Gemini 3.'
+  cand[3]: tag=DIV, aria='', class='settings-item settings-model-selector ng-star-inserted', text='Gemini 3.8 Flash gemini-3.8-flash Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.'
+  cand[4]: tag=BUTTON, aria='', class='model-selector-card ng-star-inserted', text='Gemini 3.8 Flash gemini-3.8-flash Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.'
+

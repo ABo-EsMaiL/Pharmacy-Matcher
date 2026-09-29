@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+Job data: {'id': '6fd5a74b-d942-45a0-a5c8-7f1832666784', 'status': <JobStatus.FAILED: 'failed'>, 'filename': 'السلام شبين.pdf', 'file_id': 'السلام-شبين-4c3664b2.pdf', 'cancellation_requested': False, 'source': {'file_id': 'السلام-شبين-4c3664b2.pdf', 'filename': 'السلام شبين.pdf', 'mimetype': 'application/pdf', 'expires_at': datetime.datetime(2026, 9, 23, 10, 52, 31, 861370, tzinfo=TzInfo(0))}, 'error': {'code': <ErrorCode.COULD_NOT_PARSE: 'could_not_parse'>, 'message': 'The document could not be parsed. Check that the file is readable.'}, 'result': None}
+

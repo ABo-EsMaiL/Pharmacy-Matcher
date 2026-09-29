@@ -1,0 +1,31 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -396,6 +396,25 @@
+             err_msg = str(e).replace("'", "\\'").replace("\n", " ").replace('"', '\\"')
+             if self._window:
+                 self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: false, error: \"{err_msg}\"}}}}));")
++        finally:
++            with self._worker_lock:
++                if self._process_queue:
++                    next_id, next_shortages, next_warehouses = self._process_queue.pop(0)
++                    self.add_log(f"[QUEUE] Triggering next process from queue: [{next_id}]")
++                    self._db.update_process(next_id, status='processing')
++                    if self._window:
++                        try:
++                            self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_queued_started', {{detail: {{process_id: '{next_id}'}}}}));")
++                        except Exception:
++                            pass
++                    self._worker_thread = threading.Thread(
++                        target=self._process_worker,
++                        args=(next_id, next_shortages, next_warehouses, False),
++                        daemon=True
++                    )
++                    self._worker_thread.start()
++                else:
++                    self._worker_thread = None
+ 
+     def get_process_result(self, process_id: str) -> dict:
+         proc = self._db.get_process(process_id)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

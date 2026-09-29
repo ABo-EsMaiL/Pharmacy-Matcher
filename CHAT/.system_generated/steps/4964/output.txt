@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Row 1: ['اسم الصنف المطلوب', 'اسم الصنف في المخزن', 'درجة التطابق']
+Row 2: ['ماريفان3مجم3شريط س ج', 'ماريفان ٣ مجم/جلاكسو', 'مطابقة ذكية (AI)']
+Row 3: ['ميبو مرهم 15جم صغير س ج', 'ميمو مرهم صغير/جلفار', 'مطابقة ذكية (AI)']
+

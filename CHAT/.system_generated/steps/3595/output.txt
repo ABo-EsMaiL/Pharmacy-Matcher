@@ -1,0 +1,30 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Sheet names: ['ملخص', 'السلام شبين.pdf', 'المكرومي المنصورة.pdf', 'مخزن الحياة فارم اسكندريه-170.p', 'كيور فارما خاص.pdf', 'الهضبة الاثنين نقدى0.pdf', 'جملة العمروووو.pdf', 'لم يُعثر عليه', 'يحتاج مراجعة']
+Row 1: ['البند', 'العدد', 'النسبة', None, None]
+Row 2: ['إجمالي الأصناف المطلوبة', '=B3+B4+B5', '100%', None, None]
+Row 3: ['تم مطابقتها', '=SUM(B8:B13)', '=IF(B2>0, B3/B2, 0)', None, None]
+Row 4: ['لم يُعثر عليها', "=MAX(0, COUNTA('لم يُعثر عليه'!A:A)-1)", '=IF(B2>0, B4/B2, 0)', None, None]
+Row 5: ['تحتاج مراجعة', "=MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)", '=IF(B2>0, B5/B2, 0)', None, None]
+Row 7: ['─── تفاصيل المخازن ───', 'عدد المطابقات', 'أصناف للمراجعة', None, None]
+Row 8: ['السلام شبين.pdf', "=MAX(0, COUNTA('السلام شبين.pdf'!A:A)-1)", '=COUNTIF(\'يحتاج مراجعة\'!D:D, "السلام شبين.pdf")', None, None]
+Row 9: ['المكرومي المنصورة.pdf', "=MAX(0, COUNTA('المكرومي المنصورة.pdf'!A:A)-1)", '=COUNTIF(\'يحتاج مراجعة\'!D:D, "المكرومي المنصورة.pdf")', None, None]
+Row 10: ['مخزن الحياة فارم اسكندريه-170.pdf', "=MAX(0, COUNTA('مخزن الحياة فارم اسكندريه-170.p'!A:A)-1)", '=COUNTIF(\'يحتاج مراجعة\'!D:D, "مخزن الحياة فارم اسكندريه-170.pdf")', None, None]
+Row 11: ['كيور فارما خاص.pdf', "=MAX(0, COUNTA('كيور فارما خاص.pdf'!A:A)-1)", '=COUNTIF(\'يحتاج مراجعة\'!D:D, "كيور فارما خاص.pdf")', None, None]
+Row 12: ['الهضبة الاثنين نقدى0.pdf', "=MAX(0, COUNTA('الهضبة الاثنين نقدى0.pdf'!A:A)-1)", '=COUNTIF(\'يحتاج مراجعة\'!D:D, "الهضبة الاثنين نقدى0.pdf")', None, None]
+Row 13: ['جملة العمروووو.pdf', "=MAX(0, COUNTA('جملة العمروووو.pdf'!A:A)-1)", '=COUNTIF(\'يحتاج مراجعة\'!D:D, "جملة العمروووو.pdf")', None, None]
+
+--- Row counts in sheets ---
+  ملخص: 15 rows
+  السلام شبين.pdf: 15 rows
+  المكرومي المنصورة.pdf: 18 rows
+  مخزن الحياة فارم اسكندريه-170.p: 10 rows
+  كيور فارما خاص.pdf: 14 rows
+  الهضبة الاثنين نقدى0.pdf: 18 rows
+  جملة العمروووو.pdf: 2 rows
+  لم يُعثر عليه: 436 rows
+  يحتاج مراجعة: 141 rows
+

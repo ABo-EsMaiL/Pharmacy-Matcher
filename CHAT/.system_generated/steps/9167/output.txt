@@ -1,0 +1,44 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\server_manager.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -44,6 +44,25 @@
+     except Exception:
+         return False
+ 
++def get_best_python() -> str:
++    """Finds the best python executable containing project dependencies (fastapi, uvicorn, etc.)."""
++    try:
++        import fastapi  # noqa
++        return sys.executable
++    except ImportError:
++        pass
++    
++    candidates = [
++        r"D:\miniconda3\envs\venv\python.exe",
++        str(Path(sys.prefix) / "python.exe"),
++        str(Path(sys.executable).parent / "envs" / "venv" / "python.exe"),
++    ]
++    for c in candidates:
++        if Path(c).exists():
++            return str(c)
++            
++    return sys.executable
++
+ class ServerInstance:
+     def __init__(self, key: str, config: dict, logger_callback=None):
+         self.key = key
+@@ -97,9 +97,10 @@
+             if os.name == 'nt':
+                 creationflags = subprocess.CREATE_NO_WINDOW
+ 
+-            self.log(f"Starting server in {self.dir} on port {self.port}...")
++            python_bin = get_best_python()
++            self.log(f"Starting server in {self.dir} on port {self.port} with {python_bin}...")
+             self.process = subprocess.Popen(
+-                [sys.executable, "app.py"],
++                [python_bin, "-u", "app.py"],
+                 cwd=str(target_dir),
+                 creationflags=creationflags,
+                 stdout=subprocess.PIPE,
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

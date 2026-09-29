@@ -1,0 +1,1 @@
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":618,"LineContent":"            f\"Valid JSON: {is_json} | Sample: {repr(prev_text[:60])}\""}

@@ -1,0 +1,91 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio-vision\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -664,34 +664,39 @@
+         )
+ 
+         js_fetch_state = '''(initialCount) => {
+-            // 1. Generation Running Check (Cancel generation button, Stop button, or active spinners)
+-            const allButtons = Array.from(document.querySelectorAll('button'));
+-            
+-            // Look for Cancel generation / Stop button
+-            const cancelBtn = allButtons.find(b => {
+-                const aria = (b.getAttribute('aria-label') || '').toLowerCase();
+-                const tooltip = (
+-                    b.getAttribute('mattooltip') || 
+-                    b.getAttribute('mat-tooltip') || 
+-                    b.getAttribute('data-tooltip') || 
+-                    b.getAttribute('title') || ''
+-                ).toLowerCase();
+-                const text = (b.innerText || b.textContent || '').trim().toLowerCase();
+-                
+-                const isCancel = (
+-                    aria.includes('cancel generation') || 
+-                    tooltip.includes('cancel generation') || 
+-                    text.includes('cancel generation') ||
+-                    aria === 'stop' || aria.includes('stop run') || aria.includes('stop generat') || aria === 'cancel run' ||
+-                    text === 'stop' || text.includes('stop run') || text.includes('stop generat') || text === 'cancel run' || 
+-                    tooltip.includes('stop')
+-                );
+-                
+-                const isEnabled = !b.disabled && b.getAttribute('aria-disabled') !== 'true' && !b.classList.contains('mat-button-disabled');
+-                return isCancel && isEnabled;
+-            });
+-
+-            // Active spinners indicating model thinking or DOM streaming
++            // 1. Locate the Run/Stop action button in Google AI Studio
++            const actionBtn = document.querySelector(
++                'button.ctrl-enter-submits, button.ctrl-enter, button[mattooltipclass="run-button-tooltip"]'
++            ) || allButtons.find(b => {
++                const cls = (b.className || '').toLowerCase();
++                const txt = (b.innerText || '').toLowerCase();
++                return cls.includes('ctrl-enter') || (txt.includes('stop') && !b.disabled) || (txt.includes('run') && cls.includes('primary'));
++            });
++
++            let isRunning = false;
++            let isRunDisabled = false;
++            let buttonText = "";
++
++            if (actionBtn) {
++                buttonText = (actionBtn.innerText || actionBtn.textContent || '').trim().toLowerCase();
++                const ariaLabel = (actionBtn.getAttribute('aria-label') || '').toLowerCase();
++                const ariaDis = actionBtn.getAttribute('aria-disabled');
++                const isDis = actionBtn.disabled || ariaDis === 'true' || actionBtn.classList.contains('mat-button-disabled');
++
++                // If button contains "stop", or has the progress_activity icon:
++                const hasStop = buttonText.includes('stop') || ariaLabel.includes('stop') || ariaLabel.includes('cancel');
++                const hasProgress = buttonText.includes('progress_activity') || actionBtn.querySelector('mat-spinner, ms-spinner, mat-progress-spinner') !== null;
++
++                if ((hasStop || hasProgress) && !isDis) {
++                    isRunning = true;
++                } else if (buttonText.includes('run')) {
++                    if (isDis) {
++                        isRunDisabled = true;
++                    }
++                }
++            }
++
++            // Also check for any active spinners or thinking sections across the entire page
+             const hasSpinner = document.querySelector(
+                 'mat-progress-spinner, .typing-indicator, ms-spinner, .thought-activity-host[aria-expanded="true"], [data-test-id*="spinner" i]'
+             ) !== null;
+@@ -698,14 +698,6 @@
+-            // Check if Run button is present and currently disabled (indicates turn finished / prompt textarea empty)
+-            const runBtn = document.querySelector('button.ctrl-enter, button[mattooltipclass="run-button-tooltip"]') ||
+-                           allButtons.find(b => {
+-                               const a = (b.getAttribute('aria-label') || '').toLowerCase();
+-                               const t = (b.innerText || '').trim().toLowerCase();
+-                               return t === 'run' || a === 'run';
+-                           });
+-            
+-            const isRunDisabled = runBtn ? (runBtn.disabled || runBtn.getAttribute('aria-disabled') === 'true' || runBtn.classList.contains('mat-button-disabled')) : false;
+-
+-            const isRunning = Boolean(cancelBtn) || hasSpinner;
++            if (hasSpinner) {
++                isRunning = true;
++            }
+ 
+             // Check for internal errors and tool call errors
+             let hasError = false;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

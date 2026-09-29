@@ -1,0 +1,34 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "d:\AI_Engineer/Pharmacy-agy\src\extract\pdf_reader.py", line 133, in extract_items_from_pdf
+    result = client.extract.from_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_client.py", line 300, in from_document
+    return post_multipart(
+           ^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_multipart.py", line 100, in post_multipart
+    return api_client.response_deserialize(response, _RESPONSE_TYPES).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_generated\api_client.py", line 328, in response_deserialize
+    raise ApiException.from_response(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_generated\exceptions.py", line 157, in from_response
+    raise UnprocessableEntityException(http_resp=http_resp, body=body, data=data)
+unstructured_transform_client._generated.exceptions.UnprocessableEntityException: (422)
+Reason: Unprocessable Content
+HTTP response headers: HTTPHeaderDict({'Date': 'Tue, 22 Sep 2026 10:52:32 GMT', 'Content-Type': 'application/json', 'Content-Length': '105', 'Connection': 'keep-alive', 'server': 'uvicorn'})
+HTTP response body: {"code":"could_not_parse","message":"The document could not be parsed. Check that the file is readable."}
+
+Testing with best...
+[*] Processing PDF file: السلام شبين.pdf
+[*] Checking if السلام شبين.pdf is already processed on Unstructured server...
+[*] Uploading and extracting السلام شبين.pdf via Unstructured AI (Profile: BEST)...
+[!] Extraction error for السلام شبين.pdf: (422)
+Reason: Unprocessable Content
+HTTP response headers: HTTPHeaderDict({'Date': 'Tue, 22 Sep 2026 10:52:32 GMT', 'Content-Type': 'application/json', 'Content-Length': '105', 'Connection': 'keep-alive', 'server': 'uvicorn'})
+HTTP response body: {"code":"could_not_parse","message":"The document could not be parsed. Check that the file is readable."}
+
+

@@ -1,0 +1,1 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\search.py","LineNumber":14,"LineContent":"    'شامبو', 'غسول', 'صابون', 'صابونة', 'صابونه', 'محلول', 'مس', 'دهان', 'فيلم', 'شريط', 'لبن', 'حليب',"}

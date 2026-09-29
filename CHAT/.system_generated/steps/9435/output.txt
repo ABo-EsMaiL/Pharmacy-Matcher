@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+reviews keys: ['القرار (اختر)', 'اسم الصنف المطلوب', 'اسم المرشح في المخزن', 'المخزن', 'السبب']
+not_found keys: ['اسم الصنف', 'الملف المصدر']
+

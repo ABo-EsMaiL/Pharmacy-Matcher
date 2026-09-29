@@ -1,0 +1,26 @@
+
+The command exited with code 0.
+Output:
+[
+  {
+    "index": 0,
+    "tag": "MS-CHAT-TURN",
+    "cls": "text-chunk-host ng-star-inserted",
+    "role": null,
+    "has_prompt": true,
+    "has_thought": false,
+    "text_chunks": 1,
+    "preview": "edit\nmore_vert\nUser 7:42\u202fPM\n\nRespond with JSON: {\"message\": \"pong\"}"
+  },
+  {
+    "index": 1,
+    "tag": "MS-CHAT-TURN",
+    "cls": "text-chunk-host ng-star-inserted",
+    "role": null,
+    "has_prompt": true,
+    "has_thought": false,
+    "text_chunks": 2,
+    "preview": "edit\nmore_vert\nModel 7:42\u202fPM\ncode\nJSON\ndownload\ncontent_copy\nexpand_less\n{\n  \"message\": \"pong\"\n}\nthumb_up\nthumb_down"
+  }
+]
+

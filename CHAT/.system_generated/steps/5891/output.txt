@@ -1,0 +1,11 @@
+
+The command exited with code 0.
+Output:
+Testing GAIStudio Health...
+Health Status: 200
+Health JSON: {'status': 'ok', 'gateway': 'MSEMAX (AIStudio Web Hook)', 'version': '2.1.0', 'browser_ready': True, 'session_file_exists': False, 'headless': False, 'profile_dir': './chrome_profile', 'default_model': 'gemini-3.8-flash', 'thinking_mode': 'high', 'port': 8001, 'rate_limit': '30/minute'}
+
+Testing GAIStudio Chat Completions with sample ping...
+Chat Status: 200 in 7.77s
+Response: {"id":"chatcmpl-58ace7702a22","object":"chat.completion","created":1790210673,"model":"gemini-3.8-flash","choices":[{"index":0,"message":{"role":"assistant","content":"PONG"},"finish_reason":"stop"}]}
+

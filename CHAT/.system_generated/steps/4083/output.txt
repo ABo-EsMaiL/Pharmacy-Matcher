@@ -1,0 +1,7 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+D:\miniconda3\envs\venv\python.exe: can't open file 'D:\\AI_Engineer\\Pharmacy-agy\\scratch\\inspect_newest_results.py': [Errno 2] No such file or directory
+

@@ -1,0 +1,592 @@
+[
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0300",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0301",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0302",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0303",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0304",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0305",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0306",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0307",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0310",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0311",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0312",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0313",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0314",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0315",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0316",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0317",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0318",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0319",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0320",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0321",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0324",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0325",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0326",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0327",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0328",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0329",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0332",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0333",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0334",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0335",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0337",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0338",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0339",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0340",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0341",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0342",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0343",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0345",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0346",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0347",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0348",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0349",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0351",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0352",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0353",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0354",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0355",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0356",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0357",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0358",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0360",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0361",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0362",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0364",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0365",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0367",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0368",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0369",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0373",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_1.json",
+    "case_id": "A0374",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0300",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0301",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0302",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0303",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0304",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0305",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0307",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0310",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0311",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0312",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0313",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0314",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0315",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0316",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0317",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0318",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0319",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0320",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0324",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0325",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0326",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0327",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0328",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0329",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0332",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0333",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0334",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0335",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0337",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0338",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0339",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0340",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0341",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0342",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0343",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0345",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0346",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0347",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0348",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0349",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0351",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0352",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0353",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0354",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0355",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0356",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0357",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0358",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0360",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0361",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0362",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0364",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0365",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0367",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0368",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0369",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0373",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  },
+  {
+    "file": "batch_10_attempt_2.json",
+    "case_id": "A0374",
+    "repair": "swap_empty_item_id_and_empty_plausible_list"
+  }
+]

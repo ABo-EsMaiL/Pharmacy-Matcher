@@ -1,0 +1,2 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\fast_match\\coordinator.py","LineNumber":291,"LineContent":"                                    ('اولفن', 'البيران'), ('البيران', 'اولفن'),"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":291,"LineContent":"                                    ('اولفن', 'البيران'), ('البيران', 'اولفن'),"}

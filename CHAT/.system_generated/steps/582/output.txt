@@ -1,0 +1,62 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1384,13 +1384,15 @@
+         
+         listEl.innerHTML = '';
+         history.forEach(item => {
+-            const date = new Date(item.timestamp).toLocaleString('ar-EG');
+-            const statusClass = item.status === 'completed' ? 'badge-completed' : 'badge-reviewing';
+-            const statusText = item.status === 'completed' ? 'مكتمل' : 'قيد المراجعة';
++            const date = new Date(item.created_at).toLocaleString('ar-EG');
++            const statusClass = item.status === 'completed' ? 'badge-completed' : (item.status === 'processing' ? 'badge-processing' : 'badge-reviewing');
++            let statusText = item.status === 'completed' ? 'مكتمل' : 'قيد المراجعة';
++            if (item.status === 'processing') statusText = 'قيد التشغيل...';
++            else if (item.status === 'error') statusText = 'فشل';
+             
+             const card = document.createElement('div');
+             card.className = 'history-card';
+-            card.onclick = () => viewProcess(item.processId);
++            card.onclick = () => { if(item.status !== 'processing') viewProcess(item.id); };
+             
+             card.innerHTML = `
+                 <div class="history-info">
+@@ -1397,12 +1397,16 @@
+-                        <h4>العملية ${item.process_id.substring(0,8)}...</h4>
+-                        <span class="badge-status ${item.status === 'completed' ? 'completed' : 'reviewing'}">${statusText}</span>
+-                    </div>
+-                    <div class="history-date">${date}</div>
+-                </div>
+-                <div class="history-stats">
+-                    <div><span>مكتمل</span><strong>${item.matched_count || 0}</strong></div>
+-                    <div><span>يحتاج مراجعة</span><strong>${item.review_count || 0}</strong></div>
+-                    <div><span>غير متوفر</span><strong>${item.not_found_count || 0}</strong></div>
++                        <h4>العملية ${item.id.substring(0,8)}...</h4>
++                        <span class="badge-status ${statusClass}">${statusText}</span>
++                    </div>
++                    <div class="history-date"><i class="ph ph-calendar"></i> ${date}</div>
++                    <div class="history-files">
++                        <span><i class="ph-fill ph-files"></i> ${JSON.parse(item.shortage_files || '[]').length} نواقص</span>
++                        <span><i class="ph-fill ph-folders"></i> ${JSON.parse(item.warehouse_files || '[]').length} مخازن</span>
++                    </div>
++                </div>
++                <div class="history-actions">
++                    <button class="btn btn-icon text-danger" onclick="event.stopPropagation(); deleteProcess('${item.id}')">
++                        <i class="ph ph-trash"></i>
++                    </button>
+                 </div>
+             `;
+             listEl.appendChild(card);
+@@ -1409,5 +1409,6 @@
+-    } catch (error) {
+-        listEl.innerHTML = '<div class="empty-state">حدث خطأ أثناء تحميل السجل.</div>';
++    } catch (e) {
++        console.error(e);
++        listEl.innerHTML = '<div class="empty-state text-danger"><i class="ph-fill ph-warning"></i><p>خطأ في جلب السجل</p></div>';
+     }
+ }
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

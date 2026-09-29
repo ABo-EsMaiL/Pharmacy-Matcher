@@ -1,0 +1,73 @@
+
+The command exited with code 0.
+Output:
+<truncated 1 lines>
+واحدة، أو في الـ screen اللي هي بتاعت المطابقة، المفروض تكون في المطابقة ولا السجل؟ مش عارف، مش عارف. المهم يعني 
+المفروض تكون في screen، لما أروح مثلاً لواجهة الأوامر أو أروح للإعدادات يظهر صفحة الإعدادات، لكن أنا لما بروح بلاقي 
+الـ pop-up فوق صفحة الإعدادات برضه، يعني أنت مثبت لي الـ pop-up في كل الصفحات، دي برضه bug صغيرة. \n\n\r(venv) PS 
+D:\\AI_Engineer\\Pharmacy-agy-vision> python 
+desktop_app\\app.py\r\n\r\n============================================================\r\n[*] Processing Shortages 
+files (1 file(s)) [PARALLEL WORKERS]\r\n============================================================\r\n\r\n  -> 
+[START] Processing file: 0913.xlsx (Type: .xlsx)\r\n  -> Reading Excel file: 0913.xlsx\r\n  -> Active sheet: ورقة2\r\n 
+ -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']\r\n  -> Extracted 993 data rows\r\n  -> 
+Auto-detected drug name column: أسم الصنف\r\n  -> Extracted 993 items from column 'أسم الصنف'\r\n  -> [DONE] 
+0913.xlsx: 993 items extracted.\r\n\r\n============================================================\r\n[+] 
+Com\n<truncated 11082 bytes>\no establish a new connection: [WinError 10061] No connection could be made because the 
+target machine actively refused it\"))). Retrying...\r\n      [X] PROVIDER FAILURE on Batch 1 after 3 attempts 
+(Connection to local LLM failed (http://127.0.0.1:8001/v1/chat/completions): HTTPConnectionPool(host='127.0.0.1', 
+port=8001): Max retries exceeded with url: /v1/chat/completions (Caused by 
+NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it\"))).\r\nTraceback (most recent call 
+last):\r\n  File \"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\backend.py\", line 494, in _process_worker\r\n   
+ results = coordinator.process(all_shortages, warehouse_data)\r\n              
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File 
+\"D:\\AI_Engineer\\Pharmacy-agy-vision\\src\\fast_match\\coordinator.py\", line 240, in process\r\n    wh_result = 
+self._match_warehouse(deduped_shortages, wh_items, wh_name)\r\n                
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File 
+\"D:\\AI_Engineer\\Pharmacy-agy-vision\\src\\fast_match\\coordinator.py\", line 584, in _match_warehouse\r\n    
+chunk_results = process_chunk(batch, str(idx + 1))\r\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File 
+\"D:\\AI_Engineer\\Pharmacy-agy-vision\\src\\fast_match\\coordinator.py\", line 580, in process_chunk\r\n    raise 
+RuntimeError(f\"Provider failed on Batch {chunk_name}: {last_error}\")\r\nRuntimeError: Provider failed on Batch 1: 
+Connection to local LLM failed (http://127.0.0.1:8001/v1/chat/completions): HTTPConnectionPool(host='127.0.0.1', 
+port=8001): Max retries exceeded with url: /v1/chat/completions (Caused by 
+NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused 
+it\"))\r\n\n\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 
+2026-09-25T17:06:04+03:00.\n</ADDITIONAL_METADATA>","truncated_fields":["content"]}
+C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\logs\transcript.jsonl:1
+0081:{"step_index":10144,"source":"USER_EXPLICIT","type":"USER_INPUT","status":"DONE","created_at":"2026-09-25T14:21:10
+Z","content":"<USER_REQUEST>\nيا ابني، أنا بقول لك الـ prompt بيتبعت من غير صورة. وشوف الـ prompt عامل ازاي، يعني حتى 
+الـ prompt على قديمه. مش أنت كنت قائل على structure معين وحاجات معينة؟ هي فين الحاجات دي؟ اقرأ الخمس، ست، سبع، ثمان 
+رسائل اللي هم من أول ما بدأنا الحتة دي، أول ما بدأنا النظام، أول ما بدأت الفكرة معايا. اقرأ الشات تاني من أول ما 
+اقترحت عليك النظام ده. لازم تقرأه، لازم تقرأه سطر سطر. اقرأ الشات اللي أنا قلت لك عليه، وهتلاقيني وافقت على اللي احنا 
+وافقنا عليه. واقرأ الأكواد اللي أنت كنت عاملها وشوف الحاجات، أنت ما بتبعتش صورة، أنت ما بتبعتش صورة. ما عرفش في إيه. 
+لا تكون مثلاً مسيف المسار القديم مثلاً، مش عارف. بص كده بصة في الـ application. مش عارف، أنت مش مدي خيار الـ folder 
+اللي أنت بتقرأ منه فين. أنا حالياً مش عارف أنت بتقرأ من أنهي folder الصراحة. وشلتها، أنت شلتها، كانت موجودة في الملف 
+القديم، أنت شلتها. فأنا مش عارف أنت بتقرأ دلوقتي في the vision ولا بتقرأ في العادي. أنا بعت لك صورتين، صورة للـ bug 
+اللي أنا باصص عليها في الـ UI، تمام؟ وفي اسمه ده، والصورة اللي موجودة في الـ prompt شكل الموقع. \n\n(venv) PS 
+D:\\AI_Engineer\\Pharmacy-agy-vision> python 
+desktop_app\\app.py\r\n\r\n============================================================\r\n[*] Processing Shortages 
+files (1 file(s)) [PARALLEL WORKERS]\r\n============================================================\r\n\r\n[Shortages 
+1/1] Starting file: 0913.xlsx\r\n\r\n  -> [STA\n<truncated 331 bytes>\nolumn 'أسم الصنف'\r\n  -> [DONE] 0913.xlsx: 993 
+items extracted.\r\n\r\n============================================================\r\n[+] Completed Shortages: 993 
+items from 1 file(s)\r\n============================================================\r\n\r\n\r\n=======================
+=====================================\r\n[*] Processing Warehouse files (6 file(s)) [PARALLEL 
+WORKERS]\r\n============================================================\r\n\r\n[Warehouse 1/6] Starting file: السلام 
+شبين.pdf\r\n\r\n  -> [START] Processing file: السلام شبين.pdf (Type: 
+.pdf)\r\n\r\n============================================================\r\n[*] [VISION EXTRACTOR] File: السلام 
+شبين.pdf\r\n============================================================\r\n  -> Total pages: 6\r\n  -> Cache 
+location: processes\\PROC-017\\cache\\vision\\السلام_شبين_d44b79aaae\r\n[*] Starting/Resuming Vision extraction across 
+6 page(s)...\r\n\r\n  -> [Page 1/6] Rendering & extracting...\r\n     [+] Rendered WebP: 114.8 KB\r\n     [*] Sending 
+Vision request to gateway (Attempt 1/10)...\r\n     [+] [Page 1] Succeeded in 18.1s -> 15 items extracted.\r\n\r\n  -> 
+[Page 2/6] Rendering & extracting...\r\n     [+] Rendered WebP: 106.3 KB\r\n     [*] Sending Vision request to gateway 
+(Attempt 1/10)...\r\n     [!] [Page 2] Exception on attempt 1: ('Connection aborted.', ConnectionResetError(10054, 'An 
+existing connection was forcibly closed by the remote host', None, 10054, None))\r\n     [*] Sending Vision request to 
+gateway (Attempt 2/10)...\r\n(venv) PS D:\\AI_Engineer\\Pharmacy-agy-vision> python 
+desktop_app\\app.py\r\n\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 
+2026-09-25T17:21:10+03:00.\n\nThe user has uploaded 2 image(s):\n- C:/Users/kakak/.gemini/antigravity/brain/916274de-7f
+92-49fc-a0a8-d291664b474a/.user_uploaded/media_1790345884142.png\n- C:/Users/kakak/.gemini/antigravity/brain/916274de-7
+f92-49fc-a0a8-d291664b474a/.user_uploaded/media_1790345887063.png\nYou can embed these images in an artifact if you 
+need the USER to review them.\n</ADDITIONAL_METADATA>","truncated_fields":["content"]}
+
+
+

@@ -1,0 +1,30 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio-vision\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -579,6 +579,24 @@
+             yield "[Error: Could not locate chat prompt input in Google AI Studio. Check debug_missing_input.png]"
+             return
+ 
++        # 2.5 Attach images if provided (Vision Multi-Modal Support)
++        if images:
++            logger.info(f"Attaching {len(images)} image(s) to prompt via file input: {images}")
++            try:
++                file_input = self.page.locator('input[type="file"], [data-test-upload-file-input]').first
++                await file_input.wait_for(state="attached", timeout=6000)
++                await file_input.set_input_files(images)
++                logger.info("Successfully set files on file input. Waiting for thumbnail chip...")
++                await asyncio.sleep(1.2)
++                for _ in range(12):
++                    chip_count = await self.page.locator('.prompt-box-container img, ms-prompt-box img, .media-chunk, .file-chip, [data-test*="media"]').count()
++                    if chip_count > 0:
++                        logger.info(f"Detected {chip_count} uploaded media chip(s).")
++                        break
++                    await asyncio.sleep(0.5)
++            except Exception as e:
++                logger.error(f"Error attaching images via file input: {e}")
++
+         # 3. Focus, clear, and insert prompt text cleanly via JAVASCRIPT
+         try:
+             logger.info("Injecting prompt via JavaScript and triggering native events...")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

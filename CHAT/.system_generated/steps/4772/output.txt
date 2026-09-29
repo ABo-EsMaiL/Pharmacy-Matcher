@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+السلام شبين.pdf -> ebc3fcf9fdcc6cb525f174254a00f5d5
+المكرومي المنصورة.pdf -> e73a8ca2ebcd549dffb5c91934ada9be
+الهضبة الاثنين نقدى0.pdf -> a4f524fd75cf223f927a228ad87319f0
+جملة العمروووو.pdf -> b05e9145cb816a75e8b2d6ff44abeca4
+كيور فارما خاص.pdf -> 74a49179bf3b521749a23af2e245c686
+مخزن الحياة فارم اسكندريه-170.pdf -> d0c1443b3b0a6e2287def7b8f4816fc0
+

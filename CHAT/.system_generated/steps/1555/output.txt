@@ -1,0 +1,9 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "d:\AI_Engineer\Pharmacy-agy\inspect_job_model.py", line 4, in <module>
+    print("_RESPONSE_TYPES:", c._RESPONSE_TYPES)
+                              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'unstructured_transform_client._client' has no attribute '_RESPONSE_TYPES'
+

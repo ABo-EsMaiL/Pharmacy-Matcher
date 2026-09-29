@@ -1,0 +1,16 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1015,10 +1015,6 @@
+                     <h1 data-i18n="brand_title">فارما ماتش</h1>
+                     <span data-i18n="brand_subtitle">Pharmacy Matcher</span>
+                 </div>
+-                <button id="btn-lang-toggle" onclick="toggleLanguage()" class="btn-lang" title="Switch Language / تغيير اللغة">
+-                    <i class="ph ph-translate"></i>
+-                    <span id="lang-label">EN</span>
+-                </button>
+             </div>
+             
+             <nav class="nav-menu">
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

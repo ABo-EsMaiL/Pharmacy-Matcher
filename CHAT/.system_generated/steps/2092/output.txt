@@ -1,0 +1,55 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1235,6 +1235,35 @@
+                 </header>
+ 
+                 <div class="settings-grid">
++                    <!-- Language Selection Card (Prominent & Clear) -->
++                    <div class="settings-card" style="grid-column: 1 / -1; border-color: var(--primary);">
++                        <div class="card-header primary">
++                            <i class="ph-fill ph-translate"></i>
++                            <h3 data-i18n="settings_lang_header">لغة واجهة البرنامج (Interface Language)</h3>
++                        </div>
++                        <div class="card-body">
++                            <p style="margin-top: 0; margin-bottom: 14px; color: var(--text-muted); font-size: 13px;" data-i18n="settings_lang_desc">اختر اللغة المفضلة لاستخدام التطبيق. يتم حفظ اختيارك تلقائياً وبشكل فوري.</p>
++                            <div class="language-selection-boxes">
++                                <div class="lang-choice-card" id="card-lang-ar" onclick="setLanguage('ar')">
++                                    <span class="lang-flag-big">🇪🇬</span>
++                                    <div class="lang-choice-info">
++                                        <strong>اللغة العربية</strong>
++                                        <span>واجهة عربية بالكامل من اليمين لليسار (RTL)</span>
++                                    </div>
++                                    <i class="ph-bold ph-check-circle lang-check-icon"></i>
++                                </div>
++                                <div class="lang-choice-card" id="card-lang-en" onclick="setLanguage('en')">
++                                    <span class="lang-flag-big">🇬🇧</span>
++                                    <div class="lang-choice-info">
++                                        <strong>English Language</strong>
++                                        <span>Full English user interface (LTR)</span>
++                                    </div>
++                                    <i class="ph-bold ph-check-circle lang-check-icon"></i>
++                                </div>
++                            </div>
++                        </div>
++                    </div>
++
+                     <!-- General API Settings -->
+                     <div class="settings-card">
+                         <div class="card-header dark">
+@@ -1244,10 +1244,10 @@
+                             <div class="form-group">
+                                 <label data-i18n="lbl_unstructured_profile">وضع معالجة PDF (Parse Profile)</label>
+                                 <select id="setting-unstructured-profile" class="form-control">
+-                                    <option value="best">جودة فائقة (Best - دقة عالية جداً للأسماء الطبية)</option>
+-                                    <option value="balanced">متوازن (Balanced - أسرع)</option>
++                                    <option value="balanced">متوازن (Balanced - موصى به ومستقر وسريع)</option>
++                                    <option value="best">جودة فائقة (Best - دقة إضافية للأسماء الطبية)</option>
+                                 </select>
+-                                <small style="color: var(--text-muted); font-size: 11px;" data-i18n="profile_note">Best يضمن دقة قراءة الأسماء الطبية العربية المعقدة ويمنع أخطاء الحروف.</small>
++                                <small style="color: var(--text-muted); font-size: 11px;" data-i18n="profile_note">وضع Balanced موصى به لمعظم الملفات. التطبيق يقوم بالتحويل تلقائياً إذا لزم الأمر.</small>
+                             </div>
+                             <div class="form-group mt-2">
+                                 <label data-i18n="lbl_unstructured_key">Unstructured API Key</label>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

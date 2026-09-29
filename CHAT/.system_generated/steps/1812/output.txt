@@ -1,0 +1,54 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -101,6 +101,48 @@
+     letter-spacing: 0.5px;
+ }
+ 
++.btn-lang {
++    margin-inline-start: auto;
++    background: #f1f5f9;
++    border: 1px solid var(--border);
++    color: var(--text-main);
++    padding: 6px 12px;
++    border-radius: 8px;
++    font-size: 13px;
++    font-weight: 700;
++    cursor: pointer;
++    display: inline-flex;
++    align-items: center;
++    gap: 6px;
++    transition: all 0.2s ease;
++}
++.btn-lang:hover {
++    background: #e0f2fe;
++    border-color: var(--primary);
++    color: var(--primary);
++    transform: scale(1.05);
++}
++
++/* LTR Direction Overrides */
++html[dir="ltr"] .sidebar {
++    border-left: none;
++    border-right: 1px solid var(--border);
++}
++html[dir="ltr"] .nav-item {
++    text-align: left;
++}
++html[dir="ltr"] .nav-item:hover {
++    transform: translateX(4px);
++}
++html[dir="ltr"] .file-list {
++    padding-right: 0;
++    padding-left: 5px;
++}
++html[dir="ltr"] #req-status, html[dir="ltr"] #session-status {
++    margin-right: 0 !important;
++    margin-left: auto !important;
++}
++
+ .nav-menu {
+     padding: 24px 16px;
+     display: flex;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

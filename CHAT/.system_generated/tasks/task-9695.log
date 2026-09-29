@@ -1,0 +1,58 @@
+Navigating to AI Studio...
+{
+  "url": "https://aistudio.google.com/prompts/new_chat",
+  "fileInputs": [
+    {
+      "id": "",
+      "name": "",
+      "accept": "text/*,application/vnd.google-apps.audio,application/vnd.google-apps.document,application/vnd.google-apps.drive-sdk,application/vnd.google-apps.drawing,application/vnd.google-apps.file,application/vnd.google-apps.folder,application/vnd.google-apps.form,application/vnd.google-apps.fusiontable,application/vnd.google-apps.jam,application/vnd.google-apps.mail-layout,application/vnd.google-apps.map,application/vnd.google-apps.photo,application/vnd.google-apps.presentation,application/vnd.google-apps.script,application/vnd.google-apps.shortcut,application/vnd.google-apps.site,application/vnd.google-apps.spreadsheet,application/vnd.google-apps.unknown,application/vnd.google-apps.video,application/*,.ada,.adb,.ansible,.appcache,.as,.ascii,.ascx,.asp,.aspx,.authors,.awk,.bashrc,.bat,.bazel,.build,.bzl,.c,.cbl,.cc,.cdf,.cfc,.cff,.cfg,.cfm,.changelog,.class,.clj,.cljs,.cmd,.cob,.code_of_conduct,.codeowners,.coffee,.conf,.config,.contributors,.cpp,.cs,.csh,.cshtml,.csproj,.css,.csv,.cu,.cuh,.cxx,.dart,.django,.dockerfile,.dtl,.editorconfig,.ejs,.elm,.env,.erb,.eslintignore,.eslintrc,.eta,.example,.exs,.f,.f90,.for,.fsproj,.gemfile,.gemspec,.gitattributes,.gitignore,.gitkeep,.go,.gql,.gradle,.gs,.h,.haml,.handlebars,.hgignore,.hocon,.hpp,.hs,.htaccess,.htm,.html,.hxx,.in,.ini,.inputrc,.ipynb,.ixx,.java,.jinja,.jl,.js,.json,.jsp,.jsx,.ksh,.kt,.kts,.less,.license,.liquid,.litcoffee,.lock,.log,.lua,.m,.mailcap,.make,.makefile,.manifest,.markdown,.md,.mdown,.mjs,.mkdn,.mustache,.mxml,.notice,.npmrc,.nse,.nuspec,.org,.oss,.pas,.patents,.pbtxt,.php,.php3,.php4,.php5,.pl,.pm,.po,.postcss,.pot,.pp,.prettierrc,.profile,.properties,.proto,.protoascii,.ps1,.pug,.puppet,.py,.r,.rake,.rb,.rdata,.readme,.rkt,.rs,.rst,.rtf,.rules,.sass,.scala,.scss,.sh,.shtml,.slim,.sln,.sql,.srt,.styl,.support,.svelte,.svg,.swift,.tcl,.tex,.texi,.textproto,.todo,.toml,.ts,.tsv,.tsx,.txt,.txtpb,.vala,.vash,.vb,.vbhtml,.vbproj,.vbs,.vimrc,.vue,.webmanifest,.workspace,.xinitrc,.xml,.yaml,.yml,.zshrc,image/*,video/*,audio/*,.aac,.aif,.aiff,.alaw,.flac,.m4a,.mp3,.mulaw,.oga,.ogg,.opus,.wav",
+      "outer": "<input _ngcontent-ng-c2221302669=\"\" type=\"file\" data-test-upload-file-input=\"\" class=\"file-input\" accept=\"text/*,application/vnd.google-apps.audio,app"
+    }
+  ],
+  "promptButtons": [
+    {
+      "aria": "Insert images, videos, audio, or files",
+      "text": "add_circle",
+      "tooltip": "",
+      "html": "<button _ngcontent-ng-c2221302669=\"\" ms-button=\"\" data-test-id=\"add-media-button\" mattooltipposition=\"below\" data-test=\"selectMediaMenu\" class=\"mat-md"
+    },
+    {
+      "aria": "No API key selected",
+      "text": "key_off",
+      "tooltip": "",
+      "html": "<button _ngcontent-ng-c700318173=\"\" ms-button=\"\" dialoglabel=\"API key information\" class=\"xap-inline-dialog paid-api-key-button ms-button-primary\" ari"
+    },
+    {
+      "aria": "Open tools menu",
+      "text": "widgets\nTools",
+      "tooltip": "",
+      "html": "<button _ngcontent-ng-c2929265076=\"\" ms-button=\"\" dialoglabel=\"Tools menu\" aria-label=\"Open tools menu\" class=\"mat-mdc-tooltip-trigger xap-inline-dial"
+    },
+    {
+      "aria": "Speech to text",
+      "text": "mic",
+      "tooltip": "",
+      "html": "<button _ngcontent-ng-c211206315=\"\" ms-button=\"\" variant=\"filter-chip\" class=\"mat-mdc-tooltip-trigger ms-button-filter-chip\" aria-label=\"Speech to tex"
+    },
+    {
+      "aria": "",
+      "text": "Run\nCtrl\nkeyboard_return",
+      "tooltip": "",
+      "html": "<button _ngcontent-ng-c2081246445=\"\" ms-button=\"\" mattooltipclass=\"run-button-tooltip\" class=\"mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter"
+    }
+  ],
+  "allAddButtons": [
+    {
+      "aria": "New chat",
+      "text": "add",
+      "tooltip": "",
+      "html": "<button _ngcontent-ng-c124025333=\"\" ms-button=\"\" variant=\"icon-borderless\" data-test-clear=\"outside\" class=\"mat-mdc-tooltip-trigger ng-tns-c124025333-"
+    },
+    {
+      "aria": "Insert images, videos, audio, or files",
+      "text": "add_circle",
+      "tooltip": "",
+      "html": "<button _ngcontent-ng-c2221302669=\"\" ms-button=\"\" data-test-id=\"add-media-button\" mattooltipposition=\"below\" data-test=\"selectMediaMenu\" class=\"mat-md"
+    }
+  ]
+}

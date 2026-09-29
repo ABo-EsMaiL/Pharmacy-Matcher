@@ -1,0 +1,6 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2195,"LineContent":"        server_terminal_sub: \"Live Uvicorn output, connectivity ping, and server startup/shutdown logs\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":130,"LineContent":"            # Step 1: Call graceful /shutdown endpoint"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":132,"LineContent":"                requests.get(f\"http://127.0.0.1:{self.port}/shutdown\", timeout=1.5)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\server_manager.py","LineNumber":130,"LineContent":"            # Step 1: Call graceful /shutdown endpoint"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\server_manager.py","LineNumber":132,"LineContent":"                requests.get(f\"http://127.0.0.1:{self.port}/shutdown\", timeout=1.5)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":2195,"LineContent":"        server_terminal_sub: \"Live Uvicorn output, connectivity ping, and server startup/shutdown logs\","}

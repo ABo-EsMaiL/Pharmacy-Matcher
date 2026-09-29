@@ -1,0 +1,52 @@
+Found 92 results
+Dockerfile
+Google AI Studio - Chromium 2026-09-23 12-57-27.mp4
+LICENSE
+README.md
+__pycache__
+__pycache__/app.cpython-312.pyc
+__pycache__/app.cpython-313.pyc
+__pycache__/pow_solver.cpython-312.pyc
+app.py
+c hrome_profile
+chrome_profile
+chrome_profile/Ad Blocking
+chrome_profile/Ad Blocking/blocklist
+chrome_profile/Avatars
+chrome_profile/Avatars/avatar_cupcake.png
+chrome_profile/Crashpad
+chrome_profile/Crashpad/attachments
+chrome_profile/Crashpad/metadata
+chrome_profile/Crashpad/reports
+chrome_profile/Crashpad/settings.dat
+chrome_profile/Crashpad/throttle_store.dat
+chrome_profile/CrashpadMetrics-active.pma
+chrome_profile/Default
+chrome_profile/Default/Affiliation Database
+chrome_profile/Default/Affiliation Database-journal
+chrome_profile/Default/AutofillAiModelCache
+chrome_profile/Default/AutofillAiModelCache/LOCK
+chrome_profile/Default/AutofillAiModelCache/LOG
+chrome_profile/Default/AutofillStrikeDatabase
+chrome_profile/Default/AutofillStrikeDatabase/LOCK
+chrome_profile/Default/AutofillStrikeDatabase/LOG
+chrome_profile/Default/AutofillStrikeDatabase/LOG.old
+chrome_profile/Default/BookmarkMergedSurfaceOrdering
+chrome_profile/Default/BrowsingTopicsSiteData
+chrome_profile/Default/BrowsingTopicsSiteData-journal
+chrome_profile/Default/BrowsingTopicsState
+chrome_profile/Default/BudgetDatabase
+chrome_profile/Default/BudgetDatabase/LOCK
+chrome_profile/Default/BudgetDatabase/LOG
+chrome_profile/Default/BudgetDatabase/LOG.old
+chrome_profile/Default/Cache
+chrome_profile/Default/Cache/Cache_Data
+chrome_profile/Default/Cache/Cache_Data/data_0
+chrome_profile/Default/Cache/Cache_Data/data_1
+chrome_profile/Default/Cache/Cache_Data/data_2
+chrome_profile/Default/Cache/Cache_Data/data_3
+chrome_profile/Default/Cache/Cache_Data/f_000003
+chrome_profile/Default/Cache/Cache_Data/f_000006
+chrome_profile/Default/Cache/Cache_Data/f_000007
+chrome_profile/Default/Cache/Cache_Data/f_000008
+(...42 more results not shown)

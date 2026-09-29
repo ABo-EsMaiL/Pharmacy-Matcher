@@ -1,0 +1,12 @@
+
+The command exited with code 1.
+Output:
+Method invocation failed because [Microsoft.Management.Infrastructure.CimInstance] does not contain a method named 
+'Terminate'.
+At line:1 char:1
++ (Get-CimInstance Win32_Process -Filter "ProcessId = 3524").Terminate( ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (Terminate:String) [], RuntimeException
+    + FullyQualifiedErrorId : MethodNotFound
+ 
+

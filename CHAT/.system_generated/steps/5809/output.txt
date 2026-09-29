@@ -1,0 +1,69 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -408,12 +408,12 @@
+                                     status = "no_match"
+                                     
+                                 # 3. Commercial prefix mismatch (نيو / new)
+-                                is_req_new = bool(re.search(r'\b(نيو|new)\b', shortage_name.lower()))
+-                                is_wh_new = bool(re.search(r'\b(نيو|new)\b', warehouse_item.lower()))
+-                                if is_req_new != is_wh_new:
+-                                    status = "no_match"
+-                                    
+-                                # 4. Deterministic Safety Check: Brand similarity
++                                is_r_neo = 'نيو' in shortage_name or 'new' in shortage_name.lower()
++                                is_w_neo = 'نيو' in warehouse_item or 'new' in warehouse_item.lower()
++                                if is_r_neo != is_w_neo:
++                                    status = "no_match"
++                                    
++                                # 4. Deterministic Safety Check: Brand similarity & root integrity
+                                 req_b = extract_brand_tokens(shortage_name)
+                                 wh_b = extract_brand_tokens(warehouse_item)
+                                 if req_b and wh_b:
+@@ -420,6 +420,16 @@
+                                     words_w = wh_b.split()
+                                     first_r = words_r[0] if words_r else ""
+                                     first_w = words_w[0] if words_w else ""
++                                    
++                                    # Brand First-Letter & Root Integrity:
++                                    # Disallow completely different non-confusable initial letters (e.g. Protiloc vs Controloc, Neocarbon vs Eucarbon)
++                                    r_clean = first_r[2:] if first_r.startswith('ال') else first_r
++                                    w_clean = first_w[2:] if first_w.startswith('ال') else first_w
++                                    confusables = {'ب', 'ت', 'ث', 'ن', 'ي'}
++                                    if r_clean and w_clean and r_clean[0] != w_clean[0]:
++                                        if not (r_clean[0] in confusables and w_clean[0] in confusables):
++                                            status = "no_match"
++                                            
+                                     b_sim = max(
+                                         fuzz.ratio(req_b, wh_b),
+                                         fuzz.token_sort_ratio(req_b, wh_b),
+@@ -426,23 +426,11 @@
+                                     )
+-                                    if first_r and first_w and (first_r == first_w or fuzz.ratio(first_r, first_w) >= 80):
+-                                        b_sim = max(b_sim, 80)
+-                                    elif req_b.startswith(wh_b) or wh_b.startswith(req_b):
+-                                        b_sim = max(b_sim, 80)
+-                                    
+-                                    # Brand Prefix Integrity check (e.g. ابيكوتيل vs البوتيل)
+-                                    if first_r and first_w:
+-                                        has_al_r = first_r.startswith('ال')
+-                                        has_al_w = first_w.startswith('ال')
+-                                        if has_al_r != has_al_w:
+-                                            r_strip = first_r[2:] if has_al_r else first_r
+-                                            w_strip = first_w[2:] if has_al_w else first_w
+-                                            if fuzz.ratio(r_strip, w_strip) < 85:
+-                                                b_sim = min(b_sim, 50)
+-                                                
++                                    if first_r and first_w and (first_r == first_w or fuzz.ratio(first_r, first_w) >= 85):
++                                        b_sim = max(b_sim, 85)
++                                    
+                                     if (first_r in BRAND_FAMILIES or first_w in BRAND_FAMILIES) and fuzz.ratio(req_b, wh_b) < 80:
+                                         status = "no_match"
+ 
+-                                    if b_sim < 65:
++                                    if b_sim < 72:
+                                         status = "no_match"
+ 
+                                 # 5. Dosage form check (same drug & same strength, but different form -> "review")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

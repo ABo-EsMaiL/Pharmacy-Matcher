@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+زانوجليد4/30اقراص س ج -> []
+زانوچيلد 4 مج اقراص/باكت 60 -> ['4 مج']
+فلوموكس 500 كبسول -> []
+فلوموكس 1000 اقراص -> []
+

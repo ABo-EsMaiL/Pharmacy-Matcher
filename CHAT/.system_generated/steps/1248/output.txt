@@ -1,0 +1,47 @@
+The search for ""https://api.unstructured.io" "structured_data_extractor"" returned the following summary:
+The `structured_data_extractor` is a core component within the Unstructured.io platform and API designed to transform unstructured documents (such as PDFs, emails, and forms) into clean, structured JSON output[1][2][3].
+
+### Key Concepts
+*   **Purpose:** Unlike standard partitioning, which converts files into generic document elements, the `structured_data_extractor` allows you to define a specific target JSON schema[2]. It then extracts only the precise data fields you require from your source files[4][2].
+*   **Methods:** It supports two primary subtypes for extraction[5][3]:
+    *   **LLM (Large Language Model):** Uses language models to extract data based on a provided JSON schema or plain-language extraction guidance[6][2].
+    *   **Regex:** Uses regular expression patterns to identify and extract specific data, such as prices or ID numbers[7][8][3].
+
+### Usage in the API
+When using the Unstructured API, the `structured_data_extractor` is typically configured as a node within a job's processing pipeline[9][5]. 
+
+**Example Configuration Snippet:**
+In API requests, you define the extractor within the `job_nodes` array[9][10]:
+
+```json
+{
+  "name": "Extractor",
+  "type": "structured_data_extractor",
+  "subtype": "llm",
+  "settings": {
+    "schema_to_extract": {
+      "json_schema": { ... },
+      "extraction_guidance": "..."
+    },
+    "provider": "openai",
+    "model": "gpt-5-mini",
+    "output_mode": "extracted_data_only"
+  }
+}
+```
+
+### How to Access
+*   **API/SDK:** You can integrate the extractor programmatically using the Unstructured Python SDK or by sending requests directly to the Unstructured API[9][3].
+*   **UI:** It is also available via the Unstructured workflow designer and the Start page for local file processing[5][3].
+
+Sources:
+[1] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMVxQSLAkSWIHWBCQHcbvZAabNz26Nn4K1KfeOCiKoGbiCXh2xmGYVzCH6JccGv20KIi4D2OCQohuGPCdbpkor9WZjBXtwJNsCteiMXyv40J18pKgAKJzdYkNb1QpLs_A2jkZjZl365oPddtixdvbjWM0XyisGmrIC8UY8yumS5Kkipv3OnFZ1JaDjRG83xiIvi1n_GnYRsw==)
+[2] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0AAuDiZWYM-F7-5ZKJZc-IX7A9VZowc5yZXuA9zZFrCDk_sb1l33-xltYnR3m7u688Jjuxipw3qtcRVs078p-P-YMJ3Oohl_KIvFIC9S9LlryZZjqPsku_1lzRU8Ylbp_OSRU)
+[3] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHascvcwqSXbp-FAe5Li_sqyS2v6BFKe1wQVCifM2WvcON3oGu76zfmjQGV4voyKXb_FoNwDw3KOIIoUiAz6ed5VqtnvPID2Maeub5D78C2d-82uRg4Iwg967ret0qiSQPTa7gGPdk=)
+[4] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFrqjHh47qPNGgQJUa9H5mFhiOcyqrVd8kU1VOe9Z61dPa4AVrwRany-AKEhOt5fEbj5lEo0kdWYPUP97Uv0jSv-45UhrUlWcfossxQ2TcP-jzQAtU8NHP64_CR6Exk5ZnM2XWTpIBq7jeBgs0oKjbwol4pLsCAB6Obj96eg==)
+[5] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECnDUGA9k-hO2iWJgA6jdm5R3XKF1VoUp4SilKHVmQ0g5QSwvndMMP0vJG-oIpWHL9y8kVhnTeeVGhUoSYWFclXx5nAuCuwYh_lKiS1Nnxa_hpj0y3RWlfaRyyavApzzgV_3Nu4EqheheGlg4PoeO8TAoNlFX102dkfYHJ2eT-ZaEMqyhqgq0FjJqWJr83R-7kvQfo4XDVkFM=)
+[6] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4GJXc-1r2tdrS6kx7CvvGLSsmPrcYdOm5ymrKTylXbXuGRu_EOkR15EKDgvrl5-TEVnKKFh58AphJHR91VPbprYEYDt0MByLU-11j3t2lKxMqgD1aPX-1O2RGfbPdKO--xtiv--z-B76nSOgzjkHQBhRAdD-SSg6WgEJjwqmu64BXP0EsgxM=)
+[7] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOS7b6srHf1jHuUlx5UoEwP6LShtY5VvwfLMbj3FCisdnFWRfSFftBd4obSagWeEpwsb-wTpaqJTru8vTKcKPXYf0YRMAy7Ab2nH1fwDWBIV4PrcM0cFsgUKa5i1SC_fXFP6Ag1DhrC2IcKmwhzx9GiSq4pSgMuyZK92cqcuckofma1sjIG0ZKvQ==)
+[8] [context7.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHa8bDDQh1H_oKeFpCSH7pdLUL6TNRTgVgvSQlsqI69JABqOjLTbMrVRoOseeiV5a3IVAW5CpG3GC0LgHVlIuCWLLYrZ5YgKe1QWWImgUmz1Q1xypjuz8THGpZkySmFpMlNCWk=)
+[9] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFrqjHh47qPNGgQJUa9H5mFhiOcyqrVd8kU1VOe9Z61dPa4AVrwRany-AKEhOt5fEbj5lEo0kdWYPUP97Uv0jSv-45UhrUlWcfossxQ2TcP-jzQAtU8NHP64_CR6Exk5ZnM2XWTpIBq7jeBgs0oKjbwol4pLsCAB6Obj96eg==)
+[10] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFrqjHh47qPNGgQJUa9H5mFhiOcyqrVd8kU1VOe9Z61dPa4AVrwRany-AKEhOt5fEbj5lEo0kdWYPUP97Uv0jSv-45UhrUlWcfossxQ2TcP-jzQAtU8NHP64_CR6Exk5ZnM2XWTpIBq7jeBgs0oKjbwol4pLsCAB6Obj96eg==)

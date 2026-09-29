@@ -1,0 +1,34 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -164,15 +164,10 @@
+     b_sim = fuzz.ratio(brand_r, brand_c)
+     is_exact_brand = (brand_r == brand_c)
+     
+-    if len(words_r) == 1 and len(words_c) == 1:
+-        if first_r == first_c:
+-            is_exact_brand = True
+-        elif fuzz.ratio(first_r, first_c) >= 90:
+-            is_exact_brand = True
+-            
+-    if len(words_r) == len(words_c) and len(words_r) > 1:
+-        words_match = all(w_r == w_c or fuzz.ratio(w_r, w_c) >= 85 for w_r, w_c in zip(words_r, words_c))
+-        if words_match:
++    if not is_exact_brand:
++        # Check if difference is strictly the Arabic definite article 'ال'
++        if (brand_r.startswith('ال') and brand_r[2:] == brand_c) or \
++           (brand_c.startswith('ال') and brand_c[2:] == brand_r):
+             is_exact_brand = True
+             
+     if not is_exact_brand:
+@@ -179,6 +179,6 @@
+-            return "ambiguous", f"ocr_check_needed_{b_sim}%"
++            return "ambiguous", f"ocr_check_needed_{b_sim:.1f}%"
+         else:
+-            return "reject", f"low_brand_sim_{b_sim}%"
++            return "reject", f"low_brand_sim_{b_sim:.1f}%"
+ 
+     # 5. Form check for confirmed brand:
+     form_r = extract_form_group(req)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

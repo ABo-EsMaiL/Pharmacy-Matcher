@@ -1,0 +1,68 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1711,21 +1711,27 @@
+                     <!-- Extraction & Processing Settings -->
+                     <div class="settings-card" style="grid-column: 1 / -1;">
+                         <div class="card-header dark">
+-                            <i class="ph-fill ph-file-text"></i>
+-                            <h3 data-i18n="api_keys_header">خيارات معالجة الملفات ومفاتيح الربط</h3>
++                            <i class="ph-fill ph-eye"></i>
++                            <h3 data-i18n="api_keys_header">محرك الرؤية البصرية واستخراج الملفات (Vision Engine)</h3>
+                         </div>
+                         <div class="card-body form-grid">
+-                            <div class="form-group">
+-                                <label data-i18n="lbl_unstructured_profile">وضع معالجة PDF (Parse Profile)</label>
+-                                <select id="setting-unstructured-profile" class="form-control">
+-                                    <option value="balanced">متوازن (Balanced - موصى به ومستقر وسريع)</option>
+-                                    <option value="best">جودة فائقة (Best - دقة إضافية للأسماء الطبية)</option>
+-                                </select>
+-                                <small style="color: var(--text-muted); font-size: 11px;" data-i18n="profile_note">وضع Balanced موصى به لمعظم الملفات. التطبيق يقوم بالتحويل تلقائياً إذا لزم الأمر.</small>
+-                            </div>
+-                            <div class="form-group mt-2">
+-                                <label data-i18n="lbl_unstructured_key">Unstructured API Key</label>
+-                                <input type="password" id="setting-unstructured-key" class="form-control" placeholder="Enter Unstructured.io Key...">
++                            <div style="grid-column: 1 / -1; background: #ecfdf5; border: 1.5px solid #a7f3d0; border-radius: 10px; padding: 12px 16px; margin-bottom: 8px;">
++                                <div style="display: flex; align-items: center; gap: 8px;">
++                                    <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #10b981;"></span>
++                                    <strong style="color: #065f46; font-size: 13.5px;">محرك Google Gemini Vision مفعل تلقائياً</strong>
++                                </div>
++                                <p style="margin: 6px 0 0 0; color: #047857; font-size: 12px;">
++                                    يقوم المحرك بتحويل ملفات PDF لصور WebP عالية الدقة واستخراج الأدوية صفحة بصفحة دون أي أخطاء إملائية مع دعم الاستئناف التلقائي (Resumability) والكاش المعزول داخل مجلد العملية.
++                                </p>
++                            </div>
++
++                            <div class="form-group">
++                                <label>رابط بوابة الرؤية البصرية (Vision API Endpoint)</label>
++                                <input type="text" id="setting-vision-url" class="form-control" placeholder="http://127.0.0.1:8001/v1/chat/completions">
++                            </div>
++                            <div class="form-group">
++                                <label>نموذج الرؤية البصرية (Vision Model)</label>
++                                <input type="text" id="setting-vision-model" class="form-control" placeholder="gemini-3.8-flash">
+                             </div>
+ 
+                             <!-- Prominent Link to Dedicated AI Servers Screen -->
+@@ -1733,10 +1733,10 @@
+                                     <i class="ph-fill ph-hard-drives" style="font-size: 26px; color: var(--primary);"></i>
+                                     <div>
+                                         <strong style="font-size: 13.5px; color: #0369a1; display: block;">
+-                                            إدارة سيرفرات الذكاء الاصطناعي (ChatGPT و Google AI Studio)
++                                            إدارة سيرفرات الذكاء الاصطناعي (Google AI Studio Vision & ChatGPT)
+                                         </strong>
+                                         <span style="font-size: 12px; color: #0284c7;">
+-                                            تم نقل كافة إعدادات السيرفرات والتشغيل وفحص الاتصال والتيرمينال المباشر إلى صفحة "إدارة السيرفرات".
++                                            تحكم في تشغيل وإيقاف السيرفر ومراقبة شاشة الأوامر وسرعة الاستجابة مباشرة.
+                                         </span>
+                                     </div>
+                                 </div>
+@@ -1745,6 +1745,8 @@
+                             </div>
+ 
+                             <!-- Hidden inputs for backward compatibility with settings saver -->
++                            <input type="hidden" id="setting-unstructured-key">
++                            <input type="hidden" id="setting-unstructured-profile" value="balanced">
+                             <input type="hidden" id="setting-local-url">
+                             <input type="hidden" id="setting-local-key">
+                             <input type="hidden" id="setting-model-name">
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

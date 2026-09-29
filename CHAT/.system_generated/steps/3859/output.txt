@@ -1,0 +1,66 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -14,33 +14,35 @@
+ You match requested drug names from pharmacy shortages with candidate items available in wholesale drug warehouses.
+ 
+ CRITICAL PHARMACEUTICAL RULES:
+-1. STRENGTH / CONCENTRATION (STRICTEST RULE - ZERO TOLERANCE):
+-   - If the requested drug specifies a strength/concentration (e.g. 457mg, 600mg, 500mg, 1000mg/1gm, 20mg, 40mg, 50mg mono vs 50/500mg combination) and the candidate has a DIFFERENT strength:
+-     YOU MUST RETURN "status": "no_match".
+-     NEVER mark different strengths as "match" or "review"! Different strength = different medicine (e.g., Augmentin 457 vs Augmentin 600 is strictly no_match).
++1. STRICT BRAND IDENTITY (NO GENERICS / NO ALTERNATIVES):
++   - You MUST match the EXACT SAME trade brand name (e.g. Mebo matching Mebo, Dolphin matching Dolphin, Confragran matching Confragran).
++   - NEVER suggest or accept alternative brand names, different trade names, or generics (e.g. Mebo != Bernasource, Dolphin != Indomethacin, Confragran != Viagra, Bronchophane != Brufen, Sinupret != Sinopril, PK-Merz != Merz Spezial, E-Moxclav != Curam, Averocoxib != Arcoxia, Herobaby != Bebelac).
++   - If the trade brand name is different or unrelated, YOU MUST RETURN "status": "no_match" (or omit it). NEVER mark different brands as "match" or "review"!
++   - Allow ONLY minor spelling variants or OCR typos of the SAME brand (e.g. كوللوماك vs كولومالك, سيديبروكت vs سيديبروك, ينسون ايزيس vs زيس ينسون, اسبوسيد vs اسبوبسيد).
++
++2. DOSAGE FORM (ZERO TOLERANCE FOR CONFLICTS):
++   - Dosage forms MUST be compatible:
++     - Tablets/Capsules (اقراص, كبسول, حبوب, فيلم, شريط) ONLY match Tablets/Capsules.
++     - Syrups/Suspensions (شراب, شرب, معلق) ONLY match Syrups. NEVER match tablets with syrup (e.g. Cetal tablets != Cetal syrup).
++     - Creams/Ointments (كريم, مرهم) ONLY match Creams/Ointments. NEVER match cream with suppository (e.g. Gynozol cream != Gynozol suppository).
++     - Injections/Ampoules (امبول, حقن, فيال) ONLY match Injections.
++     - Suppositories (لبوس) ONLY match Suppositories.
++     - Drops (نقط, قطرة) ONLY match Drops.
++     - Sprays (بخاخ, سبراي) ONLY match Sprays.
++   - If dosage forms conflict, YOU MUST RETURN "status": "no_match".
++
++3. STRENGTH / CONCENTRATION (ZERO TOLERANCE FOR MISMATCH):
++   - If the requested drug specifies a strength (e.g. 457mg, 600mg, 500mg, 1000mg/1gm, 20mg, 40mg) and the candidate has a DIFFERENT numeric strength:
++     YOU MUST RETURN "status": "no_match".
+    - Note equivalencies: 1000mg = 1gm (1000مجم = 1جم), 500mg = 0.5gm, 0.25mg = ربع (250mcg).
+ 
+-2. DOSAGE FORM:
+-   - If the requested drug specifies a dosage form (tablets vs syrup vs cream vs drops vs ampoules/injections) and the candidate is a DIFFERENT form (e.g. ampoule vs capsule, or syrup vs tablet):
+-     YOU MUST RETURN "status": "no_match".
+-
+-3. PACKAGING, PACK SIZE, TABLET COUNT & WHOLESALE UNITS (MATCH vs REVIEW):
+-   - "match": Exact same active drug brand, same strength, same dosage form.
+-     CRITICAL RULE (STANDARD PACKS): If the requested shortage specifies a pack count (e.g. "ديجستين 20قرص", "كيتولاك 5 امبوله", "كولونا 3شريط", "تادانيرفي 20فيلم", "ايفاستين 2 شريط") and the warehouse candidate has the same drug, form, and strength but does not explicitly state the pack size (e.g. "ديجستين اقراص/فاركو", "كيتولاك امبول/العامريه", "كولونا اقراص ٦٢ج", "تادانيرفي ٥ مجم سعر جديد"):
+-     THIS IS A 100% MATCH ("status": "match")! NEVER mark this as review!
+-     CRITICAL RULE: If the numbers/counts are identical (even if written in Arabic numerals ٣ vs 3) or the only difference is the manufacturer name (/نوفارتس, /اكاديميا, /ايبيكو), THIS IS A 100% MATCH. NEVER mark as review!
+-   - "review": ONLY mark review when there is an EXPLICIT, CONFLICTING number on BOTH sides (e.g. requested 15 tablets vs candidate explicitly writes 60 tablets, requested 24 tablets vs candidate explicitly writes 48 tablets).
+-     In this case, return "status": "review" AND provide a clear Arabic explanation in "reason" (e.g. "اختلاف عدد الأقراص: المطلوب 15 قرص والمرشح 60 قرص").
+-
+-4. TRADE BRAND vs GENERIC / ALTERNATIVE (بديل أو مثيل):
+-   - "match": Both items must have the SAME commercial trade brand name (e.g. Panadol matching Panadol, Zovirax matching Zovirax).
+-   - "review": If the candidate has the SAME active ingredient and SAME strength, but is a generic name or a DIFFERENT trade brand (e.g. requested trade brand "رو اكيتان 20" vs candidate generic "ايزوتريتينوين 20", or requested "زوفيراكس 400" vs candidate "لوفير 400"):
+-     DO NOT mark as "match"! Return "status": "review" AND explain in "reason":
+-     "بديل تجاري / مثيل: نفس المادة الفعالة والتركيز ولكن الاسم التجاري مختلف (المطلوب: [اسم]، المتوفر: [اسم])".
+-
+-5. WHOLESALE & PACKAGING METADATA:
+-   - Terms like "باكو 25" (pack of 25), "كرتونه 100" (carton of 100), "سعر جديد", "سعر قديم", "س ج", "-84", "-50", "32ب", "/المهن", "/العامرية" indicate wholesale packaging, distributor codes, or prices.
+-   - Take them into account to distinguish listings, but if candidate matches the drug, form, and strength, accept it or mark review if wholesale pack quantity differs from requested.
++4. PACKAGING, PACK SIZE & WHOLESALE UNITS (MATCH vs REVIEW):
++   - "match": Same brand, same form, same strength.
++     - STANDARD PACKS: If requested shortage specifies standard pack count (e.g. "ديجستين 20قرص", "كيتولاك 5 امبوله", "كولونا 3شريط", "ايفاستين 2 شريط", "ماريفان 3شريط") and warehouse candidate has the same drug, form, and strength but does not explicitly state the pack size (e.g. "ديجستين اقراص/فاركو", "كيتولاك امبول/العامريه", "كولونا اقراص"):
++       THIS IS A 100% MATCH ("status": "match")! NEVER mark this as review!
++     - Suffixes like "/فاركو", "/جلاكسو", "س ج", "سعر جديد", "سعر قديم" do not change the product.
++   - "review": ONLY for the SAME EXACT medicine brand when there is an EXPLICIT, CONFLICTING pack count on BOTH sides (e.g. requested 15 tablets vs candidate explicitly writes 60 tablets of Doliprane).
++     - Wholesale bundles like "باكت 120" (meaning a carton of 120 boxes) or "باكت 50" are wholesale lot sizes, NOT the blister/tablet count inside a single box! Do not confuse wholesale carton count with tablet count.
+ 
+ SCHEMA:
+ Return ONLY a valid JSON object matching this schema:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

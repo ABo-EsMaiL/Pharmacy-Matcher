@@ -1,0 +1,21 @@
+            file_path = temp_dir / safe_name
+            with open(file_path, "wb") as f:
+                f.write(data)
+                
+            return str(file_path)
+        except Exception as e:
+            self.add_log(f"Error saving dropped file: {e}")
+            return ""
+
+    def exit_app(self):
+        try:
+            self.on_closing()
+        except:
+            pass
+        # os._exit guarantees immediate shutdown without blocking background threads like uvicorn
+        os._exit(0)
+            
+    def get_settings(self) -> dict:
+        if self.settings_file.exists():
+            try:
+

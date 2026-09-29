@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+175: dialog_type = getattr(webview, 'FileDialog', webview).OPEN if hasattr(webview, 'FileDialog') else webview.OPEN_DIALOG
+

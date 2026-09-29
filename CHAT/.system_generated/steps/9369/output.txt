@@ -1,0 +1,1 @@
+Encountered error in step execution: search directory D:\AI_Engineer\Pharmacy-agy\data\.unstructured_cache does not exist

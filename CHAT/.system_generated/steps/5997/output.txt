@@ -1,0 +1,15 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2032,7 +2032,8 @@
+         'screen-results': t.results_title,
+         'screen-history': t.history_title,
+         'screen-settings': t.settings_title,
+-        'screen-logs': t.terminal_title
++        'screen-logs': t.terminal_title,
++        'screen-servers': t.servers_title
+     };
+     if (titles[screenId]) {
+         headingEl.textContent = titles[screenId];
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

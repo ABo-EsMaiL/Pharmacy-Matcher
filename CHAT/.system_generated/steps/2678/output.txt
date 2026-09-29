@@ -1,0 +1,5 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":216,"LineContent":"    def start_process(self, shortage_paths_json: str, warehouse_paths_json: str) -\u003e dict:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":234,"LineContent":"    def restart_process(self, process_id: str) -\u003e dict:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2011,"LineContent":"        const res = await window.pywebview.api.start_process("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2248,"LineContent":"        const res = await window.pywebview.api.restart_process(processId);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":125,"LineContent":"        const result = await window.pywebview.api.start_process("}

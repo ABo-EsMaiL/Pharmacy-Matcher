@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Response: 200
+{"results":[{"case_id":"Q00001","status":"review","item_id":"WH_00114","reason":"نفس الاسم التجاري باروفين ونفس الشكل (أقراص)، لكن يوجد تعارض صريح في عدد الأقراص: المطلوب 30 قرص والمرشح 20 قرص."}]}
+

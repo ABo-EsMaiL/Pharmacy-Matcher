@@ -1,0 +1,22 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\forensic_not_found_audit.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -24,12 +24,12 @@
+ with open(r"C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\extracted_4way_data.json", "r", encoding="utf-8") as fp:
+     full_data = json.load(fp)
+ 
+-p15_matches = {row["اسم الصنف"].strip(): row for row in full_data["PROC-015"]["matches"]}
+-p15_review = {row["اسم الصنف"].strip(): row for row in full_data["PROC-015"]["review"]}
++p15_matches = {row["اسم الصنف المطلوب"].strip(): row for row in full_data["PROC-015"]["matches"]}
++p15_review = {row["اسم الصنف المطلوب"].strip(): row for row in full_data["PROC-015"]["reviews"]}
+ p15_not_found = [row["اسم الصنف"].strip() for row in full_data["PROC-015"]["not_found"] if row.get("اسم الصنف")]
+ 
+-p16_matches = {row["اسم الصنف"].strip(): row for row in full_data["PROC-016"]["matches"]}
+-p16_review = {row["اسم الصنف"].strip(): row for row in full_data["PROC-016"]["review"]}
++p16_matches = {row["اسم الصنف المطلوب"].strip(): row for row in full_data["PROC-016"]["matches"]}
++p16_review = {row["اسم الصنف المطلوب"].strip(): row for row in full_data["PROC-016"]["reviews"]}
+ p16_not_found = [row["اسم الصنف"].strip() for row in full_data["PROC-016"]["not_found"] if row.get("اسم الصنف")]
+ 
+ print(f"\nPROC-015 Not Found: {len(p15_not_found)}")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

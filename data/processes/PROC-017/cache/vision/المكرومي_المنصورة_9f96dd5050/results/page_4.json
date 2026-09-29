@@ -1,0 +1,517 @@
+{
+  "page": 4,
+  "items": [
+    {
+      "item_name_raw": "ماركال بلاس ۳۰ قرص ۱۰٥ج",
+      "trade_name": "ماركال بلاس",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ماغنسيوم بلس ميباكو",
+      "trade_name": "ماغنسيوم بلس",
+      "strength": "",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "مافو شراب بديل بروفين شراب",
+      "trade_name": "مافو",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "مالتي ريلاكس ۱۰ مجم",
+      "trade_name": "مالتي ريلاكس",
+      "strength": "۱۰ مجم",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "مالوكس بلس شراب",
+      "trade_name": "مالوكس بلس",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ماى سويت بيبى شراب/امون",
+      "trade_name": "ماى سويت بيبى",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "موبيراكس مرهم كبير ۱۱۸ ج",
+      "trade_name": "موبيراكس",
+      "strength": "",
+      "form": "مرهم",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "موتيليم س ج",
+      "trade_name": "موتيليم",
+      "strength": "",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "مودازار ق/ ايجيفار",
+      "trade_name": "مودازار",
+      "strength": "",
+      "form": "ق",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "موداسوميل ۲۰۰ م ۳۰ قرص",
+      "trade_name": "موداسوميل",
+      "strength": "۲۰۰ م",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "مورنيجاج س ج",
+      "trade_name": "مورنيجاج",
+      "strength": "",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "موسيدين اقراص/امون",
+      "trade_name": "موسيدين",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "موفلوكس ٤٠٠ مجم",
+      "trade_name": "موفلوكس",
+      "strength": "٤٠٠ مجم",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "موكسيفلوكس ٤٠٠ مجم ايفافارم",
+      "trade_name": "موكسيفلوكس",
+      "strength": "٤٠٠ مجم",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميبو صغير",
+      "trade_name": "ميبو",
+      "strength": "",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميجاموكس ۱جم ۱۷۸ ج جديد",
+      "trade_name": "ميجاموكس",
+      "strength": "۱جم",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميجاموكس ۲۲۸ شراب",
+      "trade_name": "ميجاموكس",
+      "strength": "۲۲۸",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميجاموكس ٦٢٥ اقراص/التنشيط",
+      "trade_name": "ميجاموكس",
+      "strength": "٦٢٥",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميجاموكس ٦٤٢ شراب",
+      "trade_name": "ميجاموكس",
+      "strength": "٦٤٢",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميدودرين اقراص",
+      "trade_name": "ميدودرين",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميرالجو ۲۰ كبسول",
+      "trade_name": "ميرالجو",
+      "strength": "۲۰",
+      "form": "كبسول",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميرتى كبسول سعر جديد ۱۳۰ ج",
+      "trade_name": "ميرتى",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميكروجينست ك",
+      "trade_name": "ميكروجينست",
+      "strength": "",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميكوناز اورال جيل",
+      "trade_name": "ميكوناز",
+      "strength": "",
+      "form": "جيل",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميلانو فري كريم",
+      "trade_name": "ميلانو فري",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميلجا عاديه ۱۰۸ج",
+      "trade_name": "ميلجا",
+      "strength": "",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميلوكين كريم ۲۰جم/بيوفارم",
+      "trade_name": "ميلوكين",
+      "strength": "۲۰جم",
+      "form": "كريم",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميليتوفكس تريو ۱۰/٥/۱۰۰۰مجم ق",
+      "trade_name": "ميليتوفكس تريو",
+      "strength": "۱۰/٥/۱۰۰۰مجم",
+      "form": "ق",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميليتوفكس مت 5/1000 12محدد۳۰قرص",
+      "trade_name": "ميليتوفكس مت",
+      "strength": "5/1000",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميمكساء ١مجم ۳ شريط",
+      "trade_name": "ميمكسا",
+      "strength": "١مجم",
+      "form": "شريط",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ميوفين كبسول/سعر جديد",
+      "trade_name": "ميوفين",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نابي فيت ۸ قرص/جلوبال",
+      "trade_name": "نابي فيت",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نابيزول ۲۰ مجم ١٤ كبسول",
+      "trade_name": "نابيزول",
+      "strength": "۲۰ مجم",
+      "form": "كبسول",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نابيزول ٤٠ مجم كبسول",
+      "trade_name": "نابيزول",
+      "strength": "٤٠ مجم",
+      "form": "كبسول",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نازوبكترا بخاخه س.ج۱۰۳ج",
+      "trade_name": "نازوبكترا",
+      "strength": "",
+      "form": "بخاخه",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نوتوسيل شراب جديد ۷۱ جنيه",
+      "trade_name": "نوتوسيل",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نورفاسك ٥ مجم ۳۰ قرص س.ق١٦٢ج",
+      "trade_name": "نورفاسك",
+      "strength": "٥ مجم",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نيرفاكترى اقراص",
+      "trade_name": "نيرفاكترى",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نيرهاسيلدا ٧٥ مجم ٨ فيلم",
+      "trade_name": "نيرهاسيلدا",
+      "strength": "٧٥ مجم",
+      "form": "فيلم",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نيزابكس شامبو س.ج ٦٨ج",
+      "trade_name": "نيزابكس",
+      "strength": "",
+      "form": "شامبو",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نيفيلوب ٢,٥ سعر جديد ٤٦ ج",
+      "trade_name": "نيفيلوب",
+      "strength": "٢,٥",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نيفيلوب ٥ ساده سعر جديد",
+      "trade_name": "نيفيلوب",
+      "strength": "٥",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نيكسيكور ۲۰ مجم ١٤ قرص",
+      "trade_name": "نيكسيكور",
+      "strength": "۲۰ مجم",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نيكسيكور ٤٠ مجم ۲۰ قرص ١٥٢ج",
+      "trade_name": "نيكسيكور",
+      "strength": "٤٠ مجم",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نيكسيم ٤٠ مجم ۲۸ قرص",
+      "trade_name": "نيكسيم",
+      "strength": "٤٠ مجم",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نيكسيماش اقراص سعر جديد",
+      "trade_name": "نيكسيماش",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "نيوروفيت اقراص سعر جديد",
+      "trade_name": "نيوروفيت",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "های بيوتك ١جم ١٦ قرص",
+      "trade_name": "های بيوتك",
+      "strength": "١جم",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "های بيوتك ٤٥٧ شراب ٨٠ جنية",
+      "trade_name": "های بيوتك",
+      "strength": "٤٥٧",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "های بيوتك ٦٠٠ شراب بالتشغيلية",
+      "trade_name": "های بيوتك",
+      "strength": "٦٠٠",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "هكستول مضمضه سعر جديد",
+      "trade_name": "هكستول",
+      "strength": "",
+      "form": "مضمضه",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "هياكيرينول قطرة",
+      "trade_name": "هياكيرينول",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "هيربانا كبسول س ج",
+      "trade_name": "هيربانا",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "هيرو بيبي ١",
+      "trade_name": "هيرو بيبي",
+      "strength": "١",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "هيرو بيبي ٢",
+      "trade_name": "هيرو بيبي",
+      "strength": "٢",
+      "form": "",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "هيستروجيسـت ۲۰۰م ق",
+      "trade_name": "هيستروجيسـت",
+      "strength": "۲۰۰م",
+      "form": "ق",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "هيلوسول بخاخه /مينا فارم",
+      "trade_name": "هيلوسول",
+      "strength": "",
+      "form": "بخاخه",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ويلمان للرجال ۳۰ قرص",
+      "trade_name": "ويلمان للرجال",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "وينزوكسیب ۹۰ مجم ۲۰ قرص",
+      "trade_name": "وينزوكسیب",
+      "strength": "۹۰ مجم",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "ياسمين اقراص",
+      "trade_name": "ياسمين",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "يوثيركس ۱۰۰ مجم اقراص",
+      "trade_name": "يوثيركس",
+      "strength": "۱۰۰ مجم",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "يوثيركس ٥٠ مجم ۱۰۰ اقراص",
+      "trade_name": "يوثيركس",
+      "strength": "٥٠ مجم",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "يوروسولفين ان فوار سعر ۳۸",
+      "trade_name": "يوروسولفين ان",
+      "strength": "",
+      "form": "فوار",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    },
+    {
+      "item_name_raw": "يونيفنجای ١٥٠ اقراص",
+      "trade_name": "يونيفنجای",
+      "strength": "١٥٠",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "المكرومي المنصورة.pdf"
+    }
+  ]
+}

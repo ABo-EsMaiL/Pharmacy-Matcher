@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+['config.py', 'extract', 'fast_match', 'match', 'output', '__init__.py', '__pycache__']
+

@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "d:\AI_Engineer\Pharmacy-agy\test_unstructured.py", line 5, in <module>
+    import unstructured_transform_client.models as models
+ModuleNotFoundError: No module named 'unstructured_transform_client.models'
+

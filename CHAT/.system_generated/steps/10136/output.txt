@@ -1,0 +1,17 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\fast_main.py","LineNumber":13,"LineContent":"from src.extract.file_handler import read_input_files"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\fast_main.py","LineNumber":42,"LineContent":"    shortages_data = read_input_files("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\fast_main.py","LineNumber":58,"LineContent":"    warehouse_data = read_input_files("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\backend.py","LineNumber":419,"LineContent":"            from src.extract.file_handler import read_input_files"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\backend.py","LineNumber":445,"LineContent":"            shortage_data = read_input_files("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\backend.py","LineNumber":456,"LineContent":"            warehouse_data = read_input_files("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\main.py","LineNumber":15,"LineContent":"from src.extract.file_handler import read_input_files"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\main.py","LineNumber":66,"LineContent":"    shortage_data = read_input_files("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\main.py","LineNumber":80,"LineContent":"    warehouse_data = read_input_files("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\dist_production\\fast_main.py","LineNumber":13,"LineContent":"from src.extract.file_handler import read_input_files"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\dist_production\\fast_main.py","LineNumber":42,"LineContent":"    shortages_data = read_input_files(shortages_paths, role=\"shortages\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\dist_production\\fast_main.py","LineNumber":52,"LineContent":"    warehouse_data = read_input_files(warehouse_paths, role=\"warehouse\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\dist_production\\src\\extract\\file_handler.py","LineNumber":47,"LineContent":"def read_input_files("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":62,"LineContent":"def read_input_files("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\dist_production\\desktop_app\\backend.py","LineNumber":416,"LineContent":"            from src.extract.file_handler import read_input_files"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\dist_production\\desktop_app\\backend.py","LineNumber":438,"LineContent":"            shortage_data = read_input_files(copied_shortages, role=\"shortages\", api_key=api_key, gemini_api_key=gemini_key, profile=profile)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\dist_production\\desktop_app\\backend.py","LineNumber":442,"LineContent":"            warehouse_data = read_input_files(copied_warehouses, role=\"warehouse\", api_key=api_key, gemini_api_key=gemini_key, profile=profile)"}

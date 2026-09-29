@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+s : ['0x62f', '0x6cc', '0x648', '0x631', '0x627', '0x641', '0x633']
+s2: ['0x62f', '0x64a', '0x648', '0x631', '0x627', '0x641', '0x633']
+

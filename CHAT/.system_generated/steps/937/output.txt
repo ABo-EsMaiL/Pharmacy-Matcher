@@ -1,0 +1,35 @@
+
+The command exited with code 0.
+Output:
+_EXCEL_EXTENSIONS = {".xlsx", ".xls", ".xlsm"}
+_PDF_EXTENSIONS = {".pdf"}
+_JSON_EXTENSIONS = {".json"}
+
+
+def read_input_files(
+    filepaths: list[Path],
+    role: str,
+    api_key: str | None = None,
+    base_url: str = "https://transform.unstructured.io",
+) -> dict[str, list[dict]]:
+    role_label = "Shortages" if role == "shortages" else "Warehouse"
+    print(f"\n{'='*60}")
+    print(f"[*] Processing {role_label} files ({len(filepaths)} file(s))")
+    print(f"{'='*60}")
+
+    results: dict[str, list[dict]] = {}
+
+    for filepath in filepaths:
+        filepath = Path(filepath)
+        ext = filepath.suffix.lower()
+
+        print(f"\n  -> File: {filepath.name} (Type: {ext})")
+
+        if ext in _EXCEL_EXTENSIONS:
+            items = _process_excel_file(filepath)
+        elif ext in _PDF_EXTENSIONS:
+            items = _process_pdf_file(filepath, api_key, base_url)
+        elif ext in _JSON_EXTENSIONS:
+            items = _process_json_file(filepath)
+
+

@@ -1,0 +1,95 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -292,13 +292,22 @@
+             norm_name = normalize_text(shortage_name)
+             
+             if norm_name in wh_normalized:
+-                matched.append({
+-                    "shortage_item": shortage_name,
+-                    "warehouse_item": wh_normalized[norm_name],
+-                    "confidence": "exact",
+-                    "method": "exact_text"
+-                })
+-                exact_count += 1
++                wh_item = wh_normalized[norm_name]
++                status, reason = classify_pair(shortage_name, wh_item)
++                if status == "match":
++                    matched.append({
++                        "shortage_item": shortage_name,
++                        "warehouse_item": wh_item,
++                        "confidence": "exact",
++                        "method": "exact_text"
++                    })
++                    exact_count += 1
++                elif status == "review":
++                    needs_review.append({
++                        "shortage_item": shortage_name,
++                        "warehouse_item": wh_item,
++                        "reason": "تطابق الاسم التجاري والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
++                    })
+             else:
+                 top_candidates = finder.search(shortage_name, top_k=6)
+                 if not top_candidates:
+@@ -305,20 +305,31 @@
+                     
+-                best_score = top_candidates[0]["score"]
+-                best_name = top_candidates[0]["name"]
+-                
+-                # Level 2: Deterministic High-Confidence Auto-Match
+-                is_auto, _ = is_safe_auto_match(shortage_name, best_name)
++                found_match = False
++                review_cand = None
++                has_ambiguous = False
++                
++                for cand in top_candidates:
++                    cand_name = cand["name"]
++                    cand_status, cand_reason = classify_pair(shortage_name, cand_name)
++                    if cand_status == "match":
++                        matched.append({
++                            "shortage_item": shortage_name,
++                            "warehouse_item": cand_name,
++                            "confidence": f"high ({cand.get('score', 0):.2f})",
++                            "method": "auto_rule"
++                        })
++                        auto_match_count += 1
++                        found_match = True
++                        break
++                    elif cand_status == "review" and not review_cand:
++                        review_cand = (cand_name, cand_reason)
++                    elif cand_status == "ambiguous":
++                        has_ambiguous = True
+                         
+-                if is_auto:
+-                    matched.append({
+-                        "shortage_item": shortage_name,
+-                        "warehouse_item": best_name,
+-                        "confidence": f"high ({best_score:.2f})",
+-                        "method": "auto_rule"
+-                    })
+-                    auto_match_count += 1
+-                else:
+-                    # Level 3: Ambiguous items sent to LLM with top 5 candidates
++                if found_match:
++                    continue
++                    
++                if has_ambiguous:
++                    # Level 3: Ambiguous OCR items sent to LLM
+                     candidates_for_llm = [{"id": c["id"], "name": c["name"]} for c in top_candidates[:5]]
+                     llm_cases.append({
+                         "case_id": f"Q{idx:05}",
+@@ -325,6 +325,12 @@
+                         "candidates": candidates_for_llm
+                     })
+                     candidates_by_shortage[shortage_name] = top_candidates
++                elif review_cand:
++                    needs_review.append({
++                        "shortage_item": shortage_name,
++                        "warehouse_item": review_cand[0],
++                        "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
++                    })
+ 
+         print(f"  -> Exact Matches: {exact_count}")
+         print(f"  -> Deterministic Auto-Matches: {auto_match_count}")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

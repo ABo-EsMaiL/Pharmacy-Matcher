@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+501 .badge-status {
+506 .badge-status.completed { background: #d1fae5; color: var(--success); }
+507 .badge-status.reviewing { background: #fef3c7; color: var(--warning); }
+508 .badge-status.error { background: #fee2e2; color: var(--danger); }
+

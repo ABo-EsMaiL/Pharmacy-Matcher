@@ -1,0 +1,26 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1729,11 +1729,19 @@
+     try {
+         const logsStr = await window.pywebview.api.get_logs();
+         const logs = JSON.parse(logsStr);
++        const text = logs.join('\n') + (logs.length ? '\n' : '');
++        
+         const logArea = document.getElementById('system-logs');
+         if (logArea) {
+-            logArea.value = logs.join('\n') + (logs.length ? '\n' : '');
++            logArea.value = text;
+             logArea.scrollTop = logArea.scrollHeight;
+         }
++        
++        const termEl = document.getElementById('pipeline-log-terminal');
++        if (termEl) {
++            termEl.value = text;
++            termEl.scrollTop = termEl.scrollHeight;
++        }
+     } catch (e) {
+         console.error(e);
+     }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

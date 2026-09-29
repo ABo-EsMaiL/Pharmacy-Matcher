@@ -1,0 +1,17 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Calibrated auto-match function loaded.
+'سينوبريت اقراص' vs 'سينوبريل 2 مجم اقراص/باکت 90' => False (brand_diff_سينوبريت_vs_سينوبريل)
+'ديوزمين 30 قرص' vs 'ديبوزين 500مجم اقراص' => False (brand_diff_ديوزمين_vs_ديبوزين)
+'فيتا زنك  كبسول' vs 'فیتا زون قرص قدیم' => False (brand_word_diff_زنك_vs_زون)
+'سيتال1جم اقراص س ج' vs 'سيتال اقراص 500 س ج' => False (strength_mismatch_1000.0_vs_500)
+'كتافلام  نقط' vs 'كتافلام ٥٠ س.ج ٨٦ج' => False (drops_conflict)
+'الكابرس تريو5/160/12.5مجم س ج' vs 'الكابرس تربو ١٠/١٦/١٢٤٠ قرص' => False (brand_word_diff_تريو_vs_تربو)
+'زنكترون 30كبسولة س ج' vs 'زنكترون اقراص باكت 160' => True (auto_matched)
+'ب ك ميرز كبسول س ج' vs 'ميرز كبسول/باكت 30' => True (auto_matched)
+'ماريفان3مجم3شريط س ج' vs 'ماريفان ٣ مجم/جلاكسو' => True (auto_matched)
+'انسولين نوفورابيد' vs 'انسولين اكترابيد' => False (brand_family_ambiguity)
+

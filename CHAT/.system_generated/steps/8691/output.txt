@@ -1,0 +1,16 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":372,"LineContent":"            proc_dir = self._db.get_process_dir(process_id)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":505,"LineContent":"    def get_process_result(self, process_id: str) -\u003e dict:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":506,"LineContent":"        proc = self._db.get_process(process_id)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":514,"LineContent":"        proc = self._db.get_process(process_id)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":525,"LineContent":"            folder = self._db.get_process_dir(process_id)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":543,"LineContent":"        proc = self._db.get_process(process_id)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":661,"LineContent":"            proc = self._db.get_process(process_id)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":690,"LineContent":"    def get_process_details(self, process_id: str) -\u003e str:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":691,"LineContent":"        proc = self._db.get_process(process_id)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":709,"LineContent":"            proc = self._db.get_process(process_id)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":719,"LineContent":"            proc_dir = self._db.get_process_dir(process_id)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\database.py","LineNumber":87,"LineContent":"    def get_process(self, process_id) -\u003e dict:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\database.py","LineNumber":111,"LineContent":"        proc_dir = self.get_process_dir(process_id)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\database.py","LineNumber":115,"LineContent":"    def get_process_dir(self, process_id) -\u003e Path:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3007,"LineContent":"        const dataStr = await window.pywebview.api.get_process_details(processId);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":247,"LineContent":"        const data = await window.pywebview.api.get_process_details(processId);"}

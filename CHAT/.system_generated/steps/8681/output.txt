@@ -1,0 +1,5 @@
+{"name":"__init__.py","sizeBytes":"16"}
+{"name":"__pycache__","isDir":true}
+{"name":"excel_writer.py","sizeBytes":"13675"}
+
+Summary: This directory contains 1 subdirectories and 2 files.

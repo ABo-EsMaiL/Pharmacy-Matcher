@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+--- client dir ---
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__enter__', '__eq__', '__exit__', '__firstlineno__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__static_attributes__', '__str__', '__subclasshook__', '__weakref__', '_api_client', '_apply_default_timeout', '_apply_retries', '_auth_headers', '_client_headers', '_request_headers', '_retries', '_server_url', '_timeout_seconds', 'close', 'extract', 'jobs', 'parse', 'upload']
+

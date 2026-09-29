@@ -1,0 +1,49 @@
+
+The command exited with code 0.
+Output:
+[*] Starting Chained Parse + Extract on جملة العمروووو.pdf...
+1. Submitting Parse job...
+   -> Parse Job ID: 9b0a85e5-3d68-44dc-ac24-bdd0ee368814
+   -> Parse Status: JobStatus.PROCESSING
+   -> Parse Status: JobStatus.PROCESSING
+   -> Parse Status: JobStatus.PROCESSING
+   -> Parse Status: JobStatus.PROCESSING
+   -> Parse Status: JobStatus.COMPLETED
+[+] Parse completed! Result ID: 9b0a85e5-3d68-44dc-ac24-bdd0ee368814
+2. Running Extract with Schema...
+   -> Extract response type: <class 'unstructured_transform_client._generated.models.job_accepted.JobAccepted'>
+   -> Extract Job ID: 78044990-7fbc-4336-abb3-6e8cca5cd69c
+   -> Extract Status: JobStatus.QUEUED
+   -> Extract Status: JobStatus.QUEUED
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.PROCESSING
+   -> Extract Status: JobStatus.COMPLETED
+[+] Extract Job Completed! Details:
+Data keys: dict_keys(['id', 'status', 'filename', 'file_id', 'cancellation_requested', 'source', 'error', 'result'])
+  Key: id, Type: <class 'str'>, Preview: 78044990-7fbc-4336-abb3-6e8cca5cd69c
+  Key: status, Type: <enum 'JobStatus'>, Preview: JobStatus.COMPLETED
+  Key: filename, Type: <class 'str'>, Preview: جملة العمروووو.pdf
+  Key: file_id, Type: <class 'str'>, Preview: جملة-العمروووو-8cafe258.pdf
+  Key: cancellation_requested, Type: <class 'bool'>, Preview: False
+  Key: source, Type: <class 'dict'>, Preview: {'file_id': 'جملة-العمروووو-8cafe258.pdf', 'filename': 'جملة العمروووو.pdf', 'mimetype': 'application/pdf', 'expires_at': datetime.datetime(2026, 9, 2
+  Key: error, Type: <class 'NoneType'>, Preview: None
+  Key: result, Type: <class 'dict'>, Preview: {'id': '78044990-7fbc-4336-abb3-6e8cca5cd69c', 'status': <TransformStatus.COMPLETED: 'completed'>, 'profile': None, 'markdown': 'مخزن العمرو فارما للأ
+[+] Test jobs deleted. Clean!
+

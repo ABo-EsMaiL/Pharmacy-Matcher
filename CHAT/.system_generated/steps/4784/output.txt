@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Candidates found for 'كويتابين 25مجم 30قرص س ج':
+  - W_855: 'کوتیاپین 25 مج اقراص' (Score: 0.270, Brand Sim: 87.5)
+  - W_102: 'املوديبين 5 مج 30 قرص/باكت 15' (Score: 0.170, Brand Sim: 58.82352941176471)
+  - W_18: 'ادويتين 30 مج اقراص ج' (Score: 0.169, Brand Sim: 66.66666666666667)
+

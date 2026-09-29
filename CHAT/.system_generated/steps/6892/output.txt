@@ -1,0 +1,23 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -766,7 +766,7 @@
+                 }
+                 yield f"data: {json.dumps(first_chunk, ensure_ascii=False)}\n\n"
+ 
+-                async for chunk_data in browser_manager.send_prompt_and_stream(prompt):
++                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name):
+                     if isinstance(chunk_data, dict):
+                         delta = chunk_data["delta"]
+                     else:
+@@ -805,7 +805,7 @@
+         full_text = ""
+         async with sem:
+             async with browser_manager.lock:
+-                async for chunk_data in browser_manager.send_prompt_and_stream(prompt):
++                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name):
+                     if isinstance(chunk_data, dict):
+                         full_text = chunk_data["text"]
+                     else:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

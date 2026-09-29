@@ -1,0 +1,73 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\dist_production\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -683,8 +683,61 @@
+             self._worker_thread.start()
+             return {"success": True, "process_id": process_id}
+ 
++    def _sync_process_from_excel(self, proc: dict) -> dict:
++        if not proc or not proc.get('output_file'):
++            return proc
++        output_path = proc['output_file']
++        if not os.path.exists(output_path):
++            return proc
++        try:
++            wb = openpyxl.load_workbook(output_path, data_only=False)
++            snames = wb.sheetnames
++            wh_snames = [s for s in snames if s not in ('ملخص', 'لم يُعثر عليه', 'يحتاج مراجعة')]
++            
++            act_matched = sum(max(0, wb[s].max_row - 1) for s in wh_snames)
++            act_not_found = max(0, wb['لم يُعثر عليه'].max_row - 1) if 'لم يُعثر عليه' in snames else 0
++            act_review = max(0, wb['يحتاج مراجعة'].max_row - 1) if 'يحتاج مراجعة' in snames else 0
++            
++            # Auto-repair summary formulas in Excel if outdated
++            changed = False
++            if 'ملخص' in snames:
++                ws_summary = wb['ملخص']
++                b6_val = str(ws_summary['B6'].value or '')
++                if "'يحتاج مراجعة'!A:A" in b6_val:
++                    ws_summary['B6'] = "=MAX(0, COUNTA('يحتاج مراجعة'!B:B)-1)"
++                    changed = True
++                b5_val = str(ws_summary['B5'].value or '')
++                if "'لم يُعثر عليه'!A:A" not in b5_val:
++                    ws_summary['B5'] = "=MAX(0, COUNTA('لم يُعثر عليه'!A:A)-1)"
++                    changed = True
++                if changed:
++                    wb.save(output_path)
++            
++            curr_rev = proc.get('review_count', 0)
++            curr_m = proc.get('matched_count', 0)
++            curr_nf = proc.get('not_found_count', 0)
++            
++            if curr_rev != act_review or curr_m != act_matched or curr_nf != act_not_found:
++                new_status = 'completed' if act_review == 0 else 'reviewing'
++                self._db.update_process(
++                    proc['id'],
++                    matched_count=act_matched,
++                    not_found_count=act_not_found,
++                    review_count=act_review,
++                    status=new_status
++                )
++                proc['matched_count'] = act_matched
++                proc['not_found_count'] = act_not_found
++                proc['review_count'] = act_review
++                proc['status'] = new_status
++        except Exception as e:
++            print(f"[!] Warning: _sync_process_from_excel failed for {proc.get('id')}: {e}")
++        return proc
++
+     def get_history(self) -> str:
+-        return json.dumps(self._db.get_all_processes())
++        procs = self._db.get_all_processes()
++        synced = [self._sync_process_from_excel(p) for p in procs]
++        return json.dumps(synced)
+ 
+     def get_process_details(self, process_id: str) -> str:
+         proc = self._db.get_process(process_id)
+@@ -691,3 +691,4 @@
++            proc = self._sync_process_from_excel(proc)
+             proc['shortage_files'] = json.loads(proc['shortage_files'])
+             proc['warehouse_files'] = json.loads(proc['warehouse_files'])
+             return json.dumps(proc)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

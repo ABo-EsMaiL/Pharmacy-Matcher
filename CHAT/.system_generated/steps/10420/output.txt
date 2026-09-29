@@ -1,0 +1,29 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1872,6 +1872,11 @@
+                                         <span class="meta-tag model" id="val-model-gaistudio">gemini-3.8-flash</span>
+                                     </div>
+                                     <span class="server-url-caption">http://127.0.0.1:8001/v1/chat/completions</span>
++                                    <div class="server-dir-badge" style="margin-top: 5px; display: flex; align-items: center; gap: 6px; font-size: 11px; background: #f1f5f9; padding: 2px 8px; border-radius: 6px; border: 1px dashed var(--border);">
++                                        <i class="ph-bold ph-folder" style="color: var(--primary);"></i>
++                                        <span id="val-dir-gaistudio" style="direction: ltr; font-family: monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 250px;">D:\AI_Engineer\MSEMAX-GAIStudio-vision</span>
++                                        <button type="button" class="btn btn-outline btn-small" style="padding: 1px 6px; font-size: 10px; height: auto;" onclick="chooseServerDir('gaistudio')" title="تغيير مجلد السيرفر">تغيير</button>
++                                    </div>
+                                 </div>
+                             </div>
+                             <div class="server-badges-cluster">
+@@ -1909,6 +1909,11 @@
+                                         <span class="meta-tag model" id="val-model-chatgpt">gpt-4o</span>
+                                     </div>
+                                     <span class="server-url-caption">http://127.0.0.1:8000/v1/chat/completions</span>
++                                    <div class="server-dir-badge" style="margin-top: 5px; display: flex; align-items: center; gap: 6px; font-size: 11px; background: #f1f5f9; padding: 2px 8px; border-radius: 6px; border: 1px dashed var(--border);">
++                                        <i class="ph-bold ph-folder" style="color: var(--primary);"></i>
++                                        <span id="val-dir-chatgpt" style="direction: ltr; font-family: monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 250px;">D:\AI_Engineer\MSEMAX</span>
++                                        <button type="button" class="btn btn-outline btn-small" style="padding: 1px 6px; font-size: 10px; height: auto;" onclick="chooseServerDir('chatgpt')" title="تغيير مجلد السيرفر">تغيير</button>
++                                    </div>
+                                 </div>
+                             </div>
+                             <div class="server-badges-cluster">
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

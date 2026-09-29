@@ -1,0 +1,22 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+=== SHEET NAMES ===
+PROC-001 sheets: ['ملخص', 'السلام شبين.pdf', 'كيور فارما خاص.pdf', 'جملة العمروووو.pdf', 'المكرومي المنصورة.pdf', 'مخزن الحياة فارم اسكندريه-170.p', 'الهضبة الاثنين نقدى0.pdf', 'لم يُعثر عليه', 'يحتاج مراجعة']
+PROC-002 sheets: ['ملخص', 'السلام شبين.pdf', 'الهضبة الاثنين نقدى0.pdf', 'جملة العمروووو.pdf', 'المكرومي المنصورة.pdf', 'مخزن الحياة فارم اسكندريه-170.p', 'كيور فارما خاص.pdf', 'لم يُعثر عليه', 'يحتاج مراجعة']
+
+=== SUMMARY SHEET COMPARISON ===
+PROC-001 Summary:
+PROC-002 Summary:
+
+PROC-001 Matched rows: 0
+PROC-002 Matched rows: 0
+
+PROC-001 Review rows: 11
+PROC-002 Review rows: 6
+
+PROC-001 Not Found rows: 0
+PROC-002 Not Found rows: 0
+

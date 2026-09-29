@@ -1,0 +1,149 @@
+
+The command exited with code 0.
+Output:
+<truncated 247 lines>
+	    New File  		  407697	المكرومي المنصورة.pdf 99%  100%  
+	    New File  		  199787	الهضبة الاثنين نقدى0.pdf 99%  100%  
+	    New File  		   58850	جملة العمروووو.pdf 99%  100%  
+	    New File  		  299097	كيور فارما خاص.pdf 99%  100%  
+	    New File  		  228520	مخزن الحياة فارم اسكندريه-170.pdf 99%  100%  
+	  New Dir          0	D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-015\output\
+	  New Dir          1	D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-016\
+	    New File  		   33288	results_PROC-016.xlsx100%  
+	  New Dir          1	D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-016\input_shortages\
+	    New File  		   41471	0913.xlsx 99%  100%  
+	  New Dir          6	D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-016\input_warehouses\
+	    New File  		   87499	السلام شبين.pdf 99%  100%  
+	    New File  		  407697	المكرومي المنصورة.pdf 99%  100%  
+	    New File  		  199787	الهضبة الاثنين نقدى0.pdf 99%  100%  
+	    New File  		   58850	جملة العمروووو.pdf 99%  100%  
+	    New File  		  299097	كيور فارما خاص.pdf 99%  100%  
+	    New File  		  228520	مخزن الحياة فارم اسكندريه-170.pdf 99%  100%  
+	  New Dir          0	D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-016\output\
+	  New Dir          6	D:\AI_Engineer\Pharmacy-agy\desktop_app\
+	    New File  		    2029	app.py100%  
+	    New File  		   38084	backend.py100%  
+	    New File  		    4073	database.py100%  
+	    New File  		       0	history.db
+	    New File  		   18270	server_manager.py100%  
+	    New File  		      15	__init__.py100%  
+	  New Dir          2	D:\AI_Engineer\Pharmacy-agy\desktop_app\static\
+	    New File  		   14903	app.js100%  
+	    New File  		   14642	style.css100%  
+	  New Dir          1	D:\AI_Engineer\Pharmacy-agy\desktop_app\templates\
+	    New File  		  143223	index.html100%  
+	  New Dir          5	D:\AI_Engineer\Pharmacy-agy\dist_production\
+	    New File  		      75	.env.example100%  
+	    New File  		    2196	fast_main.py100%  
+	    New File  		    2693	README_SETUP.md100%  
+	    New File  		     128	requirements.txt100%  
+	    New File  		    1579	run_app.bat100%  
+	  New Dir          2	D:\AI_Engineer\Pharmacy-agy\dist_production\data\
+	    New File  		   12288	history.db100%  
+	    New File  		     156	settings.json100%  
+	  New Dir          0	D:\AI_Engineer\Pharmacy-agy\dist_production\data\inputs\
+	  New Dir          0	D:\AI_Engineer\Pharmacy-agy\dist_production\data\processes\
+	  New Dir          5	D:\AI_Engineer\Pharmacy-agy\dist_production\desktop_app\
+	    New File  		    2029	app.py100%  
+	    New File  		   38084	backend.py100%  
+	    New File  		    4073	database.py100%  
+	    New File  		   18270	server_manager.py100%  
+	    New File  		      15	__init__.py100%  
+	  New Dir          2	D:\AI_Engineer\Pharmacy-agy\dist_production\desktop_app\static\
+	    New File  		   14903	app.js100%  
+	    New File  		   14642	style.css100%  
+	  New Dir          1	D:\AI_Engineer\Pharmacy-agy\dist_production\desktop_app\templates\
+	    New File  		  143223	index.html100%  
+	  New Dir          1	D:\AI_Engineer\Pharmacy-agy\dist_production\scripts\
+	    New File  		    1846	free_ports.bat100%  
+	  New Dir          2	D:\AI_Engineer\Pharmacy-agy\dist_production\src\
+	    New File  		    2641	config.py100%  
+	    New File  		      14	__init__.py100%  
+	  New Dir          4	D:\AI_Engineer\Pharmacy-agy\dist_production\src\extract\
+	    New File  		    4368	excel_reader.py100%  
+	    New File  		    4029	file_handler.py100%  
+	    New File  		   17945	pdf_reader.py100%  
+	    New File  		      21	__init__.py100%  
+	  New Dir          3	D:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\
+	    New File  		   46253	coordinator.py100%  
+	    New File  		    7129	search.py100%  
+	    New File  		      13	__init__.py100%  
+	  New Dir          4	D:\AI_Engineer\Pharmacy-agy\dist_production\src\match\
+	    New File  		   11730	coordinator.py100%  
+	    New File  		   12118	gemini_match.py100%  
+	    New File  		    5798	text_match.py100%  
+	    New File  		      21	__init__.py100%  
+	  New Dir          2	D:\AI_Engineer\Pharmacy-agy\dist_production\src\output\
+	    New File  		   13675	excel_writer.py100%  
+	    New File  		      16	__init__.py100%  
+	  New Dir          2	D:\AI_Engineer\Pharmacy-agy\output\
+	    New File  		   24029	results.xlsx100%  
+	    New File  		   24067	results_fast.xlsx100%  
+	  New Dir         29	D:\AI_Engineer\Pharmacy-agy\scratch\
+	    New File  		   14425	audit_gemini_chat.py100%  
+	    New File  		    1754	check_cure_gemini_items.py100%  
+	    New File  		     122	check_farsi.py100%  
+	    New File  		    1941	check_levanox_grantril.py100%  
+	    New File  		     296	check_pdf_pages.py100%  
+	    New File  		     327	check_salam_gemini.py100%  
+	    New File  		    6091	find_false_negatives.py100%  
+	    New File  		    1823	find_levanox_hadaba.py100%  
+	    New File  		    2188	find_parofen_batch.py100%  
+	    New File  		    1617	inspect_run3_results.py100%  
+	    New File  		    1247	inspect_specific_misses.py100%  
+	    New File  		     534	print_all_72_matches.py100%  
+	    New File  		     385	print_all_clean_candidates.py100%  
+	    New File  		    1509	print_detailed_run3.py100%  
+	    New File  		     340	print_rev_1_6.py100%  
+	    New File  		     601	print_top25_misses.py100%  
+	    New File  		    4386	scan_remaining_unmatched.py100%  
+	    New File  		     471	search_specific_in_results.py100%  
+	    New File  		    1587	test_batch3_cure.py100%  
+	    New File  		     819	test_grantril_search.py100%  
+	    New File  		    3530	test_improvements.py100%  
+	    New File  		     809	test_levanox_llm.py100%  
+	    New File  		     839	test_levanox_search.py100%  
+	    New File  		     817	test_llm_parofen.py100%  
+	    New File  		     730	test_parofen_llm.py100%  
+	    New File  		     866	test_pulmicort_search.py100%  
+	    New File  		     857	test_small_parofen.py100%  
+	    New File  		     831	test_vental_cure.py100%  
+	    New File  		    1881	test_why_parofen_missed.py100%  
+	  New Dir          2	D:\AI_Engineer\Pharmacy-agy\scripts\
+	    New File  		    1846	free_ports.bat100%  
+	    New File  		    7939	package_production.py100%  
+	  New Dir          2	D:\AI_Engineer\Pharmacy-agy\src\
+	    New File  		    2641	config.py100%  
+	    New File  		      14	__init__.py100%  
+	  New Dir          4	D:\AI_Engineer\Pharmacy-agy\src\extract\
+	    New File  		    4368	excel_reader.py100%  
+	    New File  		    4029	file_handler.py100%  
+	    New File  		   17945	pdf_reader.py100%  
+	    New File  		      21	__init__.py100%  
+	  New Dir          3	D:\AI_Engineer\Pharmacy-agy\src\fast_match\
+	    New File  		   46253	coordinator.py100%  
+	    New File  		    7129	search.py100%  
+	    New File  		      13	__init__.py100%  
+	  New Dir          4	D:\AI_Engineer\Pharmacy-agy\src\match\
+	    New File  		   11730	coordinator.py100%  
+	    New File  		   12118	gemini_match.py100%  
+	    New File  		    5798	text_match.py100%  
+	    New File  		      21	__init__.py100%  
+	  New Dir          2	D:\AI_Engineer\Pharmacy-agy\src\output\
+	    New File  		   13675	excel_writer.py100%  
+	    New File  		      16	__init__.py100%  
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :       107        92        15         0         0         0
+   Files :       265       263         2         0         0         0
+   Bytes :   22.58 m   22.20 m   384.5 k         0         0         0
+   Times :   0:00:02   0:00:02                       0:00:00   0:00:00
+
+
+   Speed :           11,336,610 Bytes/sec.
+   Speed :              648.686 MegaBytes/min.
+   Ended : Friday, September 25, 2026 4:27:35 PM
+
+

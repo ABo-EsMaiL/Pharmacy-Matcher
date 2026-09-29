@@ -1,0 +1,37 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\fast_main.py","LineNumber":14,"LineContent":"from src.fast_match.coordinator import FastCoordinator"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\fast_main.py","LineNumber":55,"LineContent":"    coordinator = FastCoordinator(config)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\fast_main.py","LineNumber":56,"LineContent":"    results = coordinator.process(all_shortages, warehouse_data)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\fast_main.py","LineNumber":14,"LineContent":"from src.fast_match.coordinator import FastCoordinator"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\fast_main.py","LineNumber":55,"LineContent":"    coordinator = FastCoordinator(config)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\fast_main.py","LineNumber":56,"LineContent":"    results = coordinator.process(all_shortages, warehouse_data)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\match\\__init__.py","LineNumber":1,"LineContent":"# Coordinator module"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\main.py","LineNumber":16,"LineContent":"from src.match.coordinator import Coordinator"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\main.py","LineNumber":88,"LineContent":"    coordinator = Coordinator(config)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\main.py","LineNumber":89,"LineContent":"    results = coordinator.process(all_shortages, warehouse_data)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\match\\coordinator.py","LineNumber":2,"LineContent":"Main Coordinator - Matches shortages against all warehouses."}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\match\\coordinator.py","LineNumber":40,"LineContent":"class Coordinator:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":407,"LineContent":"            from src.fast_match.coordinator import FastCoordinator"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":440,"LineContent":"            self.add_log(f\"[PROCESS] Extracted total {len(all_shortages)} shortage items. Starting coordinator...\")"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":446,"LineContent":"            coordinator = FastCoordinator(config)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":447,"LineContent":"            results = coordinator.process(all_shortages, warehouse_data)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\fast_match\\coordinator.py","LineNumber":200,"LineContent":"class FastCoordinator:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":407,"LineContent":"            from src.fast_match.coordinator import FastCoordinator"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":440,"LineContent":"            self.add_log(f\"[PROCESS] Extracted total {len(all_shortages)} shortage items. Starting coordinator...\")"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":446,"LineContent":"            coordinator = FastCoordinator(config)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":447,"LineContent":"            results = coordinator.process(all_shortages, warehouse_data)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch_find_salam_missing.py","LineNumber":11,"LineContent":"from src.fast_match.coordinator import FastCoordinator"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch\\find_parofen_batch.py","LineNumber":13,"LineContent":"# Deduplicate as coordinator does:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\__init__.py","LineNumber":1,"LineContent":"# Coordinator module"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_batch3_cure.py","LineNumber":6,"LineContent":"from src.fast_match.coordinator import SYSTEM_PROMPT"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch_check_missing_salam.py","LineNumber":9,"LineContent":"from src.fast_match.coordinator import FastCoordinator"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch_check_missing_salam.py","LineNumber":33,"LineContent":"coord = FastCoordinator(config)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_levanox_llm.py","LineNumber":5,"LineContent":"from src.fast_match.coordinator import SYSTEM_PROMPT"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_llm_parofen.py","LineNumber":5,"LineContent":"from src.fast_match.coordinator import SYSTEM_PROMPT"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_why_parofen_missed.py","LineNumber":7,"LineContent":"from src.fast_match.coordinator import FastCoordinator"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_small_parofen.py","LineNumber":7,"LineContent":"from src.fast_match.coordinator import SYSTEM_PROMPT"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py","LineNumber":2,"LineContent":"Main Coordinator - Matches shortages against all warehouses."}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py","LineNumber":40,"LineContent":"class Coordinator:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch_test_run.py","LineNumber":9,"LineContent":"from src.fast_match.coordinator import FastCoordinator"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch_test_run.py","LineNumber":33,"LineContent":"# Run coordinator"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\scratch_test_run.py","LineNumber":34,"LineContent":"coord = FastCoordinator(config)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":200,"LineContent":"class FastCoordinator:"}

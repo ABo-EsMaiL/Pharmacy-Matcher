@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_hierarchy.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -58,8 +58,6 @@
+         print(f"\nالصنف: [{target}]")
+         print(f"   أفضل مرشح: [{top[1]}] في ({top[0]}) | BrandSim={top[3]:.1f}")
+         print(f"   تحليل: Target(brand={target_brand}, form={target_form}) vs Cand(brand={cand_brand}, form={cand_form})")
+-        print(f"   أفضل مرشح: [{top[1]}] في ({top[0]}) | BrandSim={top[3]:.1f}")
+-        print(f"   تحليل: Target(brand={target_brand}, form={target_form}, str={target_str}) vs Cand(brand={cand_brand}, form={cand_form}, str={cand_str})")
+         # Can it ever go to "لم يتم العثور عليه"?
+         print(f"   -> النتيجة المنطقية: خرج تماماً من 'لم يتم العثور عليه'! إما مطابقة مباشرة أو مراجعة.")
+     else:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

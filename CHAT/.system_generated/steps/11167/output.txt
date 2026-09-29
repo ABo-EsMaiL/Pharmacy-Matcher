@@ -1,0 +1,114 @@
+
+The command exited with code 0.
+Output:
+Match at line 7923 (prompt-container):
+توليد الفعلي!
+
+#### المعالجة الجذرية المعتمدة:
+تم الفحص الدقيق لشجرة الـDOM المستخرجة من شاشة AI Studio:
+* الـUser Turn يحتوي صراحة على الحاوية الخاصة به:
+  `<div class="virtual-scroll-container user-prompt-container">` ومعرّف الكاتب: `<div class="author-label">User ...</div>`.
+* بينما الـModel Turn يحتوي حصريًا على الحاوية:
+  `<div class="virtual-scroll-container model-prompt-container">` ومعرّف الكاتب: `<div class="author-label">Model ...</div>` وأزرار التقييم (`thumb_up / thumb_down`) وكتل التفكير (`ms-thought-chunk`).
+
+تم تعديل كاشف الـTurns في [app.py](file:///D:/AI_En
+<truncated 4452 bytes>
+=====================================================================
+[✓] Gateway: MSEMAX (AIStu
+============================================================
+Match at line 9465 (run-button):
+ned notranslate ms-button-icon-symbol ng-star-inserted" aria-hidden="true">edit</span></button><!----><!----><!----><button _ngcontent-ng-c1721878489="" ms-button="" variant="icon-borderless" name="rerun-button" mattooltipposition="below" class="mat-mdc-tooltip-tr
+
+
+============================================================
+Match at line 9532 (run-button):
+-symbols-outlined notranslate ms-button-icon-symbol ng-star-inserted" aria-hidden="true">edit</span></button><!----><button _ngcontent-ng-c1083380779="" ms-button="" variant="icon-borderless" name="rerun-button" mattooltipposition="below" class="mat-mdc-tooltip-trigger rerun-button ms-button-borderless ms-button-icon ng-star-inserted" aria-label="Rerun this turn" jslog="228331;track:generic_click,impression" aria-disabled="false"><svg _ngcontent-ng-c1083380779="" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="ng-star-inserted"><g _ngcontent-ng-c1083380779="" clip-path="url(#clip0_10012_165935)"><path _ngcont
+<truncated 39402 bytes>
+abel="أنت 
+============================================================
+Match at line 9554 (run-button):
+tent-ng-c1083380779="" ms-button="" variant="icon-borderless" mattooltipposition="below" class="mat-mdc-to
+BUTTON: <button _ngcontent-ng-c1083380779="" ms-button="" variant="icon-borderless" name="rerun-button" mattooltipposition="belo
+
+
+============================================================
+Match at line 9628 (run-button):
+ch to tex"
+    },
+    {
+      "aria": "",
+      "text": "Run\nCtrl\nkeyboard_return",
+      "tooltip": "",
+      "html": "<button _ngcontent-ng-c2081246445=\"\" ms-button=\"\" mattooltipclass=\"run-button-tooltip\" class=\"mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter"
+    }
+  ],
+  "allAddButtons": [
+    {
+      "aria": "New chat",
+      "text": "add",
+      "tooltip": "",
+      "html": "<button _ngcontent-ng-c124025333=\"\" ms-button=\"\" variant=\"icon-borderless\" data-test-clear=\"outside\" class=\"mat-mdc-tooltip-trigger ng-tns-c124025333-"
+    },
+    {
+      "aria": "Insert images, videos, audio, or files",
+      "text": "add_circle",
+      "tooltip": "",
+============================================================
+Match at line 9629 (run-button):
+ch to tex"
+    },
+    {
+      "aria": "",
+      "text": "Run\nCtrl\nkeyboard_return",
+      "tooltip": "",
+      "html": "<button _ngcontent-ng-c2081246445=\"\" ms-button=\"\" mattooltipclass=\"run-button-tooltip\" class=\"mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter"
+    }
+  ],
+  "allAddButtons": [
+    {
+      "aria": "New chat",
+      "text": "add",
+      "tooltip": "",
+      "html": "<button _ngcontent-ng-c124025333=\"\" ms-button=\"\" variant=\"icon-borderless\" data-test-clear=\"outside\" class=\"mat-mdc-tooltip-trigger ng-tns-c124025333-"
+    },
+    {
+      "aria": "Insert images, videos, audio, or files",
+      "text": "add_circle",
+      "tooltip": "",
+============================================================
+Match at line 9708 (run-button):
+ished with result:
+
+The command exited with code 0.
+Output:
+Navigating to AI Studio...
+State 1 (Empty): {'tag': 'BUTTON', 'outer': '<button _ngcontent-ng-c2081246445="" ms-button="" mattooltipclass="run-button-tooltip" class="mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary" aria-disabled="true" j', 'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary'}
+Image uploaded! Monitoring Run button state every 0.5s for 10s...
+t=0.0s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text':
+============================================================
+Match at line 10205 (run-button):
+37:     {
+38:       "aria": "",
+39:       "text": "Run\nCtrl\nkeyboard_return",
+40:       "tooltip": "",
+41:       "html": "<button _ngcontent-ng-c2081246445=\"\" ms-button=\"\" mattooltipclass=\"run-button-tooltip\" class=\"mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter"
+42:     }
+43:   ],
+44:   "allAddButtons": [
+45:     {
+46:       "aria": "New chat",
+47:       "text": "add",
+48:       "tooltip": "",
+49:       "html": "<button _ngcontent-ng-c124025333=\"\" ms-button=\"\" variant=\"icon-borderless\" data-test-clear=\"outside\" class=\"mat-mdc-tooltip-trigger ng-tns-c124025333-"
+50:     },
+51:     {
+52:       "aria": "Insert images, videos, audio, or files",
+53:   
+============================================================
+Match at line 10261 (run-button):
+-symbols-outlined notranslate ms-button-icon-symbol ng-star-inserted" aria-hidden="true">edit</span></button><!----><button _ngcontent-ng-c1083380779="" ms-button="" variant="icon-borderless" name="rerun-button" mattooltipposition="below" class="mat-mdc-tooltip-trigger rerun-button ms-button-borderless ms-button-icon ng-star-inserted" aria-label="Rerun this turn" jslog="228331;track:generic_click,impression" aria-disabled="false"><svg _ngcontent-ng-c1083380779="" xmlns="http://www.w3.org/2000/svg" width="20" height="20
+<truncated 2726 bytes>
+ي هذه الصورة..."*.
+   * ولأنه **لم يجد أي صورة مرفقة في الشات أصلاً**، Gemini افترض أنك تطلب منه "مثالاً تجريبياً"، فقام باختراع أدوية من خياله (أدوية 
+============================================================
+

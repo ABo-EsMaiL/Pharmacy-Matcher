@@ -1,0 +1,18 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -490,6 +490,12 @@
+                             wait_sec = 25 * (attempt + 1)
+                             print(f"      [!] HTTP 429 Rate Limit on batch {chunk_name}. Waiting {wait_sec}s before retry ({attempt+1}/{max_retries})...")
+                             time.sleep(wait_sec)
++                        elif "NO_RESPONSE_STARTED" in err_str or "NETWORK_CONNECTION_FAILED" in err_str or "Connection to local LLM failed" in err_str:
++                            print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} failed before start ({e}). Retrying...")
++                            time.sleep(5)
++                        elif "STAGNATION_TIMEOUT" in err_str or "FIRST_TOKEN_TIMEOUT" in err_str or "HARD_CEILING_TIMEOUT" in err_str:
++                            print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} timed out after model turn started ({e}). Aborting batch without retry.")
++                            break
+                         else:
+                             print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} error: {e}")
+                             time.sleep(5)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

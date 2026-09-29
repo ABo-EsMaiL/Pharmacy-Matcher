@@ -1,0 +1,34 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -858,15 +858,23 @@
+                     </button>
+                 </div>
+ 
+-                <!-- PROGRESS MODAL -->
++                <!-- PROGRESS WIDGET -->
+                 <div id="progress-modal" style="display: none;">
+                     <div class="progress-box">
+-                        <div class="spinner" style="margin-bottom: 20px;"></div>
+-                        <h3 id="progress-text">جاري معالجة الملفات...</h3>
+-                        <div style="width: 100%; max-width: 400px; height: 8px; background: #e2e8f0; border-radius: 4px; margin: 15px auto; overflow: hidden;">
++                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
++                            <div class="spinner" style="width: 20px; height: 20px; border-width: 2px;"></div>
++                            <h3 id="progress-text" style="margin: 0; font-size: 14px; font-weight: bold;">جاري معالجة الملفات...</h3>
++                        </div>
++                        <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; margin: 10px 0; overflow: hidden;">
+                             <div id="progress-bar-fill" style="width: 10%; height: 100%; background: var(--primary); transition: width 0.5s ease;"></div>
+                         </div>
+-                        <p style="color: var(--text-muted);">يرجى الانتظار، قد تستغرق العملية بعض الوقت حسب حجم الملفات.</p>
++                        
++                        <!-- Pipeline Log Terminal -->
++                        <div style="background: #1e293b; color: #38bdf8; font-family: monospace; font-size: 11px; padding: 10px; border-radius: 6px; height: 120px; overflow-y: auto; text-align: left; direction: ltr;" id="pipeline-log-terminal">
++                            [System] Started pipeline...
++                        </div>
++                        
++                        <p style="color: var(--text-muted); font-size: 11px; margin-top: 10px; text-align: center;">العملية تعمل في الخلفية. يمكنك متابعة استخدام البرنامج.</p>
+                     </div>
+                 </div>
+             </div>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

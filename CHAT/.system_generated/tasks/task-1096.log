@@ -1,0 +1,11 @@
+53: overflow: hidden; /* Prevent body scroll in desktop app */
+197: overflow: hidden; /* NO SCROLLING on main app */
+211: overflow-y: auto; /* Screens scroll internally if needed */
+320: overflow: hidden;
+372: overflow-y: auto;
+397: overflow: hidden;
+399: text-overflow: ellipsis;
+652: overflow: hidden;
+873: <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; margin: 10px 0; overflow: hidden;">
+1062: <div class="card" style="flex:1; display:flex; flex-direction:column; background:#1e1e1e; overflow:hidden;">
+1067: <div style="flex:1; padding: 12px; overflow: hidden; display:flex;">

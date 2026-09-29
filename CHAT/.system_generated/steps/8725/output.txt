@@ -1,0 +1,43 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -239,11 +239,24 @@
+         all_shortage_names = {item["item_name_raw"] for item in deduped_shortages}
+         found_names = set(found_in.keys())
+         
+-        review_only_names = set()
+-        for wh_result in all_warehouse_results.values():
++        # Deduplicated needs_review calculation to match the Excel sheet 'يحتاج مراجعة':
++        # 1. Skip items that are already confirmed/matched in another warehouse (don't burden pharmacist)
++        # 2. Deduplicate identical (shortage_item, warehouse_item, warehouse_name) triplets
++        actual_review_items = []
++        seen_review_pairs = set()
++        for wh_name, wh_result in all_warehouse_results.items():
+             for rev in wh_result["needs_review"]:
+-                review_only_names.add(rev["shortage_item"])
+-
++                req_item = rev.get("shortage_item", "").strip()
++                wh_item = rev.get("warehouse_item", "").strip()
++                if req_item in found_names:
++                    continue
++                pair_key = (req_item, wh_item, wh_name)
++                if pair_key in seen_review_pairs:
++                    continue
++                seen_review_pairs.add(pair_key)
++                actual_review_items.append(rev)
++
++        review_only_names = {rev["shortage_item"].strip() for rev in actual_review_items}
+         not_found_names = all_shortage_names - found_names - review_only_names
+         not_found_items = [
+             {"name": name, "source": next(
+@@ -253,7 +253,7 @@
+         ]
+ 
+         total_wh_matched = sum(len(wh["matched"]) for wh in all_warehouse_results.values())
+-        total_review_items = sum(len(wh["needs_review"]) for wh in all_warehouse_results.values())
++        total_review_items = len(actual_review_items)
+         total_not_found = len(not_found_items)
+         summary = {
+             "total_shortages": len(shortage_items),
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

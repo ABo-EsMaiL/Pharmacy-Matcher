@@ -1,0 +1,69 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio-vision\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -630,8 +630,23 @@
+ 
+         t_cfg = self.get_adaptive_timeouts(case_count)
+ 
+-        # 4. Trigger execution using NATIVE Playwright actions (isTrusted=true)
+-        logger.info(f"Submitting prompt ({len(prompt)} chars) to Google AI Studio natively...")
++        # 4. Wait for Run button to become ACTIVE (Tokenization and Image ready)
++        logger.info(f"Waiting for Google AI Studio Run button to become active (tokenizing/ready)...")
++        run_btn = self.page.locator('button.ctrl-enter, button:has-text("Run"), button[mattooltipclass="run-button-tooltip"]').first
++        run_active = False
++        t_wait_start = time.time()
++        for i in range(50):  # up to 25s for large images/prompts
++            try:
++                aria_dis = await run_btn.get_attribute("aria-disabled")
++                is_dis = await run_btn.is_disabled()
++                if aria_dis == "false" and not is_dis:
++                    run_active = True
++                    logger.info(f"[+] Run button is ACTIVE after {time.time() - t_wait_start:.2f}s! Ready to execute.")
++                    break
++            except Exception:
++                pass
++            await asyncio.sleep(0.5)
++
+         current_state = self.STATE_NO_RESPONSE_STARTED
+         t_turn_detected: Optional[float] = None
+         t_first_token: Optional[float] = None
+@@ -638,18 +638,25 @@
+         prev_text = ""
+         consecutive_js_errors = 0
+ 
+-        try:
+-            await ta.focus()
+-            t_submit = time.time()
+-            t_pre_exec = t_submit - t_req_start
+-            t_last_growth = t_submit
+-            await self.page.keyboard.press("Control+Enter")
+-            logger.info(f"[{case_count} cases] Dispatched native Control+Enter. Pre-exec took {t_pre_exec:.2f}s.")
+-        except Exception as e:
+-            t_submit = time.time()
+-            t_pre_exec = t_submit - t_req_start
+-            t_last_growth = t_submit
+-            logger.warning(f"Error during native submission: {e}")
++        t_submit = time.time()
++        t_pre_exec = t_submit - t_req_start
++        t_last_growth = t_submit
++
++        try:
++            if run_active:
++                await run_btn.click()
++                logger.info(f"[{case_count} cases] Clicked active Run button. Pre-exec took {t_pre_exec:.2f}s.")
++            else:
++                logger.warning(f"Run button did not signal active in time. Falling back to native Control+Enter...")
++                await ta.focus()
++                await self.page.keyboard.press("Control+Enter")
++        except Exception as e:
++            logger.warning(f"Error submitting via Run button: {e}. Falling back to Control+Enter...")
++            try:
++                await ta.focus()
++                await self.page.keyboard.press("Control+Enter")
++            except Exception:
++                pass
+ 
+         logger.info(
+             f"[{case_count} cases] Prompt submitted ({len(prompt)} chars). "
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,16 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1500,6 +1500,10 @@
+                     <span id="top-bar-heading" data-i18n="new_title">مطابقة نواقص ومخازن جديدة</span>
+                 </div>
+                 <div class="top-bar-actions">
++                    <div id="top-bar-process-badge" class="server-badge-pill" style="display: none; background: #eff6ff; border: 1.5px solid #93c5fd; color: #1d4ed8; font-weight: 700; cursor: pointer; padding: 5px 12px; gap: 8px;" onclick="showScreen('screen-new');" title="اضغط للعودة لشاشة المطابقة ومتابعة التقدم">
++                        <span class="spinner" style="width: 13px; height: 13px; border-width: 2px;"></span>
++                        <span id="top-bar-process-text">عملية قيد التشغيل...</span>
++                    </div>
+                     <div id="top-bar-server-badge" class="server-badge-pill stopped" style="cursor: pointer;" onclick="showScreen('screen-servers'); loadServersUI();" title="اضغط لإدارة السيرفرات">
+                         <span class="status-dot"></span>
+                         <span id="top-bar-server-text" data-i18n="server_stopped">السيرفر متوقف</span>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,60 @@
+}
+
+
+
+// --- Process Events ---
+
+window.addEventListener('process_update', (e) => {
+
+    const data = e.detail;
+
+    const progressModal = document.getElementById('progress-modal');
+
+    if (progressModal && progressModal.style.display === 'flex' && data.process_id === currentProcessId) {
+
+        const msgEl = document.getElementById('progress-text');
+
+        
+
+        if (msgEl && data.message) {
+
+            msgEl.innerText = data.message;
+
+        }
+
+        
+
+        const pb = document.getElementById('progress-bar-fill');
+
+        if (pb) {
+
+            // Very simple heuristic to advance progress bar based on text
+
+            let pct = 10;
+
+            if (data.message.includes('استخراج') || data.message.includes('Extracting')) pct = 30;
+
+            if (data.message.includes('مطابقة') || data.message.includes('Matching')) pct = 60;
+
+            if (data.message.includes('حفظ') || data.message.includes('Saving')) pct = 90;
+
+            pb.style.width = pct + '%';
+
+        }
+
+    }
+
+});
+
+
+
+window.addEventListener('process_complete', (e) => {
+
+    const data = e.detail;
+
+    
+
+    if (data.process_id === currentProcessId) {
+
+        const btn = document.getElementById('btn-submit');
+

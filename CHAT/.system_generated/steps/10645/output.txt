@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+[OK] D:\AI_Engineer\Pharmacy-agy-vision\desktop_app\backend.py
+[OK] D:\AI_Engineer\Pharmacy-agy-vision\desktop_app\server_manager.py
+[OK] D:\AI_Engineer\Pharmacy-agy-vision\src\extract\gemini_vision_extractor.py
+[OK] D:\AI_Engineer\Pharmacy-agy-vision\src\extract\file_handler.py
+[OK] D:\AI_Engineer\Pharmacy-agy-vision\src\config.py
+[OK] D:\AI_Engineer\MSEMAX-GAIStudio-vision\app.py
+

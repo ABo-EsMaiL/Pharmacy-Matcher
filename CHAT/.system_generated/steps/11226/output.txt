@@ -1,0 +1,46 @@
+
+The command exited with code 0.
+Output:
+Clicking Run button...
+t=0.0s: is_running=True, is_disabled=False, btn='progress_activity
+stop'
+t=0.5s: is_running=True, is_disabled=False, btn='progress_activity
+stop'
+t=1.0s: is_running=True, is_disabled=False, btn='progress_activity
+stop'
+t=1.5s: is_running=True, is_disabled=False, btn='progress_activity
+stop'
+t=2.0s: is_running=True, is_disabled=False, btn='progress_activity
+stop'
+t=2.5s: is_running=True, is_disabled=False, btn='progress_activity
+stop'
+t=3.0s: is_running=True, is_disabled=False, btn='progress_activity
+stop'
+t=3.5s: is_running=False, is_disabled=True, btn='run
+ctrl
+keyboard_return'
+t=4.0s: is_running=False, is_disabled=True, btn='run
+ctrl
+keyboard_return'
+t=4.5s: is_running=False, is_disabled=True, btn='run
+ctrl
+keyboard_return'
+t=5.0s: is_running=False, is_disabled=True, btn='run
+ctrl
+keyboard_return'
+t=5.5s: is_running=False, is_disabled=True, btn='run
+ctrl
+keyboard_return'
+t=6.0s: is_running=False, is_disabled=True, btn='run
+ctrl
+keyboard_return'
+t=6.5s: is_running=False, is_disabled=True, btn='run
+ctrl
+keyboard_return'
+t=7.0s: is_running=False, is_disabled=True, btn='run
+ctrl
+keyboard_return'
+t=7.5s: is_running=False, is_disabled=True, btn='run
+ctrl
+keyboard_return'
+

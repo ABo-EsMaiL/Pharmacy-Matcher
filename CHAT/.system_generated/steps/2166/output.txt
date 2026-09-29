@@ -1,0 +1,104 @@
+
+The command exited with code 0.
+Output:
+120:     return os.path.normpath(path)
+121: 
+122: 
+123: def base_uri(relative_path: str = '') -> str:
+124:     """Get absolute path to resource, works for dev and for PyInstaller"""
+125:     base_path = get_app_root()
+126:     if not os.path.exists(base_path):
+127:         raise ValueError(f'Path {base_path} does not exist')
+128: 
+129:     return f'file://{os.path.join(base_path, relative_path)}'
+130: 
+131: 
+132: def create_cookie(input_: dict[Any, Any] | str) -> SimpleCookie[str]:
+133:     if isinstance(input_, dict):
+134:         cookie = SimpleCookie()
+135:         name = input_['name']
+136:         cookie[name] = input_['value']
+137:         cookie[name]['path'] = input_['path']
+138:         cookie[name]['domain'] = input_['domain']
+139:         cookie[name]['expires'] = input_['expires']
+140:         cookie[name]['secure'] = input_['secure']
+141:         cookie[name]['httponly'] = input_['httponly']
+142: 
+143:         if sys.version_info.major >= 3 and sys.version_info.minor >= 8:
+144:             cookie[name]['samesite'] = input_.get('samesite')
+145: 
+146:         return cookie
+147: 
+148:     if isinstance(input_, str):
+149:         return SimpleCookie(input_)
+150: 
+151:     raise WebViewException('Unknown input to create_cookie')
+152: 
+153: 
+154: def parse_file_type(file_type: str) -> tuple[str, str]:
+155:     """
+156:     :param file_type: file type string 'description (*.file_extension1;*.file_extension2)' as required by file filter in create_file_dialog
+157:     :return: (description, file extensions) tuple
+158:     """
+159:     valid_file_filter = r'^([\w ]+)\((\*(?:\.(?:\w+|\*))*(?:;\*(?:\.(?:\w+|\*))*)*)\)$'
+160:     match = re.search(valid_file_filter, file_type)
+161: 
+162:     if match:
+163:         return match.group(1).rstrip(), match.group(2)
+164:     raise ValueError(f'{file_type} is not a valid file filter')
+165: 
+166: 
+167: def inject_pywebview(platform: str, window: Window) -> str:
+168:     """ "
+169:     Generates and injects a global window.pywebview object. The object contains exposed API functions
+170:     as well as utility functions required by pywebview. The function fires before_load event before
+171:     injecting the object and loaded event after the object is injected.
+172:     """
+173:     exposed_objects = []
+174: 
+175:     def get_args(func: object):
+176:         params = list(inspect.getfullargspec(func).args)
+177:         return params
+178: 
+179:     def get_functions(obj: object, base_name: str = '', functions: dict[str, object] = None):
+180:         obj_id = id(obj)
+181:         if obj_id in exposed_objects:
+182:             return functions
+183:         else:
+184:             exposed_objects.append(obj_id)
+185: 
+186:         if functions is None:
+187:             functions = {}
+188: 
+189:         for name in dir(obj):
+190:             try:
+191:                 full_name = f'{base_name}.{name}' if base_name else name
+192:                 if name.startswith('_'):
+193:                     continue
+194: 
+195:                 attr = getattr(obj, name)
+196:                 if not getattr(attr, '_serializable', True):
+197:                     continue
+198: 
+199:                 if inspect.ismethod(attr) or inspect.isfunction(attr):
+200:                     functions[full_name] = get_args(attr)[1:]
+201:                 # If the attribute is a class or a non-callable object, make a recursive call
+202:                 elif inspect.isclass(attr) or (
+203:                     isinstance(attr, object) and not callable(attr) and hasattr(attr, '__module__')
+204:                 ):
+205:                     get_functions(attr, full_name, functions)
+206:             except Exception as e:
+207:                 logger.error(f'Error while processing {full_name}: {e}')
+208:                 continue
+209: 
+210:         return functions
+211: 
+212:     def generate_func():
+213:         functions = get_functions(window._js_api)
+214: 
+215:         if len(window._functions) > 0:
+216:             expose_functions = {name: get_args(f) for name, f in window._functions.items()}
+217:         else:
+218:             expose_functions = {}
+219: 
+

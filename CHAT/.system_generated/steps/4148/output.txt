@@ -1,0 +1,20 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Test 1 - Durafos:
+  n_s1: ديورافوس 1 امبول
+  n_w1: ديورافس امول ديور فوس
+  token_sort_ratio: 70.27027027027026
+
+Test 2 - Levanox Form:
+  Req form: tablet
+  Wh form : tablet
+  Forms compatible? True
+
+Test 3 - Vental Brand:
+  Req brand: فنتال العربيه
+  Wh brand : فتال
+  Ratio: 88.88888888888889
+

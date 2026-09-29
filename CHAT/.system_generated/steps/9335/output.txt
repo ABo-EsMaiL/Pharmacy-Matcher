@@ -1,0 +1,26 @@
+
+The command exited with code 0.
+Output:
+Loaded PROC-012: 129 matches across 6 warehouses, 5 reviews, 483 not found.
+Loaded PROC-014: 124 matches across 6 warehouses, 5 reviews, 486 not found.
+Loaded PROC-015: 142 matches across 6 warehouses, 9 reviews, 468 not found.
+Loaded PROC-016: 138 matches across 6 warehouses, 77 reviews, 396 not found.
+
+================================================================================
+1. SUMMARY METRICS COMPARISON (المقارنة الرقمية الشاملة للمطابقات حسب المخزن)
+================================================================================
+المخزن                         | PROC-012   | PROC-014   | PROC-015   | PROC-016  
+----------------------------------------------------------------------------------
+السلام شبين.pdf                | 22         | 22         | 23         | 24        
+المكرومي المنصورة.pdf          | 20         | 18         | 22         | 32        
+الهضبة الاثنين نقدى0.pdf       | 37         | 39         | 45         | 44        
+جملة العمروووو.pdf             | 3          | 3          | 3          | 3         
+كيور فارما خاص.pdf             | 32         | 29         | 35         | 22        
+مخزن الحياة فارم اسكندريه-170.p | 15         | 13         | 14         | 13        
+----------------------------------------------------------------------------------
+إجمالي المطابقات               | 129        | 124        | 142        | 138       
+أصناف للمراجعة                 | 5          | 5          | 9          | 77        
+لم يتم العثور عليها            | 483        | 486        | 468        | 396       
+
+Full data successfully exported to extracted_4way_data.json.
+

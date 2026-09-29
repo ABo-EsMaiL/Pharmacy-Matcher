@@ -1,0 +1,61 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2647,6 +2647,9 @@
+     
+     // UI Loading state
+     isProcessRunning = true;
++    const topBarBadge = document.getElementById('top-bar-process-badge');
++    if (topBarBadge) topBarBadge.style.display = 'inline-flex';
++
+     if (btn) {
+         btn.classList.add('hidden');
+         btn.style.display = 'none';
+@@ -2670,6 +2670,7 @@
+             
+             if (res.queued) {
+                 isProcessRunning = false;
++                if (topBarBadge) topBarBadge.style.display = 'none';
+                 if (btn) {
+                     btn.classList.remove('hidden');
+                     btn.style.display = '';
+@@ -2711,6 +2711,7 @@
+             }
+         } else {
+             isProcessRunning = false;
++            if (topBarBadge) topBarBadge.style.display = 'none';
+             showToast((currentLang === 'en' ? 'Error: ' : 'خطأ: ') + res.error, 'error');
+             if (btn) {
+                 btn.classList.remove('hidden');
+@@ -2722,6 +2722,7 @@
+         }
+     } catch (error) {
+         isProcessRunning = false;
++        if (topBarBadge) topBarBadge.style.display = 'none';
+         showToast(currentLang === 'en' ? 'Connection error' : 'حدث خطأ أثناء الاتصال', 'error');
+         if (btn) {
+             btn.classList.remove('hidden');
+@@ -2737,6 +2737,11 @@
+ window.addEventListener('process_update', (e) => {
+     const data = e.detail;
+     const progressModal = document.getElementById('progress-modal');
++    const topBarMsg = document.getElementById('top-bar-process-text');
++    if (topBarMsg && data.message) {
++        topBarMsg.innerText = data.message;
++    }
++
+     if (progressModal && progressModal.style.display === 'flex' && data.process_id === currentProcessId) {
+         const msgEl = document.getElementById('progress-text');
+         
+@@ -2758,6 +2758,9 @@
+ window.addEventListener('process_complete', (e) => {
+     const data = e.detail;
+     isProcessRunning = false;
++    const topBarBadge = document.getElementById('top-bar-process-badge');
++    if (topBarBadge) topBarBadge.style.display = 'none';
++
+     if (typeof loadHistory === 'function') {
+         loadHistory();
+     }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

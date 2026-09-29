@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+  File "<string>", line 1
+    import sqlite3; conn = sqlite3.connect(r'D:\AI_Engineer\Pharmacy-agy-vision\desktop_app\history.db'); print(conn.execute(" SELECT name FROM sqlite_master WHERE type=table\).fetchall())
+                                                                                                                             ^
+SyntaxError: unterminated string literal (detected at line 1)
+

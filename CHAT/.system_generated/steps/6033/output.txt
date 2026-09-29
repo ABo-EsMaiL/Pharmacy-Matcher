@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+{'success': True, 'latency_ms': 5856, 'reply': 'PONG', 'model': 'gpt-4o', 'port': 8000, 'health': {'status': 'ok', 'version': 'MSEMAX 1.0', 'session_file_loaded': True, 'concurrent_slots_available': 3, 'max_concurrent': 3, 'rate_limit': '10/minute'}}
+

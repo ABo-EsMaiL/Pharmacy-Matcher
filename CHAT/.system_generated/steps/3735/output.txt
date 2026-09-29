@@ -1,0 +1,24 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+ماريفان3مجم3شريط vs ماريفان      -> 1st_word: 61 | token_set: 55 | token_sort: 55
+ديوراسيف     vs ديوراسيف     -> 1st_word: 100 | token_set: 72 | token_sort: 72
+ديكساتوبرين  vs ديكسا        -> 1st_word: 62 | token_set: 60 | token_sort: 60
+رانديل10مجم  vs رانديل       -> 1st_word: 71 | token_set: 67 | token_sort: 67
+بيتادين      vs بيتادين      -> 1st_word: 100 | token_set: 56 | token_sort: 48
+نيتروماك     vs نيتروماك     -> 1st_word: 100 | token_set: 75 | token_sort: 75
+ديجستين      vs ديجستين      -> 1st_word: 100 | token_set: 61 | token_sort: 61
+ايفاستين     vs ايفاستين     -> 1st_word: 100 | token_set: 67 | token_sort: 67
+ادولور       vs ادولور       -> 1st_word: 100 | token_set: 75 | token_sort: 54
+كوللوماك     vs كولومالك     -> 1st_word: 88 | token_set: 62 | token_sort: 62
+برونشيكم     vs برونشيكم     -> 1st_word: 100 | token_set: 87 | token_sort: 59
+جوسبرين      vs جوسبرين      -> 1st_word: 100 | token_set: 68 | token_sort: 68
+سيديبروكت    vs سيديبروك     -> 1st_word: 94 | token_set: 70 | token_sort: 70
+كلوسول       vs كولوسول      -> 1st_word: 92 | token_set: 51 | token_sort: 51
+برايم        vs برايم        -> 1st_word: 100 | token_set: 82 | token_sort: 82
+توب          vs توب          -> 1st_word: 100 | token_set: 45 | token_sort: 41
+كيتولاك      vs كيتولاك      -> 1st_word: 100 | token_set: 74 | token_sort: 74
+سبازموفري    vs سبازموفري    -> 1st_word: 100 | token_set: 81 | token_sort: 81
+

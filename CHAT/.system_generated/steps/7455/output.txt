@@ -1,0 +1,5 @@
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":830,"LineContent":"@app.post(\"/v1/chat/completions\", dependencies=[Depends(verify_api_key)])"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":920,"LineContent":"@app.post(\"/v1/responses\", dependencies=[Depends(verify_api_key)])"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":921,"LineContent":"@app.post(\"/responses\", dependencies=[Depends(verify_api_key)])"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":1076,"LineContent":"@app.post(\"/v1/completions\", dependencies=[Depends(verify_api_key)])"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":1186,"LineContent":"@app.post(\"/shutdown\")"}

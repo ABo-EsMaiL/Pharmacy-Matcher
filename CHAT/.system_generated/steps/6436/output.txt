@@ -1,0 +1,6 @@
+
+The command exited with code 1.
+Output:
+ERROR: The process with PID 3524 could not be terminated.
+Reason: Access is denied.
+

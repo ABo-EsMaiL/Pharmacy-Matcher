@@ -1,0 +1,240 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio-vision\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -658,8 +658,8 @@
+ 
+         logger.info(
+             f"[{case_count} cases] Prompt submitted ({len(prompt)} chars). "
+-            f"Timeout Tier: {t_cfg['tier']} | Start: {t_cfg['initial_start_timeout']:.0f}s | "
+-            f"First Token: {t_cfg['first_token_timeout']:.0f}s | Stagnation: {t_cfg['stagnation_timeout']:.0f}s | "
++            f"Mode: {t_cfg['tier']} | Start Grace: {t_cfg['initial_start_timeout']:.0f}s | "
++            f"Trigger: Cancel Generation -> Disabled | Settle: {t_cfg['stability_duration']:.1f}s | "
+             f"Ceiling: {t_cfg['hard_ceiling']:.0f}s"
+         )
+ 
+@@ -666,13 +666,46 @@
+-            // 1. Generation Running Check (Stop button or active spinners)
+-            const stopBtn = Array.from(document.querySelectorAll('button')).find(b => {
+-                const a = (b.getAttribute('aria-label') || '').toLowerCase();
+-                const t = (b.innerText || b.textContent || '').trim().toLowerCase();
+-                return (a === 'stop' || a.includes('stop run') || a.includes('stop generat') || a === 'cancel run' ||
+-                        t === 'stop' || t.includes('stop run') || t.includes('stop generat') || t === 'cancel run') && !b.disabled;
+-            });
+-            // Also check if there is an active spinner indicating thinking
+-            const hasSpinner = document.querySelector('mat-progress-spinner, .typing-indicator, ms-spinner, .thought-activity-host[aria-expanded="true"]') !== null;
+-            const isRunning = Boolean(stopBtn) || hasSpinner;
++            // 1. Generation Running Check (Cancel generation button, Stop button, or active spinners)
++            const allButtons = Array.from(document.querySelectorAll('button'));
++            
++            // Look for Cancel generation / Stop button
++            const cancelBtn = allButtons.find(b => {
++                const aria = (b.getAttribute('aria-label') || '').toLowerCase();
++                const tooltip = (
++                    b.getAttribute('mattooltip') || 
++                    b.getAttribute('mat-tooltip') || 
++                    b.getAttribute('data-tooltip') || 
++                    b.getAttribute('title') || ''
++                ).toLowerCase();
++                const text = (b.innerText || b.textContent || '').trim().toLowerCase();
++                
++                const isCancel = (
++                    aria.includes('cancel generation') || 
++                    tooltip.includes('cancel generation') || 
++                    text.includes('cancel generation') ||
++                    aria === 'stop' || aria.includes('stop run') || aria.includes('stop generat') || aria === 'cancel run' ||
++                    text === 'stop' || text.includes('stop run') || text.includes('stop generat') || text === 'cancel run' || 
++                    tooltip.includes('stop')
++                );
++                
++                const isEnabled = !b.disabled && b.getAttribute('aria-disabled') !== 'true' && !b.classList.contains('mat-button-disabled');
++                return isCancel && isEnabled;
++            });
++
++            // Active spinners indicating model thinking or DOM streaming
++            const hasSpinner = document.querySelector(
++                'mat-progress-spinner, .typing-indicator, ms-spinner, .thought-activity-host[aria-expanded="true"], [data-test-id*="spinner" i]'
++            ) !== null;
++
++            // Check if Run button is present and currently disabled (indicates turn finished / prompt textarea empty)
++            const runBtn = document.querySelector('button.ctrl-enter, button[mattooltipclass="run-button-tooltip"]') ||
++                           allButtons.find(b => {
++                               const a = (b.getAttribute('aria-label') || '').toLowerCase();
++                               const t = (b.innerText || '').trim().toLowerCase();
++                               return t === 'run' || a === 'run';
++                           });
++            
++            const isRunDisabled = runBtn ? (runBtn.disabled || runBtn.getAttribute('aria-disabled') === 'true' || runBtn.classList.contains('mat-button-disabled')) : false;
++
++            const isRunning = Boolean(cancelBtn) || hasSpinner;
+ 
+             // Check for internal errors and tool call errors
+             let hasError = false;
+@@ -757,10 +757,8 @@
+             let isDone = !isRunning;
+ 
+             modelTurnsToExtract.forEach(currentNode => {
+-                // Extract text from specific content chunks to avoid UI garbage and thoughts
+                 const chunks = Array.from(currentNode.querySelectorAll('ms-text-chunk, ms-code-block, ms-code-chunk, .cmark-node'));
+                 if (chunks.length > 0) {
+-                    // Filter out nested chunks to prevent duplicates (e.g. cmark-node inside ms-text-chunk)
+                     const topLevelChunks = chunks.filter(c => {
+                         return !c.parentElement.closest('ms-text-chunk, ms-code-block, ms-code-chunk, .cmark-node');
+                     });
+@@ -767,5 +767,4 @@
+                     topLevelChunks.forEach(chunk => {
+-                        // Skip thoughts entirely
+                         if (chunk.closest('ms-thought-chunk, .thought-activity-host')) return;
+                         
+                         const selectorsToRemove = '.mat-expansion-panel-header, .code-block-header, button, mat-icon, .material-symbols-outlined, ms-citation-chunk, .citation';
+@@ -772,4 +772,3 @@
+-                        // Temporarily hide elements we don't want to extract
+                         const hiddenStates = [];
+                         chunk.querySelectorAll(selectorsToRemove).forEach(n => {
+                             hiddenStates.push({ node: n, display: n.style.display });
+@@ -782,7 +782,6 @@
+                                 fullText += t;
+                             }
+                         } finally {
+-                            // Restore visibility
+                             hiddenStates.forEach(item => {
+                                 item.node.style.display = item.display;
+                             });
+@@ -794,6 +794,8 @@
+                 text: fullText.trim(),
+                 is_running: isRunning,
+                 is_done: isDone,
++                has_cancel_btn: Boolean(cancelBtn),
++                run_btn_disabled: Boolean(isRunDisabled),
+                 has_error: false,
+                 error_text: "",
+                 new_model_turn_started: newModelTurnStarted,
+@@ -859,7 +859,7 @@
+                         break
+ 
+             # ------------------------------------------------------------------
+-            # 2. State: RESPONSE_IN_PROGRESS
++            # 2. State: RESPONSE_IN_PROGRESS (Trigger-Driven Streaming)
+             # ------------------------------------------------------------------
+             if current_state == self.STATE_RESPONSE_IN_PROGRESS:
+                 # Milestone: First token/character detected
+@@ -875,38 +875,29 @@
+                     yield {"delta": delta, "text": current_text}
+                 else:
+                     # No character growth on this tick
+-                    if len(current_text) == 0:
+-                        # Model is still thinking / waiting to emit first token
+-                        if (now - t_submit) > t_cfg["first_token_timeout"]:
+-                            if not is_running:
+-                                logger.error(f"[{case_count} cases] Model stopped without producing tokens after {now - t_submit:.1f}s.")
+-                                yield {"delta": "", "text": f"[Error: FIRST_TOKEN_TIMEOUT - Model finished without producing any text after {now - t_submit:.1f}s]"}
+-                            else:
+-                                logger.error(f"[{case_count} cases] Model thinking exceeded first_token_timeout ({t_cfg['first_token_timeout']:.0f}s).")
+-                                yield {"delta": "", "text": f"[Error: FIRST_TOKEN_TIMEOUT - Model stayed in thinking for >{t_cfg['first_token_timeout']:.0f}s without generating tokens]"}
+-                            break
+-                    else:
+-                        # Text has been emitted (len > 0), but did not grow on this tick
+-                        if not is_running:
+-                            # Generation has stopped running: check stability duration
+-                            if stability_start_time is None:
+-                                stability_start_time = now
+-                            elif (now - stability_start_time) >= t_cfg["stability_duration"]:
+-                                # Stable for required duration!
+-                                current_state = self.STATE_RESPONSE_COMPLETED
+-                                logger.info(
+-                                    f"[{case_count} cases] State -> RESPONSE_COMPLETED via stability "
+-                                    f"({t_cfg['stability_duration']:.1f}s stable at {len(current_text)} chars)"
+-                                )
+-                                yield {"delta": "", "text": current_text}
+-                                break
+-                        else:
+-                            # is_running is True: NEVER timeout while running, EXCEPT stagnation guardrail
+-                            stability_start_time = None
+-                            if (now - t_last_growth) > t_cfg["stagnation_timeout"]:
+-                                logger.error(f"[{case_count} cases] Stagnation: no character growth for {t_cfg['stagnation_timeout']:.0f}s while running.")
+-                                yield {"delta": "", "text": f"[Error: STAGNATION_TIMEOUT - Text generation stalled for {t_cfg['stagnation_timeout']:.0f}s]"}
+-                                break
++                    if is_running:
++                        # ------------------------------------------------------------------
++                        # CHECK 1 (Trigger active: Cancel generation button or spinner active):
++                        # As long as is_running is True, the model is actively thinking or
++                        # streaming tokens. DO NOT TIMEOUT! NEVER ABORT!
++                        # ------------------------------------------------------------------
++                        stability_start_time = None
++                    else:
++                        # ------------------------------------------------------------------
++                        # CHECK 1 TRANSITION:
++                        # Button transitioned out of 'Cancel generation' and spinners stopped.
++                        # Wait stability_duration to allow final DOM flush.
++                        # ------------------------------------------------------------------
++                        if stability_start_time is None:
++                            stability_start_time = now
++                        elif (now - stability_start_time) >= t_cfg["stability_duration"]:
++                            current_state = self.STATE_RESPONSE_COMPLETED
++                            logger.info(
++                                f"[{case_count} cases] State -> RESPONSE_COMPLETED via trigger "
++                                f"(Button transitioned to finished/disabled; stable for {t_cfg['stability_duration']:.1f}s at {len(current_text)} chars)"
++                            )
++                            yield {"delta": "", "text": current_text}
++                            break
+ 
+                     # Always yield the current state so non-streaming callers can access text
+                     yield {"delta": "", "text": current_text}
+@@ -918,6 +918,47 @@
+                 yield {"delta": "", "text": f"[Error: HARD_CEILING_TIMEOUT - Request exceeded safe upper bound {t_cfg['hard_ceiling']:.0f}s]"}
+ 
+         # ----------------------------------------------------------------------
++        # CHECK 2: Response Structure & Completeness Validation
++        # ----------------------------------------------------------------------
++        validation_error = None
++        if current_state == self.STATE_RESPONSE_COMPLETED:
++            trimmed_text = prev_text.strip()
++            if not trimmed_text:
++                validation_error = "EMPTY_RESPONSE: Model finished generating but no text was captured from DOM."
++            else:
++                # If prompt expected JSON / structured data
++                expects_json = ('"items"' in prompt or '"cases"' in prompt or 'json' in prompt.lower() or '{' in prompt)
++                if expects_json:
++                    is_valid_json = False
++                    try:
++                        json.loads(trimmed_text)
++                        is_valid_json = True
++                    except Exception:
++                        try:
++                            fenced = re.sub(r"^```(?:json)?\s*", "", trimmed_text, flags=re.MULTILINE)
++                            fenced = re.sub(r"```\s*$", "", fenced, flags=re.MULTILINE).strip()
++                            json.loads(fenced)
++                            is_valid_json = True
++                        except Exception:
++                            m = re.search(r'\{.*\}', trimmed_text, re.DOTALL) or re.search(r'\[.*\]', trimmed_text, re.DOTALL)
++                            if m:
++                                try:
++                                    json.loads(m.group(0))
++                                    is_valid_json = True
++                                except Exception:
++                                    pass
++
++                    if not is_valid_json:
++                        if not (trimmed_text.endswith('}') or trimmed_text.endswith(']')):
++                            validation_error = f"STREAM_TRUNCATED: Response ended abruptly without closing JSON structure (chars: {len(prev_text)})."
++                        else:
++                            validation_error = f"INVALID_JSON_RESPONSE: Response completed but could not be parsed as valid JSON (chars: {len(prev_text)})."
++
++        if validation_error:
++            logger.error(f"[{case_count} cases] [CHECK 2 VALIDATION FAILED] {validation_error}")
++            yield {"delta": "", "text": f"[Error: {validation_error}]"}
++
++        # ----------------------------------------------------------------------
+         # Detailed Timing Milestones Logging
+         # ----------------------------------------------------------------------
+         total_duration = time.time() - t_submit
+@@ -939,7 +939,7 @@
+             f"{case_count} cases | "
+             f"first token: {first_token_str} | "
+             f"completed: {completed_str} | "
+-            f"timeout: {t_cfg['first_token_timeout']:.0f}s"
++            f"mode: {t_cfg['tier']}"
+         )
+         logger.info(f"[TIMING] {timing_summary}")
+         logger.info(
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

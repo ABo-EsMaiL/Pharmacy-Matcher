@@ -1,0 +1,19 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\run_conda.bat. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -3,8 +3,11 @@
+ cd /d "%~dp0"
+ 
+ echo Running in Developer Mode (Conda)...
+-:: This uses the globally active python in your Conda terminal
+-python desktop_app\app.py
++if exist "D:\miniconda3\envs\venv\python.exe" (
++    "D:\miniconda3\envs\venv\python.exe" desktop_app\app.py
++) else (
++    python desktop_app\app.py
++)
+ 
+ if %ERRORLEVEL% NEQ 0 (
+     echo.
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,47 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1047,8 +1047,6 @@
+ }
+ 
+ // --- Drag & Drop Logic ---
+-window.activeDragZone = null;
+-
+ function processSelectedFiles(files, targetZone) {
+     const validShortageExts = ['.pdf', '.xlsx', '.xls', '.csv'];
+     const validWarehouseExts = ['.pdf', '.xlsx', '.xls', '.csv', '.json'];
+@@ -1081,32 +1081,6 @@
+     }
+ }
+ 
+-async function handleNativeDrop(filesOverride) {
+-    try {
+-        let files = filesOverride;
+-        if (!files) {
+-            const filesStr = await window.pywebview.api.get_dropped_files();
+-            files = JSON.parse(filesStr);
+-        }
+-        
+-        if (files && files.length > 0) {
+-            const zone = window.activeDragZone || 'shortage'; // Default to shortage if unknown
+-            processSelectedFiles(files, zone);
+-        }
+-    } catch (e) {
+-        console.error("Error handling native drop:", e);
+-    } finally {
+-        ['zone-shortage', 'zone-warehouse'].forEach(id => {
+-            const zone = document.getElementById(id);
+-            if(zone) {
+-                zone.style.borderColor = '';
+-                zone.style.background = '';
+-            }
+-        });
+-        window.activeDragZone = null;
+-    }
+-}
+-
+ function setupDragAndDrop() {
+     const zones = [
+         { id: 'zone-shortage', type: 'shortage' },
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

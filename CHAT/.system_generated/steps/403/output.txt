@@ -1,0 +1,20 @@
+{"name":".env","sizeBytes":"107"}
+{"name":".env.example","sizeBytes":"75"}
+{"name":".gitignore","sizeBytes":"306"}
+{"name":"Check_out_this_chat.md","sizeBytes":"71465"}
+{"name":"data","isDir":true}
+{"name":"desktop_app","isDir":true}
+{"name":"dummy.txt","sizeBytes":"143"}
+{"name":"fast_main.py","sizeBytes":"2196"}
+{"name":"finalize.py","sizeBytes":"2962"}
+{"name":"main.py","sizeBytes":"3067"}
+{"name":"output","isDir":true}
+{"name":"requirements.txt","sizeBytes":"91"}
+{"name":"run.bat","sizeBytes":"236"}
+{"name":"setup.bat","sizeBytes":"2934"}
+{"name":"src","isDir":true}
+{"name":"transform-result-5adb330b-3b30-4894-9d61-d31e1197080a.json","sizeBytes":"70819"}
+{"name":"transform-result-f5254d99-e492-48f1-8a36-1688af690395.json","sizeBytes":"12437"}
+{"name":"vba_macro.txt","sizeBytes":"3256"}
+
+Summary: This directory contains 4 subdirectories and 14 files.

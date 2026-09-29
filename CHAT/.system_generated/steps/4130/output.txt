@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Candidates for 'جرانتريل 3مجم 6 امبول س ج': [{'id': 'WH_00174', 'name': 'جرانتيل امبول مجم تاريخ بعيد', 'score': 0.4690325580876817, 'brand_sim': 93.33333333333333}, {'id': 'WH_00202', 'name': 'روبانتيك ٤٥ كبسولة/امبول', 'score': 0.21533355312349575, 'brand_sim': 62.5}]
+Found in Makroumi: {'id': 'WH_00174', 'name': 'جرانتيل امبول مجم تاريخ بعيد'}
+

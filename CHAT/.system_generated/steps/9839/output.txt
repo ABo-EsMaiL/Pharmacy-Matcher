@@ -1,0 +1,1 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":12,"LineContent":"    hasher = hashlib.md5()"}

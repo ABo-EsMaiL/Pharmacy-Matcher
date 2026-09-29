@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\dist_production\src\output\excel_writer.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -160,7 +160,7 @@
+     ws_summary.append(["لم يُعثر عليها", "=MAX(0, COUNTA('لم يُعثر عليه'!A:A)-1)", "=IF(B3>0, B5/B3, 0)"])
+ 
+     # Row 6: تحتاج مراجعة
+-    ws_summary.append(["تحتاج مراجعة", "=MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)", "=IF(B3>0, B6/B3, 0)"])
++    ws_summary.append(["تحتاج مراجعة", "=MAX(0, COUNTA('يحتاج مراجعة'!B:B)-1)", "=IF(B3>0, B6/B3, 0)"])
+ 
+     # Row 7: صف فارغ
+     ws_summary.append([])
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

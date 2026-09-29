@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+
+desktop_app\templates\index.html:146:html[dir="ltr"] .nav-item {
+desktop_app\templates\index.html:149:html[dir="ltr"] .nav-item:hover {
+desktop_app\templates\index.html:335:.nav-item {
+desktop_app\templates\index.html:355:.nav-item i {
+desktop_app\templates\index.html:361:.nav-item:hover {
+
+
+

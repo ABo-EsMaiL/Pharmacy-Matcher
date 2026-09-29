@@ -1,0 +1,100 @@
+                            <span class="stat-title">تمت المطابقة بنجاح</span>
+
+                            <div class="stat-flex">
+
+                                <strong id="stat-matched" class="stat-value">0</strong>
+
+                                <span id="stat-matched-pct" class="stat-badge">0%</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card stat-warning">
+
+                        <div class="stat-icon"><i class="ph-fill ph-warning"></i></div>
+
+                        <div class="stat-info">
+
+                            <span class="stat-title">يحتاج مراجعة (غير مؤكد)</span>
+
+                            <div class="stat-flex">
+
+                                <strong id="stat-review" class="stat-value">0</strong>
+
+                                <span id="stat-review-pct" class="stat-badge">0%</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card stat-danger">
+
+                        <div class="stat-icon"><i class="ph-fill ph-x-circle"></i></div>
+
+                        <div class="stat-info">
+
+                            <span class="stat-title">غير متوفر في المخازن</span>
+
+                            <div class="stat-flex">
+
+                                <strong id="stat-notfound" class="stat-value">0</strong>
+
+                                <span id="stat-notfound-pct" class="stat-badge">0%</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="results-workflow">
+
+                    <h3>خطوات المراجعة النهائية:</h3>
+
+                    <div class="workflow-steps">
+
+                        <div class="step-box">
+
+                            <div class="step-num">1</div>
+
+                            <h4>افتح ملف الإكسيل</h4>
+
+                            <p>اضغط على الزر لفتح الملف، ثم اذهب لشيت "يحتاج مراجعة".</p>
+
+                            <button class="btn btn-outline" onclick="openExcel()"><i class="ph-fill ph-microsoft-excel-logo"></i> فتح الإكسيل</button>
+
+                        </div>
+
+                        <div class="step-box">
+
+                            <div class="step-num">2</div>
+
+                            <h4>راجع واتخذ القرار</h4>
+
+                            <p>اختر (✅ مطابق) أو (❌ غير مطابق) لكل صنف، ثم احفظ الملف وأغلقه.</p>
+
+                        </div>
+
+                        <div class="step-box">
+
+                            <div class="step-num">3</div>
+
+                            <h4>طبق التعديلات</h4>
+
+                            <p>اضغط هنا لنقل الأصناف لشيتات المخازن وتنظيف القائمة.</p>
+
+                            <button class="btn btn-primary" onclick="applyReviews()"><i class="ph-fill ph-magic-wand"></i> تنفيذ التعديلات</button>
+
+                        </div>
+
+                    </div>
+

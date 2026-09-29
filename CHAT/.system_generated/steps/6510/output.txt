@@ -1,0 +1,28 @@
+
+The command exited with code 0.
+Output:
+
+desktop_app\templates\index.html:1262:                <button class="nav-item" onclick="showScreen('screen-servers', 
+this); loadServersUI(); loadServerLogs();">
+desktop_app\templates\index.html:1268:                <div class="server-status-card" style="cursor: pointer;" 
+onclick="showScreen('screen-servers'); loadServersUI();" title="اضغط لفتح إدارة السيرفرات">
+desktop_app\templates\index.html:1293:                    <div id="top-bar-server-badge" class="server-badge-pill 
+stopped" style="cursor: pointer;" onclick="showScreen('screen-servers'); loadServersUI();" title="اضغط لإدارة 
+السيرفرات">
+desktop_app\templates\index.html:1316:                <div class="active-server-home-bar" 
+onclick="showScreen('screen-servers'); loadServersUI();" style="cursor: pointer; background: #f0fdf4; border: 1.5px 
+solid #86efac; border-radius: 12px; padding: 12px 18px; margin-bottom: 24px; display: flex; align-items: center; 
+justify-content: space-between; transition: all 0.2s ease;">
+desktop_app\templates\index.html:1539:                                <button type="button" class="btn btn-primary" 
+onclick="showScreen('screen-servers'); loadServersUI();">
+desktop_app\templates\index.html:1605:                    <button class="btn btn-outline" 
+style="border-color:rgba(255,255,255,0.7); color:white;" onclick="loadServersUI()">
+desktop_app\templates\index.html:2996:        loadServersUI();
+desktop_app\templates\index.html:3020:async function loadServersUI() {
+desktop_app\templates\index.html:3156:        await loadServersUI();
+desktop_app\templates\index.html:3169:            await loadServersUI();
+desktop_app\templates\index.html:3259:        await loadServersUI();
+desktop_app\templates\index.html:3308:                loadServersUI();
+
+
+

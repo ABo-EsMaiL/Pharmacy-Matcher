@@ -1,0 +1,33 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1092,11 +1092,11 @@
+                             <i class="ph-fill ph-clipboard-text"></i>
+                             <h3 data-i18n="shortages_title">1. ملفات النواقص</h3>
+                         </div>
+-                        <div class="drop-zone" id="zone-shortage">
++                        <div class="drop-zone" id="zone-shortage" onclick="selectFiles('shortage')">
+                             <i class="ph ph-upload-simple drop-icon"></i>
+                             <h4 data-i18n="shortages_drop_title">اضغط لاختيار الملفات</h4>
+                             <p data-i18n="shortages_drop_sub">(يدعم PDF / Excel)</p>
+-                            <button class="btn btn-outline" onclick="selectFiles('shortage')" data-i18n="browse_files">تصفح الملفات</button>
++                            <button class="btn btn-outline" onclick="event.stopPropagation(); selectFiles('shortage')" data-i18n="browse_files">تصفح الملفات</button>
+                         </div>
+                         <ul id="list-shortage" class="file-list"></ul>
+                     </div>
+@@ -1106,11 +1106,11 @@
+                             <i class="ph-fill ph-buildings"></i>
+                             <h3 data-i18n="warehouses_title">2. قوائم المخازن</h3>
+                         </div>
+-                        <div class="drop-zone" id="zone-warehouse">
++                        <div class="drop-zone" id="zone-warehouse" onclick="selectFiles('warehouse')">
+                             <i class="ph ph-upload-simple drop-icon"></i>
+                             <h4 data-i18n="warehouses_drop_title">اضغط لاختيار الملفات</h4>
+                             <p data-i18n="warehouses_drop_sub">(يدعم PDF / Excel / JSON)</p>
+-                            <button class="btn btn-outline" onclick="selectFiles('warehouse')" data-i18n="browse_files">تصفح الملفات</button>
++                            <button class="btn btn-outline" onclick="event.stopPropagation(); selectFiles('warehouse')" data-i18n="browse_files">تصفح الملفات</button>
+                         </div>
+                         <ul id="list-warehouse" class="file-list"></ul>
+                     </div>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

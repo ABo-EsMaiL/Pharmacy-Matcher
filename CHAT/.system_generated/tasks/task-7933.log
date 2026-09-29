@@ -1,0 +1,3 @@
+Sending test request...
+Status: 200 in 11.91s
+Response: {"id":"chatcmpl-f39c8804aba8","object":"chat.completion","created":1790268324,"model":"gemini-3.8-flash","choices":[{"index":0,"message":{"role":"assistant","content":"{\"message\": \"pong\"}"},"finish_reason":"stop"}]}

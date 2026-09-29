@@ -1,0 +1,11 @@
+
+The command exited with code 1.
+Output:
+Start-Process : This command cannot be run due to the error: The request is not supported.
+At line:1 char:1
++ Start-Process cmd -ArgumentList '/c D:\AI_Engineer\Pharmacy-agy\scrip ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process], InvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
+

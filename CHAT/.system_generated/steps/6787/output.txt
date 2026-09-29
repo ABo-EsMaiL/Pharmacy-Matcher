@@ -1,0 +1,1 @@
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":137,"LineContent":"            thinking_select = self.page.locator('mat-select[aria-label=\"Thinking Level\"]')"}

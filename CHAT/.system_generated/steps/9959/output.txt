@@ -1,0 +1,20 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -149,10 +149,13 @@
+             "local_api_url": "http://127.0.0.1:8001/v1/chat/completions",
+             "local_api_key": "[REDACTED_CREDENTIAL]",
+             "local_model": "gemini-3.8-flash",
++            "vision_api_url": "http://127.0.0.1:8001/v1/chat/completions",
++            "vision_api_key": "[REDACTED_CREDENTIAL]",
++            "vision_model": "gemini-3.8-flash",
+             "active_server": "gaistudio",
+             "msemax_dir": r"D:\AI_Engineer\MSEMAX",
+             "msemax_chatgpt_dir": r"D:\AI_Engineer\MSEMAX",
+-            "msemax_gaistudio_dir": r"D:\AI_Engineer\MSEMAX-GAIStudio",
++            "msemax_gaistudio_dir": r"D:\AI_Engineer\MSEMAX-GAIStudio-vision",
+             "unstructured_profile": "balanced"
+         }
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

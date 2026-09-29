@@ -1,0 +1,33 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\parse_dom_json.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1,6 +1,6 @@
+ import re
+ import json
+-from bs4 import BeautifulSoup
++import html
+ 
+ with open(r"C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\user_raw_dom.txt", "r", encoding="utf-8") as f:
+     html_content = f.read()
+@@ -7,14 +7,11 @@
+-# Let's extract all <code> blocks or code blocks
+-soup = BeautifulSoup(html_content, "html.parser")
+-code_blocks = soup.find_all("code")
+-print(f"Found {len(code_blocks)} <code> blocks in HTML.")
++# Extract code blocks using regex
++code_raw_blocks = re.findall(r'<code[^>]*>(.*?)</code>', html_content, re.DOTALL)
++print(f"Found {len(code_raw_blocks)} <code> blocks in HTML.")
+ 
+ gemini_extracted_items = []
+ 
+-for i, cb in enumerate(code_blocks):
+-    text = cb.get_text()
+-    # clean up html entities or formatting
+-    text = text.strip()
++for i, cb in enumerate(code_raw_blocks):
++    text = html.unescape(re.sub(r'<[^>]+>', '', cb)).strip()
+     if '"items":' in text or '"item_name_raw":' in text:
+         print(f"\n--- Code block {i+1} has JSON! Length: {len(text)} ---")
+         try:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

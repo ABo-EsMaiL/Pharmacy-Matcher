@@ -1,0 +1,24 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1556,16 +1556,8 @@
+                     </button>
+                 </div>
+                 
+-                <!-- System Logs Viewer -->
+-                <div class="settings-card" style="margin-top: 32px; border-color: var(--border);">
+-                    <div class="card-header" style="background: var(--text-main); color: white;">
+-                        <i class="ph-fill ph-terminal-window"></i>
+-                        <h3 data-i18n="system_logs_title">سجل النظام (System Logs)</h3>
+-                    </div>
+-                    <div style="background: #1e1e1e; padding: 12px;">
+-                        <textarea id="system-logs" readonly style="width: 100%; height: 250px; background: #1e1e1e; color: #00ff00; border: none; font-family: monospace; font-size: 13px; outline: none; resize: vertical; direction: ltr; text-align: left;"></textarea>
+-                    </div>
+-                </div>
++                <!-- Hidden textarea to retain backward JS compatibility without cluttering Settings UI -->
++                <textarea id="system-logs" style="display: none;"></textarea>
+             </div>
+ 
+             <!-- سجل النظام (Terminal) -->
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

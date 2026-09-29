@@ -1,0 +1,18 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+GET https://transform.unstructured.io/files -> 404
+GET https://transform.unstructured.io/api/v2/files -> 404
+GET https://transform.unstructured.io/v2/files -> 404
+GET https://transform.unstructured.io/uploads -> 404
+GET https://transform.unstructured.io/api/v2/uploads -> 404
+GET https://transform.unstructured.io/jobs -> 404
+GET https://transform.unstructured.io/api/v2/jobs -> 200
+   Response: {"jobs":[],"next_cursor":null}
+GET https://transform.unstructured.io/documents -> 404
+GET https://transform.unstructured.io/api/v2/documents -> 404
+GET https://transform.unstructured.io/history -> 404
+GET https://transform.unstructured.io/api/v2/history -> 404
+

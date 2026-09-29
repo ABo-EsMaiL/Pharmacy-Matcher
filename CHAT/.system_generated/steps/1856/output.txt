@@ -1,0 +1,91 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1720,8 +1720,9 @@
+ }
+ 
+ async function submitProcess() {
++    const t = I18N[currentLang] || I18N.ar;
+     if (selectedShortageFiles.length === 0 || selectedWarehouseFiles.length === 0) {
+-        showToast('يرجى اختيار ملف نواقص وملف مخزن واحد على الأقل', 'error');
++        showToast(t.select_at_least_one, 'error');
+         return;
+     }
+     
+@@ -1730,8 +1730,9 @@
+     // UI Loading state
+     btn.classList.add('hidden');
+     progressModal.style.display = 'flex';
+-    document.getElementById('progress-text').innerText = 'جاري تهيئة العملية...';
++    document.getElementById('progress-text').innerText = t.progress_init;
+     document.getElementById('progress-bar-fill').style.width = '5%';
++    startProgressTimer();
+     
+     const termEl = document.getElementById('pipeline-log-terminal');
+     if (termEl) termEl.innerHTML = '[System] Started pipeline...\n';
+@@ -1745,7 +1745,7 @@
+             
+             // If the backend detected an identical exact match that was already completed!
+             if (res.existing) {
+-                showToast('هذه العملية مسجلة بالفعل، جاري عرض النتائج...', 'info');
++                showToast(t.process_existing, 'info');
+                 // Simulate process_complete event
+                 setTimeout(() => {
+                     window.dispatchEvent(new CustomEvent('process_complete', {
+@@ -1757,17 +1757,19 @@
+                 }, 500);
+             } else {
+                 // Background process started
+-                showToast('بدأت العملية بنجاح في الخلفية', 'success');
+-            }
+-        } else {
+-            showToast('خطأ: ' + res.error, 'error');
++                showToast(t.toast_started, 'success');
++            }
++        } else {
++            showToast((currentLang === 'en' ? 'Error: ' : 'خطأ: ') + res.error, 'error');
+             btn.classList.remove('hidden');
+             progressModal.style.display = 'none';
+-        }
+-    } catch (error) {
+-        showToast('حدث خطأ أثناء الاتصال', 'error');
+-        btn.classList.remove('hidden');
+-        progressModal.style.display = 'none';
++            stopProgressTimer();
++        }
++    } catch (error) {
++        showToast(currentLang === 'en' ? 'Connection error' : 'حدث خطأ أثناء الاتصال', 'error');
++        btn.classList.remove('hidden');
++        progressModal.style.display = 'none';
++        stopProgressTimer();
+     }
+ }
+ 
+@@ -1799,12 +1799,14 @@
+     if (data.process_id === currentProcessId) {
+         const btn = document.getElementById('btn-submit');
+         const progressModal = document.getElementById('progress-modal');
+-        
+-        btn.classList.remove('hidden');
+-        progressModal.style.display = 'none';
++        const t = I18N[currentLang] || I18N.ar;
++        
++        btn.classList.remove('hidden');
++        progressModal.style.display = 'none';
++        stopProgressTimer();
+         
+         if (data.success) {
+-            showToast('تمت المطابقة بنجاح!', 'success');
++            showToast(t.toast_matching_done, 'success');
+             if (data.stats) {
+                 loadResults(data.stats);
+             }
+@@ -1811,5 +1811,5 @@
+         } else {
+-            showToast('فشلت عملية المطابقة: ' + data.error, 'error');
++            showToast((currentLang === 'en' ? 'Matching failed: ' : 'فشلت عملية المطابقة: ') + data.error, 'error');
+         }
+     }
+ });
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

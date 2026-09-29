@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+ايبيكوتيل: 0 found: []
+اتروفنت: 0 found: []
+ارميدكس: 0 found: []
+ازاثيوبرين: 0 found: []
+استيل: 0 found: []
+امرى: 0 found: []
+

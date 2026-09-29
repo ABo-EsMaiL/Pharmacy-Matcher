@@ -1,0 +1,115 @@
+
+The command exited with code 0.
+Output:
+<truncated 220 lines>
+❌ [HALLUCINATION / NOT FOUND] #48 Req: 'فيتا دي ثري4000ميكروفيلم'
+    Gemini claimed: 'فيتا دى ٤٠٠٠-٣ مجم لصقات'
+    Best real item in كيور فارما خاص: 'فیتا دی ۳-۴۰۰۰ مجم لصقات' (score: 70.8)
+⚠️ [SLIGHT ALTERATION] #49 Req: 'اوجرام457مجم بودره60مل'
+    Gemini claimed: 'اوجرام ٤٥٧مجم شراب'
+    Real item is  : 'اوجرام ٥٧ مجم شراب' (score: 94.4)
+❌ [HALLUCINATION / NOT FOUND] #50 Req: 'كولونا 3شريط'
+    Gemini claimed: 'كولونا ــ ٤شريط جديد'
+    Best real item in كيور فارما خاص: 'کلونتا - شریط جدید' (score: 68.4)
+⚠️ [SLIGHT ALTERATION] #51 Req: 'تريبليكسام10/2.5/10مجم15قرص'
+    Gemini claimed: 'تريبليكسام ١٠/٢٫٥/١٠ مجم ٣٠ قرص'
+    Real item is  : 'تریپلکسام ٠/٢/٥/١٠ مجم ٣٠ قرص' (score: 83.3)
+⚠️ [SLIGHT ALTERATION] #52 Req: 'دانست 4 مجم 3 امبول س ج'
+    Gemini claimed: 'دانست ٤مجم ٦ امبول س١٦٥'
+    Real item is  : 'داست ٤مجم ١ امپول ١٥' (score: 83.7)
+
+--- Checking المكرومي المنصورة ---
+⚠️ [SLIGHT ALTERATION] #1 Req: 'ميبو مرهم 15جم صغير س ج'
+    Gemini claimed: 'ميبو صغير'
+    Real item is  : 'ميو صغير' (score: 94.1)
+⚠️ [SLIGHT ALTERATION] #2 Req: 'سيالس 2قرص س ج'
+    Gemini claimed: 'سياليس ٢ قرص ٢٣٧ج'
+    Real item is  : 'سيباليكس ٣ قرص ٢٣٧ج' (score: 88.9)
+⚠️ [SLIGHT ALTERATION] #4 Req: 'لاكتيز 15 ملل نقط 750مجم'
+    Gemini claimed: 'لاكتيز نقط بالفم ١٥ مل ١٩٠ج'
+    Real item is  : 'لاكتيز نقط بالفم ٥ مل ١٩٠' (score: 96.2)
+⚠️ [SLIGHT ALTERATION] #5 Req: 'تادانيرفي5مجم20فيلم س ج'
+    Gemini claimed: 'تادانيرفى ٥ مجم سعر جديد٢٧٠ج'
+    Real item is  : 'تادانيرفي ٥ مجم سعر جديد ٢٧٠' (score: 92.9)
+⚠️ [SLIGHT ALTERATION] #6 Req: 'جابيميدرا 10مجم اقراص'
+    Gemini claimed: 'جابيمدرا ١٠ مجم'
+    Real item is  : 'جاميدرا ٢٥ مجم' (score: 75.9)
+⚠️ [SLIGHT ALTERATION] #7 Req: 'ايفاستين اقراص2 شريط س ج'
+    Gemini claimed: 'ايفاستين اقراص/سعر جديد'
+    Real item is  : 'إيناسين اقراص/سعر جديد' (score: 88.9)
+⚠️ [SLIGHT ALTERATION] #8 Req: 'سيرفيتولكا ادفانس 20كبسوله س ج'
+    Gemini claimed: 'سيرفيتولكا ادفانس ٢٠ كبسولة'
+    Real item is  : 'سيروفلوكا ادفانس ٢٠ كبسولة' (score: 90.6)
+⚠️ [SLIGHT ALTERATION] #9 Req: 'ايموكسكلاف642مجم شراب'
+    Gemini claimed: 'ايموكسكلاف٦٤٢٫٩شراب'
+    Real item is  : 'ايموكسكلاف ٤٢،١ شراب' (score: 82.1)
+⚠️ [SLIGHT ALTERATION] #10 Req: 'بروتولوك40مجم اقراص س ج'
+    Gemini claimed: 'بروتولوك ٤٠ ق سعر جديد'
+    Real item is  : 'بروتولك ٤٠ ، ٤ قرص سعر جديد' (score: 85.7)
+⚠️ [SLIGHT ALTERATION] #11 Req: 'امبوفير 5امبول س ج'
+    Gemini claimed: 'امبوفير امبول'
+    Real item is  : 'اميفير امبول' (score: 88.0)
+⚠️ [SLIGHT ALTERATION] #12 Req: 'نيوروفيت اقراص 3 شريط'
+    Gemini claimed: 'نيوروفيت اقراص سعر جديد'
+    Real item is  : 'نيروفيت اقراص سعر جديد' (score: 97.8)
+⚠️ [SLIGHT ALTERATION] #14 Req: 'اوجمنتين 625مجم اقراص'
+    Gemini claimed: 'اوجمنتين ٦٢٥مجم اقراص س.ج١١٧ج'
+    Real item is  : 'اوجمنتين ٦٢٥مجم اقراص س.ج ١١٧ج' (score: 98.3)
+⚠️ [SLIGHT ALTERATION] #15 Req: 'اسبوسيد 20قرص اطفال س ج'
+    Gemini claimed: 'اسبوسيد اطفال ٣٥جنية'
+    Real item is  : 'استوسيد اطفال ٣٥جنية' (score: 95.0)
+⚠️ [SLIGHT ALTERATION] #16 Req: 'جوسبرين اقراص 3شريط'
+    Gemini claimed: 'جوسبرين اقراص س.ج٨١ج'
+    Real item is  : 'جوسبرين اقراص س.ج ٨١ج' (score: 97.6)
+⚠️ [SLIGHT ALTERATION] #18 Req: 'جينوفيل 50قرص اوريجنال س ج'
+    Gemini claimed: 'جينوفيل اوريجينال ٥٠قرص ٣١٠ج'
+    Real item is  : 'جينوفيل اوريجينال ٣٠ قرص س.ج' (score: 85.7)
+⚠️ [SLIGHT ALTERATION] #19 Req: 'كاندلكان 4مجم 14 قرص س ج'
+    Gemini claimed: 'كاندلكان٤ سعر جديد'
+    Real item is  : 'كانداكان؛ ٨ سعر جديد' (score: 84.2)
+⚠️ [SLIGHT ALTERATION] #21 Req: 'سيبروسين500مجم10قرص س ج'
+    Gemini claimed: 'سيبروسين ٥٠٠ اقراص سعر جديد'
+    Real item is  : 'سيرورسين ٥٠٠ اقراص سعر جديد' (score: 96.3)
+⚠️ [SLIGHT ALTERATION] #22 Req: 'كوتارج 160/12.5مجم4شريط س ج'
+    Gemini claimed: 'كوتارج ١٦٠/١٢٫٥ ١٥٠ جنيه'
+    Real item is  : 'كوتارچ ١٥٠/١٠، ١٥٠ جنيه' (score: 80.9)
+❌ [HALLUCINATION / NOT FOUND] #23 Req: 'سيديرال بمبي10كيس س ج'
+    Gemini claimed: 'سيدرال بمبى ١٠ اكياس سعر جديد 125ج'
+    Best real item in المكرومي المنصورة: 'سيدرالين كبسول سعر جديد ١٢٥' (score: 62.3)
+⚠️ [SLIGHT ALTERATION] #24 Req: 'بايولجام60/100 8قرص'
+    Gemini claimed: 'بايولجام١٠٠/٦٠مجم ٨قرص١٩٢ج'
+    Real item is  : 'بايوجلام ١٠/٦٠، ٢٠مجم اقراص ١٩٢ج' (score: 79.3)
+⚠️ [SLIGHT ALTERATION] #25 Req: 'ليمتلس كروماكس كت30كيس س ج'
+    Gemini claimed: 'ليمتلس كروماكس كت ٣٠ كيس'
+    Real item is  : 'ليمتلس كروماماكس كت ٣٠ كبس' (score: 92.0)
+⚠️ [SLIGHT ALTERATION] #26 Req: 'كولوسلازين500 مجم20 قرص س ج'
+    Gemini claimed: 'كولوسلازين ٢٠ق'
+    Real item is  : 'كولوساندر ٢٠' (score: 76.9)
+⚠️ [SLIGHT ALTERATION] #27 Req: 'فنتال بخاخ العربية'
+    Gemini claimed: 'فنتال بخاخ الجديده /العربيه'
+    Real item is  : 'قنابل بجناح الجديد /العربية' (score: 77.8)
+⚠️ [SLIGHT ALTERATION] #28 Req: 'ماي سويت بيبي شراب س ج'
+    Gemini claimed: 'ماى سويت بيبى شراب/امون'
+    Real item is  : 'ماى سويت بيبي شراب/امون' (score: 95.7)
+⚠️ [SLIGHT ALTERATION] #29 Req: 'سيستون اقراص س ج'
+    Gemini claimed: 'سيستون سسعر ١٢٣ج'
+    Real item is  : 'سيبتوزون سعر ١٢٣ج' (score: 84.8)
+⚠️ [SLIGHT ALTERATION] #30 Req: 'بران كبسول س ج'
+    Gemini claimed: 'بران ك ميباكو'
+    Real item is  : 'بران اف ميباكو' (score: 88.9)
+❌ [HALLUCINATION / NOT FOUND] #31 Req: 'ابيكوجيل 180مل شراب س ج'
+    Gemini claimed: 'ابيكوجيل شراب/ابيكو'
+    Best real item in المكرومي المنصورة: 'ايكوجلش جل/ايبو' (score: 64.7)
+⚠️ [SLIGHT ALTERATION] #32 Req: 'كارنيتول بلس برطمان س ج'
+    Gemini claimed: 'ال كارنتين بلس ق س.ج١١٦ج'
+    Real item is  : 'ال كارنتين بلس ق س.ج ١١٦ج' (score: 98.0)
+❌ [HALLUCINATION / NOT FOUND] #33 Req: 'املوسازايد40/12.5/5مجم30قرص س ج'
+    Gemini claimed: 'املوسازايد٥//١٢٫٥/٤٠'
+    Best real item in المكرومي المنصورة: 'المولساريد ٥/٤٠/١٢/٥' (score: 65.0)
+⚠️ [SLIGHT ALTERATION] #34 Req: 'كولونا 3شريط'
+    Gemini claimed: 'كولونا اقراص ٩٢ج'
+    Real item is  : 'كولونا اقراص ٦٢ج' (score: 93.8)
+⚠️ [SLIGHT ALTERATION] #35 Req: 'سيستان قطره'
+    Gemini claimed: 'سيستان الترا سعر قديم'
+    Real item is  : 'سيدستان الترا سعر قديم' (score: 97.7)
+

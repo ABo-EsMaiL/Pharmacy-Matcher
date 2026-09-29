@@ -1,0 +1,301 @@
+{
+  "page": 5,
+  "items": [
+    {
+      "item_name_raw": "لاميكتال 100 ق/جلاكسو",
+      "trade_name": "لاميكتال",
+      "strength": "100",
+      "form": "أقراص",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "لاميكتال 50 ق3شريط/جلاكسو",
+      "trade_name": "لاميكتال",
+      "strength": "50",
+      "form": "أقراص",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ماء حقن 5 سم زجاج",
+      "trade_name": "ماء حقن",
+      "strength": "5 سم",
+      "form": "حقن",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ماريفان 1ملجم/جلاكسو",
+      "trade_name": "ماريفان",
+      "strength": "1 ملجم",
+      "form": "",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ماريفان 3 مجم/جلاكسو",
+      "trade_name": "ماريفان",
+      "strength": "3 مجم",
+      "form": "",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ماريفان 5 ملجم/جلاكسو",
+      "trade_name": "ماريفان",
+      "strength": "5 ملجم",
+      "form": "",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ماغنسيوم بلس ميباكو سعرجديد 75",
+      "trade_name": "ماغنسيوم بلس",
+      "strength": "",
+      "form": "",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "مالوكس شراب\\افنتس",
+      "trade_name": "مالوكس",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "مثيل تيكنو",
+      "trade_name": "مثيل تيكنو",
+      "strength": "",
+      "form": "",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "موتينورم شراب/جلاكسو",
+      "trade_name": "موتينورم",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ميبو مرهم صغير/جلفار",
+      "trade_name": "ميبو",
+      "strength": "",
+      "form": "مرهم",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ميبو مرهم وسط جلفار",
+      "trade_name": "ميبو",
+      "strength": "",
+      "form": "مرهم",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ميبوسى كريم ٢٥جم",
+      "trade_name": "ميبوسى",
+      "strength": "25 جم",
+      "form": "كريم",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ميتروفلاج محلول 24 باكو",
+      "trade_name": "ميتروفلاج",
+      "strength": "",
+      "form": "محلول",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ميتيفورمين 500 مجم",
+      "trade_name": "ميتيفورمين",
+      "strength": "500 مجم",
+      "form": "",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ميثيل فولات اورا ۳۰ ك",
+      "trade_name": "ميثيل فولات اورا",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ميديكسافلام امبول",
+      "trade_name": "ميديكسافلام",
+      "strength": "",
+      "form": "أمبول",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ميكستارد 100 وحده سعر جديد",
+      "trade_name": "ميكستارد",
+      "strength": "100 وحده",
+      "form": "",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "نازونوكس بخاخ رامكو",
+      "trade_name": "نازونوكس",
+      "strength": "",
+      "form": "بخاخ",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "نستوجين لبن اطفال مرحله 1",
+      "trade_name": "نستوجين",
+      "strength": "مرحله 1",
+      "form": "لبن",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "نو - يوريك 100 مجم اقراص\\ايبيكو",
+      "trade_name": "نو - يوريك",
+      "strength": "100 مجم",
+      "form": "أقراص",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "نوتوسيل شراب سعر جديد/كيما فارم",
+      "trade_name": "نوتوسيل",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "نوفونورم 1 مجم اقراص",
+      "trade_name": "نوفونورم",
+      "strength": "1 مجم",
+      "form": "أقراص",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "نولفادكس اقراص/استرا",
+      "trade_name": "نولفادكس",
+      "strength": "",
+      "form": "أقراص",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "نيتروماك ريتارد كبسول/التنشيط",
+      "trade_name": "نيتروماك ريتارد",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "هيالو فيم غسول نسائي۲۰۰مللی",
+      "trade_name": "هيالو فيم",
+      "strength": "200 مللى",
+      "form": "غسول",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "هيبوثينور 100 اقراص",
+      "trade_name": "هيبوثينور",
+      "strength": "100",
+      "form": "أقراص",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "هيبوثينور 50 اقراص",
+      "trade_name": "هيبوثينور",
+      "strength": "50",
+      "form": "أقراص",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "هيدروكورتيزون امبول",
+      "trade_name": "هيدروكورتيزون",
+      "strength": "",
+      "form": "أمبول",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "هيدروكين\\مينا",
+      "trade_name": "هيدروكين",
+      "strength": "",
+      "form": "",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "هيموكيون امبول/امون",
+      "trade_name": "هيموكيون",
+      "strength": "",
+      "form": "أمبول",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "وان تو ثرى شراب\\الكان فارما",
+      "trade_name": "وان تو ثرى",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ويندى فوار",
+      "trade_name": "ويندى",
+      "strength": "",
+      "form": "فوار",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "يوثيركس 50 مجم اقراص/امون 105 ج",
+      "trade_name": "يوثيركس",
+      "strength": "50 مجم",
+      "form": "أقراص",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "يوثيروكس 100 مجم 100 قرص",
+      "trade_name": "يوثيروكس",
+      "strength": "100 مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "يوثيروكس 50 عدد اقراص 100 سعر",
+      "trade_name": "يوثيروكس",
+      "strength": "50",
+      "form": "أقراص",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "يوروسولفين فوار سعر جديد النيل",
+      "trade_name": "يوروسولفين",
+      "strength": "",
+      "form": "فوار",
+      "source_page": 5,
+      "source_file": "السلام شبين.pdf"
+    }
+  ]
+}

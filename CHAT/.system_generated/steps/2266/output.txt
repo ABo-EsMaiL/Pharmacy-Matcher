@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\analyze_matches.py", line 6, in <module>
+    from src.fast_match.search import normalize_text
+ImportError: cannot import name 'normalize_text' from 'src.fast_match.search' (d:\AI_Engineer\Pharmacy-agy\src\fast_match\search.py)
+

@@ -1,0 +1,51 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -93,38 +93,20 @@
+ 
+ 
+ def parse_items_from_response(response: dict | list) -> list[dict]:
+-    """
+-    تحليل استجابة Unstructured API واستخراج أسماء الأصناف.
+-
+-    الاستراتيجية:
+-    1. التحقق من وجود بيانات مستخرجة في 'extracted_data'.
+-    2. البحث عن عناصر Table وتحليل HTML الجداول.
+-    3. الرجوع إلى تحليل المحتوى النصي.
+-
+-    Args:
+-        response: استجابة API (قاموس أو قائمة عناصر).
+-
+-    Returns:
+-        قائمة من القواميس بالشكل:
+-        {"item_name_raw": str, "source_page": int|None}
+-    """
+     elements = _normalize_response(response)
+ 
+-    # المحاولة 1: التحقق من extracted_data
+     items = _try_extracted_data(elements)
+     if items:
+-        print(f"  📊 تم استخراج {len(items)} صنف من extracted_data")
+-        return items
+-
+-    # المحاولة 2: تحليل جداول HTML
++        print(f"     -> Extracted {len(items)} items from structured data")
++        return items
++
+     items = _try_html_tables(elements)
+     if items:
+-        print(f"  📊 تم استخراج {len(items)} صنف من جداول HTML")
+-        return items
+-
+-    # المحاولة 3: تحليل المحتوى النصي
++        print(f"     -> Extracted {len(items)} items from HTML tables")
++        return items
++
+     items = _try_text_content(elements)
+-    print(f"  📊 تم استخراج {len(items)} صنف من المحتوى النصي")
++    print(f"     -> Extracted {len(items)} items from raw text content")
+     return items
+ 
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

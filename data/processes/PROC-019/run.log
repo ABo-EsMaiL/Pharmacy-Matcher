@@ -1,0 +1,201 @@
+
+============================================================
+[*] Processing Shortages files (1 file(s)) [PARALLEL WORKERS]
+============================================================
+
+[Shortages 1/1] Starting file: 0913.xlsx
+
+  -> [START] Processing file: 0913.xlsx (Type: .xlsx)
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+  -> [DONE] 0913.xlsx: 993 items extracted.
+
+============================================================
+[+] Completed Shortages: 993 items from 1 file(s)
+============================================================
+
+
+============================================================
+[*] Processing Warehouse files (6 file(s)) [PARALLEL WORKERS]
+============================================================
+
+[Warehouse 1/6] Starting file: السلام شبين.pdf
+
+  -> [START] Processing file: السلام شبين.pdf (Type: .pdf)
+
+============================================================
+[*] [VISION EXTRACTOR] File: السلام شبين.pdf
+============================================================
+  -> Total pages: 6
+  -> Cache location: processes\PROC-019\cache\vision\السلام_شبين_d44b79aaae
+  -> Found existing cache manifest (Completed pages: 6/6)
+[+] All 6 pages previously extracted in cache. Loading instantly...
+[+] Loaded 187 items from cache in 0.05s.
+  -> [DONE] السلام شبين.pdf: 187 items extracted.
+
+[Warehouse 2/6] Starting file: المكرومي المنصورة.pdf
+
+  -> [START] Processing file: المكرومي المنصورة.pdf (Type: .pdf)
+
+============================================================
+[*] [VISION EXTRACTOR] File: المكرومي المنصورة.pdf
+============================================================
+  -> Total pages: 4
+  -> Cache location: processes\PROC-019\cache\vision\المكرومي_المنصورة_9f96dd5050
+  -> Found existing cache manifest (Completed pages: 4/4)
+[+] All 4 pages previously extracted in cache. Loading instantly...
+[+] Loaded 504 items from cache in 0.05s.
+  -> [DONE] المكرومي المنصورة.pdf: 504 items extracted.
+
+[Warehouse 3/6] Starting file: الهضبة الاثنين نقدى0.pdf
+
+  -> [START] Processing file: الهضبة الاثنين نقدى0.pdf (Type: .pdf)
+
+============================================================
+[*] [VISION EXTRACTOR] File: الهضبة الاثنين نقدى0.pdf
+============================================================
+  -> Total pages: 22
+  -> Cache location: processes\PROC-019\cache\vision\الهضبة_الاثنين_نقدى0_6a3e48e076
+  -> Found existing cache manifest (Completed pages: 22/22)
+[+] All 22 pages previously extracted in cache. Loading instantly...
+[+] Loaded 1071 items from cache in 0.05s.
+  -> [DONE] الهضبة الاثنين نقدى0.pdf: 1071 items extracted.
+
+[Warehouse 4/6] Starting file: جملة العمروووو.pdf
+
+  -> [START] Processing file: جملة العمروووو.pdf (Type: .pdf)
+
+============================================================
+[*] [VISION EXTRACTOR] File: جملة العمروووو.pdf
+============================================================
+  -> Total pages: 1
+  -> Cache location: processes\PROC-019\cache\vision\جملة_العمروووو_0fbca8b95b
+  -> Found existing cache manifest (Completed pages: 1/1)
+[+] All 1 pages previously extracted in cache. Loading instantly...
+[+] Loaded 19 items from cache in 0.05s.
+  -> [DONE] جملة العمروووو.pdf: 19 items extracted.
+
+[Warehouse 5/6] Starting file: كيور فارما خاص.pdf
+
+  -> [START] Processing file: كيور فارما خاص.pdf (Type: .pdf)
+
+============================================================
+[*] [VISION EXTRACTOR] File: كيور فارما خاص.pdf
+============================================================
+  -> Total pages: 8
+  -> Cache location: processes\PROC-019\cache\vision\كيور_فارما_خاص_6532a22310
+  -> Found existing cache manifest (Completed pages: 8/8)
+[+] All 8 pages previously extracted in cache. Loading instantly...
+[+] Loaded 715 items from cache in 0.05s.
+  -> [DONE] كيور فارما خاص.pdf: 715 items extracted.
+
+[Warehouse 6/6] Starting file: مخزن الحياة فارم اسكندريه-170.pdf
+
+  -> [START] Processing file: مخزن الحياة فارم اسكندريه-170.pdf (Type: .pdf)
+
+============================================================
+[*] [VISION EXTRACTOR] File: مخزن الحياة فارم اسكندريه-170.pdf
+============================================================
+  -> Total pages: 5
+  -> Cache location: processes\PROC-019\cache\vision\مخزن_الحياة_فارم_اسكندريه_a10483ec7d
+  -> Found existing cache manifest (Completed pages: 5/5)
+[+] All 5 pages previously extracted in cache. Loading instantly...
+[+] Loaded 222 items from cache in 0.05s.
+  -> [DONE] مخزن الحياة فارم اسكندريه-170.pdf: 222 items extracted.
+
+============================================================
+[+] Completed Warehouse: 2718 items from 6 file(s)
+============================================================
+
+
+============================================================
+[FAST ENGINE] Starting Match: 993 raw -> 591 UNIQUE shortages x 6 warehouses
+============================================================
+
+
+----------------------------------------
+[Warehouse] السلام شبين.pdf (187 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 0
+  -> Deterministic Auto-Matches: 2
+  -> Sending 9 ambiguous items to Local API (Google AI Studio) in 1 batch(es) (Max ~75 items/msg)...
+      [*] Sending Batch 1/1 (9 items)...
+      [✓] Batch 1 (9 items) done in 14.45s:
+          - Google Search: FALSE | Tool Calls: 0 | Thinking: High
+          - Results: 4 matched, 0 review, 5 no_match.
+  -> Final Warehouse Result: 6 matched, 2 review
+
+----------------------------------------
+[Warehouse] المكرومي المنصورة.pdf (504 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 0
+  -> Deterministic Auto-Matches: 7
+  -> Sending 46 ambiguous items to Local API (Google AI Studio) in 1 batch(es) (Max ~75 items/msg)...
+      [*] Sending Batch 1/1 (46 items)...
+      [✓] Batch 1 (46 items) done in 97.34s:
+          - Google Search: FALSE | Tool Calls: 0 | Thinking: High
+          - Results: 19 matched, 3 review, 24 no_match.
+  -> Final Warehouse Result: 26 matched, 7 review
+
+----------------------------------------
+[Warehouse] الهضبة الاثنين نقدى0.pdf (1071 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 0
+  -> Deterministic Auto-Matches: 20
+  -> Sending 86 ambiguous items to Local API (Google AI Studio) in 2 batch(es) (Max ~75 items/msg)...
+      [*] Sending Batch 1/2 (75 items)...
+      [✓] Batch 1 (75 items) done in 119.51s:
+          - Google Search: FALSE | Tool Calls: 0 | Thinking: High
+          - Results: 19 matched, 1 review, 55 no_match.
+      [*] Sending Batch 2/2 (11 items)...
+      [✓] Batch 2 (11 items) done in 13.38s:
+          - Google Search: FALSE | Tool Calls: 0 | Thinking: High
+          - Results: 1 matched, 0 review, 10 no_match.
+  -> Final Warehouse Result: 40 matched, 5 review
+
+----------------------------------------
+[Warehouse] جملة العمروووو.pdf (19 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 0
+  -> Deterministic Auto-Matches: 0
+  -> Sending 1 ambiguous items to Local API (Google AI Studio) in 1 batch(es) (Max ~75 items/msg)...
+      [*] Sending Batch 1/1 (1 items)...
+      [✓] Batch 1 (1 items) done in 10.10s:
+          - Google Search: FALSE | Tool Calls: 0 | Thinking: High
+          - Results: 0 matched, 1 review, 0 no_match.
+  -> Final Warehouse Result: 0 matched, 1 review
+
+----------------------------------------
+[Warehouse] كيور فارما خاص.pdf (715 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 3
+  -> Deterministic Auto-Matches: 14
+  -> Sending 67 ambiguous items to Local API (Google AI Studio) in 1 batch(es) (Max ~75 items/msg)...
+      [*] Sending Batch 1/1 (67 items)...
+      [✓] Batch 1 (67 items) done in 136.06s:
+          - Google Search: FALSE | Tool Calls: 0 | Thinking: High
+          - Results: 14 matched, 12 review, 41 no_match.
+  -> Final Warehouse Result: 31 matched, 17 review
+
+----------------------------------------
+[Warehouse] مخزن الحياة فارم اسكندريه-170.pdf (222 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 0
+  -> Deterministic Auto-Matches: 4
+  -> Sending 32 ambiguous items to Local API (Google AI Studio) in 1 batch(es) (Max ~75 items/msg)...
+      [*] Sending Batch 1/1 (32 items)...
+      [✓] Batch 1 (32 items) done in 220.07s:
+          - Google Search: FALSE | Tool Calls: 0 | Thinking: High
+          - Results: 6 matched, 3 review, 23 no_match.
+  -> Final Warehouse Result: 10 matched, 5 review
+[+] Results successfully saved to: D:\AI_Engineer\Pharmacy-agy-vision\data\processes\PROC-019\results_PROC-019.xlsx

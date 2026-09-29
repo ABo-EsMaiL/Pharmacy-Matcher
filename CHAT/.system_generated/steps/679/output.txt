@@ -1,0 +1,123 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1317,47 +1317,59 @@
+ }
+ 
+ async function submitProcess() {
+-    const btn = document.getElementById('btn-submit');
+-    const progressArea = document.getElementById('progress-area');
+-    
++    if (selectedShortageFiles.length === 0 || selectedWarehouseFiles.length === 0) {
++        showToast('يرجى اختيار ملف نواقص وملف مخزن واحد على الأقل', 'error');
++        return;
++    }
++    
++    const btn = document.getElementById('btn-submit');
++    const progressModal = document.getElementById('progress-modal');
++    
++    // UI Loading state
+     btn.classList.add('hidden');
+-    progressArea.classList.remove('hidden');
+-    
+-    try {
+-        const result = await window.pywebview.api.start_process(
+-            JSON.stringify(selectedWarehouseFiles),
+-            JSON.stringify(selectedShortageFiles)
+-        );
+-        
+-        if (result && result.process_id) {
+-            currentProcessId = result.process_id;
+-            window.activeProcesses = (window.activeProcesses || 0) + 1;
+-            showToast('بدأت المطابقة في الخلفية!', 'success');
+-        } else if (result && result.existing) {
+-            // Already exists
+-            currentProcessId = result.process_id;
+-            showToast('هذه العملية مسجلة بالفعل، جاري عرض النتائج...', 'success');
+-            if (result.stats) {
+-                loadResults(result.stats);
+-                window.showScreen('screen-results');
+-            }
++    progressModal.style.display = 'flex';
++    document.getElementById('progress-text').innerText = 'جاري تهيئة العملية...';
++    document.getElementById('progress-bar-fill').style.width = '5%';
++    
++    try {
++        const res = await window.pywebview.api.start_process(selectedShortageFiles, selectedWarehouseFiles);
++        if (res.success) {
++            currentProcessId = res.process_id;
++            
++            // If the backend detected an identical exact match that was already completed!
++            if (res.existing) {
++                showToast('هذه العملية مسجلة بالفعل، جاري عرض النتائج...', 'info');
++                // Simulate process_complete event
++                setTimeout(() => {
++                    window.dispatchEvent(new CustomEvent('process_complete', {
++                        detail: {
++                            process_id: res.process_id,
++                            success: true,
++                            stats: res.stats
++                        }
++                    }));
++                }, 500);
++            } else {
++                // Background process started
++                showToast('بدأت العملية بنجاح في الخلفية', 'success');
++            }
++        } else {
++            showToast('خطأ: ' + res.error, 'error');
+             btn.classList.remove('hidden');
+-            progressArea.classList.add('hidden');
+-        } else {
+-            throw new Error(result.error || 'لم يتم إرجاع معرف العملية');
+-        }
+-    } catch (error) {
+-        showToast('حدث خطأ أثناء بدء المطابقة: ' + error, 'error');
+-        console.error(error);
+-        btn.classList.remove('hidden');
+-        progressArea.classList.add('hidden');
+-    }
+-}
+-
++            progressModal.style.display = 'none';
++        }
++    } catch (error) {
++        showToast('حدث خطأ أثناء الاتصال', 'error');
++        btn.classList.remove('hidden');
++        progressModal.style.display = 'none';
++    }
++}
++
++// --- Process Events ---
+ window.addEventListener('process_update', (e) => {
+     const data = e.detail;
+-    const progressArea = document.getElementById('progress-area');
+-    if (progressArea && !progressArea.classList.contains('hidden') && data.process_id === currentProcessId) {
++    const progressModal = document.getElementById('progress-modal');
++    if (progressModal && progressModal.style.display === 'flex' && data.process_id === currentProcessId) {
+         const msgEl = document.getElementById('progress-text');
+         if (msgEl && data.message) msgEl.innerText = data.message;
+         
+@@ -1374,14 +1374,13 @@
+ 
+ window.addEventListener('process_complete', (e) => {
+     const data = e.detail;
+-    window.activeProcesses = Math.max(0, (window.activeProcesses || 1) - 1);
+     
+     if (data.process_id === currentProcessId) {
+         const btn = document.getElementById('btn-submit');
+-        const progressArea = document.getElementById('progress-area');
+-        
+-        btn.classList.remove('hidden');
+-        progressArea.classList.add('hidden');
++        const progressModal = document.getElementById('progress-modal');
++        
++        btn.classList.remove('hidden');
++        progressModal.style.display = 'none';
+         
+         if (data.success) {
+             showToast('تمت المطابقة بنجاح!', 'success');
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

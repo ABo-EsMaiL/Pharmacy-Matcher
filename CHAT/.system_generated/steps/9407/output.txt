@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+In processes cache: ['74a49179bf3b521749a23af2e245c686_extract.json', 'a4f524fd75cf223f927a228ad87319f0_extract.json', 'b05e9145cb816a75e8b2d6ff44abeca4_extract.json', 'd0c1443b3b0a6e2287def7b8f4816fc0_extract.json', 'e73a8ca2ebcd549dffb5c91934ada9be_extract.json', 'ebc3fcf9fdcc6cb525f174254a00f5d5_extract.json']
+In dist cache: []
+

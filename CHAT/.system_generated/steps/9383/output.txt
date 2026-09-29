@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+['input_shortages', 'input_warehouses', 'output', 'results_PROC-015.xlsx']
+

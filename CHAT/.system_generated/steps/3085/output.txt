@@ -1,0 +1,12 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py","LineNumber":17,"LineContent":"    unstructured_api_key: str"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py","LineNumber":21,"LineContent":"    unstructured_base_url: str = \"https://transform.unstructured.io\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py","LineNumber":55,"LineContent":"    unstructured_key = os.getenv(\"UNSTRUCTURED_API_KEY\", \"\").strip()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py","LineNumber":60,"LineContent":"    if not unstructured_key or unstructured_key == \"your_key_here\":"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py","LineNumber":73,"LineContent":"        unstructured_api_key=unstructured_key,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\file_handler.py","LineNumber":20,"LineContent":"    base_url: str = \"https://transform.unstructured.io\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":23,"LineContent":"    base_url: str = \"https://transform.unstructured.io\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":52,"LineContent":"    cache_dir = filepath.parent.parent.parent / 'data' / '.unstructured_cache'"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":70,"LineContent":"        from unstructured_transform_client import TransformClient"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":72,"LineContent":"        print(\"⚠️ unstructured-transform-client not found. Please install it:\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":73,"LineContent":"        print(\"pip install unstructured-transform-client\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":74,"LineContent":"        raise RuntimeError(\"unstructured-transform-client is required to process PDFs\")"}

@@ -1,0 +1,42 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\static\app.js. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -257,10 +257,12 @@
+     try {
+         const settings = await window.pywebview.api.get_settings();
+         if (settings) {
+-            document.getElementById('setting-unstructured-key').value = settings.unstructured_key || '';
++            document.getElementById('setting-unstructured-key').value = settings.unstructured_api_key || settings.unstructured_key || '';
++            const profileEl = document.getElementById('setting-unstructured-profile');
++            if (profileEl) profileEl.value = settings.unstructured_profile || 'balanced';
+             document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8000/v1/chat/completions';
+             document.getElementById('setting-local-key').value = settings.local_api_key || '';
+-            document.getElementById('setting-model-name').value = settings.model_name || 'gpt-4o-mini';
++            document.getElementById('setting-model-name').value = settings.local_model || settings.model_name || 'gpt-4o-mini';
+             document.getElementById('setting-msemax-dir').value = settings.msemax_dir || '';
+         }
+     } catch (error) {
+@@ -268,11 +268,13 @@
+ }
+ 
+ async function saveSettings() {
++    const profileEl = document.getElementById('setting-unstructured-profile');
+     const settings = {
+-        unstructured_key: document.getElementById('setting-unstructured-key').value,
++        unstructured_api_key: document.getElementById('setting-unstructured-key').value,
++        unstructured_profile: profileEl ? profileEl.value : 'balanced',
+         local_api_url: document.getElementById('setting-local-url').value,
+         local_api_key: document.getElementById('setting-local-key').value,
+-        model_name: document.getElementById('setting-model-name').value,
++        local_model: document.getElementById('setting-model-name').value,
+         msemax_dir: document.getElementById('setting-msemax-dir').value
+     };
+     
+@@ -279,4 +279,4 @@
+-        await window.pywebview.api.save_settings(settings);
++        await window.pywebview.api.save_settings(JSON.stringify(settings));
+         showToast('تم حفظ الإعدادات بنجاح', 'success');
+     } catch (error) {
+         showToast('حدث خطأ أثناء حفظ الإعدادات', 'error');
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

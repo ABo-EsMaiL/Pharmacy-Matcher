@@ -1,0 +1,14 @@
+
+The command exited with code 0.
+Output:
+225: #progress-modal {
+236: #progress-modal .progress-box {
+245: #progress-modal h3 {
+250: #progress-modal p {
+890: <div id="progress-modal" style="display: none;">
+1129: const progressModal = document.getElementById('progress-modal');
+1400: const progressModal = document.getElementById('progress-modal');
+1451: const progressModal = document.getElementById('progress-modal');
+1476: const progressModal = document.getElementById('progress-modal');
+1614: const progressModal = document.getElementById('progress-modal');
+

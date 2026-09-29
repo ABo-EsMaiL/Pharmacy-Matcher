@@ -1,0 +1,31 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-5487
+Status: DONE
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-5487.log
+Log output:
+<truncated 3 lines>
+وبريت اقراص' vs 'سينوبريل 2 مجم اقراص/باکت 90':
+  Brand: 'سينوبريت' vs 'سينوبريل'
+  Result: True, Reason: auto_matched
+
+'ديوزمين 30 قرص' vs 'ديبوزين 500مجم اقراص':
+  Brand: 'ديوزمين' vs 'ديبوزين'
+  Result: True, Reason: auto_matched
+
+'فيتا زنك  كبسول' vs 'فیتا زون قرص قدیم':
+  Brand: 'فيتا زنك' vs 'فيتا زون'
+  Result: True, Reason: auto_matched
+
+'سيتال1جم اقراص س ج' vs 'سيتال اقراص 500 س ج':
+  Brand: 'سيتال' vs 'سيتال'
+  Result: True, Reason: auto_matched
+
+'كتافلام  نقط' vs 'كتافلام ٥٠ س.ج ٨٦ج':
+  Brand: 'كتافلام' vs 'كتافلام'
+  Result: True, Reason: auto_matched
+
+'الكابرس تريو5/160/12.5مجم س ج' vs 'الكابرس تربو ١٠/١٦/١٢٤٠ قرص':
+  Brand: 'الكابرس تريو' vs 'الكابرس تربو'
+  Result: True, Reason: auto_matched
+
+
+Last progress: 4s ago

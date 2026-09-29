@@ -1,0 +1,2 @@
+793: <button class="nav-item" onclick="loadHistory(); showScreen('screen-history', this)">
+957: <div id="screen-history" class="screen">

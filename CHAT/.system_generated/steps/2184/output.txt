@@ -1,0 +1,1 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":49,"LineContent":"        self.dropped_files = []"}

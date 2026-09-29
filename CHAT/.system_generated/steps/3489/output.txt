@@ -1,0 +1,166 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -193,26 +193,22 @@
+         print(f"  -> Exact Matches: {exact_count}")
+         print(f"  -> TF-IDF Auto-Matches (>88%): {tfidf_match_count}")
+         
+-        # 3. Batch process via LLM for the ambiguous ones
++        # 3. Process via LLM for the ambiguous ones
+         if llm_cases and hasattr(self.config, 'local_api_url'):
+-            print(f"  -> Sending {len(llm_cases)} ambiguous items to Local API (MSEMAX) in batches...")
+-            batch_size = 30
+-            batches = []
+-            for i in range(0, len(llm_cases), batch_size):
+-                batches.append((i//batch_size, llm_cases[i:i+batch_size]))
+-                
+-            def process_batch(batch_data):
+-                batch_idx, batch_cases = batch_data
++            print(f"  -> Sending {len(llm_cases)} ambiguous items to Local API (MSEMAX)...")
++            
++            def send_batch_adaptive(cases_chunk, chunk_name="1"):
+                 max_retries = 3
+-                
+-                # Pacing to respect wrapper's 10 req/min (1 req every 6 seconds on average)
+-                time.sleep(6.5)
+-                
+                 for attempt in range(max_retries):
+                     try:
+-                        results = self._call_local_api({"cases": batch_cases})
++                        print(f"      [*] Sending batch {chunk_name} ({len(cases_chunk)} items) to LLM (Attempt {attempt+1}/{max_retries})...")
++                        time.sleep(2)  # Polite pacing delay
++                        raw_results = self._call_local_api({"cases": cases_chunk})
++                        
+                         parsed = []
+-                        for case, decision in zip(batch_cases, results):
++                        matched_in_chunk = 0
++                        review_in_chunk = 0
++                        for case, decision in zip(cases_chunk, raw_results):
+                             shortage_name = case["requested_name"]
+                             status = decision.get("status", "no_match")
+                             item_id = decision.get("item_id", "")
+@@ -224,6 +224,11 @@
+                                 else:
+                                     status = "no_match"
+                                     
++                            if status == "match":
++                                matched_in_chunk += 1
++                            elif status == "review":
++                                review_in_chunk += 1
++                                
+                             parsed.append({
+                                 "shortage_name": shortage_name,
+                                 "status": status,
+@@ -230,36 +230,51 @@
+                                 "reason": reason
+                             })
+-                        print(f"      [✓] Batch {batch_idx+1}/{len(batches)} done.")
++                        print(f"      [✓] Batch {chunk_name} ({len(cases_chunk)} items) finished: {matched_in_chunk} matched, {review_in_chunk} review.")
+                         return parsed
+                     except Exception as e:
+-                        if attempt < max_retries - 1:
+-                            wait_time = 5 * (attempt + 1)
+-                            print(f"      [!] Batch {batch_idx+1} error. Waiting {wait_time}s...")
+-                            time.sleep(wait_time)
++                        err_str = str(e)
++                        # Handle 429 Rate limit
++                        if "429" in err_str:
++                            wait_sec = 20 * (attempt + 1)
++                            print(f"      [!] HTTP 429 Rate Limit on batch {chunk_name}. Waiting {wait_sec}s before retry...")
++                            time.sleep(wait_sec)
++                            continue
++                        
++                        # If error is due to payload / incomplete json / timeout and chunk can be split
++                        if len(cases_chunk) > 40:
++                            mid = len(cases_chunk) // 2
++                            print(f"      [!] Batch {chunk_name} ({len(cases_chunk)} items) failed with error: {e}")
++                            print(f"      [*] Adaptively splitting into 2 sub-batches: ({mid} items) and ({len(cases_chunk) - mid} items)...")
++                            time.sleep(2)
++                            sub1 = send_batch_adaptive(cases_chunk[:mid], f"{chunk_name}.1")
++                            time.sleep(2)
++                            sub2 = send_batch_adaptive(cases_chunk[mid:], f"{chunk_name}.2")
++                            return sub1 + sub2
+                         else:
+-                            print(f"      [!] Batch {batch_idx+1} completely failed: {e}")
+-                
+-                return [{"shortage_name": c["requested_name"], "status": "no_match", "warehouse_item": "", "reason": ""} for c in batch_cases]
+-
+-            # Wrapper says: "Max concurrent: 3". Using 2 to be extremely safe.
+-            with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+-                results_lists = list(executor.map(process_batch, batches))
+-                
+-            for res_list in results_lists:
+-                for result in res_list:
+-                    if result["status"] == "match":
+-                        matched.append({
+-                            "shortage_item": result["shortage_name"],
+-                            "warehouse_item": result["warehouse_item"],
+-                            "confidence": "llm",
+-                            "method": "fast_llm"
+-                        })
+-                    elif result["status"] == "review":
+-                        needs_review.append({
+-                            "shortage_item": result["shortage_name"],
+-                            "warehouse_item": result["warehouse_item"],
+-                            "reason": result.get("reason", "")
+-                        })
++                            wait_sec = 5 * (attempt + 1)
++                            print(f"      [!] Attempt {attempt+1} error ({e}). Waiting {wait_sec}s...")
++                            time.sleep(wait_sec)
++                
++                print(f"      [!] Batch {chunk_name} ({len(cases_chunk)} items) completely failed after {max_retries} attempts.")
++                return [{"shortage_name": c["requested_name"], "status": "no_match", "warehouse_item": "", "reason": ""} for c in cases_chunk]
++
++            # Start by sending all ambiguous items in 1 single message
++            results_list = send_batch_adaptive(llm_cases, "1")
++            
++            for result in results_list:
++                if result["status"] == "match":
++                    matched.append({
++                        "shortage_item": result["shortage_name"],
++                        "warehouse_item": result["warehouse_item"],
++                        "confidence": "llm",
++                        "method": "fast_llm"
++                    })
++                elif result["status"] == "review":
++                    needs_review.append({
++                        "shortage_item": result["shortage_name"],
++                        "warehouse_item": result["warehouse_item"],
++                        "reason": result.get("reason", "")
++                    })
+ 
+         print(f"  -> Final Warehouse Result: {len(matched)} matched, {len(needs_review)} review")
+         return {"matched": matched, "needs_review": needs_review}
+@@ -288,14 +288,23 @@
+         )
+ 
+         if response.status_code != 200:
+-            raise RuntimeError(f"HTTP {response.status_code}")
+-
+-        content = response.json()["choices"][0]["message"]["content"]
+-        json_match = re.search(r'\{.*\}', content, re.DOTALL)
++            raise RuntimeError(f"HTTP {response.status_code}: {response.text[:200]}")
++
++        resp_json = response.json()
++        content = resp_json["choices"][0]["message"]["content"]
++        
++        # Clean markdown wrappers if any
++        clean = content.strip()
++        if "```" in clean:
++            clean = re.sub(r"^```(?:json)?\s*", "", clean, flags=re.MULTILINE)
++            clean = re.sub(r"```\s*$", "", clean, flags=re.MULTILINE)
++            clean = clean.strip()
++            
++        json_match = re.search(r'\{.*\}', clean, re.DOTALL)
+         if json_match:
+-            content = json_match.group(0)
+-            
+-        answer = json.loads(content)
++            clean = json_match.group(0)
++            
++        answer = json.loads(clean)
+         results = answer.get("results", [])
+         
+         # Map by case_id
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

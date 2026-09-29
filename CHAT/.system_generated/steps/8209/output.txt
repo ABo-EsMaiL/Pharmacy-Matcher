@@ -1,0 +1,13 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -159,6 +159,7 @@
+         
+         await self.ensure_model(DEFAULT_MODEL)
+         await self.ensure_thinking_mode()
++        await self.ensure_tools(ENABLE_SEARCH_GROUNDING)
+ 
+     async def ensure_model(self, target_model: Optional[str] = None):
+         """Ensures the requested model is selected in Google AI Studio UI."""
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

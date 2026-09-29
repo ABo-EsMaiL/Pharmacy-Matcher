@@ -1,0 +1,7 @@
+{"name":"__init__.py","sizeBytes":"21"}
+{"name":"__pycache__","isDir":true}
+{"name":"coordinator.py","sizeBytes":"11730"}
+{"name":"gemini_match.py","sizeBytes":"12118"}
+{"name":"text_match.py","sizeBytes":"5798"}
+
+Summary: This directory contains 1 subdirectories and 4 files.

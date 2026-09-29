@@ -1,0 +1,789 @@
+{
+  "page": 3,
+  "items": [
+    {
+      "item_name_raw": "توبى جينت ١٥٠مل سيبم",
+      "trade_name": "توبى جينت",
+      "strength": "١٥٠مل",
+      "form": "",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "توبيميثريين ٥ % لوسيون = اكتوميثريين",
+      "trade_name": "توبيميثريين",
+      "strength": "٥ %",
+      "form": "لوسيون",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "توتافيت قرص",
+      "trade_name": "توتافيت",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "توتال شراب",
+      "trade_name": "توتال",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "توربينير ١٢٥ شراب/ يوتوبيا",
+      "trade_name": "توربينير",
+      "strength": "١٢٥",
+      "form": "شراب",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تورسامولكس ١٠ جم اقراص",
+      "trade_name": "تورسامولكس",
+      "strength": "١٠ جم",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تورسامولكس ٢٠ جم اقراص",
+      "trade_name": "تورسامولكس",
+      "strength": "٢٠ جم",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تورسيريتك ١٠جم قرص جديد",
+      "trade_name": "تورسيريتك",
+      "strength": "١٠جم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تورسيريتك ٢٠ جم قرص جديد",
+      "trade_name": "تورسيريتك",
+      "strength": "٢٠ جم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تورسيريتك ٥ جم قرص",
+      "trade_name": "تورسيريتك",
+      "strength": "٥ جم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "توينزول قطره جديد",
+      "trade_name": "توينزول",
+      "strength": "",
+      "form": "قطره",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تيبونينا فورت اقراص",
+      "trade_name": "تيبونينا فورت",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تيراتام ۱۰۰۰ مجم ۳ شريط",
+      "trade_name": "تيراتام",
+      "strength": "۱۰۰۰ مجم",
+      "form": "شريط",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تيراتام ٥٠٠ مجم قرص",
+      "trade_name": "تيراتام",
+      "strength": "٥٠٠ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تيرز جارد قطره عاديه جديد",
+      "trade_name": "تيرز جارد",
+      "strength": "",
+      "form": "قطره",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تينورمين ۱۰۰مجم اقراص",
+      "trade_name": "تينورمين",
+      "strength": "۱۰۰مجم",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تينورمين ٥٠ مجم ١٤ قرص",
+      "trade_name": "تينورمين",
+      "strength": "٥٠ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ثيراجنكو ٢٤٠ مجم اقراص جديد",
+      "trade_name": "ثيراجنكو",
+      "strength": "٢٤٠ مجم",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ثيراجنكو ٨٠ م قرص",
+      "trade_name": "ثيراجنكو",
+      "strength": "٨٠ م",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ثيوتاسيد ٦٠٠ مركب ايفا",
+      "trade_name": "ثيوتاسيد مركب",
+      "strength": "٦٠٠",
+      "form": "",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ثيوتاسيد ۳۰۰ مجم مركب قرص",
+      "trade_name": "ثيوتاسيد مركب",
+      "strength": "۳۰۰ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جاروبرايد قرص / ايفا",
+      "trade_name": "جاروبرايد",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جاسترولوك ۲ شريط",
+      "trade_name": "جاسترولوك",
+      "strength": "",
+      "form": "شريط",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جاكميستون ٥٠٠/٢٥ مجم ق\"جديد",
+      "trade_name": "جاكميستون",
+      "strength": "٥٠٠/٢٥ مجم",
+      "form": "ق",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جالفز ٥٠ مجم عادى قرص",
+      "trade_name": "جالفز",
+      "strength": "٥٠ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جروزا اقراص ۱۷۰ جنيه",
+      "trade_name": "جروزا",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جستيكول ۲۰ جم ١٤ قرص جديد",
+      "trade_name": "جستيكول",
+      "strength": "۲۰ جم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جلابتيفيا بلس ٥٠/١٠٠٠ مجم ۳۰ قرص",
+      "trade_name": "جلابتيفيا بلس",
+      "strength": "٥٠/١٠٠٠ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جلابتيفيا بلس ٥٠/٥٠٠ مجم ۳۰ قرص",
+      "trade_name": "جلابتيفيا بلس",
+      "strength": "٥٠/٥٠٠ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جلسرين شفاف صابون /روتكس جديد",
+      "trade_name": "جلسرين شفاف",
+      "strength": "",
+      "form": "صابون",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جلوبابروب ۱۲۰ مجم شرب",
+      "trade_name": "جلوبابروب",
+      "strength": "۱۲۰ مجم",
+      "form": "شرب",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جلوكوفاج ٥٠٠ مجم قرص",
+      "trade_name": "جلوكوفاج",
+      "strength": "٥٠٠ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جليتوميت ٥٠/١٠٠٠ مجم / ايفا",
+      "trade_name": "جليتوميت",
+      "strength": "٥٠/١٠٠٠ مجم",
+      "form": "",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جلييوفين ٥ / ١٠٠٠ قرص",
+      "trade_name": "جلييوفين",
+      "strength": "٥ / ١٠٠٠",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جليمباكير ٢٥/٥ بلس اقراص",
+      "trade_name": "جليمباكير بلس",
+      "strength": "٢٥/٥",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جليمباكير ٥/١٠ بلس اقراص",
+      "trade_name": "جليمباكير بلس",
+      "strength": "٥/١٠",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جليمبريد بلس ٤ / ٣ شريط جديد",
+      "trade_name": "جليمبريد بلس",
+      "strength": "",
+      "form": "شريط",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جنكوبلاس كبسول",
+      "trade_name": "جنكوبلاس",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جنكوستازين كبسول",
+      "trade_name": "جنكوستازين",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جولد دش ماكرو",
+      "trade_name": "جولد دش",
+      "strength": "",
+      "form": "دش",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جيت ۲۰ كبسولة جديد",
+      "trade_name": "جيت",
+      "strength": "",
+      "form": "كبسولة",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جينتازون كريم",
+      "trade_name": "جينتازون",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جينوزول ٤٠٠ مجم لبوس جديد",
+      "trade_name": "جينوزول",
+      "strength": "٤٠٠ مجم",
+      "form": "لبوس",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جينوسيبت اقراص جديد",
+      "trade_name": "جينوسيبت",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جينوفيل ادفانس ۱۰ اكياس",
+      "trade_name": "جينوفيل ادفانس",
+      "strength": "",
+      "form": "اكياس",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جينوفيل اوريجينال",
+      "trade_name": "جينوفيل اوريجينال",
+      "strength": "",
+      "form": "",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "جينيرا اقراص",
+      "trade_name": "جينيرا",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "حمض الفوليك ــ ابيكو",
+      "trade_name": "حمض الفوليك",
+      "strength": "",
+      "form": "",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "حمض الفوليك ميباكو",
+      "trade_name": "حمض الفوليك",
+      "strength": "",
+      "form": "",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيبيزول ۲۰ مجم ١٤ كبسول",
+      "trade_name": "بيبيزول",
+      "strength": "۲۰ مجم",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيبيون بلاس كبسول",
+      "trade_name": "بيبيون بلاس",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيبي كريم / امون",
+      "trade_name": "بيبي",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيتاديرم ١٥ جم كريم صغير",
+      "trade_name": "بيتاديرم",
+      "strength": "١٥ جم",
+      "form": "كريم",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيتاسيرك ٨ مجم ٤ شريط",
+      "trade_name": "بيتاسيرك",
+      "strength": "٨ مجم",
+      "form": "شريط",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيتاكور ۳۰ قرص",
+      "trade_name": "بيتاكور",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيتولفكس ۲ امبول",
+      "trade_name": "بيتولفكس",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيرفكتوديل ٥% سبراى",
+      "trade_name": "بيرفكتوديل",
+      "strength": "٥%",
+      "form": "سبراى",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيرفكتيل ۳۰ قرص جديد",
+      "trade_name": "بيرفكتيل",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيروليد ۱۰ مج اقراص",
+      "trade_name": "بيروليد",
+      "strength": "۱۰ مج",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيروليد ٥ مج اقراص",
+      "trade_name": "بيروليد",
+      "strength": "٥ مج",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيزوكارد ٢٫٥ مجم اقراص",
+      "trade_name": "بيزوكارد",
+      "strength": "٢٫٥ مجم",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيزوكارد ٥ مجم اقراص",
+      "trade_name": "بيزوكارد",
+      "strength": "٥ مجم",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيزوكارد ٥ مجم بلس",
+      "trade_name": "بيزوكارد بلس",
+      "strength": "٥ مجم",
+      "form": "",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيسكالدين ۳۰۰ مجم اقراص جديد",
+      "trade_name": "بيسكالدين",
+      "strength": "۳۰۰ مجم",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيفاتراسين سبراى",
+      "trade_name": "بيفاتراسين",
+      "strength": "",
+      "form": "سبراى",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بينوكس قطرة جديد",
+      "trade_name": "بينوكس",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيوتاكسيمارك ١٥ مجم كريم",
+      "trade_name": "بيوتاكسيمارك",
+      "strength": "١٥ مجم",
+      "form": "كريم",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيوتين فورت كبسول",
+      "trade_name": "بيوتين فورت",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيورازو ٤٠ مجم ١٤ كبسول\"جديد",
+      "trade_name": "بيورازو",
+      "strength": "٤٠ مجم",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "بيومبرايد ٤/٣٠ مجم قرص",
+      "trade_name": "بيومبرايد",
+      "strength": "٤/٣٠ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تادالونج ۲۰ مجم قرص",
+      "trade_name": "تادالونج",
+      "strength": "۲۰ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تادالونج ٥ مجم قرص",
+      "trade_name": "تادالونج",
+      "strength": "٥ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تارجوفلوكساسين ٧٥٠ مجم ۲ شريط",
+      "trade_name": "تارجوفلوكساسين",
+      "strength": "٧٥٠ مجم",
+      "form": "شريط",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تاردانزا ٦٠ مجم ۲ قرص",
+      "trade_name": "تاردانزا",
+      "strength": "٦٠ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تافانيك ٥٠٠ مجم اقراص",
+      "trade_name": "تافانيك",
+      "strength": "٥٠٠ مجم",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تامسولين بلس كبسول",
+      "trade_name": "تامسولين بلس",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تانتم غرغره اخضر جديد",
+      "trade_name": "تانتم",
+      "strength": "",
+      "form": "غرغره",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تايمر قطره",
+      "trade_name": "تايمر",
+      "strength": "",
+      "form": "قطره",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ترافاتان قطره جديد",
+      "trade_name": "ترافاتان",
+      "strength": "",
+      "form": "قطره",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تراى ليرج قطرة جديد",
+      "trade_name": "تراى ليرج",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ترايتون ۲۰۰ مجم ۳ شريط",
+      "trade_name": "ترايتون",
+      "strength": "۲۰۰ مجم",
+      "form": "شريط",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ترايجاستكير ۱۲۰ كبسوله",
+      "trade_name": "ترايجاستكير",
+      "strength": "",
+      "form": "كبسوله",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ترايكتين اقراص",
+      "trade_name": "ترايكتين",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ترايكوبافيت كبسول",
+      "trade_name": "ترايكوبافيت",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ترايملازما كريم جديد",
+      "trade_name": "ترايملازما",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تراينيز شراب",
+      "trade_name": "تراينيز",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تريب جولد ۳ شريط",
+      "trade_name": "تريب جولد",
+      "strength": "",
+      "form": "شريط",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تريبيليكسام ١٠/٢٫٥/١٠ مجم ۳۰ قرص",
+      "trade_name": "تريبيليكسام",
+      "strength": "١٠/٢٫٥/١٠ مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تريتو الس ٤٠ مجم كبسول",
+      "trade_name": "تريتو الس",
+      "strength": "٤٠ مجم",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تريتو سبوت كريم صغير ايفا",
+      "trade_name": "تريتو سبوت",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تريكزيمس ٠٫٠٣%مجم كريم",
+      "trade_name": "تريكزيمس",
+      "strength": "٠٫٠٣%مجم",
+      "form": "كريم",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تريكسوزولا ٢٫٥ مجم جديد",
+      "trade_name": "تريكسوزولا",
+      "strength": "٢٫٥ مجم",
+      "form": "",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تشيكس جروى ٢٥٠مل شراب",
+      "trade_name": "تشيكس جروى",
+      "strength": "٢٥٠مل",
+      "form": "شراب",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تكساكورت كريم",
+      "trade_name": "تكساكورت",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تكلو قرص س ج",
+      "trade_name": "تكلو",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "تكنوسبيرون اقراص جديد",
+      "trade_name": "تكنوسبيرون",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "توبرين قطره",
+      "trade_name": "توبرين",
+      "strength": "",
+      "form": "قطره",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "توبى جينت ١٥٠مل ديليكت",
+      "trade_name": "توبى جينت ديليكت",
+      "strength": "١٥٠مل",
+      "form": "",
+      "source_page": 3,
+      "source_file": "كيور فارما خاص.pdf"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -589,6 +589,7 @@
+                     "Authorization": f"Bearer {api_key}",
+                     "Content-Type": "application/json",
+                     "X-Batch-Size": str(case_count),
++                    "X-Google-Search-Enabled": "false",
+                 },
+                 json=body,
+                 timeout=(30, read_timeout),
+@@ -600,9 +600,26 @@
+         pre_exec = response.headers.get("X-Timing-PreExec", "N/A")
+         gen_time = response.headers.get("X-Timing-Generation", "N/A")
+         gw_total = response.headers.get("X-Timing-Total", "N/A")
++        search_flag = response.headers.get("X-Google-Search-Enabled", "false")
++        tool_calls = response.headers.get("X-Tool-Calls-Count", "0")
++        thinking_lvl = response.headers.get("X-Thinking-Mode", "High")
++        final_status = response.headers.get("X-Final-Status", "SUCCESS")
++
++        self.last_batch_meta = {
++            "case_count": case_count,
++            "gen_time": gen_time,
++            "pre_exec": pre_exec,
++            "gw_total": gw_total,
++            "search_enabled": search_flag,
++            "tool_calls": tool_calls,
++            "thinking_level": thinking_lvl,
++            "final_status": final_status,
++        }
++
+         logger.info(
+             f"[{case_count} cases] Local API roundtrip: {t_call_dur:.2f}s | "
+-            f"Gateway Pre-exec: {pre_exec} | Model Gen: {gen_time} | Gateway Total: {gw_total}"
++            f"Google Search: {search_flag} | Tool Calls: {tool_calls} | "
++            f"Thinking: {thinking_lvl} | Gateway Total: {gw_total}"
+         )
+ 
+         if response.status_code != 200:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

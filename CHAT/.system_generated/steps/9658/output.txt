@@ -1,0 +1,159 @@
+
+The command exited with code 1.
+Output:
+<truncated 1 lines>
+	    New File  		   24895	Session_13434813343346361100%  
+	    New File  		  280490	Tabs_13434762272855598100%  
+	    New File  		  282490	Tabs_13434813345430721100%  
+	  New Dir          2	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\Shared Dictionary\
+	    New File  		   45056	db100%  
+	    New File  		       0	db-journal
+	  New Dir          1	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\Shared Dictionary\cache\
+	    New File  		      24	index100%  
+	  New Dir          1	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\Shared Dictionary\cache\index-dir\
+	    New File  		      48	the-real-index100%  
+	  New Dir          6	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\shared_proto_db\
+	    New File  		  224363	000003.log100%  
+	    New File  		      16	CURRENT100%  
+	    New File  		       0	LOCK
+	    New File  		     308	LOG100%  
+	    New File  		     308	LOG.old100%  
+	    New File  		      41	MANIFEST-000001100%  
+	  New Dir          6	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\shared_proto_db\metadata\
+	    New File  		    2694	000003.log100%  
+	    New File  		      16	CURRENT100%  
+	    New File  		       0	LOCK
+	    New File  		     326	LOG100%  
+	    New File  		     326	LOG.old100%  
+	    New File  		      41	MANIFEST-000001100%  
+	  New Dir          6	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\Site Characteristics Database\
+	    New File  		    1981	000003.log100%  
+	    New File  		      16	CURRENT100%  
+	    New File  		       0	LOCK
+	    New File  		     336	LOG100%  
+	    New File  		     336	LOG.old100%  
+	    New File  		      41	MANIFEST-000001100%  
+	  New Dir          1	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\Sync Data\
+	    New File  		    2437	Nigori.bin100%  
+	  New Dir          6	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\Sync Data\LevelDB\
+	    New File  		    5740	000003.log100%  
+	    New File  		      16	CURRENT100%  
+	    New File  		       0	LOCK
+	    New File  		     312	LOG100%  
+	    New File  		     312	LOG.old100%  
+	    New File  		      41	MANIFEST-000001100%  
+	  New Dir          2	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\Sync Data\Logs\
+	    New File  		   35423	cv_debug.log100%  
+	    New File  		   11960	sync_diagnostic.log100%  
+	  New Dir          2	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\WebStorage\
+	    New File  		   40960	QuotaManager100%  
+	    New File  		       0	QuotaManager-journal
+	  New Dir          0	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\Workspaces\
+	  New Dir          2	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\Workspaces\Logs\
+	    New File  		      92	Workspaces Diagnostic Log100%  
+	    New File  		    1888	Workspaces Internals Logs100%  
+	  New Dir          1	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\extensions_crx_cache\
+	    New File  		      13	metadata.json100%  
+	  New Dir          0	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\GPUPersistentCache\
+	  New Dir          0	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\GPUPersistentCache\DawnGraphiteCache\
+	  New Dir          3	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\GPUPersistentCache\DawnGraphiteCache\ZBRSUVJ7IMDXK2RUP4UNAHPCKJL4BWQB\
+	    New File  		       0	cache.db
+	    New File  		       0	cache.db-wal
+	    New File  		       0	cache.journal
+	  New Dir          5	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\GraphiteDawnCache\
+	    New File  		    8192	data_0100%  
+	    New File  		  270336	data_1100%  
+	    New File  		    8192	data_2100%  
+	    New File  		    8192	data_3100%  
+	    New File  		  262512	index100%  
+	  New Dir         49	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\GrShaderCache\
+	    New File  		   45056	data_0100%  
+	    New File  		  270336	data_1100%  
+	    New File  		    8192	data_2100%  
+	    New File  		   8.0 m	data_3 12.4% 24.9% 37.4% 49.9% 62.4% 74.9% 87.4% 99.9%100%  
+	    New File  		   16668	f_000001100%  
+	    New File  		   19896	f_000002100%  
+	    New File  		   16668	f_000003100%  
+	    New File  		   19896	f_000004100%  
+	    New File  		   17852	f_000005100%  
+	    New File  		   17388	f_000006100%  
+	    New File  		   21944	f_000007100%  
+	    New File  		   23344	f_000008100%  
+	    New File  		   20656	f_000009100%  
+	    New File  		   20464	f_00000a100%  
+	    New File  		   21200	f_00000b100%  
+	    New File  		   16668	f_00000c100%  
+	    New File  		   19132	f_00000d100%  
+	    New File  		   18300	f_00000e100%  
+	    New File  		   17496	f_00000f100%  
+	    New File  		   20072	f_000010100%  
+	    New File  		   20068	f_000011100%  
+	    New File  		   19932	f_000012100%  
+	    New File  		   16732	f_000013100%  
+	    New File  		   20688	f_000014100%  
+	    New File  		   17372	f_000015100%  
+	    New File  		   18804	f_000016100%  
+	    New File  		   20084	f_000017100%  
+	    New File  		   16904	f_000018100%  
+	    New File  		   17764	f_000019100%  
+	    New File  		   17752	f_00001a100%  
+	    New File  		   16608	f_00001b100%  
+	    New File  		   16592	f_00001c100%  
+	    New File  		   18060	f_00001d100%  
+	    New File  		   20080	f_00001e100%  
+	    New File  		   19540	f_00001f100%  
+	    New File  		   20916	f_000020100%  
+	    New File  		   16668	f_000021100%  
+	    New File  		   19132	f_000022100%  
+	    New File  		   18300	f_000023100%  
+	    New File  		   17496	f_000024100%  
+	    New File  		   20072	f_000025100%  
+	    New File  		   19932	f_000026100%  
+	    New File  		   20068	f_000027100%  
+	    New File  		   19540	f_000028100%  
+	    New File  		   20084	f_000029100%  
+	    New File  		   20920	f_00002a100%  
+	    New File  		   16732	f_00002b100%  
+	    New File  		   20688	f_00002c100%  
+	    New File  		  262512	index100%  
+	  New Dir          2	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Nurturing\
+	    New File  		   20480	campaign_history100%  
+	    New File  		       0	campaign_history-journal
+	  New Dir          0	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Safe Browsing\
+	  New Dir          2	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\segmentation_platform\
+	    New File  		   90112	ukm_db100%  
+	    New File  		   45656	ukm_db-journal100%  
+	  New Dir          5	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\ShaderCache\
+	    New File  		    8192	data_0100%  
+	    New File  		  270336	data_1100%  
+	    New File  		    8192	data_2100%  
+	    New File  		    8192	data_3100%  
+	    New File  		  262512	index100%  
+	  New Dir          0	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\SmartScreen\
+	  New Dir          4	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\SmartScreen\local\
+	    New File  		      14	downloadCache100%  
+	    New File  		      29	downloadCache_100%  
+	    New File  		       9	uriCache100%  
+	    New File  		      29	uriCache_100%  
+	  New Dir          6	D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\SmartScreen\RemoteData\
+	    New File  		      47	customSettings100%  
+	    New File  		      35	customSettings_F95BA787499AB4FA9EFFF472CE383A14100%  
+	    New File  		      81	edgeSettings100%  
+	    New File  		  130578	edgeSettings_2.0-a82cb2897a8bf9445d68dcc2be05af89ad4b2fda1fddb2952693be7cd5353ad3100%  
+	    New File  		      29	topTraffic100%  
+	    New File  		  460992	topTraffic_638004170464094982100%  
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :       101        99         2         0         0         0
+   Files :       852       852         0         0         0         0
+   Bytes :  127.24 m  127.24 m         0         0         0         0
+   Times :   0:00:14   0:00:13                       0:00:00   0:00:00
+
+
+   Speed :           9,768,224 Bytes/sec.
+   Speed :             558.942 MegaBytes/min.
+   Ended : Friday, September 25, 2026 3:50:23 PM
+
+

@@ -1,0 +1,84 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\static\app.js. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -322,29 +322,53 @@
+     }
+ }
+ 
+-async function updateServerStatus() {
+-    try {
+-        const isRunning = await window.pywebview.api.is_server_running();
+-        const indicator = document.getElementById('server-indicator');
+-        const text = document.getElementById('server-status-text');
+-        const btnToggle = document.getElementById('btn-toggle-server');
+-        const btnToggleSettings = document.getElementById('btn-toggle-server-settings');
+-        
+-        if (isRunning) {
+-            indicator.className = 'status-indicator active';
+-            text.innerText = 'السيرفر يعمل';
+-            btnToggle.innerText = 'إيقاف السيرفر';
+-            btnToggle.classList.replace('btn-primary', 'btn-outline');
+-            btnToggleSettings.innerText = 'إيقاف السيرفر';
+-        } else {
+-            indicator.className = 'status-indicator inactive';
+-            text.innerText = 'السيرفر متوقف';
+-            btnToggle.innerText = 'تشغيل السيرفر';
+-            btnToggle.classList.replace('btn-outline', 'btn-primary');
+-            btnToggleSettings.innerText = 'تشغيل السيرفر';
+-        }
+-    } catch (error) {
+-        console.error('Failed to get server status', error);
++// --- UI Functions ---
++function showToast(message, type = 'success') {
++    const container = document.getElementById('toast-container');
++    const toast = document.createElement('div');
++    toast.className = `toast ${type}`;
++    
++    const icon = type === 'success' ? 'ph-check-circle' : 'ph-warning-circle';
++    toast.innerHTML = `<i class="ph-fill ${icon}"></i> <span>${message}</span>`;
++    
++    container.appendChild(toast);
++    
++    setTimeout(() => {
++        toast.style.animation = 'fadeOut 0.3s ease forwards';
++        setTimeout(() => toast.remove(), 300);
++    }, 3000);
++}
++
++async function updateServerStatus(statusData) {
++    const indicator = document.getElementById('server-indicator');
++    const text = document.getElementById('server-status-text');
++    const btn = document.getElementById('btn-toggle-server');
++    const btnSettings = document.getElementById('btn-toggle-server-settings');
++    
++    let isRunning = false;
++    if (statusData !== undefined) {
++        isRunning = typeof statusData === 'object' ? statusData.is_running : statusData;
++    } else {
++        try {
++            isRunning = await window.pywebview.api.is_server_running();
++        } catch (error) {
++            console.error('Failed to get server status', error);
++            return;
++        }
++    }
++    
++    if (isRunning) {
++        if (indicator) indicator.className = 'status-indicator running';
++        if (text) text.textContent = 'السيرفر يعمل';
++        if (btn) btn.innerHTML = '<i class="ph ph-stop"></i> إيقاف السيرفر';
++        if (btnSettings) btnSettings.innerHTML = '<i class="ph ph-stop"></i> إيقاف السيرفر';
++        isServerRunning = true;
++    } else {
++        if (indicator) indicator.className = 'status-indicator stopped';
++        if (text) text.textContent = 'السيرفر متوقف';
++        if (btn) btn.innerHTML = '<i class="ph ph-play"></i> تشغيل السيرفر';
++        if (btnSettings) btnSettings.innerHTML = '<i class="ph ph-play"></i> تشغيل السيرفر';
++        isServerRunning = false;
+     }
+ }
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

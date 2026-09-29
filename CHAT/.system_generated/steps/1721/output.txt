@@ -1,0 +1,32 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -508,6 +508,26 @@
+         except Exception as e:
+             return {"success": False, "error": str(e)}
+ 
++    def open_result_file(self, process_id: str) -> dict:
++        try:
++            proc = self.db.get_process(process_id)
++            if proc and proc.get('output_file') and Path(proc['output_file']).exists():
++                os.startfile(proc['output_file'])
++                return {"success": True}
++            return {"success": False, "error": "ملف النتائج غير موجود"}
++        except Exception as e:
++            return {"success": False, "error": str(e)}
++
++    def open_result_folder(self, process_id: str) -> dict:
++        try:
++            proc_dir = self.db.get_process_dir(process_id)
++            if proc_dir.exists():
++                os.startfile(str(proc_dir))
++                return {"success": True}
++            return {"success": False, "error": "مجلد العملية غير موجود"}
++        except Exception as e:
++            return {"success": False, "error": str(e)}
++
+     def on_closing(self):
+         self.server_manager.cleanup()
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

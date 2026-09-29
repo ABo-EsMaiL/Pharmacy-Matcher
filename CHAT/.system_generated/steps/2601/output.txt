@@ -1,0 +1,1 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\database.py","LineNumber":12,"LineContent":"class HistoryDB:"}

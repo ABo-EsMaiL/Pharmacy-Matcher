@@ -1,0 +1,75 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py", line 319, in _process_worker
+    from src.output.excel_writer import write_results_excel
+  File "D:\AI_Engineer\Pharmacy-agy\src\output\excel_writer.py", line 136
+    """
+    ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 290)
+[1] Initializing API...
+is_process_running: {'running': False}
+[2] Triggering rerun_process for PROC-003...
+rerun_process result: {'success': True, 'process_id': 'PROC-003'}
+[3] Waiting for worker thread to finish matching...
+[+] Worker thread finished.
+is_process_running after finish: {'running': False}
+
+[4] Inspecting sheets in results_PROC-003.xlsx: ['ملخص', 'السلام شبين.pdf', 'جملة العمروووو.pdf', 'لم يُعثر عليه', 'يحتاج مراجعة']
+
+--- Summary Sheet Cells & Formulas ---
+Row  1: ['البند', 'العدد', 'النسبة']
+Row  2: ['إجمالي الأصناف المطلوبة', 200, None]
+Row  3: ['تم مطابقتها', 145, '72.5%']
+Row  4: ['لم يُعثر عليها', 45, '22.5%']
+Row  5: ['تحتاج مراجعة', 10, '5.0%']
+Row  6: [None, None, None]
+Row  7: ['─── تفاصيل المخازن ───', None, None]
+Row  8: [None, None, None]
+Row  9: ['السلام شبين.pdf', 'مطابق: 133', 'مراجعة: 8']
+Row 10: ['جملة العمروووو.pdf', 'مطابق: 14', 'مراجعة: 3']
+
+--- First 5 rows of السلام شبين.pdf (Confidence column) ---
+Row 1: ['اسم الصنف المطلوب', 'اسم الصنف في المخزن', 'درجة التطابق']
+Row 2: ['ابيفرين ربع س ج', 'ابيفرين ربع', 'high (0.92)']
+Row 3: ['اتروفنت ٢٥ امبول س ج', 'اتروفنت ٢٥ امبول', 'high (0.94)']
+Row 4: ['اركوسكا ٩٠ مج، ١٤ قرص س ج', 'اركوسكا ٩٠ مج، ١٤ قرص', 'high (0.96)']
+Row 5: ['ازاثيوبرين اقراص، ٥٠مجم س ج', 'ازاثيوبرين اقراص، ٥٠مجم', 'high (0.95)']
+
+--- First 5 rows of جملة العمروووو.pdf (Confidence column) ---
+Row 1: ['اسم الصنف المطلوب', 'اسم الصنف في المخزن', 'درجة التطابق']
+Row 2: ['ستيمولان 400مجم كبسول س ج', 'ستيمولان 400مجم كبسول', 'high (0.97)']
+Row 3: ['ليفوفلوكساسين 750 فيال باكو 12 كرتونه 144', 'ليفوفلوكساسين 750 فيال باكو 12 كرتونه 144', 'exact']
+Row 4: ['افيروكوكسيب90مجم20قرص س ج', 'افيرو كوكسـيب 90مجم-32ب', 'llm']
+Row 5: ['امبوفير 5امبول س ج', 'امبوفير حقن جديد', 'llm']
+
+--- Review Sheet (7 rows) ---
+Row 1: ['القرار (اختر)', 'اسم الصنف المطلوب', 'اسم المرشح في المخزن', 'المخزن', 'السبب']
+Row 2: [None, 'دوليبران1000مجم 15قرص', 'دوليبران ١ جم، ٦٠ قرص', 'السلام شبين.pdf', 'اختلاف عدد الأقراص: المطلوب 15 قرص والمرشح 60 قرص']
+Row 3: [None, 'فولتارين ٣ امبولات س ج', 'فولتارين ٣ امبولات/نوفارتس', 'السلام شبين.pdf', 'اختلاف عدد الأمبولات: المطلوب 3 أمبولات والمرشح 3 أمبولات مطابق']
+Row 4: [None, 'كونتافين ١ شريط س ج', 'كونتافين ١ شريط/اكاديميا', 'السلام شبين.pdf', 'اختلاف عدد الشرائط: المطلوب 1 شريط والمرشح 1 شريط مطابق']
+Row 5: [None, 'ايزوتريتينوين 10 مجم 30 كبسول س ج', 'ايزوتريتينوين 10 مجم 3 شريط -28', 'جملة العمروووو.pdf', 'اختلاف عدد الكبسولات: المطلوب 30 كبسول والمرشح 28 كبسول']
+Row 6: [None, 'بانادول اكسترا 24 قرص س ج', 'بانادول اكسترا 48 قرص-96ب', 'جملة العمروووو.pdf', 'اختلاف عدد الأقراص: المطلوب 24 قرص والمرشح 48 قرص']
+Row 7: [None, 'بانثينول النيل2%كريم وسط', 'بانثينول كريم كبير سعر قديم باكو 25', 'جملة العمروووو.pdf', 'اختلاف الحجم: المطلوب كريم وسط والمرشح كريم كبير']
+
+[5] Simulating user review decision: Setting Row 2 to '✅ مطابق'...
+[6] Calling api.apply_reviews('PROC-003')...
+apply_reviews result: {'success': True, 'matched': 1, 'rejected': 0, 'remaining': 5, 'new_stats': {'total': 203, 'total_shortages': 203, 'matched_count': 153, 'not_found_count': 45, 'review_count': 5, 'status': 'reviewing'}}
+
+--- Summary Sheet after apply_reviews ---
+Row  1: ['البند', 'العدد', 'النسبة']
+Row  2: ['إجمالي الأصناف المطلوبة', '=B3+B4+B5', None]
+Row  3: ['تم مطابقتها', '=SUM(B8:B9)', '72.5%']
+Row  4: ['لم يُعثر عليها', "=MAX(0, COUNTA('لم يُعثر عليه'!A:A)-1)", '22.5%']
+Row  5: ['تحتاج مراجعة', "=MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)", '5.0%']
+Row  6: [None, None, None]
+Row  7: ['─── تفاصيل المخازن ───', None, None]
+Row  8: [None, None, None]
+Row  9: ['السلام شبين.pdf', "=MAX(0, COUNTA('السلام شبين.pdf'!A:A)-1)", '=COUNTIF(\'يحتاج مراجعة\'!D:D, "السلام شبين.pdf")']
+Row 10: ['جملة العمروووو.pdf', "=MAX(0, COUNTA('جملة العمروووو.pdf'!A:A)-1)", '=COUNTIF(\'يحتاج مراجعة\'!D:D, "جملة العمروووو.pdf")']
+
+[+] Verification script completed successfully.
+

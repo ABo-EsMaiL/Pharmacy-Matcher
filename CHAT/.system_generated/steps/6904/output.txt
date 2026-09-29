@@ -1,0 +1,7 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+TypeError: Config.__init__() missing 2 required positional arguments: 'unstructured_api_key' and 'gemini_api_key'
+

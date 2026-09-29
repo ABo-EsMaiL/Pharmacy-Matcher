@@ -1,0 +1,22 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -564,6 +564,7 @@
+         # Lifecycle State Tracking
+         current_state = self.STATE_NO_RESPONSE_STARTED
+         t_submit = time.time()
++        t_pre_exec = t_submit - t_req_start
+         t_turn_detected: Optional[float] = None
+         t_first_token: Optional[float] = None
+         t_last_growth = t_submit
+@@ -571,7 +571,7 @@
+         consecutive_js_errors = 0
+ 
+         logger.info(
+-            f"[{case_count} cases] Prompt submitted ({len(prompt)} chars). "
++            f"[{case_count} cases] Prompt submitted ({len(prompt)} chars). Pre-exec took {t_pre_exec:.2f}s. "
+             f"Timeout Tier: {t_cfg['tier']} | Start: {t_cfg['initial_start_timeout']:.0f}s | "
+             f"First Token: {t_cfg['first_token_timeout']:.0f}s | Stagnation: {t_cfg['stagnation_timeout']:.0f}s | "
+             f"Ceiling: {t_cfg['hard_ceiling']:.0f}s"
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

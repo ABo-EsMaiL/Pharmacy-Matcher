@@ -1,0 +1,42 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -645,10 +645,32 @@
+         else:
+             results = []
+ 
+-        # Map by case_id
+-        decision_map = {d.get("case_id"): d for d in results if isinstance(d, dict)}
+-
+-        return [decision_map.get(c["case_id"], {"status": "no_match", "item_id": ""}) for c in inputs["cases"]]
++        sent_case_ids = [c["case_id"] for c in inputs.get("cases", [])]
++        returned_case_ids = [d.get("case_id") for d in results if isinstance(d, dict) and d.get("case_id")]
++        
++        # Check for duplicates
++        if len(returned_case_ids) != len(set(returned_case_ids)):
++            err_msg = f"PROVIDER_RESPONSE_INVALID: Duplicate case_ids returned: {returned_case_ids}"
++            self._log_provider_error(url, model, inputs, content, "PROVIDER_RESPONSE_INVALID")
++            raise RuntimeError(err_msg)
++
++        # Check for missing cases (STRICT: no silent fallback to no_match)
++        missing_ids = set(sent_case_ids) - set(returned_case_ids)
++        if missing_ids:
++            err_msg = f"PROVIDER_RESPONSE_INCOMPLETE: Model returned {len(returned_case_ids)}/{len(sent_case_ids)} cases. Missing: {sorted(list(missing_ids))}"
++            self._log_provider_error(url, model, inputs, content, "PROVIDER_RESPONSE_INCOMPLETE")
++            raise RuntimeError(err_msg)
++
++        # Check for unexpected extra cases
++        extra_ids = set(returned_case_ids) - set(sent_case_ids)
++        if extra_ids:
++            err_msg = f"PROVIDER_RESPONSE_INVALID: Unexpected extra case_ids: {sorted(list(extra_ids))}"
++            self._log_provider_error(url, model, inputs, content, "PROVIDER_RESPONSE_INVALID")
++            raise RuntimeError(err_msg)
++
++        # Map by case_id strictly
++        decision_map = {d["case_id"]: d for d in results}
++        return [decision_map[c["case_id"]] for c in inputs["cases"]]
+ 
+     def _log_provider_error(self, url: str, model: str, inputs: dict, raw_response: str, error_type: str):
+         try:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

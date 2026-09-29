@@ -1,0 +1,72 @@
+The search for ""unstructured-transform-client" parse document extract python" returned the following summary:
+The `unstructured` library and its associated `unstructured-client` (often used via the `unstructured-client` Python SDK) are designed to parse complex documents (PDFs, DOCX, HTML, images, etc.) and extract structured data[1][2][3].
+
+### Core Concepts
+*   **Partitioning:** The process of breaking a document into "elements" (e.g., `Title`, `NarrativeText`, `ListItem`, `Table`, `Image`)[4][2].
+*   **Extraction:** The newer "Extract" workflow allows you to pull specific fields as structured data directly from those documents[5][3].
+*   **Modes:** 
+    *   **Local:** Uses local processing (no API costs) but may require system-level dependencies for complex file types[1][6].
+    *   **API:** Uses the Unstructured API for advanced AI-based OCR and complex layout analysis[1][7].
+
+---
+
+### Basic Usage Patterns
+
+#### 1. Using the `unstructured` Library (Local)
+For local partitioning, you primarily use the `partition` function[8].
+
+```python
+from unstructured.partition.auto import partition
+
+# Partition a document into elements
+elements = partition(filename="example.pdf")
+
+# Iterate through and print elements
+for element in elements:
+    print(f"{element.category}: {element.text}")
+```
+
+#### 2. Using the `unstructured-client` (API)
+When using the SDK to interact with the Unstructured API for more advanced processing or extraction, you typically use the `UnstructuredClient`[3][6].
+
+```python
+import os
+from unstructured_client import UnstructuredClient
+from unstructured_client.models import operations, shared
+
+# Initialize client
+client = UnstructuredClient(api_key_auth=os.getenv("UNSTRUCTURED_API_KEY"))
+
+# Example: Using the SDK to parse a file
+with open("document.pdf", "rb") as f:
+    req = operations.PartitionRequest(
+        partition_parameters=shared.PartitionParameters(
+            files=shared.Files(
+                content=f.read(),
+                file_name="document.pdf",
+            ),
+            strategy="hi_res", # Uses AI-based partitioning
+        ),
+    )
+
+res = client.general.partition(request=req)
+```
+
+---
+
+### Key Resources
+*   **Installation:** To get started with the API-ready SDK, you typically install: 
+    `pip install unstructured-client unstructured "unstructured[pdf]"`[6]
+*   **Workflows:** If you need to extract specific fields rather than just text, look into the **"Extract"** node in the Unstructured workflow, which is designed to convert documents into specific records[3].
+*   **Documentation:** For specific parameter details regarding the `unstructured-client` (such as handling tables or OCR strategies), refer to the official [Unstructured documentation](https://docs.unstructured.io)[9].
+
+Sources:
+[1] [tetranyde.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqLK_9h_i4rpw2gfl4ioYer0g_a5rkeBBoqLJ8_DeixD_8wB_fgr0eNc0dBoZ3VJhlEYAkeumZ2OZCMNtjvMhte4uT6lWsWdaEVrDtbP3vq4_0T790313Rl1a4sQyc6Fgd)
+[2] [readthedocs.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4TLRfvlL_lVDSp9wcR6wmv3Zc1KO3uQiq4Kml1g9VMTkR_CDgeKSVEuWKlGitztnSNhiCI2TqjAlZaQjwWBc544vbgRITBmK2zj5dFr_JA74mrAUTJ-5a9QKI-DzEf7uVTQj-h05FJcPGWi4F1nO-S2HlvF4U61ZfjG5wwXJrQhNpKQ==)
+[3] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGC3u-zjmFqtwy5TsLbm50TH6zNEBzqtPFzziQg2s2TP2nr_XVzTaSXwrh1ieJDIOx4tv1OWw6nnkLaJZLe9vpR5O-RAYNrrGUpVmFSahT23lfGZ8RxC3GrYfmcXpcHFzYYN0RVrfQ=)
+[4] [readthedocs.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFey9eVcS_DsqRRaMjtYn0c2NyWmzDDBPfziIjoCssHOHlklrRkrkveidlxy86qqSlxdVAJ6_xWl0avPPDnNUemcduSQPBgBGCq1wDQkTh1kGKa1gcTj5za_CwbQ5nA9XARzUC42w9-_-motW4j1_SrvoBNTCo30_rfF2oR)
+[5] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLbG_RX25Fl9iVy9iA2K3M8CpK229BBxkO9WFXsSSK5pbf34d5Jpe_W_XGp_H30yD46Cc26fCdEisgmiBrPXFQeUEpj519-NEo8r-Tj2CuepNQvuEOHkzSX_A6qopOpqyWNjjXj8PxJVBe)
+[6] [langchain.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnKkRcOJkZXZ1DKXbiWWkfltO8V5QH3lOK2FuvX221SoVKbL5waw9bnT_CHXvPtI6Kc-I4Z-y4yxkPARTs8xZPV4N6ZczBn6y-COJ6PbV-s08dOGfcN5zLbb-sATX-IYolYIhVYZBnbKhVSwacWxg2YUgJqOKjPMHUZMOk1GBkq7JK9b7ZM8p9tgLh)
+[7] [youtube.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2ZxqXagQ9Vw6-vE9YH2fEOtOcy74mE0OpsS6nZDf4FoFCfoJEKcYFjoL4kim0JBDzuXNaQlXi9zbhry0H51p0sQKrCOeY_gp_gjgF4iTIuJbBEUCkYZLgZ92wkPnK_Ypb)
+[8] [pypi.org](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmAdKcC6n1VI0EkwN7VNsmQY-keUyMTQdldAvCtAF0NDDxWi7_lGmyiGrSdqIvnGjVYQJ_5HVnk0rTSeHbM3_D8d6XwePXPz7uhK7lUYRxJL4UyKoUXQN_a2t70g==)
+[9] [github.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGr0e4aMu8v5Jl8R6Fm3-mG3BZMvzg0A7xxalSlNq6LWIHA19OLCKv3dXSgaumYzjj-KF5GsnT4hPDSZ4Iktbw3doA6e9QzfFtLIVI9Hx713R7QUrzLwX15b9hWZ1YDyhsvqy5IWg==)

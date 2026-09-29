@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+  File "<string>", line 1
+    import sqlite3; print(sqlite3.connect('data/history.db').cursor().execute(" SELECT id matched_count not_found_count review_count FROM processes WHERE id=PROC-014\).fetchall())
+                                                                              ^
+SyntaxError: unterminated string literal (detected at line 1)
+

@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_calibrated_pairs.py", line 3, in <module>
+    from scratch.calibrate_matcher import is_safe_auto_match_calibrated
+ModuleNotFoundError: No module named 'scratch.calibrate_matcher'
+

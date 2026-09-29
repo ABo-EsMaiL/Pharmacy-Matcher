@@ -1,0 +1,22 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -270,6 +270,8 @@
+                                 if req_b and wh_b:
+                                     words_r = req_b.split()
+                                     words_w = wh_b.split()
++                                    first_r = words_r[0] if words_r else ""
++                                    first_w = words_w[0] if words_w else ""
+                                     if len(words_r) > 1 or len(words_w) > 1:
+                                         b_sim = fuzz.token_sort_ratio(req_b, wh_b)
+                                     else:
+@@ -276,4 +276,6 @@
+-                                    if req_b.startswith(wh_b) or wh_b.startswith(req_b):
++                                    if first_r and first_w and (first_r == first_w or fuzz.ratio(first_r, first_w) >= 80):
++                                        b_sim = max(b_sim, 80)
++                                    elif req_b.startswith(wh_b) or wh_b.startswith(req_b):
+                                         b_sim = max(b_sim, 80)
+                                     if b_sim < 65:
+                                         status = "no_match"
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

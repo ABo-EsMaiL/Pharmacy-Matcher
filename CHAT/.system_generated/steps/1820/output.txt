@@ -1,0 +1,352 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -847,9 +847,13 @@
+             <div class="brand">
+                 <i class="ph-fill ph-first-aid"></i>
+                 <div class="brand-text">
+-                    <h1>فارما ماتش</h1>
+-                    <span>Pharmacy Matcher</span>
+-                </div>
++                    <h1 data-i18n="brand_title">فارما ماتش</h1>
++                    <span data-i18n="brand_subtitle">Pharmacy Matcher</span>
++                </div>
++                <button id="btn-lang-toggle" onclick="toggleLanguage()" class="btn-lang" title="Switch Language / تغيير اللغة">
++                    <i class="ph ph-translate"></i>
++                    <span id="lang-label">EN</span>
++                </button>
+             </div>
+             
+             <nav class="nav-menu">
+@@ -856,13 +856,13 @@
+-                    <i class="ph ph-plus-circle"></i> عملية مطابقة جديدة
++                    <i class="ph ph-plus-circle"></i> <span data-i18n="nav_new">عملية مطابقة جديدة</span>
+                 </button>
+                 <button class="nav-item" onclick="loadHistory(); showScreen('screen-history', this)">
+-                    <i class="ph ph-clock-counter-clockwise"></i> سجل العمليات
++                    <i class="ph ph-clock-counter-clockwise"></i> <span data-i18n="nav_history">سجل العمليات</span>
+                 </button>
+                 <button class="nav-item" onclick="showScreen('screen-settings', this)">
+-                    <i class="ph ph-gear"></i> إعدادات النظام
++                    <i class="ph ph-gear"></i> <span data-i18n="nav_settings">إعدادات النظام</span>
+                 </button>
+                 <button class="nav-item" onclick="showScreen('screen-logs', this)">
+-                    <i class="ph ph-terminal"></i> سجل النظام (Terminal)
++                    <i class="ph ph-terminal"></i> <span data-i18n="nav_logs">سجل النظام (Terminal)</span>
+                 </button>
+             </nav>
+ 
+@@ -869,12 +869,12 @@
+                 <div class="server-status-card">
+                     <div class="status-header">
+                         <div id="server-indicator" class="status-indicator"></div>
+-                        <span id="server-status-text">جاري التحقق...</span>
+-                    </div>
+-                    <button id="btn-toggle-server" class="btn btn-small btn-full">تشغيل السيرفر</button>
++                        <span id="server-status-text" data-i18n="server_checking">جاري التحقق...</span>
++                    </div>
++                    <button id="btn-toggle-server" class="btn btn-small btn-full" data-i18n="btn_start_server">تشغيل السيرفر</button>
+                 </div>
+                 <button class="nav-item text-danger mt-2" onclick="exitApp()">
+-                    <i class="ph ph-sign-out"></i> إغلاق البرنامج
++                    <i class="ph ph-sign-out"></i> <span data-i18n="btn_exit_app">إغلاق البرنامج</span>
+                 </button>
+             </div>
+         </aside>
+@@ -884,8 +884,8 @@
+             <!-- Screen 1: New Process (Default) -->
+             <div id="screen-new" class="screen active">
+                 <header class="page-header">
+-                    <h2><i class="ph-fill ph-magic-wand"></i> مطابقة نواقص ومخازن جديدة</h2>
+-                    <p>قم بإدراج ملفات النواقص وملفات المخازن للبدء في المطابقة الذكية.</p>
++                    <h2><i class="ph-fill ph-magic-wand"></i> <span data-i18n="new_title">مطابقة نواقص ومخازن جديدة</span></h2>
++                    <p data-i18n="new_desc">قم بإدراج ملفات النواقص وملفات المخازن للبدء في المطابقة الذكية.</p>
+                 </header>
+                 
+                 <div class="upload-grid">
+@@ -892,13 +892,13 @@
+                     <div class="upload-card">
+                         <div class="card-header primary">
+                             <i class="ph-fill ph-clipboard-text"></i>
+-                            <h3>1. ملفات النواقص</h3>
++                            <h3 data-i18n="shortages_title">1. ملفات النواقص</h3>
+                         </div>
+                         <div class="drop-zone" id="zone-shortage">
+                             <i class="ph ph-upload-simple drop-icon"></i>
+-                            <h4>اضغط لاختيار الملفات</h4>
+-                            <p>(يدعم PDF / Excel)</p>
+-                            <button class="btn btn-outline" onclick="selectFiles('shortage')">تصفح الملفات</button>
++                            <h4 data-i18n="shortages_drop_title">اضغط لاختيار الملفات</h4>
++                            <p data-i18n="shortages_drop_sub">(يدعم PDF / Excel)</p>
++                            <button class="btn btn-outline" onclick="selectFiles('shortage')" data-i18n="browse_files">تصفح الملفات</button>
+                         </div>
+                         <ul id="list-shortage" class="file-list"></ul>
+                     </div>
+@@ -906,13 +906,13 @@
+                     <div class="upload-card">
+                         <div class="card-header secondary">
+                             <i class="ph-fill ph-buildings"></i>
+-                            <h3>2. قوائم المخازن</h3>
++                            <h3 data-i18n="warehouses_title">2. قوائم المخازن</h3>
+                         </div>
+                         <div class="drop-zone" id="zone-warehouse">
+                             <i class="ph ph-upload-simple drop-icon"></i>
+-                            <h4>اضغط لاختيار الملفات</h4>
+-                            <p>(يدعم PDF / Excel / JSON)</p>
+-                            <button class="btn btn-outline" onclick="selectFiles('warehouse')">تصفح الملفات</button>
++                            <h4 data-i18n="warehouses_drop_title">اضغط لاختيار الملفات</h4>
++                            <p data-i18n="warehouses_drop_sub">(يدعم PDF / Excel / JSON)</p>
++                            <button class="btn btn-outline" onclick="selectFiles('warehouse')" data-i18n="browse_files">تصفح الملفات</button>
+                         </div>
+                         <ul id="list-warehouse" class="file-list"></ul>
+                     </div>
+@@ -919,7 +919,7 @@
+ 
+                 <div class="action-bar-bottom">
+                     <button id="btn-submit" class="btn btn-primary btn-massive" onclick="submitProcess()" disabled>
+-                        <i class="ph-fill ph-play-circle"></i> بدء عملية المطابقة
++                        <i class="ph-fill ph-play-circle"></i> <span data-i18n="btn_start_matching">بدء عملية المطابقة</span>
+                     </button>
+                 </div>
+ 
+@@ -926,14 +926,17 @@
+                 <div id="progress-modal" style="display: none;">
+                     <div class="progress-box">
+-                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+-                            <div class="spinner" style="width: 20px; height: 20px; border-width: 2px;"></div>
+-                            <h3 id="progress-text" style="margin: 0; font-size: 14px; font-weight: bold;">جاري معالجة الملفات...</h3>
+-                        </div>
+-                        <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; margin: 10px 0; overflow: hidden;">
++                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
++                            <div style="display: flex; align-items: center; gap: 10px;">
++                                <div class="spinner" style="width: 22px; height: 22px; border-width: 2px;"></div>
++                                <h3 id="progress-text" style="margin: 0; font-size: 15px; font-weight: bold;" data-i18n="progress_init">جاري تهيئة العملية...</h3>
++                            </div>
++                            <span id="progress-timer" style="font-family: monospace; font-size: 14px; font-weight: 700; color: var(--primary); background: #e0f2fe; padding: 3px 8px; border-radius: 6px;">⏱️ 00:00</span>
++                        </div>
++                        <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; margin: 12px 0; overflow: hidden;">
+                             <div id="progress-bar-fill" style="width: 10%; height: 100%; background: var(--primary); transition: width 0.5s ease;"></div>
+                         </div>
+                         
+-                        <p style="color: var(--text-muted); font-size: 11px; margin-top: 10px; text-align: center;">العملية تعمل في الخلفية. يمكنك متابعة السجلات من تبويب "سجل النظام".</p>
++                        <p id="progress-subtext" style="color: var(--text-muted); font-size: 11px; margin-top: 10px; text-align: center;" data-i18n="progress_sub">العملية تعمل في الخلفية. يمكنك متابعة السجلات من تبويب "سجل النظام".</p>
+                     </div>
+                 </div>
+             </div>
+@@ -940,8 +940,8 @@
+             <!-- Screen 2: Results -->
+             <div id="screen-results" class="screen">
+                 <header class="page-header">
+-                    <h2><i class="ph-fill ph-check-circle"></i> تقرير نتائج المطابقة</h2>
+-                    <p>تم الانتهاء من فحص الملفات وإنشاء تقرير الإكسيل بنجاح.</p>
++                    <h2><i class="ph-fill ph-check-circle"></i> <span data-i18n="results_title">تقرير نتائج المطابقة</span></h2>
++                    <p data-i18n="results_desc">تم الانتهاء من فحص الملفات وإنشاء تقرير الإكسيل بنجاح.</p>
+                 </header>
+                 
+                 <div class="stats-grid">
+@@ -948,6 +948,6 @@
+                         <div class="stat-icon"><i class="ph-fill ph-list-numbers"></i></div>
+                         <div class="stat-info">
+-                            <span class="stat-title">إجمالي الأصناف المطلوبة</span>
++                            <span class="stat-title" data-i18n="stat_total_title">إجمالي الأصناف المطلوبة</span>
+                             <strong id="stat-total" class="stat-value">0</strong>
+                         </div>
+                     </div>
+@@ -954,6 +954,6 @@
+                         <div class="stat-icon"><i class="ph-fill ph-check-fat"></i></div>
+                         <div class="stat-info">
+-                            <span class="stat-title">تمت المطابقة بنجاح</span>
++                            <span class="stat-title" data-i18n="stat_matched_title">تمت المطابقة بنجاح</span>
+                             <div class="stat-flex">
+                                 <strong id="stat-matched" class="stat-value">0</strong>
+                                 <span id="stat-matched-pct" class="stat-badge">0%</span>
+@@ -962,7 +962,7 @@
+                     <div class="stat-card stat-warning">
+                         <div class="stat-icon"><i class="ph-fill ph-warning"></i></div>
+                         <div class="stat-info">
+-                            <span class="stat-title">يحتاج مراجعة (غير مؤكد)</span>
++                            <span class="stat-title" data-i18n="stat_review_title">يحتاج مراجعة (غير مؤكد)</span>
+                             <div class="stat-flex">
+                                 <strong id="stat-review" class="stat-value">0</strong>
+                                 <span id="stat-review-pct" class="stat-badge">0%</span>
+@@ -971,7 +971,7 @@
+                     <div class="stat-card stat-danger">
+                         <div class="stat-icon"><i class="ph-fill ph-x-circle"></i></div>
+                         <div class="stat-info">
+-                            <span class="stat-title">غير متوفر في المخازن</span>
++                            <span class="stat-title" data-i18n="stat_notfound_title">غير متوفر في المخازن</span>
+                             <div class="stat-flex">
+                                 <strong id="stat-notfound" class="stat-value">0</strong>
+                                 <span id="stat-notfound-pct" class="stat-badge">0%</span>
+@@ -980,28 +980,28 @@
+                 </div>
+ 
+                 <div class="results-workflow">
+-                    <h3>خطوات المراجعة النهائية:</h3>
++                    <h3 data-i18n="workflow_title">خطوات المراجعة النهائية:</h3>
+                     <div class="workflow-steps">
+                         <div class="step-box">
+                             <div class="step-num">1</div>
+-                            <h4>افتح ملف الإكسيل</h4>
+-                            <p>اضغط على الزر لفتح الملف، ثم اذهب لشيت "يحتاج مراجعة".</p>
+-                            <button class="btn btn-outline" onclick="openExcel()"><i class="ph-fill ph-microsoft-excel-logo"></i> فتح الإكسيل</button>
++                            <h4 data-i18n="step1_title">افتح ملف الإكسيل</h4>
++                            <p data-i18n="step1_desc">اضغط على الزر لفتح الملف، ثم اذهب لشيت "يحتاج مراجعة".</p>
++                            <button class="btn btn-outline" onclick="openExcel()"><i class="ph-fill ph-microsoft-excel-logo"></i> <span data-i18n="btn_open_excel">فتح الإكسيل</span></button>
+                         </div>
+                         <div class="step-box">
+                             <div class="step-num">2</div>
+-                            <h4>راجع واتخذ القرار</h4>
+-                            <p>اختر (✅ مطابق) أو (❌ غير مطابق) لكل صنف، ثم احفظ الملف وأغلقه.</p>
++                            <h4 data-i18n="step2_title">راجع واتخذ القرار</h4>
++                            <p data-i18n="step2_desc">اختر (✅ مطابق) أو (❌ غير مطابق) لكل صنف، ثم احفظ الملف وأغلقه.</p>
+                         </div>
+                         <div class="step-box">
+                             <div class="step-num">3</div>
+-                            <h4>طبق التعديلات</h4>
+-                            <p>اضغط هنا لنقل الأصناف لشيتات المخازن وتنظيف القائمة.</p>
+-                            <button class="btn btn-primary" onclick="applyReviews()"><i class="ph-fill ph-magic-wand"></i> تنفيذ التعديلات</button>
++                            <h4 data-i18n="step3_title">طبق التعديلات</h4>
++                            <p data-i18n="step3_desc">اضغط هنا لنقل الأصناف لشيتات المخازن وتنظيف القائمة.</p>
++                            <button class="btn btn-primary" onclick="applyReviews()"><i class="ph-fill ph-magic-wand"></i> <span data-i18n="btn_apply_reviews">تنفيذ التعديلات</span></button>
+                         </div>
+                     </div>
+                     <div class="folder-action">
+-                        <button class="btn btn-text" onclick="openFolder()"><i class="ph-fill ph-folder-open"></i> فتح مجلد حفظ النتائج (Folder)</button>
++                        <button class="btn btn-text" onclick="openFolder()"><i class="ph-fill ph-folder-open"></i> <span data-i18n="btn_open_folder">فتح مجلد حفظ النتائج (Folder)</span></button>
+                     </div>
+                 </div>
+             </div>
+@@ -1008,8 +1008,8 @@
+             <!-- Screen 3: History -->
+             <div id="screen-history" class="screen">
+                 <header class="page-header">
+-                    <h2><i class="ph-fill ph-clock-counter-clockwise"></i> سجل العمليات السابقة</h2>
+-                    <p>هنا تجد جميع عمليات المطابقة التي قمت بها سابقاً، يمكنك العودة إليها في أي وقت.</p>
++                    <h2><i class="ph-fill ph-clock-counter-clockwise"></i> <span data-i18n="history_title">سجل العمليات السابقة</span></h2>
++                    <p data-i18n="history_desc">هنا تجد جميع عمليات المطابقة التي قمت بها سابقاً، يمكنك العودة إليها في أي وقت.</p>
+                 </header>
+                 
+                 <div id="history-list" class="history-grid">
+@@ -1016,6 +1016,6 @@
+                     <div class="empty-state">
+                         <i class="ph-fill ph-empty"></i>
+-                        <p>لا توجد عمليات سابقة مسجلة.</p>
++                        <p data-i18n="history_empty">لا توجد عمليات سابقة مسجلة.</p>
+                     </div>
+                 </div>
+             </div>
+@@ -1022,8 +1022,8 @@
+             <!-- Screen 4: Settings -->
+             <div id="screen-settings" class="screen">
+                 <header class="page-header">
+-                    <h2><i class="ph-fill ph-gear"></i> إعدادات النظام</h2>
+-                    <p>قم بضبط إعدادات الربط مع سيرفر الذكاء الاصطناعي (MSEMAX) و Unstructured API.</p>
++                    <h2><i class="ph-fill ph-gear"></i> <span data-i18n="settings_title">إعدادات النظام</span></h2>
++                    <p data-i18n="settings_desc">قم بضبط إعدادات الربط مع سيرفر الذكاء الاصطناعي (MSEMAX) و Unstructured API وجودة الاستخراج.</p>
+                 </header>
+ 
+                 <div class="settings-grid">
+@@ -1030,23 +1030,31 @@
+                     <div class="settings-card">
+                         <div class="card-header dark">
+                             <i class="ph-fill ph-key"></i>
+-                            <h3>مفاتيح الربط (API Keys)</h3>
+-                        </div>
+-                        <div class="card-body form-grid">
+-                            <div class="form-group">
+-                                <label>Unstructured API Key</label>
++                            <h3 data-i18n="api_keys_header">مفاتيح الربط وخيارات المعالجة</h3>
++                        </div>
++                        <div class="card-body form-grid">
++                            <div class="form-group">
++                                <label data-i18n="lbl_unstructured_profile">وضع معالجة PDF (Parse Profile)</label>
++                                <select id="setting-unstructured-profile" class="form-control">
++                                    <option value="best">جودة فائقة (Best - دقة عالية جداً للأسماء الطبية)</option>
++                                    <option value="balanced">متوازن (Balanced - أسرع)</option>
++                                </select>
++                                <small style="color: var(--text-muted); font-size: 11px;" data-i18n="profile_note">Best يضمن دقة قراءة الأسماء الطبية العربية المعقدة ويمنع أخطاء الحروف.</small>
++                            </div>
++                            <div class="form-group mt-2">
++                                <label data-i18n="lbl_unstructured_key">Unstructured API Key</label>
+                                 <input type="password" id="setting-unstructured-key" class="form-control" placeholder="Enter Unstructured.io Key...">
+                             </div>
+                             <div class="form-group mt-2">
+-                                <label>Local AI URL (MSEMAX / vLLM)</label>
++                                <label data-i18n="lbl_local_url">Local AI URL (MSEMAX / vLLM)</label>
+                                 <input type="text" id="setting-local-url" class="form-control" placeholder="http://127.0.0.1:8000/v1/chat/completions">
+                             </div>
+                             <div class="form-group">
+-                                <label>Local AI Key (إن وجد)</label>
++                                <label data-i18n="lbl_local_key">Local AI Key (إن وجد)</label>
+                                 <input type="password" id="setting-local-key" class="form-control" placeholder="Optional API Key">
+                             </div>
+                             <div class="form-group">
+-                                <label>اسم الموديل (Model Name)</label>
++                                <label data-i18n="lbl_model_name">اسم الموديل (Model Name)</label>
+                                 <input type="text" id="setting-model-name" class="form-control" placeholder="gpt-4o-mini, llama3, etc...">
+                             </div>
+                         </div>
+@@ -1055,14 +1055,14 @@
+                     <div class="settings-card">
+                         <div class="card-header dark">
+                             <i class="ph-fill ph-hard-drives"></i>
+-                            <h3>إعدادات سيرفر (MSEMAX)</h3>
++                            <h3 data-i18n="server_header">إعدادات سيرفر (MSEMAX)</h3>
+                         </div>
+                         <div class="card-body form-grid">
+                             <div class="form-group mb-4">
+-                                <label>مسار مجلد MSEMAX</label>
++                                <label data-i18n="lbl_msemax_dir">مسار مجلد MSEMAX</label>
+                                 <div class="input-group">
+                                     <input type="text" id="setting-msemax-dir" class="form-control" readonly>
+-                                    <button class="btn btn-outline-secondary" onclick="selectMsemaxDir()">تحديد المجلد</button>
++                                    <button class="btn btn-outline-secondary" onclick="selectMsemaxDir()" data-i18n="btn_select_dir">تحديد المجلد</button>
+                                 </div>
+                             </div>
+ 
+@@ -1069,6 +1069,6 @@
+                                 <button class="btn btn-outline" onclick="setupRequirements()">
+                                     <i class="ph ph-download-simple"></i>
+-                                    <span>تثبيت متطلبات الجهاز الأساسية</span>
++                                    <span data-i18n="btn_install_reqs">تثبيت متطلبات الجهاز الأساسية</span>
+                                     <span id="req-status" style="margin-right:auto"></span>
+                                 </button>
+                                 <button class="btn btn-outline" onclick="getSession()">
+@@ -1075,4 +1075,4 @@
+-                                    <span>تجديد الجلسة (Get Session)</span>
++                                    <span data-i18n="btn_renew_session">تجديد الجلسة (Get Session)</span>
+                                     <span id="session-status" style="margin-right:auto"></span>
+                                 </button>
+                             </div>
+@@ -1081,7 +1081,7 @@
+ 
+                 <div class="action-bar-bottom mt-3">
+                     <button class="btn btn-primary btn-massive" onclick="saveSettings()">
+-                        <i class="ph-fill ph-floppy-disk"></i> حفظ الإعدادات
++                        <i class="ph-fill ph-floppy-disk"></i> <span data-i18n="btn_save_settings">حفظ الإعدادات</span>
+                     </button>
+                 </div>
+                 
+@@ -1088,7 +1088,7 @@
+                 <div class="settings-card" style="margin-top: 32px; border-color: var(--border);">
+                     <div class="card-header" style="background: var(--text-main); color: white;">
+                         <i class="ph-fill ph-terminal-window"></i>
+-                        <h3>سجل النظام (System Logs)</h3>
++                        <h3 data-i18n="system_logs_title">سجل النظام (System Logs)</h3>
+                     </div>
+                     <div style="background: #1e1e1e; padding: 12px;">
+                         <textarea id="system-logs" readonly style="width: 100%; height: 250px; background: #1e1e1e; color: #00ff00; border: none; font-family: monospace; font-size: 13px; outline: none; resize: vertical; direction: ltr; text-align: left;"></textarea>
+@@ -1098,8 +1098,8 @@
+             <!-- سجل النظام (Terminal) -->
+             <div id="screen-logs" class="screen">
+                 <div class="screen-header">
+-                    <h2>سجل النظام (Terminal)</h2>
+-                    <p class="subtitle">يُظهر مخرجات العمليات الجارية في الخلفية</p>
++                    <h2 data-i18n="terminal_title">سجل النظام (Terminal)</h2>
++                    <p class="subtitle" data-i18n="terminal_subtitle">يُظهر مخرجات العمليات الجارية في الخلفية</p>
+                 </div>
+                 
+                 <div class="card" style="flex:1; display:flex; flex-direction:column; background:#1e1e1e; overflow:hidden;">
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

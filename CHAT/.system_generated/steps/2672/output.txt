@@ -1,0 +1,25 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":141,"LineContent":"                    \"confidence\": \"exact\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":155,"LineContent":"                # Rule 1: Very high confidence -\u003e Auto Match (Bypass API entirely!)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":160,"LineContent":"                        \"confidence\": f\"high ({best_score:.2f})\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":174,"LineContent":"                # Rule 3: Low confidence -\u003e Auto Reject (Bypass API)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":241,"LineContent":"                            \"confidence\": \"llm\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py","LineNumber":140,"LineContent":"                    \"confidence\": \"exact\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py","LineNumber":156,"LineContent":"                        \"confidence\": \"llm\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\output\\excel_writer.py","LineNumber":178,"LineContent":"            confidence = match.get(\"confidence\", \"\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\output\\excel_writer.py","LineNumber":179,"LineContent":"            rows.append([shortage_name, warehouse_item, confidence])"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":40,"LineContent":"  \"confidence\": \"\u003chigh أو medium أو low\u003e\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":68,"LineContent":"    \"confidence\": \"\u003chigh أو medium أو low\u003e\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":97,"LineContent":"            - confidence: درجة الثقة (high/medium/low)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":104,"LineContent":"            \"confidence\": \"low\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":132,"LineContent":"        confidence = result.get(\"confidence\", \"low\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":139,"LineContent":"                \"confidence\": confidence,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":146,"LineContent":"                \"confidence\": confidence,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":155,"LineContent":"            \"confidence\": \"low\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":163,"LineContent":"            \"confidence\": \"low\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":193,"LineContent":"                \"confidence\": \"low\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":247,"LineContent":"                    confidence = r.get(\"confidence\", \"low\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":255,"LineContent":"                                \"confidence\": confidence,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":264,"LineContent":"                                \"confidence\": confidence,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":273,"LineContent":"                            \"confidence\": \"low\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":285,"LineContent":"                        \"confidence\": \"low\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":296,"LineContent":"                        \"confidence\": \"low\","}

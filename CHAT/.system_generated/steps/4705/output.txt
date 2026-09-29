@@ -1,0 +1,1 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":62,"LineContent":"                print(f\"[+] Loaded {len(cached_items)} items from local cache: {filepath.name}\")"}

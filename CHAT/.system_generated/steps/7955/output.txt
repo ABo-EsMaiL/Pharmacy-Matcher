@@ -1,0 +1,62 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -541,19 +541,6 @@
+         except Exception as e:
+             logger.warning(f"Error injecting prompt: {e}")
+ 
+-        # 4. Trigger execution using NATIVE Playwright actions (isTrusted=true)
+-        logger.info(f"Submitting prompt ({len(prompt)} chars) to Google AI Studio natively...")
+-        try:
+-            await ta.focus()
+-            await self.page.keyboard.press("Control+Enter")
+-            logger.info("Dispatched native Control+Enter.")
+-            
+-            # Wait a moment for UI to register and generation to start
+-            await asyncio.sleep(0.5)
+-                    
+-        except Exception as e:
+-            logger.warning(f"Error during native submission: {e}")
+-
+         # Determine case count from batch_size or prompt inspection
+         case_count = batch_size if (batch_size is not None and batch_size > 0) else None
+         if not case_count:
+@@ -561,13 +561,11 @@
+ 
+         t_cfg = self.get_adaptive_timeouts(case_count)
+ 
+-        # Lifecycle State Tracking
++        # 4. Trigger execution using NATIVE Playwright actions (isTrusted=true)
++        logger.info(f"Submitting prompt ({len(prompt)} chars) to Google AI Studio natively...")
+         current_state = self.STATE_NO_RESPONSE_STARTED
+-        t_submit = time.time()
+-        t_pre_exec = t_submit - t_req_start
+         t_turn_detected: Optional[float] = None
+         t_first_token: Optional[float] = None
+-        t_last_growth = t_submit
+         stability_start_time: Optional[float] = None
+         prev_text = ""
+         consecutive_js_errors = 0
+@@ -574,5 +574,18 @@
+-        logger.info(
+-            f"[{case_count} cases] Prompt submitted ({len(prompt)} chars). Pre-exec took {t_pre_exec:.2f}s. "
++        try:
++            await ta.focus()
++            t_submit = time.time()
++            t_pre_exec = t_submit - t_req_start
++            t_last_growth = t_submit
++            await self.page.keyboard.press("Control+Enter")
++            logger.info(f"[{case_count} cases] Dispatched native Control+Enter. Pre-exec took {t_pre_exec:.2f}s.")
++        except Exception as e:
++            t_submit = time.time()
++            t_pre_exec = t_submit - t_req_start
++            t_last_growth = t_submit
++            logger.warning(f"Error during native submission: {e}")
++
++        logger.info(
++            f"[{case_count} cases] Prompt submitted ({len(prompt)} chars). "
+             f"Timeout Tier: {t_cfg['tier']} | Start: {t_cfg['initial_start_timeout']:.0f}s | "
+             f"First Token: {t_cfg['first_token_timeout']:.0f}s | Stagnation: {t_cfg['stagnation_timeout']:.0f}s | "
+             f"Ceiling: {t_cfg['hard_ceiling']:.0f}s"
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,11 @@
+{
+  "unstructured_api_key": "",
+  "unstructured_profile": "balanced",
+  "active_server": "gaistudio",
+  "local_api_url": "http://127.0.0.1:8001/v1/chat/completions",
+  "local_api_key": "",
+  "local_model": "gemini-3.8-flash",
+  "msemax_dir": "D:\\AI_Engineer\\MSEMAX-GAIStudio-vision",
+  "msemax_gaistudio_dir": "D:\\AI_Engineer\\MSEMAX-GAIStudio-vision",
+  "msemax_chatgpt_dir": "D:\\AI_Engineer\\MSEMAX"
+}

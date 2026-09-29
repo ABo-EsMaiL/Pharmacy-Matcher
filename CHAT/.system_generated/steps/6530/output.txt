@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+
+desktop_app\backend.py:209:    def free_server_ports(self) -> dict:
+
+
+

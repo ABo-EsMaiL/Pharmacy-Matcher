@@ -1,0 +1,5 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":48,"LineContent":"        self.logs = []"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":62,"LineContent":"        self.logs.append(message)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":63,"LineContent":"        if len(self.logs) \u003e 1000:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":64,"LineContent":"            self.logs.pop(0)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":74,"LineContent":"        return json.dumps(self.logs)"}

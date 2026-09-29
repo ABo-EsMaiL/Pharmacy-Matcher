@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+JobsApi ['jobs_cancel', 'jobs_cancel_with_http_info', 'jobs_cancel_without_preload_content', 'jobs_delete', 'jobs_delete_with_http_info', 'jobs_delete_without_preload_content', 'jobs_get', 'jobs_get_with_http_info', 'jobs_get_without_preload_content', 'jobs_list', 'jobs_list_with_http_info', 'jobs_list_without_preload_content']
+UploadApi ['upload_delete', 'upload_delete_with_http_info', 'upload_delete_without_preload_content', 'upload_get', 'upload_get_with_http_info', 'upload_get_without_preload_content', 'upload_run', 'upload_run_with_http_info', 'upload_run_without_preload_content']
+ExtractApi ['extract_run', 'extract_run_with_http_info', 'extract_run_without_preload_content']
+ParseApi ['parse_run', 'parse_run_with_http_info', 'parse_run_without_preload_content']
+
+Files in package:
+

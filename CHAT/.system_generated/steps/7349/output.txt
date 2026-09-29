@@ -1,0 +1,37 @@
+
+The command exited with code 1.
+Output:
+Loaded 23 Google auth cookies.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_inject_cookies.py", line 57, in <module>
+    asyncio.run(test_cookies())
+  File "D:\miniconda3\envs\venv\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_inject_cookies.py", line 41, in test_cookies
+    await ctx.add_cookies(google_cookies)
+  File "D:\miniconda3\envs\venv\Lib\site-packages\playwright\async_api\_generated.py", line 12424, in add_cookies
+    await self._impl_obj.add_cookies(cookies=mapping.to_impl(cookies))
+  File "D:\miniconda3\envs\venv\Lib\site-packages\playwright\_impl\_browser_context.py", line 304, in add_cookies
+    await self._channel.send("addCookies", dict(cookies=cookies))
+  File "D:\miniconda3\envs\venv\Lib\site-packages\playwright\_impl\_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\playwright\_impl\_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: BrowserContext.add_cookies: Cookie should have either url or path
+Exception ignored in: <function BaseSubprocessTransport.__del__ at 0x00000244D0387E20>
+Traceback (most recent call last):
+  File "D:\miniconda3\envs\venv\Lib\asyncio\base_subprocess.py", line 126, in __del__
+  File "D:\miniconda3\envs\venv\Lib\asyncio\base_subprocess.py", line 104, in close
+  File "D:\miniconda3\envs\venv\Lib\asyncio\proactor_events.py", line 109, in close
+  File "D:\miniconda3\envs\venv\Lib\asyncio\base_events.py", line 799, in call_soon
+  File "D:\miniconda3\envs\venv\Lib\asyncio\base_events.py", line 545, in _check_closed
+RuntimeError: Event loop is closed
+

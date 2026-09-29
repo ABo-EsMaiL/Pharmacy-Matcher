@@ -1,0 +1,31 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -43,9 +43,9 @@
+   "results": [
+     {
+       "case_id": "string",
+-      "status": "match" | "review",
+-      "item_id": "string (the matching candidate ID)",
+-      "reason": "string (Arabic explanation when review, otherwise empty string)"
++      "status": "match" | "review" | "no_match",
++      "item_id": "string (the matching candidate ID, or empty string if no_match)",
++      "reason": "string (Arabic explanation for review/no_match, empty string for match)"
+     }
+   ]
+ }
+@@ -52,6 +52,10 @@
+ CRITICAL RULES FOR RESPONSE:
+-- ONLY include cases that are "match" or "review".
+-- DO NOT return cases that are "no_match" (any omitted case_id is automatically considered no_match).
++- MANDATORY: You MUST return a result item for EVERY SINGLE input case_id. If the input contains N cases, "results" MUST contain exactly N items.
++- NEVER omit any case_id under any circumstances!
++- For each case_id:
++  * "status": "match" (if there is a valid match, specify candidate item_id, empty reason)
++  * "status": "review" (if same drug & strength but different dosage form, specify candidate item_id and Arabic reason)
++  * "status": "no_match" (if strength conflict, generic alternative, different brand, or no valid match; item_id is "", with Arabic reason)
+ - DO NOT return markdown blocks (no ```json). Return ONLY the raw JSON starting with { and ending with }.
+ """
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

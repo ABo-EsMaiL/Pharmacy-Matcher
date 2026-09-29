@@ -1,0 +1,23 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\search.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -23,7 +23,8 @@
+ FORM_GROUPS = {
+     'tablet': {'اقراص', 'قرص', 'كبسول', 'كبسوله', 'كبسولات', 'حبوب', 'فيلم', 'شريط'},
+     'syrup': {'شراب', 'شرب', 'معلق', 'سائل'},
+-    'cream_ointment': {'كريم', 'مرهم', 'دهان'},
++    'cream': {'كريم'},
++    'ointment': {'مرهم', 'دهان'},
+     'gel': {'جل', 'جيل'},
+     'suppository': {'لبوس', 'لبوسه', 'لبوسة', 'تحاميل', 'اقماع'},
+     'injection': {'امبول', 'امبوله', 'امبولات', 'حقن', 'فيال'},
+@@ -34,6 +34,7 @@
+ }
+ 
+ def extract_form_group(text: str) -> str | None:
++    text = re.sub(r'(\d+)', r' \1 ', str(text))
+     norm = normalize_text(text)
+     words = set(norm.split())
+     for group_name, group_words in FORM_GROUPS.items():
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

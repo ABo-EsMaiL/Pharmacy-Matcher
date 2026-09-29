@@ -1,0 +1,20 @@
+{
+  "status": "ok",
+  "gateway": "MSEMAX (AIStudio Web Hook)",
+  "version": "2.1.0",
+  "browser_ready": true,
+  "session_file_exists": true,
+  "headless": false,
+  "profile_dir": "D:\\AI_Engineer\\MSEMAX-GAIStudio-vision\\chrome_profile",
+  "default_model": "gemini-3.8-flash",
+  "thinking_mode": "high",
+  "active_model": "Gemini 3.8 Flash\ngemini-3.8-flash\nOur most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.",
+  "model_verified": true,
+  "active_thinking": "High",
+  "thinking_verified": true,
+  "google_search_enabled": false,
+  "search_verified": true,
+  "clear_chat_on_request": true,
+  "port": 8001,
+  "rate_limit": "30/minute"
+}

@@ -1,0 +1,45 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2128,6 +2128,39 @@
+     }
+ }
+ 
++async function rerunMatching() {
++    if (!currentProcessId) {
++        showToast(currentLang === 'en' ? 'No active process to re-run' : 'لا توجد عملية نشطة لإعادة تشغيلها', 'warning');
++        return;
++    }
++    
++    showCustomConfirm(
++        currentLang === 'en' ? 'Re-run Matching' : 'إعادة المطابقة',
++        currentLang === 'en' ? 'Do you want to re-run the matching process using the current files?' : 'هل ترغب في إعادة تشغيل عملية المطابقة لنفس الملفات الحالية؟',
++        async () => {
++            const progressModal = document.getElementById('progress-modal');
++            const progressText = document.getElementById('progress-text');
++            const pb = document.getElementById('progress-bar-fill');
++            
++            pb.style.width = '10%';
++            progressText.innerText = currentLang === 'en' ? 'Re-running matching...' : 'جاري إعادة المطابقة...';
++            progressModal.style.display = 'flex';
++            startProgressTimer();
++            
++            try {
++                const res = await window.pywebview.api.rerun_process(currentProcessId);
++                if (!res.success) {
++                    throw new Error(res.error || 'Failed to start re-run');
++                }
++            } catch (err) {
++                stopProgressTimer();
++                progressModal.style.display = 'none';
++                showToast((currentLang === 'en' ? 'Re-run failed: ' : 'فشلت إعادة المطابقة: ') + err, 'error');
++            }
++        }
++    );
++}
++
+ async function applyReviews() {
+     if (!currentProcessId) return;
+     try {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,1 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3548,"LineContent":"        window.showScreen = function(screenId, element = null) {"}

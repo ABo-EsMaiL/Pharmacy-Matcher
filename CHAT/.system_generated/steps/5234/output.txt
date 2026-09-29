@@ -1,0 +1,42 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\categorize_diffs.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -78,18 +78,22 @@
+     elif s7 == "لم يعثر عليه" and s8 == "مراجعة":
+         categories["لم يعثر عليه -> مراجعة"].append((req, i7, i8))
+ 
+-print("=== STATISTICAL BREAKDOWN ===")
+-for cat, lst in categories.items():
+-    print(f"{cat}: {len(lst)} صنف")
+-
+-print("\n" + "="*80)
+-for cat in ["مطابقة -> مراجعة", "مطابقة -> لم يعثر عليه", "مطابقة -> مطابقة (مخزن مختلف)", "مراجعة -> مطابقة", "مراجعة -> لم يعثر عليه", "لم يعثر عليه -> مطابقة", "لم يعثر عليه -> مراجعة"]:
+-    lst = categories[cat]
+-    if not lst:
+-        continue
+-    print(f"\n### {cat} ({len(lst)} صنف):")
+-    for req, i7, i8 in lst:
+-        print(f"  * الصنف: [{req}]")
+-        print(f"    - في PROC-007: {i7['status']} ({i7['warehouse']}) -> [{i7['target']}]")
+-        print(f"    - في PROC-008: {i8['status']} ({i8['warehouse']}) -> [{i8['target']}]")
++with open("scratch_cat.txt", "w", encoding="utf-8") as f:
++    f.write("=== STATISTICAL BREAKDOWN ===\n")
++    for cat, lst in categories.items():
++        f.write(f"{cat}: {len(lst)} صنف\n")
++
++    f.write("\n" + "="*80 + "\n")
++    for cat in ["مطابقة -> مراجعة", "مطابقة -> لم يعثر عليه", "مطابقة -> مطابقة (مخزن مختلف)", "مراجعة -> مطابقة", "مراجعة -> لم يعثر عليه", "لم يعثر عليه -> مطابقة", "لم يعثر عليه -> مراجعة"]:
++        lst = categories[cat]
++        if not lst:
++            continue
++        f.write(f"\n### {cat} ({len(lst)} صنف):\n")
++        for req, i7, i8 in lst:
++            f.write(f"  * الصنف: [{req}]\n")
++            f.write(f"    - في PROC-007: {i7['status']} ({i7['warehouse']}) -> [{i7['target']}]\n")
++            f.write(f"    - في PROC-008: {i8['status']} ({i8['warehouse']}) -> [{i8['target']}]\n")
++
++print("Saved to scratch_cat.txt")
++
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

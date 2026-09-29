@@ -1,0 +1,22 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+[*] Processing PDF file: السلام شبين.pdf
+[+] Loaded 187 items from alongside JSON: السلام شبين.json
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_live_enhanced_salam.py", line 122, in <module>
+    req_brand = extract_brand_tokens(req)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_live_enhanced_salam.py", line 44, in extract_brand_tokens
+    text = re.sub(r'(\d+)', r' \1 ', text)
+           ^^
+NameError: name 're' is not defined. Did you mean: 'req'? Or did you forget to import 're'?
+

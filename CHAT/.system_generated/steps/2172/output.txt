@@ -1,0 +1,19 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":38,"LineContent":"        self.window = window"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":66,"LineContent":"        if self.window:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":69,"LineContent":"                self.window.evaluate_js(f\"window.dispatchEvent(new CustomEvent('new_log', {{detail: '{safe_msg}'}}));\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":169,"LineContent":"        if not self.window:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":184,"LineContent":"        result = self.window.create_file_dialog("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":197,"LineContent":"        if not self.window:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":207,"LineContent":"        result = self.window.create_file_dialog(dialog_type)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":292,"LineContent":"            if self.window:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":293,"LineContent":"                self.window.evaluate_js(f\"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Reading files...'}}}}));\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":310,"LineContent":"            if self.window:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":311,"LineContent":"                self.window.evaluate_js(f\"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Extracting data from files...'}}}}));\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":333,"LineContent":"            if self.window:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":334,"LineContent":"                self.window.evaluate_js(f\"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Matching {len(all_shortages)} items...'}}}}));\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":341,"LineContent":"            if self.window:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":342,"LineContent":"                self.window.evaluate_js(f\"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Saving results...'}}}}));\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":364,"LineContent":"            if self.window:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":366,"LineContent":"                self.window.evaluate_js(f\"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: true, stats: JSON.parse('{safe_stats}')}}}}));\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":374,"LineContent":"            if self.window:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":375,"LineContent":"                self.window.evaluate_js(f\"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: false, error: \\\"{err_msg}\\\"}}}}));\")"}

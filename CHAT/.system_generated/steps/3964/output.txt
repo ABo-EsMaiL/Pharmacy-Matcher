@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "D:\AI_Engineer\Pharmacy-agy\scratch\find_false_negatives.py", line 1, in <module>
+    import openpyxl
+ModuleNotFoundError: No module named 'openpyxl'
+

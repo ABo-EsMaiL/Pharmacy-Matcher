@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  File "<string>", line 1
+    lines = open('desktop_app/templates/index.html', encoding='utf-8').readlines(); [print(i+1, l.strip()) for i, l in enumerate(lines) if 'id=" progress-modal\'
+                                                                                                                                           ^
+SyntaxError: unterminated string literal (detected at line 1); perhaps you escaped the end quote?
+

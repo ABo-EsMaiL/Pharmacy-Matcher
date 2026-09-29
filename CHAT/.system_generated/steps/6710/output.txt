@@ -1,0 +1,22 @@
+
+The command exited with code 0.
+Output:
+
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:574:    messages: List[ChatMessage]
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:582:def format_messages_to_prompt(messages: List[ChatMessage]) -> str:
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:583:    """Combines user/system/assistant messages into a clean prompt 
+string."""
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:584:    if not CLEAR_CHAT_ON_REQUEST and messages:
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:587:        for m in reversed(messages):
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:596:            str(m.content).strip() for m in messages
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:599:        if system_lines and len(messages) <= 2:
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:607:    for m in messages:
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:645:    prompt = format_messages_to_prompt(chat_request.messages)
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:730:    Handles 'input', 'messages', 'instructions' payloads.
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:744:    # Extract prompt from input or messages
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:781:    if not prompt and "messages" in body:
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:782:        messages = [ChatMessage(**m) for m in body["messages"]]
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:783:        prompt = format_messages_to_prompt(messages)
+
+
+

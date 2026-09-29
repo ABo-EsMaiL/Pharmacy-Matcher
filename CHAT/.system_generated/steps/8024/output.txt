@@ -1,0 +1,15 @@
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Ad Blocking\\blocklist"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\arbitration_service_config.json"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Local State"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\Cache\\Cache_Data\\f_000003"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\SmartScreen\\RemoteData\\edgeSettings_2.0-a82cb2897a8bf9445d68dcc2be05af89ad4b2fda1fddb2952693be7cd5353ad3"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\Network\\115298b1-51b4-47c6-ae04-a5623ae45e4e.tmp"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\Password_Diagnostics\\PMLog_13434647041431330"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\Network\\Network Persistent State"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\Preferences"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\Secure Preferences"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\Network\\TransportSecurity"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\Session Storage\\LOG"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\Site Characteristics Database\\LOG"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\Sync Data\\LevelDB\\LOG"}

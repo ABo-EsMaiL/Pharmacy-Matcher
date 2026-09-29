@@ -1,0 +1,68 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -538,7 +538,8 @@
+             "messages": [
+                 {"role": "system", "content": SYSTEM_PROMPT},
+                 {"role": "user", "content": json.dumps(inputs, ensure_ascii=False)}
+-            ]
++            ],
++            "stream": False
+         }
+ 
+         raw_url = getattr(self.config, 'local_api_url', "http://127.0.0.1:8000/v1/chat/completions")
+@@ -569,20 +569,38 @@
+             self._log_provider_error(url, model, inputs, response.text, f"HTTP_{response.status_code}")
+             raise RuntimeError(err_msg)
+ 
+-        try:
+-            resp_json = response.json()
+-        except Exception as e:
+-            self._log_provider_error(url, model, inputs, response.text, "INVALID_HTTP_JSON")
+-            raise RuntimeError(f"Local API did not return valid HTTP JSON: {response.text[:300]}")
+-
+-        choices = resp_json.get("choices")
+-        if not choices or not isinstance(choices, list):
+-            self._log_provider_error(url, model, inputs, response.text, "EMPTY_CHOICES")
+-            raise RuntimeError(f"Local API returned no choices: {response.text[:300]}")
+-
+-        content = choices[0].get("message", {}).get("content", "")
+-        if not isinstance(content, str):
+-            content = str(content or "")
++        content = ""
++        resp_text = response.text.strip()
++        if resp_text.startswith("data:"):
++            # Handle unexpected SSE stream gracefully
++            parts = []
++            for line in resp_text.splitlines():
++                line = line.strip()
++                if line.startswith("data:") and line != "data: [DONE]":
++                    data_str = line[5:].strip()
++                    try:
++                        chunk_obj = json.loads(data_str)
++                        delta = chunk_obj.get("choices", [{}])[0].get("delta", {}).get("content", "")
++                        if delta:
++                            parts.append(delta)
++                    except:
++                        pass
++            content = "".join(parts)
++        else:
++            try:
++                resp_json = response.json()
++            except Exception as e:
++                self._log_provider_error(url, model, inputs, response.text, "INVALID_HTTP_JSON")
++                raise RuntimeError(f"Local API did not return valid HTTP JSON: {response.text[:300]}")
++
++            choices = resp_json.get("choices")
++            if not choices or not isinstance(choices, list):
++                self._log_provider_error(url, model, inputs, response.text, "EMPTY_CHOICES")
++                raise RuntimeError(f"Local API returned no choices: {response.text[:300]}")
++
++            content = choices[0].get("message", {}).get("content", "")
++            if not isinstance(content, str):
++                content = str(content or "")
+ 
+         # Check if MSEMAX returned an error string inside content
+         if content.strip().startswith("[Error:"):
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

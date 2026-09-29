@@ -1,0 +1,21 @@
+    api_key: str | None,
+    base_url: str,
+) -> list[dict]:
+    if not api_key:
+        raise ValueError(
+            f"[!] Unstructured API Key required for PDF files.\n"
+            f"    Please set UNSTRUCTURED_API_KEY in .env"
+        )
+
+    items = extract_items_from_pdf(filepath, api_key, base_url)
+    return items
+
+
+def _process_json_file(filepath: Path) -> list[dict]:
+    """Process cached Unstructured JSON to save API limits."""
+    with open(filepath, "r", encoding="utf-8-sig") as f:
+        data = json.load(f)
+    
+    items = parse_items_from_response(data)
+    
+

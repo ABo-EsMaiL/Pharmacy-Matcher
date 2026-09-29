@@ -1,0 +1,32 @@
+
+The command exited with code 0.
+Output:
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         9/22/2026   4:13 AM                data                                                                 
+d-----         9/22/2026   1:39 AM                desktop_app                                                          
+d-----         9/22/2026  12:56 AM                output                                                               
+d-----         9/21/2026  10:50 PM                src                                                                  
+-a----         9/21/2026   6:48 PM            107 .env                                                                 
+-a----         9/21/2026   6:48 PM             75 .env.example                                                         
+-a----         9/21/2026   1:46 PM            306 .gitignore                                                           
+-a----         9/21/2026   6:24 PM          71465 Check_out_this_chat.md                                               
+-a----         9/21/2026   7:00 PM            143 dummy.txt                                                            
+-a----         9/22/2026  12:37 AM           2196 fast_main.py                                                         
+-a----         9/22/2026  12:56 AM           2962 finalize.py                                                          
+-a----         9/21/2026   6:59 PM           3067 main.py                                                              
+-a----         9/21/2026   6:40 PM             91 requirements.txt                                                     
+-a----         9/22/2026   1:50 AM            502 run.bat                                                              
+-a----         9/22/2026   2:06 AM            308 run_conda.bat                                                        
+-a----         9/22/2026   1:20 AM           2934 setup.bat                                                            
+-a----         9/22/2026  12:46 AM          70819 transform-result-5adb330b-3b30-4894-9d61-d31e1197080a.json           
+-a----         9/22/2026  12:46 AM          12437 transform-result-f5254d99-e492-48f1-8a36-1688af690395.json           
+-a----         9/22/2026  12:52 AM           3256 vba_macro.txt                                                        
+
+
+

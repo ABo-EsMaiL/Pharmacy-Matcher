@@ -1,0 +1,105 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\scratch\find_false_negatives.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -5,7 +5,7 @@
+ from pathlib import Path
+ from rapidfuzz import fuzz
+ from src.extract.excel_reader import read_excel, extract_item_names
+-from src.fast_match.search import extract_brand_token, extract_dosage_strength, extract_form_group
++from src.fast_match.search import extract_brand_tokens, extract_dosage_strength, extract_form_group
+ 
+ results_path = Path("data/processes/PROC-001/results_PROC-001.xlsx")
+ wb = openpyxl.load_workbook(results_path, data_only=True)
+@@ -52,31 +52,33 @@
+     print(f"Warehouse {wh_file.stem}: {len(items)} items")
+ 
+ # 4. Check unmatched shortages against all warehouse items
+-# Look for strong candidate matches that might have been missed (brand token match + form match + high token sort ratio)
+ potential_misses = []
+ 
+ for s in unmatched_shortages:
+-    s_brand = extract_brand_token(s)
+-    s_forms = extract_form_group(s)
++    s_brands = extract_brand_tokens(s).split()
++    s_form = extract_form_group(s)
+     s_st = extract_dosage_strength(s)
+     
++    if not s_brands:
++        continue
++    first_s_brand = s_brands[0]
++    
+     for wh_name, wh_items in warehouses_data.items():
+         for w in wh_items:
+-            w_brand = extract_brand_token(w)
+-            # Must share brand token or have very high ratio
+-            ratio = fuzz.ratio(s, w)
+-            token_sort = fuzz.token_sort_ratio(s, w)
+-            
+-            # Check if brand tokens match and length > 3
+-            brand_match = (s_brand and w_brand and (s_brand == w_brand or fuzz.ratio(s_brand, w_brand) >= 85))
+-            
+-            if brand_match and (ratio >= 65 or token_sort >= 70):
+-                w_forms = extract_form_group(w)
++            w_brands = extract_brand_tokens(w).split()
++            if not w_brands:
++                continue
++            first_w_brand = w_brands[0]
++            
++            # Check brand match
++            brand_sim = fuzz.ratio(first_s_brand, first_w_brand)
++            if brand_sim >= 80 and len(first_s_brand) >= 3 and len(first_w_brand) >= 3:
++                w_form = extract_form_group(w)
+                 w_st = extract_dosage_strength(w)
+                 
+-                # Check form conflict (e.g. cream vs ointment, tab vs syr)
++                # Check form conflict
+                 form_conflict = False
+-                if s_forms and w_forms and not (s_forms & w_forms):
++                if s_form and w_form and s_form != w_form:
+                     form_conflict = True
+                 
+                 # Check strength conflict
+@@ -83,6 +83,9 @@
+                 if s_st and w_st and s_st != w_st:
+                     strength_conflict = True
+                 
++                ratio = fuzz.ratio(s, w)
++                token_sort = fuzz.token_sort_ratio(s, w)
++                
+                 potential_misses.append({
+                     "shortage": s,
+                     "warehouse": wh_name,
+@@ -89,10 +89,10 @@
+                     "ratio": ratio,
+                     "token_sort": token_sort,
+-                    "brand_match": brand_match,
++                    "brand_sim": brand_sim,
+                     "form_conflict": form_conflict,
+                     "strength_conflict": strength_conflict,
+-                    "s_forms": list(s_forms),
+-                    "w_forms": list(w_forms),
++                    "s_form": s_form,
++                    "w_form": w_form,
+                     "s_st": s_st,
+                     "w_st": w_st
+                 })
+@@ -99,9 +99,12 @@
+-print(f"\nPotential matches found for unmatched shortages: {len(potential_misses)}")
+-
+-# Filter to real candidates (no form conflict, no strength conflict)
++print(f"\nPotential candidate matches found for unmatched shortages: {len(potential_misses)}")
++
+ clean_misses = [m for m in potential_misses if not m["form_conflict"] and not m["strength_conflict"]]
+ print(f"Clean candidates (no form/strength conflict): {len(clean_misses)}")
+ 
+-for m in clean_misses[:30]:
+-    print(f"- Shortage: '{m['shortage']}' vs [{m['warehouse']}] '{m['wh_item']}' (ratio: {m['ratio']}, token_sort: {m['token_sort']}, forms: {m['s_forms']} vs {m['w_forms']}, st: {m['s_st']})")
++# Sort by token_sort
++clean_misses.sort(key=lambda x: x["token_sort"], reverse=True)
++
++for m in clean_misses[:40]:
++    print(f"- Shortage: '{m['shortage']}' vs [{m['warehouse']}] '{m['wh_item']}' (token_sort: {m['token_sort']}, ratio: {m['ratio']}, form: {m['s_form']} vs {m['w_form']}, st: {m['s_st']} vs {m['w_st']})")
++
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

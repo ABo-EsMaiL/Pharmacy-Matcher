@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1940,7 +1940,7 @@
+         nav_history: "Process History",
+         nav_settings: "System Settings",
+         nav_logs: "System Logs (Terminal)",
+-        nav_servers: "AI Servers Manager",
++        nav_servers: "AI Servers",
+         server_checking: "Checking...",
+         server_running: "Server Running",
+         server_stopped: "Server Stopped",
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

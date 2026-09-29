@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+venv has fastapi: D:\miniconda3\envs\venv\Lib\site-packages\fastapi\__init__.py
+

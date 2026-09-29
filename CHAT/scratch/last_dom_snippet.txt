@@ -1,0 +1,46 @@
+<USER_REQUEST>
+في مشكلة ومبعتش صورة والبرومبت مش عارف ولا اصلا انت عاوز كدا ؟؟
+
+<div _ngcontent-ng-c1480764559="" class="chat-view-container ng-star-inserted"><!----><!----><ms-chat-session _ngcontent-ng-c1480764559="" _nghost-ng-c2680143636="" class="ng-star-inserted"><ms-autoscroll-container _ngcontent-ng-c2680143636="" tabindex="-1" class="hide-scrollbar" _nghost-ng-c4246658289="" style="--ms-autoscroll-container-scrolled: 1;"><div _ngcontent-ng-c4246658289=""><div _ngcontent-ng-c2680143636="" class="chat-session-content"><!----><ms-chat-turn _ngcontent-ng-c2680143636="" _nghost-ng-c1083380779="" id="turn-9CF7E204-4C3C-48C3-9CE0-A43B32E2A597" class="text-chunk-host ng-star-inserted"><div _ngcontent-ng-c1083380779="" tabindex="-1" cdkmonitorsubtreefocus="" class="chat-turn-container code-block-aligner render user ng-star-inserted"><div _ngcontent-ng-c1083380779="" class="actions-container"><div _ngcontent-ng-c1083380779="" class="actions hover-or-edit"><!----><button _ngcontent-ng-c1083380779="" ms-button="" variant="icon-borderless" mattooltipposition="below" class="mat-mdc-tooltip-trigger toggle-edit-button ms-button-borderless ms-button-icon ng-star-inserted" aria-label="Edit" jslog="228330;track:generic_click,impression;mutable:true" aria-disabled="false"><span _ngcontent-ng-c1083380779="" class="material-symbols-outlined notranslate ms-button-icon-symbol ng-star-inserted" aria-hidden="true">edit</span></button><!----><button _ngcontent-ng-c1083380779="" ms-button="" variant="icon-borderless" name="rerun-button" mattooltipposition="below" class="mat-mdc-tooltip-trigger rerun-button ms-button-borderless ms-button-icon ng-star-inserted" aria-label="Rerun this turn" jslog="228331;track:generic_click,impression" aria-disabled="false"><svg _ngcontent-ng-c1083380779="" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="ng-star-inserted"><g _ngcontent-ng-c1083380779="" clip-path="url(#clip0_10012_165935)"><path _ngcont
+<truncated 39402 bytes>
+abel="أنت خبير صيدلي متخصص في استخراج بيانات ..." id="scrollbar-item-9CF7E204-4C3C-48C3-9CE0-A43B32E2A597" aria-controls="turn-9CF7E204-4C3C-48C3-9CE0-A43B32E2A597" draggable="true" data-test-item-id="9CF7E204-4C3C-48C3-9CE0-A43B32E2A597" jslog="273488;track:generic_click,impression" aria-disabled="false"><div _ngcontent-ng-c3896649842="" class="items-scrollbar-dot"></div></button><!----></div><!----></div></ms-items-scrollbar><!----><!----></ms-chat-session><!----></div>
+
+
+(venv) PS D:\AI_Engineer\Pharmacy-agy> python C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_endpoint_vision.py
+[*] جاري قراءة ملف: المكرومي المنصورة.pdf
+[*] تحويل الصفحة الأولى إلى صورة WebP عالية الدقة...
+[+] تم إنشاء الصورة: temp_page1_test.webp (الحجم: 299.8 KB)
+[*] إرسال الطلب إلى الـ Endpoint (http://127.0.0.1:8001/v1/chat/completions)...
+    راقب الآن نافذة المتصفح المفتوحة أمامك لترى هل استلم الصورة والبرومبت!
+[+] Response Status: 200 (استغرق 17.7 ثانية)
+
+=== الرد المستلم من الـ Endpoint ===
+{
+  "items": [
+    {
+      "item_name_raw": "اموكسيلين 500 كبسول (ش جلفار)",
+      "source_page": 1
+    },
+    {
+      "item_name_raw": "رانيتيدين 150 ملغ حب (ش رامي)",
+      "source_page": 1
+    },
+    {
+      "item_name_raw": "باراسيتامول 500 حب (ش ابن زهر)",
+      "source_page": 1
+    },
+    {
+      "item_name_raw": "بروفين 400 ملغ حب (ش اوغاريت)",
+      "source_page": 1
+    },
+    {
+      "item_name_raw": "ازيثروميسين 500 ملغ حب (ش سيتي فارما)",
+      "source_page": 1
+    },
+    {
+      "ite...
+(باقي الرد تم استلامه بنجاح)
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-25T15:41:57+03:00.
+</ADDITIONAL_METADATA>

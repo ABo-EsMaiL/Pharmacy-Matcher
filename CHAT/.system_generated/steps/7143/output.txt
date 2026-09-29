@@ -1,0 +1,23 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\inspect_model_selector.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -9,11 +9,12 @@
+         args=["--disable-blink-features=AutomationControlled", "--start-maximized"]
+     )
+     page = ctx.pages[0] if ctx.pages else await ctx.new_page()
+-    await page.goto("https://aistudio.google.com/prompts/new_chat", wait_until="domcontentloaded")
+-    await asyncio.sleep(4)
+-
+-    # Find all elements that might be the model selector
+-    print("=== INSPECTING AI STUDIO SELECTORS ===")
++    await page.goto("https://aistudio.google.com/prompts/new_chat", wait_until="networkidle")
++    await asyncio.sleep(3)
++    print("Page URL:", page.url)
++    print("Page Title:", await page.title())
++    body_text = await page.locator("body").inner_text()
++    print("Body snippet:", repr(body_text[:300]))
+     
+     # 1. mat-select elements
+     mat_selects = await page.locator("mat-select").all()
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,19 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -206,6 +206,13 @@
+         """Launches get_session.py for the specified server."""
+         return self._server_manager.run_get_session(server_key)
+ 
++    def free_server_ports(self) -> dict:
++        """Force kills any process occupying ports 8000/8001."""
++        self.add_server_log("[SYSTEM] Force freeing ports 8000 and 8001...")
++        res = self._server_manager.force_free_ports()
++        self.add_server_log(f"[SYSTEM] Free ports operation completed: {res}")
++        return res
++
+     def set_active_ai_server(self, server_key: str) -> dict:
+         """
+         1-Click Active Switch:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,79 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: test_shortages_200.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 200 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 200 items from column 'أسم الصنف'
+Loaded 200 shortage items.
+Loaded 187 Salam items, 19 Amr items.
+
+============================================================
+[FAST ENGINE] Starting Match: 200 raw -> 200 UNIQUE shortages x 2 warehouses
+============================================================
+
+
+----------------------------------------
+[Warehouse] السلام شبين.pdf (187 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 0
+  -> TF-IDF Auto-Matches (>88%): 59
+  -> Sending 139 ambiguous items to Local API (MSEMAX) in batches...
+      [✓] Batch 1/5 done.
+      [✓] Batch 2/5 done.
+      [✓] Batch 3/5 done.
+      [✓] Batch 4/5 done.
+      [✓] Batch 5/5 done.
+  -> Final Warehouse Result: 140 matched, 3 review
+
+----------------------------------------
+[Warehouse] جملة العمروووو.pdf (19 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 1
+  -> TF-IDF Auto-Matches (>88%): 1
+  -> Sending 138 ambiguous items to Local API (MSEMAX) in batches...
+      [✓] Batch 2/5 done.
+      [✓] Batch 1/5 done.
+      [✓] Batch 3/5 done.
+      [✓] Batch 4/5 done.
+      [✓] Batch 5/5 done.
+  -> Final Warehouse Result: 14 matched, 4 review
+
+==================================================
+FINAL SUMMARY RESULTS:
+==================================================
+Total Shortages:   200
+Unique Shortages:  200
+Matched Count:     149
+Review Count:      7
+Not Found Count:   44
+Total Found (Match+Rev): 156
+
+==================================================
+REVIEW ITEMS & REASONS:
+==================================================
+
+--- Warehouse: السلام شبين.pdf ---
+  Shortage: 'بيتادين  مطهر النيل 60مل صغير س ج' <===> Warehouse: 'بيتادين مطهر/النيل'
+    -> Reason: اختلاف الحجم: المطلوب 60 مل صغير والمرشح الحجم غير محدد
+  Shortage: 'دوليبران1000مجم 15قرص' <===> Warehouse: 'دوليبران ١ جم، ٦٠ قرص'
+    -> Reason: اختلاف عدد الأقراص: المطلوب 15 قرص والمرشح 60 قرص
+  Shortage: 'ديجستين 20قرص س ج' <===> Warehouse: 'ديجستين اقراص/فاركو'
+    -> Reason: اختلاف عدد الأقراص: المطلوب 20 قرص والمرشح غير محدد
+
+--- Warehouse: جملة العمروووو.pdf ---
+  Shortage: 'افيروكوكسيب90مجم20قرص س ج' <===> Warehouse: 'افيرو كوكسـيب 90مجم-32ب'
+    -> Reason: اختلاف عدد الأقراص: المطلوب 20 قرص والمرشح 32 باك
+  Shortage: 'ايزوتريتينوين 10 مجم 30 كبسول س ج' <===> Warehouse: 'ايزوتريتينوين 10 مجم 3 شريط -28'
+    -> Reason: اختلاف العبوة: المطلوب 30 كبسول والمرشح 3 شريط -28
+  Shortage: 'بانادول اكسترا 24 قرص س ج' <===> Warehouse: 'بانادول اكسترا 48 قرص-96ب'
+    -> Reason: اختلاف عدد الأقراص: المطلوب 24 قرص والمرشح 48 قرص
+  Shortage: 'بانثينول النيل2%كريم وسط' <===> Warehouse: 'بانثينول كريم كبير سعر قديم باكو 25'
+    -> Reason: اختلاف الحجم: المطلوب كريم وسط والمرشح كريم كبير
+

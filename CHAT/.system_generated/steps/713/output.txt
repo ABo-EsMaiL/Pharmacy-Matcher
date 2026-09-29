@@ -1,0 +1,25 @@
+
+The command exited with code 0.
+Output:
+        ''')
+        self.conn.commit()
+
+    def get_next_id(self):
+        cursor = self.conn.cursor()
+        cursor.execute('SELECT id FROM processes ORDER BY id DESC LIMIT 1')
+        row = cursor.fetchone()
+        if row:
+            last_id = row['id']
+            try:
+                num = int(last_id.split('-')[1]) + 1
+            except:
+                num = 1
+            return f'PROC-{num:03d}'
+        return 'PROC-001'
+
+    def create_process(self, shortage_filenames: list[str], warehouse_filenames: list[str]) -> str:
+        process_id = self.get_next_id()
+        created_at = datetime.now().isoformat()
+        status = 'processing'
+
+

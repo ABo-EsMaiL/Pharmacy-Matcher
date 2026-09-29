@@ -1,0 +1,64 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -461,19 +461,50 @@
+                 print(f"      [*] Sending Batch {idx + 1}/{len(batches)} ({len(batch)} items)...")
+                 chunk_results = process_chunk(batch, str(idx + 1))
+                 for result in chunk_results:
+-                    if result["status"] == "match":
++                    shortage_name = result["shortage_name"]
++                    status = result["status"]
++                    warehouse_item = result["warehouse_item"]
++                    reason = result.get("reason", "")
++                    
++                    if status == "match":
+                         matched.append({
+-                            "shortage_item": result["shortage_name"],
+-                            "warehouse_item": result["warehouse_item"],
++                            "shortage_item": shortage_name,
++                            "warehouse_item": warehouse_item,
+                             "confidence": "llm",
+                             "method": "fast_llm"
+                         })
+-                    elif result["status"] == "review":
++                    elif status == "review":
+                         needs_review.append({
+-                            "shortage_item": result["shortage_name"],
+-                            "warehouse_item": result["warehouse_item"],
+-                            "reason": result.get("reason", "")
+-                        })
++                            "shortage_item": shortage_name,
++                            "warehouse_item": warehouse_item,
++                            "reason": reason
++                        })
++                    else: # status == "no_match"
++                        # Level 3 Safety Net: If the candidate has a plausible brand connection,
++                        # NEVER lose it to "لم يتم العثور عليه"! Route to needs_review instead!
++                        cands = candidates_by_shortage.get(shortage_name, [])
++                        if cands:
++                            top_c = cands[0]
++                            top_name = top_c["name"]
++                            top_brand_sim = top_c.get("brand_sim", 0)
++                            
++                            is_req_syrup = bool(re.search(r'\b(شراب|شرب|معلق)\b', shortage_name))
++                            is_cand_syrup = bool(re.search(r'\b(شراب|شرب|معلق)\b', top_name))
++                            has_c_solid_mg = bool(re.search(r'\b(100|125|200|250|300|400|500|600|800|1000)\s*(?:مجم|مج|mg)\b', norm_num(top_name))) and not re.search(r'\b(مل|ملل|ml|/5|5مل)\b', norm_num(top_name))
++                            has_r_solid_mg = bool(re.search(r'\b(100|125|200|250|300|400|500|600|800|1000)\s*(?:مجم|مج|mg)\b', norm_num(shortage_name))) and not re.search(r'\b(مل|ملل|ml|/5|5مل)\b', norm_num(shortage_name))
++                            is_syrup_conflict = (is_req_syrup and not is_cand_syrup and has_c_solid_mg) or (is_cand_syrup and not is_req_syrup and has_r_solid_mg)
++                            is_co_conflict = (has_co(shortage_name) != has_co(top_name))
++                            
++                            form_r = extract_form_group(shortage_name)
++                            form_c = extract_form_group(top_name)
++                            is_form_conflict = bool(form_r and form_c and not are_forms_compatible(form_r, form_c))
++                            
++                            if not is_syrup_conflict and not is_co_conflict and not is_form_conflict and (top_brand_sim >= 60 or top_c.get("score", 0) >= 0.40):
++                                needs_review.append({
++                                    "shortage_item": shortage_name,
++                                    "warehouse_item": top_name,
++                                    "reason": "تشابه محتمل في اسم العلامة التجارية مع وجود تفاوت (في التركيز أو الحجم أو قراءة الحروف)، يحتاج مراجعة الصيدلي"
++                                })
+ 
+         print(f"  -> Final Warehouse Result: {len(matched)} matched, {len(needs_review)} review")
+         return {"matched": matched, "needs_review": needs_review}
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

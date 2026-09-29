@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+1214: function showCustomConfirm(title, message, onConfirm) {
+2252: showCustomConfirm(t.confirm_exit_title, t.confirm_exit_msg, async () => {
+2272: showCustomConfirm(t.confirm_delete_title, t.confirm_delete_msg, async () => {
+2693: showCustomConfirm(
+3171: showCustomConfirm(
+

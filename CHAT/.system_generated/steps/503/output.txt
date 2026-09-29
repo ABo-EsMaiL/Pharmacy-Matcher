@@ -1,0 +1,38 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -43,11 +43,27 @@
+     def get_logs(self) -> str:
+         return json.dumps(self.logs)
+ 
+-    def get_dropped_files(self) -> str:
+-        """Called by JS to retrieve the list of files dropped."""
+-        files = self.dropped_files
+-        self.dropped_files = []
+-        return json.dumps(files)
++    def save_dropped_file(self, filename: str, base64_data: str) -> str:
++        import base64
++        import tempfile
++        from pathlib import Path
++        try:
++            data = base64.b64decode(base64_data)
++            temp_dir = Path(tempfile.gettempdir()) / "pharmacy_matcher_drops"
++            temp_dir.mkdir(parents=True, exist_ok=True)
++            
++            safe_name = "".join([c for c in filename if c.isalpha() or c.isdigit() or c in (' ', '.', '-', '_')]).rstrip()
++            if not safe_name:
++                safe_name = "dropped_file.tmp"
++                
++            file_path = temp_dir / safe_name
++            with open(file_path, "wb") as f:
++                f.write(data)
++                
++            return str(file_path)
++        except Exception as e:
++            self.add_log(f"Error saving dropped file: {e}")
++            return ""
+ 
+     def exit_app(self):
+         try:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

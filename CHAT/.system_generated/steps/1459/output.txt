@@ -1,0 +1,12 @@
+
+The command exited with code 1.
+Output:
+Remove-Item : A positional parameter cannot be found that accepts argument 
+'d:\AI_Engineer\Pharmacy-agy\inspect_unstruct.py'.
+At line:1 char:1
++ del d:\AI_Engineer\Pharmacy-agy\find_cache.py d:\AI_Engineer\Pharmacy ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Remove-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+ 
+

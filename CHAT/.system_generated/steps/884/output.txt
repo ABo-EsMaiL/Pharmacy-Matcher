@@ -1,0 +1,45 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -265,7 +265,12 @@
+         try:
+             self.add_log(f"--- Starting new process [{process_id}] ---")
+             proc_dir = self.db.get_process_dir(process_id)
+-            workspace = proc_dir
++            
++            # Create subdirs
++            shortages_dir = proc_dir / 'input_shortages'
++            shortages_dir.mkdir(parents=True, exist_ok=True)
++            warehouses_dir = proc_dir / 'input_warehouses'
++            warehouses_dir.mkdir(parents=True, exist_ok=True)
+             
+             # Copy files to workspace if not restarting
+             copied_shortages = []
+@@ -272,6 +272,9 @@
+-                dest = workspace / Path(p).name
+-                if not is_restart or not dest.exists():
+-                    shutil.copy2(p, dest)
++                dest = shortages_dir / Path(p).name
++                if not is_restart or not dest.exists():
++                    try:
++                        shutil.copy2(p, dest)
++                    except shutil.SameFileError:
++                        pass
+                 copied_shortages.append(dest)
+                 
+             copied_warehouses = []
+@@ -278,6 +278,9 @@
+-                dest = workspace / Path(p).name
+-                if not is_restart or not dest.exists():
+-                    shutil.copy2(p, dest)
++                dest = warehouses_dir / Path(p).name
++                if not is_restart or not dest.exists():
++                    try:
++                        shutil.copy2(p, dest)
++                    except shutil.SameFileError:
++                        pass
+                 copied_warehouses.append(dest)
+                 
+             if self.window:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

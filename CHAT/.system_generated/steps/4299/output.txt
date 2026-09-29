@@ -1,0 +1,77 @@
+
+The command exited with code 0.
+Output:
+<truncated 86 lines>
+  * Warehouse: كيور فارما خاص.pdf | Shortage: 'كارنيتول بلس برطمان س ج' -> Was matched with: 'کارنتول پلس کپسول جدید'
+  * Warehouse: الهضبة الاثنين نقدى0.pdf | Shortage: 'كوفي زنك لوسيون' -> Was matched with: 'کوف زنگ لوسيون جدید'
+  * Warehouse: الهضبة الاثنين نقدى0.pdf | Shortage: 'كولميتيدين  10شريط' -> Was matched with: 'کولمدیتین اقراص/پاکت 63'
+  * Warehouse: الهضبة الاثنين نقدى0.pdf | Shortage: 'كويتابين 25مجم 30قرص س ج' -> Was matched with: 'کوتیاپین 25 مج اقراص'
+  * Warehouse: الهضبة الاثنين نقدى0.pdf | Shortage: 'لبن بيبيلاك 3 بيبي جونيور' -> Was matched with: 'بیلاک 3 بیبی جونیر/باکت 12 تشغیلا'
+  * Warehouse: مخزن الحياة فارم اسكندريه-170.p | Shortage: 'ليفابيون 6امبول' -> Was matched with: 'لیپابیون آمپول باکت 25'
+  * Warehouse: الهضبة الاثنين نقدى0.pdf | Shortage: 'ليمتلس كروماكس كت30كيس س ج' -> Was matched with: 'يمتليس كروماتكس كت 30 كيس جديد'
+  * Warehouse: كيور فارما خاص.pdf | Shortage: 'ليمتلس كروماكس كت30كيس س ج' -> Was matched with: 'لیمپس کرومکس کت ک/ایفا'
+  * Warehouse: السلام شبين.pdf | Shortage: 'ميبو مرهم 15جم صغير س ج' -> Was matched with: 'ميمو مرهم صغير/جلفار'
+  * Warehouse: مخزن الحياة فارم اسكندريه-170.p | Shortage: 'ناتريلكس اس ار 30قرص س ج' -> Was matched with: 'ناتریلیکس اس ار سریدید'
+  * Warehouse: كيور فارما خاص.pdf | Shortage: 'نانازوكسيد500مجم18قرص س ج' -> Was matched with: 'نازروکسید اقراص'
+  * Warehouse: السلام شبين.pdf | Shortage: 'نيتروماك ريتارد2.5مجم كبسول س ج' -> Was matched with: 'نيتروماك ريتارد كبسول/التنشيط'
+  * Warehouse: السلام شبين.pdf | Shortage: 'نيوكاربون30قرص س ج' -> Was matched with: 'اوكاربون اقراص/اسبيكو'
+  * Warehouse: السلام شبين.pdf | Shortage: 'هيدروكين 200مجم 20قرص س ج' -> Was matched with: 'هيدروكينينا'
+  * Warehouse: الهضبة الاثنين نقدى0.pdf | Shortage: 'يوكيراتو كريم س ج' -> Was matched with: 'یوریکیر کریم/باكت 80'
+
+--- NEW MATCHES ADDED (24) [In PROC-002 but NOT in PROC-001] ---
+  * Warehouse: مخزن الحياة فارم اسكندريه-170.p | Shortage: 'اتلابسلس نقط' -> Now matched with: 'اوتال نقط / باكه 66'
+  * Warehouse: كيور فارما خاص.pdf | Shortage: 'اليرزون كريم س ج' -> Now matched with: 'اليريزون ٢٥ مجم كريم'
+  * Warehouse: المكرومي المنصورة.pdf | Shortage: 'ايتوريكوكس90مجم30قرص س ج' -> Now matched with: 'ريكوكسين ٩٠ سعر جديد ٢٩٧'
+  * Warehouse: كيور فارما خاص.pdf | Shortage: 'ايجيكوستات بلس /مينالاكس' -> Now matched with: 'ابيجيكوست بلس اقراص بديل مينالاكس'
+  * Warehouse: المكرومي المنصورة.pdf | Shortage: 'ايموكسكلاف642مجم شراب' -> Now matched with: 'ايموكسكلاف ٤٢،١ شراب'
+  * Warehouse: الهضبة الاثنين نقدى0.pdf | Shortage: 'ب ك ميرز كبسول س ج' -> Now matched with: 'ميرز كبسول/باكت 30'
+  * Warehouse: المكرومي المنصورة.pdf | Shortage: 'بانتوبرازول 40 مجم اقراص س ج' -> Now matched with: 'انتوبرال ٤٠ سعر جديد'
+  * Warehouse: المكرومي المنصورة.pdf | Shortage: 'باولوكير نقط س ج/بيكولاكس' -> Now matched with: 'بيولاكس نقط س.ج ٢٤ج'
+  * Warehouse: المكرومي المنصورة.pdf | Shortage: 'تادالاندرو5جم30قرص' -> Now matched with: 'تادانيرفي ٥ مجم سعر جديد ٢٧٠'
+  * Warehouse: كيور فارما خاص.pdf | Shortage: 'ترايملازما كريم س ج' -> Now matched with: 'ترابلاماز کریم جدید'
+  * Warehouse: الهضبة الاثنين نقدى0.pdf | Shortage: 'ديكلوبرو150مجم 20قرص س ج' -> Now matched with: 'دیکلوبرو 150 مج اقراض/باکت10'
+  * Warehouse: مخزن الحياة فارم اسكندريه-170.p | Shortage: 'زنكترون 30كبسولة س ج' -> Now matched with: 'زنكترون اقراص باكت 160'
+  * Warehouse: المكرومي المنصورة.pdf | Shortage: 'سيبروباي 750مجم10قرص' -> Now matched with: 'سيروفار ٧٥٠ اقراص/فاركو'
+  * Warehouse: كيور فارما خاص.pdf | Shortage: 'سيبروسين500مجم10قرص س ج' -> Now matched with: 'سيبرو ٥٠٠ مجم قرص/امفيس'
+  * Warehouse: مخزن الحياة فارم اسكندريه-170.p | Shortage: 'سيبروسين500مجم10قرص س ج' -> Now matched with: 'سيبرو 500 مجم فموي'
+  * Warehouse: المكرومي المنصورة.pdf | Shortage: 'سيرفيتولكا ادفانس 20كبسوله س ج' -> Now matched with: 'سيروفلوكا ادفانس ٢٠ كبسولة'
+  * Warehouse: كيور فارما خاص.pdf | Shortage: 'سيفيتيل 1جم' -> Now matched with: 'سيديتيل ١ جم اقراص فوار'
+  * Warehouse: مخزن الحياة فارم اسكندريه-170.p | Shortage: 'فيوسيدل كريم' -> Now matched with: 'فیوسیدین کریم 20 جرام وسط'
+  * Warehouse: المكرومي المنصورة.pdf | Shortage: 'كارنيتول بلس برطمان س ج' -> Now matched with: 'ال كارنتين بلس ق س.ج ١١٦ج'
+  * Warehouse: الهضبة الاثنين نقدى0.pdf | Shortage: 'كولونا  3شريط' -> Now matched with: 'کولونا 40 مج رگ پاکت 15'
+  * Warehouse: المكرومي المنصورة.pdf | Shortage: 'لاكتيز 15 ملل نقط 750مجم' -> Now matched with: 'لاكتيز نقط بالفم ٥ مل ١٩٠'
+  * Warehouse: كيور فارما خاص.pdf | Shortage: 'لاكتيز 15 ملل نقط 750مجم' -> Now matched with: 'لاکتز، ۷۵۰، ۱۵ قطره ۵ ملی جدید'
+  * Warehouse: السلام شبين.pdf | Shortage: 'نيتروماك ريتارد2.5مجم كبسول' -> Now matched with: 'نيتروماك ريتارد كبسول/التنشيط'
+  * Warehouse: كيور فارما خاص.pdf | Shortage: 'نيفيلوب12.5/5مجم بلاس20قرص' -> Now matched with: 'نیفلوب بلس ۰/۱۲/۵ مجم قرص'
+
+=================== 4. لم يُعثر عليه (NOT FOUND) ===================
+PROC-001 Not found count: 498
+PROC-002 Not found count: 506
+
+Items newly in NOT FOUND in PROC-002 (25):
+  - اريببركس100مل شراب
+  - اسبوسيد 20قرص اطفال س ج
+  - امبوفير 5امبول س ج
+  - بقدونس وكرفس ايزيس
+  - تريبليكسام10/2.5/10مجم15قرص
+  - توب جنج ادفانس30كبسوله س ج
+  - تورسامولكس10مجم اقراص س ج
+  - دابسوكيرل 50مجم جيل
+  - دانست  4 مجم 3 امبول س ج
+  - ريتشي بانثينول كريم ادفانس
+  - زانوجليد4/30اقراص س ج
+  - سكينورين كريم
+  - سينوبريل كواقراص س ج
+  - كوفي زنك لوسيون
+  - كولميتيدين  10شريط
+  - كويتابين 25مجم 30قرص س ج
+  - لبن بيبيلاك 3 بيبي جونيور
+  - ليفابيون 6امبول
+  - ميبو مرهم 15جم صغير س ج
+  - ناتريلكس اس ار 30قرص س ج
+  - نانازوكسيد500مجم18قرص س ج
+  - نيتروماك ريتارد2.5مجم كبسول س ج
+  - نيوكاربون30قرص س ج
+  - هيدروكين 200مجم 20قرص س ج
+  - يوكيراتو كريم س ج
+

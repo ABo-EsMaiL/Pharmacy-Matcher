@@ -1,0 +1,51 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\settings.json","LineNumber":5,"LineContent":"  \"local_api_url\": \"http://127.0.0.1:8000/v1/chat/completions\","}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":5,"LineContent":"URL: http://test | MODEL: test-model"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":14,"LineContent":"URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":61,"LineContent":"URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":70,"LineContent":"URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":79,"LineContent":"URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":88,"LineContent":"URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":97,"LineContent":"URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1469,"LineContent":"URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1478,"LineContent":"URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1487,"LineContent":"URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1496,"LineContent":"URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1505,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1514,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1523,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1532,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1543,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1554,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1565,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1576,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1587,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1598,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1609,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1618,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1629,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1640,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1651,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1662,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1673,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1684,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1695,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1704,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1715,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1726,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1737,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log","LineNumber":1748,"LineContent":"URL: http://127.0.0.1:8000/v1/chat/completions | MODEL: gpt-4o"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":149,"LineContent":"            \"local_api_url\": \"http://127.0.0.1:8001/v1/chat/completions\","}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":26,"LineContent":"        \"url\": \"http://127.0.0.1:8000/v1/chat/completions\","}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":34,"LineContent":"        \"url\": \"http://127.0.0.1:8001/v1/chat/completions\","}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":73,"LineContent":"        self.url = config.get(\"url\", f\"http://127.0.0.1:{self.port}/v1/chat/completions\")"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":152,"LineContent":"                requests.get(f\"http://127.0.0.1:{self.port}/shutdown\", timeout=1.5)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":236,"LineContent":"            health_url = f\"http://127.0.0.1:{self.port}/health\""}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\data\\settings.json","LineNumber":2,"LineContent":"  \"local_api_url\": \"http://127.0.0.1:8000/v1/chat/completions\","}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":1833,"LineContent":"                                    \u003cspan class=\"server-url-caption\"\u003ehttp://127.0.0.1:8001/v1/chat/completions\u003c/span\u003e"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":1871,"LineContent":"                                    \u003cspan class=\"server-url-caption\"\u003ehttp://127.0.0.1:8000/v1/chat/completions\u003c/span\u003e"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":3034,"LineContent":"            document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8000/v1/chat/completions';"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1833,"LineContent":"                                    \u003cspan class=\"server-url-caption\"\u003ehttp://127.0.0.1:8001/v1/chat/completions\u003c/span\u003e"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1871,"LineContent":"                                    \u003cspan class=\"server-url-caption\"\u003ehttp://127.0.0.1:8000/v1/chat/completions\u003c/span\u003e"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3034,"LineContent":"            document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8000/v1/chat/completions';"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\config.py","LineNumber":24,"LineContent":"    local_api_url: str = \"http://127.0.0.1:8000/v1/chat/completions\""}
+(...18 more results not shown)

@@ -1,0 +1,2 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2794,"LineContent":"function loadResults(stats) {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":147,"LineContent":"function loadResults(stats) {"}

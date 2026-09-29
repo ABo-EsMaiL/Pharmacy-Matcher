@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\trace_specific_items.py", line 6, in <module>
+    from src.fast_match.classifier import classify_pair
+ModuleNotFoundError: No module named 'src.fast_match.classifier'
+

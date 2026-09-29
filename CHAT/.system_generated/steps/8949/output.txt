@@ -1,0 +1,6 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\match\\gemini_match.py","LineNumber":200,"LineContent":"    batch_size = 10"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\match\\coordinator.py","LineNumber":178,"LineContent":"        batch_size = 50"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\fast_match\\coordinator.py","LineNumber":384,"LineContent":"            batch_size = 75"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py","LineNumber":178,"LineContent":"        batch_size = 50"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":385,"LineContent":"            batch_size = 75"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":200,"LineContent":"    batch_size = 10"}

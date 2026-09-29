@@ -1,0 +1,37 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -139,15 +139,9 @@
+                 )
+         except Exception as err:
+             err_msg = str(err).lower()
+-            if profile != "balanced" and ("could_not_parse" in err_msg or "422" in err_msg or "unprocessable" in err_msg or "readable" in err_msg):
+-                print(f"[*] Profile {profile.upper()} was rejected by server ({err}). Retrying automatically with BALANCED profile...")
+-                with open(filepath, "rb") as f:
+-                    result = client.extract.from_document(
+-                        input=f,
+-                        schema=schema,
+-                        profile="balanced",
+-                        wait_seconds=600
+-                    )
++            if profile != "balanced":
++                print(f"[*] Profile {profile.upper()} failed ({err}). Retrying automatically with BALANCED profile...")
++                return extract_items_from_pdf(filepath, api_key, base_url, profile="balanced")
+             else:
+                 raise
+ 
+@@ -180,7 +180,11 @@
+                         result_data = job_data
+                         break
+                     elif "failed" in cur_status or "error" in cur_status:
+-                        raise RuntimeError(f"Extraction failed on server: {job_data.get('error', '')}")
++                        err_text = str(job_data.get("error", ""))
++                        if profile != "balanced":
++                            print(f"[*] Async job failed with profile {profile.upper()} ({err_text}). Retrying automatically with BALANCED profile...")
++                            return extract_items_from_pdf(filepath, api_key, base_url, profile="balanced")
++                        raise RuntimeError(f"Extraction failed on server: {err_text}")
+ 
+                     if attempts % 3 == 0:
+                         print(f"[*] Current status: {job_data.get('status')} ... ({attempts * 8}s)")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

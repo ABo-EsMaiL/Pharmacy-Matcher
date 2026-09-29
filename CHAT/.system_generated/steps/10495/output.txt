@@ -1,0 +1,97 @@
+
+The command exited with code 0.
+Output:
+0913.xlsx (Type: .xlsx)
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+  -> [DONE] 0913.xlsx: 993 items extracted.
+
+============================================================
+[+] Completed Shortages: 993 items from 1 file(s)
+============================================================
+
+
+============================================================
+[*] Processing Warehouse files (6 file(s)) [PARALLEL WORKERS]
+============================================================
+
+  -> [START] Processing file: السلام شبين.pdf (Type: .pdf)
+  -> [START] Processing file: المكرومي المنصورة.pdf (Type: .pdf)
+  -> [START] Processing file: الهضبة الاثنين نقدى0.pdf (Type: .pdf)
+
+  -> [START] Processing file: جملة العمروووو.pdf (Type: .pdf)
+  -> [START] Processing file: كيور فارما خاص.pdf (Type: .pdf)
+  -> [START] Processing file: مخزن الحياة فارم اسكندريه-170.pdf (Type: .pdf)
+
+
+
+============================================================
+
+
+
+============================================================
+============================================================
+============================================================
+============================================================
+============================================================[*] [VISION EXTRACTOR] File: السلام شبين.pdf
+
+
+
+
+
+============================================================
+[*] [VISION EXTRACTOR] File: مخزن الحياة فارم اسكندريه-170.pdf
+[*] [VISION EXTRACTOR] File: الهضبة الاثنين نقدى0.pdf
+[*] [VISION EXTRACTOR] File: جملة العمروووو.pdf
+[*] [VISION EXTRACTOR] File: كيور فارما خاص.pdf
+[*] [VISION EXTRACTOR] File: المكرومي المنصورة.pdf
+============================================================
+============================================================
+============================================================
+============================================================
+============================================================
+  -> Total pages: 6
+  -> Total pages: 5
+  -> Total pages: 1
+  -> Cache location: processes\PROC-017\cache\vision\السلام_شبين_d44b79aaae
+  -> Total pages: 22
+  -> Cache location: processes\PROC-017\cache\vision\مخزن_الحياة_فارم_اسكندريه_a10483ec7d
+  -> Cache location: processes\PROC-017\cache\vision\جملة_العمروووو_0fbca8b95b
+  -> Total pages: 8
+[*] Starting/Resuming Vision extraction across 6 page(s)...
+  -> Cache location: processes\PROC-017\cache\vision\الهضبة_الاثنين_نقدى0_6a3e48e076
+[*] Starting/Resuming Vision extraction across 5 page(s)...
+  -> Total pages: 4
+[*] Starting/Resuming Vision extraction across 1 page(s)...
+  -> Cache location: processes\PROC-017\cache\vision\كيور_فارما_خاص_6532a22310
+
+  -> [Page 1/6] Rendering & extracting...[*] Starting/Resuming Vision extraction across 22 page(s)...
+
+  -> [Page 1/5] Rendering & extracting...  -> Cache location: processes\PROC-017\cache\vision\المكرومي_المنصورة_9f96dd5050
+
+  -> [Page 1/1] Rendering & extracting...[*] Starting/Resuming Vision extraction across 8 page(s)...
+
+
+  -> [Page 1/22] Rendering & extracting...
+[*] Starting/Resuming Vision extraction across 4 page(s)...
+
+
+  -> [Page 1/8] Rendering & extracting...
+
+  -> [Page 1/4] Rendering & extracting...
+
+     [+] Rendered WebP: 107.4 KB
+     [*] Sending Vision request to gateway (Attempt 1/3)...
+     [+] Rendered WebP: 122.6 KB
+     [+] Rendered WebP: 114.8 KB
+     [*] Sending Vision request to gateway (Attempt 1/3)...
+     [*] Sending Vision request to gateway (Attempt 1/3)...
+     [+] Rendered WebP: 136.6 KB
+     [*] Sending Vision request to gateway (Attempt 1/3)...
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [!] [Page 1] HTTP Erro
+

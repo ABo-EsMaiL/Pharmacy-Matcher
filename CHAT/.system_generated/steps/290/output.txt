@@ -1,0 +1,13 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\config.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -22,6 +22,7 @@
+ 
+     # إعدادات MSEMAX (Local API)
+     local_api_url: str = "http://127.0.0.1:8000/v1/chat/completions"
++    local_api_key: str = "[REDACTED_CREDENTIAL]"
+     local_model: str = "gpt-4o-mini" # or gpt-4o depending on what the wrapper defaults to
+ 
+     # إعدادات Gemini (لم تعد مستخدمة حاليا)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

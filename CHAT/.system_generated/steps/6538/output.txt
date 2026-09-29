@@ -1,0 +1,16 @@
+
+The command exited with code 0.
+Output:
+
+   Id ProcessName Path StartTime            
+   -- ----------- ---- ---------            
+  764 python           9/22/2026 9:36:39 PM 
+ 1648 python           9/22/2026 6:38:38 PM 
+ 2712 python           9/22/2026 6:31:04 PM 
+ 3524 python           9/22/2026 10:58:08 PM
+18888 python           9/22/2026 2:25:45 AM 
+20144 python           9/23/2026 12:07:43 PM
+20572 python           9/22/2026 9:48:12 PM 
+
+
+

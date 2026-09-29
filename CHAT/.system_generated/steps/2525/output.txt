@@ -1,0 +1,27 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\search.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -4,12 +4,18 @@
+ import re
+ 
+ def normalize_for_search(text: str) -> str:
+-    """Basic normalization for character n-gram search."""
++    """Enhanced normalization for Arabic pharmaceutical search."""
+     if not text:
+         return ""
+     text = str(text).lower()
+-    text = re.sub(r'[\u064B-\u065F\u0670]', '', text) # Remove Arabic diacritics
+-    text = re.sub(r'[^\w\s]', ' ', text) # Replace punctuation with spaces
++    text = re.sub(r'[\u064B-\u065F\u0670\u0640]', '', text)  # Remove Arabic diacritics and tatweel
++    text = re.sub(r'[أإآ]', 'ا', text)
++    text = re.sub(r'ة', 'ه', text)
++    text = re.sub(r'ى', 'ي', text)
++    # Eastern Arabic to Western digits
++    for e, w in zip('٠١٢٣٤٥٦٧٨٩', '0123456789'):
++        text = text.replace(e, w)
++    text = re.sub(r'[^\w\s]', ' ', text)  # Replace punctuation with spaces
+     text = re.sub(r'\s+', ' ', text).strip()
+     return text
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

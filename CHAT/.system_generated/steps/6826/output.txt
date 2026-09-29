@@ -1,0 +1,14 @@
+
+The command exited with code 0.
+Output:
+C01 True exp: match got: match اسم مطابق
+C02 True exp: match got: match حرف ناقص
+C03 True exp: match got: match عربي وإنجليزي وأرقام مختلطة
+C04 False exp: match got: review حروف الاسم معكوسة
+C05 True exp: match got: match تحويل وحدة دون تغيير العبوة
+C06 True exp: no_match got: no_match اختلاف التركيز
+C07 True exp: no_match got: no_match اختلاف عدد الأقراص
+C08 True exp: no_match got: no_match اختلاف الشكل
+C09 True exp: review got: review تركيز ناقص لا نخمنه
+C10 True exp: no_match got: no_match اسم غير موجود
+

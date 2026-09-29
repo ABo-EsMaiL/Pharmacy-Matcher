@@ -1,0 +1,45 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\data\\settings.json","LineNumber":5,"LineContent":"  \"local_api_url\": \"http://127.0.0.1:8001/v1/chat/completions\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\data\\settings.json","LineNumber":2,"LineContent":"  \"local_api_url\": \"http://127.0.0.1:8000/v1/chat/completions\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":136,"LineContent":"                    # Normalize local_api_url if missing /chat/completions"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":137,"LineContent":"                    if \"local_api_url\" in data:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":138,"LineContent":"                        raw = str(data[\"local_api_url\"]).strip().rstrip(\"/\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":141,"LineContent":"                                data[\"local_api_url\"] = f\"{raw}/chat/completions\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":143,"LineContent":"                                data[\"local_api_url\"] = f\"{raw}/v1/chat/completions\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":149,"LineContent":"            \"local_api_url\": \"http://127.0.0.1:8001/v1/chat/completions\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":163,"LineContent":"            if \"local_api_url\" in settings:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":164,"LineContent":"                raw = str(settings[\"local_api_url\"]).strip().rstrip(\"/\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":167,"LineContent":"                        settings[\"local_api_url\"] = f\"{raw}/chat/completions\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":169,"LineContent":"                        settings[\"local_api_url\"] = f\"{raw}/v1/chat/completions\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":189,"LineContent":"            \"current_url\": settings.get(\"local_api_url\", \"\"),"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":220,"LineContent":"        Updates settings.json (local_api_url, local_model, active_server) automatically."}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":229,"LineContent":"            settings[\"local_api_url\"] = srv.url"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":414,"LineContent":"            config.local_api_url = settings.get('local_api_url', '') or config.local_api_url"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3034,"LineContent":"            document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8000/v1/chat/completions';"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3049,"LineContent":"        local_api_url: document.getElementById('setting-local-url').value,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":264,"LineContent":"            document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8000/v1/chat/completions';"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":279,"LineContent":"        local_api_url: document.getElementById('setting-local-url').value,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":3034,"LineContent":"            document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8000/v1/chat/completions';"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":3049,"LineContent":"        local_api_url: document.getElementById('setting-local-url').value,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\config.py","LineNumber":24,"LineContent":"    local_api_url: str = \"http://127.0.0.1:8000/v1/chat/completions\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":136,"LineContent":"                    # Normalize local_api_url if missing /chat/completions"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":137,"LineContent":"                    if \"local_api_url\" in data:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":138,"LineContent":"                        raw = str(data[\"local_api_url\"]).strip().rstrip(\"/\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":141,"LineContent":"                                data[\"local_api_url\"] = f\"{raw}/chat/completions\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":143,"LineContent":"                                data[\"local_api_url\"] = f\"{raw}/v1/chat/completions\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":149,"LineContent":"            \"local_api_url\": \"http://127.0.0.1:8001/v1/chat/completions\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":163,"LineContent":"            if \"local_api_url\" in settings:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":164,"LineContent":"                raw = str(settings[\"local_api_url\"]).strip().rstrip(\"/\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":167,"LineContent":"                        settings[\"local_api_url\"] = f\"{raw}/chat/completions\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":169,"LineContent":"                        settings[\"local_api_url\"] = f\"{raw}/v1/chat/completions\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":189,"LineContent":"            \"current_url\": settings.get(\"local_api_url\", \"\"),"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":220,"LineContent":"        Updates settings.json (local_api_url, local_model, active_server) automatically."}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":229,"LineContent":"            settings[\"local_api_url\"] = srv.url"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":414,"LineContent":"            config.local_api_url = settings.get('local_api_url', '') or config.local_api_url"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\static\\app.js","LineNumber":264,"LineContent":"            document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8000/v1/chat/completions';"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\static\\app.js","LineNumber":279,"LineContent":"        local_api_url: document.getElementById('setting-local-url').value,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\fast_match\\coordinator.py","LineNumber":360,"LineContent":"        if llm_cases and hasattr(self.config, 'local_api_url'):"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\fast_match\\coordinator.py","LineNumber":549,"LineContent":"        raw_url = getattr(self.config, 'local_api_url', \"http://127.0.0.1:8000/v1/chat/completions\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scripts\\package_production.py","LineNumber":91,"LineContent":"    settings_json.write_text('{\\n  \"local_api_url\": \"http://127.0.0.1:8000/v1/chat/completions\",\\n  \"gemini_model\": \"gemini-2.5-flash\",\\n  \"match_threshold\": 0.75,\\n  \"msemax_dir\": \"\"\\n}', encoding=\"utf-8\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py","LineNumber":24,"LineContent":"    local_api_url: str = \"http://127.0.0.1:8000/v1/chat/completions\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":360,"LineContent":"        if llm_cases and hasattr(self.config, 'local_api_url'):"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":549,"LineContent":"        raw_url = getattr(self.config, 'local_api_url', \"http://127.0.0.1:8000/v1/chat/completions\")"}

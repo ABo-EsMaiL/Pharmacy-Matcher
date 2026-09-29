@@ -1,0 +1,5 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2008,"LineContent":"                // Simulate process_complete event"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2010,"LineContent":"                    window.dispatchEvent(new CustomEvent('process_complete', {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2059,"LineContent":"window.addEventListener('process_complete', (e) =\u003e {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":370,"LineContent":"                self._window.evaluate_js(f\"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: true, stats: JSON.parse('{safe_stats}')}}}}));\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":379,"LineContent":"                self._window.evaluate_js(f\"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: false, error: \\\"{err_msg}\\\"}}}}));\")"}

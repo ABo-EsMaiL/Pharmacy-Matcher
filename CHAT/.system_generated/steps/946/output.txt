@@ -1,0 +1,25 @@
+
+The command exited with code 0.
+Output:
+                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Extracting data from files...'}}}}));")
+            
+            # Read input files (this handles PDF→Unstructured API automatically)
+            api_key = settings.get('unstructured_api_key', '') or config.unstructured_api_key
+            self.add_log("[PROCESS] Reading Shortages files...")
+            shortage_data = read_input_files(copied_shortages, role="shortages", api_key=api_key)
+            self.add_log(f"[PROCESS] Read {len(shortage_data)} shortage files.")
+            
+            self.add_log("[PROCESS] Reading Warehouse files...")
+            warehouse_data = read_input_files(copied_warehouses, role="warehouse", api_key=api_key)
+            self.add_log(f"[PROCESS] Read {len(warehouse_data)} warehouse files.")
+            
+            # Flatten shortages
+            all_shortages = []
+            for file_items in shortage_data.values():
+                all_shortages.extend(file_items)
+            
+            self.add_log(f"[PROCESS] Extracted total {len(all_shortages)} shortage items. Starting coordinator...")
+            
+            if self.window:
+
+

@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "D:\AI_Engineer\Pharmacy-agy-vision\scratch\verify_modules.py", line 8, in <module>
+    from src.extract.excel_reader import read_excel, extract_item_names
+  File "D:\AI_Engineer\Pharmacy-agy-vision\src\extract\excel_reader.py", line 7, in <module>
+    from openpyxl import load_workbook
+ModuleNotFoundError: No module named 'openpyxl'
+

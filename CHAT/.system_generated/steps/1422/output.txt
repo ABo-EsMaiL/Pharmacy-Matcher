@@ -1,0 +1,27 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -216,21 +216,6 @@
+             shortage_filenames = [Path(p).name for p in shortage_paths]
+             warehouse_filenames = [Path(p).name for p in warehouse_paths]
+             
+-            # Check for existing process with same files
+-            existing_processes = self.db.get_all_processes()
+-            for p in existing_processes:
+-                try:
+-                    db_shortage = json.loads(p.get('shortage_files', '[]'))
+-                    db_warehouse = json.loads(p.get('warehouse_files', '[]'))
+-                except:
+-                    continue
+-                    
+-                if sorted(db_shortage) == sorted(shortage_filenames) and sorted(db_warehouse) == sorted(warehouse_filenames):
+-                    if p.get('status') in ['completed', 'reviewing']:
+-                        # It's an identical process that finished
+-                        stats = self.db.get_process_stats(p['id'])
+-                        return {"success": True, "existing": True, "process_id": p['id'], "stats": stats}
+-            
+             process_id = self.db.create_process(shortage_filenames, warehouse_filenames)
+             
+             thread = threading.Thread(target=self._process_worker, args=(process_id, shortage_paths, warehouse_paths))
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

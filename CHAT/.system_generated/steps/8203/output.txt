@@ -1,0 +1,26 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -55,8 +55,8 @@
+ HEADLESS = os.getenv("HEADLESS", "true").lower() in ("true", "1", "yes")
+ DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "gemini-3.8-flash").strip()
+ THINKING_MODE = os.getenv("THINKING_MODE", "high").strip().lower()
+-ENABLE_SEARCH_GROUNDING = os.getenv("ENABLE_SEARCH_GROUNDING", "true").lower() in ("true", "1", "yes")
+-CLEAR_CHAT_ON_REQUEST = os.getenv("CLEAR_CHAT_ON_REQUEST", "false").lower() in ("true", "1", "yes")
++ENABLE_SEARCH_GROUNDING = os.getenv("ENABLE_SEARCH_GROUNDING", "false").lower() in ("true", "1", "yes")
++CLEAR_CHAT_ON_REQUEST = os.getenv("CLEAR_CHAT_ON_REQUEST", "true").lower() in ("true", "1", "yes")
+ REQUEST_TIMEOUT = float(os.getenv("MSE_REQUEST_TIMEOUT", "180"))
+ RATE_LIMIT = os.getenv("MSE_RATE_LIMIT", "30/minute").strip()
+ MAX_CONCURRENT = int(os.getenv("MSE_MAX_CONCURRENT", "1"))
+@@ -77,6 +77,9 @@
+         self.model_verified = False
+         self.active_thinking = ""
+         self.thinking_verified = False
++        self.google_search_enabled = False
++        self.search_verified = False
++        self.last_tool_calls_count = 0
+ 
+     async def start(self):
+         logger.info(f"Launching persistent Chromium context from: {CHROME_PROFILE_DIR} (headless={HEADLESS}, start-maximized)")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

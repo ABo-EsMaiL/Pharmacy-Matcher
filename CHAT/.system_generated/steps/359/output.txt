@@ -1,0 +1,43 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -85,6 +85,37 @@
+     def run_get_session(self) -> dict:
+         return self.server_manager.run_get_session()
+ 
++    def select_files(self, file_type: str) -> str:
++        """Opens a native file dialog. Returns JSON list of selected file paths."""
++        import webview
++        if not self.window:
++            return "[]"
++        
++        if file_type == 'warehouse':
++            file_types = ('Warehouse Files (*.pdf;*.xlsx;*.xls;*.json)', 'All Files (*.*)')
++        else:
++            file_types = ('Shortage Files (*.pdf;*.xlsx;*.xls)', 'All Files (*.*)')
++        
++        result = self.window.create_file_dialog(
++            webview.OPEN_DIALOG,
++            allow_multiple=True,
++            file_types=file_types
++        )
++        
++        if result:
++            return json.dumps([str(p) for p in result])
++        return "[]"
++
++    def select_directory(self) -> str:
++        """Opens a native directory picker. Returns selected path."""
++        import webview
++        if not self.window:
++            return ""
++        result = self.window.create_file_dialog(webview.FOLDER_DIALOG)
++        if result and len(result) > 0:
++            return str(result[0])
++        return ""
++
+     def start_process(self, shortage_paths_json: str, warehouse_paths_json: str) -> dict:
+         try:
+             shortage_paths = json.loads(shortage_paths_json)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

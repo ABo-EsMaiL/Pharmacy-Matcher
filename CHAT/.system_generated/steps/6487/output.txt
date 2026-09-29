@@ -1,0 +1,106 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1503,11 +1503,11 @@
+                         </div>
+                     </div>
+ 
+-                    <!-- General API Settings -->
+-                    <div class="settings-card">
+-                        <div class="card-header dark">
+-                            <i class="ph-fill ph-key"></i>
+-                            <h3 data-i18n="api_keys_header">مفاتيح الربط وخيارات المعالجة</h3>
++                    <!-- Extraction & Processing Settings -->
++                    <div class="settings-card" style="grid-column: 1 / -1;">
++                        <div class="card-header dark">
++                            <i class="ph-fill ph-file-text"></i>
++                            <h3 data-i18n="api_keys_header">خيارات معالجة الملفات ومفاتيح الربط</h3>
+                         </div>
+                         <div class="card-body form-grid">
+                             <div class="form-group">
+@@ -1521,59 +1521,30 @@
+                                 <label data-i18n="lbl_unstructured_key">Unstructured API Key</label>
+                                 <input type="password" id="setting-unstructured-key" class="form-control" placeholder="Enter Unstructured.io Key...">
+                             </div>
+-                            <div class="form-group mt-2">
+-                                <label data-i18n="lbl_local_url">Local AI URL (MSEMAX / vLLM)</label>
+-                                <input type="text" id="setting-local-url" class="form-control" placeholder="http://127.0.0.1:8000/v1/chat/completions">
+-                            </div>
+-                            <div class="form-group">
+-                                <label data-i18n="lbl_local_key">Local AI Key (إن وجد)</label>
+-                                <input type="password" id="setting-local-key" class="form-control" placeholder="Optional API Key">
+-                            </div>
+-                            <div class="form-group">
+-                                <label data-i18n="lbl_model_name">اسم الموديل (Model Name)</label>
+-                                <input type="text" id="setting-model-name" class="form-control" placeholder="gpt-4o-mini, llama3, etc...">
+-                            </div>
+-                        </div>
+-                    </div>
+-
+-                    <!-- Server Settings -->
+-                    <div class="settings-card">
+-                        <div class="card-header dark">
+-                            <i class="ph-fill ph-hard-drives"></i>
+-                            <h3 data-i18n="server_header">إعدادات سيرفر (MSEMAX)</h3>
+-                        </div>
+-                        <div class="card-body form-grid">
+-                            <div class="form-group mb-4">
+-                                <label data-i18n="lbl_msemax_dir">مسار مجلد MSEMAX</label>
+-                                <div class="input-group">
+-                                    <input type="text" id="setting-msemax-dir" class="form-control" readonly>
+-                                    <button class="btn btn-outline-secondary" onclick="selectMsemaxDir()" data-i18n="btn_select_dir">تحديد المجلد</button>
+-                                </div>
+-                            </div>
+-
+-                            <div style="background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 12px; margin-bottom: 16px;">
+-                                <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
+-                                    <span style="font-size: 13px; font-weight: 700; color: #166534;">
+-                                        ⚡ يدعم البرنامج الآن سيرفرين: Google AI Studio (منفذ 8001) و ChatGPT (منفذ 8000)
+-                                    </span>
+-                                    <button type="button" class="btn btn-small btn-primary" onclick="showScreen('screen-servers'); loadServersUI();">
+-                                        <i class="ph ph-hard-drives"></i> <span>فتح إدارة السيرفرات المتقدمة</span>
+-                                    </button>
+-                                </div>
+-                            </div>
+-
+-                            <div class="btn-group-vertical">
+-                                <button class="btn btn-outline" onclick="setupRequirements()">
+-                                    <i class="ph ph-download-simple"></i>
+-                                    <span data-i18n="btn_install_reqs">تثبيت متطلبات الجهاز الأساسية</span>
+-                                    <span id="req-status" style="margin-right:auto"></span>
+-                                </button>
+-                                <button class="btn btn-outline" onclick="getSession()">
+-                                    <i class="ph ph-browser"></i>
+-                                    <span data-i18n="btn_renew_session">تجديد الجلسة (Get Session)</span>
+-                                    <span id="session-status" style="margin-right:auto"></span>
+-                                </button>
+-                            </div>
++
++                            <!-- Prominent Link to Dedicated AI Servers Screen -->
++                            <div style="grid-column: 1 / -1; background: #f0f9ff; border: 1.5px solid #bae6fd; border-radius: 10px; padding: 14px 18px; margin-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
++                                <div style="display: flex; align-items: center; gap: 12px;">
++                                    <i class="ph-fill ph-hard-drives" style="font-size: 26px; color: var(--primary);"></i>
++                                    <div>
++                                        <strong style="font-size: 13.5px; color: #0369a1; display: block;">
++                                            إدارة سيرفرات الذكاء الاصطناعي (ChatGPT و Google AI Studio)
++                                        </strong>
++                                        <span style="font-size: 12px; color: #0284c7;">
++                                            تم نقل كافة إعدادات السيرفرات والتشغيل وفحص الاتصال والتيرمينال المباشر إلى صفحة "إدارة السيرفرات".
++                                        </span>
++                                    </div>
++                                </div>
++                                <button type="button" class="btn btn-primary" onclick="showScreen('screen-servers'); loadServersUI();">
++                                    <i class="ph ph-arrow-left"></i> <span>الانتقال لإدارة السيرفرات</span>
++                                </button>
++                            </div>
++
++                            <!-- Hidden inputs for backward compatibility with settings saver -->
++                            <input type="hidden" id="setting-local-url">
++                            <input type="hidden" id="setting-local-key">
++                            <input type="hidden" id="setting-model-name">
++                            <input type="hidden" id="setting-msemax-dir">
+                         </div>
+                     </div>
+                 </div>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

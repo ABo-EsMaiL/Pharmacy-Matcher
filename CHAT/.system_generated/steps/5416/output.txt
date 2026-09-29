@@ -1,0 +1,16 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -382,8 +382,8 @@
+                                     status = "no_match"
+                                     
+                                 # 3. Combination suffix mismatch (كو / بلس / co / plus)
+-                                is_req_co = bool(re.search(r'\b(كو|بلس|بلاس|كومب|co|plus|comp)\b', shortage_name.lower()))
+-                                is_wh_co = bool(re.search(r'\b(كو|بلس|بلاس|كومب|co|plus|comp)\b', warehouse_item.lower()))
++                                is_req_co = has_co(shortage_name)
++                                is_wh_co = has_co(warehouse_item)
+                                 if is_req_co != is_wh_co:
+                                     status = "no_match"
+                                     
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,37 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -46,8 +46,9 @@
+      - 0.25mg = 250mcg = 25. مجم = ربع (e.g. "ربع" equals 0.25mg / 250mcg).
+ 
+ 4. PACKAGING, PACK SIZE & QUANTITY (DOES NOT MATTER -> 100% MATCH!):
+-   - In pharmacy shortage ordering, different tablet counts, pack counts, strip counts, or wholesale packaging lot sizes (باكت, باكو, كرتونة, 32ب) DO NOT matter for product availability!
++   - In pharmacy shortage ordering, different tablet counts, pack counts, strip counts, ampoule counts, or wholesale packaging lot sizes (باكت, باكو, كرتونة, 32ب) DO NOT matter for product availability!
+    - As long as the trade brand name, dosage form, and strength match:
++     - Different ampoule counts (e.g. 3 ampoules vs 6 ampoules vs 1 ampoule vs 25 ampoules / 6امبول vs 3امبول) -> THIS IS A 100% MATCH ("status": "match")!
+      - Different pack counts (e.g. 20 tablets vs 30 tablets vs 60 tablets vs 5 tablets) -> THIS IS A 100% MATCH ("status": "match")!
+      - Different strip counts (e.g. 2 strips vs 3 strips vs 5 strips) -> THIS IS A 100% MATCH ("status": "match")!
+      - Retail unit vs wholesale carton/bundle (e.g. 20 tablets vs باكت 32, باكت 200, 32ب) -> THIS IS A 100% MATCH ("status": "match")!
+@@ -54,9 +54,16 @@
+-     - Missing pack count on either side -> THIS IS A 100% MATCH ("status": "match")!
++     - Missing pack count or quantity on either side -> THIS IS A 100% MATCH ("status": "match")!
+      - Manufacturer suffixes (/فاركو, /جلاكسو), commercial indicators ("س ج", "سعر جديد", "سعر قديم") do not change the product.
+-     - NEVER mark tablet count, pack count, or wholesale carton differences as "review" or "no_match"!
+-   - "review" IS STRICTLY RESERVED FOR:
++     - NEVER mark tablet count, ampoule count, pack count, or wholesale carton differences as "review" or "no_match"!
++
++5. THE "REVIEW" (يحتاج مراجعة) SAFETY NET:
++   - "review" is the essential SAFETY NET for the pharmacist to manually inspect borderline cases.
++   - If there is any doubt, borderline OCR scanning, minor ambiguity, or 25%–70% plausibility:
++     ALWAYS ROUTE TO "review" instead of rejecting to "no_match"!
++   - A potential match in "review" allows the pharmacist to verify availability in the warehouse, whereas dropping an item into "no_match" causes the pharmacy to lose an available medicine.
++   - Examples for "review":
+      - Conflicting bottle/tube volume of liquids/semi-solids when BOTH sides explicitly specify different numbers (e.g. requested 15ml drops vs candidate writes 5ml drops).
+-     - Conflicting injection pack count when explicitly different (e.g. requested 3 ampoules vs candidate writes 1 ampoule).
++     - Borderline OCR where brand letters are slightly ambiguous but plausibly the same drug.
++     - When you are uncertain between "review" and "no_match": ALWAYS CHOOSE "review".
+ 
+ SCHEMA:
+ Return ONLY a valid JSON object matching this schema:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,29 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -37,15 +37,17 @@
+     cache_file = cache_dir / f"{file_hash}_extract.json"
+     
+     if cache_file.exists():
+-        print(f"📄 Found file in cache: {filepath.name}")
+         try:
+             with open(cache_file, "r", encoding="utf-8") as f:
+                 result_data = json.load(f)
+-            items = parse_structured_result(result_data, filepath.name)
+-            return items
+-        except json.JSONDecodeError:
+-            print("⚠️ Cache file is corrupted (likely from a previous crash). Ignoring and re-processing.")
+-            # Continue to re-process the file
++            cached_items = parse_structured_result(result_data, filepath.name)
++            if len(cached_items) > 0:
++                print(f"[+] Loaded {len(cached_items)} items from cache: {filepath.name}")
++                return cached_items
++            else:
++                print(f"[*] Cache has 0 items for {filepath.name}. Re-processing with API...")
++        except Exception:
++            print(f"[*] Cache invalid for {filepath.name}. Re-processing with API...")
+ 
+     try:
+         from unstructured_transform_client import TransformClient
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

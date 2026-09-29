@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+Exception: (415)
+Reason: Unsupported Media Type
+HTTP response headers: HTTPHeaderDict({'Date': 'Tue, 22 Sep 2026 01:30:31 GMT', 'Content-Type': 'application/json', 'Content-Length': '148', 'Connection': 'keep-alive', 'server': 'uvicorn'})
+HTTP response body: {"code":"unsupported_file_type","message":"Unsupported file type. Supported extensions: .bmp, .docx, .heic, .jpeg, .jpg, .pdf, .png, .pptx, .tiff."}
+HTTP response data: code=<ErrorCode.UNSUPPORTED_FILE_TYPE: 'unsupported_file_type'> message='Unsupported file type. Supported extensions: .bmp, .docx, .heic, .jpeg, .jpg, .pdf, .png, .pptx, .tiff.'
+
+

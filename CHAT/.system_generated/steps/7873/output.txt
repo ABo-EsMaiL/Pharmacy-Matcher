@@ -1,0 +1,39 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -947,11 +947,28 @@
+     allow_credentials=True,
+     allow_methods=["*"],
+     allow_headers=["*"],
+-)
+-
+-# ------------------------------------------------------------------------------
+-# Authentication Dependency
+-# ------------------------------------------------------------------------------
++@app.get("/debug/state")
++async def debug_state():
++    if not browser_manager.page or browser_manager.page.is_closed():
++        return {"error": "no page"}
++    body_text = await browser_manager.page.evaluate("() => (document.body.innerText || '').slice(0, 3000)")
++    html_sample = await browser_manager.page.evaluate("() => (document.body.innerHTML || '').slice(0, 3000)")
++    turns_info = await browser_manager.page.evaluate('''() => {
++        const turns = Array.from(document.querySelectorAll('ms-chat-turn, .chat-turn'));
++        return turns.map((t, idx) => ({
++            index: idx,
++            tag: t.tagName,
++            cls: t.className,
++            role: t.getAttribute('data-turn-role'),
++            has_prompt: t.querySelector('ms-prompt-chunk') !== null,
++            has_thought: t.querySelector('ms-thought-chunk, .thought-activity-host') !== null,
++            text_chunks: t.querySelectorAll('ms-text-chunk, ms-code-block, ms-code-chunk').length,
++            preview: (t.innerText || '').slice(0, 150)
++        }));
++    }''')
++    await browser_manager.page.screenshot(path="debug_state.png")
++    return {"body_text": body_text, "turns": turns_info, "html": html_sample}
++
+ async def verify_api_key(authorization: Optional[str] = Header(None)):
+     if not API_KEY:
+         return True
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

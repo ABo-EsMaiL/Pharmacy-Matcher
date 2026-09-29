@@ -1,0 +1,31 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -3516,7 +3516,10 @@
+                 if (target) target.classList.add('active');
+             }
+             
+-            // Update sidebar active class
++            // Auto-detect and sync sidebar active nav item if element is null or not provided
++            if (!element) {
++                element = document.querySelector(`.nav-menu .nav-item[onclick*="${screenId}"]`);
++            }
+             if (element) {
+                 document.querySelectorAll('.nav-item').forEach(btn => btn.classList.remove('active'));
+                 element.classList.add('active');
+@@ -3527,7 +3527,12 @@
+             }
+ 
+             if (screenId === 'screen-new') {
+-                resetNewProcessForm();
++                if (typeof isProcessRunning !== 'undefined' && isProcessRunning) {
++                    const progressModal = document.getElementById('progress-modal');
++                    if (progressModal) progressModal.style.display = 'flex';
++                } else {
++                    resetNewProcessForm();
++                }
+             } else if (screenId === 'screen-logs' || screenId === 'screen-settings') {
+                 loadLogs();
+             } else if (screenId === 'screen-servers') {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

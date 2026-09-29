@@ -1,0 +1,35 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -787,19 +787,16 @@
+     }
+ 
+ 
+-@app.get("/v1/models", dependencies=[Depends(verify_api_key)])
+-async def list_models():
+-    return {
+-        "object": "list",
+-        "data": [
+-            {
+-                "id": "msemax",
+-                "object": "model",
+-                "created": int(time.time()),
+-                "owned_by": "msemax"
+-            }
+-        ]
+-    }
++@app.get("/shutdown")
++@app.post("/shutdown")
++async def shutdown_server():
++    import threading, time, os
++    def _kill():
++        time.sleep(0.3)
++        os._exit(0)
++    threading.Thread(target=_kill, daemon=True).start()
++    return {"status": "shutting down", "port": 8000}
++
+ 
+ if __name__ == "__main__":
+     import uvicorn
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

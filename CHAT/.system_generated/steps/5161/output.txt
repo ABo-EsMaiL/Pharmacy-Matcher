@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+[!] Target for prompt not found
+[✓] Added Liquids vs Solid check to post-filter
+[✓] Added Brand Prefix check to post-filter
+[SUCCESS] coordinator.py updated.
+

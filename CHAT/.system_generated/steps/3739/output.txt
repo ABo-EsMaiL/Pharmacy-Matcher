@@ -1,0 +1,16 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+'كونفاجران' vs 'فياجرا -' -> Brand Ratio: 59 | Token Set: 59
+'انتودين' vs 'فاستلام' -> Brand Ratio: 29 | Token Set: 29
+'ميبو صغير' vs 'برناسورس' -> Brand Ratio: 35 | Token Set: 24
+'دولفين' vs 'اندوميثاسين العربيه' -> Brand Ratio: 32 | Token Set: 32
+'نويوريك' vs 'دالاسين سي' -> Brand Ratio: 24 | Token Set: 24
+'سينوبريت' vs 'سينوبريل اقراص/باكت' -> Brand Ratio: 59 | Token Set: 52
+'ب ك ميرز' vs 'ميرز كبسول/باكت' -> Brand Ratio: 35 | Token Set: 67
+'ابيكوتيل لبوسه ث' vs 'البوتيل بوس س.ج،' -> Brand Ratio: 69 | Token Set: 62
+'سيتال' vs 'سيتال' -> Brand Ratio: 100 | Token Set: 100
+'جينوزول' vs 'جينوزول' -> Brand Ratio: 100 | Token Set: 100
+

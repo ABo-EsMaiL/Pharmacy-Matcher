@@ -1,0 +1,40 @@
+            </div>
+
+        </aside>
+
+
+
+        <!-- Main Content Area -->
+
+        <main class="main-content">
+
+            
+
+            <!-- Screen 1: New Process (Default) -->
+
+            <div id="screen-new" class="screen active">
+
+                <header class="page-header">
+
+                    <h2><i class="ph-fill ph-magic-wand"></i> مطابقة نواقص ومخازن جديدة</h2>
+
+                    <p>قم بإدراج ملفات النواقص وملفات المخازن للبدء في المطابقة الذكية.</p>
+
+                </header>
+
+                
+
+                <div class="upload-grid">
+
+                    <!-- Shortages -->
+
+                    <div class="upload-card">
+
+                        <div class="card-header primary">
+
+                            <i class="ph-fill ph-clipboard-text"></i>
+
+                            <h3>1. ملفات النواقص</h3>
+
+                        </div>
+

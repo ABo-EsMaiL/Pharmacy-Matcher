@@ -1,0 +1,11 @@
+You have 1 background task(s) currently running:
+{
+  "taskId": "916274de-7f92-49fc-a0a8-d291664b474a/task-6995",
+  "toolName": "run_command",
+  "toolSummary": "Launch MSEMAX-GAIStudio app.py as daemon",
+  "description": "D:\\miniconda3\\envs\\venv\\python.exe app.py",
+  "startTime": "2026-09-24T14:53:27.900711300Z",
+  "stepIndex": 6995,
+  "logUri": "file:///C:/Users/kakak/.gemini/antigravity/brain/916274de-7f92-49fc-a0a8-d291664b474a/.system_generated/tasks/task-6995.log",
+  "isDaemon": true
+}

@@ -1,0 +1,9 @@
+{"name":"__init__.py","sizeBytes":"15"}
+{"name":"app.py","sizeBytes":"2016"}
+{"name":"backend.py","sizeBytes":"15572"}
+{"name":"database.py","sizeBytes":"3770"}
+{"name":"server_manager.py","sizeBytes":"3290"}
+{"name":"static","isDir":true}
+{"name":"templates","isDir":true}
+
+Summary: This directory contains 2 subdirectories and 5 files.

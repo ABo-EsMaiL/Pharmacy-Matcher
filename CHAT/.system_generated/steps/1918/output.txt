@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+Deleting 2 jobs...
+Done! Remaining server jobs: 0
+

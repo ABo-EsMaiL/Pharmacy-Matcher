@@ -1,0 +1,12 @@
+
+The command exited with code 1.
+Output:
+[*] Starting Chained Parse + Extract on جملة العمروووو.pdf...
+1. Submitting Parse job...
+   -> Parse Job ID: bafca5c6-af42-42b8-81d5-e377bd9de1e8
+2. Polling Parse job...
+Traceback (most recent call last):
+  File "d:\AI_Engineer\Pharmacy-agy\test_official_chain.py", line 56, in <module>
+    raise RuntimeError(f"Parse job failed: {job.error}")
+RuntimeError: Parse job failed: None
+

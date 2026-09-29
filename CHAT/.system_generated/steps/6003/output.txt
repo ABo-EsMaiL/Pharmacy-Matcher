@@ -1,0 +1,257 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2906,6 +2906,12 @@
+     if (topText) {
+         topText.textContent = isRunning ? t.server_running : t.server_stopped;
+     }
++
++    // Also auto-refresh servers screen if it is active
++    const srvScreen = document.getElementById('screen-servers');
++    if (srvScreen && srvScreen.classList.contains('active')) {
++        loadServersUI();
++    }
+ }
+ 
+ async function toggleServer() {
+@@ -2925,6 +2925,229 @@
+ 
+ const btnToggle = document.getElementById('btn-toggle-server');
+ if (btnToggle) btnToggle.addEventListener('click', toggleServer);
++
++// --- AI Servers Manager Logic ---
++async function loadServersUI() {
++    if (!window.pywebview || !window.pywebview.api) return;
++    const t = I18N[currentLang] || I18N.ar;
++    
++    try {
++        const infoStr = await window.pywebview.api.get_servers_info();
++        const info = JSON.parse(infoStr);
++        const servers = info.servers || {};
++        const activeKey = info.active_server || 'gaistudio';
++        
++        // Update Active Provider Banner
++        const activeSrv = servers[activeKey];
++        const bannerTitle = document.getElementById('active-banner-title');
++        const bannerSub = document.getElementById('active-banner-sub');
++        if (bannerTitle && activeSrv) {
++            bannerTitle.innerHTML = currentLang === 'en'
++                ? `Active Matching Provider: <strong>${activeSrv.name}</strong> (Port: ${activeSrv.port} • Model: ${activeSrv.default_model})`
++                : `المزود النشط حالياً لعمليات المطابقة: <strong>${activeSrv.name}</strong> (منفذ: ${activeSrv.port} • موديل: ${activeSrv.default_model})`;
++        }
++        if (bannerSub) {
++            bannerSub.textContent = currentLang === 'en'
++                ? `All shortage batches will be dispatched directly to ${activeSrv ? activeSrv.name : activeKey}.`
++                : `سيتم توجيه جميع دفعات مطابقة النواقص تلقائياً إلى هذا السيرفر (${activeSrv ? activeSrv.name : activeKey}).`;
++        }
++
++        // Update each server card
++        ['gaistudio', 'chatgpt'].forEach(key => {
++            const srv = servers[key];
++            if (!srv) return;
++
++            const card = document.getElementById(`card-server-${key}`);
++            const badgeStatus = document.getElementById(`badge-status-${key}`);
++            const badgeActive = document.getElementById(`badge-active-${key}`);
++            const btnActive = document.getElementById(`btn-active-${key}`);
++            const btnToggle = document.getElementById(`btn-toggle-${key}`);
++            const valModel = document.getElementById(`val-model-${key}`);
++
++            if (valModel) valModel.textContent = srv.default_model;
++
++            const isRunning = !!srv.running;
++            const isActive = (key === activeKey);
++
++            // Active Card Highlight & Badge
++            if (card) {
++                card.classList.toggle('is-active-provider', isActive);
++            }
++            if (badgeActive) {
++                badgeActive.style.display = isActive ? 'inline-flex' : 'none';
++                badgeActive.textContent = t.btn_already_active;
++            }
++
++            // Running Status Badge
++            if (badgeStatus) {
++                badgeStatus.className = isRunning ? 'badge-pill status-online' : 'badge-pill status-offline';
++                badgeStatus.textContent = isRunning 
++                    ? (currentLang === 'en' ? `🟢 Online (Port ${srv.port})` : `🟢 متصل ومستمع (${srv.port})`) 
++                    : (currentLang === 'en' ? '🔴 Stopped' : '🔴 متوقف');
++            }
++
++            // Active Switch Button
++            if (btnActive) {
++                if (isActive) {
++                    btnActive.className = 'btn btn-outline';
++                    btnActive.style.borderColor = 'var(--primary)';
++                    btnActive.style.background = '#e0f2fe';
++                    btnActive.style.color = 'var(--primary)';
++                    btnActive.innerHTML = `<i class="ph-fill ph-star"></i> <span>${t.btn_already_active}</span>`;
++                    btnActive.disabled = true;
++                } else {
++                    btnActive.className = 'btn btn-outline';
++                    btnActive.style.borderColor = '';
++                    btnActive.style.background = '';
++                    btnActive.style.color = '';
++                    btnActive.innerHTML = `<i class="ph-bold ph-check"></i> <span>${t.btn_set_as_active}</span>`;
++                    btnActive.disabled = false;
++                }
++            }
++
++            // Toggle Run / Stop Button
++            if (btnToggle) {
++                if (isRunning) {
++                    btnToggle.className = 'btn btn-outline-secondary text-danger';
++                    btnToggle.innerHTML = `<i class="ph-bold ph-stop"></i> <span>${t.btn_stop_instance}</span>`;
++                    btnToggle.onclick = () => toggleServerInstance(key, false);
++                } else {
++                    btnToggle.className = 'btn btn-primary';
++                    btnToggle.innerHTML = `<i class="ph-bold ph-play"></i> <span>${t.btn_start_instance}</span>`;
++                    btnToggle.onclick = () => toggleServerInstance(key, true);
++                }
++            }
++        });
++    } catch (e) {
++        console.error('Failed to load servers UI:', e);
++    }
++}
++
++async function toggleServerInstance(serverKey, startIt) {
++    const t = I18N[currentLang] || I18N.ar;
++    const btn = document.getElementById(`btn-toggle-${serverKey}`);
++    if (btn) {
++        btn.disabled = true;
++        btn.innerHTML = `<i class="ph-fill ph-spinner-gap spinner"></i> <span>${currentLang === 'en' ? 'Processing...' : 'جاري المعالجة...'}</span>`;
++    }
++
++    try {
++        let res;
++        if (startIt) {
++            showToast(currentLang === 'en' ? `Starting ${serverKey}...` : `جاري تشغيل سيرفر ${serverKey}...`, 'success');
++            res = await window.pywebview.api.start_server_instance(serverKey);
++        } else {
++            showToast(currentLang === 'en' ? `Stopping ${serverKey}...` : `جاري إيقاف سيرفر ${serverKey}...`, 'success');
++            res = await window.pywebview.api.stop_server_instance(serverKey);
++        }
++
++        if (res.success) {
++            showToast(res.message || (currentLang === 'en' ? 'Operation successful' : 'تمت العملية بنجاح'), 'success');
++        } else {
++            showToast((currentLang === 'en' ? 'Error: ' : 'خطأ: ') + (res.error || 'Failed'), 'error');
++        }
++    } catch (e) {
++        showToast(currentLang === 'en' ? 'Connection error' : 'حدث خطأ في الاتصال', 'error');
++        console.error(e);
++    } finally {
++        await loadServersUI();
++        await updateServerStatus();
++    }
++}
++
++async function setActiveServer(serverKey) {
++    const t = I18N[currentLang] || I18N.ar;
++    try {
++        const res = await window.pywebview.api.set_active_ai_server(serverKey);
++        if (res.success) {
++            const srvName = serverKey === 'gaistudio' ? 'Google AI Studio (Port 8001)' : 'ChatGPT (Port 8000)';
++            showToast(currentLang === 'en' ? `Activated ${srvName} for matching!` : `تم تعيين ${srvName} كمزود نشط لعمليات المطابقة بنجاح!`, 'success');
++            await loadServersUI();
++            await loadSettings();
++            await updateServerStatus();
++        } else {
++            showToast((currentLang === 'en' ? 'Activation failed: ' : 'فشل التفعيل: ') + res.error, 'error');
++        }
++    } catch (e) {
++        showToast(currentLang === 'en' ? 'Connection error' : 'خطأ في الاتصال', 'error');
++        console.error(e);
++    }
++}
++
++async function testServerInstance(serverKey) {
++    const t = I18N[currentLang] || I18N.ar;
++    const btn = document.getElementById(`btn-test-${serverKey}`);
++    const originalHtml = btn ? btn.innerHTML : '';
++    const outputEl = document.getElementById('server-test-output');
++    
++    if (btn) {
++        btn.disabled = true;
++        btn.innerHTML = `<i class="ph-fill ph-spinner-gap spinner"></i> <span>${t.server_testing || 'Testing...'}</span>`;
++    }
++
++    const timestamp = new Date().toLocaleTimeString();
++    if (outputEl) {
++        outputEl.innerText = `[${timestamp}] Initiating live ping test to server instance '${serverKey}'...\nConnecting to endpoint and measuring latency... Please wait.\n`;
++    }
++
++    try {
++        const res = await window.pywebview.api.test_server_instance(serverKey);
++        const doneTime = new Date().toLocaleTimeString();
++        if (res.success) {
++            const report = `[${doneTime}] ✅ SUCCESS: Server '${res.name}' responded successfully!\n` +
++                `--------------------------------------------------\n` +
++                `• Health Status : HTTP 200 OK\n` +
++                `• Response Time : ${res.latency} seconds\n` +
++                `• Gateway Info  : ${res.health?.gateway || 'MSEMAX Gateway'}\n` +
++                `• Default Model : ${res.health?.default_model || res.default_model}\n` +
++                `• Test AI Reply : "${res.reply}"\n` +
++                `--------------------------------------------------\n` +
++                `✓ This server is 100% operational and ready to process shortage matching batches.`;
++            if (outputEl) outputEl.innerText = report;
++            showToast(currentLang === 'en' ? `Ping success! Latency: ${res.latency}s` : `تم الاتصال بنجاح! زمن الاستجابة: ${res.latency} ثانية`, 'success');
++        } else {
++            const failReport = `[${doneTime}] ❌ FAILED: Server '${serverKey}' test failed!\n` +
++                `--------------------------------------------------\n` +
++                `• Error Details : ${res.error}\n` +
++                `--------------------------------------------------\n` +
++                `💡 Suggestion: Ensure the server is started and that port ${res.port || '8000/8001'} is listening.`;
++            if (outputEl) outputEl.innerText = failReport;
++            showToast((currentLang === 'en' ? 'Ping failed: ' : 'فشل اختبار الاتصال: ') + res.error, 'error');
++        }
++    } catch (e) {
++        if (outputEl) outputEl.innerText += `\n❌ Unexpected client error during test: ${e.message}`;
++        showToast(currentLang === 'en' ? 'Test error' : 'حدث خطأ أثناء الاختبار', 'error');
++    } finally {
++        if (btn) {
++            btn.disabled = false;
++            btn.innerHTML = originalHtml;
++        }
++        await loadServersUI();
++    }
++}
++
++async function openServerSession(serverKey) {
++    const t = I18N[currentLang] || I18N.ar;
++    try {
++        showToast(currentLang === 'en' ? `Opening login session for ${serverKey}...` : `جاري فتح متصفح تسجيل الدخول لسيرفر ${serverKey}...`, 'success');
++        const res = await window.pywebview.api.run_server_session(serverKey);
++        if (res.success) {
++            showToast(currentLang === 'en' ? 'Browser session window opened' : 'تم فتح نافذة المتصفح لتسجيل الدخول بنجاح', 'success');
++        } else {
++            showToast((currentLang === 'en' ? 'Session error: ' : 'خطأ في فتح الجلسة: ') + res.error, 'error');
++        }
++    } catch (e) {
++        showToast(currentLang === 'en' ? 'Error opening session' : 'حدث خطأ أثناء فتح الجلسة', 'error');
++    }
++}
++
++function clearServerTestLog() {
++    const outputEl = document.getElementById('server-test-output');
++    const t = I18N[currentLang] || I18N.ar;
++    if (outputEl) {
++        outputEl.innerText = t.test_panel_empty || 'اضغط على زر "اختبار الاتصال السريع" في أي سيرفر لقياس زمن الاستجابة والتأكد من جاهزيته...';
++    }
++}
+     </script>
+     <script>
+         // Override showScreen to handle active states on sidebar
+@@ -2953,6 +2953,8 @@
+                 resetNewProcessForm();
+             } else if (screenId === 'screen-logs' || screenId === 'screen-settings') {
+                 loadLogs();
++            } else if (screenId === 'screen-servers') {
++                loadServersUI();
+             }
+         };
+         // Auto select first nav item and initialize language
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

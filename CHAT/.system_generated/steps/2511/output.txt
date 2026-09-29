@@ -1,0 +1,39 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -495,6 +495,33 @@
+         except Exception as e:
+             return {"success": False, "error": str(e)}
+ 
++    def rerun_process(self, process_id: str) -> dict:
++        proc = self._db.get_process(process_id)
++        if not proc:
++            return {"success": False, "error": "العملية غير موجودة"}
++        
++        proc_dir = Path("data") / "processes" / process_id
++        shortage_dir = proc_dir / "input_shortages"
++        warehouse_dir = proc_dir / "input_warehouses"
++        
++        # Collect original input files
++        shortage_paths = [str(f) for f in shortage_dir.glob("*") if f.is_file() and not f.name.endswith(".json")]
++        warehouse_paths = [str(f) for f in warehouse_dir.glob("*") if f.is_file() and not f.name.endswith(".json")]
++        
++        if not shortage_paths or not warehouse_paths:
++            return {"success": False, "error": "ملفات العملية غير موجودة في المجلد لإعادة تشغيلها"}
++            
++        self._db.update_process(process_id, status='processing')
++        self.add_log(f"--- Starting Re-run for Process [{process_id}] ---")
++        
++        t = threading.Thread(
++            target=self._run_pipeline_thread,
++            args=(process_id, shortage_paths, warehouse_paths),
++            daemon=True
++        )
++        t.start()
++        return {"success": True, "process_id": process_id}
++
+     def get_history(self) -> str:
+         return json.dumps(self._db.get_all_processes())
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

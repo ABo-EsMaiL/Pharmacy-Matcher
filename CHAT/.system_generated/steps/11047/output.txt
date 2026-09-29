@@ -1,0 +1,59 @@
+
+The command exited with code 0.
+Output:
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy-vision
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         9/25/2026   7:47 PM                data                                                                 
+d-----         9/25/2026   4:42 PM                desktop_app                                                          
+d-----         9/24/2026   3:04 PM                dist_production                                                      
+d-----         9/22/2026  12:56 AM                output                                                               
+d-----         9/25/2026   6:05 PM                scratch                                                              
+d-----         9/24/2026   3:04 PM                scripts                                                              
+d-----         9/25/2026   4:42 PM                src                                                                  
+-a----         9/21/2026   6:48 PM            107 .env                                                                 
+-a----         9/21/2026   6:48 PM             75 .env.example                                                         
+-a----         9/21/2026   1:46 PM            306 .gitignore                                                           
+-a----         9/22/2026   3:11 PM          10985 build_perfect_benchmark.py                                           
+-a----         9/21/2026   6:24 PM          71465 Check_out_this_chat.md                                               
+-a----         9/25/2026   4:35 PM           2720 fast_main.py                                                         
+-a----         9/22/2026  12:56 AM           2962 finalize.py                                                          
+-a----         9/22/2026   2:40 PM          10928 generate_test_file.py                                                
+-a----         9/21/2026   6:59 PM           3067 main.py                                                              
+-a----         9/22/2026   2:37 PM             71 powershell.cmd                                                       
+-a----         9/22/2026   3:14 PM            565 print_audit_dist.py                                                  
+-a----         9/22/2026   4:30 AM            128 requirements.txt                                                     
+-a----         9/25/2026   4:59 PM            688 run.bat                                                              
+-a----         9/25/2026   4:59 PM            371 run_conda.bat                                                        
+-a----         9/22/2026   2:57 PM           1010 scratch_analyze_not_found.py                                         
+-a----         9/23/2026   7:24 PM          18654 scratch_auto_matches.txt                                             
+-a----         9/22/2026   2:39 PM           8420 scratch_build_benchmark.py                                           
+-a----         9/23/2026   6:51 PM          13048 scratch_cat.txt                                                      
+-a----         9/22/2026   3:06 PM            550 scratch_check_dups.py                                                
+-a----         9/22/2026   3:13 PM           2032 scratch_check_missing_salam.py                                       
+-a----         9/22/2026   3:23 PM            296 scratch_check_proc003_files.py                                       
+-a----         9/22/2026   3:06 PM            507 scratch_check_rows.py                                                
+-a----         9/23/2026   6:50 PM          23921 scratch_diffs.txt                                                    
+-a----         9/22/2026   3:11 PM           1583 scratch_find_10_unmatched.py                                         
+-a----         9/22/2026   3:07 PM           1312 scratch_find_exact_rows.py                                           
+-a----         9/22/2026   3:13 PM            636 scratch_find_salam_missing.py                                        
+-a----         9/22/2026   3:20 PM            556 scratch_fix_db.py                                                    
+-a----         9/22/2026   2:55 PM            842 scratch_inspect_proc003.py                                           
+-a----         9/23/2026   6:52 PM          14620 scratch_p8_matches_audit.txt                                         
+-a----         9/22/2026   3:23 PM            719 scratch_prepare_proc003.py                                           
+-a----         9/22/2026   3:23 PM            667 scratch_test_backend_rerun.py                                        
+-a----         9/22/2026   3:09 PM           1732 scratch_test_norm.py                                                 
+-a----         9/22/2026   3:11 PM           2203 scratch_test_run.py                                                  
+-a----         9/22/2026   2:56 PM           1667 scratch_test_search_amr.py                                           
+-a----         9/22/2026   1:20 AM           2934 setup.bat                                                            
+-a----         9/25/2026   4:42 PM          13223 SYSTEM_ARCHITECTURE_GRAPH.md                                         
+-a----         9/22/2026   3:51 PM           7742 test_formula.xlsx                                                    
+-a----         9/22/2026  12:52 AM           3256 vba_macro.txt                                                        
+-a----         9/23/2026  10:47 PM              0 {classify_pair(r                                                     
+
+
+

@@ -1,0 +1,5 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":84,"LineContent":"    m2 = re.search(r'\\b(1000|875|625|500|400|300|250|200|150|125|100|80|75|50|40|25|20|15|10|5|2.5|1)\\b', text)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":362,"LineContent":"        # 3. Process via LLM in large optimal chunks (75 items per message)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":364,"LineContent":"            batch_size = 75"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":366,"LineContent":"            print(f\"  -\u003e Sending {len(llm_cases)} ambiguous items to Local API (MSEMAX) in {len(batches)} large batch(es) (Max ~75 items/msg)...\")"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":566,"LineContent":"        api_key = getattr(self.config, 'local_api_key', '[REDACTED_CREDENTIAL]')"}

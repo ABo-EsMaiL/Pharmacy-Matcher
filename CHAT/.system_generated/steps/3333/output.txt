@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Markdown length: 84352 characters
+Total rows found: 1072
+Header cells: ['رقم الصنف', 'اسم الصنف', 'السعر', 'خصم اساسي']
+Name column index detected: 0
+Extracted 0 items from Markdown table!
+Sample items:
+

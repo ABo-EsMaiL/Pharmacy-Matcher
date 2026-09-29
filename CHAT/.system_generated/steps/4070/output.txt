@@ -1,0 +1,19 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\scratch\test_batch3_cure.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -37,7 +37,12 @@
+ if json_match:
+     clean = json_match.group(0)
+ 
+-ans = json.loads(clean)
++print("RAW CONTENT:", content[:300])
++try:
++    ans = json.loads(clean)
++except Exception as e:
++    print("Clean was:", clean[:300])
++    raise
+ results = ans.get("results", [])
+ print(f"Total results returned: {len(results)}")
+ for r in results:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

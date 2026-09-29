@@ -1,0 +1,63 @@
+
+The command exited with code 0.
+Output:
+<truncated 58 lines>
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py:497: print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} failed before start ({e}). Re
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py:500: print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} timed out after model turn st
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py:503: print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} error: {e}")
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py:508: print(f"      [*] Sending Batch {idx + 1}/{len(batches)} ({len(batch)} items)...")
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py:509: chunk_results = process_chunk(batch, str(idx + 1))
+[75] d:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py:566: api_key = getattr(self.config, 'local_api_key', 'aa9c8401b18a31e86ec6800779760a317655610f2e5dee3bd60
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py:577: "X-Batch-Size": str(case_count),
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\match\coordinator.py:150: llm_results = self._llm_batch_match(remaining, warehouse_items, warehouse_name)
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\match\coordinator.py:178: batch_size = 50
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\match\coordinator.py:196: total_batches = (len(cases) + batch_size - 1) // batch_size
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\match\coordinator.py:199: start = batch_idx * batch_size
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\match\coordinator.py:200: end = min(start + batch_size, len(cases))
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\match\gemini_match.py:200: batch_size = 10
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\match\gemini_match.py:203: for batch_start in range(0, len(shortage_items), batch_size):
+[BATCH] d:\AI_Engineer\Pharmacy-agy\dist_production\src\match\gemini_match.py:204: batch = shortage_items[batch_start : batch_start + batch_size]
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\audit_gemini_chat.py:72: 5 | لاكتيز 15 ملل نقط 750مجم | لاكتيز ٧٥٠ نقط ١٥ ملى جديد | 130.00 | 29%
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\audit_gemini_chat.py:77: 10 | بران كبسول س ج | بران كبسول جديد ميباكو | 75.00 | 32%
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\audit_gemini_chat.py:125: 4 | لاكتيز 15 ملل نقط 750مجم | لاكتيز نقط بالفم ١٥ مل ١٩٠ج | 190.00 | 32%
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\audit_gemini_chat.py:132: 11 | امبوفير 5امبول س ج | امبوفير امبول | 275.00 | 23%
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\audit_gemini_chat.py:151: 30 | بران كبسول س ج | بران ك ميباكو | 75.00 | 32%
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\audit_gemini_chat.py:200: if best_score < 75:
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\check_cure_gemini_items.py:29: "لاكتيز 15 ملل نقط 750مجم",
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\find_levanox_hadaba.py:45: batch_num = (i // 75) + 1
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\find_levanox_hadaba.py:46: pos_in_batch = i % 75
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\find_parofen_batch.py:53: batch_num = (i // 75) + 1
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\find_parofen_batch.py:54: pos_in_batch = i % 75
+[BATCH] d:\AI_Engineer\Pharmacy-agy\scratch\test_batch3_cure.py:9: print(f"Batch 3 has {len(batch3)} items.")
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\test_batch3_cure.py:25: api_key = "[REDACTED_CREDENTIAL]"
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\test_levanox_llm.py:24: api_key = "[REDACTED_CREDENTIAL]"
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\test_levanox_search.py:9: cache_file = Path("data/processes/data/.unstructured_cache/a4f524fd75cf223f927a228ad87319f0_extract.
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\test_llm_parofen.py:24: api_key = "[REDACTED_CREDENTIAL]"
+[75] d:\AI_Engineer\Pharmacy-agy\scratch\test_small_parofen.py:21: api_key = "[REDACTED_CREDENTIAL]"
+[75] d:\AI_Engineer\Pharmacy-agy\scripts\package_production.py:91: settings_json.write_text('{\n  "local_api_url": "http://127.0.0.1:8000/v1/chat/completions",\n  "gem
+[75] d:\AI_Engineer\Pharmacy-agy\src\config.py:25: local_api_key: str = "[REDACTED_CREDENTIAL]"
+[75] d:\AI_Engineer\Pharmacy-agy\src\config.py:30: match_threshold: float = 0.75
+[75] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:84: m2 = re.search(r'\b(1000|875|625|500|400|300|250|200|150|125|100|80|75|50|40|25|20|15|10|5|2.5|1)\b'
+[75] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:362: # 3. Process via LLM in large optimal chunks (75 items per message)
+[75] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:364: batch_size = 75
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:365: batches = [llm_cases[i:i + batch_size] for i in range(0, len(llm_cases), batch_size)]
+[75] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:366: print(f"  -> Sending {len(llm_cases)} ambiguous items to Local API (MSEMAX) in {len(batches)} large 
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:480: print(f"      [✓] Batch {chunk_name} ({len(cases_chunk)} items) done: {matched_in_chunk} matched, {r
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:490: print(f"      [!] 413 Payload too large on batch {chunk_name}. Adaptively splitting into ({mid} + {l
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:494: print(f"      [!] HTTP 429 Rate Limit on batch {chunk_name}. Waiting {wait_sec}s before retry ({atte
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:497: print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} failed before start ({e}). Re
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:500: print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} timed out after model turn st
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:503: print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} error: {e}")
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:508: print(f"      [*] Sending Batch {idx + 1}/{len(batches)} ({len(batch)} items)...")
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:509: chunk_results = process_chunk(batch, str(idx + 1))
+[75] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:566: api_key = getattr(self.config, 'local_api_key', 'aa9c8401b18a31e86ec6800779760a317655610f2e5dee3bd60
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py:577: "X-Batch-Size": str(case_count),
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\match\coordinator.py:150: llm_results = self._llm_batch_match(remaining, warehouse_items, warehouse_name)
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\match\coordinator.py:178: batch_size = 50
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\match\coordinator.py:196: total_batches = (len(cases) + batch_size - 1) // batch_size
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\match\coordinator.py:199: start = batch_idx * batch_size
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\match\coordinator.py:200: end = min(start + batch_size, len(cases))
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\match\gemini_match.py:200: batch_size = 10
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\match\gemini_match.py:203: for batch_start in range(0, len(shortage_items), batch_size):
+[BATCH] d:\AI_Engineer\Pharmacy-agy\src\match\gemini_match.py:204: batch = shortage_items[batch_start : batch_start + batch_size]
+

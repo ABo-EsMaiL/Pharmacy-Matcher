@@ -1,0 +1,14 @@
+
+The command exited with code 0.
+Output:
+Line 2713: // Simulate process_complete event
+Line 2715: window.dispatchEvent(new CustomEvent('process_complete', {
+Line 2783: window.addEventListener('process_complete', (e) => {
+Line 2811: loadResults(data.stats);
+Line 2834: function loadResults(stats) {
+Line 2931: loadResults(result.new_stats);
+Line 2970: card.onclick = () => { if(item.status !== 'processing' && item.status !== 'queued') viewProcess(item
+Line 2993: : `<button class="btn btn-primary" onclick="viewProcess('${item.id}')"><i class="ph-fill ph-eye"></i
+Line 3045: async function viewProcess(processId) {
+Line 3058: loadResults(stats);
+

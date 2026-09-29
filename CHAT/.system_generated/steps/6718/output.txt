@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:52:DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "gemini-3.8-flash").strip()
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:513:    logger.info(f"Default Model: {DEFAULT_MODEL} | Thinking: 
+{THINKING_MODE}")
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:573:    model: str = DEFAULT_MODEL
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:648:    model_name = chat_request.model or DEFAULT_MODEL
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:740:    model_name = body.get("model", DEFAULT_MODEL)
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:888:    model_name = body.get("model", DEFAULT_MODEL)
+D:\AI_Engineer\MSEMAX-GAIStudio\app.py:926:        "default_model": DEFAULT_MODEL,
+
+
+

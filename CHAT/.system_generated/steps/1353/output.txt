@@ -1,0 +1,49 @@
+
+The command exited with code 0.
+Output:
+--- from_document ---
+    def from_document(
+        self,
+        *,
+        input: FileInput | None = None,
+        file_id: str | None = None,
+        filename: str | None = None,
+        schema: dict[str, Any],
+        prompt: str | None = None,
+        profile: str | None = None,
+        wait_seconds: int | None = None,
+    ) -> Any:
+        """Extract directly from a document, in one call.
+
+        The multipart variant of POST /api/v2/extract. Reconstructed over the
+        generated transport because openapi-generator emits only the JSON body
+        for this path — see this module's docstring.
+
+        Takes a document OR the id of one already uploaded, exactly as
+        parse.run does: ExtractDocumentRequest declares both `input` and
+        `file_id`, so requiring the bytes would have made an already-uploaded
+        file unusable here and forced a needless re-upload. `filename` only
+        applies to the `file_id` path — a raw `input` upload already carries
+        its own name.
+        """
+        if (input is None) == (file_id is None):
+            raise ValueError("pass exactly one of input or file_id")
+        if input is not None and filename is not None:
+            raise ValueError("filename only applies to file_id; input already carries its name")
+
+        return post_multipart(
+            self._client,
+            path="/api/v2/extract",
+            file_field="input",
+            file_value=None if input is None else as_file_part(input),
+            fields={
+                "file_id": file_id,
+                "filename": filename,
+                "schema": json.dumps(schema),
+                "prompt": prompt,
+                "profile": profile,
+            },
+            wait_seconds=wait_seconds,
+        )
+
+

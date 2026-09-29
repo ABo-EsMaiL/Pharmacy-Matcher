@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_queue.py", line 11, in <module>
+    from desktop_app.database import Database
+ImportError: cannot import name 'Database' from 'desktop_app.database' (d:\AI_Engineer\Pharmacy-agy\desktop_app\database.py)
+

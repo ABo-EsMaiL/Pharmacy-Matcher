@@ -1,0 +1,2 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":332,"LineContent":"            self.add_log(\"[PROCESS] Config loaded.\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2587,"LineContent":"        document.addEventListener(\"DOMContentLoaded\", () =\u003e {"}

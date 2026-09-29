@@ -1,0 +1,14 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+ابيكوتيل vs البوتيل -> PASSED
+فيوسيدل vs فيوسيدين -> PASSED
+جرانتريل vs جرانتيل -> PASSED
+امبوفير vs اميفير -> PASSED
+ميبو vs ميو -> PASSED
+ديباكين vs ديبيكان -> PASSED
+بنادول vs البنادول -> PASSED
+كتافلام vs الكتفلام -> PASSED
+

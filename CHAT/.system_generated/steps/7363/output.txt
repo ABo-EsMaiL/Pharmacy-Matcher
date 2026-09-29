@@ -1,0 +1,19 @@
+
+The command exited with code 0.
+Output:
+URL: https://aistudio.google.com/welcome
+Title: Google AI Studio
+Body snippet: 'Pricing\nDocumentation\nCase studies\nlogin\nGet started\nBuild with Google AI Studio\n\nGo from prompt to production with Gemini, Veo, Nano Banana, and more\n\nCreate a massive multiplayer first-person laser ta|\n\nlogin\nGet started\nExperiment with the latest models\nauto_awesome\nGemini 3\n\nState-of-the-art reasoning\n\nimage\nNano Banana\n\nHigh-quality image generation\n\nmovie\nVeo\n\nHigh-fidelity video generation\n'
+Found 63 buttons/links:
+  btn: '', href: '/welcome'
+  btn: 'Pricing', href: '/docs/pricing'
+  btn: 'Documentation', href: '/docs'
+  btn: 'Case studies', href: '/case-studies'
+  btn: 'login
+Get started', href: '/apps'
+  btn: 'menu', href: ''
+  btn: 'Pricing', href: '/docs/pricing'
+  btn: 'Documentation', href: '/docs'
+  btn: 'Case studies', href: '/case-studies'
+  btn: 'login  Get started', href: '/apps'
+

@@ -1,0 +1,22 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\server_manager.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -344,11 +344,13 @@
+         c_conf["dir"] = c_dir
+         self.servers["chatgpt"] = ServerInstance("chatgpt", c_conf, logger_callback=self.logger)
+ 
+-        # 2. Google AI Studio Server configuration
++        # 2. Google AI Studio Server configuration (strictly MSEMAX-GAIStudio-vision)
+         default_g_dir = DEFAULT_SERVERS["gaistudio"]["default_dir"]
+         explicit_g_dir = settings.get("msemax_gaistudio_dir")
+-        if not explicit_g_dir and settings.get("msemax_dir") and "gaistudio" in settings.get("msemax_dir").lower():
+-            explicit_g_dir = settings.get("msemax_dir")
++        if not explicit_g_dir:
++            # If msemax_dir is set and explicitly contains vision, use it; otherwise strictly default_g_dir
++            if settings.get("msemax_dir") and "vision" in settings.get("msemax_dir").lower():
++                explicit_g_dir = settings.get("msemax_dir")
+         g_dir = explicit_g_dir or default_g_dir
+         g_conf = dict(DEFAULT_SERVERS["gaistudio"])
+         g_conf["dir"] = g_dir
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

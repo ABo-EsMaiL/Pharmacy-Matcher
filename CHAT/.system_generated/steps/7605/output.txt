@@ -1,0 +1,28 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -463,7 +463,12 @@
+         initial_model_count = 0
+         try:
+             initial_model_count = await self.page.evaluate('''() => {
+-                const allTurns = Array.from(document.querySelectorAll('ms-chat-turn, .chat-turn-container, .chat-turn, [data-turn-role]'));
++                let allTurns = Array.from(document.querySelectorAll('ms-chat-turn'));
++                if (allTurns.length === 0) {
++                    allTurns = Array.from(document.querySelectorAll('.chat-turn-container, .chat-turn, [data-turn-role]')).filter(el => {
++                        return !el.parentElement.closest('.chat-turn-container, .chat-turn, [data-turn-role]');
++                    });
++                }
+                 const modelTurns = allTurns.filter(t => {
+                     const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
+                     const cls = (t.className || '').toLowerCase();
+@@ -471,7 +471,7 @@
+                     if (isUser) return false;
+                     return role === 'model' || cls.includes('model') || author.includes('model') || Boolean(t.querySelector('ms-thought-chunk, .thought-activity-host, ms-prompt-chunk, .model-prompt-container'));
+                 });
+-                return modelTurns.length > 0 ? modelTurns.length : document.querySelectorAll('.chat-turn-container.model, [data-turn-role="Model"], .model-prompt-container').length;
++                return modelTurns.length;
+             }''')
+         except Exception as e:
+             logger.warning(f"Note inspecting initial turns: {e}")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

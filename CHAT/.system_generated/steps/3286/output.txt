@@ -1,0 +1,14 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py","LineNumber":18,"LineContent":"    gemini_api_key: str"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py","LineNumber":29,"LineContent":"    gemini_model: str = \"gemini-3.6-flash\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py","LineNumber":56,"LineContent":"    gemini_key = os.getenv(\"GEMINI_API_KEY\", \"\").strip()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py","LineNumber":62,"LineContent":"    if not gemini_key or gemini_key == \"your_key_here\":"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py","LineNumber":74,"LineContent":"        gemini_api_key=gemini_key,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\file_handler.py","LineNumber":21,"LineContent":"    gemini_api_key: str | None = None,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\file_handler.py","LineNumber":40,"LineContent":"            items = _process_pdf_file(filepath, api_key, base_url, gemini_api_key, profile)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\file_handler.py","LineNumber":70,"LineContent":"    gemini_api_key: str | None = None,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\file_handler.py","LineNumber":79,"LineContent":"    items = extract_items_from_pdf(filepath, api_key, base_url, gemini_api_key, profile=profile)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":24,"LineContent":"    gemini_api_key: str = None,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":76,"LineContent":"def match_with_gemini("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":80,"LineContent":"    model: str = \"gemini-2.5-flash\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":168,"LineContent":"def batch_match_with_gemini("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":172,"LineContent":"    model: str = \"gemini-2.5-flash\","}

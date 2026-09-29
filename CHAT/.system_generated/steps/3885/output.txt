@@ -1,0 +1,14 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-3883
+Status: DONE
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-3883.log
+Log output:
+<truncated 39 lines>
+فيت' | Form: 'injection' | Sim: 30.000000000000004% | Form match: False
+Cand: 'هيرو 111 عادى جديد -12ب لا يفرط' | Brand: 'هيرو عادى لا يفرط' | Form: 'None' | Sim: 25.0% | Form match: True
+Cand: 'هيرو 222 نيوتر ادينس 384' | Brand: 'هيرو نيوتر ادينس' | Form: 'None' | Sim: 26.086956521739136% | Form match: True
+Cand: 'هيرو اتش ايه جديد 499' | Brand: 'هيرو اتش ايه' | Form: 'None' | Sim: 21.052631578947366% | Form match: True
+Cand: 'هيرو اف ال جديدج ك 12الافريط' | Brand: 'هيرو اف ال جديدج الافريط' | Form: 'None' | Sim: 25.806451612903224% | Form match: True
+Cand: 'هيرو ايه ار جديدد لايفرط' | Brand: 'هيرو ايه ار جديدد لايفرط' | Form: 'None' | Sim: 19.354838709677423% | Form match: True
+Cand: 'هيرو داجست 12لايفرط' | Brand: 'هيرو داجست لايفرط' | Form: 'None' | Sim: 25.0% | Form match: True
+
+Last progress: 2s ago

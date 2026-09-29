@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+Exposed: ['add_log', 'apply_reviews', 'delete_process', 'exit_app', 'get_history', 'get_logs', 'get_process_details', 'get_process_result', 'get_server_status', 'get_settings', 'on_closing', 'open_excel', 'open_file', 'open_folder', 'open_result_file', 'open_result_folder', 'restart_process', 'run_get_session', 'save_dropped_file', 'save_settings', 'select_directory', 'select_files', 'set_window', 'setup_msemax_requirements', 'start_process', 'start_server', 'stop_server']
+

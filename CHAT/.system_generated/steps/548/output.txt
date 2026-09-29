@@ -1,0 +1,33 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -198,6 +198,8 @@
+     overflow-y: auto;
+     overflow-x: hidden;
+     padding: 20px;
++    display: flex;
++    flex-direction: column;
+ }
+ 
+ .screen {
+@@ -204,4 +204,4 @@
+-    padding: 40px;
++    padding: 30px;
+     animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+     background: var(--bg-card);
+     border-radius: var(--radius-xl);
+@@ -208,8 +208,10 @@
+-    min-height: calc(100vh - 40px);
++    flex: 1;
++    overflow-y: auto;
+ }
+ 
+ .screen.active {
+-    display: block;
++    display: flex;
++    flex-direction: column;
+ }
+ 
+ @keyframes slideIn {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

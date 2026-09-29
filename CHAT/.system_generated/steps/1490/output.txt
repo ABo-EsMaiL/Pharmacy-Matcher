@@ -1,0 +1,23 @@
+
+The command exited with code 0.
+Output:
+[*] Step 1: Uploading test PDF: جملة العمروووو.pdf (58850 bytes)...
+[*] Initial response: Job ID=e4a69fdf-fa15-4778-8fe4-eb6358cecf9b, Status=queued, Elapsed=31.7s
+[*] Polling job e4a69fdf-fa15-4778-8fe4-eb6358cecf9b until completed...
+    -> Status at 37.0s: JobStatus.PROCESSING
+    -> Status at 42.4s: JobStatus.PROCESSING
+    -> Status at 47.9s: JobStatus.PROCESSING
+    -> Status at 53.8s: JobStatus.PROCESSING
+    -> Status at 59.6s: JobStatus.PROCESSING
+    -> Status at 65.2s: JobStatus.PROCESSING
+    -> Status at 71.5s: JobStatus.COMPLETED
+[+] Extraction complete! Total items extracted: 0
+[+] Sample items: []
+
+[*] Step 2: Testing smart remote lookup to verify re-upload avoidance...
+[+] SUCCESS! Found existing completed job e4a69fdf-fa15-4778-8fe4-eb6358cecf9b for جملة العمروووو.pdf
+[+] Retrieved data directly from server without re-upload!
+
+[*] Step 3: Cleaning up test job from server...
+[+] Cleaned up job e4a69fdf-fa15-4778-8fe4-eb6358cecf9b. Server is clean!
+

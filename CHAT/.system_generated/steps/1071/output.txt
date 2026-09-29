@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+  File "<string>", line 1
+    lines=open('d:/AI_Engineer/Pharmacy-agy/desktop_app/templates/index.html', encoding='utf-8').readlines(); idx=[i for i, l in enumerate(lines) if 'id=" screen-new\'
+                                                                                                                                                     ^
+SyntaxError: unterminated string literal (detected at line 1); perhaps you escaped the end quote?
+

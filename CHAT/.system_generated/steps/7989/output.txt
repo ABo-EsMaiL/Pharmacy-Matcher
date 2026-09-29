@@ -1,0 +1,9 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":364,"LineContent":"            batch_size = 75"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":365,"LineContent":"            batches = [llm_cases[i:i + batch_size] for i in range(0, len(llm_cases), batch_size)]"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py","LineNumber":178,"LineContent":"        batch_size = 50"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py","LineNumber":196,"LineContent":"        total_batches = (len(cases) + batch_size - 1) // batch_size"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py","LineNumber":199,"LineContent":"            start = batch_idx * batch_size"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py","LineNumber":200,"LineContent":"            end = min(start + batch_size, len(cases))"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":200,"LineContent":"    batch_size = 10"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":203,"LineContent":"    for batch_start in range(0, len(shortage_items), batch_size):"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py","LineNumber":204,"LineContent":"        batch = shortage_items[batch_start : batch_start + batch_size]"}

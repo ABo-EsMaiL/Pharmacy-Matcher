@@ -1,0 +1,49 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+[*] Processing PDF file: جملة العمروووو.pdf
+[+] Loaded 19 items from alongside JSON: جملة العمروووو.json
+Amr items (19):
+   افيرو كوكسبيب 90مجم-32ب
+   امبوفير حقن جديد
+   ايزوتريتينوين 10 مجم 3 شريط -28
+   ايزوتريتينوين 20م جديد -50
+   بانادول اكسترا 48 قرص-96ب
+   بانثينول كريم كبير سعر قديم باكو 25
+   ترايكوبافيت 100مجم 3شريط
+   رانسيف 500 مجم قرص جديد45
+   ستيميبولان 400مجم كبسول
+   كلبيكان 40مجم-84
+   لوفير 400 سعر جديد باكو 45
+   لوفير 800 سعر جديد-باكو25
+   ليفوفلو تافيت 750 فيال باكو 12 كرتونه 144
+   هيرو 111 عادى جديد -12ب لا يفرط
+   هيرو 222 نيوتر ادينس 384
+   هيرو اتش ايه جديد 499
+   هيرو اف ال جديدج ك 12الافريط
+   هيرو ايه ار جديدد لايفرط
+   هيرو داجست 12لايفرط
+
+Req: 'امبوفير 5امبول س ج' | Brand: 'امبوفير' | Form: 'None'
+Cand: 'افيرو كوكسبيب 90مجم-32ب' | Brand: 'افيرو كوكسبيب مجم-' | Form: 'None' | Sim: 31.999999999999996% | Form match: True
+Cand: 'امبوفير حقن جديد' | Brand: 'امبوفير' | Form: 'injection' | Sim: 100.0% | Form match: False
+Cand: 'ايزوتريتينوين 10 مجم 3 شريط -28' | Brand: 'ايزوتريتينوين' | Form: 'tablet' | Sim: 30.000000000000004% | Form match: False
+Cand: 'ايزوتريتينوين 20م جديد -50' | Brand: 'ايزوتريتينوين' | Form: 'None' | Sim: 30.000000000000004% | Form match: True
+Cand: 'بانادول اكسترا 48 قرص-96ب' | Brand: 'بانادول اكسترا قرص-' | Form: 'None' | Sim: 23.076923076923073% | Form match: True
+Cand: 'بانثينول كريم كبير سعر قديم باكو 25' | Brand: 'بانثينول' | Form: 'cream_ointment' | Sim: 26.66666666666667% | Form match: False
+Cand: 'ترايكوبافيت 100مجم 3شريط' | Brand: 'ترايكوبافيت' | Form: 'None' | Sim: 44.44444444444444% | Form match: True
+Cand: 'رانسيف 500 مجم قرص جديد45' | Brand: 'رانسيف' | Form: 'tablet' | Sim: 30.76923076923077% | Form match: False
+Cand: 'ستيميبولان 400مجم كبسول' | Brand: 'ستيميبولان' | Form: 'tablet' | Sim: 35.29411764705882% | Form match: False
+Cand: 'كلبيكان 40مجم-84' | Brand: 'كلبيكان مجم-' | Form: 'None' | Sim: 21.052631578947366% | Form match: True
+Cand: 'لوفير 400 سعر جديد باكو 45' | Brand: 'لوفير' | Form: 'None' | Sim: 66.66666666666667% | Form match: True
+Cand: 'لوفير 800 سعر جديد-باكو25' | Brand: 'لوفير جديد-باكو' | Form: 'None' | Sim: 36.36363636363637% | Form match: True
+Cand: 'ليفوفلو تافيت 750 فيال باكو 12 كرتونه 144' | Brand: 'ليفوفلو تافيت' | Form: 'injection' | Sim: 30.000000000000004% | Form match: False
+Cand: 'هيرو 111 عادى جديد -12ب لا يفرط' | Brand: 'هيرو عادى لا يفرط' | Form: 'None' | Sim: 25.0% | Form match: True
+Cand: 'هيرو 222 نيوتر ادينس 384' | Brand: 'هيرو نيوتر ادينس' | Form: 'None' | Sim: 26.086956521739136% | Form match: True
+Cand: 'هيرو اتش ايه جديد 499' | Brand: 'هيرو اتش ايه' | Form: 'None' | Sim: 21.052631578947366% | Form match: True
+Cand: 'هيرو اف ال جديدج ك 12الافريط' | Brand: 'هيرو اف ال جديدج الافريط' | Form: 'None' | Sim: 25.806451612903224% | Form match: True
+Cand: 'هيرو ايه ار جديدد لايفرط' | Brand: 'هيرو ايه ار جديدد لايفرط' | Form: 'None' | Sim: 19.354838709677423% | Form match: True
+Cand: 'هيرو داجست 12لايفرط' | Brand: 'هيرو داجست لايفرط' | Form: 'None' | Sim: 25.0% | Form match: True
+

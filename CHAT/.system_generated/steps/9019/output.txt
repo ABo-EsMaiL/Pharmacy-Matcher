@@ -1,0 +1,33 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_chatgpt_server.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -16,7 +16,8 @@
+     # Wait for server to bind
+     for i in range(10):
+         time.sleep(1)
+-        st = mgr.get_status("chatgpt")
++        srv = mgr.get_server("chatgpt")
++        st = srv.get_status() if srv else {}
+         print(f"Waiting {i+1}s... Running: {st.get('running')}")
+         if st.get("running"):
+             break
+@@ -23,6 +23,17 @@
++    import requests
++    try:
++        r = requests.get("http://127.0.0.1:8000/health", timeout=3)
++        print("Health status code:", r.status_code, "JSON:", r.json())
++    except Exception as e:
++        print("Health error:", e)
++
+     test_res = mgr.test("chatgpt")
+     print("Test connection result:", test_res)
+ 
++    # Clean stop
++    print("Stopping server...")
++    mgr.stop("chatgpt")
++
+ if __name__ == "__main__":
+     main()
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

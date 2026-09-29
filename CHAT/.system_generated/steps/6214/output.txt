@@ -1,0 +1,17 @@
+
+The command exited with code 0.
+Output:
+
+
+    Directory: D:\AI_Engineer
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         8/20/2026   4:26 PM                MSEMAX                                                               
+d-----          9/7/2026   7:51 AM                MSEMAX - Copy                                                        
+d-----         9/23/2026   5:49 PM                MSEMAX-AIStudio                                                      
+d-----         9/23/2026   5:01 PM                MSEMAX-GAIStudio                                                     
+
+
+

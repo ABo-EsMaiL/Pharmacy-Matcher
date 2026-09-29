@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+  File "<string>", line 1
+    import urllib.request, json; res = urllib.request.urlopen('http://127.0.0.1:9222/json').read(); tabs = json.loads(res); print('\n'.join(f'{t.get(" title\)}
+                                                                                                                                                     ^
+SyntaxError: unterminated string literal (detected at line 1)
+

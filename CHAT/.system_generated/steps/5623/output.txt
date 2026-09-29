@@ -1,0 +1,19 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_new_classifier.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -12,10 +12,11 @@
+ 
+ def get_strength_pattern(text: str) -> str | None:
+     text = norm_num(text.lower())
+-    m = re.search(r'(\d+(?:\.\d+)?)\s*(?:مجم|مج|جم|جرام|gm|mg|mcg|مكجم)', text)
++    m = re.search(r'(\d+(?:\.\d+)?)\s*(مجم|مج|جم|جرام|gm|mg|mcg|مكجم)', text)
+     if m:
+         val = m.group(1)
+-        if any(unit in m.group(0) for unit in ['جم', 'جرام', 'gm']):
++        unit = m.group(2)
++        if unit in ['جم', 'جرام', 'gm']:
+             try:
+                 val = str(float(val) * 1000)
+             except:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

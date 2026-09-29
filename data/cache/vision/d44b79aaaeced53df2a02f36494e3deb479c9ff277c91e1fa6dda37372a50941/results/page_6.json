@@ -1,0 +1,21 @@
+{
+  "page": 6,
+  "items": [
+    {
+      "item_name_raw": "يونيتيرين ٢٥مجم/يونى فارما",
+      "trade_name": "يونيتيرين",
+      "strength": "٢٥مجم",
+      "form": "",
+      "source_page": 6,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "يونيفرسال ١٠٠كريم",
+      "trade_name": "يونيفرسال",
+      "strength": "١٠٠",
+      "form": "كريم",
+      "source_page": 6,
+      "source_file": "السلام شبين.pdf"
+    }
+  ]
+}

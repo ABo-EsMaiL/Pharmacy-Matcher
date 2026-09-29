@@ -1,0 +1,17 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+[C1] NO_MATCH   | Shortage: 'اولفن100مجم اس ار10كبسول س ج' vs Cand: 'البيران اس ار اقراص / باكت 10'
+[C2] NO_MATCH   | Shortage: 'زانوجليد4/30اقراص س ج' vs Cand: 'زانوچيلد 4 مج اقراص/باكت 60'
+[C3] NO_MATCH   | Shortage: 'امبوفير 5امبول س ج' vs Cand: 'اميفير امبول'
+[C4] NO_MATCH   | Shortage: 'ديباكين كرونو500مجم اقراص' vs Cand: 'ديبيكان اقراص/العامرية'
+[C5] NO_MATCH   | Shortage: 'جرانتريل 3مجم 6 امبول س ج' vs Cand: 'جرانتيل امبول مجم تاريخ بعيد'
+[C6] MATCH      | Shortage: 'دوليبران1000مجم 15قرص' vs Cand: 'دوليبيران ١جم، ٦٠قرص'
+[C7] MATCH      | Shortage: 'باروفين 30قرص س ج' vs Cand: 'باروفين ٢٠ قرص'
+[C8] MATCH      | Shortage: 'افيروكوكسيب90مجم20قرص س ج' vs Cand: 'افيرو كوكسبيب 90مجم-32ب'
+[C9] MATCH      | Shortage: 'نيوكاربون30قرص س ج' vs Cand: 'نیوکاربن ۳۰کپسول'
+[C10] MATCH      | Shortage: 'ليفانوكس2شريط س ج' vs Cand: 'ليفانوكس كبسول/باكت 200'
+[C11] REVIEW     | Shortage: 'لاكتيز 15 ملل نقط 750مجم' vs Cand: 'لاكتيز نقط بالفم ٥ مل ١٩٠'
+

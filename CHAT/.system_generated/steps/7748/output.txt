@@ -1,0 +1,101 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -615,19 +615,30 @@
+                 return { text: "", is_running: isRunning, is_done: false, has_error: false, new_turn_started: isRunning, model_count: 0 };
+             }
+ 
+-            // Count model turns
+-            const modelTurns = allTurns.filter(t => {
+-                const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
+-                const cls = (t.getAttribute('class') || '').toLowerCase();
+-                const author = (t.querySelector('.author-label, .turn-author, .role-label')?.innerText || '').toLowerCase();
+-                const hasUserChild = t.querySelector('[data-turn-role="User"], .user-prompt-container, .user') !== null;
+-                const isUser = role === 'user' || cls.includes('user') || author.includes('user') || hasUserChild;
+-                if (isUser) return false;
+-                return role === 'model' || cls.includes('model') || author.includes('model') || Boolean(t.querySelector('ms-thought-chunk, .thought-activity-host, ms-prompt-chunk, .model-prompt-container'));
+-            });
+-
++            // Count model turns using strict model turn vs user turn discriminators
++            const isUserTurn = (t) => {
++                const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
++                const cls = (t.className || (t.getAttribute('class') || '')).toLowerCase();
++                const author = (t.querySelector('.author-label, .turn-author, .role-label, ms-author-label')?.innerText || '').toLowerCase();
++                const hasUserElem = t.querySelector('[data-turn-role="User"], .user-prompt-container, .user, ms-prompt-chunk, textarea') !== null;
++                const hasModelContent = t.querySelector('ms-thought-chunk, .thought-activity-host, ms-text-chunk, ms-code-block, ms-code-chunk, .model-prompt-container') !== null;
++                if (role === 'user' || cls.includes('user') || author.includes('user') || author.includes('you')) return true;
++                if (hasUserElem && !hasModelContent) return true;
++                return false;
++            };
++
++            const isModelTurn = (t) => {
++                if (isUserTurn(t)) return false;
++                const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
++                const cls = (t.className || (t.getAttribute('class') || '')).toLowerCase();
++                const author = (t.querySelector('.author-label, .turn-author, .role-label, ms-author-label')?.innerText || '').toLowerCase();
++                if (role === 'model' || cls.includes('model') || author.includes('model') || author.includes('gemini')) return true;
++                return Boolean(t.querySelector('ms-thought-chunk, .thought-activity-host, ms-text-chunk, ms-code-block, ms-code-chunk, .model-prompt-container, .response-container'));
++            };
++
++            const modelTurns = allTurns.filter(isModelTurn);
+             const currentModelCount = modelTurns.length;
+-            const newTurnStarted = (currentModelCount > initialCount) || isRunning;
++            const newModelTurnStarted = (currentModelCount > initialCount);
+ 
+             // Iterate backwards to find all consecutive model turns at the end of the chat
+             const modelTurnsToExtract = [];
+@@ -634,14 +634,10 @@
+                 const t = allTurns[i];
+-                const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
+-                const cls = (t.getAttribute('class') || '').toLowerCase();
+-                const author = (t.querySelector('.author-label, .turn-author, .role-label')?.innerText || '').toLowerCase();
+-                const hasUserChild = t.querySelector('[data-turn-role="User"], .user-prompt-container, .user') !== null;
+-                const isUser = role === 'user' || cls.includes('user') || author.includes('user') || hasUserChild;
+-                
+-                if (isUser) {
++                if (isUserTurn(t)) {
+                     break;
+                 }
+-                modelTurnsToExtract.push(t);
++                if (isModelTurn(t)) {
++                    modelTurnsToExtract.push(t);
++                }
+             }
+ 
+             // They were collected backwards, so reverse them to chronological order
+@@ -693,7 +693,7 @@
+                 is_running: isRunning,
+                 is_done: isDone,
+                 has_error: false,
+-                new_turn_started: newTurnStarted,
++                new_model_turn_started: newModelTurnStarted,
+                 model_count: currentModelCount
+             };
+         }'''
+@@ -725,7 +725,7 @@
+             current_text = state.get("text", "")
+             is_running = state.get("is_running", False)
+             is_done = state.get("is_done", False)
+-            new_turn_started = state.get("new_turn_started", False)
++            new_model_turn_started = state.get("new_model_turn_started", False)
+             has_error = state.get("has_error", False)
+ 
+             # Check for fatal error banner in AI Studio
+@@ -737,7 +737,7 @@
+             # 1. State: NO_RESPONSE_STARTED
+             # ------------------------------------------------------------------
+             if current_state == self.STATE_NO_RESPONSE_STARTED:
+-                if is_running or new_turn_started or len(current_text) > 0:
++                if is_running or new_model_turn_started or len(current_text) > 0:
+                     current_state = self.STATE_RESPONSE_IN_PROGRESS
+                     t_turn_detected = now
+                     t_last_growth = now
+@@ -744,5 +744,5 @@
+                         f"[{case_count} cases] State -> RESPONSE_IN_PROGRESS at {t_turn_detected - t_submit:.2f}s "
+-                        f"(is_running={is_running}, new_turn={new_turn_started}, initial_chars={len(current_text)})"
++                        f"(is_running={is_running}, new_model_turn={new_model_turn_started}, initial_chars={len(current_text)})"
+                     )
+                 else:
+                     if elapsed > t_cfg["initial_start_timeout"]:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

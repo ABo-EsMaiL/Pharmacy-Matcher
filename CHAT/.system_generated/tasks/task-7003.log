@@ -1,0 +1,19 @@
+===========================================================================
+           PHARMACY & MSEMAX END-TO-END RUNTIME VERIFICATION
+===========================================================================
+
+[Step 1] Querying Gateway Health...
+  -> Gateway: MSEMAX (AIStudio Web Hook)
+  -> Browser Ready: True
+  -> Active Thinking Level: High
+  -> Context Isolation (Fresh Chat): True
+  -> Default Model: gemini-3.8-flash
+
+[Step 2] Sending 5 Test Cases through Pharmacy Coordinator...
+  -> Total final prompt length: 4460 characters
+  -> Target URL: http://127.0.0.1:8001/v1/chat/completions
+  -> Model: gemini-3.8-flash
+
+[FAIL] Coordinator call failed: Local API did not return valid HTTP JSON: data: {"id": "chatcmpl-5442919defed", "object": "chat.completion.chunk", "created": 1790261664, "model": "gemini-3.8-flash", "choices": [{"index": 0, "delta": {"role": "assistant", "content": ""}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-5442919defed", "object": "chat.completion.chunk", "cre

@@ -1,0 +1,19 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\server_manager.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -408,7 +408,12 @@
+                             pid = parts[-1]
+                             r_k = subprocess.run(['taskkill', '/F', '/PID', pid], capture_output=True, text=True)
+                             if "Access is denied" in r_k.stderr or r_k.returncode != 0:
+-                                pids_needing_elevation.add(pid)
++                                ps_cmd = f"Invoke-CimMethod -InputObject (Get-CimInstance Win32_Process -Filter 'ProcessId = {pid}') -MethodName Terminate"
++                                r_ps = subprocess.run(['powershell', '-Command', ps_cmd], capture_output=True, text=True)
++                                if r_ps.returncode == 0 and "ReturnValue = 0" in r_ps.stdout:
++                                    killed.append(pid)
++                                else:
++                                    pids_needing_elevation.add(pid)
+                             else:
+                                 killed.append(pid)
+                 except Exception as e:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

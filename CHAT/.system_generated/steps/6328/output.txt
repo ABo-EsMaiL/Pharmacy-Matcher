@@ -1,0 +1,76 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -54,7 +54,10 @@
+     background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+     background-size: 30px 30px;
+     color: var(--text-main);
+-    overflow: hidden; /* Prevent body scroll in desktop app */
++    overflow-x: hidden !important;
++    overflow-y: hidden;
++    width: 100vw;
++    max-width: 100vw;
+     user-select: none; /* Make it feel like a desktop app */
+ }
+ 
+@@ -62,6 +62,8 @@
+     display: flex;
+     height: 100vh;
+     width: 100vw;
++    max-width: 100vw;
++    overflow-x: hidden !important;
+ }
+ 
+ /* -------------------- SIDEBAR -------------------- */
+@@ -68,4 +68,6 @@
+     width: var(--sidebar-width);
++    min-width: var(--sidebar-width);
++    max-width: var(--sidebar-width);
+     background-color: var(--bg-sidebar);
+     border-left: 1px solid var(--border); /* RTL */
+     display: flex;
+@@ -72,3 +72,7 @@
++    height: 100vh;
++    max-height: 100vh;
++    overflow-y: auto;
++    overflow-x: hidden;
+     box-shadow: var(--shadow-md);
+     z-index: 10;
+ }
+@@ -75,14 +75,15 @@
+ .brand {
+-    padding: 30px 24px;
+-    display: flex;
+-    align-items: center;
+-    gap: 16px;
++    padding: 16px 18px;
++    display: flex;
++    align-items: center;
++    gap: 12px;
+     border-bottom: 1px solid var(--border);
+     color: var(--primary);
++    flex-shrink: 0;
+ }
+ 
+ .brand i {
+-    font-size: 42px;
++    font-size: 34px;
+     filter: drop-shadow(0 4px 6px rgba(14, 165, 233, 0.3));
+ }
+ 
+@@ -89,4 +89,4 @@
+-    font-size: 24px;
++    font-size: 20px;
+     font-weight: 800;
+     line-height: 1.2;
+     color: var(--text-main);
+@@ -93,6 +93,6 @@
+ 
+ .brand-text span {
+-    font-size: 13px;
++    font-size: 12px;
+     color: var(--text-muted);
+     font-weight: 600;
+     letter-spacing: 0.5px;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

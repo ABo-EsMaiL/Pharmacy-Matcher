@@ -1,0 +1,789 @@
+{
+  "page": 5,
+  "items": [
+    {
+      "item_name_raw": "سينترام سيلفر ۳۰قرص",
+      "trade_name": "سينترام سيلفر",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سينوبار اس ۱۰۰جم صابون/ماكرو",
+      "trade_name": "سينوبار اس",
+      "strength": "۱۰۰جم",
+      "form": "صابون",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سينوبار عاديه صابون /ماكرو",
+      "trade_name": "سينوبار عاديه",
+      "strength": "",
+      "form": "صابون",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "شاركولا ۲۰ كبسول برطمان",
+      "trade_name": "شاركولا",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "شاركيلاج بلس كبسول",
+      "trade_name": "شاركيلاج بلس",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "شوجارلو ٥٠/١٠٠٠ مجم بلس",
+      "trade_name": "شوجارلو بلس",
+      "strength": "٥٠/١٠٠٠ مجم",
+      "form": "",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "شوجارلو ٥٠/٥٠٠ مجم بلس",
+      "trade_name": "شوجارلو بلس",
+      "strength": "٥٠/٥٠٠ مجم",
+      "form": "",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فابوزول استنشاق جديد",
+      "trade_name": "فابوزول",
+      "strength": "",
+      "form": "استنشاق",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فاردينوريكت ۲۰ مجم ۸ قرص",
+      "trade_name": "فاردينوريكت",
+      "strength": "۲۰ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فاردينوريكت ٥ مجم قرص",
+      "trade_name": "فاردينوريكت",
+      "strength": "٥ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فارما تيرز قطره",
+      "trade_name": "فارما تيرز",
+      "strength": "",
+      "form": "قطره",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فاروفيجا ۱۰۰ مجم ۳ شريط جديد",
+      "trade_name": "فاروفيجا",
+      "strength": "۱۰۰ مجم",
+      "form": "",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فاكتو لبوس",
+      "trade_name": "فاكتو",
+      "strength": "",
+      "form": "لبوس",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فاكساتو ۱۰ مجم - ۲۰ قرص",
+      "trade_name": "فاكساتو",
+      "strength": "۱۰ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فالجيستريل ۲۱ قرص",
+      "trade_name": "فالجيستريل",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فايركتا ۱۰۰ مجم ۱۲ قرص جديد",
+      "trade_name": "فايركتا",
+      "strength": "۱۰۰ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فاين ديرم ۳۰ جم كريم",
+      "trade_name": "فاين ديرم",
+      "strength": "۳۰ جم",
+      "form": "كريم",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فيبوريك ۱۲۰ جم قرص",
+      "trade_name": "فيبوريك",
+      "strength": "۱۲۰ جم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلاجيل ١٢٥مل شراب",
+      "trade_name": "فلاجيل",
+      "strength": "١٢٥مل",
+      "form": "شراب",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلاجيلات فورت شراب",
+      "trade_name": "فلاجيلات فورت",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلادازول قرص",
+      "trade_name": "فلادازول",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلاكسوبرايد قرص جديد",
+      "trade_name": "فلاكسوبرايد",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلاكورت ۳۰ مجم اقراص",
+      "trade_name": "فلاكورت",
+      "strength": "۳۰ مجم",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلاكورت ٦ مجم اقراص",
+      "trade_name": "فلاكورت",
+      "strength": "٦ مجم",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلوبادكس ٤ مجم اقراص",
+      "trade_name": "فلوبادكس",
+      "strength": "٤ مجم",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلوبادكس ۸ مجم اقراص جديد/ايفا",
+      "trade_name": "فلوبادكس",
+      "strength": "۸ مجم",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلوكسامو قرص",
+      "trade_name": "فلوكسامو",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلوموكس ٢٥٠ مجم شراب",
+      "trade_name": "فلوموكس",
+      "strength": "٢٥٠ مجم",
+      "form": "شراب",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلوموكس ٥٠٠ مجم كبسول",
+      "trade_name": "فلوموكس",
+      "strength": "٥٠٠ مجم",
+      "form": "كبسول",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فلوموكس ۱جم قرص",
+      "trade_name": "فلوموكس",
+      "strength": "۱جم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فليكتور ٥٠ مجم كبسول",
+      "trade_name": "فليكتور",
+      "strength": "٥٠ مجم",
+      "form": "كبسول",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فليكس سبراى / ايفا",
+      "trade_name": "فليكس",
+      "strength": "",
+      "form": "سبراى",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فنتال عادى بخاخ",
+      "trade_name": "فنتال عادى",
+      "strength": "",
+      "form": "بخاخ",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فنتال مركب بخاخ جديد",
+      "trade_name": "فنتال مركب",
+      "strength": "",
+      "form": "بخاخ",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فنتامور ٦٠ جم كريم تفتيح",
+      "trade_name": "فنتامور تفتيح",
+      "strength": "٦٠ جم",
+      "form": "كريم",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فنجيكان كبسول",
+      "trade_name": "فنجيكان",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فوربيدوس كبسول بخاخ",
+      "trade_name": "فوربيدوس",
+      "strength": "",
+      "form": "كبسول بخاخ",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فورتيموكس قطره جديد",
+      "trade_name": "فورتيموكس",
+      "strength": "",
+      "form": "قطره",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فولبرازال ٤٠ مجم اقراص",
+      "trade_name": "فولبرازال",
+      "strength": "٤٠ مجم",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فولتارين ۳ امبول",
+      "trade_name": "فولتارين",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فولتارين ٦ امبول",
+      "trade_name": "فولتارين",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فومبيريك اقراص",
+      "trade_name": "فومبيريك",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فوناسبير ۲۰ مجم اقراص ۳ شريط",
+      "trade_name": "فوناسبير",
+      "strength": "۲۰ مجم",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فونسيكا ۲۰ مجم اقراص",
+      "trade_name": "فونسيكا",
+      "strength": "۲۰ مجم",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فونوبرافين ۲۰ مجم اقراص",
+      "trade_name": "فونوبرافين",
+      "strength": "۲۰ مجم",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فى جون ۱۰۰ مجم فياجرا",
+      "trade_name": "فى جون",
+      "strength": "۱۰۰ مجم",
+      "form": "",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فياترازو / كريم",
+      "trade_name": "فياترازو",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فياجرا ۱۰۰ جم - ٤ قرص",
+      "trade_name": "فياجرا",
+      "strength": "۱۰۰ جم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "فيراميسين ۱۰۰ مجم كبسول",
+      "trade_name": "فيراميسين",
+      "strength": "۱۰۰ مجم",
+      "form": "كبسول",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سانسو انتى اوكسيدانت ۲۸ قرص",
+      "trade_name": "سانسو انتى اوكسيدانت",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سبازموبير الجين اقراص ۳ شريط",
+      "trade_name": "سبازموبير الجين",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سباسيكولون ٥٠ جم ۳ شريط",
+      "trade_name": "سباسيكولون",
+      "strength": "٥٠ جم",
+      "form": "",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سباير كليراسال ۲۰۰مل غسول للوجة",
+      "trade_name": "سباير كليراسال",
+      "strength": "۲۰۰مل",
+      "form": "غسول",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سبتازول ۲۰۰ قرص",
+      "trade_name": "سبتازول",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سبوتلس كريم صغير",
+      "trade_name": "سبوتلس",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ستربتوكين ۲ شريط",
+      "trade_name": "ستربتوكين",
+      "strength": "",
+      "form": "",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سترو بانتين كريم / ويزر",
+      "trade_name": "سترو بانتين",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ستوبادول عادى",
+      "trade_name": "ستوبادول عادى",
+      "strength": "",
+      "form": "",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ستوبادول جوينت اقراص",
+      "trade_name": "ستوبادول جوينت",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ستوبادول كولد اند فلو",
+      "trade_name": "ستوبادول كولد اند فلو",
+      "strength": "",
+      "form": "",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ستوبادول مايجرين",
+      "trade_name": "ستوبادول مايجرين",
+      "strength": "",
+      "form": "",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ستيرونات نور اقراص",
+      "trade_name": "ستيرونات نور",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "ستيمبولان ۸۰۰ مجم قرص",
+      "trade_name": "ستيمبولان",
+      "strength": "۸۰۰ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سكارو كريم",
+      "trade_name": "سكارو",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سكارو جيل",
+      "trade_name": "سكارو",
+      "strength": "",
+      "form": "جيل",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سكاى كيور ۱۲۰ جم كريم",
+      "trade_name": "سكاى كيور",
+      "strength": "۱۲۰ جم",
+      "form": "كريم",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سليبركس ۱۰۰ مجم اقراص",
+      "trade_name": "سليبركس",
+      "strength": "۱۰۰ مجم",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سليبركس ۲۰۰ مجم ۳ شريط",
+      "trade_name": "سليبركس",
+      "strength": "۲۰۰ مجم",
+      "form": "",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سوفيناسين ۱۰ مجم قرص",
+      "trade_name": "سوفيناسين",
+      "strength": "۱۰ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سوفيناسين ٥ مجم ۳۰ قرص",
+      "trade_name": "سوفيناسين",
+      "strength": "٥ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سولوسيبت ۲۰۰ مل محلول مطهر\"جديد",
+      "trade_name": "سولوسيبت",
+      "strength": "۲۰۰ مل",
+      "form": "محلول",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سينارو بلس قطرة",
+      "trade_name": "سينارو بلس",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيانارو قطره",
+      "trade_name": "سيانارو",
+      "strength": "",
+      "form": "قطره",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيبالافيل ۲۰ مجم ۱۲ قرص جديد",
+      "trade_name": "سيبالافيل",
+      "strength": "۲۰ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيبرابرو اقراص",
+      "trade_name": "سيبرابرو",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيبرو ٥٠٠ مجم قرص/ ممفيس",
+      "trade_name": "سيبرو",
+      "strength": "٥٠٠ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيبروديازول ٥٠٠ مجم قرص",
+      "trade_name": "سيبروديازول",
+      "strength": "٥٠٠ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيبروسين مرهم عين",
+      "trade_name": "سيبروسين",
+      "strength": "",
+      "form": "مرهم",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيبروفار ٧٥٠ مجم قرص",
+      "trade_name": "سيبروفار",
+      "strength": "٧٥٠ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيتاجليفورم ٥٠/١٠٠٠ مجم ۳۰ق",
+      "trade_name": "سيتاجليفورم",
+      "strength": "٥٠/١٠٠٠ مجم",
+      "form": "ق",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيتال ٥٠٠ مجم اقراص",
+      "trade_name": "سيتال",
+      "strength": "٥٠٠ مجم",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيتال شراب قديم",
+      "trade_name": "سيتال",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيتال نقط",
+      "trade_name": "سيتال",
+      "strength": "",
+      "form": "نقط",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيدالوستات كريم ١٥ جم مهبلي",
+      "trade_name": "سيدالوستات",
+      "strength": "١٥ جم",
+      "form": "كريم",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيرباس ۱۰۰ مجم ۲۰ قرص جديد",
+      "trade_name": "سيرباس",
+      "strength": "۱۰۰ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيربروفورت ۸۰۰ قرص جديد",
+      "trade_name": "سيربروفورت",
+      "strength": "۸۰۰",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيرفيتام ۲۰ كبسوله",
+      "trade_name": "سيرفيتام",
+      "strength": "",
+      "form": "كبسوله",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيرفيتولكا ادفانس ۲۰ قرص",
+      "trade_name": "سيرفيتولكا ادفانس",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيرفيتولكا بلس ٥٠/٥٠٠ ك /دولاب",
+      "trade_name": "سيرفيتولكا بلس",
+      "strength": "٥٠/٥٠٠",
+      "form": "ك",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيرفيتولكا ٥٠٠ مجم قرص",
+      "trade_name": "سيرفيتولكا",
+      "strength": "٥٠٠ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيرليفت ۱۰۰ مجم ۳۰ قرص",
+      "trade_name": "سيرليفت",
+      "strength": "۱۰۰ مجم",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيروليز سيرم للشعر /ماكرو",
+      "trade_name": "سيروليز",
+      "strength": "",
+      "form": "سيرم",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيستون اقراص",
+      "trade_name": "سيستون",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيفامول ۱۲ قرص فوار",
+      "trade_name": "سيفامول",
+      "strength": "",
+      "form": "قرص فوار",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيفيتيل اجم اقراص فوار",
+      "trade_name": "سيفيتيل",
+      "strength": "اجم",
+      "form": "اقراص فوار",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيكوبرام ۱۰ مجم قراص",
+      "trade_name": "سيكوبرام",
+      "strength": "۱۰ مجم",
+      "form": "قراص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيلفستر وان ۲۰ك",
+      "trade_name": "سيلفستر وان",
+      "strength": "",
+      "form": "ك",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    },
+    {
+      "item_name_raw": "سيلينيوم ايه سى قرص جديد",
+      "trade_name": "سيلينيوم ايه سى",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 5,
+      "source_file": "كيور فارما خاص.pdf"
+    }
+  ]
+}

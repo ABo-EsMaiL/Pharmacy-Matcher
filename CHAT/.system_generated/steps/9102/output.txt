@@ -1,0 +1,21 @@
+Found 20 results
+__init__.py
+__pycache__
+__pycache__/__init__.cpython-312.pyc
+__pycache__/__init__.cpython-313.pyc
+__pycache__/app.cpython-312.pyc
+__pycache__/app.cpython-313.pyc
+__pycache__/backend.cpython-312.pyc
+__pycache__/backend.cpython-313.pyc
+__pycache__/database.cpython-312.pyc
+__pycache__/server_manager.cpython-312.pyc
+__pycache__/server_manager.cpython-313.pyc
+app.py
+backend.py
+database.py
+server_manager.py
+static
+static/app.js
+static/style.css
+templates
+templates/index.html

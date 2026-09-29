@@ -1,0 +1,8 @@
+{"name":"history.db","sizeBytes":"24576"}
+{"name":"processes","isDir":true}
+{"name":"provider_errors.log","sizeBytes":"42622"}
+{"name":"settings.json","sizeBytes":"381"}
+{"name":"test_shortages_200.xlsx","sizeBytes":"12070"}
+{"name":"test_shortages_200_audit.json","sizeBytes":"75007"}
+
+Summary: This directory contains 1 subdirectories and 5 files.

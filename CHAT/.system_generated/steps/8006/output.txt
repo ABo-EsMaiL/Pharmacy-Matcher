@@ -1,0 +1,38 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\build_perfect_benchmark.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\data\\settings.json"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\data\\provider_errors.log"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\data\\test_shortages_200_audit.json"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\generate_test_file.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\data\\settings.json"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\config.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\fast_match\\coordinator.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-001\\input_warehouses\\السلام شبين.json"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-001\\input_warehouses\\المكرومي المنصورة.json"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-001\\input_warehouses\\كيور فارما خاص.json"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\server_manager.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-001\\input_warehouses\\مخزن الحياة فارم اسكندريه-170.json"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-001\\input_warehouses\\جملة العمروووو.json"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\check_cure_gemini_items.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\audit_gemini_chat.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\find_parofen_batch.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\find_levanox_hadaba.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch_build_benchmark.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch_auto_matches.txt"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch_cat.txt"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch_diffs.txt"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch_check_rows.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch_p8_matches_audit.txt"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch_test_search_amr.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_batch3_cure.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_levanox_llm.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scripts\\package_production.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_levanox_search.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_llm_parofen.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_small_parofen.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\config.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py"}

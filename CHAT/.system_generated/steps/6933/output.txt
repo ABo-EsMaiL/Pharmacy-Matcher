@@ -1,0 +1,2 @@
+Created file file:///D:/AI_Engineer/Pharmacy/review/local_provider.py with requested content.
+If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.

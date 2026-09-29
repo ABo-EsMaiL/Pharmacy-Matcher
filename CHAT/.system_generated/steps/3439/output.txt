@@ -1,0 +1,3 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":320,"LineContent":"            from src.extract.file_handler import read_input_files"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":342,"LineContent":"            shortage_data = read_input_files(copied_shortages, role=\"shortages\", api_key=api_key, gemini_api_key=gemini_key, profile=profile)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":346,"LineContent":"            warehouse_data = read_input_files(copied_warehouses, role=\"warehouse\", api_key=api_key, gemini_api_key=gemini_key, profile=profile)"}

@@ -1,0 +1,2 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":167,"LineContent":"        \"\"\"Opens a native file dialog. Returns JSON list of selected file paths.\"\"\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":195,"LineContent":"        \"\"\"Opens a native directory picker. Returns selected path.\"\"\""}

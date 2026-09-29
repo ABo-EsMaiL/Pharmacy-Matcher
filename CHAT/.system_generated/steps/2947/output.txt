@@ -1,0 +1,8 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":582,"LineContent":"    def get_history(self) -\u003e str:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1777,"LineContent":"            const historyStr = await window.pywebview.api.get_history();"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2227,"LineContent":"        const historyStr = await window.pywebview.api.get_history();"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":209,"LineContent":"        const history = await window.pywebview.api.get_history();"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":579,"LineContent":"    def get_history(self) -\u003e str:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":1780,"LineContent":"            const historyStr = await window.pywebview.api.get_history();"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":2230,"LineContent":"        const historyStr = await window.pywebview.api.get_history();"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\static\\app.js","LineNumber":209,"LineContent":"        const history = await window.pywebview.api.get_history();"}

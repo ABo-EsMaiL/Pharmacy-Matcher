@@ -1,0 +1,149 @@
+
+The command exited with code 0.
+Output:
+=== THE 10 DROPPED ITEMS IN PROC-014 (Total: 24) ===
+
+Shortage: نيوكاربون30قرص س ج | Warehouse: السلام شبين.pdf
+  PROC-012: اوكاربون اقراص/اسبيكو
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): NOT FOUND
+
+Shortage: جينوزول كريم س ج | Warehouse: المكرومي المنصورة.pdf
+  PROC-012: جينوفازول ٤٪ كريم
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): NOT FOUND
+
+Shortage: ديباكين كرونو500مجم اقراص | Warehouse: المكرومي المنصورة.pdf
+  PROC-012: ديبيكان اقراص/العامرية
+  PROC-014: DROPPED
+  PROC-015 (Gemini): MATCH: ديبيكان اقراص/العامرية
+  PROC-016 (ChatGPT): MATCH: ديبيكان اقراص/العامرية
+
+Shortage: ليمتلس كروماكس كت30كيس س ج | Warehouse: المكرومي المنصورة.pdf
+  PROC-012: ليمتلس كروماماكس كت ٣٠ كبس
+  PROC-014: DROPPED
+  PROC-015 (Gemini): MATCH: ليمتلس كروماماكس كت ٣٠ كبس
+  PROC-016 (ChatGPT): MATCH: ليمتلس كروماماكس كت ٣٠ كبس
+
+Shortage: نيوروفيت اقراص  3 شريط | Warehouse: المكرومي المنصورة.pdf
+  PROC-012: نيروفيت اقراص سعر جديد
+  PROC-014: DROPPED
+  PROC-015 (Gemini): MATCH: نيروفيت اقراص سعر جديد
+  PROC-016 (ChatGPT): MATCH: نيروفيت اقراص سعر جديد
+
+Shortage: اكسترا بروتين اكياس فانيليا | Warehouse: الهضبة الاثنين نقدى0.pdf
+  PROC-012: اکسرا پروتین شکولاته باکت 27
+  PROC-014: DROPPED
+  PROC-015 (Gemini): REVIEW: اکسرا پروتین شکولاته باکت 27
+  PROC-016 (ChatGPT): NOT FOUND
+
+Shortage: بروتولوك40مجم اقراص س ج | Warehouse: الهضبة الاثنين نقدى0.pdf
+  PROC-012: پانتولوک 40 مج اقراص/باکت 102
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): NOT FOUND
+
+Shortage: بقدونس وكرفس ايزيس | Warehouse: الهضبة الاثنين نقدى0.pdf
+  PROC-012: ایزیز بقدونس وکرکس 20 فلتر
+  PROC-014: DROPPED
+  PROC-015 (Gemini): MATCH: ایزیز بقدونس وکرکس 20 فلتر
+  PROC-016 (ChatGPT): MATCH: ایزیز بقدونس وکرکس 20 فلتر
+
+Shortage: تربتيزول10 مجم اقراص | Warehouse: الهضبة الاثنين نقدى0.pdf
+  PROC-012: تریپتازول 10 مج اقراس/باکت 200
+  PROC-014: DROPPED
+  PROC-015 (Gemini): MATCH: تریپتازول 10 مج اقراس/باکت 200
+  PROC-016 (ChatGPT): MATCH: تریپتازول 10 مج اقراس/باکت 200
+
+Shortage: ديكابرينو200مجم2امبول س ج | Warehouse: الهضبة الاثنين نقدى0.pdf
+  PROC-012: دیکابرین اقراض
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): NOT FOUND
+
+Shortage: ريتشي بانثينول كريم ادفانس | Warehouse: الهضبة الاثنين نقدى0.pdf
+  PROC-012: یوریتشی پانتیول ادفانس کریم جیل
+  PROC-014: DROPPED
+  PROC-015 (Gemini): MATCH: یوریتشی پانتیول ادفانس کریم جیل
+  PROC-016 (ChatGPT): NOT FOUND
+
+Shortage: ليمتلس كروماكس كت30كيس س ج | Warehouse: الهضبة الاثنين نقدى0.pdf
+  PROC-012: يمتليس كروماتكس كت 30 كيس جديد
+  PROC-014: DROPPED
+  PROC-015 (Gemini): MATCH: يمتليس كروماتكس كت 30 كيس جديد
+  PROC-016 (ChatGPT): MATCH: يمتليس كروماتكس كت 30 كيس جديد
+
+Shortage: نيوروفيت اقراص  3 شريط | Warehouse: الهضبة الاثنين نقدى0.pdf
+  PROC-012: نیروپفیت اقراص/باكت 15
+  PROC-014: DROPPED
+  PROC-015 (Gemini): MATCH: نیروپفیت اقراص/باكت 15
+  PROC-016 (ChatGPT): MATCH: نیروپفیت اقراص/باكت 15
+
+Shortage: ينسون ايزيس س ج | Warehouse: الهضبة الاثنين نقدى0.pdf
+  PROC-012: زيس ينسون 12 فلتر صغير ج/باكو 6
+  PROC-014: DROPPED
+  PROC-015 (Gemini): MATCH: زيس ينسون 12 فلتر صغير ج/باكو 6
+  PROC-016 (ChatGPT): MATCH: ایزس ينسون بالليمون 20 فلتر
+
+Shortage: يوكيراتو كريم س ج | Warehouse: الهضبة الاثنين نقدى0.pdf
+  PROC-012: یوریکیر کریم/باكت 80
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): MATCH: یوریکیر کریم/باكت 80
+
+Shortage: الكابرس10مجم30قرص | Warehouse: كيور فارما خاص.pdf
+  PROC-012: الكابرس تربو ١٠/١٦/١٢٤٠ قرص
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): REVIEW: الكابريد ٥مجم ٣ قرص
+
+Shortage: بروتولوك40مجم اقراص س ج | Warehouse: كيور فارما خاص.pdf
+  PROC-012: کونترولوک ۴۰مجم اقراص
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): MATCH: کونترولوک ۴۰مجم اقراص
+
+Shortage: برونكوفين شراب | Warehouse: كيور فارما خاص.pdf
+  PROC-012: برونكوف شراب
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): NOT FOUND
+
+Shortage: برونكوفين شراب س ج | Warehouse: كيور فارما خاص.pdf
+  PROC-012: برونكوف شراب
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): NOT FOUND
+
+Shortage: سيبروسين500مجم10قرص س ج | Warehouse: كيور فارما خاص.pdf
+  PROC-012: سيبرو ٥٠٠ مجم قرص/امفيس
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): NOT FOUND
+
+Shortage: كولميتيدين  10شريط | Warehouse: كيور فارما خاص.pdf
+  PROC-012: کولمدین ۱۰ مجم - شریط
+  PROC-014: DROPPED
+  PROC-015 (Gemini): MATCH: کولمدین ۱۰ مجم - شریط
+  PROC-016 (ChatGPT): NOT FOUND
+
+Shortage: نيوكاربون30قرص س ج | Warehouse: كيور فارما خاص.pdf
+  PROC-012: نیوکاربن ۳۰کپسول
+  PROC-014: DROPPED
+  PROC-015 (Gemini): MATCH: نیوکاربن ۳۰کپسول
+  PROC-016 (ChatGPT): REVIEW: اوكاربون اقراص
+
+Shortage: سيبروسين500مجم10قرص س ج | Warehouse: مخزن الحياة فارم اسكندريه-170.p
+  PROC-012: سيبرو 500 مجم فموي
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): MATCH: سيبرو 500 مجم فموي
+
+Shortage: كارنيفيتا ادفانس للرجال30كيس س ج | Warehouse: مخزن الحياة فارم اسكندريه-170.p
+  PROC-012: کارنتینا ادفانس رجال/باکت16
+  PROC-014: DROPPED
+  PROC-015 (Gemini): NOT FOUND
+  PROC-016 (ChatGPT): NOT FOUND
+

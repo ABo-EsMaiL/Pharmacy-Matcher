@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+Salam items count: 187
+Amr items count: 19
+

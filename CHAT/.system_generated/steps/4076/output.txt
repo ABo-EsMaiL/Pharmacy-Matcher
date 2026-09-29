@@ -1,0 +1,37 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Extracted 993 items from column 'أسم الصنف'
+Unique shortage items: 591
+Total llm_cases for Cure Pharma: 230
+Found Parofen in llm_cases index 164 -> Batch 3, Pos 14:
+{
+  "case_id": "Q00430",
+  "requested_name": "باروفين 30قرص س ج",
+  "candidates": [
+    {
+      "id": "WH_00114",
+      "name": "باروفين ٢٠ قرص"
+    },
+    {
+      "id": "WH_00146",
+      "name": "بروفين ٤٠٠ مجم قرص"
+    },
+    {
+      "id": "WH_00148",
+      "name": "بروفين ٦٠٠ مجم قرص"
+    }
+  ]
+}
+Target cases: 1
+Raw status: 200
+Raw content: 
+
+[ChatGPT returned 429 (Rate Limited)]
+

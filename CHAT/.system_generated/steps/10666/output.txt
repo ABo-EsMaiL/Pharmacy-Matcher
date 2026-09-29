@@ -1,0 +1,2 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\dist_production\\src\\extract\\gemini_vision_extractor.py","LineNumber":183,"LineContent":"            \"أنت خبير صيدلي متخصص في استخراج بيانات فواتير وقوائم الأدوية.\\n\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\gemini_vision_extractor.py","LineNumber":183,"LineContent":"            \"أنت خبير صيدلي متخصص في استخراج بيانات فواتير وقوائم الأدوية.\\n\""}

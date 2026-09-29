@@ -1,0 +1,67 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -371,7 +371,60 @@
+         except Exception as e:
+             logger.warning(f"Error resetting chat: {e}")
+ 
+-    async def send_prompt_and_stream(self, prompt: str, model_name: Optional[str] = None) -> AsyncGenerator[str, None]:
++    # Lifecycle State Constants
++    STATE_NO_RESPONSE_STARTED = "NO_RESPONSE_STARTED"
++    STATE_RESPONSE_IN_PROGRESS = "RESPONSE_IN_PROGRESS"
++    STATE_RESPONSE_COMPLETED = "RESPONSE_COMPLETED"
++
++    @staticmethod
++    def get_adaptive_timeouts(case_count: int) -> dict:
++        """
++        Adaptive timeout configuration based on batch size:
++        - 1-10 cases: short
++        - 11-25 cases: longer
++        - 26-50 cases: even longer
++        - 51-75+ cases: highest timeout
++        """
++        if case_count <= 10:
++            return {
++                "initial_start_timeout": 45.0,
++                "first_token_timeout": 75.0,
++                "stagnation_timeout": 60.0,
++                "stability_duration": 3.0,
++                "hard_ceiling": 180.0,
++                "tier": f"1-10 cases ({case_count} cases)"
++            }
++        elif case_count <= 25:
++            return {
++                "initial_start_timeout": 60.0,
++                "first_token_timeout": 120.0,
++                "stagnation_timeout": 75.0,
++                "stability_duration": 3.5,
++                "hard_ceiling": 240.0,
++                "tier": f"11-25 cases ({case_count} cases)"
++            }
++        elif case_count <= 50:
++            return {
++                "initial_start_timeout": 90.0,
++                "first_token_timeout": 180.0,
++                "stagnation_timeout": 90.0,
++                "stability_duration": 4.0,
++                "hard_ceiling": 360.0,
++                "tier": f"26-50 cases ({case_count} cases)"
++            }
++        else: # 51-75+ cases
++            return {
++                "initial_start_timeout": 120.0,
++                "first_token_timeout": 240.0,
++                "stagnation_timeout": 120.0,
++                "stability_duration": 4.5,
++                "hard_ceiling": 480.0,
++                "tier": f"51-75+ cases ({case_count} cases)"
++            }
++
++    async def send_prompt_and_stream(
++        self, prompt: str, model_name: Optional[str] = None, batch_size: Optional[int] = None
++    ) -> AsyncGenerator[Union[dict, str], None]:
+         """Injects the prompt into Google AI Studio and yields streaming text deltas."""
+         if not self.page or self.page.is_closed() or self.is_shutting_down:
+             yield "[Error: Browser page not initialized or server is shutting down]"
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

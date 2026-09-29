@@ -1,0 +1,48 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -92,7 +92,8 @@
+                 user_data_dir=CHROME_PROFILE_DIR,
+                 headless=HEADLESS,
+                 no_viewport=True,
+-                args=args
++                args=args,
++                ignore_default_args=["--enable-automation"]
+             )
+         except Exception as e:
+             logger.error(f"Failed to launch browser: {e}")
+@@ -125,12 +125,28 @@
+         logger.info(f"Navigating to {TARGET_URL} to ensure clean environment...")
+         try:
+             await self.page.goto(TARGET_URL, timeout=60000, wait_until="domcontentloaded")
+-            ta = self.page.locator('.prompt-box-container textarea, textarea[formcontrolname="promptText"], textarea[aria-label*="prompt" i], textarea[placeholder*="Type" i]').first
+-            await ta.wait_for(state="attached", timeout=25000)
+-            await asyncio.sleep(1.5)
++            await asyncio.sleep(2)
+         except Exception as e:
+             logger.warning(f"Initial page navigation warning: {e}. Page will be ready on demand.")
+-            await asyncio.sleep(3.0)
++
++        # Check if user needs to log in
++        if "accounts.google.com" in self.page.url or "welcome" in self.page.url:
++            logger.warning("=" * 65)
++            logger.warning("[ACTION REQUIRED] Google AI Studio requires Google Account login!")
++            logger.warning("Please sign into your Google account in the Chromium window.")
++            logger.warning("Waiting for login completion...")
++            logger.warning("=" * 65)
++            
++            # Wait up to 3 minutes for user to sign in
++            start_wait = time.time()
++            while time.time() - start_wait < 180:
++                if self.page.is_closed() or self.is_shutting_down:
++                    break
++                ta = self.page.locator('.prompt-box-container textarea, textarea[formcontrolname="promptText"], textarea[aria-label*="prompt" i], textarea[placeholder*="Type" i]').first
++                if await ta.count() > 0 and await ta.is_visible():
++                    logger.info("Login confirmed! Prompt textarea detected.")
++                    break
++                await asyncio.sleep(2)
+ 
+         self.is_ready = True
+         logger.info("Google AI Studio web page ready!")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

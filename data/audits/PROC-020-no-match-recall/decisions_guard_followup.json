@@ -1,0 +1,160 @@
+[
+  {
+    "case_id": "F0041",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد أسماء مطابقة للمنتج المطلوب"
+  },
+  {
+    "case_id": "F0044",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2518"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز بين 20 و 40"
+  },
+  {
+    "case_id": "F0086",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد أسماء مطابقة للمنتج المطلوب"
+  },
+  {
+    "case_id": "F0143",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد أسماء مطابقة للمنتج المطلوب"
+  },
+  {
+    "case_id": "F0155",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0391"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز بين 3 و 2"
+  },
+  {
+    "case_id": "F0157",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2009"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز بين 500 و 1000"
+  },
+  {
+    "case_id": "F0167",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2592"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف نوع المستحضر لوجود دولفين ك"
+  },
+  {
+    "case_id": "F0168",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2592"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف نوع المستحضر لوجود دولفين ك"
+  },
+  {
+    "case_id": "F0169",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2592"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف نوع المستحضر لوجود دولفين ك"
+  },
+  {
+    "case_id": "F0181",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0429"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز بين 2 و 150"
+  },
+  {
+    "case_id": "F0211",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد أسماء مطابقة للمنتج المطلوب"
+  },
+  {
+    "case_id": "F0229",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد أسماء مطابقة للمنتج المطلوب"
+  },
+  {
+    "case_id": "F0249",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2628",
+      "I0101",
+      "I2629",
+      "I1325",
+      "I1324",
+      "I2253",
+      "I2254",
+      "I0599",
+      "I0598"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز بين 1جم و 500مجم"
+  },
+  {
+    "case_id": "F0250",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1326"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز بين 4 و 8"
+  },
+  {
+    "case_id": "F0330",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0555"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز بين 25 و 6.25"
+  },
+  {
+    "case_id": "F0375",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0515"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز بين 250 و 500"
+  }
+]

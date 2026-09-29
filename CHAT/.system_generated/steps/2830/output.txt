@@ -1,0 +1,28 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\output\excel_writer.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -91,13 +91,6 @@
+     return name[:max_len]
+ 
+ 
+-def write_results_excel(results: dict, output_path: Path) -> None:
+-    """
+-    كتابة نتائج المطابقة إلى ملف Excel منسّق.
+-
+-    Args:
+-        results: قاموس النتائج من المنسِّق (Coordinator) يحتوي على:
+-            - warehouse_results: نتائج كل مخزن
+ def _format_confidence(conf_raw: str) -> str:
+     """تحويل قيم درجة التطابق الإنجليزية والتقنية إلى مصطلحات عربية واضحة."""
+     if not conf_raw:
+@@ -118,7 +118,7 @@
+     return conf_str
+ 
+ 
+-def create_excel_report(results: dict, output_path: Path) -> Path:
++def write_results_excel(results: dict, output_path: Path) -> Path:
+     """
+     إنشاء ملف Excel منظم يحتوي على:
+         - ملخص ديناميكي مربوط بمعادلات Excel التلقائية
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

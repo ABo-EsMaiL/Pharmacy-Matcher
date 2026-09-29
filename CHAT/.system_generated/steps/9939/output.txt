@@ -1,0 +1,19 @@
+
+The command exited with code 0.
+Output:
+1455: <button class="nav-item active" onclick="showScreen('screen-new', this)">
+1458: <button class="nav-item" onclick="loadHistory(); showScreen('screen-history', this)">
+1461: <button class="nav-item" onclick="showScreen('screen-settings', this)">
+1464: <button class="nav-item" onclick="loadLogs(); showScreen('screen-logs', this)">
+1467: <button class="nav-item" onclick="showScreen('screen-servers', this); loadServersUI(); loadServerLog
+1473: <div class="server-status-card" style="cursor: pointer;" onclick="showScreen('screen-servers'); load
+1498: <div id="top-bar-server-badge" class="server-badge-pill stopped" style="cursor: pointer;" onclick="s
+1521: <div class="active-server-home-bar" onclick="showScreen('screen-servers'); loadServersUI();" style="
+1744: <button type="button" class="btn btn-primary" onclick="showScreen('screen-servers'); loadServersUI()
+1946: <button type="button" class="btn btn-outline" style="font-size: 12px; padding: 6px 14px; border-radi
+2773: window.showScreen('screen-results');
+3019: window.showScreen('screen-results');
+3507: // Override showScreen to handle active states on sidebar
+3508: const originalShowScreen = window.showScreen;
+3509: window.showScreen = function(screenId, element = null) {
+

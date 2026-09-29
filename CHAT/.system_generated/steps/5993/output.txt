@@ -1,0 +1,66 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1811,6 +1811,26 @@
+         terminal_title: "سجل النظام (Terminal)",
+         terminal_subtitle: "يُظهر مخرجات العمليات الجارية في الخلفية",
+ 
++        // Screen AI Servers
++        nav_servers: "إدارة السيرفرات (AI Servers)",
++        servers_title: "إدارة سيرفرات الذكاء الاصطناعي (AI Servers)",
++        servers_desc: "التحكم في سيرفرات MSEMAX (ChatGPT و Google AI Studio) واختبار الاتصال واختيار المزود النشط.",
++        gaistudio_server_title: "MSEMAX (Google AI Studio)",
++        chatgpt_server_title: "MSEMAX (ChatGPT)",
++        lbl_server_port: "المنفذ (Port):",
++        lbl_server_model: "الموديل (Model):",
++        lbl_server_url: "رابط الخدمة:",
++        lbl_server_dir: "مسار المجلد:",
++        btn_set_as_active: "تفعيل كمزود نشط",
++        btn_already_active: "⭐ المزود النشط حالياً",
++        btn_start_instance: "تشغيل السيرفر",
++        btn_stop_instance: "إيقاف السيرفر",
++        btn_test_connection: "اختبار الاتصال",
++        btn_login_session: "فتح الجلسة (Login)",
++        test_panel_title: "نتائج فحص واختبار السيرفر المباشر (Live Diagnostic Log):",
++        btn_refresh: "تحديث الحالة",
++        btn_clear: "مسح",
++
+         // Dialogs & Confirmations
+         confirm_exit_title: "تأكيد الإغلاق",
+         confirm_exit_msg: "توجد عمليات مطابقة قيد التشغيل في الخلفية. هل أنت متأكد من الإغلاق؟",
+@@ -1833,6 +1833,7 @@
+         nav_history: "Process History",
+         nav_settings: "System Settings",
+         nav_logs: "System Logs (Terminal)",
++        nav_servers: "AI Servers Manager",
+         server_checking: "Checking...",
+         server_running: "Server Running",
+         server_stopped: "Server Stopped",
+@@ -1913,6 +1913,25 @@
+         terminal_title: "System Logs (Terminal)",
+         terminal_subtitle: "Displays background process output in real-time",
+ 
++        // Screen AI Servers
++        servers_title: "AI Servers Management",
++        servers_desc: "Manage MSEMAX servers (ChatGPT & Google AI Studio), test latency, and select the active provider.",
++        gaistudio_server_title: "MSEMAX (Google AI Studio)",
++        chatgpt_server_title: "MSEMAX (ChatGPT)",
++        lbl_server_port: "Port:",
++        lbl_server_model: "Model:",
++        lbl_server_url: "Endpoint:",
++        lbl_server_dir: "Folder Path:",
++        btn_set_as_active: "Set as Active Provider",
++        btn_already_active: "⭐ Currently Active",
++        btn_start_instance: "Start Server",
++        btn_stop_instance: "Stop Server",
++        btn_test_connection: "Test Ping",
++        btn_login_session: "Open Session (Login)",
++        test_panel_title: "Live Server Diagnostic Log:",
++        btn_refresh: "Refresh Status",
++        btn_clear: "Clear",
++
+         // Dialogs & Confirmations
+         confirm_exit_title: "Confirm Exit",
+         confirm_exit_msg: "Matching processes are currently running in the background. Are you sure you want to exit?",
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

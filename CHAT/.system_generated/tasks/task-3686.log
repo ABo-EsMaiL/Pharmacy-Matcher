@@ -1,0 +1,9 @@
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_search_filter.py", line 9, in <module>
+    shortages_raw = extract_item_names(read_excel(Path(r'd:\AI_Engineer\Pharmacy-agy\data\shortages\0913.xlsx')))
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\AI_Engineer\Pharmacy-agy\src\extract\excel_reader.py", line 13, in read_excel
+    raise FileNotFoundError(f"File not found: {filepath}")
+FileNotFoundError: File not found: d:\AI_Engineer\Pharmacy-agy\data\shortages\0913.xlsx

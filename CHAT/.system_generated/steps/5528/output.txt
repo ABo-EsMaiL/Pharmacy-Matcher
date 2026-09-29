@@ -1,0 +1,13 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\sim_auto_all.py", line 9, in <module>
+    shortages_data = read_excel(Path("data/0913.xlsx"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Engineer\Pharmacy-agy\src\extract\excel_reader.py", line 13, in read_excel
+    raise FileNotFoundError(f"File not found: {filepath}")
+FileNotFoundError: File not found: data\0913.xlsx
+

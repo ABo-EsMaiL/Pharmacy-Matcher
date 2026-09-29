@@ -1,0 +1,130 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\search.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2,6 +2,52 @@
+ from sklearn.feature_extraction.text import TfidfVectorizer
+ from sklearn.metrics.pairwise import cosine_similarity
+ import re
++from rapidfuzz import fuzz
++from ..match.text_match import normalize_text
++
++PHARMA_STOPWORDS = {
++    # forms
++    'اقراص', 'قرص', 'كبسول', 'كبسوله', 'كبسولات', 'حبوب', 'شراب', 'شرب', 'معلق', 'سائل',
++    'مرهم', 'كريم', 'جل', 'جيل', 'امبول', 'امبوله', 'امبولات', 'حقن', 'فيال',
++    'لبوس', 'لبوسة', 'لبوسه', 'تحاميل', 'اقماع', 'نقط', 'قطرة', 'قطره',
++    'بخاخ', 'بخاخة', 'بخاخه', 'سبراي', 'فوار', 'اكياس', 'كيس',
++    'شامبو', 'غسول', 'صابون', 'صابونة', 'صابونه', 'محلول', 'مس', 'دهان', 'فيلم', 'شريط',
++    # units & numbers
++    'مجم', 'جم', 'جرام', 'مل', 'مللي', 'لتر', 'ميكرو', 'علبه', 'علبة',
++    'باكت', 'باكو', 'كرتونه', 'كرتونة', 'فلتر',
++    # trade metadata
++    'س', 'ج', 'سعر', 'جديد', 'قديم', 'تاريخ', 'بعيد', 'قريب', 'صغير', 'كبير', 'وسط',
++    'محلي', 'مستورد', 'خاص', 'نقدى', 'اجل'
++}
++
++FORM_GROUPS = {
++    'tablet': {'اقراص', 'قرص', 'كبسول', 'كبسوله', 'كبسولات', 'حبوب', 'فيلم', 'شريط'},
++    'syrup': {'شراب', 'شرب', 'معلق', 'سائل'},
++    'cream_ointment': {'كريم', 'مرهم', 'دهان'},
++    'gel': {'جل', 'جيل'},
++    'suppository': {'لبوس', 'لبوسه', 'لبوسة', 'تحاميل', 'اقماع'},
++    'injection': {'امبول', 'امبوله', 'امبولات', 'حقن', 'فيال'},
++    'drops': {'نقط', 'قطرة', 'قطره'},
++    'spray': {'بخاخ', 'بخاخة', 'بخاخه', 'سبراي'},
++    'sachet': {'فوار', 'اكياس', 'كيس'},
++    'wash': {'شامبو', 'غسول', 'صابون', 'صابونة', 'صابونه'},
++    'topical_solution': {'مس', 'محلول', 'لوشن', 'لوسيون'},
++}
++
++def extract_form_group(text: str) -> str | None:
++    norm = normalize_text(text)
++    words = set(norm.split())
++    for group_name, group_words in FORM_GROUPS.items():
++        if words & group_words:
++            return group_name
++    return None
++
++def extract_brand_tokens(text: str) -> str:
++    text = re.sub(r'(\d+)', r' \1 ', text)
++    norm = normalize_text(text)
++    norm = re.sub(r'/.*', '', norm)  # remove manufacturer after slash
++    words = [w for w in norm.split() if w not in PHARMA_STOPWORDS and not w.isdigit() and len(w) > 1]
++    return " ".join(words)
+ 
+ def normalize_for_search(text: str) -> str:
+     """Enhanced normalization for Arabic pharmaceutical search."""
+@@ -20,7 +20,7 @@
+ 
+ class FastCandidateFinder:
+     def __init__(self):
+-        # Use Character N-Grams (2 to 4 chars) to catch slight misspellings automatically
++        # Character N-Grams (2 to 4 chars)
+         self.vectorizer = TfidfVectorizer(analyzer='char_wb', ngram_range=(2, 4))
+         self.corpus = []
+         self.original_names = []
+@@ -37,8 +37,8 @@
+         if self.corpus:
+             self.matrix = self.vectorizer.fit_transform(self.corpus)
+ 
+-    def search(self, query: str, top_k: int = 5) -> list[dict]:
+-        """Returns the top_k most similar items from the warehouse."""
++    def search(self, query: str, top_k: int = 6) -> list[dict]:
++        """Returns the top_k most similar items from the warehouse with pharmaceutical validation."""
+         if not self.corpus:
+             return []
+             
+@@ -48,8 +48,11 @@
+         q_vec = self.vectorizer.transform([q_norm])
+         sims = cosine_similarity(q_vec, self.matrix).flatten()
+         
+-        # Get top K indices
+-        top_indices = np.argsort(sims)[-top_k:][::-1]
++        # Look at top candidates
++        top_indices = np.argsort(sims)[-top_k * 3:][::-1]
++        
++        req_brand = extract_brand_tokens(query)
++        req_form = extract_form_group(query)
+         
+         results = []
+         for idx in top_indices:
+@@ -56,8 +56,34 @@
+-            if score > 0.1:  # Ignore completely unrelated items
++            cand_name = self.original_names[idx]
++            cand_brand = extract_brand_tokens(cand_name)
++            cand_form = extract_form_group(cand_name)
++            
++            # Rule 1: Zero tolerance for conflicting dosage forms (Tablets vs Syrup, Cream vs Suppository, etc.)
++            if req_form and cand_form and req_form != cand_form:
++                continue
++                
++            # Rule 2: Brand similarity check (Levenshtein / Token sort)
++            words_req = req_brand.split()
++            words_cand = cand_brand.split()
++            if len(words_req) > 1 or len(words_cand) > 1:
++                brand_sim = fuzz.token_sort_ratio(req_brand, cand_brand)
++            else:
++                brand_sim = fuzz.ratio(req_brand, cand_brand)
++                
++            # Check prefix match for brand names
++            if req_brand and cand_brand:
++                if req_brand.startswith(cand_brand) or cand_brand.startswith(req_brand):
++                    brand_sim = max(brand_sim, 80)
++                    
++            # Rule 3: Only accept candidates that share the brand name (>=58%) OR very high TF-IDF (>=0.50)
++            if brand_sim >= 58 or score >= 0.50:
+                 results.append({
+                     "id": self.ids[idx],
+-                    "name": self.original_names[idx],
+-                    "score": score
++                    "name": cand_name,
++                    "score": score,
++                    "brand_sim": brand_sim
+                 })
++                if len(results) >= top_k:
++                    break
++                    
+         return results
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

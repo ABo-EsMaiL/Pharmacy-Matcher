@@ -1,0 +1,54 @@
+
+The command exited with code 0.
+Output:
+    serverStatusInterval = setInterval(updateServerStatus, 5000);
+
+    setupDragAndDrop();
+
+});
+
+
+
+// Logs Logic
+
+window.addEventListener('new_log', function(e) {
+
+    // 1. Update the main system logs textarea
+
+    const logArea = document.getElementById('system-logs');
+
+    if (logArea) {
+
+        logArea.value += e.detail + '\n';
+
+        logArea.scrollTop = logArea.scrollHeight;
+
+    }
+
+    
+
+    // 2. Update the floating widget terminal if it's visible
+
+    const progressModal = document.getElementById('progress-modal');
+
+    if (progressModal && progressModal.style.display === 'flex') {
+
+        const termEl = document.getElementById('pipeline-log-terminal');
+
+        if (termEl) {
+
+            const newLog = document.createElement('div');
+
+            newLog.innerText = e.detail;
+
+            termEl.appendChild(newLog);
+
+            termEl.scrollTop = termEl.scrollHeight;
+
+        }
+
+    }
+
+});
+
+

@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Intended Salam:     150
+Intended Amr:       15
+Intended Unmatched: 35
+Total Audit Items:  200
+

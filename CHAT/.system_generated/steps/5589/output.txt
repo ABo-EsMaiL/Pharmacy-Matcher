@@ -1,0 +1,18 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -438,9 +438,9 @@
+                                         if has_al_r != has_al_w:
+                                             r_strip = first_r[2:] if has_al_r else first_r
+                                             w_strip = first_w[2:] if has_al_w else first_w
+-                                            if fuzz.ratio(r_strip, w_strip) < 85:
+-                                                b_sim = min(b_sim, 50)
+-                                                
++                                            if (first_r in BRAND_FAMILIES or first_w in BRAND_FAMILIES) and fuzz.ratio(req_b, wh_b) < 80:
++                                        status = "no_match"
++
+                                     if b_sim < 65:
+                                         status = "no_match"
+                                         
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

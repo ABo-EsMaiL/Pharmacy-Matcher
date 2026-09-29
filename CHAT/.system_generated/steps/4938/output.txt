@@ -1,0 +1,36 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+=== PROC-006 (results_PROC-006.xlsx) ===
+  ملخص: 13 rows
+  مخزن الحياة فارم اسكندريه-170.p: 11 rows
+  جملة العمروووو.pdf: 3 rows
+  السلام شبين.pdf: 21 rows
+  الهضبة الاثنين نقدى0.pdf: 32 rows
+  كيور فارما خاص.pdf: 29 rows
+  المكرومي المنصورة.pdf: 23 rows
+  لم يُعثر عليه: 465 rows
+  يحتاج مراجعة: 33 rows
+=== PROC-005 (results_PROC-005.xlsx) ===
+  ملخص: 13 rows
+  جملة العمروووو.pdf: 3 rows
+  السلام شبين.pdf: 19 rows
+  الهضبة الاثنين نقدى0.pdf: 28 rows
+  مخزن الحياة فارم اسكندريه-170.p: 11 rows
+  كيور فارما خاص.pdf: 27 rows
+  المكرومي المنصورة.pdf: 21 rows
+  لم يُعثر عليه: 492 rows
+  يحتاج مراجعة: 7 rows
+=== PROC-004 (results_PROC-004.xlsx) ===
+  ملخص: 13 rows
+  جملة العمروووو.pdf: 2 rows
+  السلام شبين.pdf: 19 rows
+  كيور فارما خاص.pdf: 29 rows
+  مخزن الحياة فارم اسكندريه-170.p: 13 rows
+  الهضبة الاثنين نقدى0.pdf: 40 rows
+  المكرومي المنصورة.pdf: 21 rows
+  لم يُعثر عليه: 485 rows
+  يحتاج مراجعة: 2 rows
+

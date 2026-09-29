@@ -1,0 +1,71 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -157,6 +157,7 @@
+ 
+     def _process_worker(self, process_id, shortage_paths, warehouse_paths):
+         try:
++            self.add_log(f"--- بدء عملية جديدة [{process_id}] ---")
+             proc_dir = self.db.get_process_dir(process_id)
+             
+             # Copy files to process directory
+@@ -188,6 +188,7 @@
+             config.local_api_key = settings.get('local_api_key', '') or config.local_api_key
+             config.local_model = settings.get('local_model', '') or config.local_model
+             
++            self.add_log("[PROCESS] Config loaded.")
+             if self.window:
+                 self.window.evaluate_js("window.dispatchEvent(new CustomEvent('process_update', {detail: {process_id: '%s', status: 'processing', message: 'جاري استخراج البيانات من الملفات...'}}));" % process_id)
+             
+@@ -194,6 +194,11 @@
+             api_key = settings.get('unstructured_api_key', '') or config.unstructured_api_key
++            self.add_log("[PROCESS] Reading Shortages files...")
+             shortage_data = read_input_files(copied_shortages, role="shortages", api_key=api_key)
++            self.add_log(f"[PROCESS] Read {len(shortage_data)} shortage files.")
++            
++            self.add_log("[PROCESS] Reading Warehouse files...")
+             warehouse_data = read_input_files(copied_warehouses, role="warehouse", api_key=api_key)
++            self.add_log(f"[PROCESS] Read {len(warehouse_data)} warehouse files.")
+             
+             # Flatten shortages
+             all_shortages = []
+@@ -200,5 +200,7 @@
+                 all_shortages.extend(file_items)
+             
++            self.add_log(f"[PROCESS] Extracted total {len(all_shortages)} shortage items. Starting coordinator...")
++            
+             if self.window:
+                 self.window.evaluate_js("window.dispatchEvent(new CustomEvent('process_update', {detail: {process_id: '%s', status: 'processing', message: 'جاري مطابقة %d صنف...'}}));" % (process_id, len(all_shortages)))
+             
+@@ -205,6 +205,7 @@
+             coordinator = FastCoordinator(config)
+             results = coordinator.process(all_shortages, warehouse_data)
+             
++            self.add_log(f"[PROCESS] Matching completed.")
+             if self.window:
+                 self.window.evaluate_js("window.dispatchEvent(new CustomEvent('process_update', {detail: {process_id: '%s', status: 'processing', message: 'جاري حفظ النتائج...'}}));" % process_id)
+                 
+@@ -211,5 +211,6 @@
+             out_file = proc_dir / 'output' / 'results.xlsx'
+             write_results_excel(results, out_file)
++            self.add_log(f"[PROCESS] Saved results to {out_file.name}")
+             
+             # Update DB
+             summary = results.get("summary", {})
+@@ -222,6 +222,7 @@
+                 output_file=str(out_file)
+             )
+             
++            self.add_log(f"--- اكتملت العملية بنجاح [{process_id}] ---")
+             if self.window:
+                 self.window.evaluate_js("window.dispatchEvent(new CustomEvent('process_complete', {detail: {process_id: '%s'}}));" % process_id)
+                 
+@@ -228,5 +228,6 @@
+             import traceback
+             traceback.print_exc()
++            self.add_log(f"[PROCESS ERROR] Exception occurred: {str(e)}")
+             self.db.update_process(process_id, status='error')
+             err_msg = str(e).replace("'", "\\'").replace("\n", " ")
+             if self.window:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

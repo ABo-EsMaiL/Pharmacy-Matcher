@@ -1,0 +1,27 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -794,12 +794,13 @@
+                     </button>
+                 </div>
+ 
+-                <div id="progress-area" class="progress-overlay hidden">
+-                    <div class="progress-box">
+-                        <div class="spinner"></div>
+-                        <h3 id="progress-text">جاري معالجة الملفات...</h3>
+-                        <p>يرجى الانتظار، قد تستغرق العملية بعض الوقت حسب حجم الملفات.</p>
+-                    </div>
++                <div id="progress-area" class="hidden" style="margin-top: 30px; text-align: center;">
++                    <div class="spinner" style="margin-bottom: 20px;"></div>
++                    <h3 id="progress-text">جاري معالجة الملفات...</h3>
++                    <div style="width: 100%; max-width: 400px; height: 8px; background: #e2e8f0; border-radius: 4px; margin: 15px auto; overflow: hidden;">
++                        <div id="progress-bar-fill" style="width: 10%; height: 100%; background: var(--primary); transition: width 0.5s ease;"></div>
++                    </div>
++                    <p style="color: var(--text-muted);">يرجى الانتظار، قد تستغرق العملية بعض الوقت حسب حجم الملفات.</p>
+                 </div>
+             </div>
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

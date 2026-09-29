@@ -1,0 +1,21 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-11247
+Status: DONE
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-11247.log
+Log output:
+<truncated 70 lines>
+Parsed: Trade='بيديا ستارت 1', Strength='', Form='لبن'
+--------------------------------------------------
+Shortage: 'موكسيسيارو بلس قطرة'
+  Candidate: 'سينارو بلس قطرة' (كيور_فارما_خاص_6532a22310) [Score: 82.35294117647058]
+  Parsed: Trade='سينارو بلس', Strength='', Form='قطرة'
+--------------------------------------------------
+Shortage: 'ينسون ايزيس س ج'
+  Candidate: 'ايزيس ينسون بالليمون 20 فلتر' (الهضبة_الاثنين_نقدى0_6a3e48e076) [Score: 84.61538461538461]
+  Parsed: Trade='ايزيس ينسون بالليمون', Strength='', Form='فلتر'
+--------------------------------------------------
+Shortage: 'يورينكس كبسول'
+  Candidate: 'ديلاريكس كبسول' (كيور_فارما_خاص_6532a22310) [Score: 81.48148148148148]
+  Parsed: Trade='ديلاريكس', Strength='', Form='كبسول'
+--------------------------------------------------
+
+Last progress: 3s ago

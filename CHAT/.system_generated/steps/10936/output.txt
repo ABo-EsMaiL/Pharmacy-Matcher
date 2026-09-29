@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+Port 8000 status: FREE
+Port 8001 status: FREE
+

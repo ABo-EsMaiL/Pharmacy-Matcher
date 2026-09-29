@@ -1,0 +1,72 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio-vision\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -824,9 +824,9 @@
+             return {
+                 text: fullText.trim(),
+                 is_running: isRunning,
+-                is_done: isDone,
+-                has_cancel_btn: Boolean(cancelBtn),
+-                run_btn_disabled: Boolean(isRunDisabled),
++                is_run_disabled: isRunDisabled,
++                button_text: buttonText,
++                is_done: !isRunning,
+                 has_error: false,
+                 error_text: "",
+                 new_model_turn_started: newModelTurnStarted,
+@@ -861,6 +861,8 @@
+ 
+             current_text = state.get("text", "")
+             is_running = state.get("is_running", False)
++            is_run_disabled = state.get("is_run_disabled", False)
++            button_text = state.get("button_text", "")
+             is_done = state.get("is_done", False)
+             new_model_turn_started = state.get("new_model_turn_started", False)
+             has_error = state.get("has_error", False)
+@@ -910,7 +910,7 @@
+                     # No character growth on this tick
+                     if is_running:
+                         # ------------------------------------------------------------------
+-                        # CHECK 1 (Trigger active: Cancel generation button or spinner active):
++                        # CHECK 1 (Trigger active: Button is Stop or spinner active):
+                         # As long as is_running is True, the model is actively thinking or
+                         # streaming tokens. DO NOT TIMEOUT! NEVER ABORT!
+                         # ------------------------------------------------------------------
+@@ -917,19 +917,23 @@
+                     else:
+                         # ------------------------------------------------------------------
+                         # CHECK 1 TRANSITION:
+-                        # Button transitioned out of 'Cancel generation' and spinners stopped.
++                        # Button transitioned away from Stop state.
+                         # Wait stability_duration to allow final DOM flush.
+-                        # ------------------------------------------------------------------
+-                        if stability_start_time is None:
+-                            stability_start_time = now
+-                        elif (now - stability_start_time) >= t_cfg["stability_duration"]:
+-                            current_state = self.STATE_RESPONSE_COMPLETED
+-                            logger.info(
+-                                f"[{case_count} cases] State -> RESPONSE_COMPLETED via trigger "
+-                                f"(Button transitioned to finished/disabled; stable for {t_cfg['stability_duration']:.1f}s at {len(current_text)} chars)"
+-                            )
+-                            yield {"delta": "", "text": current_text}
+-                            break
++                        # Only settle if we already have text OR if elapsed is > 5.0s.
++                        # ------------------------------------------------------------------
++                        if len(current_text) == 0 and elapsed < 5.0:
++                            stability_start_time = None
++                        else:
++                            if stability_start_time is None:
++                                stability_start_time = now
++                            elif (now - stability_start_time) >= t_cfg["stability_duration"]:
++                                current_state = self.STATE_RESPONSE_COMPLETED
++                                logger.info(
++                                    f"[{case_count} cases] State -> RESPONSE_COMPLETED via trigger "
++                                    f"(Button: '{button_text}', is_run_disabled={is_run_disabled}; stable for {t_cfg['stability_duration']:.1f}s at {len(current_text)} chars)"
++                                )
++                                yield {"delta": "", "text": current_text}
++                                break
+ 
+                     # Always yield the current state so non-streaming callers can access text
+                     yield {"delta": "", "text": current_text}
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

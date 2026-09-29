@@ -1,0 +1,16 @@
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+[*] Processing PDF file: المكرومي المنصورة.pdf
+[+] Loaded 503 items from alongside JSON: المكرومي المنصورة.json
+Betaderm ointment candidates in Makroumi:
+   بيتادين غرغرة score: 0.34550227253435933
+   بيكادين ٣٠٠ مجم جديد ٤٥٠ج score: 0.11467924920776473
+
+Zidamicin candidates in Makroumi:
+   جاراميسين كريم سعر ٣٧ ج score: 0.6055999170991552

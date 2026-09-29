@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+[+] Computed SHA-256: 9f96dd50501f8bde ...
+[+] Resolved Cache Dir: D:\AI_Engineer\Pharmacy-agy-vision\data\processes\PROC-015\cache\vision\المكرومي_المنصورة_9f96dd5050
+[+] JSON cleaner verified successfully!
+
+[+] All Vision Unit Tests Passed!
+

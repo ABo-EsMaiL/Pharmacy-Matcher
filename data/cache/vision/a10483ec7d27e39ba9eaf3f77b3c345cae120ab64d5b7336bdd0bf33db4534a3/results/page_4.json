@@ -1,0 +1,381 @@
+{
+  "page": 4,
+  "items": [
+    {
+      "item_name_raw": "سيريلاك ارز وحديد125مجم",
+      "trade_name": "سيريلاك",
+      "strength": "125مجم",
+      "form": "",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فاستاريل ام ار اقراص/باكو100",
+      "trade_name": "فاستاريل ام ار",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فافرين 100 م ج م قراص",
+      "trade_name": "فافرين",
+      "strength": "100 م ج م",
+      "form": "قراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فاكتو مرهم / باكت56",
+      "trade_name": "فاكتو",
+      "strength": "",
+      "form": "مرهم",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فاكتولبوس باكت 108",
+      "trade_name": "فاكتو",
+      "strength": "",
+      "form": "لبوس",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فايركتابلاس 4قرص/باكت72",
+      "trade_name": "فايركتابلاس",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فلاجيل شراب /باكو25",
+      "trade_name": "فلاجيل",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فلاكسوبرايد اقراص س ج",
+      "trade_name": "فلاكسوبرايد",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فلوفير قراص",
+      "trade_name": "فلوفير",
+      "strength": "",
+      "form": "قراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فلوكسامو اقراص/باكو35",
+      "trade_name": "فلوكسامو",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "وموكس1مجم كبسول س ج باكت 0",
+      "trade_name": "وموكس",
+      "strength": "1مجم",
+      "form": "كبسول",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فلوموكس250شراب",
+      "trade_name": "فلوموكس",
+      "strength": "250",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فلوموكس500كبسول باكت240",
+      "trade_name": "فلوموكس",
+      "strength": "500",
+      "form": "كبسول",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "يكتور50مجم كبسول س ج/ باكت 3",
+      "trade_name": "يكتور",
+      "strength": "50مجم",
+      "form": "كبسول",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فولتارين3امبول باكت 25",
+      "trade_name": "فولتارين",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فولتارين6امبول/باكو15استلم بتشغيل",
+      "trade_name": "فولتارين",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فوناسيدان20مجم",
+      "trade_name": "فوناسيدان",
+      "strength": "20مجم",
+      "form": "",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ياجر فايزر100مجم استلام تشغلية 0",
+      "trade_name": "ياجر فايزر",
+      "strength": "100مجم",
+      "form": "",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فيجاموكس قطرة باكت 10",
+      "trade_name": "فيجاموكس",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فيدروب نقط سعر جديد/ باكت 60",
+      "trade_name": "فيدروب",
+      "strength": "",
+      "form": "نقط",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فيرسيرك16مجم اقراص",
+      "trade_name": "فيرسيرك",
+      "strength": "16مجم",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فيرسيرك24مجم اقراص باكت60",
+      "trade_name": "فيرسيرك",
+      "strength": "24مجم",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فيرميزول شراب / باكت 32",
+      "trade_name": "فيرميزول",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فيرميزول6قرص/باكو54",
+      "trade_name": "فيرميزول",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "يروجلوبين كبسول س جديد باكت 00",
+      "trade_name": "يروجلوبين",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "اجلوز بلس50/1000باكت 24سعر -",
+      "trade_name": "اجلوز بلس",
+      "strength": "50/1000",
+      "form": "",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فيوسى كريم 30مجم باكت 64",
+      "trade_name": "فيوسى",
+      "strength": "30مجم",
+      "form": "كريم",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "فيوسيدين كريم 20 جرام وسط",
+      "trade_name": "فيوسيدين",
+      "strength": "20 جرام",
+      "form": "كريم",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كارياميد كريم منفيس",
+      "trade_name": "كارياميد",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كارديلول6.25مجم اقراص",
+      "trade_name": "كارديلول",
+      "strength": "6.25مجم",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كارنيفيتا ادفانس رجال/باكو16",
+      "trade_name": "كارنيفيتا ادفانس رجال",
+      "strength": "",
+      "form": "",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كاست10مجم",
+      "trade_name": "كاست",
+      "strength": "10مجم",
+      "form": "",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كال ماج د باكت 300",
+      "trade_name": "كال ماج د",
+      "strength": "",
+      "form": "",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كالاميل لوسيون باكت 40",
+      "trade_name": "كالاميل",
+      "strength": "",
+      "form": "لوسيون",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كالهيبارين 5000باكت 60",
+      "trade_name": "كالهيبارين",
+      "strength": "5000",
+      "form": "",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كتافاست اكياس سعرقديم باكت 20",
+      "trade_name": "كتافاست",
+      "strength": "",
+      "form": "اكياس",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "تافلام 50مجم سعر جديد / باكت 0",
+      "trade_name": "تافلام",
+      "strength": "50مجم",
+      "form": "",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كتافلام 6 امبول/باكو15",
+      "trade_name": "كتافلام",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كلوبكس75مجم اقراص / باكت 60",
+      "trade_name": "كلوبكس",
+      "strength": "75مجم",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كوتارج 320 /12.5مجم 14قرص",
+      "trade_name": "كوتارج",
+      "strength": "320 /12.5مجم",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كوديلاتيرول كبسول",
+      "trade_name": "كوديلاتيرول",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كوستاريب 100 م ج م قراص",
+      "trade_name": "كوستاريب",
+      "strength": "100 م ج م",
+      "form": "قراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كوفيرام 5/5مجم 30قرص",
+      "trade_name": "كوفيرام",
+      "strength": "5/5مجم",
+      "form": "قرص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كولوفرين دى اقراص/باكو60",
+      "trade_name": "كولوفرين دى",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كونترلوك40مجم سعرج باكت 100",
+      "trade_name": "كونترلوك",
+      "strength": "40مجم",
+      "form": "",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "كيورام457شراب / باكت 25",
+      "trade_name": "كيورام",
+      "strength": "457",
+      "form": "شراب",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "لارى برو اقراص/باكو 150",
+      "trade_name": "لارى برو",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 4,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    }
+  ]
+}

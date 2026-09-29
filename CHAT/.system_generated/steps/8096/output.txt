@@ -1,0 +1,41 @@
+
+The command exited with code 0.
+Output:
+================================================================================
+VERIFYING BATCH SIZE 50 IN PHARMACY MATCHER & MSEMAX GATEWAY
+================================================================================
+[✓] Gateway: MSEMAX (AIStudio Web Hook)
+[✓] Active Model: Gemini 3.8 Flash
+gemini-3.8-fl... (Verified: True)
+[✓] Thinking Mode: High (Verified: True)
+[✓] Clear Chat On Request: True
+
+[+] Built exactly 50-case batch (10 replicates of 5 canonical rules).
+
+[*] Dispatching 50 cases to MSEMAX Gateway...
+
+[✓] SUCCESS: Coordinator received response in 24.01s!
+    - Results count: 50
+    - Raw response length: 5817 characters
+    - Returned Case IDs: 50 / 50
+    [✓] EXACT MATCH: All 50 case IDs returned successfully!
+
+[✓] Rule Compliance Verification across 50 cases:
+    - Strength mismatch -> no_match: True (10 cases)
+    - Dosage form diff  -> review:   True (10 cases)
+    - Pack size diff    -> match:    True (10 cases)
+    - OCR corruption    -> match:    True (10 cases)
+    - Generic / diff brand -> no_match: True (10 cases)
+
+[✓] ALL 50 CASES FULLY VALIDATED AND COMPLIANT!
+
+================================================================================
+VERIFYING FAST_COORDINATOR BATCH CHUNKING LOGIC
+================================================================================
+Total dummy items: 105
+Calculated batches count: 3
+  - Batch 1: 50 items
+  - Batch 2: 50 items
+  - Batch 3: 5 items
+[✓] Batch chunking arithmetic for 50 items verified successfully!
+

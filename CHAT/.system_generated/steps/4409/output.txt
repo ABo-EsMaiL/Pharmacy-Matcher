@@ -1,0 +1,39 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+TEST RESULTS:
+[
+  {
+    "case_id": "T1",
+    "status": "review",
+    "item_id": "C1",
+    "reason": "نفس اسم المنتج ونفس الشكل (نقط)، لكن يوجد اختلاف صريح في حجم العبوة: المطلوب 15 ملل والمتاح 5 ملل."
+  },
+  {
+    "case_id": "T2",
+    "status": "match",
+    "item_id": "C2",
+    "reason": ""
+  },
+  {
+    "case_id": "T3",
+    "status": "match",
+    "item_id": "C3",
+    "reason": ""
+  },
+  {
+    "case_id": "T4",
+    "status": "match",
+    "item_id": "C4",
+    "reason": ""
+  },
+  {
+    "case_id": "T5",
+    "status": "review",
+    "item_id": "C5",
+    "reason": "نفس المنتج والشكل والتركيز، لكن يوجد اختلاف في بيانات العبوة: المطلوب 20 قرص والمتاح مذكور 32ب."
+  }
+]
+

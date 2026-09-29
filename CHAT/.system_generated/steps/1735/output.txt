@@ -1,0 +1,18 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -528,6 +528,12 @@
+         except Exception as e:
+             return {"success": False, "error": str(e)}
+ 
++    def open_excel(self, process_id: str) -> dict:
++        return self.open_result_file(process_id)
++
++    def open_folder(self, process_id: str) -> dict:
++        return self.open_result_folder(process_id)
++
+     def on_closing(self):
+         self.server_manager.cleanup()
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

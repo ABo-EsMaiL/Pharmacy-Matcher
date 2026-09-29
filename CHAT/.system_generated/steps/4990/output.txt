@@ -1,0 +1,4 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":29,"LineContent":"    Checks local cache first, then existing server jobs, and finally uploads if new."}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":62,"LineContent":"                print(f\"[+] Loaded {len(cached_items)} items from local cache: {filepath.name}\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":218,"LineContent":"            print(f\"[+] Saved valid local cache for: {filepath.name} ({len(items)} items)\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":243,"LineContent":"                    print(f\"[+] Saved valid local cache via Gemini for: {filepath.name} ({len(items)} items)\")"}

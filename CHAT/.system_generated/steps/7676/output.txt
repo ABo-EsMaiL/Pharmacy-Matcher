@@ -1,0 +1,5 @@
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":377,"LineContent":"    STATE_RESPONSE_IN_PROGRESS = \"RESPONSE_IN_PROGRESS\""}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":730,"LineContent":"                    current_state = self.STATE_RESPONSE_IN_PROGRESS"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":734,"LineContent":"                        f\"[{case_count} cases] State -\u003e RESPONSE_IN_PROGRESS at {t_turn_detected - t_submit:.2f}s \""}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":744,"LineContent":"            # 2. State: RESPONSE_IN_PROGRESS"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":746,"LineContent":"            if current_state == self.STATE_RESPONSE_IN_PROGRESS:"}

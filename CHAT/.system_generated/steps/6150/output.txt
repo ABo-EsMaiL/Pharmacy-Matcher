@@ -1,0 +1,20 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -42,13 +42,10 @@
+         input("Press Enter to exit...")
+         sys.exit(1)
+ 
+-    import time
+-    html_url = f"{html_path.resolve().as_uri()}?v={int(time.time())}"
+-
+     # Create the main window
+     window = webview.create_window(
+         title="Pharmacy Matcher — نظام مطابقة الأدوية",
+-        url=html_url,
++        url=str(html_path.resolve()),
+         js_api=api,
+         width=1200,
+         height=800,
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

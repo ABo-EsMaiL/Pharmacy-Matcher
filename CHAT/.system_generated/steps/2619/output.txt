@@ -1,0 +1,16 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -515,8 +515,8 @@
+         self.add_log(f"--- Starting Re-run for Process [{process_id}] ---")
+         
+         t = threading.Thread(
+-            target=self._run_pipeline_thread,
+-            args=(process_id, shortage_paths, warehouse_paths),
++            target=self._process_worker,
++            args=(process_id, shortage_paths, warehouse_paths, True),
+             daemon=True
+         )
+         t.start()
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -704,6 +704,8 @@
+         # Check if MSEMAX returned an error string inside content
+         if content.strip().startswith("[Error:"):
+             self._log_provider_error(url, model, inputs, content, "MSEMAX_ERROR_STRING")
++            if "expired" in content.lower() or "chat-requirements" in content.lower():
++                raise RuntimeError(f"انتهت صلاحية جلسة {model} (Session Expired). يرجى فتح تبويب سيرفرات الذكاء الاصطناعي والضغط على 'فتح الجلسة (Login)' لتسجيل الدخول مجدداً: {content.strip()}")
+             raise RuntimeError(f"MSEMAX Error: {content.strip()}")
+ 
+         if "too_many_tool_calls" in content.lower():
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,6 @@
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":1096,"LineContent":"    has_session = os.path.exists(\"session_data.json\")"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\docker-compose.yml","LineNumber":9,"LineContent":"# Note: session_data.json is mounted as a volume so you can"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\docker-compose.yml","LineNumber":19,"LineContent":"      - ./session_data.json:/app/session_data.json"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\get_session.py","LineNumber":108,"LineContent":"        with open(\"session_data.json\", \"w\", encoding=\"utf-8\") as f:"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\get_session.py","LineNumber":112,"LineContent":"        print(\"Session data saved to session_data.json!\")"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\README.md","LineNumber":97,"LineContent":"\u003e 4. Once the prompt input box is ready on screen, the script automatically confirms your session and saves `session_data.json`."}

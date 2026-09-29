@@ -1,0 +1,219 @@
+
+The command exited with code 0.
+Output:
+<truncated 1 lines>
+
+1977:         servers_desc: "Manage MSEMAX servers (ChatGPT & Google AI Studio), test latency, and select 
+1978:         gaistudio_server_title: "MSEMAX (Google AI Studio)",
+
+1979:         chatgpt_server_title: "MSEMAX (ChatGPT)",
+
+1980:         lbl_server_port: "Port:",
+
+1981:         lbl_server_model: "Model:",
+
+1982:         lbl_server_url: "Endpoint:",
+
+1983:         lbl_server_dir: "Folder Path:",
+
+1986:         btn_start_instance: "Start Server",
+
+1987:         btn_stop_instance: "Stop Server",
+
+1990:         test_panel_title: "Live Server Diagnostic Log:",
+
+2058:     // Update server status text if currently static
+
+2059:     updateServerStatusTextOnly();
+
+2072:         'screen-servers': t.servers_title
+
+2083: function updateServerStatusTextOnly() {
+
+2084:     const text = document.getElementById('server-status-text');
+
+2085:     const btn = document.getElementById('btn-toggle-server');
+
+2086:     const topText = document.getElementById('top-bar-server-text');
+
+2088:     if (isServerRunning) {
+
+2089:         if (text) text.textContent = t.server_running;
+
+2090:         if (btn) btn.innerHTML = `<i class="ph ph-stop"></i> ${t.btn_stop_server}`;
+
+2091:         if (topText) topText.textContent = t.server_running;
+
+2093:         if (text) text.textContent = t.server_stopped;
+
+2094:         if (btn) btn.innerHTML = `<i class="ph ph-play"></i> ${t.btn_start_server}`;
+
+2095:         if (topText) topText.textContent = t.server_stopped;
+
+2120: let serverStatusInterval = null;
+
+2121: let isServerRunning = false;
+
+2128:     updateServerStatus();
+
+2129:     serverStatusInterval = setInterval(updateServerStatus, 5000);
+
+2821: // --- Settings & Server Logic ---
+
+2905: async function updateServerStatus(statusData) {
+
+2906:     const indicator = document.getElementById('server-indicator');
+
+2907:     const text = document.getElementById('server-status-text');
+
+2908:     const btn = document.getElementById('btn-toggle-server');
+
+2916:             const status = await window.pywebview.api.get_server_status();
+
+2919:             console.error('Failed to get server status', error);
+
+2926:         if (text) text.textContent = t.server_running;
+
+2927:         if (btn) btn.innerHTML = `<i class="ph ph-stop"></i> ${t.btn_stop_server}`;
+
+2928:         isServerRunning = true;
+
+2931:         if (text) text.textContent = t.server_stopped;
+
+2932:         if (btn) btn.innerHTML = `<i class="ph ph-play"></i> ${t.btn_start_server}`;
+
+2933:         isServerRunning = false;
+
+2936:     // Update active server labels across the UI
+
+2939:             const infoStr = await window.pywebview.api.get_servers_info();
+
+2941:             const activeKey = info.active_server || 'gaistudio';
+
+2942:             const activeSrv = info.servers?.[activeKey];
+
+2945:                 const sidebarName = document.getElementById('sidebar-active-server-name');
+
+2948:                 const homeText = document.getElementById('home-active-server-text');
+
+2951:                         ? `Active Matching Server: ${shortName} • ${activeSrv.default_model || ''}`
+
+2952:                         : `سيرفر المطابقة النشط: ${shortName} • ${activeSrv.default_model || ''}`;
+
+2955:                 const topText = document.getElementById('top-bar-server-text');
+
+2957:                     topText.textContent = `${shortName}: ` + (isRunning ? t.server_running : t.serve
+2962:         console.error('Error updating active server label:', e);
+
+2965:     // Update top bar server badge
+
+2966:     const topBadge = document.getElementById('top-bar-server-badge');
+
+2968:         topBadge.className = isRunning ? 'server-badge-pill running' : 'server-badge-pill stopped';
+
+2971:     // Also auto-refresh servers screen if it is active
+
+2972:     const srvScreen = document.getElementById('screen-servers');
+
+2974:         loadServersUI();
+
+2978: async function toggleServer() {
+
+2980:         const status = await window.pywebview.api.get_server_status();
+
+2982:             await window.pywebview.api.stop_server();
+
+2983:             showToast('تم إيقاف السيرفر', 'success');
+
+2985:             await window.pywebview.api.start_server();
+
+2986:             showToast('تم تشغيل السيرفر', 'success');
+
+2988:         updateServerStatus();
+
+2990:         showToast('حدث خطأ أثناء تبديل حالة السيرفر', 'error');
+
+2994: const btnToggle = document.getElementById('btn-toggle-server');
+
+2995: if (btnToggle) btnToggle.addEventListener('click', toggleServer);
+
+2997: // --- AI Servers Manager Logic ---
+
+2998: async function loadServersUI() {
+
+3003:         const infoStr = await window.pywebview.api.get_servers_info();
+
+3005:         const servers = info.servers || {};
+
+3006:         const activeKey = info.active_server || 'gaistudio';
+
+3009:         const activeSrv = servers[activeKey];
+
+3020:                 : `سيتم توجيه جميع دفعات مطابقة النواقص تلقائياً إلى هذا السيرفر (${activeSrv ? acti
+3023:         // Update each server card
+
+3025:             const srv = servers[key];
+
+3028:             const card = document.getElementById(`card-server-${key}`);
+
+3081:                     btnToggle.onclick = () => toggleServerInstance(key, false);
+
+3085:                     btnToggle.onclick = () => toggleServerInstance(key, true);
+
+3090:         console.error('Failed to load servers UI:', e);
+
+3094: async function toggleServerInstance(serverKey, startIt) {
+
+3096:     const btn = document.getElementById(`btn-toggle-${serverKey}`);
+
+3105:             showToast(currentLang === 'en' ? `Starting ${serverKey}...` : `جاري تشغيل سيرفر ${server
+3106:             res = await window.pywebview.api.start_server_instance(serverKey);
+
+3108:             showToast(currentLang === 'en' ? `Stopping ${serverKey}...` : `جاري إيقاف سيرفر ${server
+3109:             res = await window.pywebview.api.stop_server_instance(serverKey);
+
+3121:         await loadServersUI();
+
+3122:         await updateServerStatus();
+
+3126: async function setActiveServer(serverKey) {
+
+3129:         const res = await window.pywebview.api.set_active_ai_server(serverKey);
+
+3131:             const srvName = serverKey === 'gaistudio' ? 'Google AI Studio (Port 8001)' : 'ChatGPT (P
+3133:             await loadServersUI();
+
+3135:             await updateServerStatus();
+
+3145: async function testServerInstance(serverKey) {
+
+3147:     const btn = document.getElementById(`btn-test-${serverKey}`);
+
+3149:     const outputEl = document.getElementById('server-test-output');
+
+3153:         btn.innerHTML = `<i class="ph-fill ph-spinner-gap spinner"></i> <span>${t.server_testing || 
+3158:         outputEl.innerText = `[${timestamp}] Initiating live ping test to server instance '${serverK
+3162:         const res = await window.pywebview.api.test_server_instance(serverKey);
+
+3165:             const report = `[${doneTime}] ✅ SUCCESS: Server '${res.name}' responded successfully!\n`
+3173:                 `✓ This server is 100% operational and ready to process shortage matching batches.`;
+3177:             const failReport = `[${doneTime}] ❌ FAILED: Server '${serverKey}' test failed!\n` +
+
+3181:                 `💡 Suggestion: Ensure the server is started and that port ${res.port || '8000/8001'}
+3193:         await loadServersUI();
+
+3197: async function openServerSession(serverKey) {
+
+3200:         showToast(currentLang === 'en' ? `Opening login session for ${serverKey}...` : `جاري فتح متص
+3201:         const res = await window.pywebview.api.run_server_session(serverKey);
+
+3212: function clearServerTestLog() {
+
+3213:     const outputEl = document.getElementById('server-test-output');
+
+3216:         outputEl.innerText = t.test_panel_empty || 'اضغط على زر "اختبار الاتصال السريع" في أي سيرفر 
+3248:             } else if (screenId === 'screen-servers') {
+
+3249:                 loadServersUI();
+
+

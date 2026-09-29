@@ -1,0 +1,43 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -18,8 +18,8 @@
+    - You MUST match the EXACT SAME commercial trade brand name.
+    - NEVER suggest or accept alternative brand names, different trade names, or generics (e.g. Panadol is NOT Cetal, Brufen is NOT Cataflam, Augmentin is NOT Curam).
+    - If the trade brand name is different, unrelated, or an alternative product, YOU MUST RETURN "status": "no_match" (or omit it). NEVER mark different brands as "match" or "review"!
+-   - Distinct commercial prefixes (like "نيو" / "New") or distinct trade endings (like "-يتش" vs "-ين") signify different trade brands (e.g. New Carbon is NOT Eucarbon, Protoloc is NOT Controloc, Skinoren is NOT Skinorich, Grantril is NOT Grantil). Return "no_match".
+-   - Allow ONLY minor spelling variants, phonetic transliterations, or common OCR scanning typos of the SAME exact brand (e.g. dropped initial letters like 'ا', dropped middle single letters or missing dots like 'ن' or 'ب' e.g. 'فتال' for 'فنتال', visually confused OCR letters like 'ف' vs 'د' e.g. 'سيفيتيل' vs 'سيديتيل', or slight vowel variations).
++   - Distinct commercial prefixes (like "نيو" / "New") or distinct trade endings/suffixes signify different trade brands (e.g. "New X" is NOT "X", a brand ending in "-rich" is NOT "-ren"). Return "no_match".
++   - Allow ONLY minor spelling variants, phonetic transliterations, or common OCR scanning typos of the SAME exact brand (e.g. dropped initial letters like 'ا', dropped middle single letters or missing dots like 'ن' or 'ب', visually confused OCR letters like 'ف' vs 'د', or slight vowel variations).
+ 
+ 2. DOSAGE FORM & FORMULATION (ZERO TOLERANCE FOR CONFLICTS):
+    - Dosage forms MUST be strictly compatible:
+@@ -30,7 +30,7 @@
+      - Suppositories (لبوس) ONLY match Suppositories.
+      - Drops (نقط, قطرة) ONLY match Drops.
+      - Sprays (بخاخ, سبراي) ONLY match Sprays.
+-   - COMBINATION PRODUCTS (Zero Tolerance): Commercial suffixes like "كو" (Co), "كومب" (Comp), "بلس" (Plus) denote a multi-ingredient combination product (e.g. adding a diuretic or vitamin). A combination product (e.g. 'سينوبريل كو') MUST NEVER match a single-ingredient plain product ('سينوبريل'). Return "no_match".
++   - COMBINATION PRODUCTS (Zero Tolerance): Commercial suffixes like "كو" (Co), "كومب" (Comp), "بلس" (Plus) denote a multi-ingredient combination product (e.g. adding a diuretic or second active agent). A combination product (e.g. "دواء كو" / "Drug Co") MUST NEVER match a single-ingredient plain product ("دواء" / "Drug"). Return "no_match".
+    - If dosage forms or combination types conflict, YOU MUST RETURN "status": "no_match".
+ 
+ 3. STRENGTH / CONCENTRATION (ZERO TOLERANCE FOR MISMATCH):
+@@ -38,7 +38,7 @@
+    - Note vernacular and fractional equivalencies:
+      - 1000mg = 1gm (1000مجم = 1جم).
+      - 500mg = 0.5gm = نص (نصف).
+-     - 0.25mg = 250mcg = 25. مجم = ربع (e.g. 'بالموكورت 25. مجم' is identical to 'بالميكورت ربع').
++     - 0.25mg = 250mcg = 25. مجم = ربع (e.g. "ربع" equals 0.25mg / 250mcg).
+ 
+ 4. PACKAGING, PACK SIZE & WHOLESALE UNITS (MATCH vs REVIEW):
+    - "match": Same brand, same form, same strength.
+@@ -45,5 +45,5 @@
+        THIS IS A 100% MATCH ("status": "match")! NEVER mark this as review!
+-     - STRIP-TO-TABLET EQUIVALENCE: When a shortage requests standard blisters/strips (e.g. 3 شريط) and the warehouse lists the standard full pack tablet count for that drug (e.g. 12 tablets where each strip has 4 tablets, like فايركتا), this is a 100% MATCH ("status": "match")!
++     - STRIP-TO-TABLET EQUIVALENCE: When a shortage requests standard blisters/strips (e.g. 3 شريط) and the warehouse lists the standard full pack tablet count for that drug (e.g. 12 tablets where each strip contains 4 tablets), this is a 100% MATCH ("status": "match")!
+      - Manufacturer suffixes (/فاركو, /جلاكسو), commercial indicators ("س ج", "سعر جديد", "سعر قديم") do not change the product.
+    - "review": For the SAME EXACT medicine brand when there is an EXPLICIT, CONFLICTING pack count on BOTH sides (e.g. requested 30 tablets vs candidate explicitly writes 20 tablets of the same medicine).
+      - Wholesale packaging: If requested specifies retail strips/units (e.g. 2 شريط, 20 قرص) and warehouse specifies wholesale bundles/cartons (باكت / كرتونة / 32ب), mark as "review" with the reason explaining the wholesale packaging difference.
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

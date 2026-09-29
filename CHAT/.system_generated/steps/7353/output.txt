@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+Loaded 23 Google auth cookies.
+Page URL: https://accounts.google.com/v3/signin/identifier?continue=https://aistudio.google.com/prompts/new_chat&followup=https://aistudio.google.com/prompts/new_chat&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1443201293:1790263142548422
+Page Title: Sign in - Google Accounts
+Signed in to AI Studio?: False
+

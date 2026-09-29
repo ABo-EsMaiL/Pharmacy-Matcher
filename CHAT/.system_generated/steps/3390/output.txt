@@ -1,0 +1,17 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+[*] Processing PDF file: الهضبة الاثنين نقدى0.pdf
+[*] Checking if الهضبة الاثنين نقدى0.pdf is already processed on Unstructured server...
+[+] Found existing completed job on server (ID: 0e0bbc06-828d-4f69-87c7-e92dbd95df73) for الهضبة الاثنين نقدى0.pdf!
+[+] Downloaded 1071 items directly from server without re-uploading!
+Hadaba extracted items: 1071
+First 5 items:
+  {'item_name_raw': 'ابانڈوکر كبسول/باكت 120', 'source_page': None, 'source_file': 'الهضبة الاثنين نقدى0.pdf'}
+  {'item_name_raw': 'ابيماوكس 500 مج كبسول/باكت 45', 'source_page': None, 'source_file': 'الهضبة الاثنين نقدى0.pdf'}
+  {'item_name_raw': 'ابيدرم كريم/باكت 81', 'source_page': None, 'source_file': 'الهضبة الاثنين نقدى0.pdf'}
+  {'item_name_raw': 'ايبر ازول 40 مج اقراص', 'source_page': None, 'source_file': 'الهضبة الاثنين نقدى0.pdf'}
+  {'item_name_raw': 'ايروفاستين 20 مج اقراص ج/ايكو', 'source_page': None, 'source_file': 'الهضبة الاثنين نقدى0.pdf'}
+

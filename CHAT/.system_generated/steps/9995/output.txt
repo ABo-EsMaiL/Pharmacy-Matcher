@@ -1,0 +1,44 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -3039,9 +3039,13 @@
+             document.getElementById('setting-unstructured-key').value = settings.unstructured_api_key || '';
+             const profileEl = document.getElementById('setting-unstructured-profile');
+             if (profileEl) profileEl.value = settings.unstructured_profile || 'balanced';
+-            document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8000/v1/chat/completions';
++            const visionUrlEl = document.getElementById('setting-vision-url');
++            if (visionUrlEl) visionUrlEl.value = settings.vision_api_url || 'http://127.0.0.1:8001/v1/chat/completions';
++            const visionModelEl = document.getElementById('setting-vision-model');
++            if (visionModelEl) visionModelEl.value = settings.vision_model || 'gemini-3.8-flash';
++            document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8001/v1/chat/completions';
+             document.getElementById('setting-local-key').value = settings.local_api_key || '';
+-            document.getElementById('setting-model-name').value = settings.local_model || 'gpt-4o-mini';
++            document.getElementById('setting-model-name').value = settings.local_model || 'gemini-3.8-flash';
+             document.getElementById('setting-msemax-dir').value = settings.msemax_dir || '';
+         }
+     } catch (error) {
+@@ -3050,13 +3050,17 @@
+ 
+ async function saveSettings() {
+     const profileEl = document.getElementById('setting-unstructured-profile');
++    const visionUrlEl = document.getElementById('setting-vision-url');
++    const visionModelEl = document.getElementById('setting-vision-model');
+     const settings = {
+-        unstructured_api_key: document.getElementById('setting-unstructured-key').value,
++        unstructured_api_key: document.getElementById('setting-unstructured-key')?.value || '',
+         unstructured_profile: profileEl ? profileEl.value : 'balanced',
+-        local_api_url: document.getElementById('setting-local-url').value,
+-        local_api_key: document.getElementById('setting-local-key').value,
+-        local_model: document.getElementById('setting-model-name').value,
+-        msemax_dir: document.getElementById('setting-msemax-dir').value
++        vision_api_url: visionUrlEl ? visionUrlEl.value.trim() : 'http://127.0.0.1:8001/v1/chat/completions',
++        vision_model: visionModelEl ? visionModelEl.value.trim() : 'gemini-3.8-flash',
++        local_api_url: document.getElementById('setting-local-url')?.value || '',
++        local_api_key: document.getElementById('setting-local-key')?.value || '',
++        local_model: document.getElementById('setting-model-name')?.value || '',
++        msemax_dir: document.getElementById('setting-msemax-dir')?.value || ''
+     };
+     
+     try {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

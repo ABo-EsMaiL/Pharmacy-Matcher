@@ -1,0 +1,11 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1021,"LineContent":"                \u003cbutton class=\"nav-item active\" onclick=\"showScreen('screen-new', this)\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1024,"LineContent":"                \u003cbutton class=\"nav-item\" onclick=\"loadHistory(); showScreen('screen-history', this)\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1027,"LineContent":"                \u003cbutton class=\"nav-item\" onclick=\"showScreen('screen-settings', this)\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1030,"LineContent":"                \u003cbutton class=\"nav-item\" onclick=\"showScreen('screen-logs', this)\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2082,"LineContent":"            window.showScreen('screen-results');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2281,"LineContent":"        window.showScreen('screen-results');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2434,"LineContent":"        // Override showScreen to handle active states on sidebar"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2435,"LineContent":"        const originalShowScreen = window.showScreen;"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2436,"LineContent":"        window.showScreen = function(screenId, element = null) {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2438,"LineContent":"            if (typeof originalShowScreen === 'function') {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2439,"LineContent":"                originalShowScreen(screenId);"}

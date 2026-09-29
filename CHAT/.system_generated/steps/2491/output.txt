@@ -1,0 +1,23 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1201,8 +1201,15 @@
+                             <button class="btn btn-primary" onclick="applyReviews()"><i class="ph-fill ph-magic-wand"></i> <span data-i18n="btn_apply_reviews">تنفيذ التعديلات</span></button>
+                         </div>
+                     </div>
+-                    <div class="folder-action">
+-                        <button class="btn btn-text" onclick="openFolder()"><i class="ph-fill ph-folder-open"></i> <span data-i18n="btn_open_folder">فتح مجلد حفظ النتائج (Folder)</span></button>
++                    <div class="folder-action" style="display: flex; gap: 12px; justify-content: center; align-items: center; margin-top: 18px; flex-wrap: wrap;">
++                        <button class="btn btn-outline" style="border-color: var(--primary); color: var(--primary); font-weight: 600;" onclick="rerunMatching()">
++                            <i class="ph-bold ph-arrows-clockwise"></i> 
++                            <span data-i18n="btn_rerun_match">إعادة المطابقة (Re-run)</span>
++                        </button>
++                        <button class="btn btn-text" onclick="openFolder()">
++                            <i class="ph-fill ph-folder-open"></i> 
++                            <span data-i18n="btn_open_folder">فتح مجلد حفظ النتائج (Folder)</span>
++                        </button>
+                     </div>
+                 </div>
+             </div>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

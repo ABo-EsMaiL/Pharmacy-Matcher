@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_call_local.py", line 38, in <module>
+    res = coord._call_local_api(sample_inputs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py", line 300, in _call_local_api
+    raise RuntimeError(f"MSEMAX Error: {content.strip()}")
+RuntimeError: MSEMAX Error: [Error: Failed to get chat-requirements (session might be expired)]
+Testing _call_local_api directly...
+Failed with error: MSEMAX Error: [Error: Failed to get chat-requirements (session might be expired)]
+

@@ -1,0 +1,196 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -3153,10 +3153,12 @@
+     try {
+         let res;
+         if (startIt) {
+-            showToast(currentLang === 'en' ? `Starting ${serverKey}...` : `جاري تشغيل سيرفر ${serverKey}...`, 'success');
++            showToast(currentLang === 'en' ? `Starting ${serverKey}...` : `جاري تشغيل سيرفر ${serverKey}...`, 'info');
++            appendServerLog(`[SYSTEM] Starting server instance '${serverKey}'...`);
+             res = await window.pywebview.api.start_server_instance(serverKey);
+         } else {
+-            showToast(currentLang === 'en' ? `Stopping ${serverKey}...` : `جاري إيقاف سيرفر ${serverKey}...`, 'success');
++            showToast(currentLang === 'en' ? `Stopping ${serverKey}...` : `جاري إيقاف سيرفر ${serverKey}...`, 'info');
++            appendServerLog(`[SYSTEM] Stopping server instance '${serverKey}'...`);
+             res = await window.pywebview.api.stop_server_instance(serverKey);
+         }
+ 
+@@ -3163,8 +3163,19 @@
++            appendServerLog(`[SYSTEM] Server '${serverKey}' operation succeeded: ${res.message || 'OK'}`);
+             showToast(res.message || (currentLang === 'en' ? 'Operation successful' : 'تمت العملية بنجاح'), 'success');
+         } else {
+-            showToast((currentLang === 'en' ? 'Error: ' : 'خطأ: ') + (res.error || 'Failed'), 'error');
+-        }
+-    } catch (e) {
++            appendServerLog(`[WARNING] Server '${serverKey}' stop/start: ${res.message || res.error || 'Failed'}`);
++            if (res.elevated) {
++                showCustomConfirm(
++                    currentLang === 'en' ? 'Administrator Process' : 'تنبيه: السيرفر يعمل كمسؤول',
++                    res.message || 'السيرفر يعمل في نافذة PowerShell سابقة بصلاحيات المسؤول. يرجى إغلاقه يدوياً.',
++                    () => {}
++                );
++            } else {
++                showToast((currentLang === 'en' ? 'Error: ' : 'خطأ: ') + (res.message || res.error || 'Failed'), 'error');
++            }
++        }
++    } catch (e) {
++        appendServerLog(`[ERROR] Connection error with server '${serverKey}': ${e.message}`);
+         showToast(currentLang === 'en' ? 'Connection error' : 'حدث خطأ في الاتصال', 'error');
+         console.error(e);
+     } finally {
+@@ -3178,6 +3178,7 @@
+         const res = await window.pywebview.api.set_active_ai_server(serverKey);
+         if (res.success) {
+             const srvName = serverKey === 'gaistudio' ? 'Google AI Studio (Port 8001)' : 'ChatGPT (Port 8000)';
++            appendServerLog(`[SYSTEM] Switched active matching provider to: ${srvName}`);
+             showToast(currentLang === 'en' ? `Activated ${srvName} for matching!` : `تم تعيين ${srvName} كمزود نشط لعمليات المطابقة بنجاح!`, 'success');
+             await loadServersUI();
+             await loadSettings();
+@@ -3190,6 +3190,49 @@
+     }
+ }
+ 
++function appendServerLog(line) {
++    const term = document.getElementById('ai-server-terminal');
++    if (!term) return;
++    const now = new Date().toLocaleTimeString('en-US', { hour12: false });
++    term.value += `[${now}] ${line}\n`;
++    term.scrollTop = term.scrollHeight;
++}
++
++async function loadServerLogs() {
++    const term = document.getElementById('ai-server-terminal');
++    if (!term || !window.pywebview?.api?.get_server_logs) return;
++    try {
++        const raw = await window.pywebview.api.get_server_logs();
++        const logs = JSON.parse(raw || '[]');
++        if (logs.length > 0) {
++            term.value = logs.join('\n') + '\n';
++        } else if (!term.value.trim()) {
++            term.value = '--- شاشة سجلات وخادم الذكاء الاصطناعي (AI Server Console) جاهزة ---\nاضغط على "اختبار الاتصال" أو قم بتشغيل أي سيرفر لمشاهدة المخرجات هنا مباشرة.\n';
++        }
++        term.scrollTop = term.scrollHeight;
++    } catch (e) {
++        console.error('Failed to load server logs', e);
++    }
++}
++
++async function clearServerLogs() {
++    const term = document.getElementById('ai-server-terminal');
++    if (term) term.value = '';
++    try {
++        if (window.pywebview?.api?.clear_server_logs) {
++            await window.pywebview.api.clear_server_logs();
++        }
++        showToast(currentLang === 'en' ? 'Server logs cleared' : 'تم مسح سجل السيرفرات بنجاح', 'success');
++    } catch (e) {
++        console.error(e);
++    }
++}
++
++// Live Server Log Event Listener
++window.addEventListener('new_server_log', (event) => {
++    appendServerLog(event.detail);
++});
++
+ async function testServerInstance(serverKey) {
+     const t = I18N[currentLang] || I18N.ar;
+     const btn = document.getElementById(`btn-test-${serverKey}`);
+@@ -3196,41 +3196,28 @@
+-    const outputEl = document.getElementById('server-test-output');
+-    
+-    if (btn) {
+-        btn.disabled = true;
+-        btn.innerHTML = `<i class="ph-fill ph-spinner-gap spinner"></i> <span>${t.server_testing || 'Testing...'}</span>`;
+-    }
+-
+-    const timestamp = new Date().toLocaleTimeString();
+-    if (outputEl) {
+-        outputEl.innerText = `[${timestamp}] Initiating live ping test to server instance '${serverKey}'...\nConnecting to endpoint and measuring latency... Please wait.\n`;
+-    }
++    
++    if (btn) {
++        btn.disabled = true;
++        btn.innerHTML = `<i class="ph-fill ph-spinner-gap spinner"></i> <span>${t.server_testing || 'جاري الفحص...'}</span>`;
++    }
++
++    appendServerLog(`Sending test ping to server instance '${serverKey}'...`);
+ 
+     try {
+         const res = await window.pywebview.api.test_server_instance(serverKey);
+-        const doneTime = new Date().toLocaleTimeString();
+-        if (res.success) {
+-            const report = `[${doneTime}] ✅ SUCCESS: Server '${res.name}' responded successfully!\n` +
+-                `--------------------------------------------------\n` +
+-                `• Health Status : HTTP 200 OK\n` +
+-                `• Response Time : ${res.latency} seconds\n` +
+-                `• Gateway Info  : ${res.health?.gateway || 'MSEMAX Gateway'}\n` +
+-                `• Default Model : ${res.health?.default_model || res.default_model}\n` +
+-                `• Test AI Reply : "${res.reply}"\n` +
+-                `--------------------------------------------------\n` +
+-                `✓ This server is 100% operational and ready to process shortage matching batches.`;
+-            if (outputEl) outputEl.innerText = report;
+-            showToast(currentLang === 'en' ? `Ping success! Latency: ${res.latency}s` : `تم الاتصال بنجاح! زمن الاستجابة: ${res.latency} ثانية`, 'success');
+-        } else {
+-            const failReport = `[${doneTime}] ❌ FAILED: Server '${serverKey}' test failed!\n` +
+-                `--------------------------------------------------\n` +
+-                `• Error Details : ${res.error}\n` +
+-                `--------------------------------------------------\n` +
+-                `💡 Suggestion: Ensure the server is started and that port ${res.port || '8000/8001'} is listening.`;
+-            if (outputEl) outputEl.innerText = failReport;
+-            showToast((currentLang === 'en' ? 'Ping failed: ' : 'فشل اختبار الاتصال: ') + res.error, 'error');
+-        }
+-    } catch (e) {
+-        if (outputEl) outputEl.innerText += `\n❌ Unexpected client error during test: ${e.message}`;
++        if (res.success) {
++            const latencyStr = res.latency_ms ? `${res.latency_ms} ms` : `${res.latency || 0}s`;
++            appendServerLog(`✅ SUCCESS: '${res.name}' responded in ${latencyStr} | Reply: "${res.reply}" | Model: ${res.model || ''}`);
++            showToast(currentLang === 'en' ? `Ping success! Latency: ${latencyStr}` : `تم الاتصال بنجاح! زمن الاستجابة: ${latencyStr}`, 'success');
++        } else if (res.is_stopped) {
++            appendServerLog(`⚠️ WARNING: Server '${res.name || serverKey}' is currently STOPPED.`);
++            appendServerLog(`💡 Suggestion: Click 'Start Server' (تشغيل السيرفر) first, then re-test.`);
++            showToast(res.error || (currentLang === 'en' ? 'Server is stopped' : 'السيرفر متوقف حالياً. اضغط على تشغيل السيرفر أولاً'), 'warning');
++        } else {
++            appendServerLog(`❌ FAILED: Server '${serverKey}' ping failed: ${res.error}`);
++            appendServerLog(`💡 Suggestion: Ensure the server is started and port ${res.port || '8000/8001'} is listening.`);
++            showToast((currentLang === 'en' ? 'Ping failed: ' : 'فشل اختبار الاتصال: ') + (res.error || 'Unknown error'), 'error');
++        }
++    } catch (e) {
++        appendServerLog(`❌ Unexpected test error: ${e.message}`);
+         showToast(currentLang === 'en' ? 'Test error' : 'حدث خطأ أثناء الاختبار', 'error');
+     } finally {
+         if (btn) {
+@@ -3244,6 +3244,7 @@
+     const t = I18N[currentLang] || I18N.ar;
+     try {
+         showToast(currentLang === 'en' ? `Opening login session for ${serverKey}...` : `جاري فتح متصفح تسجيل الدخول لسيرفر ${serverKey}...`, 'success');
++        appendServerLog(`[SYSTEM] Launching get_session.py for '${serverKey}'...`);
+         const res = await window.pywebview.api.run_server_session(serverKey);
+         if (res.success) {
+             showToast(currentLang === 'en' ? 'Browser session window opened' : 'تم فتح نافذة المتصفح لتسجيل الدخول بنجاح', 'success');
+@@ -3253,14 +3253,6 @@
+         showToast(currentLang === 'en' ? 'Error opening session' : 'حدث خطأ أثناء فتح الجلسة', 'error');
+     }
+ }
+-
+-function clearServerTestLog() {
+-    const outputEl = document.getElementById('server-test-output');
+-    const t = I18N[currentLang] || I18N.ar;
+-    if (outputEl) {
+-        outputEl.innerText = t.test_panel_empty || 'اضغط على زر "اختبار الاتصال السريع" في أي سيرفر لقياس زمن الاستجابة والتأكد من جاهزيته...';
+-    }
+-}
+     </script>
+     <script>
+         // Override showScreen to handle active states on sidebar
+@@ -3291,6 +3291,7 @@
+                 loadLogs();
+             } else if (screenId === 'screen-servers') {
+                 loadServersUI();
++                loadServerLogs();
+             }
+         };
+         // Auto select first nav item and initialize language
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

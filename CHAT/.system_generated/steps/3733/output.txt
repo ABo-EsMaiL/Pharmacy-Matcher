@@ -1,0 +1,12 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_rapidfuzz_scores.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -35,5 +35,5 @@
+     first_req = n_req.split()[0] if n_req.split() else ""
+     first_wh = n_wh.split()[0] if n_wh.split() else ""
+     first_ratio = fuzz.ratio(first_req, first_wh)
+-    print(f"{first_req:12s} vs {first_wh:12s} -> 1st_word: {first_ratio:2d} | token_set: {token_set:2d} | token_sort: {token_sort:2d}")
++    print(f"{first_req:12s} vs {first_wh:12s} -> 1st_word: {first_ratio:.0f} | token_set: {token_set:.0f} | token_sort: {token_sort:.0f}")
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

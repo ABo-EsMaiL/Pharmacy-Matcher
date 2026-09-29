@@ -1,0 +1,52 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -17,9 +17,9 @@
+ 1. STRICT BRAND IDENTITY (NO GENERICS / NO ALTERNATIVES):
+    - You MUST match the EXACT SAME commercial trade brand name.
+    - NEVER suggest or accept alternative brand names, different trade names, or generics (e.g. Panadol is NOT Cetal, Brufen is NOT Cataflam, Augmentin is NOT Curam).
+-   - If the trade brand name is different, unrelated, or an alternative product, YOU MUST RETURN "status": "no_match" (or omit it). NEVER mark different brands as "match" or "review"!
++   - If the trade brand name is a completely different commercial brand or generic substitute (e.g. Ricoxen is NOT Etoricox, Antopral is NOT Pantoprazole, Serovar is NOT Ciprobay), YOU MUST RETURN "status": "no_match" (or omit it). NEVER mark different brands as "match" or "review"!
+    - Distinct commercial prefixes (like "نيو" / "New") or distinct trade endings/suffixes signify different trade brands (e.g. "New X" is NOT "X", a brand ending in "-rich" is NOT "-ren"). Return "no_match".
+-   - Allow ONLY minor spelling variants, phonetic transliterations, or common OCR scanning typos of the SAME exact brand (e.g. dropped initial letters like 'ا', dropped middle single letters or missing dots like 'ن' or 'ب', visually confused OCR letters like 'ف' vs 'د', or slight vowel variations).
++   - Allow common OCR scanning artifacts, dropped letters/syllables, and Arabic/Persian letter substitutions of the SAME exact brand (e.g. dropped initial letters like 'ا', dropped single letters or missing dots like 'ن' or 'ب', Persian/Urdu letters like پ for ب or ک for ك or گ for ك/ج, visually confused OCR letters like 'ف' vs 'د', or slight vowel variations).
+ 
+ 2. DOSAGE FORM & FORMULATION (ZERO TOLERANCE FOR CONFLICTS):
+    - Dosage forms MUST be strictly compatible:
+@@ -33,8 +33,10 @@
+    - COMBINATION PRODUCTS (Zero Tolerance): Commercial suffixes like "كو" (Co), "كومب" (Comp), "بلس" (Plus) denote a multi-ingredient combination product (e.g. adding a diuretic or second active agent). A combination product (e.g. "دواء كو" / "Drug Co") MUST NEVER match a single-ingredient plain product ("دواء" / "Drug"). Return "no_match".
+    - If dosage forms or combination types conflict, YOU MUST RETURN "status": "no_match".
+ 
+-3. STRENGTH / CONCENTRATION (ZERO TOLERANCE FOR MISMATCH):
+-   - If the requested drug specifies a strength (e.g. 457mg, 600mg, 500mg, 1000mg/1gm, 20mg, 40mg) and the candidate has a DIFFERENT numeric strength:
++3. STRENGTH / CONCENTRATION:
++   - MISSING STRENGTH IN WAREHOUSE (Default MATCH): If the requested shortage specifies a strength (e.g. 25mg, 500mg, 40mg), but the warehouse candidate lists the SAME drug and form WITHOUT specifying any strength:
++     THIS IS A 100% MATCH ("status": "match")! Warehouse listings frequently omit standard strengths. Do NOT reject an item when the warehouse simply omits the strength!
++   - CONFLICTING NUMERIC STRENGTH (Zero Tolerance): If BOTH sides explicitly specify DIFFERENT, CONFLICTING numeric strengths (e.g. requested 500mg vs warehouse explicitly specifies 250mg, or 40mg vs 20mg):
+      YOU MUST RETURN "status": "no_match".
+    - Note vernacular and fractional equivalencies:
+      - 1000mg = 1gm (1000مجم = 1جم).
+@@ -41,14 +41,16 @@
+      - 0.25mg = 250mcg = 25. مجم = ربع (e.g. "ربع" equals 0.25mg / 250mcg).
+ 
+-4. PACKAGING, PACK SIZE & WHOLESALE UNITS (MATCH vs REVIEW):
++4. PACKAGING, PACK SIZE, BOTTLE VOLUME & WHOLESALE UNITS (MATCH vs REVIEW):
+    - "match": Same brand, same form, same strength.
+-     - STANDARD PACKS: If requested shortage specifies standard packaging count (e.g. 20 tablets, 5 ampoules, 3 strips) and warehouse candidate has the same drug, form, and strength but does not explicitly state the pack size (e.g. standard listing without count):
+-       THIS IS A 100% MATCH ("status": "match")! NEVER mark this as review!
++     - STANDARD PACKS / MISSING PACKS: If requested shortage specifies standard packaging count or bottle volume (e.g. 20 tablets, 5 ampoules, 3 strips, 15ml) and warehouse candidate has the same drug, form, and strength but does not explicitly state the pack size or volume (e.g. standard listing without count):
++       THIS IS A 100% MATCH ("status": "match")! NEVER mark this as review or no_match!
+      - STRIP-TO-TABLET EQUIVALENCE: When a shortage requests standard blisters/strips (e.g. 3 شريط) and the warehouse lists the standard full pack tablet count for that drug (e.g. 12 tablets where each strip contains 4 tablets), this is a 100% MATCH ("status": "match")!
+      - Manufacturer suffixes (/فاركو, /جلاكسو), commercial indicators ("س ج", "سعر جديد", "سعر قديم") do not change the product.
+-   - "review": For the SAME EXACT medicine brand when there is an EXPLICIT, CONFLICTING pack count on BOTH sides (e.g. requested 30 tablets vs candidate explicitly writes 20 tablets of the same medicine).
++   - "review": For the SAME EXACT medicine brand when there is an EXPLICIT, CONFLICTING pack count or bottle volume on BOTH sides:
++     - Conflicting Tablet/Pack Count: e.g. requested 30 tablets vs candidate explicitly writes 20 tablets of the same medicine.
++     - Conflicting Bottle/Liquid Volume: e.g. requested 15ml / 15 مل vs candidate explicitly writes 5ml / 5 مل of the same medicine. NEVER silently mark conflicting bottle sizes as "match"; mark as "review" with reason explaining the volume difference!
+      - Wholesale packaging: If requested specifies retail strips/units (e.g. 2 شريط, 20 قرص) and warehouse specifies wholesale bundles/cartons (باكت / كرتونة / 32ب), mark as "review" with the reason explaining the wholesale packaging difference.
+-     - CRITICAL SAFETY: When the trade brand name, form, and strength are identical, NEVER discard as "no_match" just because tablet/pack counts differ! It MUST be marked as "review" with the reason explaining the packaging difference.
++     - CRITICAL SAFETY: When the trade brand name, form, and strength are identical, NEVER discard as "no_match" just because tablet/pack counts or bottle volumes differ! It MUST be marked as "review" with the reason explaining the packaging difference.
+      - Wholesale bundles like "باكت 120" (meaning a shipping carton of 120 boxes) or "باكت 50" are wholesale lot sizes, NOT the blister/tablet count inside a single box! Do not confuse wholesale carton count with tablet count.
+ 
+ SCHEMA:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

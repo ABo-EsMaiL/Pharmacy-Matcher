@@ -1,0 +1,17 @@
+
+The command exited with code 0.
+Output:
+Found Search/Tool elements:
+[0] Tag: BUTTON | Checked: None | Aria: 'Search (Ctrl /)' | Text: 'search'
+[1] Tag: BUTTON | Checked: None | Aria: '' | Text: 'chat_bubble Code and Chat Build chatbots, agents, and code with Gemini 3.'
+[2] Tag: BUTTON | Checked: None | Aria: 'Open tools menu' | Text: 'widgets Tools'
+[3] Tag: BUTTON | Checked: None | Aria: '' | Text: 'google Grounding with Google Search'
+[4] Tag: BUTTON | Checked: None | Aria: 'Remove Grounding with Google Search' | Text: 'close'
+[5] Tag: BUTTON | Checked: None | Aria: 'Get code' | Text: 'code Get code'
+[6] Tag: BUTTON | Checked: None | Aria: 'Expand or collapse tools' | Text: 'expand_more'
+[7] Tag: BUTTON | Checked: false | Aria: 'Code execution' | Text: ''
+[8] Tag: BUTTON | Checked: false | Aria: 'Function calling' | Text: ''
+[9] Tag: BUTTON | Checked: None | Aria: 'Edit function declarations' | Text: 'Edit'
+[10] Tag: BUTTON | Checked: true | Aria: 'Grounding with Google Search' | Text: ''
+[11] Tag: BUTTON | Checked: false | Aria: 'Grounding with Google Maps' | Text: ''
+

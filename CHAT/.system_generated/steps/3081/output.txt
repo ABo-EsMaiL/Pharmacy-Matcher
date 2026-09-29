@@ -1,0 +1,84 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\walkthrough.md. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -35,18 +35,27 @@
+ 
+ ---
+ 
+-## 3. Global Re-Run Modal Overlay & Concurrency Lock
+-- **Global Modal Overlay**:
+-  - Moved `#progress-modal` from inside `screen-new` to a fixed full-screen backdrop overlay (`position: fixed; width: 100vw; height: 100vh; z-index: 99999;`).
+-  - When clicking "إعادة المطابقة (Re-run)" from the results screen, the modal pops up immediately over the screen with a live timer, progress bar, and spinner.
+-  - Added a button inside the modal allowing the user to view the Terminal logs if desired.
+-- **Concurrency Protection**:
+-  - Added `isProcessRunning` state check in frontend: prevents clicking "بدء عملية المطابقة" while a process is running.
+-  - Added thread lock `self._worker_lock` and running check in backend: `start_process`, `restart_process`, and `rerun_process` will safely reject concurrent runs with a clear warning.
+-
+----
+-
+-## 4. Pharmaceutical Rules Tuning in AI Prompt
++## 3. Left-Aligned Modal Overlay & Process Queue System (نظام قائمة الانتظار)
++- **Left-Side UI Modal Overlay**:
++  - Moved `#progress-modal` to `.main-content` with `position: absolute; width: 100%; height: 100%;`.
++  - In RTL layout, it now covers only the left work area (`نص الشمال`), leaving the right sidebar completely accessible and usable at all times.
++- **Background Process Queuing (`كيو`)**:
++  - When a matching run or re-run is actively running, submitting a new matching process no longer fails or blocks.
++  - The new process is automatically saved with status `'queued'` (`في الانتظار`) and added to the backend FIFO queue.
++  - The new process submission form resets immediately and displays an informative toast:
++    `تمت إضافة العملية إلى قائمة الانتظار (الترتيب #1)، وستبدأ تلقائياً فور انتهاء العملية الحالية.`
++  - The History screen displays the queued process with an amber badge `في الانتظار` along with a cancel/delete button.
++  - As soon as the active process finishes, a `finally:` block in `_process_worker` automatically pops and executes the next process in queue without requiring manual intervention, and emits `process_queued_started` to notify the frontend.
++
++---
++
++## 4. Discrepancy Bug Fix (Review Count 9 vs 16)
++- **Root Cause**: `FastCoordinator.process()` previously subtracted items matched in other warehouses from `review_count`, yielding 9, whereas `excel_writer.py` wrote all warehouse review candidates to the `يحتاج مراجعة` sheet (16 rows), causing a mismatch between the initial summary and Excel/database.
++- **Resolution**: Aligned `coordinator.py` summary statistics to match the exact row count of the Excel sheets (`total_wh_matched`, `total_review_items`, and `total_not_found`).
++
++---
++
++## 5. Pharmaceutical Rules Tuning in AI Prompt
+ - **Brand vs Generic / Alternative Substitution**:
+   - Drugs with the same active ingredient and strength but different trade names (e.g. Roaccutane vs generic Isotretinoin, or Zovirax vs Lovir) are now correctly routed to **"يحتاج مراجعة"** with the reason:
+     `"بديل تجاري / مثيل: نفس المادة الفعالة والتركيز ولكن الاسم التجاري مختلف (المطلوب: [اسم]، المتوفر: [اسم])"`.
+@@ -54,16 +54,15 @@
+ 
+ ---
+ 
+-## 5. Production Packaging (`dist_production/`)
+-- Created `scripts/package_production.py` which builds a clean, standalone distribution in `dist_production/`:
+-  - Contains only runtime files (`desktop_app/`, `src/`, `fast_main.py`, `requirements.txt`, `.env.example`).
+-  - Contains fresh, clean `data/` directory with initialized `history.db`.
+-  - Includes `run_app.bat` (1-click Windows launcher that auto-installs requirements and starts the app).
+-  - Includes `README_SETUP.md` with complete, easy-to-follow Arabic setup instructions for the pharmacy computer.
+-
+----
+-
+-## 6. Verification Results
++## 6. Complete Environment Cleanup
++- Deleted all Unstructured API result files (`transform-result-*.json`).
++- Cleared the `processes` history table in `data/history.db`.
++- Cleaned out all previous process directories under `data/processes/`.
++- Re-packaged a fresh, clean distribution in `dist_production/`.
++
++---
++
++## 7. Verification Results
+ 
+ | Component / Test | Result |
+ | :--- | :--- |
+@@ -70,7 +70,10 @@
+ | **Confidence Arabic Names** | PASSED: Shows `تطابق تام (100%)`, `تطابق نصي دقيق (97%)`, `مطابقة ذكية (AI)` |
+ | **Review Sync & Toast** | PASSED: Returns `new_stats`, updates cards instantly, no `undefined` in toast |
+-| **Brand vs Generic Routing** | PASSED: Roaccutane vs Isotretinoin, Zovirax vs Lovir routed to `يحتاج مراجعة` with Arabic reason |
++| **Review Count Alignment** | PASSED: Coordinator summary matches Excel row count (16 == 16) |
++| **Left-Side Modal Overlay** | PASSED: Bounded inside `.main-content`, leaves sidebar accessible |
++| **Process Queue Mechanics** | PASSED: Tested auto-start from queue (`['PROC-001', 'PROC-002']`) and queue removal |
++| **Brand vs Generic Routing** | PASSED: Roaccutane vs Isotretinoin, Zovirax vs Lovir routed to `يحتاج مراجعة` |
+ | **Identical Count Matching** | PASSED: Voltaren 3 ampoules / Novartis matched directly |
+-| **Concurrency Protection** | PASSED: Concurrent process execution blocked in backend and UI |
++| **Environment Cleanup** | PASSED: History and temporary process files cleaned completely |
+ | **Production Packaging** | PASSED: Standalone `dist_production/` folder created with `run_app.bat` and `README_SETUP.md` |
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

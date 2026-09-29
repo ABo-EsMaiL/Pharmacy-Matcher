@@ -1,0 +1,6 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":418,"LineContent":"    def apply_reviews(self, process_id: str) -\u003e dict:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1201,"LineContent":"                            \u003cbutton class=\"btn btn-primary\" onclick=\"applyReviews()\"\u003e\u003ci class=\"ph-fill ph-magic-wand\"\u003e\u003c/i\u003e \u003cspan data-i18n=\"btn_apply_reviews\"\u003eتنفيذ التعديلات\u003c/span\u003e\u003c/button\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1426,"LineContent":"        btn_apply_reviews: \"تنفيذ التعديلات\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1529,"LineContent":"        btn_apply_reviews: \"Apply Changes\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2175,"LineContent":"        const result = await window.pywebview.api.apply_reviews(currentProcessId);"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":191,"LineContent":"        const result = await window.pywebview.api.apply_reviews(currentProcessId);"}

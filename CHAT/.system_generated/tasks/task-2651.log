@@ -1,0 +1,125 @@
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Calling api.rerun_process('PROC-003')...
+rerun_process response: {'success': True, 'process_id': 'PROC-003'}
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+
+============================================================
+[*] Processing Shortages files (1 file(s))
+============================================================
+
+  -> File: test_shortages_200.xlsx (Type: .xlsx)
+  -> Reading Excel file: test_shortages_200.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 200 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 200 items from column 'أسم الصنف'
+     Extracted items: 200
+
+============================================================
+[+] Completed Shortages: 200 items from 1 file(s)
+============================================================
+
+
+============================================================
+[*] Processing Warehouse files (2 file(s))
+============================================================
+
+  -> File: السلام شبين.pdf (Type: .pdf)
+[*] Processing PDF file: السلام شبين.pdf
+[+] Loaded 187 items from alongside JSON: السلام شبين.json
+     Extracted items: 187
+
+  -> File: جملة العمروووو.pdf (Type: .pdf)
+[*] Processing PDF file: جملة العمروووو.pdf
+[+] Loaded 19 items from alongside JSON: جملة العمروووو.json
+     Extracted items: 19
+
+============================================================
+[+] Completed Warehouse: 206 items from 2 file(s)
+============================================================
+
+
+============================================================
+[FAST ENGINE] Starting Match: 200 raw -> 200 UNIQUE shortages x 2 warehouses
+============================================================
+
+
+----------------------------------------
+[Warehouse] السلام شبين.pdf (187 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 0
+  -> TF-IDF Auto-Matches (>88%): 59
+  -> Sending 139 ambiguous items to Local API (MSEMAX) in batches...
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+      [✓] Batch 2/5 done.
+      [✓] Batch 1/5 done.
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+      [✓] Batch 4/5 done.
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+      [✓] Batch 3/5 done.
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+      [✓] Batch 5/5 done.
+  -> Final Warehouse Result: 141 matched, 4 review
+
+----------------------------------------
+[Warehouse] جملة العمروووو.pdf (19 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 1
+  -> TF-IDF Auto-Matches (>88%): 1
+  -> Sending 138 ambiguous items to Local API (MSEMAX) in batches...
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+      [✓] Batch 2/5 done.
+      [✓] Batch 1/5 done.
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+      [✓] Batch 4/5 done.
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+      [✓] Batch 3/5 done.
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+Status: processing (Matched: 127, Review: 14, Not Found: 44)
+      [✓] Batch 5/5 done.
+  -> Final Warehouse Result: 14 matched, 3 review
+[+] Results successfully saved to: D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-003\results_PROC-003.xlsx
+Status: reviewing (Matched: 151, Review: 6, Not Found: 43)
+
+--- Final Process Details ---
+{'id': 'PROC-003', 'created_at': '2026-09-22T14:45:28.706248', 'status': 'reviewing', 'shortage_files': '["test_shortages_200.xlsx"]', 'warehouse_files': '["\\u0627\\u0644\\u0633\\u0644\\u0627\\u0645 \\u0634\\u0628\\u064a\\u0646.pdf", "\\u062c\\u0645\\u0644\\u0629 \\u0627\\u0644\\u0639\\u0645\\u0631\\u0648\\u0648\\u0648\\u0648.pdf"]', 'total_shortages': 200, 'matched_count': 151, 'not_found_count': 43, 'review_count': 6, 'output_file': 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-003\\results_PROC-003.xlsx'}

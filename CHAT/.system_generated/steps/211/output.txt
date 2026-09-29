@@ -1,0 +1,61 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -252,8 +252,8 @@
+ 
+         return all_results
+ 
+-    def _call_opencode(self, inputs: dict) -> list[dict]:
+-        model = getattr(self.config, 'opencode_model', 'deepseek-flash')
++    def _call_openrouter(self, inputs: dict) -> list[dict]:
++        model = getattr(self.config, 'openrouter_model', 'google/gemini-2.0-flash-exp:free')
+         
+         body = {
+             "model": model,
+@@ -263,13 +263,14 @@
+             "response_format": {"type": "json_object"}
+         }
+ 
+-        # Try the Inference API endpoint
+-        url = "https://opencode.ai/inference/openai/v1/chat/completions"
++        url = "https://openrouter.ai/api/v1/chat/completions"
+         response = http_requests.post(
+             url,
+             headers={
+-                "Authorization": f"Bearer {self.opencode_api_key}",
++                "Authorization": f"Bearer {self.config.openrouter_api_key}",
+                 "Content-Type": "application/json",
++                "HTTP-Referer": "https://localhost",
++                "X-Title": "PharmacyMatcher",
+             },
+             json=body,
+             timeout=(30, 900),
+@@ -276,17 +276,4 @@
+ 
+-        if response.status_code == 404:
+-            # Fallback to the Zen endpoint if the standard one 404s
+-            url = "https://opencode.ai/zen/v1/chat/completions"
+-            response = http_requests.post(
+-                url,
+-                headers={
+-                    "Authorization": f"Bearer {self.opencode_api_key}",
+-                    "Content-Type": "application/json",
+-                },
+-                json=body,
+-                timeout=(30, 900),
+-            )
+-
+         if response.status_code != 200:
+             try:
+                 detail = response.json().get("error", {}).get("message", "")
+@@ -303,7 +303,7 @@
+             
+             answer = json.loads(content)
+         except Exception as e:
+-            raise RuntimeError(f"Failed to parse OpenCode response: {e}")
++            raise RuntimeError(f"Failed to parse OpenRouter response: {e}")
+ 
+         if not isinstance(answer, dict) or "results" not in answer:
+             # Maybe the model just returned an empty object {} since we told it to omit if no matches
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

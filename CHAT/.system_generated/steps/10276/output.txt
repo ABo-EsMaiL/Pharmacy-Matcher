@@ -1,0 +1,5 @@
+{"File":"d:\\AI_Engineer\\MSEMAX-GAIStudio-vision\\app.py","LineNumber":1137,"LineContent":"class ChatMessage(BaseModel):"}
+{"File":"d:\\AI_Engineer\\MSEMAX-GAIStudio-vision\\app.py","LineNumber":1143,"LineContent":"    messages: List[ChatMessage]"}
+{"File":"d:\\AI_Engineer\\MSEMAX-GAIStudio-vision\\app.py","LineNumber":1151,"LineContent":"def extract_prompt_and_images(messages: List[ChatMessage]) -\u003e Tuple[str, List[str]]:"}
+{"File":"d:\\AI_Engineer\\MSEMAX-GAIStudio-vision\\app.py","LineNumber":1238,"LineContent":"def format_messages_to_prompt(messages: List[ChatMessage]) -\u003e str:"}
+{"File":"d:\\AI_Engineer\\MSEMAX-GAIStudio-vision\\app.py","LineNumber":1419,"LineContent":"        messages = [ChatMessage(**m) for m in body[\"messages\"]]"}

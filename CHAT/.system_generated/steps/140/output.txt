@@ -1,0 +1,30 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\file_handler.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -99,4 +99,24 @@
+ 
+     items = extract_items_from_pdf(filepath, api_key, base_url)
+     return items
++
++
++def _process_json_file(filepath: Path) -> list[dict]:
++    """معالجة ملف JSON (نتيجة Unstructured محفوظة) لتوفير استخدام الـ API."""
++    with open(filepath, "r", encoding="utf-8-sig") as f:
++        data = json.load(f)
++    
++    items = parse_items_from_response(data)
++    
++    # تحديد اسم المصدر الأصلي
++    doc_name = filepath.name
++    if isinstance(data, dict):
++        doc_name = (data.get("source") or {}).get("filename") or doc_name
++    elif isinstance(data, list) and data:
++        doc_name = (data[0].get("metadata") or {}).get("filename") or doc_name
++
++    for item in items:
++        item["source_file"] = doc_name
++        
++    return items
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,18 @@
+
+The command exited with code 0.
+Output:
+Line 1502: <div id="top-bar-process-badge" class="server-badge-pill" style="display: none; background: #eff6ff;
+Line 1506: <div id="top-bar-server-badge" class="server-badge-pill stopped" style="cursor: pointer;" onclick="s
+Line 1522: <div id="screen-new" class="screen active">
+Progress Line 1585: <div id="progress-modal" style="display: none;">
+Progress Line 1590: <h3 id="progress-text" style="margin: 0; font-size: 16px; font-weight: bold; color: var(--text-main)
+Progress Line 1592: <span id="progress-timer" style="font-family: monospace; font-size: 14px; font-weight: 700; color: v
+Progress Line 1595: <div id="progress-bar-fill" style="width: 10%; height: 100%; background: var(--primary); transition:
+Progress Line 1598: <p id="progress-subtext" style="color: var(--text-muted); font-size: 12px; margin-top: 12px; text-al
+Line 1611: <div id="screen-results" class="screen">
+Line 1692: <div id="screen-history" class="screen">
+Line 1708: <div id="screen-settings" class="screen">
+Line 1810: <div id="screen-logs" class="screen">
+Line 1828: <div id="screen-servers" class="screen">
+Line 1984: <div id="screen-home" style="display:none;"></div>
+

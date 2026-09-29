@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+Warehouses: ['السلام شبين.pdf', 'المكرومي المنصورة.pdf', 'الهضبة الاثنين نقدى0.pdf', 'جملة العمروووو.pdf', 'كيور فارما خاص.pdf', 'مخزن الحياة فارم اسكندريه-170.pdf']
+Output: []
+

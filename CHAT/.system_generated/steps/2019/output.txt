@@ -1,0 +1,177 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -143,6 +143,171 @@
+     margin-left: auto !important;
+ }
+ 
++/* -------------------- TOP BAR -------------------- */
++.top-bar {
++    display: flex;
++    align-items: center;
++    justify-content: space-between;
++    padding: 12px 24px;
++    background: #ffffff;
++    border-radius: var(--radius-lg);
++    border: 1px solid var(--border);
++    margin-bottom: 20px;
++    box-shadow: var(--shadow-sm);
++    flex-shrink: 0;
++}
++
++.top-bar-title {
++    font-size: 17px;
++    font-weight: 800;
++    color: var(--text-main);
++    display: flex;
++    align-items: center;
++    gap: 10px;
++}
++
++.top-bar-actions {
++    display: flex;
++    align-items: center;
++    gap: 12px;
++}
++
++.lang-switch-pill {
++    display: inline-flex;
++    background: #f1f5f9;
++    padding: 3px;
++    border-radius: 10px;
++    border: 1px solid var(--border);
++    gap: 3px;
++}
++
++.lang-pill-btn {
++    border: none;
++    background: transparent;
++    padding: 6px 14px;
++    border-radius: 8px;
++    font-size: 13px;
++    font-weight: 700;
++    color: var(--text-muted);
++    cursor: pointer;
++    display: inline-flex;
++    align-items: center;
++    gap: 6px;
++    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
++}
++
++.lang-pill-btn.active {
++    background: #ffffff;
++    color: var(--primary);
++    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
++}
++
++.lang-pill-btn:hover:not(.active) {
++    color: var(--text-main);
++}
++
++.server-badge-pill {
++    display: inline-flex;
++    align-items: center;
++    gap: 8px;
++    padding: 6px 14px;
++    background: #f8fafc;
++    border: 1px solid var(--border);
++    border-radius: 10px;
++    font-size: 12px;
++    font-weight: 700;
++    color: var(--text-muted);
++}
++
++.server-badge-pill .status-dot {
++    width: 8px;
++    height: 8px;
++    border-radius: 50%;
++    background: var(--text-muted);
++}
++.server-badge-pill.running {
++    background: #ecfdf5;
++    border-color: #a7f3d0;
++    color: #065f46;
++}
++.server-badge-pill.running .status-dot {
++    background: var(--success);
++    box-shadow: 0 0 8px var(--success);
++}
++.server-badge-pill.stopped {
++    background: #fef2f2;
++    border-color: #fecaca;
++    color: #991b1b;
++}
++.server-badge-pill.stopped .status-dot {
++    background: var(--danger);
++}
++
++/* Language Selection Cards (in Settings) */
++.language-selection-boxes {
++    display: grid;
++    grid-template-columns: 1fr 1fr;
++    gap: 16px;
++    margin-top: 8px;
++}
++
++.lang-choice-card {
++    padding: 16px 20px;
++    background: #f8fafc;
++    border: 2px solid var(--border);
++    border-radius: var(--radius-md);
++    cursor: pointer;
++    display: flex;
++    align-items: center;
++    gap: 14px;
++    transition: all 0.25s ease;
++}
++
++.lang-choice-card:hover {
++    border-color: var(--primary);
++    background: #f0f9ff;
++    transform: translateY(-2px);
++    box-shadow: var(--shadow-sm);
++}
++
++.lang-choice-card.active {
++    border-color: var(--primary);
++    background: #f0f9ff;
++    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
++}
++
++.lang-choice-card .lang-flag-big {
++    font-size: 28px;
++}
++
++.lang-choice-info {
++    display: flex;
++    flex-direction: column;
++    gap: 2px;
++}
++
++.lang-choice-info strong {
++    font-size: 15px;
++    color: var(--text-main);
++}
++
++.lang-choice-info span {
++    font-size: 12px;
++    color: var(--text-muted);
++}
++
++.lang-check-icon {
++    margin-inline-start: auto;
++    font-size: 20px;
++    color: var(--primary);
++    opacity: 0;
++    transition: opacity 0.2s ease;
++}
++
++.lang-choice-card.active .lang-check-icon {
++    opacity: 1;
++}
++
+ .nav-menu {
+     padding: 24px 16px;
+     display: flex;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

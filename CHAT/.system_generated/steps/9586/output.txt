@@ -1,0 +1,14 @@
+
+The command exited with code 0.
+Output:
+fitz: NOT available
+pdf2image: NOT available
+pypdf: available
+pdfplumber: NOT available
+PIL: available
+cv2: available
+playwright: available
+fastapi: available
+uvicorn: available
+requests: available
+

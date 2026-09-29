@@ -1,0 +1,20 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Extracted 993 items from column 'أسم الصنف'
+Loaded 591 unique shortages and 6 warehouse files.
+Cache missing for السلام شبين.pdf
+Cache missing for المكرومي المنصورة.pdf
+Cache missing for الهضبة الاثنين نقدى0.pdf
+Cache missing for جملة العمروووو.pdf
+Cache missing for كيور فارما خاص.pdf
+Cache missing for مخزن الحياة فارم اسكندريه-170.pdf
+
+Total Deterministic Matches across all warehouses: 0
+

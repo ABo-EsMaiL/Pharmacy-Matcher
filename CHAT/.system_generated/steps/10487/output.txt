@@ -1,0 +1,49 @@
+
+The command exited with code 0.
+Output:
+0: <USER_REQUEST>
+1: وأنا بتابع المتصفح، هو بيوصله الـ prompt والصورة؟ أنا هبعتلك الـ log عشان أنا مش عارف هو بيقرأ من الـ cache بتاع الملفات القديمة ولا إيه، بس أنا قفلت الـ server في النص وأنا شغال. تقريبًا هو مش عارف، الصراحة أنا مش عارف هو شغال ازاي. هبعتلك الـ terminal وقولي هتلاقي فيه مشكلة أكيد. خلي بالك أنا قفلت الـ server وهو شغال. 
+2: 
+3: وكمان في حاجة في الـ UI، لما كنت بعمل مطابقة، الـ loading اللي هي pop-up loading دي، هي المفروض تكون في screen واحدة، أو في الـ screen اللي هي بتاعت المطابقة، المفروض تكون في المطابقة ولا السجل؟ مش عارف، مش عارف. المهم يعني المفروض تكون في screen، لما أروح مثلاً لواجهة الأوامر أو أروح للإعدادات يظهر صفحة الإعدادات، لكن أنا لما بروح بلاقي الـ pop-up فوق صفحة الإعدادات برضه، يعني أنت مثبت لي الـ pop-up في كل الصفحات، دي برضه bug صغيرة. 
+4: 
+5: 
+6: (venv) PS D:\AI_Engineer\Pharmacy-agy-vision> python desktop_app\app.py
+7: 
+8: ============================================================
+9: [*] Processing Shortages files (1 file(s)) [PARALLEL WORKERS]
+10: ============================================================
+11: 
+12:   -> [START] Processing file: 0913.xlsx (Type: .xlsx)
+13:   -> Reading Excel file: 0913.xlsx
+14:   -> Active sheet: ورقة2
+15:   -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+16:   -> Extracted 993 data rows
+17:   -> Auto-detected drug name column: أسم الصنف
+18:   -> Extracted 993 items from column 'أسم الصنف'
+19:   -> [DONE] 0913.xlsx: 993 items extracted.
+20: 
+21: ============================================================
+22: [+] Com
+23: <truncated 11082 bytes>
+24: o establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))). Retrying...
+25:       [X] PROVIDER FAILURE on Batch 1 after 3 attempts (Connection to local LLM failed (http://127.0.0.1:8001/v1/chat/completions): HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))).
+26: Traceback (most recent call last):
+27:   File "D:\AI_Engineer\Pharmacy-agy-vision\desktop_app\backend.py", line 494, in _process_worker
+28:     results = coordinator.process(all_shortages, warehouse_data)
+29:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+30:   File "D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\coordinator.py", line 240, in process
+31:     wh_result = self._match_warehouse(deduped_shortages, wh_items, wh_name)
+32:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+33:   File "D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\coordinator.py", line 584, in _match_warehouse
+34:     chunk_results = process_chunk(batch, str(idx + 1))
+35:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+36:   File "D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\coordinator.py", line 580, in process_chunk
+37:     raise RuntimeError(f"Provider failed on Batch {chunk_name}: {last_error}")
+38: RuntimeError: Provider failed on Batch 1: Connection to local LLM failed (http://127.0.0.1:8001/v1/chat/completions): HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+39: 
+40: 
+41: </USER_REQUEST>
+42: <ADDITIONAL_METADATA>
+43: The current local time is: 2026-09-25T17:06:04+03:00.
+44: </ADDITIONAL_METADATA>
+

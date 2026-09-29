@@ -1,0 +1,35 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2107,6 +2107,9 @@
+ window.addEventListener('process_complete', (e) => {
+     const data = e.detail;
+     isProcessRunning = false;
++    if (typeof loadHistory === 'function') {
++        loadHistory();
++    }
+     
+     if (!currentProcessId || data.process_id === currentProcessId) {
+         currentProcessId = data.process_id;
+@@ -2129,6 +2129,19 @@
+     }
+ });
+ 
++window.addEventListener('process_queued_started', (e) => {
++    const data = e.detail;
++    currentProcessId = data.process_id;
++    isProcessRunning = true;
++    if (typeof loadHistory === 'function') {
++        loadHistory();
++    }
++    const msg = currentLang === 'en' 
++        ? `Queued process ${data.process_id.substring(0,8)}... has started processing.` 
++        : `بدأت العملية ${data.process_id.substring(0,8)}... من قائمة الانتظار تلقائياً.`;
++    showToast(msg, 'info');
++});
++
+ // --- Results Logic ---
+ function loadResults(stats) {
+     if (!stats) return;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

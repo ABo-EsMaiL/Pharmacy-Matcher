@@ -1,0 +1,29 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -936,6 +936,23 @@
+         )
+         print(f"\n[AI STUDIO TIMING] {timing_summary} (Total Roundtrip: {t_req_total:.2f}s)\n")
+ 
++        too_many_calls_err = None
++        if "too_many_tool_calls" in prev_text.lower() or "too many tool calls" in prev_text.lower():
++            too_many_calls_err = prev_text[:500]
++
++        logger.info("=" * 65)
++        logger.info(f"[BATCH REPORT] Batch Size: {case_count} cases")
++        logger.info(f"  * Google Search Enabled: {self.google_search_enabled} (Verified: {self.search_verified})")
++        logger.info(f"  * Tool Calls Count: {self.last_tool_calls_count}")
++        logger.info(f"  * Thinking Mode/Level: {self.active_thinking} (Verified: {self.thinking_verified})")
++        logger.info(f"  * Generation Time: {total_duration:.2f}s (Total Roundtrip: {t_req_total:.2f}s)")
++        logger.info(f"  * Final Status: {current_state}")
++        if too_many_calls_err:
++            logger.error(f"  * Tool Call Error: {too_many_calls_err}")
++        else:
++            logger.info(f"  * Tool Call Error: None")
++        logger.info("=" * 65)
++
+         elapsed_total = time.time() - t_submit
+         is_json = False
+         json_err_msg = ""
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

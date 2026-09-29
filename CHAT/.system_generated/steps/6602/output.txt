@@ -1,0 +1,533 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1005,90 +1005,225 @@
+     to { opacity: 0; }
+ }
+ 
+-/* -------------------- AI SERVERS MANAGEMENT SCREEN -------------------- */
+-.servers-grid {
+-    display: grid;
+-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+-    gap: 16px;
+-    margin-bottom: 20px;
+-    width: 100%;
+-    max-width: 100%;
+-    box-sizing: border-box;
+-}
+-.server-card {
+-    background: var(--bg-card);
+-    border: 2px solid var(--border);
+-    border-radius: var(--radius-lg);
+-    padding: 18px 20px;
+-    display: flex;
+-    flex-direction: column;
+-    gap: 14px;
+-    transition: all 0.25s ease;
+-    position: relative;
+-    box-shadow: var(--shadow-sm);
+-    min-width: 0;
+-    box-sizing: border-box;
+-    overflow: hidden;
+-}
+-.server-card:hover {
+-    box-shadow: var(--shadow-md);
+-    transform: translateY(-2px);
+-}
+-.server-card.is-active-provider {
+-    border-color: var(--primary);
+-    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.18);
+-}
+-.server-card-header {
+-    display: flex;
+-    align-items: center;
+-    justify-content: space-between;
+-    gap: 12px;
+-}
+-.server-card-title {
+-    display: flex;
+-    align-items: center;
+-    gap: 12px;
+-}
+-.server-card-icon {
+-    width: 40px;
+-    height: 40px;
+-    border-radius: 10px;
+-    background: #e0f2fe;
+-    color: var(--primary);
+-    display: flex;
+-    align-items: center;
+-    justify-content: center;
+-    font-size: 22px;
+-    flex-shrink: 0;
+-}
+-.server-card-icon.gaistudio {
++/* -------------------- AI SERVERS MANAGEMENT SCREEN (ZERO-SCROLL DASHBOARD) -------------------- */
++#screen-servers {
++    height: calc(100vh - 110px);
++    max-height: calc(100vh - 110px);
++    overflow: hidden !important;
++    display: none;
++    flex-direction: column;
++    gap: 12px;
++    padding: 16px 20px;
++    box-sizing: border-box;
++}
++#screen-servers.active {
++    display: flex;
++}
++
++.servers-dashboard-header {
++    display: flex;
++    align-items: center;
++    justify-content: space-between;
++    gap: 14px;
++    background: #ffffff;
++    border: 1px solid var(--border);
++    border-radius: var(--radius-md);
++    padding: 10px 16px;
++    flex-shrink: 0;
++    box-shadow: var(--shadow-sm);
++}
++.dashboard-header-title {
++    display: flex;
++    align-items: center;
++    gap: 10px;
++}
++.dashboard-header-title i {
++    font-size: 26px;
++    color: var(--primary);
++}
++.dashboard-header-title h2 {
++    font-size: 15px;
++    font-weight: 800;
++    margin: 0;
++    color: var(--text-main);
++}
++.dashboard-header-title span {
++    font-size: 11px;
++    color: var(--text-muted);
++}
++.active-switcher-container {
++    display: flex;
++    align-items: center;
++    gap: 8px;
++    flex-shrink: 0;
++}
++.switcher-label {
++    font-size: 11.5px;
++    font-weight: 700;
++    color: var(--text-main);
++    display: flex;
++    align-items: center;
++    gap: 5px;
++}
++.switcher-label i {
++    color: #f59e0b;
++}
++.switcher-pills {
++    display: flex;
++    gap: 5px;
++    background: #f1f5f9;
++    padding: 3px;
++    border-radius: 9px;
++    border: 1px solid var(--border);
++}
++.switcher-pill {
++    border: none;
++    background: transparent;
++    padding: 4px 10px;
++    border-radius: 6px;
++    font-size: 11.5px;
++    font-weight: 700;
++    color: var(--text-muted);
++    cursor: pointer;
++    display: flex;
++    align-items: center;
++    gap: 5px;
++    transition: all 0.2s ease;
++}
++.switcher-pill:hover {
++    color: var(--text-main);
++    background: rgba(255,255,255,0.7);
++}
++.switcher-pill.active {
++    background: #ffffff;
++    color: var(--primary);
++    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
++}
++
++.servers-grid-compact {
++    display: grid;
++    grid-template-columns: repeat(2, 1fr);
++    gap: 12px;
++    flex-shrink: 0;
++    width: 100%;
++    box-sizing: border-box;
++}
++@media (max-width: 900px) {
++    .servers-grid-compact {
++        grid-template-columns: 1fr;
++    }
++}
++.server-card-compact {
++    background: var(--bg-card);
++    border: 1.5px solid var(--border);
++    border-radius: var(--radius-md);
++    padding: 12px 16px;
++    display: flex;
++    flex-direction: column;
++    gap: 10px;
++    transition: all 0.2s ease;
++    box-shadow: var(--shadow-sm);
++    min-width: 0;
++    box-sizing: border-box;
++}
++.server-card-compact:hover {
++    box-shadow: var(--shadow-md);
++}
++.server-card-compact.is-active-provider {
++    border-color: var(--primary);
++    background: #f8fafc;
++    box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.25);
++}
++.card-compact-top {
++    display: flex;
++    align-items: center;
++    justify-content: space-between;
++    gap: 10px;
++    min-width: 0;
++}
++.card-compact-identity {
++    display: flex;
++    align-items: center;
++    gap: 10px;
++    min-width: 0;
++}
++.server-avatar {
++    width: 36px;
++    height: 36px;
++    border-radius: 9px;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    font-size: 19px;
++    flex-shrink: 0;
++}
++.server-avatar.gaistudio {
+     background: #ecfdf5;
+     color: #059669;
+ }
+-.server-card-info h3 {
+-    font-size: 16px;
+-    font-weight: 800;
+-    margin: 0;
+-    color: var(--text-main);
+-}
+-.server-card-info span {
+-    font-size: 12px;
+-    color: var(--text-muted);
+-}
+-.server-badges-row {
+-    display: flex;
+-    align-items: center;
+-    gap: 8px;
+-    flex-wrap: wrap;
++.server-avatar.chatgpt {
++    background: #e0f2fe;
++    color: var(--primary);
++}
++.server-title-group {
++    display: flex;
++    flex-direction: column;
++    gap: 2px;
++    min-width: 0;
++}
++.server-title-line {
++    display: flex;
++    align-items: center;
++    gap: 8px;
++    flex-wrap: wrap;
++}
++.server-title-line h3 {
++    margin: 0;
++    font-size: 13.5px;
++    font-weight: 800;
++    color: var(--text-main);
++}
++.meta-tag {
++    font-size: 10.5px;
++    font-weight: 700;
++    padding: 1px 6px;
++    border-radius: 5px;
++    font-family: monospace;
++}
++.meta-tag.port {
++    background: #f1f5f9;
++    color: #475569;
++    border: 1px solid #cbd5e1;
++}
++.meta-tag.model {
++    background: #eff6ff;
++    color: #2563eb;
++    border: 1px solid #bfdbfe;
++}
++.server-url-caption {
++    font-size: 10.5px;
++    color: #94a3b8;
++    direction: ltr;
++    font-family: monospace;
++    white-space: nowrap;
++    overflow: hidden;
++    text-overflow: ellipsis;
++}
++.server-badges-cluster {
++    display: flex;
++    align-items: center;
++    gap: 6px;
++    flex-shrink: 0;
+ }
+ .badge-pill {
+-    padding: 4px 10px;
++    padding: 3px 9px;
+     border-radius: 20px;
+-    font-size: 12px;
+-    font-weight: 700;
+-    display: inline-flex;
+-    align-items: center;
+-    gap: 6px;
++    font-size: 11px;
++    font-weight: 700;
++    display: inline-flex;
++    align-items: center;
++    gap: 5px;
++    white-space: nowrap;
+ }
+ .badge-pill.status-online {
+     background: #ecfdf5;
+@@ -1099,6 +1099,11 @@
+     color: #991b1b;
+     border: 1px solid #fecaca;
+ }
++.badge-pill.status-warning {
++    background: #fffbeb;
++    color: #b45309;
++    border: 1px solid #fde68a;
++}
+ .badge-pill.active-server-badge {
+     background: #eff6ff;
+     color: #1d4ed8;
+@@ -1105,75 +1105,140 @@
+ }
+-.server-details-list {
+-    background: #f8fafc;
+-    border: 1px solid var(--border);
+-    border-radius: var(--radius-md);
+-    padding: 10px 14px;
+-    display: flex;
+-    flex-direction: column;
+-    gap: 6px;
+-    font-size: 12.5px;
+-    min-width: 0;
+-    box-sizing: border-box;
+-}
+-.server-detail-row {
+-    display: flex;
+-    justify-content: space-between;
+-    align-items: center;
+-    gap: 10px;
+-    min-width: 0;
+-}
+-.server-detail-label {
+-    color: var(--text-muted);
+-    font-weight: 600;
+-    flex-shrink: 0;
+-}
+-.server-detail-value {
+-    color: var(--text-main);
+-    font-weight: 700;
+-    font-family: monospace;
+-    direction: ltr;
+-    word-break: break-all;
+-    overflow-wrap: anywhere;
+-    min-width: 0;
+-    font-size: 11px;
+-}
+-.server-actions-grid {
+-    display: grid;
+-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+-    gap: 8px;
+-    margin-top: auto;
+-}
+-.active-banner {
+-    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+-    color: white;
+-    padding: 14px 18px;
+-    border-radius: var(--radius-lg);
+-    display: flex;
+-    align-items: center;
+-    justify-content: space-between;
+-    gap: 14px;
+-    margin-bottom: 20px;
+-    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+-    flex-wrap: wrap;
+-}
+-.active-banner-content {
+-    display: flex;
+-    align-items: center;
+-    gap: 12px;
+-}
+-.active-banner-icon {
+-    font-size: 28px;
+-    flex-shrink: 0;
+-}
+-.active-banner-text h4 {
+-    margin: 0;
+-    font-size: 15px;
+-    font-weight: 800;
+-}
+-.active-banner-text p {
+-    margin: 2px 0 0;
+-    font-size: 12px;
+-    opacity: 0.9;
++.card-compact-actions {
++    display: flex;
++    align-items: center;
++    gap: 7px;
++    flex-wrap: wrap;
++}
++.card-compact-actions .btn {
++    font-size: 11.5px;
++    padding: 5px 11px;
++    border-radius: 7px;
++    display: inline-flex;
++    align-items: center;
++    gap: 5px;
++}
++
++/* Dedicated Zero-Scroll Terminal Container */
++.server-terminal-container {
++    flex: 1;
++    min-height: 200px;
++    display: flex;
++    flex-direction: column;
++    border-radius: var(--radius-md);
++    border: 1.5px solid #334155;
++    background: #0f172a;
++    overflow: hidden;
++    box-shadow: var(--shadow-md);
++}
++.server-terminal-toolbar {
++    background: #1e293b;
++    border-bottom: 1px solid #334155;
++    padding: 8px 14px;
++    display: flex;
++    align-items: center;
++    justify-content: space-between;
++    gap: 12px;
++    flex-shrink: 0;
++}
++.terminal-left-info {
++    display: flex;
++    align-items: center;
++    gap: 9px;
++}
++.terminal-title {
++    color: #f8fafc;
++    font-size: 13px;
++    font-weight: 700;
++    display: block;
++}
++.terminal-sub {
++    color: #94a3b8;
++    font-size: 10.5px;
++    display: block;
++}
++.terminal-actions-group {
++    display: flex;
++    align-items: center;
++    gap: 7px;
++}
++.terminal-badge-live {
++    font-size: 10.5px;
++    background: rgba(56, 189, 248, 0.15);
++    border: 1px solid rgba(56, 189, 248, 0.35);
++    padding: 3px 8px;
++    border-radius: 6px;
++    color: #38bdf8;
++    font-family: monospace;
++    font-weight: 700;
++}
++.btn-outline-warning {
++    background: rgba(245, 158, 11, 0.12);
++    border: 1px solid #f59e0b;
++    color: #fbbf24;
++    font-size: 11px;
++    padding: 4px 10px;
++    border-radius: 7px;
++    cursor: pointer;
++    font-weight: 700;
++    display: inline-flex;
++    align-items: center;
++    gap: 5px;
++    transition: all 0.2s ease;
++}
++.btn-outline-warning:hover {
++    background: #f59e0b;
++    color: #0f172a;
++}
++.btn-terminal-action {
++    background: #334155;
++    border: 1px solid #475569;
++    color: #e2e8f0;
++    font-size: 11px;
++    padding: 4px 9px;
++    border-radius: 7px;
++    cursor: pointer;
++    font-weight: 600;
++    display: inline-flex;
++    align-items: center;
++    gap: 4px;
++    transition: all 0.2s ease;
++}
++.btn-terminal-action:hover {
++    background: #475569;
++    color: #ffffff;
++}
++.btn-terminal-action.danger {
++    color: #f87171;
++    border-color: rgba(248, 113, 113, 0.3);
++}
++.btn-terminal-action.danger:hover {
++    background: #ef4444;
++    color: #ffffff;
++}
++.server-terminal-body {
++    flex: 1;
++    display: flex;
++    padding: 10px 14px;
++    background: #0f172a;
++    min-height: 0;
++}
++#ai-server-terminal {
++    flex: 1;
++    width: 100%;
++    height: 100%;
++    background: transparent;
++    color: #38bdf8;
++    border: none;
++    font-family: 'Consolas', 'Courier New', monospace;
++    font-size: 12px;
++    line-height: 1.5;
++    outline: none;
++    resize: none;
++    direction: ltr;
++    text-align: left;
++    box-sizing: border-box;
++    overflow-y: auto;
++    overflow-x: hidden;
+ }
+ .server-test-box {
+     background: #111827;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

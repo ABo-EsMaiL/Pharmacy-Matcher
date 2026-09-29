@@ -1,0 +1,12 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_matching_pipeline.py", line 9, in <module>
+    from src.fast_match.coordinator import FastCoordinator
+  File "D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\coordinator.py", line 11, in <module>
+    from .search import FastCandidateFinder, extract_form_group, extract_brand_tokens
+  File "D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\search.py", line 2, in <module>
+    from sklearn.feature_extraction.text import TfidfVectorizer
+ModuleNotFoundError: No module named 'sklearn'
+

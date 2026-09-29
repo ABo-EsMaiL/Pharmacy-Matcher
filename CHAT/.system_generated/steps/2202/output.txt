@@ -1,0 +1,113 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -108,9 +108,9 @@
+         os._exit(0)
+             
+     def get_settings(self) -> dict:
+-        if self.settings_file.exists():
+-            try:
+-                with open(self.settings_file, 'r', encoding='utf-8') as f:
++        if self._settings_file.exists():
++            try:
++                with open(self._settings_file, 'r', encoding='utf-8') as f:
+                     return json.load(f)
+             except:
+                 pass
+@@ -125,8 +125,8 @@
+     def save_settings(self, settings_json: str) -> dict:
+         try:
+             settings = json.loads(settings_json)
+-            self.settings_file.parent.mkdir(parents=True, exist_ok=True)
+-            with open(self.settings_file, 'w', encoding='utf-8') as f:
++            self._settings_file.parent.mkdir(parents=True, exist_ok=True)
++            with open(self._settings_file, 'w', encoding='utf-8') as f:
+                 json.dump(settings, f, ensure_ascii=False, indent=2)
+             
+             # Update server manager if msemax_dir changed
+@@ -133,13 +133,13 @@
+             if not msemax_dir:
+                 msemax_dir = str(PROJECT_ROOT / 'MSEMAX')
+                 
+-            if getattr(self.server_manager, 'msemax_dir', None) != msemax_dir:
+-                was_running = self.server_manager.is_running()
+-                if was_running:
+-                    self.server_manager.stop()
+-                self.server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)
+-                if was_running:
+-                    self.server_manager.start()
++            if getattr(self._server_manager, 'msemax_dir', None) != msemax_dir:
++                was_running = self._server_manager.is_running()
++                if was_running:
++                    self._server_manager.stop()
++                self._server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)
++                if was_running:
++                    self._server_manager.start()
+                     
+             return {"success": True}
+         except Exception as e:
+@@ -146,16 +146,16 @@
+ 
+     def start_server(self) -> dict:
+-        return self.server_manager.start()
++        return self._server_manager.start()
+ 
+     def stop_server(self) -> dict:
+-        return self.server_manager.stop()
++        return self._server_manager.stop()
+ 
+     def get_server_status(self) -> dict:
+-        return self.server_manager.get_status()
++        return self._server_manager.get_status()
+ 
+     def setup_msemax_requirements(self) -> dict:
+-        res1 = self.server_manager.install_requirements()
+-        res2 = self.server_manager.install_playwright()
++        res1 = self._server_manager.install_requirements()
++        res2 = self._server_manager.install_playwright()
+         return {
+             "success": res1.get("success", False) and res2.get("success", False),
+             "output": f"Requirements:\n{res1.get('output', '')}\n\nPlaywright:\n{res2.get('output', '')}"
+@@ -162,6 +162,6 @@
+ 
+     def run_get_session(self) -> dict:
+-        return self.server_manager.run_get_session()
++        return self._server_manager.run_get_session()
+ 
+     def select_files(self, file_type: str) -> str:
+         """Opens a native file dialog. Returns JSON list of selected file paths."""
+@@ -168,4 +168,4 @@
+-        if not self.window:
++        if not self._window:
+             return "[]"
+         
+         if file_type == 'warehouse':
+@@ -179,7 +179,7 @@
+             import webview
+             dialog_type = webview.OPEN_DIALOG
+         
+-        result = self.window.create_file_dialog(
++        result = self._window.create_file_dialog(
+             dialog_type,
+             allow_multiple=True,
+             file_types=file_types
+@@ -191,7 +191,7 @@
+     def select_directory(self) -> str:
+         """Opens a native directory picker. Returns selected path."""
+         import webview
+-        if not self.window:
++        if not self._window:
+             return ""
+             
+         try:
+@@ -200,7 +200,7 @@
+             import webview
+             dialog_type = webview.FOLDER_DIALOG
+             
+-        result = self.window.create_file_dialog(dialog_type)
++        result = self._window.create_file_dialog(dialog_type)
+         if result and len(result) > 0:
+             return str(result[0])
+         return ""
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

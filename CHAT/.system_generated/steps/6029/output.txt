@@ -1,0 +1,29 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\server_manager.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -255,7 +255,11 @@
+         self.servers = {}
+ 
+         # 1. ChatGPT Server configuration
+-        c_dir = settings.get("msemax_chatgpt_dir") or settings.get("msemax_dir") or DEFAULT_SERVERS["chatgpt"]["default_dir"]
++        default_c_dir = DEFAULT_SERVERS["chatgpt"]["default_dir"]
++        explicit_c_dir = settings.get("msemax_chatgpt_dir")
++        if not explicit_c_dir and settings.get("msemax_dir") and "gaistudio" not in settings.get("msemax_dir").lower():
++            explicit_c_dir = settings.get("msemax_dir")
++        c_dir = explicit_c_dir or default_c_dir
+         c_conf = dict(DEFAULT_SERVERS["chatgpt"])
+         c_conf["dir"] = c_dir
+         self.servers["chatgpt"] = ServerInstance("chatgpt", c_conf, logger_callback=self.logger)
+@@ -262,5 +262,9 @@
+         # 2. Google AI Studio Server configuration
+-        g_dir = settings.get("msemax_gaistudio_dir") or DEFAULT_SERVERS["gaistudio"]["default_dir"]
++        default_g_dir = DEFAULT_SERVERS["gaistudio"]["default_dir"]
++        explicit_g_dir = settings.get("msemax_gaistudio_dir")
++        if not explicit_g_dir and settings.get("msemax_dir") and "gaistudio" in settings.get("msemax_dir").lower():
++            explicit_g_dir = settings.get("msemax_dir")
++        g_dir = explicit_g_dir or default_g_dir
+         g_conf = dict(DEFAULT_SERVERS["gaistudio"])
+         g_conf["dir"] = g_dir
+         self.servers["gaistudio"] = ServerInstance("gaistudio", g_conf, logger_callback=self.logger)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

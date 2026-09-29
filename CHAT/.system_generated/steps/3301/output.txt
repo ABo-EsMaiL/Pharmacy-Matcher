@@ -1,0 +1,28 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Submitting with wait_seconds=0...
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_async_extract.py", line 41, in <module>
+    res = client.extract.from_document(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_client.py", line 300, in from_document
+    return post_multipart(
+           ^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_multipart.py", line 100, in post_multipart
+    return api_client.response_deserialize(response, _RESPONSE_TYPES).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_generated\api_client.py", line 328, in response_deserialize
+    raise ApiException.from_response(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\unstructured_transform_client\_generated\exceptions.py", line 141, in from_response
+    raise BadRequestException(http_resp=http_resp, body=body, data=data)
+unstructured_transform_client._generated.exceptions.BadRequestException: (400)
+Reason: Bad Request
+HTTP response headers: HTTPHeaderDict({'Date': 'Tue, 22 Sep 2026 17:10:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '157', 'Connection': 'keep-alive', 'server': 'uvicorn'})
+HTTP response body: {"code":"invalid_schema","message":"schema does not satisfy the extraction engine's constraints: \"additionalProperties\" must be present and set to false."}
+HTTP response data: code=<ErrorCode.INVALID_SCHEMA: 'invalid_schema'> message='schema does not satisfy the extraction engine\'s constraints: "additionalProperties" must be present and set to false.'
+
+

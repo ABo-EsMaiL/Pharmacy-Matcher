@@ -1,0 +1,52 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\src\extract\file_handler.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -80,9 +80,11 @@
+     if not filepaths:
+         return results
+ 
+-    if len(filepaths) == 1:
++    # Process files sequentially so single-tab browser gateway processes one file/page at a time cleanly
++    for idx, fp in enumerate(filepaths, start=1):
++        print(f"\n[{role_label} {idx}/{len(filepaths)}] Starting file: {Path(fp).name}")
+         fname, items = _process_single_file(
+-            filepaths[0],
++            fp,
+             vision_api_url=vision_api_url,
+             vision_api_key=vision_api_key,
+             vision_model=vision_model,
+@@ -91,32 +91,6 @@
+             profile=profile
+         )
+         results[fname] = items
+-    else:
+-        # Run in parallel across worker threads
+-        max_workers = min(len(filepaths), 8)
+-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+-            futures = {
+-                executor.submit(
+-                    _process_single_file,
+-                    fp,
+-                    vision_api_url,
+-                    vision_api_key,
+-                    vision_model,
+-                    api_key,
+-                    base_url,
+-                    gemini_api_key,
+-                    profile
+-                ): Path(fp).name
+-                for fp in filepaths
+-            }
+-            for future in as_completed(futures):
+-                fname = futures[future]
+-                try:
+-                    name, items = future.result()
+-                    results[name] = items
+-                except Exception as e:
+-                    print(f"[!] Worker failed for {fname}: {e}")
+-                    results[fname] = []
+ 
+     total = sum(len(items) for items in results.values())
+     print(f"\n{'='*60}")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

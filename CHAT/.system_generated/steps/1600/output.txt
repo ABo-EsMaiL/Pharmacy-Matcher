@@ -1,0 +1,7 @@
+Title: Live Content
+
+OG Description: Fetched live
+
+The full content of the article at https://docs.unstructured.io/transform/extract.md has been saved to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\steps\1600\content.md
+
+You can use the view_file tool to read specific sections if needed.

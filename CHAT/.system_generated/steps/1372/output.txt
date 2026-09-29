@@ -1,0 +1,40 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -112,8 +112,32 @@
+             result_data = result.model_dump()
+         elif hasattr(result, '__dict__'):
+             result_data = result.__dict__
+-        else:
+-            result_data = dict(result)
++        # Check if it returned a job instead of immediate result
++        # TransformClient often returns 202 Accepted with a job ID for large files
++        if result_data.get("status") in ["queued", "processing", "in_progress"]:
++            job_id = result_data.get("id") or result_data.get("job_id")
++            if job_id:
++                print(f"  ⏳ جاري المعالجة على الخادم (رقم المهمة: {job_id}). جاري الانتظار...")
++                import time
++                while True:
++                    time.sleep(10)
++                    job_res = client.jobs.get(job_id)
++                    # Convert to dict
++                    if hasattr(job_res, 'model_dump'):
++                        job_data = job_res.model_dump()
++                    elif hasattr(job_res, '__dict__'):
++                        job_data = job_res.__dict__
++                    else:
++                        job_data = dict(job_res)
++                        
++                    status = job_data.get("status")
++                    if status == "completed":
++                        result_data = job_data
++                        break
++                    elif status in ["failed", "error"]:
++                        raise RuntimeError(f"فشلت عملية الاستخراج في الخادم: {job_data.get('error', '')}")
++                    
++                    print(f"  ⏳ الحالة الحالية: {status} ...")
+ 
+         # Cache the raw result
+         with open(cache_file, "w", encoding="utf-8") as f:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

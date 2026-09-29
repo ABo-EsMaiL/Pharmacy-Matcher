@@ -1,0 +1,51 @@
+
+The command exited with code 0.
+Output:
+concurrency_limit"}}
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [+] Rendered WebP: 199.0 KB
+     [*] Sending Vision request to gateway (Attempt 1/3)...
+     [+] Rendered WebP: 299.8 KB
+     [*] Sending Vision request to gateway (Attempt 1/3)...
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [*] Sending Vision request to gateway (Attempt 2/3)...
+     [*] Sending Vision request to gateway (Attempt 2/3)...
+     [*] Sending Vision request to gateway (Attempt 2/3)...
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [*] Sending Vision request to gateway (Attempt 2/3)...
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [*] Sending Vision request to gateway (Attempt 2/3)...
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [*] Sending Vision request to gateway (Attempt 3/3)...
+     [*] Sending Vision request to gateway (Attempt 3/3)...
+     [*] Sending Vision request to gateway (Attempt 3/3)...
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [*] Sending Vision request to gateway (Attempt 3/3)...
+     [*] Sending Vision request to gateway (Attempt 3/3)...
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+     [!] [Page 1] HTTP Error 429: {"detail":{"error":"Server busy — browser tab currently processing another request.","type":"concurrency_limit"}}
+[!] Exception processing مخزن الحياة فارم اسكندريه-170.pdf: Failed to extract page 1 of مخزن الحياة فارم اسكندريه-170.pdf after 3 attempts.
+[!] Exception processing السلام شبين.pdf: Failed to extract page 1 of السلام شبين.pdf after 3 attempts.
+[!] Exception processing الهضبة الاثنين نقدى0.pdf: Failed to extract page 1 of الهضبة الاثنين نقدى0.pdf after 3 attempts.
+[!] Exception processing كيور فارما خاص.pdf: Failed to extract page 1 of كيور فارما خاص.pdf after 3 attempts.
+[!] Exception processing المكرومي المنصورة.pdf: Failed to extract page 1 of المكرومي المنصورة.pdf after 3 attempts.
+     [+] [Page 1] Succeeded in 18.1s -> 10 items extracted.
+
+[+] [VISION EXTRACTOR] Successfully completed all 1 pages for جملة العمروووو.pdf!
+[+] Total items extracted: 10
+  -> [DONE] جملة العمروووو.pdf: 10 items extracted.
+
+============================================================
+[+] Completed Warehouse: 10 items from 6 file(s)
+============================================================
+
+
+============================================================
+[FAST ENGINE] Starting 
+

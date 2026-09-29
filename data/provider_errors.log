@@ -1,0 +1,27 @@
+
+======================================================================
+TIMESTAMP: 2026-09-25T17:02:28.659735
+ERROR TYPE: NETWORK_CONNECTION_FAILED
+URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash
+CASE COUNT: 9 | CASES: ['Q00046', 'Q00121', 'Q00160', 'Q00256', 'Q00310', 'Q00384', 'Q00430', 'Q00477', 'Q00491']
+RAW RESPONSE:
+('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+======================================================================
+
+======================================================================
+TIMESTAMP: 2026-09-25T17:02:37.681865
+ERROR TYPE: NETWORK_CONNECTION_FAILED
+URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash
+CASE COUNT: 9 | CASES: ['Q00046', 'Q00121', 'Q00160', 'Q00256', 'Q00310', 'Q00384', 'Q00430', 'Q00477', 'Q00491']
+RAW RESPONSE:
+HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+======================================================================
+
+======================================================================
+TIMESTAMP: 2026-09-25T17:02:46.701667
+ERROR TYPE: NETWORK_CONNECTION_FAILED
+URL: http://127.0.0.1:8001/v1/chat/completions | MODEL: gemini-3.8-flash
+CASE COUNT: 9 | CASES: ['Q00046', 'Q00121', 'Q00160', 'Q00256', 'Q00310', 'Q00384', 'Q00430', 'Q00477', 'Q00491']
+RAW RESPONSE:
+HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+======================================================================

@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+Searching for file inputs or buttons:
+BUTTON: <button _ngcontent-ng-c1083380779="" ms-button="" variant="icon-borderless" mattooltipposition="below" class="mat-mdc-to
+BUTTON: <button _ngcontent-ng-c1083380779="" ms-button="" variant="icon-borderless" name="rerun-button" mattooltipposition="belo
+

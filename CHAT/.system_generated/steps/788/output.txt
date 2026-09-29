@@ -1,0 +1,25 @@
+
+The command exited with code 0.
+Output:
+        
+        settings = self.get_settings()
+        msemax_dir = settings.get('msemax_dir', '')
+        if not msemax_dir:
+            msemax_dir = str(PROJECT_ROOT / 'MSEMAX')
+        self.server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)
+        
+    def add_log(self, message: str):
+        self.logs.append(message)
+        if len(self.logs) > 1000:
+            self.logs.pop(0)
+        
+        if self.window:
+            try:
+                safe_msg = message.replace("'", "\\'").replace('\n', '\\n').replace('\r', '')
+                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('new_log', {{detail: '{safe_msg}'}}));")
+            except:
+                pass
+
+    def get_logs(self) -> str:
+
+

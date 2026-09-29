@@ -1,0 +1,12 @@
+
+The command exited with code 1.
+Output:
+Stop-Process : Cannot stop process "python (764)" because of the following error: Access is denied
+At line:1 char:1
++ Stop-Process -Id 764 -Force
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (System.Diagnostics.Process (python):Process) [Stop-Process], ProcessCommand 
+   Exception
+    + FullyQualifiedErrorId : CouldNotStopProcess,Microsoft.PowerShell.Commands.StopProcessCommand
+ 
+

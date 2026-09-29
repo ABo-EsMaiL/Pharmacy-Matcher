@@ -1,0 +1,15 @@
+
+The command exited with code 1.
+Output:
+At line:1 char:163
++ ... tml', encoding='utf-8'), 1) if \"showScreen('screen-servers'\" in l]"
++                                                                 ~~~~~~~~~
+Unexpected token '\" in l]"' in expression or statement.
+At line:1 char:163
++ ... html', encoding='utf-8'), 1) if \"showScreen('screen-servers'\" in l] ...
++                                                                  ~
+Missing closing ')' in expression.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+ 
+

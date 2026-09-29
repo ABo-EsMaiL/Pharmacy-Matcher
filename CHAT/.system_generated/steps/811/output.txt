@@ -1,0 +1,60 @@
+
+The command exited with code 0.
+Output:
+                "❌ استجابة 202 بدون رابط Location للاستعلام عن حالة المهمة"
+            )
+
+        print(f"  ⏳ المهمة غير متزامنة، جارٍ الانتظار...")
+        result = _poll_for_result(poll_url, headers)
+
+    else:
+        raise RuntimeError(
+            f"❌ فشل الاتصال بـ Unstructured API\n"
+            f"  الحالة: {response.status_code}\n"
+            f"  الرد: {response.text[:500]}"
+        )
+
+    # حفظ الاستجابة الخام كملف JSON بجانب ملف PDF
+    json_path = filepath.with_suffix(".json")
+    with open(json_path, "w", encoding="utf-8") as jf:
+        json.dump(result, jf, ensure_ascii=False, indent=2)
+        
+    # حفظ في الذاكرة المؤقتة العامة للمرات القادمة
+    with open(cache_file, "w", encoding="utf-8") as cf:
+        json.dump(result, cf, ensure_ascii=False, indent=2)
+        
+    print(f"  💾 تم حفظ الاستجابة الخام: {json_path.name}")
+
+    return result
+
+
+def parse_items_from_response(response: dict | list) -> list[dict]:
+    elements = _normalize_response(response)
+
+    items = _try_extracted_data(elements)
+    if items:
+        print(f"     -> Extracted {len(items)} items from structured data")
+        return items
+
+    items = _try_html_tables(elements)
+    if items:
+        print(f"     -> Extracted {len(items)} items from HTML tables")
+        return items
+
+    items = _try_text_content(elements)
+    print(f"     -> Extracted {len(items)} items from raw text content")
+    return items
+
+
+def extract_items_from_pdf(
+    filepath: Path,
+    api_key: str,
+    base_url: str = "https://transform.unstructured.io",
+) -> list[dict]:
+    """
+    استخراج أسماء الأصناف من ملف PDF (الدالة الرئيسية).
+
+    تجمع بين رفع الملف وتحليل الاستجابة.
+
+
+

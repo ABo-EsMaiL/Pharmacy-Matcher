@@ -1,0 +1,4 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1461,"LineContent":"                \u003cbutton class=\"nav-item\" onclick=\"showScreen('screen-settings', this)\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1675,"LineContent":"            \u003cdiv id=\"screen-settings\" class=\"screen\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2275,"LineContent":"        'screen-settings': t.settings_title,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3532,"LineContent":"            } else if (screenId === 'screen-logs' || screenId === 'screen-settings') {"}

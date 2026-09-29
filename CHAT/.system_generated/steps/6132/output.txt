@@ -1,0 +1,50 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2922,15 +2922,40 @@
+         isServerRunning = false;
+     }
+     
++    // Update active server labels across the UI
++    try {
++        if (window.pywebview && window.pywebview.api) {
++            const infoStr = await window.pywebview.api.get_servers_info();
++            const info = JSON.parse(infoStr);
++            const activeKey = info.active_server || 'gaistudio';
++            const activeSrv = info.servers?.[activeKey];
++            if (activeSrv) {
++                const shortName = activeKey === 'gaistudio' ? 'Google AI Studio (8001)' : 'ChatGPT (8000)';
++                const sidebarName = document.getElementById('sidebar-active-server-name');
++                if (sidebarName) sidebarName.textContent = shortName;
++
++                const homeText = document.getElementById('home-active-server-text');
++                if (homeText) {
++                    homeText.textContent = currentLang === 'en'
++                        ? `Active Matching Server: ${shortName} • ${activeSrv.default_model || ''}`
++                        : `سيرفر المطابقة النشط: ${shortName} • ${activeSrv.default_model || ''}`;
++                }
++
++                const topText = document.getElementById('top-bar-server-text');
++                if (topText) {
++                    topText.textContent = `${shortName}: ` + (isRunning ? t.server_running : t.server_stopped);
++                }
++            }
++        }
++    } catch (e) {
++        console.error('Error updating active server label:', e);
++    }
++
+     // Update top bar server badge
+     const topBadge = document.getElementById('top-bar-server-badge');
+-    const topText = document.getElementById('top-bar-server-text');
+     if (topBadge) {
+         topBadge.className = isRunning ? 'server-badge-pill running' : 'server-badge-pill stopped';
+     }
+-    if (topText) {
+-        topText.textContent = isRunning ? t.server_running : t.server_stopped;
+-    }
+ 
+     // Also auto-refresh servers screen if it is active
+     const srvScreen = document.getElementById('screen-servers');
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

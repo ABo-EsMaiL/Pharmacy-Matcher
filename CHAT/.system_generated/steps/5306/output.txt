@@ -1,0 +1,18 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\inspect_finder_scores.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -8,8 +8,11 @@
+ if not wh_files:
+     wh_files = list(Path("data/warehouses").glob("*.*"))
+ 
++from src.config import load_config
++config = load_config()
++
+ print(f"Found {len(wh_files)} warehouse files.")
+-wh_data = read_input_files(wh_files, role="warehouse")
++wh_data = read_input_files(wh_files, role="warehouse", api_key=config.unstructured_api_key)
+ 
+ target_items = [
+     ("سكينورين كريم", "الهضبة الاثنين نقدى0.pdf"),
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

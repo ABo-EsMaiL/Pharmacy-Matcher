@@ -1,0 +1,42 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Safety Auto-Match function defined successfully.
+=== VERIFYING BRAND FAMILY AND CRITICAL PAIRS ===
+[انسولين نوفورابيد قلم خرطوشه]  <--->  [انسولين اكترابيد ١٠٠ وحدة]
+   -> Result: LEVEL 3 (LLM/Review) (Reason: brand_family_ambiguity)
+[بيتادين شامبو120مل س ج]  <--->  [بيتادين مطهر/النيل]
+   -> Result: LEVEL 3 (LLM/Review) (Reason: brand_family_ambiguity)
+[ليمتلس بي كومبلكس لزقه]  <--->  [ليمتلس كروماماكس كت ٣٠ كبس]
+   -> Result: LEVEL 3 (LLM/Review) (Reason: brand_family_ambiguity)
+[هيرو دي3+كي2 نقط]  <--->  [هيرو داجست 12لايفرط]
+   -> Result: LEVEL 3 (LLM/Review) (Reason: brand_family_ambiguity)
+[سيتال1جم اقراص س ج]  <--->  [سيتال اكسترا/ايكيو]
+   -> Result: LEVEL 3 (LLM/Review) (Reason: brand_family_ambiguity)
+[سيتال1جم اقراص س ج]  <--->  [سيتال لولس /باكت 65]
+   -> Result: LEVEL 3 (LLM/Review) (Reason: brand_family_ambiguity)
+[سبازموفين امبول س ج]  <--->  [سبازموفري ٣امبول/ادوبا]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+[اوجمنتين  457 شراب]  <--->  [اوجمنتين ٦٠٠ اس شراب/المهن]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+[زنكترون 30كبسولة س ج]  <--->  [زنكترون اقراص باكت 160]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+[ب ك ميرز كبسول س ج]  <--->  [ميرز كبسول/باكت 30]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+[ماريفان3مجم3شريط س ج]  <--->  [ماريفان ٣ مجم/جلاكسو]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+[باروفين 30قرص س ج]  <--->  [باروفين ٢٠ قرص]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+[ديوراسيف  250مجم شراب س ج]  <--->  [ديوراسيف ٢٥٠ شراب/سكويب]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+[ديكساتوبرين مرهم س ج]  <--->  [ديكسا توبيرين مرهم/ايكو]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+[نيتروماك ريتارد2.5مجم كبسول]  <--->  [نيتروماك ريتارد كبسول/التنشيط]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+[فانو كريم]  <--->  [فانو کریم/باکت 50]
+   -> Result: AUTO MATCH (Level 2) (Reason: auto_matched)
+[سكينورين كريم]  <--->  [سکینوریتش کریم]
+   -> Result: LEVEL 3 (LLM/Review) (Reason: low_brand_sim)
+

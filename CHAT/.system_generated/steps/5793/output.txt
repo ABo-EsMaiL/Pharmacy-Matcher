@@ -1,0 +1,11 @@
+
+The command exited with code 0.
+Output:
+بروتولوك vs كونترولوك: REJECT
+نيوكاربون vs اوكاربون: REJECT
+زنكترون vs زنكتون: PASS
+كارنيفيتا vs كارنتينا: PASS
+جنتازون vs جينتازون: REJECT
+بروفين vs برونفين: PASS
+زيثروماكس vs زيثرون: PASS
+

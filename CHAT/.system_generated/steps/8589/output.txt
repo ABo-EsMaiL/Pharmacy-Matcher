@@ -1,0 +1,25 @@
+
+The command exited with code 0.
+Output:
+================================================================================
+AUDIT OF ALL 124 MATCHES IN PROC-014
+================================================================================
+Total Matches: 124
+Suspicious Matches detected: 3
+
+01. Warehouse: [السلام شبين.pdf] (Method: مطابقة ذكية (AI))
+    Shortage: 'دوليبران1000مجم 15قرص'
+    WH Item:  'دوليبيران ١جم، ٦٠قرص'
+    Issues: Strength Conflict: 1000 vs 1000.0
+
+02. Warehouse: [السلام شبين.pdf] (Method: مطابقة ذكية (AI))
+    Shortage: 'توب جنج ادفانس30كبسوله س ج'
+    WH Item:  'توب جينج كبسول/ماش'
+    Issues: Low Brand Sim: 63.6%
+
+03. Warehouse: [كيور فارما خاص.pdf] (Method: مطابقة ذكية (AI))
+    Shortage: 'بران كبسول س ج'
+    WH Item:  'بران كبسول جديد ميبانو'
+    Issues: Low Brand Sim: 53.3%
+
+

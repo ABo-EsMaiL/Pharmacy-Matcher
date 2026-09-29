@@ -1,0 +1,35 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+[*] Processing PDF file: جملة العمروووو.pdf
+[*] Checking if جملة العمروووو.pdf is already processed on Unstructured server...
+[*] Uploading and extracting جملة العمروووو.pdf via Unstructured AI (Profile: BALANCED)...
+[*] Processing on server (Job ID: b76a14fa-8fca-4ce7-9c51-d3ff8e9bfbfd). Waiting for completion...
+[*] جملة العمروووو.pdf status: JobStatus.PROCESSING ... (24s)
+[*] جملة العمروووو.pdf status: JobStatus.PROCESSING ... (48s)
+[+] Saved valid local cache for: جملة العمروووو.pdf (19 items)
+[+] Successfully extracted 19 items from جملة العمروووو.pdf
+
+Final extracted items count: 19
+   {'item_name_raw': 'افيرو كوكسبيب 90مجم-32ب', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'امبوفير حقن جديد', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'ايزوتريتينوين 10 مجم 3 شريط -28', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'ايزوتريتينوين 20م جديد -50', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'بانادول اكسترا 48 قرص-96ب', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'بانثينول كريم كبير سعر قديم باكو 25', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'ترايكوبافيت 100مجم 3شريط', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'رانسيف 500 مجم قرص جديد45', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'ستيميبولان 400مجم كبسول', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'كلبيكان 40مجم-84', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'لوفير 400 سعر جديد باكو 45', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'لوفير 800 سعر جديد-باكو25', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'ليفوفلو تافيت 750 فيال باكو 12 كرتونه 144', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'هيرو 111 عادى جديد -12ب لا يفرط', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'هيرو 222 نيوتر ادينس 384', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'هيرو اتش ايه جديد 499', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'هيرو اف ال جديدج ك 12الافريط', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'هيرو ايه ار جديدد لايفرط', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+   {'item_name_raw': 'هيرو داجست 12لايفرط', 'source_page': 1, 'source_file': 'جملة العمروووو.pdf'}
+

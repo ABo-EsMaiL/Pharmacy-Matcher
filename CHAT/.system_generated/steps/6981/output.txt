@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -70,6 +70,8 @@
+         self.lock = asyncio.Lock()
+         self.is_ready = False
+         self.is_shutting_down = False
++        self.active_model = ""
++        self.active_thinking = ""
+ 
+     async def start(self):
+         logger.info(f"Launching persistent Chromium context from: {CHROME_PROFILE_DIR} (headless={HEADLESS}, start-maximized)")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

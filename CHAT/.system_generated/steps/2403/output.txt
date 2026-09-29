@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+200
+{'مطابقة مع مخزن عمرو (مأخوذ حرفياً من 0913)', 'مطابقة مع مخزن السلام (مأخوذ حرفياً من 0913)', 'مطابقة مع مخزن السلام (صيغ من صنف المخزن)', 'صنف ناقص غير متوفر بالمخازن (مأخوذ حرفياً من 0913)', 'مطابقة مع مخزن عمرو (صيغ من صنف المخزن)'}
+

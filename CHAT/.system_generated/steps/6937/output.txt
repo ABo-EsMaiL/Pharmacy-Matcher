@@ -1,0 +1,36 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy\review\build_orders.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -184,7 +184,18 @@
+             return split_batch("A previous complete HTTP response was truncated or invalid.")
+         if attempt.get("state") == "uncertain" and not args.retry_uncertain:
+             raise ValueError("An earlier batch may have reached the provider but no reply was saved. Inspect its folder; use --retry-uncertain only to explicitly resend it.")
+-        key = get_key(keys, {"zen": "ZEN_API_KEY", "gemini": "GEMINI_API_KEY", "openrouter": "OPENROUTER_API_KEY"}[provider])
++        provider_keys = {
++            "zen": "ZEN_API_KEY",
++            "gemini": "GEMINI_API_KEY",
++            "openrouter": "OPENROUTER_API_KEY",
++            "local": "LOCAL_API_KEY",
++            "msemax": "LOCAL_API_KEY",
++        }
++        if provider in ("local", "msemax"):
++            key = keys.get("LOCAL_API_KEY") or os.environ.get("LOCAL_API_KEY", "").strip() or "[REDACTED_CREDENTIAL]"
++            keys["LOCAL_API_KEY"] = key
++        else:
++            key = get_key(keys, provider_keys[provider])
+         directory.mkdir(parents=True, exist_ok=True)
+         body = {"systemInstruction": {"parts": [{"text": SYSTEM}]},
+                 "contents": [{"role": "user", "parts": [{"text": json.dumps(job["inputs"], ensure_ascii=False)}]}],
+@@ -198,6 +198,10 @@
+             from openrouter_provider import request_body, URL
+             body, url = request_body(model, job["inputs"]), URL
+             headers = {"Authorization": "Bearer " + key, "Content-Type": "application/json"}
++        elif provider in ("local", "msemax"):
++            from local_provider import request_body, URL
++            body, url = request_body(model, job["inputs"]), URL
++            headers = {"Authorization": "Bearer " + key, "Content-Type": "application/json"}
+         save(directory / "request.json", body)
+         while True:
+             if network["calls"] >= args.max_api_calls:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

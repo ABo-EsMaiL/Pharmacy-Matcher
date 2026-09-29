@@ -1,0 +1,35 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -833,6 +833,16 @@
+         last_growth_str = f"{t_last_growth - t_submit:.1f}s" if (t_last_growth != t_submit) else "N/A"
+         completed_str = f"{total_duration:.1f}s" if current_state == self.STATE_RESPONSE_COMPLETED else "INCOMPLETE"
+ 
++        t_req_total = time.time() - t_req_start
++        self.last_timings = {
++            "pre_exec": t_pre_exec,
++            "generation": total_duration,
++            "total": t_req_total,
++            "turn_detected": t_turn_detected - t_submit if t_turn_detected else None,
++            "first_token": t_first_token - t_submit if t_first_token else None,
++            "state": current_state
++        }
++
+         timing_summary = (
+             f"{case_count} cases | "
+             f"first token: {first_token_str} | "
+@@ -846,7 +846,11 @@
+             f"total: {total_duration:.1f}s | chars: {len(prev_text)} | "
+             f"tier: {t_cfg['tier']}"
+         )
+-        print(f"\n[AI STUDIO TIMING] {timing_summary}\n")
++        logger.info(
++            f"[TIMING_BREAKDOWN] {case_count} cases | Total: {t_req_total:.2f}s | "
++            f"Pre-exec: {t_pre_exec:.2f}s | Model Gen: {total_duration:.2f}s | Chars: {len(prev_text)}"
++        )
++        print(f"\n[AI STUDIO TIMING] {timing_summary} (Total Roundtrip: {t_req_total:.2f}s)\n")
+ 
+         elapsed_total = time.time() - t_submit
+         is_json = False
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

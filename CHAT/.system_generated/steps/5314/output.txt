@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_hierarchy.py", line 6, in <module>
+    from src.normalize.cleaner import extract_brand_tokens, extract_form_group, extract_strength
+ModuleNotFoundError: No module named 'src.normalize'
+

@@ -1,0 +1,11 @@
+        filepath = Path(filepath)
+        ext = filepath.suffix.lower()
+
+        print(f"\n  -> File: {filepath.name} (Type: {ext})")
+
+        if ext in _EXCEL_EXTENSIONS:
+            items = _process_excel_file(filepath)
+        elif ext in _PDF_EXTENSIONS:
+            items = _process_pdf_file(filepath, api_key, base_url, gemini_api_key)
+        elif ext in _JSON_EXTENSIONS:
+

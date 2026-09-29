@@ -1,0 +1,20 @@
+                        <i class="ph-fill ph-play-circle"></i> بدء عملية المطابقة
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- PROGRESS WIDGET -->
+
+                <div id="progress-modal" style="display: none;">
+
+                    <div class="progress-box">
+
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+
+                            <div class="spinner" style="width: 20px; height: 20px; border-width: 2px;"></div>
+
+                            <h3 id="progress-text" style="margin: 0; font-size: 14px; font-weight: bold;">جاري معالجة الملفات...</h3>
+

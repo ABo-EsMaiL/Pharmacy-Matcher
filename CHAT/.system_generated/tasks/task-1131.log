@@ -1,0 +1,24 @@
+309: .upload-grid {
+310: display: grid;
+311: grid-template-columns: 1fr 1fr;
+474: .stats-grid {
+475: display: grid;
+476: grid-template-columns: repeat(4, 1fr);
+545: display: grid;
+546: grid-template-columns: repeat(3, 1fr);
+583: .history-grid {
+584: display: grid;
+585: grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+631: grid-column: 1 / -1;
+643: .settings-grid {
+644: display: grid;
+645: grid-template-columns: 1fr 1fr;
+656: .form-grid {
+657: display: grid;
+658: grid-template-columns: 1fr;
+828: <div class="upload-grid">
+889: <div class="stats-grid">
+963: <div id="history-list" class="history-grid">
+979: <div class="settings-grid">
+986: <div class="card-body form-grid">
+1012: <div class="card-body form-grid">

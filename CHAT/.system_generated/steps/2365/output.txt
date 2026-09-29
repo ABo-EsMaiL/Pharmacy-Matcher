@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: test_shortages_200.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 200 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 200 items from column 'أسم الصنف'
+SUCCESS! Rows: 200 Items: 200
+

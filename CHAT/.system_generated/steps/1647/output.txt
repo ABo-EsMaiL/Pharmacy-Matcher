@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+Connecting to Unstructured with key: GQfocO...
+Total existing jobs found on server: 0
+Successfully deleted 0 jobs.
+

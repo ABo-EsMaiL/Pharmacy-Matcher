@@ -1,0 +1,117 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -221,7 +221,7 @@
+             shortage_filenames = [Path(p).name for p in shortage_paths]
+             warehouse_filenames = [Path(p).name for p in warehouse_paths]
+             
+-            process_id = self.db.create_process(shortage_filenames, warehouse_filenames)
++            process_id = self._db.create_process(shortage_filenames, warehouse_filenames)
+             
+             thread = threading.Thread(target=self._process_worker, args=(process_id, shortage_paths, warehouse_paths))
+             thread.start()
+@@ -237,7 +237,7 @@
+                 return {"success": False, "error": "ملفات العملية غير موجودة لإعادة التشغيل"}
+             
+             # get process details
+-            cursor = self.db.conn.cursor()
++            cursor = self._db.conn.cursor()
+             cursor.execute('SELECT shortage_files, warehouse_files FROM processes WHERE id = ?', (process_id,))
+             row = cursor.fetchone()
+             if not row:
+@@ -249,7 +249,7 @@
+             warehouse_paths = [str(workspace / name) for name in warehouse_filenames]
+             
+             # Reset status
+-            self.db.update_process_status(process_id, 'processing')
++            self._db.update_process_status(process_id, 'processing')
+             
+             thread = threading.Thread(target=self._process_worker, args=(process_id, shortage_paths, warehouse_paths, True))
+             thread.daemon = True
+@@ -261,7 +261,7 @@
+     def _process_worker(self, process_id: str, shortage_paths: list, warehouse_paths: list, is_restart: bool = False):
+         try:
+             self.add_log(f"--- Starting new process [{process_id}] ---")
+-            proc_dir = self.db.get_process_dir(process_id)
++            proc_dir = self._db.get_process_dir(process_id)
+             
+             # Create subdirs
+             shortages_dir = proc_dir / 'input_shortages'
+@@ -289,8 +289,8 @@
+                         pass
+                 copied_warehouses.append(dest)
+                 
+-            if self.window:
+-                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Reading files...'}}}}));")
++            if self._window:
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Reading files...'}}}}));")
+                 
+             # Import actual project modules
+             from src.config import load_config
+@@ -306,8 +306,8 @@
+             config.local_model = settings.get('local_model', '') or config.local_model
+             
+             self.add_log("[PROCESS] Config loaded.")
+-            if self.window:
+-                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Extracting data from files...'}}}}));")
++            if self._window:
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Extracting data from files...'}}}}));")
+             
+             # Read input files (this handles PDF→Unstructured API automatically)
+             api_key = settings.get('unstructured_api_key', '') or config.unstructured_api_key
+@@ -328,8 +328,8 @@
+             
+             self.add_log(f"[PROCESS] Extracted total {len(all_shortages)} shortage items. Starting coordinator...")
+             
+-            if self.window:
+-                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Matching {len(all_shortages)} items...'}}}}));")
++            if self._window:
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Matching {len(all_shortages)} items...'}}}}));")
+             
+             # Run matching
+             coordinator = FastCoordinator(config)
+@@ -336,7 +336,7 @@
+             
+             self.add_log(f"[PROCESS] Matching completed.")
+-            if self.window:
+-                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Saving results...'}}}}));")
++            if self._window:
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Saving results...'}}}}));")
+                 
+             # Write results
+             out_file = proc_dir / f"results_{process_id}.xlsx"
+@@ -343,7 +343,7 @@
+             
+             # Update DB
+             summary = results.get("summary", {})
+-            self.db.update_process(
++            self._db.update_process(
+                 process_id,
+                 status='reviewing' if summary.get('review_count', 0) > 0 else 'completed',
+                 total_shortages=summary.get('total_shortages', 0),
+@@ -356,9 +356,9 @@
+             self.add_log(f"--- Process completed successfully [{process_id}] ---")
+             
+             # Send completion event back to UI
+-            if self.window:
++            if self._window:
+                 safe_stats = json.dumps(summary).replace('\\', '\\\\').replace('"', '\\"')
+-                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: true, stats: JSON.parse('{safe_stats}')}}}}));")
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: true, stats: JSON.parse('{safe_stats}')}}}}));")
+                 
+         except Exception as e:
+             import traceback
+@@ -365,8 +365,8 @@
+             self.add_log(f"[PROCESS ERROR] Exception occurred: {str(e)}")
+-            self.db.update_process(process_id, status='error')
++            self._db.update_process(process_id, status='error')
+             err_msg = str(e).replace("'", "\\'").replace("\n", " ").replace('"', '\\"')
+-            if self.window:
+-                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: false, error: \"{err_msg}\"}}}}));")
++            if self._window:
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: false, error: \"{err_msg}\"}}}}));")
+ 
+     def get_process_result(self, process_id: str) -> dict:
+         proc = self.db.get_process(process_id)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,13 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\file_handler.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -12,6 +12,7 @@
+ # الامتدادات المدعومة
+ _EXCEL_EXTENSIONS = {".xlsx", ".xls", ".xlsm"}
+ _PDF_EXTENSIONS = {".pdf"}
++_JSON_EXTENSIONS = {".json"}
+ 
+ 
+ def read_input_files(
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

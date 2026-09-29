@@ -1,0 +1,43 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -380,7 +380,7 @@
+         print(f"  -> Exact Matches: {exact_count}")
+         print(f"  -> Deterministic Auto-Matches: {auto_match_count}")
+         
+-        # 3. Process via LLM in optimal chunks (50 items for ChatGPT, 75 for Google AI Studio)
++        # 3. Process via LLM in optimal chunks (100 items for ChatGPT, 75 for Google AI Studio)
+         if llm_cases and hasattr(self.config, 'local_api_url'):
+             url_str = str(getattr(self.config, 'local_api_url', ''))
+             model_str = str(getattr(self.config, 'local_model', '')).lower()
+@@ -387,5 +387,15 @@
+-            batch_size = 50 if is_chatgpt else 75
+-            batches = [llm_cases[i:i + batch_size] for i in range(0, len(llm_cases), batch_size)]
++            
++            if is_chatgpt:
++                batch_size = 100
++                # If total ambiguous items <= 120, group into 1 single message to strictly save ChatGPT prompt quota
++                if len(llm_cases) <= 120:
++                    batches = [llm_cases]
++                else:
++                    batches = [llm_cases[i:i + batch_size] for i in range(0, len(llm_cases), batch_size)]
++            else:
++                batch_size = 75
++                batches = [llm_cases[i:i + batch_size] for i in range(0, len(llm_cases), batch_size)]
++
+             provider_label = "ChatGPT" if is_chatgpt else "Google AI Studio"
+             print(f"  -> Sending {len(llm_cases)} ambiguous items to Local API ({provider_label}) in {len(batches)} batch(es) (Max ~{batch_size} items/msg)...")
+             
+@@ -392,7 +392,8 @@
+-                max_retries = 3
++                max_retries = 5 if is_chatgpt else 3
+                 for attempt in range(max_retries):
+                     try:
+-                        time.sleep(2)
++                        inter_wait = 5 if is_chatgpt else 2
++                        time.sleep(inter_wait)
+                         raw_results = self._call_local_api({"cases": cases_chunk})
+                         parsed = []
+                         matched_in_chunk = 0
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

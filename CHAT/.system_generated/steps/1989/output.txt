@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\file_handler.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -68,7 +68,7 @@
+     api_key: str | None,
+     base_url: str,
+     gemini_api_key: str | None = None,
+-    profile: str = "best",
++    profile: str = "balanced",
+ ) -> list[dict]:
+     if not api_key:
+         raise ValueError(
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

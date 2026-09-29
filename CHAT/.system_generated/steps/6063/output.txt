@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+1207: <button class="nav-item active" onclick="showScreen('screen-new', this)">
+1210: <button class="nav-item" onclick="loadHistory(); showScreen('screen-history', this)">
+1213: <button class="nav-item" onclick="showScreen('screen-settings', this)">
+1216: <button class="nav-item" onclick="loadLogs(); showScreen('screen-logs', this)">
+1219: <button class="nav-item" onclick="showScreen('screen-servers', this); loadServersUI();">
+1707: <button type="button" class="btn btn-outline" style="font-size: 12px; padding: 6px 14px; border-radius: 8px;" onclick="document.getElementById('progress-modal').style.display='none'; showScreen('screen-logs');">
+2532: window.showScreen('screen-results');
+2778: window.showScreen('screen-results');
+3160: // Override showScreen to handle active states on sidebar
+3161: const originalShowScreen = window.showScreen;
+3162: window.showScreen = function(screenId, element = null) {
+

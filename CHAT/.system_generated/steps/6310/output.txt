@@ -1,0 +1,57 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -46,12 +46,13 @@
+             
+         self._settings_file = PROJECT_ROOT / 'data' / 'settings.json'
+         self._logs = []
++        self._server_logs = []
+         self._dropped_files = []
+         
+         settings = self.get_settings()
+-        self._server_manager = MSEMAXServerManager(settings, logger_callback=self.add_log)
+-        
+-        # Redirect stdout and stderr so that prints show up in the UI logs
++        self._server_manager = MSEMAXServerManager(settings, server_logger_callback=self.add_server_log)
++        
++        # Redirect stdout and stderr so that prints show up in the pipeline logs
+         sys.stdout = LogRedirector(sys.stdout, self.add_log)
+         sys.stderr = LogRedirector(sys.stderr, self.add_log)
+         
+@@ -69,7 +69,7 @@
+         
+         if self._window:
+             try:
+-                safe_msg = message.replace("'", "\\'").replace('\n', '\\n').replace('\r', '')
++                safe_msg = message.replace('\\', '\\\\').replace("'", "\\'").replace('\n', '\\n').replace('\r', '')
+                 self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('new_log', {{detail: '{safe_msg}'}}));")
+             except:
+                 pass
+@@ -76,6 +76,25 @@
+     def get_logs(self) -> str:
+         return json.dumps(self._logs)
+ 
++    def add_server_log(self, message: str):
++        self._server_logs.append(message)
++        if len(self._server_logs) > 1000:
++            self._server_logs.pop(0)
++        
++        if self._window:
++            try:
++                safe_msg = message.replace('\\', '\\\\').replace("'", "\\'").replace('\n', '\\n').replace('\r', '')
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('new_server_log', {{detail: '{safe_msg}'}}));")
++            except:
++                pass
++
++    def get_server_logs(self) -> str:
++        return json.dumps(self._server_logs)
++
++    def clear_server_logs(self) -> dict:
++        self._server_logs.clear()
++        return {"success": True}
++
+     def save_dropped_file(self, filename: str, base64_data: str) -> str:
+         import base64
+         import tempfile
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

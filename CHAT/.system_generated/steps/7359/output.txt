@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+URL: https://aistudio.google.com/welcome
+Title: Google AI Studio
+

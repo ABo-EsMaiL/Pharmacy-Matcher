@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+Found USER_INPUT! Length: 187445
+Saved to scratch/user_raw_dom.txt
+

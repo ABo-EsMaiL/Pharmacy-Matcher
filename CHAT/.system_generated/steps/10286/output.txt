@@ -1,0 +1,14 @@
+
+The command exited with code 0.
+Output:
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy-vision\data\processes\PROC-017\cache\vision
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         9/25/2026   5:17 PM                السلام_شبين_d44b79aaae                                               
+
+
+

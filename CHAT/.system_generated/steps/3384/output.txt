@@ -1,0 +1,29 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Testing parallel extraction on 2 files...
+
+============================================================
+[*] Processing Warehouse files (2 file(s)) [PARALLEL WORKERS]
+============================================================
+
+  -> [START] Processing file: السلام شبين.pdf (Type: .pdf)
+[*] Processing PDF file: السلام شبين.pdf
+
+  -> [START] Processing file: المكرومي المنصورة.pdf (Type: .pdf)
+[*] Processing PDF file: المكرومي المنصورة.pdf
+[+] Loaded 187 items from alongside JSON: السلام شبين.json
+  -> [DONE] السلام شبين.pdf: 187 items extracted.
+[+] Loaded 503 items from alongside JSON: المكرومي المنصورة.json
+  -> [DONE] المكرومي المنصورة.pdf: 503 items extracted.
+
+============================================================
+[+] Completed Warehouse: 690 items from 2 file(s)
+============================================================
+
+Extraction finished in 0.00s
+  السلام شبين.pdf: 187 items
+  المكرومي المنصورة.pdf: 503 items
+

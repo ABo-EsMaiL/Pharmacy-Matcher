@@ -1,0 +1,2 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":216,"LineContent":"    def set_active_ai_server(self, server_key: str) -\u003e dict:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3367,"LineContent":"        const res = await window.pywebview.api.set_active_ai_server(serverKey);"}

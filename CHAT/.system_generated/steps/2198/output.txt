@@ -1,0 +1,70 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -35,18 +35,18 @@
+ 
+ class API:
+     def __init__(self, window=None):
+-        self.window = window
+-        self.db = HistoryDB()
++        self._window = window
++        self._db = HistoryDB()
+         
+         # Clean up any processes stuck in 'processing' state from a previous crash/close
+         try:
+-            self.db.mark_stuck_processes_as_failed()
+-        except:
+-            pass
+-            
+-        self.settings_file = PROJECT_ROOT / 'data' / 'settings.json'
+-        self.logs = []
+-        self.dropped_files = []
++            self._db.mark_stuck_processes_as_failed()
++        except:
++            pass
++            
++        self._settings_file = PROJECT_ROOT / 'data' / 'settings.json'
++        self._logs = []
++        self._dropped_files = []
+         
+         settings = self.get_settings()
+         msemax_dir = settings.get('msemax_dir', '')
+@@ -53,5 +53,5 @@
+             msemax_dir = str(PROJECT_ROOT / 'MSEMAX')
+-        self.server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)
++        self._server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)
+         
+         # Redirect stdout and stderr so that prints show up in the UI logs
+         sys.stdout = LogRedirector(sys.stdout, self.add_log)
+@@ -58,13 +58,17 @@
++
++    def set_window(self, window):
++        """Set pywebview window reference safely without exposing it to JS reflection."""
++        self._window = window
+         
+     def add_log(self, message: str):
+-        self.logs.append(message)
+-        if len(self.logs) > 1000:
+-            self.logs.pop(0)
+-        
+-        if self.window:
++        self._logs.append(message)
++        if len(self._logs) > 1000:
++            self._logs.pop(0)
++        
++        if self._window:
+             try:
+                 safe_msg = message.replace("'", "\\'").replace('\n', '\\n').replace('\r', '')
+-                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('new_log', {{detail: '{safe_msg}'}}));")
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('new_log', {{detail: '{safe_msg}'}}));")
+             except:
+                 pass
+ 
+@@ -71,4 +71,4 @@
+-        return json.dumps(self.logs)
++        return json.dumps(self._logs)
+ 
+     def save_dropped_file(self, filename: str, base64_data: str) -> str:
+         import base64
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

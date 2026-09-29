@@ -1,0 +1,27 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1108,6 +1108,12 @@
+                     else:
+                         full_text += chunk_data
+ 
++        timings = getattr(browser_manager, "last_timings", {})
++        headers = {
++            "X-Timing-PreExec": f"{timings.get('pre_exec', 0.0):.2f}s",
++            "X-Timing-Generation": f"{timings.get('generation', 0.0):.2f}s",
++            "X-Timing-Total": f"{timings.get('total', 0.0):.2f}s"
++        }
+         return JSONResponse({
+             "id": chunk_id,
+             "object": "chat.completion",
+@@ -1120,7 +1120,7 @@
+                 },
+                 "finish_reason": "stop"
+             }]
+-        })
++        }, headers=headers)
+ 
+ @app.post("/v1/responses", dependencies=[Depends(verify_api_key)])
+ @app.post("/responses", dependencies=[Depends(verify_api_key)])
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

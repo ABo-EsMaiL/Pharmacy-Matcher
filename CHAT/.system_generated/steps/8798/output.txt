@@ -1,0 +1,4 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":686,"LineContent":"    def get_history(self) -\u003e str:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2400,"LineContent":"            const historyStr = await window.pywebview.api.get_history();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2911,"LineContent":"        const historyStr = await window.pywebview.api.get_history();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":209,"LineContent":"        const history = await window.pywebview.api.get_history();"}

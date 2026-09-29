@@ -1,0 +1,26 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -561,6 +561,8 @@
+                 url = f"{url}/v1/chat/completions"
+                 
+         api_key = getattr(self.config, 'local_api_key', '[REDACTED_CREDENTIAL]')
++        case_count = len(inputs.get("cases", []))
++        read_timeout = max(300, case_count * 6 + 120)
+         
+         try:
+             response = http_requests.post(
+@@ -567,9 +567,10 @@
+                 headers={
+                     "Authorization": f"Bearer {api_key}",
+                     "Content-Type": "application/json",
++                    "X-Batch-Size": str(case_count),
+                 },
+                 json=body,
+-                timeout=(30, 300),
++                timeout=(30, read_timeout),
+             )
+         except Exception as conn_err:
+             self._log_provider_error(url, model, inputs, str(conn_err), "NETWORK_CONNECTION_FAILED")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

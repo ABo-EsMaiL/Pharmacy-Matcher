@@ -1,0 +1,11 @@
+
+The command exited with code 1.
+Output:
+
+FullName                                                                Length LastWriteTime       
+--------                                                                ------ -------------       
+D:\AI_Engineer\MSEMAX-AIStudio\aistudio_profile\Default\Network\Cookies  20480 9/23/2026 5:43:33 PM
+D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile\Default\Network\Cookies   20480 9/24/2026 6:13:39 PM
+
+
+

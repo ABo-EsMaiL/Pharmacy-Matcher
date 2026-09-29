@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+=== LOADED WAREHOUSE CATALOGS ===
+
+Total Not Found items in PROC-015 to audit: 468
+
+=== POTENTIAL HIDDEN DISCOVERIES FOUND: 0 ===
+

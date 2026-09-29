@@ -1,0 +1,30 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+============================================================
+1. CASES IN REVIEW SHEET (يحتاج مراجعة):
+============================================================
+[1] Shortage: 'ماجيك اويل  60 ملل زيت'
+    Candidate: 'ماجيك اويل 120 مل زيت /باكت20' | Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+    Reason: يوجد تعارض في حجم العبوة: المطلوب 60 مل والموجود 120 مل، مع تطابق اسم المنتج.
+
+[2] Shortage: 'لاكتيز 15 ملل نقط 750مجم'
+    Candidate: 'لاكتيز نقط بالفم ٥ مل ١٩٠' | Warehouse: 'المكرومي المنصورة.pdf'
+    Reason: الاسم والشكل الدوائي متطابقان، لكن يوجد اختلاف في حجم العبوة المذكور: المطلوب 15 مل والنوع المتاح 5 مل.
+
+============================================================
+2. MATCH STATS:
+Total warehouse match instances: 124
+Unique shortage items matched: 105
+  - جملة العمروووو.pdf: 2 matches
+  - السلام شبين.pdf: 19 matches
+  - كيور فارما خاص.pdf: 29 matches
+  - مخزن الحياة فارم اسكندريه-170.p: 13 matches
+  - الهضبة الاثنين نقدى0.pdf: 40 matches
+  - المكرومي المنصورة.pdf: 21 matches
+============================================================
+3. NOT FOUND ITEMS: 485 items
+Total accounted: 105 matched + 2 review + 485 not found = 592
+

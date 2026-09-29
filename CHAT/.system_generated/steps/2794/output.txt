@@ -1,0 +1,78 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2143,6 +2143,8 @@
+     }
+ }
+ 
++let isProcessRunning = false;
++
+ async function rerunMatching() {
+     if (!currentProcessId) {
+         showToast(currentLang === 'en' ? 'No active process to re-run' : 'لا توجد عملية نشطة لإعادة تشغيلها', 'warning');
+@@ -2149,4 +2149,8 @@
+     }
++    if (isProcessRunning) {
++        showToast(currentLang === 'en' ? 'A matching process is currently running. Please wait.' : 'توجد عملية مطابقة قيد التشغيل حالياً، يرجى الانتظار حتى تنتهي', 'warning');
++        return;
++    }
+     
+     showCustomConfirm(
+         currentLang === 'en' ? 'Re-run Matching' : 'إعادة المطابقة',
+@@ -2155,6 +2155,7 @@
+             const progressText = document.getElementById('progress-text');
+             const pb = document.getElementById('progress-bar-fill');
+             
++            isProcessRunning = true;
+             pb.style.width = '10%';
+             progressText.innerText = currentLang === 'en' ? 'Re-running matching...' : 'جاري إعادة المطابقة...';
+             progressModal.style.display = 'flex';
+@@ -2161,4 +2161,7 @@
+             
++            const termEl = document.getElementById('pipeline-log-terminal');
++            if (termEl) termEl.innerHTML += `\n[System] Re-running matching for process ${currentProcessId}...\n`;
++            
+             try {
+                 const res = await window.pywebview.api.rerun_process(currentProcessId);
+                 if (!res.success) {
+@@ -2165,5 +2165,7 @@
+                 }
++                showToast(currentLang === 'en' ? 'Re-run started in background' : 'تم بدء إعادة المطابقة', 'success');
+             } catch (err) {
++                isProcessRunning = false;
+                 stopProgressTimer();
+                 progressModal.style.display = 'none';
+                 showToast((currentLang === 'en' ? 'Re-run failed: ' : 'فشلت إعادة المطابقة: ') + err, 'error');
+@@ -2175,13 +2175,23 @@
+     if (!currentProcessId) return;
+     try {
+         const result = await window.pywebview.api.apply_reviews(currentProcessId);
+-        showToast(`تم تنفيذ التعديلات! نجاح: ${result.success}, فشل: ${result.failed}`, 'success');
+-        
+-        if (result.new_stats) {
+-            loadResults(result.new_stats);
+-        }
+-    } catch (error) {
+-        showToast(currentLang === 'en' ? 'Error applying changes' : 'حدث خطأ أثناء تنفيذ التعديلات', 'error');
++        if (result.success) {
++            const msg = currentLang === 'en'
++                ? `Changes applied! Confirmed: ${result.matched}, Rejected: ${result.rejected}, Remaining: ${result.remaining}`
++                : `تم تنفيذ التعديلات! تم اعتماد: ${result.matched} مطابق، ${result.rejected} غير متوفر، والمتبقي للمراجعة: ${result.remaining}`;
++            showToast(msg, 'success');
++            
++            if (result.new_stats) {
++                loadResults(result.new_stats);
++            }
++            if (typeof loadHistory === 'function') {
++                loadHistory();
++            }
++        } else {
++            showToast((currentLang === 'en' ? 'Failed: ' : 'فشل تنفيذ التعديل: ') + (result.error || ''), 'error');
++        }
++    } catch (error) {
++        showToast((currentLang === 'en' ? 'Error applying changes: ' : 'حدث خطأ أثناء تنفيذ التعديلات: ') + error, 'error');
+     }
+ }
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,81 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\dist_production\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -299,6 +299,26 @@
+     """
+     import re
+     items = []
++
++    # Handle direct list of items or strings
++    if isinstance(result_data, list):
++        for item in result_data:
++            if isinstance(item, dict):
++                name = item.get("item_name_raw") or item.get("name") or item.get("اسم الصنف")
++                if name:
++                    items.append({
++                        "item_name_raw": str(name).strip(),
++                        "source_page": item.get("source_page", 1),
++                        "source_file": filename
++                    })
++            elif isinstance(item, str) and item.strip():
++                items.append({
++                    "item_name_raw": item.strip(),
++                    "source_page": 1,
++                    "source_file": filename
++                })
++        return items
++
+     if not isinstance(result_data, dict):
+         return items
+ 
+@@ -305,7 +305,27 @@
+     if "result" in result_data and isinstance(result_data["result"], dict):
+         result_data = result_data["result"]
+ 
+-    # 1. Try extracted_data (schema output)
++    # 1. Try direct top-level "items" list
++    if "items" in result_data and isinstance(result_data["items"], list):
++        for item in result_data["items"]:
++            if isinstance(item, dict):
++                name = item.get("item_name_raw") or item.get("name") or item.get("اسم الصنف")
++                if name:
++                    items.append({
++                        "item_name_raw": str(name).strip(),
++                        "source_page": item.get("source_page", 1),
++                        "source_file": filename
++                    })
++            elif isinstance(item, str) and item.strip():
++                items.append({
++                    "item_name_raw": item.strip(),
++                    "source_page": 1,
++                    "source_file": filename
++                })
++        if items:
++            return items
++
++    # 2. Try extracted_data (Unstructured schema output)
+     extracted_data = result_data.get("extracted_data", [])
+     if isinstance(extracted_data, list) and len(extracted_data) > 0:
+         for block in extracted_data:
+@@ -313,13 +313,15 @@
+                 for item in data.get("items", []):
+                     if not isinstance(item, dict):
+                         continue
+-                    name = item.get("item_name_raw")
++                    name = item.get("item_name_raw") or item.get("name") or item.get("اسم الصنف")
+                     if name:
+                         items.append({
+                             "item_name_raw": str(name).strip(),
+-                            "source_page": item.get("source_page"),
+-                            "source_file": filename
+-                        })
++                            "source_page": item.get("source_page", 1),
++                            "source_file": filename
++                        })
++        if items:
++            return items
+ 
+     # 2. Try markdown HTML tables if no items extracted yet
+     if not items and "markdown" in result_data and result_data["markdown"]:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

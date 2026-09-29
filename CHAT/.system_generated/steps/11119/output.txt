@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -648,7 +648,7 @@
+             headers["X-Batch-Size"] = str(case_count)
+             headers["X-Google-Search-Enabled"] = "false"
+             
+-        read_timeout = max(360, case_count * 5 + 60) if is_chatgpt else max(300, case_count * 6 + 120)
++        read_timeout = max(360, case_count * 5 + 60) if is_chatgpt else max(900, case_count * 15 + 300)
+         
+         t_call_start = time.time()
+         try:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

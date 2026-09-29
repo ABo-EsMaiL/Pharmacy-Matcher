@@ -1,0 +1,56 @@
+======================================================================
+1. TESTING POST-GEMINI GUARDRAIL ON AMBIGUOUS PAIRS
+======================================================================
+Req: 'بقدونس وكرفس ايزيس'
+Cand: 'ایزیز بقدونس وکرکس 20 فلتر'
+Note: Inverted word order (Isis parsley)
+--> Post-Gemini status: MATCH
+
+Req: 'يمتليس كروماكس كت30كيس س ج'
+Cand: 'يمتليس كروماتكس كت 30 كيس جديد'
+Note: OCR missing leading letter
+--> Post-Gemini status: MATCH
+
+Req: 'تربتيزول10 مجم اقراص'
+Cand: 'تریپتازول 10 مج اقراس/باکت 200'
+Note: Arabic transliteration variant
+--> Post-Gemini status: MATCH
+
+Req: 'سكينورين كريم'
+Cand: 'سکینوریتش کریم'
+Note: OCR typo in last letters
+--> Post-Gemini status: MATCH
+
+Req: 'كارنيفيتا ادفانس للرجال30كيس س ج'
+Cand: 'کارنتینا ادفانس رجال/باکت16'
+Note: OCR typo
+--> Post-Gemini status: MATCH
+
+Req: 'لبن هيرو بيبي 2'
+Cand: 'هيرو بيبي ٢'
+Note: Milk stopword stripped
+--> Post-Gemini status: MATCH
+
+Req: 'نيوروفيت اقراص 3 شريط'
+Cand: 'نيروفيت اقراص سعر جديد'
+Note: Phonetic variation
+--> Post-Gemini status: NO_MATCH
+
+Req: 'نوفالدول 1000 مجم 15 قرص'
+Cand: 'نوفالدول 1000'
+Note: Paracetamol 1000mg
+--> Post-Gemini status: MATCH
+
+Req: 'كونجستال اقراص'
+Cand: 'كونجستال'
+Note: Congestal brand match
+--> Post-Gemini status: MATCH
+
+======================================================================
+2. TESTING SUMMARY REVIEW_COUNT CALCULATION
+======================================================================
+Matched count: 2 (2 matches across warehouses)
+Raw review sum across warehouses would have been: 4
+Deduplicated review_count: 3 (expected: 2 -> دواء ج in WH1 and WH2 is 2 rows, or distinct shortage items)
+Not found: {'دواء هـ'} (expected: 1 -> دواء هـ)
+Summary dict: {'total_shortages': 5, 'unique_shortages': 5, 'matched_count': 2, 'not_found_count': 1, 'review_count': 3}

@@ -1,0 +1,28 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -14,6 +14,22 @@
+ from desktop_app.database import HistoryDB
+ from desktop_app.server_manager import MSEMAXServerManager
+ 
++class LogRedirector:
++    def __init__(self, original_stream, add_log_func):
++        self.original_stream = original_stream
++        self.add_log_func = add_log_func
++        self.buffer = ""
++        
++    def write(self, message):
++        self.original_stream.write(message)
++        self.buffer += message
++        while "\n" in self.buffer:
++            line, self.buffer = self.buffer.split("\n", 1)
++            self.add_log_func(line)
++            
++    def flush(self):
++        self.original_stream.flush()
++
+ class API:
+     def __init__(self, window=None):
+         self.window = window
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

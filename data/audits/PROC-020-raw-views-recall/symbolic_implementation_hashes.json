@@ -1,0 +1,5 @@
+{
+  "src/fast_match/search.py": "e6435125f9aaa71c73e589fc4205bd48d5be0a0c1204f9ff487177adfd56ac5b",
+  "src/fast_match/identity_symbols.py": "8e6484ea1b4f10327b2f708d481887e62616a9d4277762a9dca12d58fafa0ef3",
+  "tests/test_identity_symbols.py": "61493a0c01dccef95f9beb4be3583e1c7ef763022e1b7b0839b179a64e73a72d"
+}

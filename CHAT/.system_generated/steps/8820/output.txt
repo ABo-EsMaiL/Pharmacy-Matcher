@@ -1,0 +1,51 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\app.py","LineNumber":4,"LineContent":"Launches a pywebview window with the web-based UI."}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\app.py","LineNumber":28,"LineContent":"        print(\"ERROR: pywebview is not installed.\")"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\app.py","LineNumber":29,"LineContent":"        print(\"Run: pip install pywebview\")"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":64,"LineContent":"        \"\"\"Set pywebview window reference safely without exposing it to JS reflection.\"\"\""}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2328,"LineContent":"// Ensure Pywebview API is ready"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2329,"LineContent":"window.addEventListener('pywebviewready', function() {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2357,"LineContent":"        const logsStr = await window.pywebview.api.get_logs();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2399,"LineContent":"        if (window.pywebview \u0026\u0026 window.pywebview.api) {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2400,"LineContent":"            const historyStr = await window.pywebview.api.get_history();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2407,"LineContent":"                await window.pywebview.api.exit_app();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2410,"LineContent":"            if (window.pywebview \u0026\u0026 window.pywebview.api) {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2411,"LineContent":"                await window.pywebview.api.exit_app();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2417,"LineContent":"        if (window.pywebview \u0026\u0026 window.pywebview.api) {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2418,"LineContent":"            window.pywebview.api.exit_app();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2428,"LineContent":"            const res = await window.pywebview.api.delete_process(processId);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2514,"LineContent":"                    // if it happens to have a path, use it directly (e.g. Mac/Linux or specific pywebview configs)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2523,"LineContent":"                                const tempPath = await window.pywebview.api.save_dropped_file(file.name, base64);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2556,"LineContent":"        const filePaths = await window.pywebview.api.select_files(type);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2648,"LineContent":"        const res = await window.pywebview.api.start_process("}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2820,"LineContent":"        await window.pywebview.api.open_excel(currentProcessId);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2829,"LineContent":"        await window.pywebview.api.open_folder(currentProcessId);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2865,"LineContent":"                const res = await window.pywebview.api.rerun_process(currentProcessId);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2883,"LineContent":"        const result = await window.pywebview.api.apply_reviews(currentProcessId);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2911,"LineContent":"        const historyStr = await window.pywebview.api.get_history();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2976,"LineContent":"        const res = await window.pywebview.api.restart_process(processId);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3007,"LineContent":"        const dataStr = await window.pywebview.api.get_process_details(processId);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3029,"LineContent":"        const settings = await window.pywebview.api.get_settings();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3056,"LineContent":"        await window.pywebview.api.save_settings(JSON.stringify(settings));"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3065,"LineContent":"        const dirPath = await window.pywebview.api.select_directory();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3078,"LineContent":"        const res = await window.pywebview.api.setup_msemax_requirements();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3096,"LineContent":"        const res = await window.pywebview.api.run_get_session();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3121,"LineContent":"            const status = await window.pywebview.api.get_server_status();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3143,"LineContent":"        if (window.pywebview \u0026\u0026 window.pywebview.api) {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3144,"LineContent":"            const infoStr = await window.pywebview.api.get_servers_info();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3185,"LineContent":"        const status = await window.pywebview.api.get_server_status();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3187,"LineContent":"            await window.pywebview.api.stop_server();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3190,"LineContent":"            await window.pywebview.api.start_server();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3203,"LineContent":"    if (!window.pywebview || !window.pywebview.api) return;"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3207,"LineContent":"        const infoStr = await window.pywebview.api.get_servers_info();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3332,"LineContent":"            res = await window.pywebview.api.start_server_instance(serverKey);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3336,"LineContent":"            res = await window.pywebview.api.stop_server_instance(serverKey);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3367,"LineContent":"        const res = await window.pywebview.api.set_active_ai_server(serverKey);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3394,"LineContent":"    if (!term || !window.pywebview?.api?.get_server_logs) return;"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3396,"LineContent":"        const raw = await window.pywebview.api.get_server_logs();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3413,"LineContent":"        if (window.pywebview?.api?.clear_server_logs) {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3414,"LineContent":"            await window.pywebview.api.clear_server_logs();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3426,"LineContent":"        const res = await window.pywebview.api.free_server_ports();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3464,"LineContent":"        const res = await window.pywebview.api.test_server_instance(serverKey);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3495,"LineContent":"        const res = await window.pywebview.api.run_server_session(serverKey);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":6,"LineContent":"// Ensure Pywebview API is ready"}
+(...19 more results not shown)

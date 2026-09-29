@@ -1,0 +1,36 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -3420,6 +3420,30 @@
+     }
+ }
+ 
++async function freeServerPorts() {
++    showToast(currentLang === 'en' ? 'Freeing ports 8000 & 8001...' : 'جاري تحرير المنافذ 8000 و 8001...', 'info');
++    appendServerLog('[SYSTEM] Initiating force free ports 8000 and 8001...');
++    try {
++        const res = await window.pywebview.api.free_server_ports();
++        appendServerLog(`[SYSTEM] Free ports operation completed: ${JSON.stringify(res)}`);
++        if (res && res.elevated_needed) {
++            showToast(currentLang === 'en' 
++                ? 'Requested Administrator privileges to terminate zombie processes.' 
++                : 'تم طلب صلاحيات المسؤول لإغلاق العمليات المعلقة. يرجى تأكيد نافذة UAC إذا ظهرت.', 'warning');
++        } else {
++            showToast(currentLang === 'en' ? 'Ports freed successfully!' : 'تم فحص وتحرير المنافذ بنجاح!', 'success');
++        }
++    } catch (e) {
++        appendServerLog(`[ERROR] Failed to free ports: ${e.message}`);
++        showToast(currentLang === 'en' ? 'Error freeing ports' : 'حدث خطأ أثناء تحرير المنافذ', 'error');
++    } finally {
++        setTimeout(async () => {
++            await loadServersUI();
++            await updateServerStatus();
++        }, 1500);
++    }
++}
++
+ // Live Server Log Event Listener
+ window.addEventListener('new_server_log', (event) => {
+     appendServerLog(event.detail);
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

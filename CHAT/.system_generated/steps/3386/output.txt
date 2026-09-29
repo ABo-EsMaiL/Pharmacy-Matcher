@@ -1,0 +1,1 @@
+Encountered error in step execution: files must be written to the correct artifact directory: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a

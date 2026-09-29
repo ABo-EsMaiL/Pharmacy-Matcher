@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+Loaded المكرومي المنصورة.pdf: 4 pages
+Scale 2.0x (1191x1684): JPEG=440.4 KB | WebP=231.1 KB
+Scale 2.5x (1489x2105): JPEG=581.6 KB | WebP=299.8 KB
+Rendering took: 3.78s
+

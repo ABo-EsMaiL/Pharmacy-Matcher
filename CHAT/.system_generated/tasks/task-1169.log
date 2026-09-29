@@ -1,0 +1,150 @@
+"""
+
+وحدة الإعدادات - تحميل مفاتيح API والإعدادات من ملف .env
+
+Configuration module - loads API keys and settings from .env file.
+
+"""
+
+
+
+from dataclasses import dataclass, field
+
+from pathlib import Path
+
+from dotenv import load_dotenv
+
+import os
+
+
+
+
+
+@dataclass
+
+class Config:
+
+    """إعدادات المشروع الرئيسية."""
+
+
+
+    # مفاتيح API المطلوبة
+
+    unstructured_api_key: str
+
+    gemini_api_key: str
+
+
+
+    # إعدادات Unstructured API
+
+    unstructured_base_url: str = "https://transform.unstructured.io"
+
+
+
+    # إعدادات MSEMAX (Local API)
+
+    local_api_url: str = "http://127.0.0.1:8000/v1/chat/completions"
+
+    local_api_key: str = "[REDACTED_CREDENTIAL]"
+
+    local_model: str = "gpt-4o-mini" # or gpt-4o depending on what the wrapper defaults to
+
+
+
+    # إعدادات Gemini (لم تعد مستخدمة حاليا)
+
+    gemini_model: str = "gemini-3.5-flash"
+
+    match_threshold: float = 0.75
+
+
+
+
+
+def load_config(env_path: Path | None = None) -> Config:
+
+    """
+
+    تحميل الإعدادات من متغيرات البيئة (أو ملف .env).
+
+
+
+    Args:
+
+        env_path: مسار ملف .env (اختياري). إذا لم يُحدَّد يبحث في المجلد الحالي.
+
+
+
+    Returns:
+
+        كائن Config يحتوي على جميع الإعدادات.
+
+
+
+    Raises:
+
+        ValueError: إذا كانت مفاتيح API المطلوبة مفقودة.
+
+    """
+
+    # تحميل متغيرات البيئة من ملف .env
+
+    if env_path:
+
+        load_dotenv(env_path)
+
+    else:
+
+        # البحث عن .env في جذر المشروع
+
+        project_root = Path(__file__).resolve().parent.parent
+
+        load_dotenv(project_root / ".env")
+
+
+
+    # قراءة المفاتيح المطلوبة
+
+    unstructured_key = os.getenv("UNSTRUCTURED_API_KEY", "").strip()
+
+    gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
+
+
+
+    # التحقق من وجود المفاتيح
+
+    missing: list[str] = []
+
+    if not unstructured_key or unstructured_key == "your_key_here":
+
+        missing.append("UNSTRUCTURED_API_KEY")
+
+    if not gemini_key or gemini_key == "your_key_here":
+
+        missing.append("GEMINI_API_KEY")
+
+
+
+    if missing:
+
+        raise ValueError(
+
+            f"⚠️ مفاتيح API التالية مفقودة أو غير مُعيَّنة في ملف .env:\n"
+
+            f"  {', '.join(missing)}\n"
+
+            f"يرجى نسخ .env.example إلى .env وتعبئة المفاتيح."
+
+        )
+
+
+
+    return Config(
+
+        unstructured_api_key=unstructured_key,
+
+        gemini_api_key=gemini_key,
+
+    )
+

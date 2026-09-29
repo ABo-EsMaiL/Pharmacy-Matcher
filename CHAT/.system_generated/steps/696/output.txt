@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+def start_process(self, shortage_paths_json:
+

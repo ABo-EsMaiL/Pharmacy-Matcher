@@ -1,0 +1,78 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+RAW LLM OUTPUT:
+[
+  {
+    "status": "no_match",
+    "item_id": ""
+  },
+  {
+    "status": "no_match",
+    "item_id": ""
+  },
+  {
+    "status": "no_match",
+    "item_id": ""
+  },
+  {
+    "status": "no_match",
+    "item_id": ""
+  },
+  {
+    "status": "no_match",
+    "item_id": ""
+  },
+  {
+    "case_id": "C6",
+    "status": "match",
+    "item_id": "W6",
+    "reason": ""
+  },
+  {
+    "case_id": "C7",
+    "status": "match",
+    "item_id": "W7",
+    "reason": ""
+  },
+  {
+    "case_id": "C8",
+    "status": "match",
+    "item_id": "W8",
+    "reason": ""
+  },
+  {
+    "case_id": "C9",
+    "status": "match",
+    "item_id": "W9",
+    "reason": ""
+  },
+  {
+    "case_id": "C10",
+    "status": "match",
+    "item_id": "W10",
+    "reason": ""
+  },
+  {
+    "case_id": "C11",
+    "status": "review",
+    "item_id": "W11",
+    "reason": "يوجد اختلاف صريح في حجم العبوة: المطلوب نقط 15 مل بينما المتاح نقط 5 مل."
+  }
+]
+
+--- FINAL DECISION AFTER SAFETY FILTER ---
+None: Shortage: '' vs Cand: '' -> Final Status: no_match (Reason: )
+None: Shortage: '' vs Cand: '' -> Final Status: no_match (Reason: )
+None: Shortage: '' vs Cand: '' -> Final Status: no_match (Reason: )
+None: Shortage: '' vs Cand: '' -> Final Status: no_match (Reason: )
+None: Shortage: '' vs Cand: '' -> Final Status: no_match (Reason: )
+C6: Shortage: 'دوليبران1000مجم 15قرص' vs Cand: 'دوليبيران ١جم، ٦٠قرص' -> Final Status: match (Reason: )
+C7: Shortage: 'باروفين 30قرص س ج' vs Cand: 'باروفين ٢٠ قرص' -> Final Status: match (Reason: )
+C8: Shortage: 'افيروكوكسيب90مجم20قرص س ج' vs Cand: 'افيرو كوكسبيب 90مجم-32ب' -> Final Status: match (Reason: )
+C9: Shortage: 'نيوكاربون30قرص س ج' vs Cand: 'نیوکاربن ۳۰کپسول' -> Final Status: match (Reason: )
+C10: Shortage: 'ليفانوكس2شريط س ج' vs Cand: 'ليفانوكس كبسول/باكت 200' -> Final Status: match (Reason: )
+C11: Shortage: 'لاكتيز 15 ملل نقط 750مجم' vs Cand: 'لاكتيز نقط بالفم ٥ مل ١٩٠' -> Final Status: no_match (Reason: يوجد اختلاف صريح في حجم العبوة: المطلوب نقط 15 مل بينما المتاح نقط 5 مل.)
+

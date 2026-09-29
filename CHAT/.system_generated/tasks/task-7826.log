@@ -1,0 +1,44 @@
+================================================================================
+PHASE 1: VERIFYING MSEMAX LARGE BATCH (75 CASES) ADAPTIVE TIMEOUT & STATE MACHINE
+================================================================================
+[✓] Gateway: MSEMAX (AIStudio Web Hook)
+[✓] Active Model: Gemini 3.8 Flash
+gemini-3.8-fl... (Verified: True)
+[✓] Thinking Mode: High (Verified: True)
+[✓] Clear Chat On Request: True
+
+[+] Built 75-case stress batch (15 replicates of 5 canonical rules).
+
+[*] Dispatching 75 cases to MSEMAX Gateway...
+
+[✓] SUCCESS: Coordinator received response in 32.02s!
+    - Results count: 75
+    - Raw response length: 8642 characters
+    - Returned Case IDs: 75 / 75
+    [✓] EXACT MATCH: All 75 case IDs returned successfully!
+
+[✓] Rule Compliance Verification across 75 cases:
+    - Strength mismatch -> no_match: True (15 cases)
+    - Dosage form diff  -> review:   True (15 cases)
+    - Pack size diff    -> match:    True (15 cases)
+    - OCR corruption    -> match:    True (15 cases)
+    - Generic / diff brand -> no_match: True (15 cases)
+
+================================================================================
+PHASE 2: REAL-WORLD SHORTAGES FROM data/test_shortages_200.xlsx
+================================================================================
+[+] Loaded 15 real shortage names from Excel:
+    1. افيروكوكسيب90مجم20قرص س ج
+    2. امبوفير 5امبول س ج
+    3. ايزوتريتينوين 10 مجم 30 كبسول س ج
+    4. ايزوتريتينوين 20 كبسول
+    5. بانادول اكسترا 24 قرص س ج
+
+[*] Dispatching 15 real-world shortage cases to MSEMAX Gateway...
+
+[✓] SUCCESS: Real-world batch received in 15.49s!
+    - Results count: 15 / 15
+    - All matches valid: True
+    Sample result: {'case_id': 'REAL-01', 'status': 'match', 'item_id': 'W1-R1', 'reason': ''}
+    Sample result: {'case_id': 'REAL-02', 'status': 'match', 'item_id': 'W1-R2', 'reason': ''}
+    Sample result: {'case_id': 'REAL-03', 'status': 'match', 'item_id': 'W1-R3', 'reason': ''}

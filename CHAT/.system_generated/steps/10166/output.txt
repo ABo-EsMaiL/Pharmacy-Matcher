@@ -1,0 +1,83 @@
+
+The command exited with code 0.
+Output:
+<truncated 147 lines>
+
+وكمان في حاجة في الـ UI، لما كنت بعمل مطابقة، الـ loading اللي هي pop-up loading دي، هي المفروض تكون في screen واحدة، أو في الـ screen اللي هي بتاعت المطابقة، المفروض تكون في المطابقة ولا السجل؟ مش عارف، مش عارف. المهم يعني المفروض تكون في screen، لما أروح مثلاً لواجهة الأوامر أو أروح للإعدادات يظهر صفحة الإعدادات، لكن أنا لما بروح بلاقي الـ pop-up فوق صفحة الإعدادات برضه، يعني أنت مثبت لي الـ pop-up في كل الصفحات، دي برضه bug صغيرة. 
+
+# نظام مطابقة نواقص الأدوية الذكي بالرؤية البصرية — Pharmacy Vision Matcher
+## المخطط المعماري الشامل وشجرة اتخاذ القرار (System Architecture & Decision Graph)
+
+---
+
+## 1. نظرة عامة على النظام (System Overview)
+
+نظام صيدلاني هجين فائق الدقة والسرعة، يقوم بمطابقة طلبات وقوائم نواقص الأدوية (Shortages) الواردة بصيغ متعددة (**Excel / Markdown / PDF**) مع عروض وقوائم مخازن الأدوية والموزعين (Warehouse Catalogs).
+
+في هذه النسخة المطورة (`Pharmacy-agy-vision`)، تم الانتقال بالكامل من محر
+<truncated 10698 bytes>
+ دواءً مركباً من مادتين، فلا يطابق الصنف المفرد (أتاكاند ضد أتاكاند بلس). | **رفض (No Match)** |
+| **4** | **اختلاف الهيئة الدوائية (Dosage Form)** | إذا تطابق الاسم التجاري والتركيز واختلفت الهيئة (مرهم ضد كريم، أو نقط ضد أقراص، أو شراب ضد أقراص)، تُحال الحالة للصيدلي ليقرر حسب الروشتة. | **يحتاج مراجعة (Review)** |
+| **5** | **حجم العبوة والسعر (Packaging & Lot Size)** | اختلاف عدد الأقراص (20 ضد 30 قرص)، أو عدد الشرائط، أو مسميات الجملة (باكت، باكو، كرتونة)، أو مؤشرات السعر (س.ج / سعر جديد) لا يؤثر على التطابق إطلاقاً. | **تطابق تام (Match)** |
+
+---
+
+## 6. ميزات الأداء وتحديثات الواجهة (UI & Performance Highlights)
+
+1. **دعم متعدد الصيغ (Multi-Format Support):** قراءة تلقائية وتلقين مرن لملفات Excel و Markdown و PDF.
+2. **محرك الرؤية البصرية المطور (Pure Vision):** التخلص التام من أخطاء الـ OCR والتصحيف، واستخراج أسماء الأدوية العربية والإنجليزية بدون تشويه.
+3. **تزامن كامل لواجهة المستخدم (Navigation Sync):** معالجة زر الانتقال لشاشة الأوامر والـ Terminal، مع مزامنة القائمة الجانبية تلقائياً، والاحتفاظ بحالة التحميل للعمليات الجارية في الخلفية.
+4. **شاشات سيرفرات متقدمة:** متابعة مباشرة لسيرفر `Google AI Studio Vision` على المنفذ `8001` مع فحص فوري للاتصال والتيرمينال التفاعلي.
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-25T17:05:16+03:00.
+</ADDITIONAL_METADATA>
+==================================================
+=== LINE 9986 ===
+<USER_REQUEST>
+وأنا بتابع المتصفح، هو بيوصله الـ prompt والصورة؟ أنا هبعتلك الـ log عشان أنا مش عارف هو بيقرأ من الـ cache بتاع الملفات القديمة ولا إيه، بس أنا قفلت الـ server في النص وأنا شغال. تقريبًا هو مش عارف، الصراحة أنا مش عارف هو شغال ازاي. هبعتلك الـ terminal وقولي هتلاقي فيه مشكلة أكيد. خلي بالك أنا قفلت الـ server وهو شغال. 
+
+وكمان في حاجة في الـ UI، لما كنت بعمل مطابقة، الـ loading اللي هي pop-up loading دي، هي المفروض تكون في screen واحدة، أو في الـ screen اللي هي بتاعت المطابقة، المفروض تكون في المطابقة ولا السجل؟ مش عارف، مش عارف. المهم يعني المفروض تكون في screen، لما أروح مثلاً لواجهة الأوامر أو أروح للإعدادات يظهر صفحة الإعدادات، لكن أنا لما بروح بلاقي الـ pop-up فوق صفحة الإعدادات برضه، يعني أنت مثبت لي الـ pop-up في كل الصفحات، دي برضه bug صغيرة. 
+
+(venv) PS D:\AI_Engineer\Pharmacy-agy-vision> python desktop_app\app.py
+
+============================================================
+[*] Processing Shortages files (1 file(s)) [PARALLEL WORKERS]
+============================================================
+
+  -> [START] Processing file: 0913.xlsx (Type: .xlsx)
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+  -> [DONE] 0913.xlsx: 993 items extracted.
+
+============================================================
+[+] Com
+<truncated 11082 bytes>
+o establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))). Retrying...
+      [X] PROVIDER FAILURE on Batch 1 after 3 attempts (Connection to local LLM failed (http://127.0.0.1:8001/v1/chat/completions): HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))).
+Traceback (most recent call last):
+  File "D:\AI_Engineer\Pharmacy-agy-vision\desktop_app\backend.py", line 494, in _process_worker
+    results = coordinator.process(all_shortages, warehouse_data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\coordinator.py", line 240, in process
+    wh_result = self._match_warehouse(deduped_shortages, wh_items, wh_name)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\coordinator.py", line 584, in _match_warehouse
+    chunk_results = process_chunk(batch, str(idx + 1))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\coordinator.py", line 580, in process_chunk
+    raise RuntimeError(f"Provider failed on Batch {chunk_name}: {last_error}")
+RuntimeError: Provider failed on Batch 1: Connection to local LLM failed (http://127.0.0.1:8001/v1/chat/completions): HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-25T17:06:04+03:00.
+</ADDITIONAL_METADATA>
+==================================================
+

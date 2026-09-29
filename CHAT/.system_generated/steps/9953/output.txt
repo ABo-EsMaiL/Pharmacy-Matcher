@@ -1,0 +1,16 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\server_manager.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -27,8 +27,8 @@
+         "api_key": "[REDACTED_CREDENTIAL]"
+     },
+     "gaistudio": {
+-        "name": "MSEMAX (Google AI Studio)",
+-        "default_dir": r"D:\AI_Engineer\MSEMAX-GAIStudio",
++        "name": "MSEMAX (Google AI Studio - Vision)",
++        "default_dir": r"D:\AI_Engineer\MSEMAX-GAIStudio-vision",
+         "port": 8001,
+         "default_model": "gemini-3.8-flash",
+         "url": "http://127.0.0.1:8001/v1/chat/completions",
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,52 @@
+Found 98 results
+__pycache__
+app.py
+c hrome_profile
+chrome_profile
+chrome_profile/Ad Blocking
+chrome_profile/Avatars
+chrome_profile/Crashpad
+chrome_profile/Crashpad/attachments
+chrome_profile/Crashpad/reports
+chrome_profile/Default
+chrome_profile/Default/AutofillAiModelCache
+chrome_profile/Default/AutofillStrikeDatabase
+chrome_profile/Default/BudgetDatabase
+chrome_profile/Default/Cache
+chrome_profile/Default/Cache/Cache_Data
+chrome_profile/Default/ClientCertificates
+chrome_profile/Default/Code Cache
+chrome_profile/Default/Code Cache/js
+chrome_profile/Default/Code Cache/js/index-dir
+chrome_profile/Default/Code Cache/wasm
+chrome_profile/Default/Code Cache/wasm/index-dir
+chrome_profile/Default/Collections
+chrome_profile/Default/DawnGraphiteCache
+chrome_profile/Default/DawnWebGPUCache
+chrome_profile/Default/Download Service
+chrome_profile/Default/Download Service/EntryDB
+chrome_profile/Default/Download Service/Files
+chrome_profile/Default/DualEngine
+chrome_profile/Default/EdgeCoupons
+chrome_profile/Default/EdgeCoupons/coupons_data.db
+chrome_profile/Default/EdgeHubAppUsage
+chrome_profile/Default/EdgePushStorageWithConnectTokenAndKey
+chrome_profile/Default/EdgeSessions
+chrome_profile/Default/EdgeWallet
+chrome_profile/Default/EntityExtraction
+chrome_profile/Default/Extension Rules
+chrome_profile/Default/Extension Scripts
+chrome_profile/Default/Extension State
+chrome_profile/Default/Feature Engagement Tracker
+chrome_profile/Default/Feature Engagement Tracker/AvailabilityDB
+chrome_profile/Default/Feature Engagement Tracker/EventDB
+chrome_profile/Default/GCM Store
+chrome_profile/Default/GCM Store/Encryption
+chrome_profile/Default/GPUCache
+chrome_profile/Default/JumpListIconsRecentWorkspacesV2
+chrome_profile/Default/Local Storage
+chrome_profile/Default/Local Storage/leveldb
+chrome_profile/Default/Network
+chrome_profile/Default/Nurturing
+chrome_profile/Default/Password_Diagnostics
+(...48 more results not shown)

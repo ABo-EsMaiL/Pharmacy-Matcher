@@ -1,0 +1,7 @@
+Successfully scheduled one-shot timer.
+Expected to fire at: 2026-09-22T13:09:07+03:00
+Prompt: Check task 1490
+Early Termination: 916274de-7f92-49fc-a0a8-d291664b474a/task-1490
+
+[2026-09-22T13:08:57+03:00] Still waiting. Remaining time: 10s
+[2026-09-22T13:09:07+03:00] Timer fired.

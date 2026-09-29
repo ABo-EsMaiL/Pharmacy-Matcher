@@ -1,0 +1,2 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":321,"LineContent":"            from src.fast_match.coordinator import FastCoordinator"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":360,"LineContent":"            coordinator = FastCoordinator(config)"}

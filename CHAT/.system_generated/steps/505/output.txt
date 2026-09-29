@@ -1,0 +1,79 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -335,21 +335,58 @@
+ .file-list {
+     list-style: none;
+     margin: 0 20px 20px;
+-    max-height: 150px;
+-    overflow-y: auto;
+-}
+-.file-list li {
+-    padding: 8px 12px;
+-    background: var(--bg-main);
+-    border-radius: 4px;
+-    margin-bottom: 4px;
+-    font-size: 13px;
+-    display: flex;
+-    align-items: center;
+-    justify-content: space-between;
+-}
+-.file-list li::before {
+-    content: '📄 ';
++    max-height: 200px;
++    overflow-y: auto;
++    padding-right: 5px;
++}
++.file-item {
++    padding: 12px 16px;
++    background: #f8fafc;
++    border: 1px solid #e2e8f0;
++    border-radius: 8px;
++    margin-bottom: 8px;
++    font-size: 14px;
++    font-weight: 600;
++    display: flex;
++    align-items: center;
++    justify-content: space-between;
++    color: #334155;
++    transition: all 0.2s;
++}
++.file-item:hover {
++    border-color: #cbd5e1;
++    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
++}
++.file-item-name {
++    display: flex;
++    align-items: center;
++    gap: 10px;
++    overflow: hidden;
++    white-space: nowrap;
++    text-overflow: ellipsis;
++}
++.file-item-name i {
++    color: var(--primary);
++    font-size: 20px;
++}
++.file-item-delete {
++    background: transparent;
++    border: none;
++    color: #94a3b8;
++    cursor: pointer;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    padding: 6px;
++    border-radius: 50%;
++    transition: all 0.2s;
++}
++.file-item-delete i {
++    font-size: 20px;
++}
++.file-item-delete:hover {
++    color: var(--danger);
++    background: #fee2e2;
+ }
+ 
+ .action-bar-bottom {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

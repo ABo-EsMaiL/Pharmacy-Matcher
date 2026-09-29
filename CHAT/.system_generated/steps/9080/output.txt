@@ -1,0 +1,30 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":15,"LineContent":"from desktop_app.server_manager import MSEMAXServerManager"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":53,"LineContent":"        self._server_manager = MSEMAXServerManager(settings, server_logger_callback=self.add_server_log)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":176,"LineContent":"            self._server_manager = MSEMAXServerManager(settings, server_logger_callback=self.add_server_log)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":185,"LineContent":"        statuses = self._server_manager.get_all_status(active_key=active_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":195,"LineContent":"        return self._server_manager.start(server_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":199,"LineContent":"        return self._server_manager.stop(server_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":203,"LineContent":"        return self._server_manager.test(server_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":207,"LineContent":"        return self._server_manager.run_get_session(server_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":212,"LineContent":"        res = self._server_manager.force_free_ports()"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":224,"LineContent":"            srv = self._server_manager.get_server(server_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":242,"LineContent":"        return self._server_manager.start(active_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":247,"LineContent":"        return self._server_manager.stop(active_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":252,"LineContent":"        srv = self._server_manager.get_server(active_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":258,"LineContent":"        return self._server_manager.run_get_session(active_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":787,"LineContent":"        self._server_manager.cleanup()"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":15,"LineContent":"from desktop_app.server_manager import MSEMAXServerManager"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":53,"LineContent":"        self._server_manager = MSEMAXServerManager(settings, server_logger_callback=self.add_server_log)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":176,"LineContent":"            self._server_manager = MSEMAXServerManager(settings, server_logger_callback=self.add_server_log)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":185,"LineContent":"        statuses = self._server_manager.get_all_status(active_key=active_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":195,"LineContent":"        return self._server_manager.start(server_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":199,"LineContent":"        return self._server_manager.stop(server_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":203,"LineContent":"        return self._server_manager.test(server_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":207,"LineContent":"        return self._server_manager.run_get_session(server_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":212,"LineContent":"        res = self._server_manager.force_free_ports()"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":224,"LineContent":"            srv = self._server_manager.get_server(server_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":242,"LineContent":"        return self._server_manager.start(active_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":247,"LineContent":"        return self._server_manager.stop(active_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":252,"LineContent":"        srv = self._server_manager.get_server(active_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":258,"LineContent":"        return self._server_manager.run_get_session(active_key)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\backend.py","LineNumber":787,"LineContent":"        self._server_manager.cleanup()"}

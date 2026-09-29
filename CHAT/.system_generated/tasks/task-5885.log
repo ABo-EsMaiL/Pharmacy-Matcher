@@ -1,0 +1,26 @@
+INFO:     Started server process [28012]
+INFO:     Waiting for application startup.
+2026-09-24 03:44:07,914 - msemax.webhook - INFO - =================================================================
+2026-09-24 03:44:07,914 - msemax.webhook - INFO - Starting MSEMAX — Google AI Studio Web Hook Gateway
+2026-09-24 03:44:07,914 - msemax.webhook - INFO - Default Model: gemini-3.8-flash | Thinking: high
+2026-09-24 03:44:07,914 - msemax.webhook - INFO - Profile: ./chrome_profile | Headless: False
+2026-09-24 03:44:07,914 - msemax.webhook - INFO - Port: 8001 | Max Concurrent: 1 | Rate Limit: 30/minute
+2026-09-24 03:44:07,914 - msemax.webhook - INFO - =================================================================
+2026-09-24 03:44:07,914 - msemax.webhook - INFO - Concurrency semaphore initialized: max 1 simultaneous requests
+2026-09-24 03:44:07,914 - msemax.webhook - INFO - Launching persistent Chromium context from: ./chrome_profile (headless=False, start-maximized)
+2026-09-24 03:44:09,943 - msemax.webhook - INFO - Navigating to https://aistudio.google.com/prompts/new_chat to ensure clean environment...
+2026-09-24 03:44:12,666 - msemax.webhook - INFO - Google AI Studio web page ready!
+2026-09-24 03:44:12,734 - msemax.webhook - INFO - Changing Thinking Level from 'Medium' to 'high'...
+2026-09-24 03:44:13,234 - msemax.webhook - INFO - Thinking Level set to 'High'.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59197 - "GET /health HTTP/1.1" 200 OK
+2026-09-24 03:44:33,157 - msemax.webhook - INFO - Incoming /v1/chat/completions prompt (30 chars): 'Reply with only the word: PONG'
+2026-09-24 03:44:33,290 - msemax.webhook - INFO - Initial model turns count: 0
+2026-09-24 03:44:33,329 - msemax.webhook - INFO - Injecting prompt via JavaScript and triggering native events...
+2026-09-24 03:44:33,977 - msemax.webhook - INFO - Submitting prompt (30 chars) to Google AI Studio natively...
+2026-09-24 03:44:34,177 - msemax.webhook - INFO - Dispatched native Control+Enter.
+2026-09-24 03:44:35,081 - msemax.webhook - INFO - [Google Backend Status 200] URL: https://alkalimakersuite-pa.clients6.google.com/$rpc/google.internal.alkali.appl
+2026-09-24 03:44:40,927 - msemax.webhook - INFO - Model response completed via stability! Total characters: 4
+2026-09-24 03:44:40,927 - msemax.webhook - INFO - Stream finished. Total characters generated: 4
+INFO:     127.0.0.1:59198 - "POST /v1/chat/completions HTTP/1.1" 200 OK

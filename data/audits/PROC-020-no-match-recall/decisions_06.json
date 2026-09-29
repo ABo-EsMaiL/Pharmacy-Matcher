@@ -1,0 +1,673 @@
+[
+  {
+    "case_id": "A0375",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2434",
+      "I0515",
+      "I1585"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز 500 مجم مقابل 250"
+  },
+  {
+    "case_id": "A0376",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1592",
+      "I2439"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "تعارض في التركيز ونوع سوبرا"
+  },
+  {
+    "case_id": "A0377",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1592",
+      "I2439"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "تعارض في التركيز 160 مقابل 145"
+  },
+  {
+    "case_id": "A0378",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة لاسم ليبترين"
+  },
+  {
+    "case_id": "A0379",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ليبراكس"
+  },
+  {
+    "case_id": "A0380",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1595"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف في التركيبة والشكل الدوائي"
+  },
+  {
+    "case_id": "A0381",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ليبونكس"
+  },
+  {
+    "case_id": "A0382",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ليسيد"
+  },
+  {
+    "case_id": "A0383",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ليفانيك"
+  },
+  {
+    "case_id": "A0384",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ليفوفلوكساسين"
+  },
+  {
+    "case_id": "A0385",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ليفوفلوكساسين"
+  },
+  {
+    "case_id": "A0386",
+    "status": "review",
+    "item_id": "I1610",
+    "plausible_ids": [
+      "I1610"
+    ],
+    "no_match_basis": "",
+    "reason": "نفس المنتج مع اختلاف الشكل أكياس"
+  },
+  {
+    "case_id": "A0387",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لليمتلس بي كومبلكس"
+  },
+  {
+    "case_id": "A0388",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لليمتلس ليبوفيركس"
+  },
+  {
+    "case_id": "A0389",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم لينتوجيستون"
+  },
+  {
+    "case_id": "A0390",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لماء غريب"
+  },
+  {
+    "case_id": "A0391",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لماء نونو"
+  },
+  {
+    "case_id": "A0392",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لمارفيل كريم"
+  },
+  {
+    "case_id": "A0393",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم مارفيلون"
+  },
+  {
+    "case_id": "A0394",
+    "status": "match",
+    "item_id": "I0152",
+    "plausible_ids": [
+      "I0151",
+      "I0152",
+      "I0153"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام في الاسم والتركيز والشكل"
+  },
+  {
+    "case_id": "A0395",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ماكسفول"
+  },
+  {
+    "case_id": "A0396",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ماكسوفاج"
+  },
+  {
+    "case_id": "A0397",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم مالكون"
+  },
+  {
+    "case_id": "A0398",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لمامي كير"
+  },
+  {
+    "case_id": "A0399",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم مانوفيبركين"
+  },
+  {
+    "case_id": "A0400",
+    "status": "match",
+    "item_id": "I1646",
+    "plausible_ids": [
+      "I1644",
+      "I1645",
+      "I1646"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام في المنتج والشكل الدوائي"
+  },
+  {
+    "case_id": "A0401",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1650",
+      "I2243"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "تعارض في إضافة بلس للمنتج"
+  },
+  {
+    "case_id": "A0402",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم مونتيلوراما"
+  },
+  {
+    "case_id": "A0403",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم مونودكسين"
+  },
+  {
+    "case_id": "A0404",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لمويست 1"
+  },
+  {
+    "case_id": "A0405",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم مياكلسيك"
+  },
+  {
+    "case_id": "A0406",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ميثوريلاكس"
+  },
+  {
+    "case_id": "A0407",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لميديفا ميون"
+  },
+  {
+    "case_id": "A0408",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ميراج"
+  },
+  {
+    "case_id": "A0409",
+    "status": "match",
+    "item_id": "I2448",
+    "plausible_ids": [
+      "I2448",
+      "I0652",
+      "I1677",
+      "I2701",
+      "I2383"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام مع ليمتلس ميلجا ماكس"
+  },
+  {
+    "case_id": "A0410",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ميلوسكار"
+  },
+  {
+    "case_id": "A0411",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم مينرو"
+  },
+  {
+    "case_id": "A0412",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم مينوفللين"
+  },
+  {
+    "case_id": "A0413",
+    "status": "review",
+    "item_id": "I1683",
+    "plausible_ids": [
+      "I1683"
+    ],
+    "no_match_basis": "",
+    "reason": "نفس المنتج مع اختلاف الشكل كبسول"
+  },
+  {
+    "case_id": "A0414",
+    "status": "match",
+    "item_id": "I2702",
+    "plausible_ids": [
+      "I2702"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام في المنتج والاسم التجاري"
+  },
+  {
+    "case_id": "A0415",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لنايت كالم"
+  },
+  {
+    "case_id": "A0416",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نت لوك"
+  },
+  {
+    "case_id": "A0417",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نت لوك"
+  },
+  {
+    "case_id": "A0418",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نودي"
+  },
+  {
+    "case_id": "A0419",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نورجيستادول"
+  },
+  {
+    "case_id": "A0420",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نورجيسك"
+  },
+  {
+    "case_id": "A0421",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نوريجنسين"
+  },
+  {
+    "case_id": "A0422",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نوفالجين"
+  },
+  {
+    "case_id": "A0423",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نوفوكوبال"
+  },
+  {
+    "case_id": "A0424",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نوليفر"
+  },
+  {
+    "case_id": "A0425",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0168"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز 100 مقابل 300"
+  },
+  {
+    "case_id": "A0426",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نيبليت"
+  },
+  {
+    "case_id": "A0427",
+    "status": "match",
+    "item_id": "I0172",
+    "plausible_ids": [
+      "I1699",
+      "I0172"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق الاسم والشكل الدوائي دون تعارض"
+  },
+  {
+    "case_id": "A0428",
+    "status": "match",
+    "item_id": "I0172",
+    "plausible_ids": [
+      "I1699",
+      "I0172"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق الاسم والشكل الصيدلي دون تعارض"
+  },
+  {
+    "case_id": "A0429",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نيرهافلكس"
+  },
+  {
+    "case_id": "A0430",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1692"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف نوع ادفانس والشكل الصيدلي"
+  },
+  {
+    "case_id": "A0431",
+    "status": "match",
+    "item_id": "I2407",
+    "plausible_ids": [
+      "I2404",
+      "I2405",
+      "I1703",
+      "I1704",
+      "I1705",
+      "I0667",
+      "I0668",
+      "I2407",
+      "I2408"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام للاسم والتركيز نيفيلوب بلس"
+  },
+  {
+    "case_id": "A0432",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2409",
+      "I0669",
+      "I0670",
+      "I1694"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز والشكل الصيدلي"
+  },
+  {
+    "case_id": "A0433",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2409",
+      "I0669",
+      "I0670",
+      "I1694"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 20 و40 مقابل 5"
+  },
+  {
+    "case_id": "A0434",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نيكسيبرازول"
+  },
+  {
+    "case_id": "A0435",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نيكسيبرونش"
+  },
+  {
+    "case_id": "A0436",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لمحلول نيل"
+  },
+  {
+    "case_id": "A0437",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نيورازين"
+  },
+  {
+    "case_id": "A0438",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نيوروتون"
+  },
+  {
+    "case_id": "A0439",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نيوزوليد"
+  },
+  {
+    "case_id": "A0440",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم نيوكلاف"
+  },
+  {
+    "case_id": "A0441",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لهيالوكونكس سيرم"
+  },
+  {
+    "case_id": "A0442",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم هيباتوفورت"
+  },
+  {
+    "case_id": "A0443",
+    "status": "match",
+    "item_id": "I0177",
+    "plausible_ids": [
+      "I0177"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام للمنتج هيدروكين مينافارم"
+  },
+  {
+    "case_id": "A0444",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم هيرباك"
+  },
+  {
+    "case_id": "A0445",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لهيرباك بلس"
+  },
+  {
+    "case_id": "A0446",
+    "status": "match",
+    "item_id": "I2482",
+    "plausible_ids": [
+      "I1727",
+      "I2481",
+      "I2482"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام مع هيرو في دي كيه"
+  },
+  {
+    "case_id": "A0447",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم هيستازين"
+  },
+  {
+    "case_id": "A0448",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم هيلاريوم"
+  },
+  {
+    "case_id": "A0449",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم هيلسك"
+  }
+]

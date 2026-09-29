@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+1438 status_completed: "مكتمل",
+1541 status_completed: "Completed",
+2239 let statusText = item.status === 'completed' ? t.status_completed : t.status_reviewing;
+

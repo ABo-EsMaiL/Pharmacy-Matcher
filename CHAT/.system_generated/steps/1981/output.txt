@@ -1,0 +1,40 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -129,13 +129,27 @@
+     # 3. Upload and Extract in One Single Operation
+     try:
+         print(f"[*] Uploading and extracting {filepath.name} via Unstructured AI (Profile: {profile.upper()})...")
+-        with open(filepath, "rb") as f:
+-            result = client.extract.from_document(
+-                input=f,
+-                schema=schema,
+-                profile=profile,
+-                wait_seconds=600
+-            )
++        try:
++            with open(filepath, "rb") as f:
++                result = client.extract.from_document(
++                    input=f,
++                    schema=schema,
++                    profile=profile,
++                    wait_seconds=600
++                )
++        except Exception as err:
++            err_msg = str(err).lower()
++            if profile != "balanced" and ("could_not_parse" in err_msg or "422" in err_msg or "unprocessable" in err_msg or "readable" in err_msg):
++                print(f"[*] Profile {profile.upper()} was rejected by server ({err}). Retrying automatically with BALANCED profile...")
++                with open(filepath, "rb") as f:
++                    result = client.extract.from_document(
++                        input=f,
++                        schema=schema,
++                        profile="balanced",
++                        wait_seconds=600
++                    )
++            else:
++                raise
+ 
+         if hasattr(result, 'model_dump'):
+             result_data = result.model_dump()
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

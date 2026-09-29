@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+[+] Loaded 187 items for السلام شبين.pdf
+[+] Loaded 503 items for المكرومي المنصورة.pdf
+[+] Loaded 1071 items for الهضبة الاثنين نقدى0.pdf
+[+] Loaded 19 items for جملة العمروووو.pdf
+[+] Loaded 715 items for كيور فارما خاص.pdf
+[+] Loaded 222 items for مخزن الحياة فارم اسكندريه-170.pdf
+Total warehouse items loaded: 2717
+

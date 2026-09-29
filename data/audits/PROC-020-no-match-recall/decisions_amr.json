@@ -1,0 +1,317 @@
+[
+  {
+    "case_id": "W0005",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0041",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0059",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0083",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0094",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0100",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0101",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0115",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0121",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0146",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0169",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0174",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0187",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0188",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0191",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0204",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0219",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0275",
+    "status": "match",
+    "item_id": "I1763",
+    "plausible_ids": [
+      "I1763"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام للمنتج امبوفير حقن"
+  },
+  {
+    "case_id": "W0296",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0325",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0331",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0344",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0360",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0362",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0365",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0378",
+    "status": "match",
+    "item_id": "I1776",
+    "plausible_ids": [
+      "I1775",
+      "I1776"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق هيرو 2 واختلاف السعر لا يمنع"
+  },
+  {
+    "case_id": "W0388",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0393",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0419",
+    "status": "match",
+    "item_id": "I1767",
+    "plausible_ids": [
+      "I1767"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق المنتج واختلاف الحجم لا يمنع"
+  },
+  {
+    "case_id": "W0436",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0459",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0472",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0504",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0520",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0526",
+    "status": "match",
+    "item_id": "I1762",
+    "plausible_ids": [
+      "I1762"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام في الاسم والتركيز"
+  },
+  {
+    "case_id": "W0537",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0549",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق في المستودع"
+  },
+  {
+    "case_id": "W0569",
+    "status": "review",
+    "item_id": "I1770",
+    "plausible_ids": [
+      "I1770"
+    ],
+    "no_match_basis": "",
+    "reason": "اختلاف الشكل الصيدلي امبول مقابل كبسول"
+  }
+]

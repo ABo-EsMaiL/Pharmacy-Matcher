@@ -1,0 +1,52 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1101,24 +1101,29 @@
+ }
+ 
+ // Exit App
+-function exitApp() {
+-    if (window.activeProcesses > 0) {
+-        showCustomConfirm('تأكيد الإغلاق', 'توجد عمليات مطابقة قيد التشغيل في الخلفية. هل أنت متأكد من الإغلاق؟', async () => {
+-            try {
+-                if (window.pywebview && window.pywebview.api) {
+-                    await window.pywebview.api.exit_app();
+-                }
+-            } catch (e) {
+-                console.error(e);
+-            }
+-        });
+-    } else {
+-        try {
++async function exitApp() {
++    try {
++        let isRunning = false;
++        if (window.pywebview && window.pywebview.api) {
++            const historyStr = await window.pywebview.api.get_history();
++            const history = JSON.parse(historyStr);
++            isRunning = history.some(item => item.status === 'processing');
++        }
++        
++        if (isRunning) {
++            showCustomConfirm('تأكيد الإغلاق', 'توجد عمليات مطابقة قيد التشغيل في الخلفية. هل أنت متأكد من الإغلاق؟', async () => {
++                await window.pywebview.api.exit_app();
++            });
++        } else {
+             if (window.pywebview && window.pywebview.api) {
+-                window.pywebview.api.exit_app();
+-            }
+-        } catch (e) {
+-            console.error(e);
++                await window.pywebview.api.exit_app();
++            }
++        }
++    } catch (e) {
++        console.error(e);
++        // Fallback
++        if (window.pywebview && window.pywebview.api) {
++            window.pywebview.api.exit_app();
+         }
+     }
+ }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

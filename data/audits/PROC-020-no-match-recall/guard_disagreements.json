@@ -1,0 +1,2703 @@
+[
+  {
+    "case_id": "A0041",
+    "requested": "املوسازايد40/12.5/5مجم30قرص س ج",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0041",
+      "status": "match",
+      "item_id": "I0254",
+      "plausible_ids": [
+        "I0254"
+      ],
+      "no_match_basis": "",
+      "reason": "تطابق تام في اسم المنتج املوسازايد والتركيز 5/12.5/40"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I0254",
+        "name": "املوساز اید ٥/١٢,٥/٤٠",
+        "warehouse": "المكرومي المنصورة.pdf",
+        "page": 1,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_1.json",
+        "trade_name": "املوساز اید",
+        "scores": {
+          "char_ngrams": 0.7193,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 0.9524
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 1
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 1
+          },
+          {
+            "method": "character_alignment",
+            "rank": 1
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 1
+          },
+          {
+            "method": "token_coverage",
+            "rank": 1
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_40/12.5/5_vs_5/12.5/40"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "explicit_strength_guard_blocked_positive"
+    ],
+    "selected": {
+      "id": "I0254",
+      "name": "املوساز اید ٥/١٢,٥/٤٠",
+      "warehouse": "المكرومي المنصورة.pdf",
+      "page": 1,
+      "cache": "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_1.json",
+      "trade_name": "املوساز اید",
+      "scores": {
+        "char_ngrams": 0.7193,
+        "normalized_edit": 1.0,
+        "character_alignment": 1.0,
+        "ocr_dot_shape": 1.0,
+        "token_coverage": 0.9524
+      },
+      "retrieval_methods": [
+        {
+          "method": "char_ngrams",
+          "rank": 1
+        },
+        {
+          "method": "normalized_edit",
+          "rank": 1
+        },
+        {
+          "method": "character_alignment",
+          "rank": 1
+        },
+        {
+          "method": "ocr_dot_shape",
+          "rank": 1
+        },
+        {
+          "method": "token_coverage",
+          "rank": 1
+        },
+        {
+          "method": "full_name_exact_or_single_edit",
+          "rank": 0
+        },
+        {
+          "method": "warehouse_best",
+          "rank": 1
+        }
+      ],
+      "current_classifier": [
+        "reject",
+        "strength_conflict_40/12.5/5_vs_5/12.5/40"
+      ]
+    },
+    "current_classifier": [
+      "reject",
+      "strength_conflict_40/12.5/5_vs_5/12.5/40"
+    ],
+    "previous_llm_decisions_for_candidate": [],
+    "loss_stage": "parser_or_final_guard"
+  },
+  {
+    "case_id": "A0044",
+    "requested": "انتودين 20مجم30قرص س ج",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0044",
+      "status": "match",
+      "item_id": "I1817",
+      "plausible_ids": [
+        "I0804",
+        "I0263",
+        "I2518",
+        "I1817",
+        "I1818"
+      ],
+      "no_match_basis": "",
+      "reason": "تطابق تام مع انتودين 20 مجم 30 قرص في المرشح I1817"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I0804",
+        "name": "انتودين 40 مج 30 قرص/ باكت 35",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 3,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_3.json",
+        "trade_name": "انتودين",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 2
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 2
+          },
+          {
+            "method": "character_alignment",
+            "rank": 2
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 2
+          },
+          {
+            "method": "token_coverage",
+            "rank": 2
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_20_vs_40"
+        ]
+      },
+      {
+        "id": "I0263",
+        "name": "انتودین ٤٠ مجم اقراص",
+        "warehouse": "المكرومي المنصورة.pdf",
+        "page": 1,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_1.json",
+        "trade_name": "انتودین",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 1
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 1
+          },
+          {
+            "method": "character_alignment",
+            "rank": 1
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 1
+          },
+          {
+            "method": "token_coverage",
+            "rank": 1
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_20_vs_40"
+        ]
+      },
+      {
+        "id": "I2518",
+        "name": "انتودين 40 م ج م 3ش ي ط / باكو 35",
+        "warehouse": "مخزن الحياة فارم اسكندريه-170.pdf",
+        "page": 1,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\مخزن_الحياة_فارم_اسكندريه_a10483ec7d\\results\\page_1.json",
+        "trade_name": "انتودين",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 5
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 5
+          },
+          {
+            "method": "character_alignment",
+            "rank": 5
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 5
+          },
+          {
+            "method": "token_coverage",
+            "rank": 5
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "id": "I1817",
+        "name": "انتودين ۲۰جم ۳۰ قرص جدید",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 1,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_1.json",
+        "trade_name": "انتودين",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 3
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 3
+          },
+          {
+            "method": "character_alignment",
+            "rank": 3
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 3
+          },
+          {
+            "method": "token_coverage",
+            "rank": 3
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_20_vs_20000"
+        ]
+      },
+      {
+        "id": "I1818",
+        "name": "انتودين ٤٠مجم قرص",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 1,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_1.json",
+        "trade_name": "انتودين",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 4
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 4
+          },
+          {
+            "method": "character_alignment",
+            "rank": 4
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 4
+          },
+          {
+            "method": "token_coverage",
+            "rank": 4
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_20_vs_40"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "explicit_strength_guard_blocked_positive"
+    ],
+    "selected": {
+      "id": "I1817",
+      "name": "انتودين ۲۰جم ۳۰ قرص جدید",
+      "warehouse": "كيور فارما خاص.pdf",
+      "page": 1,
+      "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_1.json",
+      "trade_name": "انتودين",
+      "scores": {
+        "char_ngrams": 1.0,
+        "normalized_edit": 1.0,
+        "character_alignment": 1.0,
+        "ocr_dot_shape": 1.0,
+        "token_coverage": 1.0
+      },
+      "retrieval_methods": [
+        {
+          "method": "char_ngrams",
+          "rank": 3
+        },
+        {
+          "method": "normalized_edit",
+          "rank": 3
+        },
+        {
+          "method": "character_alignment",
+          "rank": 3
+        },
+        {
+          "method": "ocr_dot_shape",
+          "rank": 3
+        },
+        {
+          "method": "token_coverage",
+          "rank": 3
+        },
+        {
+          "method": "full_name_exact_or_single_edit",
+          "rank": 0
+        },
+        {
+          "method": "warehouse_best",
+          "rank": 1
+        }
+      ],
+      "current_classifier": [
+        "reject",
+        "strength_conflict_20_vs_20000"
+      ]
+    },
+    "current_classifier": [
+      "reject",
+      "strength_conflict_20_vs_20000"
+    ],
+    "previous_llm_decisions_for_candidate": [],
+    "loss_stage": "parser_or_final_guard"
+  },
+  {
+    "case_id": "A0078",
+    "requested": "ايزوميم 40مجم اقراص",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0078",
+      "status": "match",
+      "item_id": "I0890",
+      "plausible_ids": [
+        "I0890"
+      ],
+      "no_match_basis": "",
+      "reason": "تطابق المنتج والتركيز 40 مج والشكل أقراص مع وجود خطأ قراءة بسيط في الحروف (ايزومومب / ايزوميم)"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I0890",
+        "name": "ايزومومب 40 مج اقراص باكت 144",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 5,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_5.json",
+        "trade_name": "ايزومومب",
+        "scores": {
+          "char_ngrams": 0.5087,
+          "normalized_edit": 0.75,
+          "character_alignment": 0.8,
+          "ocr_dot_shape": 0.75,
+          "token_coverage": 0.8
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 2
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 1
+          },
+          {
+            "method": "character_alignment",
+            "rank": 1
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 1
+          },
+          {
+            "method": "token_coverage",
+            "rank": 1
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "ocr_or_incomplete_name"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "llm_identity_disagreement_needs_source_evidence"
+    ],
+    "selected": {
+      "id": "I0890",
+      "name": "ايزومومب 40 مج اقراص باكت 144",
+      "warehouse": "الهضبة الاثنين نقدى0.pdf",
+      "page": 5,
+      "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_5.json",
+      "trade_name": "ايزومومب",
+      "scores": {
+        "char_ngrams": 0.5087,
+        "normalized_edit": 0.75,
+        "character_alignment": 0.8,
+        "ocr_dot_shape": 0.75,
+        "token_coverage": 0.8
+      },
+      "retrieval_methods": [
+        {
+          "method": "char_ngrams",
+          "rank": 2
+        },
+        {
+          "method": "normalized_edit",
+          "rank": 1
+        },
+        {
+          "method": "character_alignment",
+          "rank": 1
+        },
+        {
+          "method": "ocr_dot_shape",
+          "rank": 1
+        },
+        {
+          "method": "token_coverage",
+          "rank": 1
+        },
+        {
+          "method": "warehouse_best",
+          "rank": 1
+        }
+      ],
+      "current_classifier": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ]
+    },
+    "current_classifier": [
+      "ambiguous",
+      "ocr_or_incomplete_name"
+    ],
+    "previous_llm_decisions_for_candidate": [
+      {
+        "case_id": "Q00195",
+        "status": "no_match",
+        "item_id": "",
+        "reason": "عدم كفاية الأدلة واختلاف اسم المنتج (ايزوميم مقابل ايزومومب)"
+      }
+    ],
+    "loss_stage": "llm_adjudication"
+  },
+  {
+    "case_id": "A0086",
+    "requested": "ايموكسكلاف642مجم شراب",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0086",
+      "status": "match",
+      "item_id": "I0206",
+      "plausible_ids": [
+        "I0206",
+        "I2538",
+        "I0204",
+        "I0205",
+        "I0944",
+        "I1881",
+        "I1882"
+      ],
+      "no_match_basis": "",
+      "reason": "تطابق اسم المنتج ايموكسكلاف والشكل الصيدلي شراب والتركيز (642,9 مقابل 642)"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I0206",
+        "name": "ايموكسكلاف ٦٤٢,٩ شراب",
+        "warehouse": "المكرومي المنصورة.pdf",
+        "page": 1,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_1.json",
+        "trade_name": "ايموكسكلاف",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 3
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 3
+          },
+          {
+            "method": "character_alignment",
+            "rank": 3
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 3
+          },
+          {
+            "method": "token_coverage",
+            "rank": 3
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_642_vs_642.9"
+        ]
+      },
+      {
+        "id": "I2538",
+        "name": "ايموكسكلاف 1 جرام /باكو10",
+        "warehouse": "مخزن الحياة فارم اسكندريه-170.pdf",
+        "page": 2,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\مخزن_الحياة_فارم_اسكندريه_a10483ec7d\\results\\page_2.json",
+        "trade_name": "ايموكسكلاف",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 6
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 6
+          },
+          {
+            "method": "character_alignment",
+            "rank": 6
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 6
+          },
+          {
+            "method": "token_coverage",
+            "rank": 6
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_642_vs_1000"
+        ]
+      },
+      {
+        "id": "I0204",
+        "name": "ايموكسكلاف ۳۱۲ شراب / ايبكو",
+        "warehouse": "المكرومي المنصورة.pdf",
+        "page": 1,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_1.json",
+        "trade_name": "ايموكسكلاف",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 1
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 1
+          },
+          {
+            "method": "character_alignment",
+            "rank": 1
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 1
+          },
+          {
+            "method": "token_coverage",
+            "rank": 1
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_642_vs_312"
+        ]
+      },
+      {
+        "id": "I0205",
+        "name": "ايموكسكلاف ٤٥٧ مجم شراب",
+        "warehouse": "المكرومي المنصورة.pdf",
+        "page": 1,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_1.json",
+        "trade_name": "ايموكسكلاف",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 2
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 2
+          },
+          {
+            "method": "character_alignment",
+            "rank": 2
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 2
+          },
+          {
+            "method": "token_coverage",
+            "rank": 2
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_642_vs_457"
+        ]
+      },
+      {
+        "id": "I0944",
+        "name": "ايموكسكلاف 1 جم اقراص/باكت 90",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 6,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_6.json",
+        "trade_name": "ايموكسكلاف",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 4
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 4
+          },
+          {
+            "method": "character_alignment",
+            "rank": 4
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 4
+          },
+          {
+            "method": "token_coverage",
+            "rank": 4
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_642_vs_1000"
+        ]
+      },
+      {
+        "id": "I1881",
+        "name": "ايموكسكلاف ١جم قرص",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 2,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_2.json",
+        "trade_name": "ايموكسكلاف",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 5
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 5
+          },
+          {
+            "method": "character_alignment",
+            "rank": 5
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 5
+          },
+          {
+            "method": "token_coverage",
+            "rank": 5
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_642_vs_1000"
+        ]
+      },
+      {
+        "id": "I1882",
+        "name": "ايموكسكلاف ٤٥٧ مجم شراب",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 2,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_2.json",
+        "trade_name": "ايموكسكلاف",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_642_vs_457"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "explicit_strength_guard_blocked_positive"
+    ],
+    "selected": {
+      "id": "I0206",
+      "name": "ايموكسكلاف ٦٤٢,٩ شراب",
+      "warehouse": "المكرومي المنصورة.pdf",
+      "page": 1,
+      "cache": "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_1.json",
+      "trade_name": "ايموكسكلاف",
+      "scores": {
+        "char_ngrams": 1.0,
+        "normalized_edit": 1.0,
+        "character_alignment": 1.0,
+        "ocr_dot_shape": 1.0,
+        "token_coverage": 1.0
+      },
+      "retrieval_methods": [
+        {
+          "method": "char_ngrams",
+          "rank": 3
+        },
+        {
+          "method": "normalized_edit",
+          "rank": 3
+        },
+        {
+          "method": "character_alignment",
+          "rank": 3
+        },
+        {
+          "method": "ocr_dot_shape",
+          "rank": 3
+        },
+        {
+          "method": "token_coverage",
+          "rank": 3
+        },
+        {
+          "method": "full_name_exact_or_single_edit",
+          "rank": 0
+        }
+      ],
+      "current_classifier": [
+        "reject",
+        "strength_conflict_642_vs_642.9"
+      ]
+    },
+    "current_classifier": [
+      "reject",
+      "strength_conflict_642_vs_642.9"
+    ],
+    "previous_llm_decisions_for_candidate": [],
+    "loss_stage": "parser_or_final_guard"
+  },
+  {
+    "case_id": "A0143",
+    "requested": "تورسامولكس10مجم اقراص س ج",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0143",
+      "status": "match",
+      "item_id": "I1981",
+      "plausible_ids": [
+        "I1981",
+        "I1982",
+        "I1096"
+      ],
+      "no_match_basis": "",
+      "reason": "تطابق في اسم المنتج تورسامولكس والشكل أقراص والتركيز 10 (مع كتابتها ۱۰جم بدلاً من مجم في OCR)"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I1981",
+        "name": "تورسامولكس ۱۰جم اقراص",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 3,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_3.json",
+        "trade_name": "تورسامولكس",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 2
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 2
+          },
+          {
+            "method": "character_alignment",
+            "rank": 2
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 2
+          },
+          {
+            "method": "token_coverage",
+            "rank": 2
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_10_vs_10000"
+        ]
+      },
+      {
+        "id": "I1982",
+        "name": "تورسامولكس ۲۰ جم اقراص",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 3,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_3.json",
+        "trade_name": "تورسامولكس",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 3
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 3
+          },
+          {
+            "method": "character_alignment",
+            "rank": 3
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 3
+          },
+          {
+            "method": "token_coverage",
+            "rank": 3
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_10_vs_20000"
+        ]
+      },
+      {
+        "id": "I1096",
+        "name": "تورسامولكس 20 مج اقراص/باكت 52",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 9,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_9.json",
+        "trade_name": "تورسامولكس",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 1
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 1
+          },
+          {
+            "method": "character_alignment",
+            "rank": 1
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 1
+          },
+          {
+            "method": "token_coverage",
+            "rank": 1
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_10_vs_20"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "explicit_strength_guard_blocked_positive"
+    ],
+    "selected": {
+      "id": "I1981",
+      "name": "تورسامولكس ۱۰جم اقراص",
+      "warehouse": "كيور فارما خاص.pdf",
+      "page": 3,
+      "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_3.json",
+      "trade_name": "تورسامولكس",
+      "scores": {
+        "char_ngrams": 1.0,
+        "normalized_edit": 1.0,
+        "character_alignment": 1.0,
+        "ocr_dot_shape": 1.0,
+        "token_coverage": 1.0
+      },
+      "retrieval_methods": [
+        {
+          "method": "char_ngrams",
+          "rank": 2
+        },
+        {
+          "method": "normalized_edit",
+          "rank": 2
+        },
+        {
+          "method": "character_alignment",
+          "rank": 2
+        },
+        {
+          "method": "ocr_dot_shape",
+          "rank": 2
+        },
+        {
+          "method": "token_coverage",
+          "rank": 2
+        },
+        {
+          "method": "full_name_exact_or_single_edit",
+          "rank": 0
+        },
+        {
+          "method": "warehouse_best",
+          "rank": 1
+        }
+      ],
+      "current_classifier": [
+        "reject",
+        "strength_conflict_10_vs_10000"
+      ]
+    },
+    "current_classifier": [
+      "reject",
+      "strength_conflict_10_vs_10000"
+    ],
+    "previous_llm_decisions_for_candidate": [],
+    "loss_stage": "parser_or_final_guard"
+  },
+  {
+    "case_id": "A0201",
+    "requested": "ريتشي بانثينول كريم ادفانس",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0201",
+      "status": "match",
+      "item_id": "I1747",
+      "plausible_ids": [
+        "I1745",
+        "I1746",
+        "I1747",
+        "I1748"
+      ],
+      "no_match_basis": "",
+      "reason": "تطابق ريتشي بانثينول أدفانس كريم جيل"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I1745",
+        "name": "ريتشى بانثينول 20جم كريم/باكت 25",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 22,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_22.json",
+        "trade_name": "ريتشى بانثينول",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 1
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 1
+          },
+          {
+            "method": "character_alignment",
+            "rank": 1
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 1
+          },
+          {
+            "method": "token_coverage",
+            "rank": 1
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "id": "I1746",
+        "name": "وريتشى بانثينول 50جم كريم/باكت 10",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 22,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_22.json",
+        "trade_name": "وريتشى بانثينول",
+        "scores": {
+          "char_ngrams": 0.9659,
+          "normalized_edit": 0.9286,
+          "character_alignment": 0.963,
+          "ocr_dot_shape": 0.9286,
+          "token_coverage": 0.9655
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 2
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 2
+          },
+          {
+            "method": "character_alignment",
+            "rank": 2
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 2
+          },
+          {
+            "method": "token_coverage",
+            "rank": 4
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      },
+      {
+        "id": "I1747",
+        "name": "يوريتشى بانثينول ادفانس كريم جيل",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 22,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_22.json",
+        "trade_name": "يوريتشى بانثينول ادفانس",
+        "scores": {
+          "char_ngrams": 0.9594,
+          "normalized_edit": 0.9048,
+          "character_alignment": 0.95,
+          "ocr_dot_shape": 0.9048,
+          "token_coverage": 0.9545
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 3
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 3
+          },
+          {
+            "method": "character_alignment",
+            "rank": 3
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 3
+          },
+          {
+            "method": "token_coverage",
+            "rank": 5
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "uncertain_form"
+        ]
+      },
+      {
+        "id": "I1748",
+        "name": "يوريتشى بانثينول جيل/باكت90",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 22,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_22.json",
+        "trade_name": "يوريتشى بانثينول",
+        "scores": {
+          "char_ngrams": 0.9383,
+          "normalized_edit": 0.8667,
+          "character_alignment": 0.9286,
+          "ocr_dot_shape": 0.8667,
+          "token_coverage": 0.9333
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 4
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 4
+          },
+          {
+            "method": "character_alignment",
+            "rank": 4
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 4
+          },
+          {
+            "method": "token_coverage",
+            "rank": 6
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "llm_identity_disagreement_needs_source_evidence"
+    ],
+    "selected": {
+      "id": "I1747",
+      "name": "يوريتشى بانثينول ادفانس كريم جيل",
+      "warehouse": "الهضبة الاثنين نقدى0.pdf",
+      "page": 22,
+      "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_22.json",
+      "trade_name": "يوريتشى بانثينول ادفانس",
+      "scores": {
+        "char_ngrams": 0.9594,
+        "normalized_edit": 0.9048,
+        "character_alignment": 0.95,
+        "ocr_dot_shape": 0.9048,
+        "token_coverage": 0.9545
+      },
+      "retrieval_methods": [
+        {
+          "method": "char_ngrams",
+          "rank": 3
+        },
+        {
+          "method": "normalized_edit",
+          "rank": 3
+        },
+        {
+          "method": "character_alignment",
+          "rank": 3
+        },
+        {
+          "method": "ocr_dot_shape",
+          "rank": 3
+        },
+        {
+          "method": "token_coverage",
+          "rank": 5
+        }
+      ],
+      "current_classifier": [
+        "ambiguous",
+        "uncertain_form"
+      ]
+    },
+    "current_classifier": [
+      "ambiguous",
+      "uncertain_form"
+    ],
+    "previous_llm_decisions_for_candidate": [
+      {
+        "case_id": "Q00365",
+        "status": "no_match",
+        "item_id": "",
+        "reason": "اختلاف في اسم المنتج والشكل الدوائي (ريتشي بانثينول كريم مقابل يوريتشي بانثينول ادفانس كريم جيل)"
+      }
+    ],
+    "loss_stage": "llm_adjudication",
+    "manual_audit_note": {
+      "case_id": "A0201",
+      "assessment": "source_inspected",
+      "source": "data/processes/PROC-020/cache/vision/الهضبة_الاثنين_نقدى0_6a3e48e076/pages/page_22.webp",
+      "reason": "توجد اختلافات في بدايات الاسم عبر الصفوف مع قص عند حدود الجدول. المعاينة لا تثبت وحدها قراءة موحدة لكل الصفوف؛ يبقى تعارض حكم الهوية السابق والحالي معلنًا وغير محسوم."
+    }
+  },
+  {
+    "case_id": "A0211",
+    "requested": "زوركال20مجم14قرص س ج",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0211",
+      "status": "match",
+      "item_id": "I2107",
+      "plausible_ids": [
+        "I0367",
+        "I2107",
+        "I2108",
+        "I2109"
+      ],
+      "no_match_basis": "",
+      "reason": "تطابق تام للمنتج والتركيز زوركال 20"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I0367",
+        "name": "زوركال ٤٠ مجم ١٤ قرص ٩٦ ج",
+        "warehouse": "المكرومي المنصورة.pdf",
+        "page": 2,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_2.json",
+        "trade_name": "زوركال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 1
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 1
+          },
+          {
+            "method": "character_alignment",
+            "rank": 1
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 1
+          },
+          {
+            "method": "token_coverage",
+            "rank": 1
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "product_variant_conflict"
+        ]
+      },
+      {
+        "id": "I2107",
+        "name": "زوركال ۲۰ جم اقراص",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 4,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_4.json",
+        "trade_name": "زوركال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 2
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 2
+          },
+          {
+            "method": "character_alignment",
+            "rank": 2
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 2
+          },
+          {
+            "method": "token_coverage",
+            "rank": 2
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_20_vs_20000"
+        ]
+      },
+      {
+        "id": "I2108",
+        "name": "زوركال ٤٠ جم ١٤ اقراص",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 4,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_4.json",
+        "trade_name": "زوركال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 3
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 3
+          },
+          {
+            "method": "character_alignment",
+            "rank": 3
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 3
+          },
+          {
+            "method": "token_coverage",
+            "rank": 3
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_20_vs_40000"
+        ]
+      },
+      {
+        "id": "I2109",
+        "name": "زوركال ٤٠ مجم اقراص ۲۸ قرص",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 4,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_4.json",
+        "trade_name": "زوركال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 4
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 4
+          },
+          {
+            "method": "character_alignment",
+            "rank": 4
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 4
+          },
+          {
+            "method": "token_coverage",
+            "rank": 4
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_20_vs_40"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "explicit_strength_guard_blocked_positive"
+    ],
+    "selected": {
+      "id": "I2107",
+      "name": "زوركال ۲۰ جم اقراص",
+      "warehouse": "كيور فارما خاص.pdf",
+      "page": 4,
+      "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_4.json",
+      "trade_name": "زوركال",
+      "scores": {
+        "char_ngrams": 1.0,
+        "normalized_edit": 1.0,
+        "character_alignment": 1.0,
+        "ocr_dot_shape": 1.0,
+        "token_coverage": 1.0
+      },
+      "retrieval_methods": [
+        {
+          "method": "char_ngrams",
+          "rank": 2
+        },
+        {
+          "method": "normalized_edit",
+          "rank": 2
+        },
+        {
+          "method": "character_alignment",
+          "rank": 2
+        },
+        {
+          "method": "ocr_dot_shape",
+          "rank": 2
+        },
+        {
+          "method": "token_coverage",
+          "rank": 2
+        },
+        {
+          "method": "full_name_exact_or_single_edit",
+          "rank": 0
+        },
+        {
+          "method": "warehouse_best",
+          "rank": 1
+        }
+      ],
+      "current_classifier": [
+        "reject",
+        "strength_conflict_20_vs_20000"
+      ]
+    },
+    "current_classifier": [
+      "reject",
+      "strength_conflict_20_vs_20000"
+    ],
+    "previous_llm_decisions_for_candidate": [],
+    "loss_stage": "parser_or_final_guard"
+  },
+  {
+    "case_id": "A0229",
+    "requested": "ستلاسيل 5 جم اقراص س ج",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0229",
+      "status": "match",
+      "item_id": "I1284",
+      "plausible_ids": [
+        "I1284"
+      ],
+      "no_match_basis": "",
+      "reason": "تطابق تام للمنتج والتركيز والشكل"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I1284",
+        "name": "ستلاسيل 5 مج اقراص/باكت 150",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 12,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_12.json",
+        "trade_name": "ستلاسيل",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 1
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 1
+          },
+          {
+            "method": "character_alignment",
+            "rank": 1
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 1
+          },
+          {
+            "method": "token_coverage",
+            "rank": 1
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_5000_vs_5"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "explicit_strength_guard_blocked_positive"
+    ],
+    "selected": {
+      "id": "I1284",
+      "name": "ستلاسيل 5 مج اقراص/باكت 150",
+      "warehouse": "الهضبة الاثنين نقدى0.pdf",
+      "page": 12,
+      "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_12.json",
+      "trade_name": "ستلاسيل",
+      "scores": {
+        "char_ngrams": 1.0,
+        "normalized_edit": 1.0,
+        "character_alignment": 1.0,
+        "ocr_dot_shape": 1.0,
+        "token_coverage": 1.0
+      },
+      "retrieval_methods": [
+        {
+          "method": "char_ngrams",
+          "rank": 1
+        },
+        {
+          "method": "normalized_edit",
+          "rank": 1
+        },
+        {
+          "method": "character_alignment",
+          "rank": 1
+        },
+        {
+          "method": "ocr_dot_shape",
+          "rank": 1
+        },
+        {
+          "method": "token_coverage",
+          "rank": 1
+        },
+        {
+          "method": "full_name_exact_or_single_edit",
+          "rank": 0
+        },
+        {
+          "method": "warehouse_best",
+          "rank": 1
+        }
+      ],
+      "current_classifier": [
+        "reject",
+        "strength_conflict_5000_vs_5"
+      ]
+    },
+    "current_classifier": [
+      "reject",
+      "strength_conflict_5000_vs_5"
+    ],
+    "previous_llm_decisions_for_candidate": [],
+    "loss_stage": "parser_or_final_guard"
+  },
+  {
+    "case_id": "A0249",
+    "requested": "سيتال1جم اقراص س ج",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0249",
+      "status": "no_match",
+      "item_id": "",
+      "plausible_ids": [
+        "I2628",
+        "I0101",
+        "I2629",
+        "I2252",
+        "I1325",
+        "I1324",
+        "I2253",
+        "I2254",
+        "I0599",
+        "I0598"
+      ],
+      "no_match_basis": "explicit_strength_conflict",
+      "reason": "اختلاف في التركيز 500 مجم مقابل 1 جم"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I2628",
+        "name": "سيتال اقراص 500 س ج",
+        "warehouse": "مخزن الحياة فارم اسكندريه-170.pdf",
+        "page": 3,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\مخزن_الحياة_فارم_اسكندريه_a10483ec7d\\results\\page_3.json",
+        "trade_name": "سيتال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "missing_strength"
+        ]
+      },
+      {
+        "id": "I0101",
+        "name": "سيتال شراب/ايبيكو",
+        "warehouse": "السلام شبين.pdf",
+        "page": 3,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\السلام_شبين_d44b79aaae\\results\\page_3.json",
+        "trade_name": "سيتال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 1
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 1
+          },
+          {
+            "method": "character_alignment",
+            "rank": 1
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 1
+          },
+          {
+            "method": "token_coverage",
+            "rank": 1
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "ocr_or_incomplete_name"
+        ]
+      },
+      {
+        "id": "I2629",
+        "name": "سيتال شراب س ج باكت20",
+        "warehouse": "مخزن الحياة فارم اسكندريه-170.pdf",
+        "page": 3,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\مخزن_الحياة_فارم_اسكندريه_a10483ec7d\\results\\page_3.json",
+        "trade_name": "سيتال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "missing_strength"
+        ]
+      },
+      {
+        "id": "I2252",
+        "name": "سيتال ٥٠٠ مجم اقراص",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 5,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_5.json",
+        "trade_name": "سيتال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 5
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 5
+          },
+          {
+            "method": "character_alignment",
+            "rank": 5
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 5
+          },
+          {
+            "method": "token_coverage",
+            "rank": 6
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "strength_conflict_1000_vs_500"
+        ]
+      },
+      {
+        "id": "I1325",
+        "name": "سيتال لبوس /باكت 65",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 13,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_13.json",
+        "trade_name": "سيتال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 4
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 4
+          },
+          {
+            "method": "character_alignment",
+            "rank": 4
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 4
+          },
+          {
+            "method": "token_coverage",
+            "rank": 5
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "missing_strength"
+        ]
+      },
+      {
+        "id": "I1324",
+        "name": "سيتال شراب باكت 20",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 13,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_13.json",
+        "trade_name": "سيتال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 3
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 3
+          },
+          {
+            "method": "character_alignment",
+            "rank": 3
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 3
+          },
+          {
+            "method": "token_coverage",
+            "rank": 4
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "missing_strength"
+        ]
+      },
+      {
+        "id": "I2253",
+        "name": "سيتال شراب قديم",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 5,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_5.json",
+        "trade_name": "سيتال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 6
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 6
+          },
+          {
+            "method": "character_alignment",
+            "rank": 6
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 6
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "missing_strength"
+        ]
+      },
+      {
+        "id": "I2254",
+        "name": "سيتال نقط",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 5,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_5.json",
+        "trade_name": "سيتال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "missing_strength"
+        ]
+      },
+      {
+        "id": "I0599",
+        "name": "سيتال شراب س.ج ۳۱ج",
+        "warehouse": "المكرومي المنصورة.pdf",
+        "page": 3,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_3.json",
+        "trade_name": "سيتال",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 2
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 2
+          },
+          {
+            "method": "character_alignment",
+            "rank": 2
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 2
+          },
+          {
+            "method": "token_coverage",
+            "rank": 3
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "missing_strength"
+        ]
+      },
+      {
+        "id": "I0598",
+        "name": "سيتال اكسترا /ايبيكو",
+        "warehouse": "المكرومي المنصورة.pdf",
+        "page": 3,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\المكرومي_المنصورة_9f96dd5050\\results\\page_3.json",
+        "trade_name": "سيتال اكسترا",
+        "scores": {
+          "char_ngrams": 0.5311,
+          "normalized_edit": 0.4545,
+          "character_alignment": 0.625,
+          "ocr_dot_shape": 0.4545,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "token_coverage",
+            "rank": 2
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "audit_evidence_unresolved"
+    ],
+    "selected": null,
+    "manual_audit_note": {
+      "case_id": "A0249",
+      "assessment": "unresolved",
+      "reason": "رفض LLM جميع مرشحي سيتال بسبب 500mg في الأقراص، رغم أن قائمة plausible تتضمن شرابًا ولبوسًا ونقطًا بلا تركيز مذكور. تعارض الأقراص صحيح لكنه لا يثبت رفض بقية الهيئات؛ لا يُحتسب الطلب true NO_MATCH بعد التدقيق."
+    }
+  },
+  {
+    "case_id": "A0250",
+    "requested": "سيترونوميت 4 مجم اقراص س ج",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0250",
+      "status": "no_match",
+      "item_id": "",
+      "plausible_ids": [
+        "I1326"
+      ],
+      "no_match_basis": "explicit_strength_conflict",
+      "reason": "اختلاف في التركيز 8 مجم مقابل 4"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I1326",
+        "name": "سيترونوميت 8 مل 4 قرص",
+        "warehouse": "الهضبة الاثنين نقدى0.pdf",
+        "page": 13,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\الهضبة_الاثنين_نقدى0_6a3e48e076\\results\\page_13.json",
+        "trade_name": "سيترونوميت",
+        "scores": {
+          "char_ngrams": 1.0,
+          "normalized_edit": 1.0,
+          "character_alignment": 1.0,
+          "ocr_dot_shape": 1.0,
+          "token_coverage": 1.0
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 1
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 1
+          },
+          {
+            "method": "character_alignment",
+            "rank": 1
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 1
+          },
+          {
+            "method": "token_coverage",
+            "rank": 1
+          },
+          {
+            "method": "full_name_exact_or_single_edit",
+            "rank": 0
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "missing_strength"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "audit_evidence_unresolved"
+    ],
+    "selected": null,
+    "manual_audit_note": {
+      "case_id": "A0250",
+      "assessment": "unresolved",
+      "reason": "النص المخزني هو سيترونوميت 8 مل 4 قرص. سبب رفض LLM أعاد كتابة 8 مل على أنها 8 مجم. لا يثبت النص تعارض strength مع 4mg؛ تبقى دلالة الرقم/الوحدة غير محسومة ولا تُحتسب true NO_MATCH."
+    }
+  },
+  {
+    "case_id": "A0292",
+    "requested": "فلوب شراب س ج",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0292",
+      "status": "review",
+      "item_id": "I0112",
+      "plausible_ids": [
+        "I0112"
+      ],
+      "no_match_basis": "",
+      "reason": "اختلاف الشكل الصيدلي نقط بدلا شراب"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I0112",
+        "name": "فلابو نقط/دلتا فارم",
+        "warehouse": "السلام شبين.pdf",
+        "page": 4,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\السلام_شبين_d44b79aaae\\results\\page_4.json",
+        "trade_name": "فلابو",
+        "scores": {
+          "char_ngrams": 0.0848,
+          "normalized_edit": 0.6,
+          "character_alignment": 0.6667,
+          "ocr_dot_shape": 0.6,
+          "token_coverage": 0.6667
+        },
+        "retrieval_methods": [
+          {
+            "method": "normalized_edit",
+            "rank": 1
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 1
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 1
+          }
+        ],
+        "current_classifier": [
+          "reject",
+          "no_meaningful_name_evidence"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "audit_evidence_unresolved"
+    ],
+    "selected": {
+      "id": "I0112",
+      "name": "فلابو نقط/دلتا فارم",
+      "warehouse": "السلام شبين.pdf",
+      "page": 4,
+      "cache": "data\\processes\\PROC-020\\cache\\vision\\السلام_شبين_d44b79aaae\\results\\page_4.json",
+      "trade_name": "فلابو",
+      "scores": {
+        "char_ngrams": 0.0848,
+        "normalized_edit": 0.6,
+        "character_alignment": 0.6667,
+        "ocr_dot_shape": 0.6,
+        "token_coverage": 0.6667
+      },
+      "retrieval_methods": [
+        {
+          "method": "normalized_edit",
+          "rank": 1
+        },
+        {
+          "method": "ocr_dot_shape",
+          "rank": 1
+        },
+        {
+          "method": "warehouse_best",
+          "rank": 1
+        }
+      ],
+      "current_classifier": [
+        "reject",
+        "no_meaningful_name_evidence"
+      ]
+    },
+    "current_classifier": [
+      "reject",
+      "no_meaningful_name_evidence"
+    ],
+    "previous_llm_decisions_for_candidate": [],
+    "loss_stage": "retrieval_name_gate",
+    "manual_audit_note": {
+      "case_id": "A0292",
+      "assessment": "unresolved",
+      "reason": "اقتراح REVIEW اعتمد على افتراض أن فلوب وفلابو نفس الاسم، دون دليل مستقل كافٍ من النص على هذا الربط. لا يُحكم بأنهما مختلفان تلقائيًا، لكن لا يُعد الاقتراح استرجاعًا مؤكدًا. المرشح يبقى ظاهرًا في نتائج التدقيق."
+    }
+  },
+  {
+    "case_id": "A0321",
+    "requested": "فيوسيدل كريم",
+    "scope": "global_no_match",
+    "llm_decision": {
+      "case_id": "A0321",
+      "status": "match",
+      "item_id": "I2340",
+      "plausible_ids": [
+        "I2340",
+        "I2341",
+        "I2658"
+      ],
+      "no_match_basis": "",
+      "reason": "تطابق الصنف والشكل الصيدلي مع خطأ بصري"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I2340",
+        "name": "فيوسيدين ۲۰جم كريم/ وسط",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 6,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_6.json",
+        "trade_name": "فيوسيدين",
+        "scores": {
+          "char_ngrams": 0.7453,
+          "normalized_edit": 0.75,
+          "character_alignment": 0.8,
+          "ocr_dot_shape": 0.75,
+          "token_coverage": 0.8
+        },
+        "retrieval_methods": [
+          {
+            "method": "char_ngrams",
+            "rank": 6
+          },
+          {
+            "method": "normalized_edit",
+            "rank": 2
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "ocr_or_incomplete_name"
+        ]
+      },
+      {
+        "id": "I2341",
+        "name": "فيوسيدين كريم كبير",
+        "warehouse": "كيور فارما خاص.pdf",
+        "page": 6,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_6.json",
+        "trade_name": "فيوسيدين",
+        "scores": {
+          "char_ngrams": 0.7453,
+          "normalized_edit": 0.75,
+          "character_alignment": 0.8,
+          "ocr_dot_shape": 0.75,
+          "token_coverage": 0.8
+        },
+        "retrieval_methods": [
+          {
+            "method": "normalized_edit",
+            "rank": 3
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 3
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "ocr_or_incomplete_name"
+        ]
+      },
+      {
+        "id": "I2658",
+        "name": "فيوسيدين كريم 20 جرام وسط",
+        "warehouse": "مخزن الحياة فارم اسكندريه-170.pdf",
+        "page": 4,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\مخزن_الحياة_فارم_اسكندريه_a10483ec7d\\results\\page_4.json",
+        "trade_name": "فيوسيدين",
+        "scores": {
+          "char_ngrams": 0.7453,
+          "normalized_edit": 0.75,
+          "character_alignment": 0.8,
+          "ocr_dot_shape": 0.75,
+          "token_coverage": 0.8
+        },
+        "retrieval_methods": [
+          {
+            "method": "normalized_edit",
+            "rank": 4
+          },
+          {
+            "method": "ocr_dot_shape",
+            "rank": 4
+          },
+          {
+            "method": "warehouse_best",
+            "rank": 2
+          }
+        ],
+        "current_classifier": [
+          "ambiguous",
+          "ocr_or_incomplete_name"
+        ]
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "llm_identity_disagreement_needs_source_evidence",
+      "audit_evidence_unresolved"
+    ],
+    "selected": {
+      "id": "I2340",
+      "name": "فيوسيدين ۲۰جم كريم/ وسط",
+      "warehouse": "كيور فارما خاص.pdf",
+      "page": 6,
+      "cache": "data\\processes\\PROC-020\\cache\\vision\\كيور_فارما_خاص_6532a22310\\results\\page_6.json",
+      "trade_name": "فيوسيدين",
+      "scores": {
+        "char_ngrams": 0.7453,
+        "normalized_edit": 0.75,
+        "character_alignment": 0.8,
+        "ocr_dot_shape": 0.75,
+        "token_coverage": 0.8
+      },
+      "retrieval_methods": [
+        {
+          "method": "char_ngrams",
+          "rank": 6
+        },
+        {
+          "method": "normalized_edit",
+          "rank": 2
+        },
+        {
+          "method": "ocr_dot_shape",
+          "rank": 2
+        }
+      ],
+      "current_classifier": [
+        "ambiguous",
+        "ocr_or_incomplete_name"
+      ]
+    },
+    "current_classifier": [
+      "ambiguous",
+      "ocr_or_incomplete_name"
+    ],
+    "previous_llm_decisions_for_candidate": [
+      {
+        "case_id": "Q00358",
+        "status": "no_match",
+        "item_id": "",
+        "reason": "اختلاف اسم الدواء"
+      }
+    ],
+    "loss_stage": "llm_adjudication",
+    "manual_audit_note": {
+      "case_id": "A0321",
+      "assessment": "unresolved",
+      "reason": "اختلف حكم استجابات تدقيق نفس المرشحين بين الرفض والقبول. حُفظ المرشح المحتمل ولم يُحسب استرجاعًا مؤكدًا أو غيابًا مؤكدًا.",
+      "audit_response_statuses": [
+        "no_match",
+        "match"
+      ]
+    }
+  },
+  {
+    "case_id": "W0378",
+    "requested": "لبن هيرو بيبي 2",
+    "scope": "amr_only",
+    "llm_decision": {
+      "case_id": "W0378",
+      "status": "match",
+      "item_id": "I1776",
+      "plausible_ids": [
+        "I1775",
+        "I1776"
+      ],
+      "no_match_basis": "",
+      "reason": "تطابق هيرو 2 واختلاف السعر لا يمنع"
+    },
+    "plausible_candidates": [
+      {
+        "id": "I1775",
+        "name": "هيرو 111 عادى جديد -12ب لا يفرط",
+        "warehouse": "جملة العمروووو.pdf",
+        "page": 1,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+        "trade_name": "هيرو 111 عادى"
+      },
+      {
+        "id": "I1776",
+        "name": "هيرو 222 نيوتراديفنس 384",
+        "warehouse": "جملة العمروووو.pdf",
+        "page": 1,
+        "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+        "trade_name": "هيرو 222 نيوتراديفنس"
+      }
+    ],
+    "audit_status": "no_match",
+    "guard_notes": [
+      "product_variant_or_numeric_context_unresolved",
+      "audit_evidence_unresolved"
+    ],
+    "selected": {
+      "id": "I1776",
+      "name": "هيرو 222 نيوتراديفنس 384",
+      "warehouse": "جملة العمروووو.pdf",
+      "page": 1,
+      "cache": "data\\processes\\PROC-020\\cache\\vision\\جملة_العمروووو_0fbca8b95b\\results\\page_1.json",
+      "trade_name": "هيرو 222 نيوتراديفنس"
+    },
+    "current_classifier": [
+      "reject",
+      "no_meaningful_name_evidence"
+    ],
+    "previous_llm_decisions_for_candidate": [],
+    "loss_stage": "retrieval_name_gate",
+    "manual_audit_note": {
+      "case_id": "W0378",
+      "assessment": "unresolved",
+      "source": "data/processes/PROC-020/cache/vision/جملة_العمروووو_0fbca8b95b/pages/page_1.webp",
+      "reason": "اقتراح LLM يربط المرحلة 2 بالنص 222. الصورة الأصلية نفسها تعرض 222 و111 في الصف السابق؛ لا يثبت ذلك قاعدة عامة لاختزال أرقام هوية الصنف. بقي الاقتراح منفصلًا دون تعديل قواعد المتغيرات أو احتسابه MATCH مؤكدًا."
+    }
+  }
+]

@@ -1,0 +1,30 @@
+
+The command exited with code 0.
+Output:
+def _try_text_content(elements: list[dict]) -> list[dict]:
+    """
+    محاولة استخراج الأصناف من المحتوى النصي.
+
+    يجمع النصوص من عناصر NarrativeText وTitle ويفصلها بالأسطر.
+    """
+    items: list[dict] = []
+    arabic_pattern = re.compile(r"[\u0600-\u06FF]")
+
+    for elem in elements:
+        elem_type = elem.get("type", "")
+        if elem_type not in ("NarrativeText", "Title", "ListItem", "UncategorizedText"):
+            continue
+
+        text = elem.get("text", "").strip()
+        if not text:
+            continue
+
+        page = elem.get("metadata", {}).get("page_number")
+
+        # تقسيم النص إلى أسطر وفحص كل سطر
+        for line in text.split("\n"):
+            line = line.strip()
+            if not line or len(line) < 3:
+                continue
+
+

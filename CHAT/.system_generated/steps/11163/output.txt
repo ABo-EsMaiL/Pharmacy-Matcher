@@ -1,0 +1,78 @@
+
+The command exited with code 0.
+Output:
+<truncated 9 lines>
+
+القواعد الجديدة المعتمدة عندنا هي:
+
+* Strength/Concentration = خط أحمر. اختلاف صريح = NO_MATCH.
+* Dosage Form = إذا اختلف مع بقاء المنتج والـstrength نفسهما → REVIEW.
+* Packaging / Quantity / Pack Count / Price markers = لا تمنع الـMATCH.
+* AI ممنوع يقترح therapeutic alternative أو active ingredient alternative.
+* AI دوره الأساسي OCR/identity matching فقط.
+* OCR variants مثل missing letters / Arabic-English transliteration / Arabic digit variants / reversed Arabic characters مسموحة فقط عندما تكون هوية المنتج واضحة.
+* ال
+
+
+--- Line 7580 ---
+<USER_REQUEST>
+الـAdaptive Timeout في التشغيل الحالي واضح إنه حل المشكلة الأساسية: 75 cases، first character عند 8.1s، completion عند 27.2s، JSON صالح، و75/75 case IDs رجعت بدون timeout/retry. ده ممتاز.
+
+لكن قبل اعتماد الـ3-State Lifecycle نهائيًا، عندي نقطتين محتاجين مراجعة:
+
+1. عندنا في اللوج:
+   `State -> RESPONSE_IN_PROGRESS at 0.00s (is_running=False, new_turn=True, initial_chars=0)`
+
+وده محتاج نتأكد إن `new_turn=True` لا يعني مجرد ظهور User Turn بعد إرسال الـprompt.
+
+الـstate الصحيح لازم ينتقل إلى RESPONSE_IN_PROGRESS فقط عند التأكد أن هناك Model Turn فعلي بدأ، مثل:
+
+* Model turn جديد في DOM
+* أو stop/generating indicator متعلق بالـModel
+* أو ظهور أول response character
+
+ظهور User Turn وحده ليس دليلًا أن Gemini بدأ التوليد.
+
+الهدف أن `initial_start_timeout=120s` يظل له معنى فعلي:
+REQUEST_SENT
+→ NO_RESPONSE_STARTED
+→ actual MODEL turn detected
+→ RESPONSE_IN_PROGRESS
+→ RESPONSE_COMPLETED
+
+وليس:
+REQUEST_SENT
+→ USER turn detected
+→ RESPONSE_IN_PROGRESS
+
+2
+
+
+--- Line 9443 ---
+<USER_REQUEST>
+بص عشان نبقى يعني ايه، أنا استخدمت ملف بتاع المكروم المنصور، ده الملف اللي أنا عملته. عملت يدوياً، أخدت الـ PDF وحولته لصورة، الـ PDF تقريبا أربع صفحات. ما رضيتش أستخدم اللي هو العامره عشان خاطر صفحة واحدة فانا حبيت أختبره على أكتر من صفحة. كل صورة ببعتها في الشات تمام ومعها الـ برومبت. هبعت لك برضه سكرين شوت للرسالة بالشات. تمام وهبعت لك الـ دوم تمام بتاع الشات. عشان مش عايز أخد لك الصفحة كلها الـ بادي كله عشان خاطر الحجم بتاع الـ كونتكست. وأنت معاك الكاش بتاع الـ unstructured بتاع المكرومي ده. قارن الملف بتاع الـ unstructured بتاع المكرومي ده مع الـ دوم اللي أنا مديهولك وعايزك تطلع لي ملخص كده أو تقرير كده إيه الأفضل، ده غلط في إيه، ده أدرك إيه، ده جاب إيه، وده عمل إيه، وده سوى إيه، وده متميز في إيه، وده متميز في إيه، والحاجات دي كلها. وفي الآخر تنصحني نشتغل بأنهي طريقة. وبعدين بقى نشوف هنعمل ايه. 
+
+<div _ngcontent-ng-c2637243446="" class="chat-view-container ng-star-inserted"><!----><!----><ms-chat-session _ngcontent-ng-c2637243446="" _nghost-ng-c3711808589="" class="
+
+
+--- Line 9532 ---
+<USER_REQUEST>
+في مشكلة ومبعتش صورة والبرومبت مش عارف ولا اصلا انت عاوز كدا ؟؟
+
+<div _ngcontent-ng-c1480764559="" class="chat-view-container ng-star-inserted"><!----><!----><ms-chat-session _ngcontent-ng-c1480764559="" _nghost-ng-c2680143636="" class="ng-star-inserted"><ms-autoscroll-container _ngcontent-ng-c2680143636="" tabindex="-1" class="hide-scrollbar" _nghost-ng-c4246658289="" style="--ms-autoscroll-container-scrolled: 1;"><div _ngcontent-ng-c4246658289=""><div _ngcontent-ng-c2680143636="" class="chat-session-content"><!----><ms-chat-turn _ngcontent-ng-c2680143636="" _nghost-ng-c1083380779="" id="turn-9CF7E204-4C3C-48C3-9CE0-A43B32E2A597" class="text-chunk-host ng-star-inserted"><div _ngcontent-ng-c1083380779="" tabindex="-1" cdkmonitorsubtreefocus="" class="chat-turn-container code-block-aligner render user ng-star-inserted"><div _ngcontent-ng-c1083380779="" class="actions-container"><div _ngcontent-ng-c1083380779="" class="actions hover-or-edit"><!----><button _ngcontent-ng-c1
+
+
+--- Line 10871 ---
+<USER_REQUEST>
+هو يا ماشي، احنا زودنا الـ structure فهو ياخد وقت أكتر. هو انت ممكن، أنا مش عارف الصراحة، يعني ممكن تحط trigger اللي هو تشوف الـ trigger، الـ trigger بتاع مثلاً الـ run ده، بتاع اللي هو تبعت الرسالة. طالما هو مقفول، لو انت بعت رسالة وهو بقى cancel generation، تمام، يبقى الرسالة لسه شغالة. أول ما يقف، اللي هو يبقى زرار disabled، معنى كده إن الرسالة خلصت. تروح انت بقى تشيك بقى هل الرسالة كملت الـ stream بتاعها، يعني خلصت عملية الـ stream بتاعها ولا لا، لأن الرسالة بتيجي streaming، تمام، ما بتجيش اللي هو خبط مرة واحدة، لا دي stream، بتتكتب في الـ dom screen. فانت هيبقى عندك اتنين تشيك، تشيك أول واحدة الزرار بتاع اللي هو تبعت رسالة cancel generation ولا disabled ولا active. active ده يعني انت هتبعت رسالة. لو انت بتتشيك عليه وأنت بتبعت رسالة، انت كده، أنا ماليش دعوة بالـ تشيك وأنت بتبعت الرسالة. الـ active ده وأنت بتبعت رسالة ماليش دعوة بيه. الكلام ده بالـ disabled وأن هي cancel generation. طالما هي cancel generation أو stop، هي مش stop، هي لما أنا بروح عليها بيظهر بوكس كده ع
+
+
+--- Line 11085 ---
+<USER_REQUEST>
+يا لهوي على سنين السود، يا حبيبي يا بابا، أنا قلت لك الـ cancel generation ده بيكون البوكس اللي بيظهر لما أعمل الماوس على كلمة stop. أنا بقى كل ما أدخل، كل ما هو يبعت request، أول ما stop generation دي البوكس اللي فوقيها يختفي بيقفل ويفتح تاني اللي هو بيبعت تاني. يا باشا الزرار بيتحول لكلمة stop، الزرار ذات نفسه بيتحول لكلمة stop. الـ hover لما تروح عليه بيظهر بوكس فوق زرار stop كده اللي هو cancel generation. أنت عملت على الـ hover وما عملتش على الزرار، أنت عبيط؟ ثم زي ما قلت لك، حسس إن الدنيا بطيئة، مش البراوزر بس، لا ده البرنامج ذات نفسه اللي هو الـ application. حاسس إن هو بيفتح ببطء. لو أنت ما عملتش حاجة تبوظ كده، يمكن بقى أنا الجهاز عندي معلق، فتحل لي المشكلة بتاعة الـ trigger ده. الزرار بيتحول لـ stop، لكن لما يكون شغال بيبقى run control أو run حاجه كده مش فاكرها قوي. في الـ DOM اللي انا كنت بعته لك قبل كده، تلاقي أنا باعت لك DOM للبوكس بتاع الـ message ده. صلحها عشان أنت حرفيًا بعت خمس رسائل في نفس الرسالة. 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local t
+
+
+

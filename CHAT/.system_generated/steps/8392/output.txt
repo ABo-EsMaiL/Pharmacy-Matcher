@@ -1,0 +1,17 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -664,9 +664,9 @@
+                 errorText = 'TOO_MANY_TOOL_CALLS: ' + bodyTxt.slice(0, 500);
+             }
+ 
+-            // Count tool call chips in DOM
++            // Count tool call chips in chat turns
+             let toolCallsCount = 0;
+-            const toolChips = document.querySelectorAll('ms-grounding-chip, ms-search-query, [data-test-id*="tool" i], .grounding-chip, .tool-call, mat-chip');
++            const toolChips = document.querySelectorAll('ms-chat-turn ms-grounding-chip, ms-chat-turn ms-search-query, ms-chat-turn .grounding-chip, ms-chat-turn .tool-call, ms-chat-turn [data-test-id*="tool" i]');
+             toolCallsCount = toolChips.length;
+ 
+             if (hasError) {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

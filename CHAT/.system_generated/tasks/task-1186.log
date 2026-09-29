@@ -1,0 +1,7 @@
+68: self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('new_log', {{detail: '{safe_msg}'}}));")
+306: self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Reading files...'}}}}));")
+324: self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Extracting data from files...'}}}}));")
+345: self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Matching {len(all_shortages)} items...'}}}}));")
+353: self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Saving results...'}}}}));")
+377: self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: true, stats: JSON.parse('{safe_stats}')}}}}));")
+386: self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: false, error: \"{err_msg}\"}}}}));")

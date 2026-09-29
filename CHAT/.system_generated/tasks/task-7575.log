@@ -1,0 +1,64 @@
+Traceback (most recent call last):
+  File "D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py", line 644, in _call_local_api
+    answer = json.loads(clean)
+             ^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\json\decoder.py", line 341, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 456 column 1 (char 8389)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\verify_large_batch_timing.py", line 85, in main
+    results = coord._call_local_api({"cases": cases_75})
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py", line 647, in _call_local_api
+    raise RuntimeError(f"JSON Parse Error ({jde}): Model output was: {content[:300]}")
+RuntimeError: JSON Parse Error (Extra data: line 456 column 1 (char 8389)): Model output was: {
+"results": [
+{
+"case_id": "TEST-01",
+"status": "no_match",
+"item_id": "",
+"reason": "اختلاف في التركيز: المطلوب 250 مجم والمتاح 500 مجم"
+},
+{
+"case_id": "TEST-02",
+"status": "review",
+"item_id": "W1-002",
+"reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة: مطلوب مرهم والمخزن عنده كريم"
+},
+{
+"case_i
+================================================================================
+VERIFYING MSEMAX LARGE BATCH (75 CASES) ADAPTIVE TIMEOUT & STATE MACHINE
+================================================================================
+[✓] Gateway: MSEMAX (AIStudio Web Hook)
+[✓] Active Model: Gemini 3.8 Flash
+gemini-3.8-fl... (Verified: True)
+[✓] Thinking Mode: High (Verified: True)
+[✓] Clear Chat On Request: True
+
+[+] Built full batch of 75 realistic cases for testing.
+
+[*] Dispatching 75 cases to MSEMAX Gateway...
+
+[X] FAILURE: JSON Parse Error (Extra data: line 456 column 1 (char 8389)): Model output was: {
+"results": [
+{
+"case_id": "TEST-01",
+"status": "no_match",
+"item_id": "",
+"reason": "اختلاف في التركيز: المطلوب 250 مجم والمتاح 500 مجم"
+},
+{
+"case_id": "TEST-02",
+"status": "review",
+"item_id": "W1-002",
+"reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة: مطلوب مرهم والمخزن عنده كريم"
+},
+{
+"case_i

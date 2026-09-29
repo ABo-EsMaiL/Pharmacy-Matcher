@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -19,7 +19,7 @@
+    - NEVER suggest or accept alternative brand names, different trade names, or generics (e.g. Panadol is NOT Cetal, Brufen is NOT Cataflam, Augmentin is NOT Curam).
+    - If the trade brand name is a completely different commercial brand or generic substitute (e.g. Panadol is NOT Cetal, Brufen is NOT Cataflam, Augmentin is NOT Curam, Ricoxen is NOT Etoricox, Antopral is NOT Pantoprazole, Serovar is NOT Ciprobay, New Carbon is NOT Eucarbon), YOU MUST RETURN "status": "no_match" (or omit it). NEVER mark different brands as "match" or "review"!
+    - Distinct commercial prefixes (like "نيو" / "New") or distinct trade endings/suffixes signify different trade brands (e.g. "New X" is NOT "X", a brand ending in "-rich" is NOT "-ren"). Return "no_match".
+-   - Allow common OCR scanning artifacts, dropped letters/syllables, phonetic variants, and Arabic/Persian letter substitutions of the SAME exact brand (like جرانتريل/جرانتيل, امبوفير/اميفير, ديباكين/ديبيكان, or dropped initial 'ا', dropped single letters or missing dots like 'ن' or 'ب', Persian/Urdu letters like پ for ب or ک for ك or گ for ك/ج, visually confused OCR letters like 'ف' vs 'د', or slight vowel variations).
++   - Allow common OCR scanning artifacts, dropped letters/syllables, phonetic variants, and Arabic/Persian letter substitutions of the SAME exact brand (e.g. فيوسيدين/فيوسيدل where connected 'ين' is read as 'ل', ميبو/ميو where 'ب' is dropped, جرانتريل/جرانتيل, امبوفير/اميفير, ديباكين/ديبيكان, or dropped initial 'ا', dropped single letters or missing dots like 'ن' or 'ب', Persian/Urdu letters like پ for ب or ک for ك or گ for ك/ج, visually confused OCR letters like 'ف' vs 'د', or slight vowel variations).
+ 
+ 2. DOSAGE FORM & FORMULATION (ZERO TOLERANCE FOR CONFLICTS):
+    - Dosage forms MUST be strictly compatible:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

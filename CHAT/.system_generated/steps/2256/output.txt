@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+Salam keys: dict_keys(['id', 'status', 'filename', 'file_id', 'cancellation_requested', 'source', 'error', 'result'])
+Amr keys: dict_keys(['id', 'status', 'filename', 'file_id', 'cancellation_requested', 'source', 'error', 'result'])
+

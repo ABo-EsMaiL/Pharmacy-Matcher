@@ -1,0 +1,68 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -328,6 +328,54 @@
+             logger.warning(f"Failed to set Thinking Mode: {e}")
+             self.thinking_verified = False
+ 
++    async def ensure_tools(self, enable_search: Optional[bool] = None):
++        """Ensures Google Search Grounding is configured as requested (default: OFF)."""
++        if enable_search is None:
++            enable_search = ENABLE_SEARCH_GROUNDING
++        if not self.page or self.page.is_closed() or self.is_shutting_down:
++            return
++            
++        try:
++            remove_btn = self.page.locator('button[aria-label="Remove Grounding with Google Search"]')
++            search_toggle = self.page.locator('button[aria-label="Grounding with Google Search"], button[aria-label*="Google Search" i]')
++            
++            if not enable_search:
++                if await remove_btn.count() > 0:
++                    logger.info("Disabling Google Search Grounding via remove button...")
++                    await remove_btn.first.click()
++                    await asyncio.sleep(0.3)
++                elif await search_toggle.count() > 0:
++                    checked = await search_toggle.first.get_attribute("aria-checked")
++                    if checked == "true":
++                        logger.info("Disabling Google Search Grounding via toggle button...")
++                        await search_toggle.first.click()
++                        await asyncio.sleep(0.3)
++                        
++                is_off = (await remove_btn.count() == 0)
++                if await search_toggle.count() > 0:
++                    checked_after = await search_toggle.first.get_attribute("aria-checked")
++                    is_off = is_off and (checked_after != "true")
++                self.google_search_enabled = not is_off
++                self.search_verified = is_off
++                logger.info(f"Google Search Grounding: {'ENABLED' if self.google_search_enabled else 'DISABLED'} | SEARCH VERIFIED = {self.search_verified}")
++            else:
++                if await search_toggle.count() > 0:
++                    checked = await search_toggle.first.get_attribute("aria-checked")
++                    if checked != "true":
++                        logger.info("Enabling Google Search Grounding via toggle button...")
++                        await search_toggle.first.click()
++                        await asyncio.sleep(0.3)
++                is_on = (await remove_btn.count() > 0)
++                if await search_toggle.count() > 0:
++                    checked_after = await search_toggle.first.get_attribute("aria-checked")
++                    is_on = is_on or (checked_after == "true")
++                self.google_search_enabled = is_on
++                self.search_verified = is_on
++                logger.info(f"Google Search Grounding: {'ENABLED' if self.google_search_enabled else 'DISABLED'} | SEARCH VERIFIED = {self.search_verified}")
++        except Exception as e:
++            logger.warning(f"Failed to ensure tools state: {e}")
++            self.search_verified = False
++
+     async def stop(self):
+         logger.info("Closing browser context...")
+         self.is_shutting_down = True
+@@ -374,6 +374,7 @@
+             await self.page.keyboard.press("Escape")
+             await self.ensure_model(model_name)
+             await self.ensure_thinking_mode()
++            await self.ensure_tools(ENABLE_SEARCH_GROUNDING)
+             logger.info(f"[TIMING-PREEXEC] Chat reset & setup took {time.time() - t_reset_start:.2f}s (reset_done={reset_done})")
+         except Exception as e:
+             logger.warning(f"Error resetting chat: {e}")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

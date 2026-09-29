@@ -1,0 +1,15 @@
+
+The command exited with code 1.
+Output:
+Loaded 187 items for السلام شبين.pdf
+Loaded 503 items for المكرومي المنصورة.pdf
+Loaded 1071 items for الهضبة الاثنين نقدى0.pdf
+Loaded 19 items for جملة العمروووو.pdf
+Loaded 715 items for كيور فارما خاص.pdf
+Loaded 222 items for مخزن الحياة فارم اسكندريه-170.pdf
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\forensic_not_found_audit.py", line 27, in <module>
+    p15_matches = {row["اسم الصنف"].strip(): row for row in full_data["PROC-015"]["matches"]}
+                   ~~~^^^^^^^^^^^^^
+KeyError: 'اسم الصنف'
+

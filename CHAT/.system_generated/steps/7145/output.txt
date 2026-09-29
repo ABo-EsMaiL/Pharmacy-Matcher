@@ -1,0 +1,11 @@
+
+The command exited with code 0.
+Output:
+Page URL: https://accounts.google.com/v3/signin/identifier?continue=https://aistudio.google.com/prompts/new_chat&followup=https://aistudio.google.com/prompts/new_chat&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1691256176:1790262392731287
+Page Title: Sign in - Google Accounts
+Body snippet: 'Loading\nSign in\nUse your Google Account\nEmail or phone\nForgot email?\nNot your computer? Use Guest mode to sign in privately. Learn more about using Guest mode\nNext\nCreate account\nEnglish (United States)\nHelp\nPrivacy\nTerms'
+Found 0 mat-select elements:
+
+=== LOOKING FOR MODEL TEXT/SELECTORS ===
+Found 0 candidate model elements:
+

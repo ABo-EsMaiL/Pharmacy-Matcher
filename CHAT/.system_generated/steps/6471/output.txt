@@ -1,0 +1,42 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\server_manager.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -362,6 +362,36 @@
+             return srv.run_get_session()
+         return {"success": False, "output": f"Server {key} not found"}
+ 
++    def force_free_ports(self) -> dict:
++        """Kills any process listening on ports 8000 and 8001 using elevated taskkill if necessary."""
++        killed = []
++        for port in [8000, 8001]:
++            if is_port_listening(port) and os.name == 'nt':
++                try:
++                    res = subprocess.run(
++                        f'netstat -ano | findstr ":{port} "',
++                        shell=True, capture_output=True, text=True
++                    )
++                    for line in res.stdout.strip().splitlines():
++                        parts = line.strip().split()
++                        if len(parts) >= 5 and "LISTENING" in line:
++                            pid = parts[-1]
++                            r_k = subprocess.run(['taskkill', '/F', '/PID', pid], capture_output=True, text=True)
++                            if "Access is denied" in r_k.stderr:
++                                try:
++                                    import ctypes
++                                    ctypes.windll.shell32.ShellExecuteW(
++                                        None, "runas", "cmd.exe", f"/c taskkill /F /PID {pid}", None, 0
++                                    )
++                                except Exception:
++                                    pass
++                            killed.append(pid)
++                except Exception as e:
++                    if self.logger:
++                        self.logger(f"Error freeing port {port}: {e}")
++        time.sleep(1.0)
++        return {"success": True, "killed": killed}
++
+     def cleanup(self):
+         for srv in self.servers.values():
+             if srv.process is not None:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,301 @@
+{
+  "page": 1,
+  "items": [
+    {
+      "item_name_raw": "ابيكوتيل حقن/ايبيكو",
+      "trade_name": "ابيكوتيل",
+      "strength": "",
+      "form": "حقن",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ابينفرين ادرينالين شركة مصر كبير ۱۰۰امبول",
+      "trade_name": "ابينفرين ادرينالين",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ابينفرين ربع",
+      "trade_name": "ابينفرين",
+      "strength": "ربع",
+      "form": "",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "اتروفنت ٢٥٠ امبول",
+      "trade_name": "اتروفنت",
+      "strength": "٢٥٠",
+      "form": "امبول",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ادولور ۳۰مج/۲ مللي۳امبول",
+      "trade_name": "ادولور",
+      "strength": "۳۰مج/۲ مللي",
+      "form": "امبول",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "اركوسيا ۹۰ مج ١٤ قرص",
+      "trade_name": "اركوسيا",
+      "strength": "۹۰ مج",
+      "form": "قرص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ارميديكس ۱مجم اقراص/استرا",
+      "trade_name": "ارميديكس",
+      "strength": "۱مجم",
+      "form": "اقراص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ازاثيوبرين ٥٠ ملجم ميلان ۱۰۰ قرص سعر ۳۰۰",
+      "trade_name": "ازاثيوبرين",
+      "strength": "٥٠ ملجم",
+      "form": "قرص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ازاثيوبرين اقراص ٥٠مجم",
+      "trade_name": "ازاثيوبرين",
+      "strength": "٥٠مجم",
+      "form": "اقراص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "استيل سستايين فوار ۲۰كيس",
+      "trade_name": "استيل سستايين",
+      "strength": "",
+      "form": "فوار",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "امرى ك حقن/العامرية",
+      "trade_name": "امرى ك",
+      "strength": "",
+      "form": "حقن",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "امريزول شراب/العامرية",
+      "trade_name": "امريزول",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "امريزول ٥٠٠ اقراص/العامرية",
+      "trade_name": "امريزول",
+      "strength": "٥٠٠",
+      "form": "اقراص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "انسولين اكتربد ۱۰۰ وحدة",
+      "trade_name": "انسولين اكتربد",
+      "strength": "۱۰۰ وحدة",
+      "form": "",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "اوجمنتين ١جم اقراص/المهن",
+      "trade_name": "اوجمنتين",
+      "strength": "١جم",
+      "form": "اقراص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "اوجمنتين ٦٠٠ای اس شراب/المهن",
+      "trade_name": "اوجمنتين",
+      "strength": "٦٠٠ای اس",
+      "form": "شراب",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "اوراتريبيسين٣٠ك",
+      "trade_name": "اوراتريبيسين",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "اوسيليتاميفير٧٥",
+      "trade_name": "اوسيليتاميفير",
+      "strength": "٧٥",
+      "form": "",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "اوكاربون اقراص/سيديكو",
+      "trade_name": "اوكاربون",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "اولفنت شراب سعر جديد/برج",
+      "trade_name": "اولفنت",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ايبانتين ۱۰۰مجم كبسول/مينافارم",
+      "trade_name": "ايبانتين",
+      "strength": "۱۰۰مجم",
+      "form": "كبسول",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ايريس ٥ مجم اقراص",
+      "trade_name": "ايريس",
+      "strength": "٥ مجم",
+      "form": "اقراص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ايفاستين اقراص/كيمافارم",
+      "trade_name": "ايفاستين",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "ايميبرامين ٢٥ مجم اقراص اكديما",
+      "trade_name": "ايميبرامين",
+      "strength": "٢٥ مجم",
+      "form": "اقراص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "بالميكورت ربع",
+      "trade_name": "بالميكورت",
+      "strength": "ربع",
+      "form": "",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "بالميكورت ٥٠٠مجم حقن",
+      "trade_name": "بالميكورت",
+      "strength": "٥٠٠مجم",
+      "form": "حقن",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "برايم روز بلاس اقراص/ايمافارم",
+      "trade_name": "برايم روز بلاس",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "برونشيكم شراب اليكسير/افنتس",
+      "trade_name": "برونشيكم",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "برونكوبيونير بلس سعر ٤٠٦",
+      "trade_name": "برونكوبيونير بلس",
+      "strength": "",
+      "form": "",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "برونكوبيونير سعر٢٨١ج",
+      "trade_name": "برونكوبيونير",
+      "strength": "",
+      "form": "",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "بريدسول شراب سعر جديد/برج",
+      "trade_name": "بريدسول",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "بريدنيزيلون ۲۰مجم اقراص العربية",
+      "trade_name": "بريدنيزيلون",
+      "strength": "۲۰مجم",
+      "form": "اقراص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "برين اوكس كبسول/التنشيط",
+      "trade_name": "برين اوكس",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "بلتراسيد ٦٠٠ مجم ق",
+      "trade_name": "بلتراسيد",
+      "strength": "٦٠٠ مجم",
+      "form": "أقراص",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "بلوبرس ١٦مجم بلاس",
+      "trade_name": "بلوبرس بلاس",
+      "strength": "١٦مجم",
+      "form": "",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "بلوبرس ٨مجم بلاس",
+      "trade_name": "بلوبرس بلاس",
+      "strength": "٨مجم",
+      "form": "",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    },
+    {
+      "item_name_raw": "بلوبرس٨جم٢ شريط الكان",
+      "trade_name": "بلوبرس",
+      "strength": "٨جم",
+      "form": "",
+      "source_page": 1,
+      "source_file": "السلام شبين.pdf"
+    }
+  ]
+}

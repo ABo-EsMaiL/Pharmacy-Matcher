@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -209,7 +209,7 @@
+             
+             for attempt in range(max_retries):
+                 try:
+-                    results = self._call_opencode(inputs)
++                    results = self._call_openrouter(inputs)
+                     for case, decision in zip(batch_cases, results):
+                         shortage_name = case["requested_name"]
+                         status = decision.get("s", "nm")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

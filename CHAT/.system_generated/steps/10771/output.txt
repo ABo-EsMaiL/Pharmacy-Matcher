@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+Line 2970: card.onclick = () => { if(item.status !== 'processing' && item.status !== 'queued') viewProcess(item
+Line 2993: : `<button class="btn btn-primary" onclick="viewProcess('${item.id}')"><i class="ph-fill ph-eye"></i
+Line 3045: async function viewProcess(processId) {
+

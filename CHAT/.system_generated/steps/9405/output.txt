@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+[WindowsPath('__pycache__'), WindowsPath('desktop_app/__pycache__'), WindowsPath('scratch/__pycache__'), WindowsPath('scripts/__pycache__'), WindowsPath('src/__pycache__'), WindowsPath('src/extract/__pycache__'), WindowsPath('src/fast_match/__pycache__'), WindowsPath('src/match/__pycache__'), WindowsPath('src/output/__pycache__'), WindowsPath('dist_production/data/.unstructured_cache'), WindowsPath('dist_production/desktop_app/__pycache__'), WindowsPath('dist_production/src/fast_match/__pycache__'), WindowsPath('dist_production/src/output/__pycache__'), WindowsPath('data/processes/data/.unstructured_cache')]
+

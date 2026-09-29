@@ -1,0 +1,488 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -6,7 +6,9 @@
+     <title>Pharmacy Matcher</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
++    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
++    <!-- Phosphor Icons for professional UI icons -->
++    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+     <link rel="stylesheet" href="../static/style.css">
+ </head>
+ <body>
+@@ -13,188 +13,290 @@
+ 
+-    <div class="app-container">
+-        <!-- Screen 1: Home -->
+-        <div id="screen-home" class="screen active">
+-            <header class="home-header">
+-                <div class="server-status-container">
+-                    <div id="server-indicator" class="status-indicator"></div>
+-                    <span id="server-status-text">جاري التحقق من السيرفر...</span>
+-                    <button id="btn-toggle-server" class="btn btn-small btn-outline">تشغيل السيرفر</button>
+-                </div>
+-            </header>
+-            
+-            <div class="hero">
+-                <h1 class="app-title">Pharmacy Matcher</h1>
+-                <h2 class="app-subtitle">نظام مطابقة الأدوية</h2>
+-            </div>
+-
+-            <div class="grid-menu">
+-                <button class="menu-card" onclick="showScreen('screen-new')">
+-                    <div class="menu-icon">🆕</div>
+-                    <h3>عملية جديدة</h3>
+-                    <p>بدء مطابقة نواقص ومخازن جديدة</p>
+-                </button>
+-                <button class="menu-card" onclick="loadHistory(); showScreen('screen-history')">
+-                    <div class="menu-icon">📜</div>
+-                    <h3>السجل</h3>
+-                    <p>عرض العمليات السابقة والنتائج</p>
+-                </button>
+-                <button class="menu-card" onclick="showScreen('screen-settings')">
+-                    <div class="menu-icon">⚙️</div>
+-                    <h3>الإعدادات</h3>
+-                    <p>إعدادات النظام والـ API</p>
+-                </button>
+-                <button class="menu-card menu-card-danger" onclick="exitApp()">
+-                    <div class="menu-icon">❌</div>
+-                    <h3>خروج</h3>
+-                    <p>إغلاق التطبيق</p>
+-                </button>
+-            </div>
+-        </div>
+-
+-        <!-- Screen 2: New Process -->
+-        <div id="screen-new" class="screen">
+-            <header class="screen-header">
+-                <button class="btn-back" onclick="showScreen('screen-home')">🔙 رجوع</button>
+-                <h2>عملية مطابقة جديدة</h2>
+-            </header>
+-            
+-            <div class="upload-container">
+-                <div class="drop-zone" id="zone-warehouse">
+-                    <h3>ملفات المخازن</h3>
+-                    <p class="zone-desc">(PDF / Excel / JSON)</p>
+-                    <button class="btn btn-outline" onclick="selectFiles('warehouse')">اختيار ملفات</button>
+-                    <ul id="list-warehouse" class="file-list"></ul>
+-                </div>
+-                
+-                <div class="drop-zone" id="zone-shortage">
+-                    <h3>ملفات النواقص</h3>
+-                    <p class="zone-desc">(PDF / Excel)</p>
+-                    <button class="btn btn-outline" onclick="selectFiles('shortage')">اختيار ملفات</button>
+-                    <ul id="list-shortage" class="file-list"></ul>
+-                </div>
+-            </div>
+-
+-            <div class="action-bar">
+-                <button id="btn-submit" class="btn btn-primary btn-large" onclick="submitProcess()" disabled>▶️ بدء المطابقة</button>
+-            </div>
+-
+-            <div id="progress-area" class="hidden">
+-                <div class="spinner"></div>
+-                <p id="progress-text">جاري معالجة الملفات...</p>
+-            </div>
+-        </div>
+-
+-        <!-- Screen 3: Results -->
+-        <div id="screen-results" class="screen">
+-            <header class="screen-header">
+-                <button class="btn-back" onclick="showScreen('screen-home')">🔙 الرئيسية</button>
+-                <h2>نتائج المطابقة</h2>
+-            </header>
+-            
+-            <div class="stats-grid">
+-                <div class="stat-card">
+-                    <div class="stat-title">إجمالي النواقص</div>
+-                    <div id="stat-total" class="stat-value">0</div>
+-                </div>
+-                <div class="stat-card stat-success">
+-                    <div class="stat-title">تمت المطابقة</div>
+-                    <div id="stat-matched" class="stat-value">0</div>
+-                    <div id="stat-matched-pct" class="stat-pct">0%</div>
+-                </div>
+-                <div class="stat-card stat-danger">
+-                    <div class="stat-title">غير متوفر</div>
+-                    <div id="stat-notfound" class="stat-value">0</div>
+-                    <div id="stat-notfound-pct" class="stat-pct">0%</div>
+-                </div>
+-                <div class="stat-card stat-warning">
+-                    <div class="stat-title">يحتاج مراجعة</div>
+-                    <div id="stat-review" class="stat-value">0</div>
+-                    <div id="stat-review-pct" class="stat-pct">0%</div>
+-                </div>
+-            </div>
+-
+-            <div class="results-actions">
+-                <div class="info-box">
+-                    <strong>طريقة العمل:</strong>
+-                    افتح ملف الإكسيل، راجع شيت المراجعة، اختر ✅ أو ❌، احفظ، ثم اضغط تنفيذ التعديلات.
+-                </div>
+-                
+-                <div class="action-buttons">
+-                    <button class="btn btn-outline" onclick="openExcel()">📊 فتح ملف الإكسيل</button>
+-                    <button class="btn btn-outline" onclick="openFolder()">📁 فتح مكان الملف</button>
+-                    <button class="btn btn-primary" onclick="applyReviews()">✏️ تنفيذ تعديلات المراجعة</button>
+-                </div>
+-            </div>
+-        </div>
+-
+-        <!-- Screen 4: History -->
+-        <div id="screen-history" class="screen">
+-            <header class="screen-header">
+-                <button class="btn-back" onclick="showScreen('screen-home')">🔙 رجوع</button>
+-                <h2>سجل العمليات</h2>
+-            </header>
+-            
+-            <div id="history-list" class="history-container">
+-                <!-- History items will be injected here -->
+-                <div class="empty-state">لا توجد عمليات سابقة.</div>
+-            </div>
+-        </div>
+-
+-        <!-- Screen 5: Settings -->
+-        <div id="screen-settings" class="screen">
+-            <header class="screen-header">
+-                <button class="btn-back" onclick="showScreen('screen-home')">🔙 رجوع</button>
+-                <h2>الإعدادات</h2>
+-            </header>
+-            
+-            <div class="settings-container">
+-                <div class="settings-section">
+-                    <h3>إعدادات الـ APIs</h3>
+-                    <div class="form-group">
+-                        <label>Unstructured.io API Key</label>
+-                        <input type="text" id="setting-unstructured-key" class="form-control">
+-                    </div>
+-                    <div class="form-group">
+-                        <label>Local API URL</label>
+-                        <input type="text" id="setting-local-url" class="form-control" value="http://127.0.0.1:8000/v1/chat/completions">
+-                    </div>
+-                    <div class="form-group">
+-                        <label>Local API Key</label>
+-                        <input type="text" id="setting-local-key" class="form-control">
+-                    </div>
+-                    <div class="form-group">
+-                        <label>Model Name</label>
+-                        <input type="text" id="setting-model-name" class="form-control" value="gpt-4o-mini">
+-                    </div>
+-                    <button class="btn btn-primary" onclick="saveSettings()">حفظ الإعدادات</button>
+-                </div>
+-
+-                <div class="settings-section">
+-                    <h3>إعدادات سيرفر MSEMAX</h3>
+-                    <div class="form-group">
+-                        <label>مسار مجلد MSEMAX</label>
+-                        <div class="input-group">
+-                            <input type="text" id="setting-msemax-dir" class="form-control" readonly>
+-                            <button class="btn btn-outline" onclick="selectMsemaxDir()">تصفح...</button>
+-                        </div>
+-                    </div>
+-                    <div class="btn-group-vertical">
+-                        <button class="btn btn-outline" onclick="setupRequirements()">
+-                            تثبيت المتطلبات (Requirements + Playwright)
+-                            <span id="req-status" class="status-icon"></span>
+-                        </button>
+-                        <button class="btn btn-outline" onclick="getSession()">
+-                            تجديد الجلسة (Get Session)
+-                            <span id="session-status" class="status-icon"></span>
+-                        </button>
+-                        <button id="btn-toggle-server-settings" class="btn btn-primary" onclick="toggleServer()">تشغيل / إيقاف السيرفر</button>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
++    <div class="app-layout">
++        <!-- Sidebar Navigation -->
++        <aside class="sidebar">
++            <div class="brand">
++                <i class="ph-fill ph-first-aid"></i>
++                <div class="brand-text">
++                    <h1>فارما ماتش</h1>
++                    <span>Pharmacy Matcher</span>
++                </div>
++            </div>
++            
++            <nav class="nav-menu">
++                <button class="nav-item active" onclick="showScreen('screen-new', this)">
++                    <i class="ph ph-plus-circle"></i> عملية مطابقة جديدة
++                </button>
++                <button class="nav-item" onclick="loadHistory(); showScreen('screen-history', this)">
++                    <i class="ph ph-clock-counter-clockwise"></i> سجل العمليات
++                </button>
++                <button class="nav-item" onclick="showScreen('screen-settings', this)">
++                    <i class="ph ph-gear"></i> إعدادات النظام
++                </button>
++            </nav>
++
++            <div class="sidebar-footer">
++                <div class="server-status-card">
++                    <div class="status-header">
++                        <div id="server-indicator" class="status-indicator"></div>
++                        <span id="server-status-text">جاري التحقق...</span>
++                    </div>
++                    <button id="btn-toggle-server" class="btn btn-small btn-full">تشغيل السيرفر</button>
++                </div>
++                <button class="nav-item text-danger mt-2" onclick="exitApp()">
++                    <i class="ph ph-sign-out"></i> إغلاق البرنامج
++                </button>
++            </div>
++        </aside>
++
++        <!-- Main Content Area -->
++        <main class="main-content">
++            
++            <!-- Screen 1: New Process (Default) -->
++            <div id="screen-new" class="screen active">
++                <header class="page-header">
++                    <h2><i class="ph-fill ph-magic-wand"></i> مطابقة نواقص ومخازن جديدة</h2>
++                    <p>قم بإدراج ملفات النواقص وملفات المخازن للبدء في المطابقة الذكية.</p>
++                </header>
++                
++                <div class="upload-grid">
++                    <!-- Shortages -->
++                    <div class="upload-card">
++                        <div class="card-header primary">
++                            <i class="ph-fill ph-clipboard-text"></i>
++                            <h3>1. ملفات النواقص</h3>
++                        </div>
++                        <div class="drop-zone" id="zone-shortage">
++                            <i class="ph ph-upload-simple drop-icon"></i>
++                            <h4>اضغط لاختيار الملفات</h4>
++                            <p>(يدعم PDF / Excel)</p>
++                            <button class="btn btn-outline" onclick="selectFiles('shortage')">تصفح الملفات</button>
++                        </div>
++                        <ul id="list-shortage" class="file-list"></ul>
++                    </div>
++
++                    <!-- Warehouses -->
++                    <div class="upload-card">
++                        <div class="card-header secondary">
++                            <i class="ph-fill ph-buildings"></i>
++                            <h3>2. قوائم المخازن</h3>
++                        </div>
++                        <div class="drop-zone" id="zone-warehouse">
++                            <i class="ph ph-upload-simple drop-icon"></i>
++                            <h4>اضغط لاختيار الملفات</h4>
++                            <p>(يدعم PDF / Excel / JSON)</p>
++                            <button class="btn btn-outline" onclick="selectFiles('warehouse')">تصفح الملفات</button>
++                        </div>
++                        <ul id="list-warehouse" class="file-list"></ul>
++                    </div>
++                </div>
++
++                <div class="action-bar-bottom">
++                    <button id="btn-submit" class="btn btn-primary btn-massive" onclick="submitProcess()" disabled>
++                        <i class="ph-fill ph-play-circle"></i> بدء عملية المطابقة
++                    </button>
++                </div>
++
++                <div id="progress-area" class="progress-overlay hidden">
++                    <div class="progress-box">
++                        <div class="spinner"></div>
++                        <h3 id="progress-text">جاري معالجة الملفات...</h3>
++                        <p>يرجى الانتظار، قد تستغرق العملية بعض الوقت حسب حجم الملفات.</p>
++                    </div>
++                </div>
++            </div>
++
++            <!-- Screen 2: Results -->
++            <div id="screen-results" class="screen">
++                <header class="page-header">
++                    <h2><i class="ph-fill ph-check-circle"></i> تقرير نتائج المطابقة</h2>
++                    <p>تم الانتهاء من فحص الملفات وإنشاء تقرير الإكسيل بنجاح.</p>
++                </header>
++                
++                <div class="stats-grid">
++                    <div class="stat-card">
++                        <div class="stat-icon"><i class="ph-fill ph-list-numbers"></i></div>
++                        <div class="stat-info">
++                            <span class="stat-title">إجمالي الأصناف المطلوبة</span>
++                            <strong id="stat-total" class="stat-value">0</strong>
++                        </div>
++                    </div>
++                    <div class="stat-card stat-success">
++                        <div class="stat-icon"><i class="ph-fill ph-check-fat"></i></div>
++                        <div class="stat-info">
++                            <span class="stat-title">تمت المطابقة بنجاح</span>
++                            <div class="stat-flex">
++                                <strong id="stat-matched" class="stat-value">0</strong>
++                                <span id="stat-matched-pct" class="stat-badge">0%</span>
++                            </div>
++                        </div>
++                    </div>
++                    <div class="stat-card stat-warning">
++                        <div class="stat-icon"><i class="ph-fill ph-warning"></i></div>
++                        <div class="stat-info">
++                            <span class="stat-title">يحتاج مراجعة (غير مؤكد)</span>
++                            <div class="stat-flex">
++                                <strong id="stat-review" class="stat-value">0</strong>
++                                <span id="stat-review-pct" class="stat-badge">0%</span>
++                            </div>
++                        </div>
++                    </div>
++                    <div class="stat-card stat-danger">
++                        <div class="stat-icon"><i class="ph-fill ph-x-circle"></i></div>
++                        <div class="stat-info">
++                            <span class="stat-title">غير متوفر في المخازن</span>
++                            <div class="stat-flex">
++                                <strong id="stat-notfound" class="stat-value">0</strong>
++                                <span id="stat-notfound-pct" class="stat-badge">0%</span>
++                            </div>
++                        </div>
++                    </div>
++                </div>
++
++                <div class="results-workflow">
++                    <h3>خطوات المراجعة النهائية:</h3>
++                    <div class="workflow-steps">
++                        <div class="step-box">
++                            <div class="step-num">1</div>
++                            <h4>افتح ملف الإكسيل</h4>
++                            <p>اضغط على الزر لفتح الملف، ثم اذهب لشيت "يحتاج مراجعة".</p>
++                            <button class="btn btn-outline" onclick="openExcel()"><i class="ph-fill ph-microsoft-excel-logo"></i> فتح الإكسيل</button>
++                        </div>
++                        <div class="step-box">
++                            <div class="step-num">2</div>
++                            <h4>راجع واتخذ القرار</h4>
++                            <p>اختر (✅ مطابق) أو (❌ غير مطابق) لكل صنف، ثم احفظ الملف وأغلقه.</p>
++                        </div>
++                        <div class="step-box">
++                            <div class="step-num">3</div>
++                            <h4>طبق التعديلات</h4>
++                            <p>اضغط هنا لنقل الأصناف لشيتات المخازن وتنظيف القائمة.</p>
++                            <button class="btn btn-primary" onclick="applyReviews()"><i class="ph-fill ph-magic-wand"></i> تنفيذ التعديلات</button>
++                        </div>
++                    </div>
++                    <div class="folder-action">
++                        <button class="btn btn-text" onclick="openFolder()"><i class="ph-fill ph-folder-open"></i> فتح مجلد حفظ النتائج (Folder)</button>
++                    </div>
++                </div>
++            </div>
++
++            <!-- Screen 3: History -->
++            <div id="screen-history" class="screen">
++                <header class="page-header">
++                    <h2><i class="ph-fill ph-clock-counter-clockwise"></i> سجل العمليات السابقة</h2>
++                    <p>هنا تجد جميع عمليات المطابقة التي قمت بها سابقاً، يمكنك العودة إليها في أي وقت.</p>
++                </header>
++                
++                <div id="history-list" class="history-grid">
++                    <!-- History items will be injected here -->
++                    <div class="empty-state">
++                        <i class="ph-fill ph-empty"></i>
++                        <p>لا توجد عمليات سابقة مسجلة.</p>
++                    </div>
++                </div>
++            </div>
++
++            <!-- Screen 4: Settings -->
++            <div id="screen-settings" class="screen">
++                <header class="page-header">
++                    <h2><i class="ph-fill ph-gear"></i> إعدادات النظام</h2>
++                    <p>تهيئة الاتصال بالذكاء الاصطناعي وإعدادات السيرفر المحلي.</p>
++                </header>
++                
++                <div class="settings-grid">
++                    <div class="settings-card">
++                        <div class="card-header dark">
++                            <i class="ph-fill ph-plugs"></i>
++                            <h3>إعدادات الربط والـ APIs</h3>
++                        </div>
++                        <div class="card-body form-grid">
++                            <div class="form-group full-width">
++                                <label>Unstructured.io API Key (لقراءة الـ PDF)</label>
++                                <input type="text" id="setting-unstructured-key" class="form-control" placeholder="أدخل مفتاح Unstructured">
++                            </div>
++                            <div class="form-group">
++                                <label>رابط الخادم المحلي (MSEMAX URL)</label>
++                                <input type="text" id="setting-local-url" class="form-control" value="http://127.0.0.1:8000/v1/chat/completions" dir="ltr">
++                            </div>
++                            <div class="form-group">
++                                <label>مفتاح الخادم المحلي (Local Key)</label>
++                                <input type="password" id="setting-local-key" class="form-control" placeholder="أدخل المفتاح">
++                            </div>
++                            <div class="form-group">
++                                <label>اسم الموديل (Model Name)</label>
++                                <input type="text" id="setting-model-name" class="form-control" value="gpt-4o-mini" dir="ltr">
++                            </div>
++                            <div class="form-group full-width mt-3">
++                                <button class="btn btn-primary" onclick="saveSettings()"><i class="ph-fill ph-floppy-disk"></i> حفظ الإعدادات</button>
++                            </div>
++                        </div>
++                    </div>
++
++                    <div class="settings-card">
++                        <div class="card-header warning">
++                            <i class="ph-fill ph-hard-drives"></i>
++                            <h3>إدارة سيرفر الذكاء الاصطناعي (MSEMAX)</h3>
++                        </div>
++                        <div class="card-body">
++                            <p class="text-muted mb-4">هذه الإعدادات تستخدم لتشغيل وإعداد سيرفر MSEMAX المحلي على هذا الجهاز.</p>
++                            
++                            <div class="form-group mb-4">
++                                <label>مسار مجلد MSEMAX</label>
++                                <div class="input-group">
++                                    <input type="text" id="setting-msemax-dir" class="form-control" readonly dir="ltr">
++                                    <button class="btn btn-outline" onclick="selectMsemaxDir()"><i class="ph-fill ph-folder-notch-open"></i> تصفح...</button>
++                                </div>
++                            </div>
++                            
++                            <div class="btn-group-vertical">
++                                <button class="btn btn-outline-secondary" onclick="setupRequirements()">
++                                    <i class="ph-fill ph-download-simple"></i>
++                                    <span>تثبيت المتطلبات الأساسية (Requirements + Playwright)</span>
++                                    <span id="req-status" class="status-icon"></span>
++                                </button>
++                                <button class="btn btn-outline-secondary" onclick="getSession()">
++                                    <i class="ph-fill ph-key"></i>
++                                    <span>تجديد جلسة المتصفح (Get Session)</span>
++                                    <span id="session-status" class="status-icon"></span>
++                                </button>
++                            </div>
++                        </div>
++                    </div>
++                </div>
++            </div>
++
++        </main>
+     </div>
+ 
++    <!-- The original screen-home is removed. We use screen-new as the home page. 
++         To keep app.js happy if it references screen-home, we add a dummy hidden div -->
++    <div id="screen-home" style="display:none;"></div>
++
+     <script src="../static/app.js"></script>
++    <script>
++        // Override showScreen to handle active states on sidebar
++        const originalShowScreen = window.showScreen;
++        window.showScreen = function(screenId, element = null) {
++            // Call original if it exists
++            if (typeof originalShowScreen === 'function') {
++                originalShowScreen(screenId);
++            } else {
++                document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
++                const target = document.getElementById(screenId);
++                if (target) target.classList.add('active');
++            }
++            
++            // Update sidebar active class
++            if (element) {
++                document.querySelectorAll('.nav-item').forEach(btn => btn.classList.remove('active'));
++                element.classList.add('active');
++            }
++        };
++        // Auto select first nav item
++        document.addEventListener("DOMContentLoaded", () => {
++            const firstNav = document.querySelector('.nav-item');
++            if (firstNav) firstNav.classList.add('active');
++        });
++    </script>
+ </body>
+ </html>
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

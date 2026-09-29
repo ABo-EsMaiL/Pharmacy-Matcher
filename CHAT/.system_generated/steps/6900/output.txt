@@ -1,0 +1,14 @@
+
+The command exited with code 0.
+Output:
+Result 1:
+[System Instructions]
+RULE: OUTPUT JSON
+
+Hello
+Result 2:
+[System Instructions]
+RULE: STRICT
+
+Check this
+

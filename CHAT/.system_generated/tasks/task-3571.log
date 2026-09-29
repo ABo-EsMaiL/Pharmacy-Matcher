@@ -1,0 +1,35 @@
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+[*] Processing PDF file: السلام شبين.pdf
+[+] Loaded 187 items from alongside JSON: السلام شبين.json
+Shortages: 993, WH items: 187
+
+============================================================
+[FAST ENGINE] Starting Match: 200 raw -> 142 UNIQUE shortages x 1 warehouses
+============================================================
+
+
+----------------------------------------
+[Warehouse] السلام شبين.pdf (187 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 0
+  -> TF-IDF Auto-Matches (>88%): 0
+  -> Sending 134 ambiguous items to Local API (MSEMAX) in 2 large batch(es) (Max ~75 items/msg)...
+      [*] Sending Batch 1/2 (75 items)...
+      [✓] Batch 1 (75 items) done: 1 matched, 0 review.
+      [*] Sending Batch 2/2 (59 items)...
+      [✓] Batch 2 (59 items) done: 4 matched, 0 review.
+  -> Final Warehouse Result: 5 matched, 0 review
+Completed in 32.5s!
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_real_match_75.py", line 36, in <module>
+    print(f"Matched: {len(res['summary']['warehouses']['السلام شبين.pdf']['matched'])}")
+                          ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'warehouses'

@@ -1,0 +1,60 @@
+
+The command exited with code 0.
+Output:
+--- post_multipart ---
+def post_multipart(
+    client: TransformClient,
+    *,
+    path: str,
+    file_field: str,
+    file_value: tuple[str, bytes] | None,
+    fields: dict[str, str | None],
+    wait_seconds: int | None = None,
+) -> Any:
+    """POST a multipart body and deserialize through the generated models."""
+    api_client = client._api_client
+
+    # Mirrors what the generated multipart operations build. Getting any of
+    # these three wrong produces an EMPTY request body with no Content-Type
+    # and no error — which is exactly what the first version of this did, and
+    # what only driving the built package against a real socket revealed:
+    #
+    #   * the file goes in `files`, NOT in `post_params`
+    #   * plain fields go in `post_params` as (name, value) pairs
+    #   * Content-Type must be set explicitly; nothing infers it
+    header_params: dict[str, str] = {
+        "Accept": "application/json",
+        "Content-Type": "multipart/form-data",
+    }
+    if wait_seconds is not None:
+        header_params["Prefer"] = f"wait={wait_seconds}"
+
+    # None-valued fields are dropped rather than sent empty: the service
+    # distinguishes an absent optional field from a present empty one, and
+    # sending `prompt=` would assert the caller supplied an empty prompt.
+    post_params: list[tuple[str, Any]] = [
+        (name, value) for name, value in fields.items() if value is not None
+    ]
+    # No file part when the caller referenced an already-uploaded one. Sending
+    # an empty part would not be the same request: the operation's contract is
+    # `input` XOR `file_id`.
+    files = {} if file_value is None else {file_field: file_value}
+
+    request = api_client.param_serialize(
+        method="POST",
+        resource_path=path,
+        header_params=header_params,
+        post_params=post_params,
+        files=files,
+        # Both schemes, matching the spec's `security` OR — the same list the
+        # generated operations pass, so this call authenticates the same way.
+        auth_settings=["ApiKeyAuth", "BearerAuth"],
+    )
+
+    response = api_client.call_api(
+        *request, _request_timeout=client._timeout_seconds
+    )
+    response.read()
+    return api_client.response_deserialize(response, _RESPONSE_TYPES).data
+
+

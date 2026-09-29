@@ -1,0 +1,45 @@
+
+The command exited with code 0.
+Output:
+
+Name                     
+----                     
+antigravity              
+antigravity-updater      
+Backup                   
+cagent                   
+CEF                      
+Comms                    
+ConnectedDevicesPlatform 
+copilot                  
+CrashDumps               
+D3DSCache                
+Discord                  
+Docker                   
+docker-secrets-engine    
+Everything               
+Malwarebytes             
+mbam                     
+Microsoft                
+ms-playwright            
+ms-playwright-go         
+NVIDIA                   
+NVIDIA Corporation       
+OpenAI                   
+Package Cache            
+Packages                 
+PeerDistRepub            
+pip                      
+PlaceholderTileLogoFolder
+Programs                 
+Publishers               
+Rufus                    
+Seed4Me                  
+SquirrelTemp             
+Temp                     
+Tencent                  
+velopack                 
+VirtualStore             
+
+
+

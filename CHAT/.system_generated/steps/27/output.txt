@@ -1,0 +1,2 @@
+Successfully killed 4 subagent(s) and their descendants.
+Killed roles: Project spec reader, Code and config reader, Transform results reader, Unstructured output reader

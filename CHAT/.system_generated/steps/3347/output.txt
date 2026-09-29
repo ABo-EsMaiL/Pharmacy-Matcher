@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Total items parsed: 1071
+First 5: ['ابانڈوکر كبسول/باكت 120', 'ابيماوكس 500 مج كبسول/باكت 45', 'ابيدرم كريم/باكت 81', 'ايبر ازول 40 مج اقراص', 'ايروفاستين 20 مج اقراص ج/ايكو']
+Last 5: ['یونی فورت شراب/باكت25', 'یون پینوک 500 مج اقراص/باكت40', 'یونی سیتامول نقط/باكت 216', 'یونی فکتوز برمان/باكت 20', 'یونیفيرسال کریم']
+

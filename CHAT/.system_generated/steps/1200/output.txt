@@ -1,0 +1,35 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1119,7 +1119,7 @@
+ 
+ // Logs Logic
+ window.addEventListener('new_log', function(e) {
+-    // 1. Update the main system logs textarea
++    // 1. Update the main system logs textarea (in Settings)
+     const logArea = document.getElementById('system-logs');
+     if (logArea) {
+         logArea.value += e.detail + '\n';
+@@ -1126,15 +1126,10 @@
+     }
+     
+-    // 2. Update the floating widget terminal if it's visible
+-    const progressModal = document.getElementById('progress-modal');
+-    if (progressModal && progressModal.style.display === 'flex') {
+-        const termEl = document.getElementById('pipeline-log-terminal');
+-        if (termEl) {
+-            const newLog = document.createElement('div');
+-            newLog.innerText = e.detail;
+-            termEl.appendChild(newLog);
+-            termEl.scrollTop = termEl.scrollHeight;
+-        }
++    // 2. Update the pipeline terminal textarea (in Terminal screen)
++    const termEl = document.getElementById('pipeline-log-terminal');
++    if (termEl) {
++        termEl.value += e.detail + '\n';
++        termEl.scrollTop = termEl.scrollHeight;
+     }
+ });
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

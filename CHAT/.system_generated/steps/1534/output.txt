@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+['ExtractRequest', 'ExtractionResult', 'JobAccepted', 'JobOperation', 'JobPage', 'JobResult', 'JobResultState', 'JobStatus', 'JobSummary', 'ParseResult', 'UploadResult']
+

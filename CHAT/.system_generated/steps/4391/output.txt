@@ -1,0 +1,20 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\search.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -62,7 +62,13 @@
+     text = re.sub(r'[أإآٱ]', 'ا', text)
+     text = re.sub(r'ة', 'ه', text)
+     text = re.sub(r'[ىي\u06CC]', 'ي', text)  # Arabic Yeh, Alef Maqsura, Farsi Yeh
+-    text = text.replace('\u06A9', 'ك').replace('\u067E', 'ب').replace('\u06C0', 'ه').replace('\u06C1', 'ه')
++    ocr_map = {
++        '\u06A9': 'ك', '\u067E': 'ب', '\u06AF': 'ك', '\u0686': 'ج',
++        '\u06BA': 'ن', '\u0679': 'ت', '\u0688': 'د', '\u0698': 'ز',
++        '\u06C0': 'ه', '\u06C1': 'ه'
++    }
++    for k_c, v_c in ocr_map.items():
++        text = text.replace(k_c, v_c)
+     # Eastern Arabic and Persian digits to Western
+     for e, w in zip('٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹', '01234567890123456789'):
+         text = text.replace(e, w)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

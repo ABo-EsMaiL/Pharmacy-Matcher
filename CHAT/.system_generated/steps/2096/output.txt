@@ -1,0 +1,39 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1440,11 +1440,13 @@
+         // Screen Settings
+         settings_title: "إعدادات النظام",
+         settings_desc: "قم بضبط إعدادات الربط مع سيرفر الذكاء الاصطناعي (MSEMAX) و Unstructured API وجودة الاستخراج.",
++        settings_lang_header: "لغة واجهة البرنامج (Interface Language)",
++        settings_lang_desc: "اختر اللغة المفضلة لاستخدام التطبيق. يتم حفظ اختيارك تلقائياً وبشكل فوري.",
+         api_keys_header: "مفاتيح الربط وخيارات المعالجة",
+         lbl_unstructured_profile: "وضع معالجة PDF (Parse Profile)",
+-        opt_profile_best: "جودة فائقة (Best - دقة عالية جداً للأسماء الطبية)",
+-        opt_profile_balanced: "متوازن (Balanced - أسرع)",
+-        profile_note: "Best يضمن دقة قراءة الأسماء الطبية العربية المعقدة ويمنع أخطاء الحروف.",
++        opt_profile_balanced: "متوازن (Balanced - موصى به ومستقر وسريع)",
++        opt_profile_best: "جودة فائقة (Best - دقة إضافية للأسماء الطبية)",
++        profile_note: "وضع Balanced موصى به لمعظم الملفات. التطبيق يقوم بالتحويل تلقائياً إذا لزم الأمر.",
+         lbl_unstructured_key: "Unstructured API Key",
+         lbl_local_url: "Local AI URL (MSEMAX / vLLM)",
+         lbl_local_key: "Local AI Key (إن وجد)",
+@@ -1539,11 +1539,13 @@
+         // Screen Settings
+         settings_title: "System Settings",
+         settings_desc: "Configure AI server (MSEMAX), Unstructured API, and extraction profile.",
++        settings_lang_header: "Interface Language",
++        settings_lang_desc: "Select your preferred application language. Changes apply immediately and are saved.",
+         api_keys_header: "API Keys & Processing Options",
+         lbl_unstructured_profile: "PDF Parse Profile",
+-        opt_profile_best: "High Precision (Best - Highest accuracy for Arabic drugs)",
+-        opt_profile_balanced: "Balanced (Faster processing)",
+-        profile_note: "Best eliminates OCR misreads on complex Arabic medical names.",
++        opt_profile_balanced: "Balanced (Recommended - fast & stable)",
++        opt_profile_best: "High Precision (Best - extra accuracy)",
++        profile_note: "Balanced is recommended for standard PDF extraction. The app falls back automatically if needed.",
+         lbl_unstructured_key: "Unstructured API Key",
+         lbl_local_url: "Local AI URL (MSEMAX / vLLM)",
+         lbl_local_key: "Local AI Key (Optional)",
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

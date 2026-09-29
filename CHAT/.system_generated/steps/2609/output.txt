@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "d:\AI_Engineer\Pharmacy-agy\scratch_fix_db.py", line 5, in <module>
+    c.execute('SELECT id, status, total_shortages, matched_count, not_found_count, review_count FROM processes')
+sqlite3.OperationalError: no such table: processes
+

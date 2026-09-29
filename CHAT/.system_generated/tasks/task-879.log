@@ -1,0 +1,31 @@
+    def _process_worker(self, process_id: str, shortage_paths: list, warehouse_paths: list, is_restart: bool = False):
+        try:
+            self.add_log(f"--- Starting new process [{process_id}] ---")
+            proc_dir = self.db.get_process_dir(process_id)
+            workspace = proc_dir
+            
+            # Copy files to workspace if not restarting
+            copied_shortages = []
+            for p in shortage_paths:
+                dest = workspace / Path(p).name
+                if not is_restart or not dest.exists():
+                    shutil.copy2(p, dest)
+                copied_shortages.append(dest)
+                
+            copied_warehouses = []
+            for p in warehouse_paths:
+                dest = workspace / Path(p).name
+                if not is_restart or not dest.exists():
+                    shutil.copy2(p, dest)
+                copied_warehouses.append(dest)
+                
+            if self.window:
+                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Reading files...'}}}}));")
+                
+            # Import actual project modules
+            from src.config import load_config
+            from src.extract.file_handler import read_input_files
+            from src.fast_match.coordinator import FastCoordinator
+            from src.output.excel_writer import write_results_excel
+            
+

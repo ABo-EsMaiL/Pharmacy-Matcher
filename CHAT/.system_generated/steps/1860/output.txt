@@ -1,0 +1,115 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1876,7 +1876,7 @@
+             loadResults(result.new_stats);
+         }
+     } catch (error) {
+-        showToast('حدث خطأ أثناء تنفيذ التعديلات', 'error');
++        showToast(currentLang === 'en' ? 'Error applying changes' : 'حدث خطأ أثناء تنفيذ التعديلات', 'error');
+     }
+ }
+ 
+@@ -1883,6 +1883,7 @@
+ async function loadHistory() {
+     const listEl = document.getElementById('history-list');
+     listEl.innerHTML = '<div class="spinner"></div>';
++    const t = I18N[currentLang] || I18N.ar;
+     
+     try {
+         const historyStr = await window.pywebview.api.get_history();
+@@ -1889,6 +1889,6 @@
+         
+         if (!history || history.length === 0) {
+-            listEl.innerHTML = '<div class="empty-state"><i class="ph-fill ph-empty"></i><p>لا توجد عمليات سابقة مسجلة.</p></div>';
++            listEl.innerHTML = `<div class="empty-state"><i class="ph-fill ph-empty"></i><p>${t.history_empty}</p></div>`;
+             return;
+         }
+         
+@@ -1895,9 +1895,9 @@
+         history.forEach(item => {
+-            const date = new Date(item.created_at).toLocaleString('ar-EG');
++            const date = new Date(item.created_at).toLocaleString(currentLang === 'ar' ? 'ar-EG' : 'en-US');
+             const statusClass = item.status === 'completed' ? 'badge-completed' : (item.status === 'processing' ? 'badge-processing' : 'badge-reviewing');
+-            let statusText = item.status === 'completed' ? 'مكتمل' : 'قيد المراجعة';
+-            if (item.status === 'processing') statusText = 'قيد التشغيل...';
+-            else if (item.status === 'error') statusText = 'فشل';
++            let statusText = item.status === 'completed' ? t.status_completed : t.status_reviewing;
++            if (item.status === 'processing') statusText = t.status_processing;
++            else if (item.status === 'error') statusText = t.status_error;
+             
+             const card = document.createElement('div');
+             card.className = 'history-card';
+@@ -1905,7 +1905,7 @@
+             card.innerHTML = `
+                 <div class="history-info">
+                     <div class="history-header">
+-                        <h4>العملية ${item.id.substring(0,8)}...</h4>
++                        <h4>${t.process_label} ${item.id.substring(0,8)}...</h4>
+                         <span class="badge-status ${statusClass}">${statusText}</span>
+                     </div>
+                     <div class="history-date"><i class="ph ph-calendar"></i> ${date}</div>
+@@ -1912,5 +1912,5 @@
+-                        <span><i class="ph-fill ph-files"></i> ${JSON.parse(item.shortage_files || '[]').length} نواقص</span>
+-                        <span><i class="ph-fill ph-folders"></i> ${JSON.parse(item.warehouse_files || '[]').length} مخازن</span>
++                        <span><i class="ph-fill ph-files"></i> ${JSON.parse(item.shortage_files || '[]').length} ${t.badge_shortages}</span>
++                        <span><i class="ph-fill ph-folders"></i> ${JSON.parse(item.warehouse_files || '[]').length} ${t.badge_warehouses}</span>
+                     </div>
+                 </div>
+                 <div class="history-actions">
+@@ -1917,8 +1917,8 @@
+-                        ? `<button class="btn btn-primary" style="opacity:0.7; cursor:not-allowed;" disabled><i class="ph-fill ph-spinner-gap spinner"></i> جاري التشغيل...</button>`
++                        ? `<button class="btn btn-primary" style="opacity:0.7; cursor:not-allowed;" disabled><i class="ph-fill ph-spinner-gap spinner"></i> ${t.status_processing}</button>`
+                         : (item.status === 'error'
+-                            ? `<button class="btn btn-warning" onclick="restartProcess('${item.id}')"><i class="ph-fill ph-arrow-counter-clockwise"></i> إعادة تشغيل</button>
+-                               <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
+-                            : `<button class="btn btn-primary" onclick="viewProcess('${item.id}')"><i class="ph-fill ph-eye"></i> عرض النتائج</button>
++                            ? `<button class="btn btn-warning" onclick="restartProcess('${item.id}')"><i class="ph-fill ph-arrow-counter-clockwise"></i> ${t.btn_restart}</button>
++                               <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
++                            : `<button class="btn btn-primary" onclick="viewProcess('${item.id}')"><i class="ph-fill ph-eye"></i> ${t.btn_view_results}</button>
+                                <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
+                         )
+                     }
+@@ -1927,7 +1927,7 @@
+         });
+     } catch (e) {
+         console.error(e);
+-        listEl.innerHTML = '<div class="empty-state text-danger"><i class="ph-fill ph-warning"></i><p>خطأ في جلب السجل</p></div>';
++        listEl.innerHTML = `<div class="empty-state text-danger"><i class="ph-fill ph-warning"></i><p>${currentLang === 'en' ? 'Failed to fetch history' : 'خطأ في جلب السجل'}</p></div>`;
+     }
+ }
+ 
+@@ -1934,3 +1934,4 @@
++    const t = I18N[currentLang] || I18N.ar;
+     try {
+         const res = await window.pywebview.api.restart_process(processId);
+         if (res.success) {
+@@ -1941,8 +1941,9 @@
+             
+             btn.classList.add('hidden');
+             progressModal.style.display = 'flex';
+-            document.getElementById('progress-text').innerText = 'جاري تهيئة العملية...';
++            document.getElementById('progress-text').innerText = t.progress_init;
+             document.getElementById('progress-bar-fill').style.width = '5%';
++            startProgressTimer();
+             
+             const termEl = document.getElementById('pipeline-log-terminal');
+             if (termEl) termEl.innerHTML = `[System] Restarted process ${processId}...\n`;
+@@ -1949,9 +1949,9 @@
+-            showToast('تم بدء العملية من جديد', 'success');
+-        } else {
+-            showToast(res.error || 'حدث خطأ أثناء إعادة التشغيل', 'error');
+-        }
+-    } catch (e) {
+-        showToast('خطأ في الاتصال بالبرنامج', 'error');
++            showToast(t.toast_started, 'success');
++        } else {
++            showToast(res.error || (currentLang === 'en' ? 'Restart failed' : 'حدث خطأ أثناء إعادة التشغيل'), 'error');
++        }
++    } catch (e) {
++        showToast(currentLang === 'en' ? 'Connection error' : 'خطأ في الاتصال بالبرنامج', 'error');
+         console.error(e);
+     }
+ }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

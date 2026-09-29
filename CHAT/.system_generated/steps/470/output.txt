@@ -1,0 +1,110 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -952,9 +952,34 @@
+ // Ensure Pywebview API is ready
+ window.addEventListener('pywebviewready', function() {
+     loadSettings();
++    loadLogs();
+     updateServerStatus();
+     serverStatusInterval = setInterval(updateServerStatus, 5000);
+-});
++    setupDragAndDrop();
++});
++
++// Logs Logic
++window.addEventListener('new_log', function(e) {
++    const logArea = document.getElementById('system-logs');
++    if (logArea) {
++        logArea.value += e.detail + '\n';
++        logArea.scrollTop = logArea.scrollHeight;
++    }
++});
++
++async function loadLogs() {
++    try {
++        const logsStr = await window.pywebview.api.get_logs();
++        const logs = JSON.parse(logsStr);
++        const logArea = document.getElementById('system-logs');
++        if (logArea) {
++            logArea.value = logs.join('\n') + (logs.length ? '\n' : '');
++            logArea.scrollTop = logArea.scrollHeight;
++        }
++    } catch (e) {
++        console.error(e);
++    }
++}
+ 
+ // Toast Notifications
+ function showToast(message, type = 'success') {
+@@ -976,11 +976,63 @@
+ async function exitApp() {
+     try {
+         if (window.pywebview && window.pywebview.api) {
+-            await window.pywebview.api.on_closing();
+-        }
+-    } catch (e) {
+-        console.error(e);
+-    }
++            await window.pywebview.api.exit_app();
++        }
++    } catch (e) {
++        console.error(e);
++    }
++}
++
++// --- Drag & Drop Logic ---
++function setupDragAndDrop() {
++    const zones = [
++        { id: 'zone-shortage', type: 'shortage' },
++        { id: 'zone-warehouse', type: 'warehouse' }
++    ];
++
++    zones.forEach(({id, type}) => {
++        const zone = document.getElementById(id);
++        if (!zone) return;
++
++        zone.addEventListener('dragover', (e) => {
++            e.preventDefault();
++            zone.style.borderColor = 'var(--primary)';
++            zone.style.background = '#f0f9ff';
++        });
++
++        zone.addEventListener('dragleave', (e) => {
++            e.preventDefault();
++            zone.style.borderColor = '';
++            zone.style.background = '';
++        });
++
++        zone.addEventListener('drop', (e) => {
++            e.preventDefault();
++            zone.style.borderColor = '';
++            zone.style.background = '';
++            
++            if (e.dataTransfer && e.dataTransfer.files) {
++                const files = Array.from(e.dataTransfer.files).map(f => f.path || f.name).filter(p => p);
++                if (files.length > 0) {
++                    // Because pywebview might strip full path, we show a warning if path is not absolute
++                    const hasPath = files[0].includes('\\') || files[0].includes('/');
++                    if (!hasPath) {
++                        showToast('غير مدعوم: يرجى استخدام زر التصفح لاختيار الملفات بدلاً من السحب بسبب قيود الأمان في المتصفح.', 'error');
++                        return;
++                    }
++
++                    if (type === 'warehouse') {
++                        selectedWarehouseFiles = [...selectedWarehouseFiles, ...files];
++                        updateFileList('warehouse', selectedWarehouseFiles);
++                    } else {
++                        selectedShortageFiles = [...selectedShortageFiles, ...files];
++                        updateFileList('shortage', selectedShortageFiles);
++                    }
++                    checkSubmitState();
++                }
++            }
++        });
++    });
+ }
+ 
+ // --- New Process Logic ---
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

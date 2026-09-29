@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Shortage: 'برونكوفين شراب س ج' | Warehouse: 'برونفين ٤٠٠مجم س.ج ٢٨' | Grade: 'مطابقة ذكية (AI)'
+Shortage: 'ابيكوتيل  5لبوسة ث' | Warehouse: 'البوتيل بوس س.ج،٣٤ج' | Grade: 'مطابقة ذكية (AI)'
+

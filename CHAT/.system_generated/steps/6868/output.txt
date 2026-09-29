@@ -1,0 +1,203 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -126,19 +126,93 @@
+         self.is_ready = True
+         logger.info("Google AI Studio web page ready!")
+         
++        await self.ensure_model(DEFAULT_MODEL)
+         await self.ensure_thinking_mode()
+ 
++    async def ensure_model(self, target_model: Optional[str] = None):
++        """Ensures the requested model is selected in Google AI Studio UI."""
++        target_model = target_model or DEFAULT_MODEL
++        if not target_model or not self.page or self.page.is_closed() or self.is_shutting_down:
++            return
++            
++        try:
++            selectors = [
++                'mat-select[aria-label*="Model" i]',
++                'ms-model-selector mat-select',
++                '.model-selector mat-select',
++                'mat-select[formcontrolname="model"]',
++                '[data-test-id="model-selector"]',
++                '.run-settings-panel mat-select',
++            ]
++            
++            model_select = None
++            for sel in selectors:
++                loc = self.page.locator(sel)
++                if await loc.count() > 0:
++                    model_select = loc.first
++                    break
++                    
++            if not model_select:
++                all_selects = self.page.locator('mat-select:visible')
++                cnt = await all_selects.count()
++                for i in range(cnt):
++                    s = all_selects.nth(i)
++                    label = (await s.get_attribute("aria-label") or "").lower()
++                    txt = (await s.inner_text() or "").lower()
++                    if "model" in label or any(m in txt for m in ["gemini", "flash", "pro"]):
++                        model_select = s
++                        break
++                        
++            if not model_select:
++                logger.debug(f"Model selector not found in AI Studio UI.")
++                return
++
++            current_model = (await model_select.inner_text() or "").strip()
++            norm_target = target_model.lower().replace("gemini-", "").replace("gemini ", "").strip()
++            
++            if norm_target in current_model.lower() or target_model.lower() in current_model.lower():
++                logger.info(f"Model '{current_model}' already selected (matches target '{target_model}').")
++                return
++
++            logger.info(f"Changing Model from '{current_model}' to '{target_model}'...")
++            await model_select.click()
++            await asyncio.sleep(0.4)
++
++            options = self.page.locator('mat-option:visible')
++            opt_count = await options.count()
++            available_options = []
++            clicked = False
++            
++            for i in range(opt_count):
++                opt = options.nth(i)
++                text = (await opt.inner_text() or "").strip()
++                available_options.append(text)
++                text_lower = text.lower()
++                if (target_model.lower() in text_lower or 
++                    norm_target in text_lower or
++                    (norm_target.split("-")[0] in text_lower and "flash" in text_lower)):
++                    await opt.click()
++                    clicked = True
++                    logger.info(f"Model successfully changed to '{text}'.")
++                    await asyncio.sleep(0.3)
++                    break
++
++            if not clicked:
++                logger.warning(f"Could not find model option matching '{target_model}'. Available options: {available_options}")
++                await self.page.keyboard.press("Escape")
++        except Exception as e:
++            logger.warning(f"Failed to set Model: {e}")
++
+     async def ensure_thinking_mode(self):
+         """Ensures the Thinking Mode is set correctly on the current page."""
+-        if not THINKING_MODE or not self.page or self.page.is_closed():
+-            return
+-            
+-        try:
+-            thinking_select = self.page.locator('mat-select[aria-label="Thinking Level"]')
+-            
+-            # Wait a bit for the UI to load it (up to 10 seconds)
+-            try:
+-                await thinking_select.wait_for(state="visible", timeout=10000)
++        if not THINKING_MODE or not self.page or self.page.is_closed() or self.is_shutting_down:
++            return
++            
++        try:
++            thinking_select = self.page.locator('mat-select[aria-label="Thinking Level"], mat-select[aria-label*="Thinking" i]')
++            
++            try:
++                await thinking_select.first.wait_for(state="visible", timeout=6000)
+             except Exception:
+                 logger.debug("Thinking Level selector not found or not visible yet.")
+                 return
+@@ -145,8 +145,8 @@
+             if await thinking_select.count() > 0:
+-                current_thinking = await thinking_select.inner_text()
++                current_thinking = (await thinking_select.first.inner_text() or "").strip()
+                 if THINKING_MODE.lower() not in current_thinking.lower():
+-                    logger.info(f"Changing Thinking Level from '{current_thinking.strip()}' to '{THINKING_MODE}'...")
+-                    await thinking_select.click()
++                    logger.info(f"Changing Thinking Level from '{current_thinking}' to '{THINKING_MODE}'...")
++                    await thinking_select.first.click()
+                     await asyncio.sleep(0.3)
+                     
+                     options = self.page.locator('mat-option:visible')
+@@ -153,11 +153,13 @@
+                     clicked = False
++                    available = []
+                     for i in range(count):
+                         opt = options.nth(i)
+-                        text = await opt.inner_text()
++                        text = (await opt.inner_text() or "").strip()
++                        available.append(text)
+                         if THINKING_MODE.lower() in text.lower():
+                             await opt.click()
+                             clicked = True
+-                            logger.info(f"Thinking Level set to '{text.strip()}'.")
++                            logger.info(f"Thinking Level set to '{text}'.")
+                             await asyncio.sleep(0.3)
+                             break
+                     
+@@ -164,5 +164,7 @@
+-                        logger.warning(f"Could not find a Thinking Level option matching '{THINKING_MODE}'.")
++                        logger.warning(f"Could not find a Thinking Level option matching '{THINKING_MODE}'. Available: {available}")
+                         await self.page.keyboard.press("Escape")
++                else:
++                    logger.info(f"Thinking Level already verified as '{current_thinking}'.")
+         except Exception as e:
+             logger.warning(f"Failed to set Thinking Mode: {e}")
+ 
+@@ -181,7 +181,7 @@
+             pass
+         logger.info("Browser stopped.")
+ 
+-    async def reset_chat_if_needed(self):
++    async def reset_chat_if_needed(self, model_name: Optional[str] = None):
+         """Ensures the chat interface is clean for a new request."""
+         if not self.page or self.page.is_closed() or self.is_shutting_down:
+             return
+@@ -188,10 +188,26 @@
+             await self.page.keyboard.press("Escape")
+             await asyncio.sleep(0.1)
+ 
+-            logger.info("Starting fresh chat session (navigating to new chat)...")
+-            await self.page.goto(TARGET_URL, timeout=30000, wait_until="domcontentloaded")
+-            await asyncio.sleep(1.0)
+-            await self.page.keyboard.press("Escape")
++            reset_done = False
++            try:
++                new_btn = self.page.locator('button[aria-label*="New prompt" i], button[aria-label*="New chat" i], a[aria-label*="New prompt" i]').first
++                if await new_btn.is_visible():
++                    await new_btn.click()
++                    await asyncio.sleep(0.5)
++                    ta = self.page.locator('textarea[placeholder*="Type something" i], textarea[aria-label*="prompt" i], ms-autosize-textarea textarea').first
++                    if await ta.is_visible():
++                        reset_done = True
++                        logger.info("Fast chat reset succeeded via UI button.")
++            except Exception:
++                reset_done = False
++
++            if not reset_done:
++                logger.info("Starting fresh chat session (navigating to new chat)...")
++                await self.page.goto(TARGET_URL, timeout=30000, wait_until="domcontentloaded")
++                await asyncio.sleep(1.0)
++
++            await self.page.keyboard.press("Escape")
++            await self.ensure_model(model_name)
+             await self.ensure_thinking_mode()
+         except Exception as e:
+             logger.warning(f"Error resetting chat: {e}")
+@@ -198,4 +198,4 @@
+-    async def send_prompt_and_stream(self, prompt: str) -> AsyncGenerator[str, None]:
++    async def send_prompt_and_stream(self, prompt: str, model_name: Optional[str] = None) -> AsyncGenerator[str, None]:
+         """Injects the prompt into Google AI Studio and yields streaming text deltas."""
+         if not self.page or self.page.is_closed() or self.is_shutting_down:
+             yield "[Error: Browser page not initialized or server is shutting down]"
+@@ -216,7 +216,10 @@
+         if CLEAR_CHAT_ON_REQUEST or has_fatal_error:
+             if has_fatal_error:
+                 logger.warning("Detected error in previous chat turn. Resetting to fresh chat to prevent 403 Forbidden...")
+-            await self.reset_chat_if_needed()
++            await self.reset_chat_if_needed(model_name=model_name)
++        else:
++            await self.ensure_model(model_name)
++            await self.ensure_thinking_mode()
+ 
+         # Ensure no stray menus or overlays exist
+         try:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

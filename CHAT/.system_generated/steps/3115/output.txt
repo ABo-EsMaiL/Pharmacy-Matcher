@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Type of client.jobs: <class 'unstructured_transform_client._client._Jobs'>
+Signature of delete: (job_id: 'str') -> 'None'
+Doc of delete: None
+

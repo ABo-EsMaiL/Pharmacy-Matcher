@@ -1,0 +1,15 @@
+        # تقسيم النص إلى أسطر وفحص كل سطر
+        for line in text.split("\n"):
+            line = line.strip()
+            if not line or len(line) < 3:
+                continue
+
+            # قبول الأسطر التي تحتوي على نص عربي أو أسماء أدوية (حروف لاتينية + أرقام)
+            has_arabic = bool(arabic_pattern.search(line))
+            has_drug_chars = bool(re.search(r"[a-zA-Z]{3,}", line))
+
+            if has_arabic or has_drug_chars:
+                items.append({"item_name_raw": line, "source_page": page})
+
+    return items
+

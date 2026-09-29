@@ -1,0 +1,21 @@
+
+The command exited with code 0.
+Output:
+=== ALL PROCESSES IN DB (16) ===
+('PROC-016', '2026-09-25T02:16:20.445399', 'reviewing', 993, 138, 77, 396, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-016\\results_PROC-016.xlsx')
+('PROC-015', '2026-09-25T01:27:22.161992', 'reviewing', 993, 142, 9, 468, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-015\\results_PROC-015.xlsx')
+('PROC-014', '2026-09-24T22:49:33.536471', 'reviewing', 993, 124, 5, 486, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-014\\results_PROC-014.xlsx')
+('PROC-013', '2026-09-24T20:18:28.841564', 'error', 0, 0, 0, 0, None)
+('PROC-012', '2026-09-23T23:13:35.831315', 'reviewing', 993, 129, 5, 483, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-012\\results_PROC-012.xlsx')
+('PROC-011', '2026-09-23T22:53:12.711548', 'reviewing', 993, 123, 8, 483, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-011\\results_PROC-011.xlsx')
+('PROC-010', '2026-09-23T21:27:41.622978', 'reviewing', 993, 148, 938, 90, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-010\\results_PROC-010.xlsx')
+('PROC-009', '2026-09-23T19:37:47.931955', 'reviewing', 993, 143, 952, 90, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-009\\results_PROC-009.xlsx')
+('PROC-008', '2026-09-23T18:38:51.212291', 'reviewing', 993, 114, 30, 472, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-008\\results_PROC-008.xlsx')
+('PROC-007', '2026-09-23T17:56:04.154324', 'reviewing', 993, 119, 34, 466, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-007\\results_PROC-007.xlsx')
+('PROC-006', '2026-09-23T17:11:19.942659', 'reviewing', 993, 119, 33, 465, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-006\\results_PROC-006.xlsx')
+('PROC-005', '2026-09-23T14:48:47.432460', 'reviewing', 993, 109, 7, 492, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-005\\results_PROC-005.xlsx')
+('PROC-004', '2026-09-23T13:18:25.518054', 'reviewing', 993, 124, 2, 485, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-004\\results_PROC-004.xlsx')
+('PROC-003', '2026-09-23T12:07:58.081284', 'reviewing', 993, 100, 8, 496, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-003\\results_PROC-003.xlsx')
+('PROC-002', '2026-09-23T02:46:44.349689', 'reviewing', 993, 88, 6, 506, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-002\\results_PROC-002.xlsx')
+('PROC-001', '2026-09-22T18:38:51.420474', 'reviewing', 993, 93, 11, 498, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-001\\results_PROC-001.xlsx')
+

@@ -1,0 +1,20 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -359,11 +359,11 @@
+         print(f"  -> Exact Matches: {exact_count}")
+         print(f"  -> Deterministic Auto-Matches: {auto_match_count}")
+         
+-        # 3. Process via LLM in large optimal chunks (50 items per message)
++        # 3. Process via LLM in large optimal chunks (75 items per message)
+         if llm_cases and hasattr(self.config, 'local_api_url'):
+-            batch_size = 50
++            batch_size = 75
+             batches = [llm_cases[i:i + batch_size] for i in range(0, len(llm_cases), batch_size)]
+-            print(f"  -> Sending {len(llm_cases)} ambiguous items to Local API (MSEMAX) in {len(batches)} large batch(es) (Max ~50 items/msg)...")
++            print(f"  -> Sending {len(llm_cases)} ambiguous items to Local API (MSEMAX) in {len(batches)} large batch(es) (Max ~75 items/msg)...")
+             
+             def process_chunk(cases_chunk, chunk_name):
+                 max_retries = 3
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

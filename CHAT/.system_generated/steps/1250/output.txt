@@ -1,0 +1,22 @@
+The search for ""unstructured-transform-client" pypi" returned the following summary:
+The `unstructured-transform-client` is a Python package available on PyPI that serves as a client for the **Unstructured Transform v2 API**[1][2].
+
+### Key Details
+*   **Purpose:** It is designed to facilitate the conversion of unstructured files (such as PDFs, emails, images, and scanned documents) into structured data[2][3][4]. This structured output is optimized for use in AI applications, vector databases, and other downstream data pipelines[3][4][5].
+*   **Functionality:** The library handles tasks like document partitioning, enrichment, chunking, and embedding[3][4].
+*   **Integration:** It is closely related to the broader "Unstructured" ecosystem, which provides tools for ingesting and preprocessing complex documents for LLMs (Large Language Models)[4][6].
+
+### Note on Usage
+While `unstructured-transform-client` exists as a specific package for the Transform v2 API[1], official documentation for Unstructured's operations and SDKs often references the `unstructured-client` package (e.g., `pip install "unstructured-client>=0.46.2"`) for general API interactions[7]. 
+
+If you are looking to integrate document processing into AI agents, you may also encounter the **Unstructured Transform MCP (Model Context Protocol) server**, which allows AI agents to interact with the Unstructured Transform platform using standard protocols[3][4][8].
+
+Sources:
+[1] [getsafety.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcMUzK7IauwwLIMCnaeQe_kCGsA4CJ2wu1J23F1XEUyKbm_ZIaOz7rIzMFYhbKF7OQNiGjHm7RhmPndJk7vZKeTfpfJwpJy3SCd7GCMjefL7mXx1ZCzuiiyywIgeLOzDgn5N1h4TaHSliLETe243zi2IQD4SdKCQ==)
+[2] [getsafety.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcMUzK7IauwwLIMCnaeQe_kCGsA4CJ2wu1J23F1XEUyKbm_ZIaOz7rIzMFYhbKF7OQNiGjHm7RhmPndJk7vZKeTfpfJwpJy3SCd7GCMjefL7mXx1ZCzuiiyywIgeLOzDgn5N1h4TaHSliLETe243zi2IQD4SdKCQ==)
+[3] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcnpf0T3FdYpKaRpbJGpkRfv5TTW3_w8R5SVuvwJqnDYwKUmmRLLbAdUQBDvZtjDDbHGfUug_sbNv9KvizVZnEQI-T6rkYblbKoRSj_DlMTzODtnrLdfD0k76ICrXNRi0c-26zug==)
+[4] [github.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkru4JMSQ3sCV8UpSTLk0Mi18DT7JVppjTL14NTKgnnVAV0WauNafkBt22aw32-fseAxrqchuO35h0o1lLSdUo0s0lAv2rsBSnFybVNJk-IX7anf7Pm9aTzlBsUqkQPmFGTEzZTQ==)
+[5] [ibm.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVkFabcNcscmdKKK2GyaOrHVM_1Webzy7Hpx3B8uPnDPLegmtd2EF-sV1bj8mzm-TmypT2R9JHMoG7zjTf8G3BSqvY25lOSGiVX9sYDZDr87nhMTz4-3CQrk8kJ1hrSKF44y6rrlL4VMjHq1ybYsHCjwbN1PnVAL0oE0KwsgXAGu0c-dGslsLG1E-7V-Q=)
+[6] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZEwURQeTH_Sf6K_xebng1pOw1Pk0pSxSWW05RM8ffLhSq9ZGZdsuTrkCHG3MyRhTgr4Wn-c0yI8J-k5k96vx6eHrEJYnD9SGUdcguz_E=)
+[7] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnrlOohzE8KJnyvBwYEDlis28I4ej26BTRRp-PLqXQmMrhptoWTncyh2h8grziu_Ct8pTMvn3-GaHezramjkV3rG4ajrBjjZXrcaERMPMGgP5iG2MbDdC6iEwd4_7YOiuIP_xf7vShA_nny53Uro-HvzatWMUJtW99MVkRuGs=)
+[8] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPmJiShCuUhx2s9rZH4oFGm2z1X0TbPQvXDkP58RX7S5QQfpXRRrYlTnjqkOoh9DehftfjYiiqvCG904t2TkIg7SjbDzwmKXjUuN6tDBMQqaBh816zMbrdDzj4bHfz0eWZOuK_fEz23NyXlvuVjr-zTg==)

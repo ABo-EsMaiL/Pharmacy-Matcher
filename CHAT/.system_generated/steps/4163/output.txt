@@ -1,0 +1,33 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -18,7 +18,7 @@
+    - You MUST match the EXACT SAME commercial trade brand name.
+    - NEVER suggest or accept alternative brand names, different trade names, or generics (e.g. Panadol is NOT Cetal, Brufen is NOT Cataflam, Augmentin is NOT Curam).
+    - If the trade brand name is different, unrelated, or an alternative product, YOU MUST RETURN "status": "no_match" (or omit it). NEVER mark different brands as "match" or "review"!
+-   - Allow ONLY minor spelling variants, phonetic transliterations, or common OCR scanning typos of the SAME exact brand (e.g. dropped initial letters like 'ا', slight typo in dots like 'ب' vs 'م', or slight Arabic vowel variations).
++   - Allow ONLY minor spelling variants, phonetic transliterations, or common OCR scanning typos of the SAME exact brand (e.g. dropped initial letters like 'ا', dropped middle single letters or missing dots like 'ن' or 'ب', or slight vowel variations).
+ 
+ 2. DOSAGE FORM (ZERO TOLERANCE FOR CONFLICTS):
+    - Dosage forms MUST be strictly compatible:
+@@ -25,6 +25,6 @@
+      - Syrups/Suspensions (شراب, شرب, معلق) ONLY match Syrups. NEVER match tablets with syrup.
+      - Creams (كريم) ONLY match Creams. NEVER match cream with ointment or suppository.
+-     - Ointments (مرهم, دهان) ONLY match Ointments.
++     - Oointments (مرهم, دهان) ONLY match Ointments.
+      - Injections/Ampoules (امبول, حقن, فيال) ONLY match Injections.
+      - Suppositories (لبوس) ONLY match Suppositories.
+      - Drops (نقط, قطرة) ONLY match Drops.
+@@ -40,7 +40,9 @@
+      - STANDARD PACKS: If requested shortage specifies standard packaging count (e.g. 20 tablets, 5 ampoules, 3 strips) and warehouse candidate has the same drug, form, and strength but does not explicitly state the pack size (e.g. standard listing without count):
+        THIS IS A 100% MATCH ("status": "match")! NEVER mark this as review!
+      - Manufacturer suffixes (/فاركو, /جلاكسو), commercial indicators ("س ج", "سعر جديد", "سعر قديم") do not change the product.
+-   - "review": ONLY for the SAME EXACT medicine brand when there is an EXPLICIT, CONFLICTING pack count on BOTH sides (e.g. requested 15 tablets vs candidate explicitly writes 60 tablets of the same medicine).
++   - "review": For the SAME EXACT medicine brand when there is an EXPLICIT, CONFLICTING pack count on BOTH sides (e.g. requested 30 tablets vs candidate explicitly writes 20 tablets of the same medicine).
++     - Wholesale packaging: If requested specifies strips (e.g. 2 شريط) and warehouse specifies wholesale bundles (باكت / كرتونة / باكو), mark as "match" if standard, or "review" if uncertain.
++     - CRITICAL SAFETY: When the trade brand name, form, and strength are identical, NEVER discard as "no_match" just because tablet/pack counts differ! It MUST be marked as "review" with the reason explaining the packaging difference.
+      - Wholesale bundles like "باكت 120" (meaning a shipping carton of 120 boxes) or "باكت 50" are wholesale lot sizes, NOT the blister/tablet count inside a single box! Do not confuse wholesale carton count with tablet count.
+ 
+ SCHEMA:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

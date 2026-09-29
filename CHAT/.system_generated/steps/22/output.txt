@@ -1,0 +1,1 @@
+Wait cancelled (agent already has undelivered messages).

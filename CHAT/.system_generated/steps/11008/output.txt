@@ -1,0 +1,22 @@
+
+The command exited with code 0.
+Output:
+desktop_app\server_manager.py:152: requests.get(f"http://127.0.0.1:{self.port}/shutdown", timeout=1.5)
+desktop_app\server_manager.py:239: r_h = requests.get(health_url, timeout=3)
+desktop_app\server_manager.py:260: timeout=25
+scratch\test_batch3_cure.py:27: resp = requests.post(url, headers={"Authorization": f"Bearer {api_key}"}, json=body, timeout=120)
+scratch\test_levanox_llm.py:26: resp = requests.post(url, headers={"Authorization": f"Bearer {api_key}"}, json=body, timeout=60)
+scratch\test_llm_parofen.py:26: resp = requests.post(url, headers={"Authorization": f"Bearer {api_key}"}, json=body, timeout=60)
+scratch\test_small_parofen.py:24: resp = requests.post(url, headers={"Authorization": f"Bearer {api_key}"}, json=body, timeout=60)
+dist_production\desktop_app\server_manager.py:152: requests.get(f"http://127.0.0.1:{self.port}/shutdown", timeout=1.5)
+dist_production\desktop_app\server_manager.py:239: r_h = requests.get(health_url, timeout=3)
+dist_production\desktop_app\server_manager.py:260: timeout=25
+dist_production\src\extract\gemini_vision_extractor.py:238: resp = requests.post(api_url, json=payload, headers=headers, timeout=240)
+dist_production\src\fast_match\coordinator.py:654: read_timeout = max(360, case_count * 5 + 60) if is_chatgpt else max(300, case_count * 6 + 120)
+dist_production\src\fast_match\coordinator.py:662: timeout=(30, read_timeout),
+dist_production\src\match\coordinator.py:273: timeout=(30, 300),
+src\extract\gemini_vision_extractor.py:238: resp = requests.post(api_url, json=payload, headers=headers, timeout=240)
+src\fast_match\coordinator.py:654: read_timeout = max(360, case_count * 5 + 60) if is_chatgpt else max(300, case_count * 6 + 120)
+src\fast_match\coordinator.py:662: timeout=(30, read_timeout),
+src\match\coordinator.py:273: timeout=(30, 300),
+

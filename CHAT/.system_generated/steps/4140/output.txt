@@ -1,0 +1,7 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+fatal: not a git repository (or any of the parent directories): .git
+

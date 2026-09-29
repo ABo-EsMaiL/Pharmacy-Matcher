@@ -1,0 +1,56 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -430,6 +430,7 @@
+         self, prompt: str, model_name: Optional[str] = None, batch_size: Optional[int] = None
+     ) -> AsyncGenerator[Union[dict, str], None]:
+         """Injects the prompt into Google AI Studio and yields streaming text deltas."""
++        t_req_start = time.time()
+         if not self.page or self.page.is_closed() or self.is_shutting_down:
+             yield "[Error: Browser page not initialized or server is shutting down]"
+             return
+@@ -461,7 +461,7 @@
+         except Exception:
+             pass
+ 
+-        # 1. Count existing completed Model turns
++        # 1. Count existing completed Model turns (Strict: user turns are excluded)
+         initial_model_count = 0
+         try:
+             initial_model_count = await self.page.evaluate('''() => {
+@@ -470,14 +470,25 @@
+                         return !el.parentElement.closest('.chat-turn-container, .chat-turn, [data-turn-role]');
+                     });
+                 }
+-                const modelTurns = allTurns.filter(t => {
+-                    const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
+-                    const cls = (t.className || '').toLowerCase();
+-                    const author = (t.querySelector('.author-label, .turn-author, .role-label')?.innerText || '').toLowerCase();
+-                    const isUser = role === 'user' || cls.includes('user') || author.includes('user');
+-                    if (isUser) return false;
+-                    return role === 'model' || cls.includes('model') || author.includes('model') || Boolean(t.querySelector('ms-thought-chunk, .thought-activity-host, ms-prompt-chunk, .model-prompt-container'));
+-                });
++                const isUserTurn = (t) => {
++                    const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
++                    const cls = (t.className || (t.getAttribute('class') || '')).toLowerCase();
++                    const author = (t.querySelector('.author-label, .turn-author, .role-label, ms-author-label')?.innerText || '').toLowerCase();
++                    const hasUserElem = t.querySelector('[data-turn-role="User"], .user-prompt-container, .user, ms-prompt-chunk, textarea') !== null;
++                    const hasModelContent = t.querySelector('ms-thought-chunk, .thought-activity-host, ms-text-chunk, ms-code-block, ms-code-chunk, .model-prompt-container') !== null;
++                    if (role === 'user' || cls.includes('user') || author.includes('user') || author.includes('you')) return true;
++                    if (hasUserElem && !hasModelContent) return true;
++                    return false;
++                };
++                const isModelTurn = (t) => {
++                    if (isUserTurn(t)) return false;
++                    const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
++                    const cls = (t.className || (t.getAttribute('class') || '')).toLowerCase();
++                    const author = (t.querySelector('.author-label, .turn-author, .role-label, ms-author-label')?.innerText || '').toLowerCase();
++                    if (role === 'model' || cls.includes('model') || author.includes('model') || author.includes('gemini')) return true;
++                    return Boolean(t.querySelector('ms-thought-chunk, .thought-activity-host, ms-text-chunk, ms-code-block, ms-code-chunk, .model-prompt-container, .response-container'));
++                };
++                const modelTurns = allTurns.filter(isModelTurn);
+                 return modelTurns.length;
+             }''')
+         except Exception as e:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy\review\probe_gemini_match.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -63,7 +63,7 @@
+     ("اسم مطابق", "نوفاكس 250 مجم 20 قرص", ["نوفاكس 250 مجم 20 قرص"], "match", [0]),
+     ("حرف ناقص", "فورسجا 10 مجم أقراص", ["فورسيجا ١٠ مجم أقراص"], "match", [0]),
+     ("عربي وإنجليزي وأرقام مختلطة", "Novax ٢٥٠ mg 20 tablets", ["نوفاكس 250 مجم 20 قرص"], "match", [0]),
+-    ("حروف الاسم معكوسة", "نوفافارما 250 مجم 20 قرص", ["امرافافون 250 مجم 20 قرص"], "match", [0]),
++    ("حروف الاسم معكوسة", "نوفافارما 250 مجم 20 قرص", ["امرافافون 250 مجم 20 قرص"], "review", [0]),
+     ("تحويل وحدة دون تغيير العبوة", "نوفاكس 1 جم 20 قرص", ["نوفاكس 1000 مجم 20 قرص"], "match", [0]),
+     ("اختلاف التركيز خط أحمر", "نوفاكس 250 مجم 20 قرص", ["نوفاكس 500 مجم 20 قرص"], "no_match", []),
+     ("اختلاف عدد الأقراص لا يمنع المطابقة", "دوليبران 1000 مجم 15 قرص", ["دوليبران 1 جم 60 قرص"], "match", [0]),
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

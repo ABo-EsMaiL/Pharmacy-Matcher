@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+{'id': 'PROC-002', 'created_at': '2026-09-22T14:11:05.298875', 'status': 'reviewing', 'shortage_files': '["0913.xlsx"]', 'warehouse_files': '["\\u0627\\u0644\\u0633\\u0644\\u0627\\u0645 \\u0634\\u0628\\u064a\\u0646.pdf", "\\u062c\\u0645\\u0644\\u0629 \\u0627\\u0644\\u0639\\u0645\\u0631\\u0648\\u0648\\u0648\\u0648.pdf"]', 'total_shortages': 993, 'matched_count': 19, 'not_found_count': 552, 'review_count': 20, 'output_file': 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-002\\results_PROC-002.xlsx'}
+

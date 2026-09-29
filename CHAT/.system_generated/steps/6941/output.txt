@@ -1,0 +1,25 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy\review\build_orders.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -248,6 +248,9 @@
+                     elif provider == "openrouter":
+                         from openrouter_provider import as_report_response
+                         candidate = as_report_response(response)
++                    elif provider in ("local", "msemax"):
++                        from local_provider import as_report_response
++                        candidate = as_report_response(response)
+                     validate_answer(unpack_response(candidate), job["inputs"])
+                 except Exception as error:
+                     save(directory / "rejected_response.json", response)
+@@ -278,6 +278,9 @@
+     elif provider == "openrouter":
+         from openrouter_provider import as_report_response
+         response = as_report_response(response)
++    elif provider in ("local", "msemax"):
++        from local_provider import as_report_response
++        response = as_report_response(response)
+     checked = validate_answer(unpack_response(response), job["inputs"])
+     result = []
+     for case, decision in zip(job["inputs"]["cases"], checked):
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

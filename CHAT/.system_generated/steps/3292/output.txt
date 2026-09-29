@@ -1,0 +1,19 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-3290
+Status: DONE
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-3290.log
+Log output:
+<truncated 36 lines>
+\miniconda3\envs\venv\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\miniconda3\envs\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\venv\Lib\site-packages\google\genai\_api_client.py", line 1511, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "D:\miniconda3\envs\venv\Lib\site-packages\google\genai\errors.py", line 173, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "D:\miniconda3\envs\venv\Lib\site-packages\google\genai\errors.py", line 204, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+
+Last progress: 2s ago

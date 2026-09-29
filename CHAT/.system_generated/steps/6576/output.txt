@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+
+desktop_app\templates\index.html:1625:                                <span id="badge-status-gaistudio" 
+class="badge-pill status-offline">🔴 متوقف</span>
+desktop_app\templates\index.html:1678:                                <span id="badge-status-chatgpt" 
+class="badge-pill status-offline">🔴 متوقف</span>
+desktop_app\templates\index.html:3051:            const badgeStatus = document.getElementById(`badge-status-${key}`);
+
+
+

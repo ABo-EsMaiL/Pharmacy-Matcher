@@ -1,0 +1,90 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -258,7 +258,7 @@
+     def apply_reviews(self, process_id: str) -> dict:
+         proc = self.db.get_process(process_id)
+         if not proc or not proc.get('output_file') or not os.path.exists(proc['output_file']):
+-            return {"success": False, "error": "Output file not found"}
++            return {"success": False, "error": "ملف النتائج غير موجود"}
+             
+         try:
+             wb = openpyxl.load_workbook(proc['output_file'])
+@@ -265,38 +265,44 @@
+-                return {"success": False, "error": "Review sheet not found"}
++                return {"success": False, "error": "شيت المراجعة غير موجود"}
+                 
+             review_ws = wb['يحتاج مراجعة']
+-            
+-            matched_ws = wb['مطابق'] if 'مطابق' in wb.sheetnames else wb.create_sheet('مطابق')
+-            not_found_ws = wb['لم يُعثر عليه'] if 'لم يُعثر عليه' in wb.sheetnames else wb.create_sheet('لم يُعثر عليه')
++            not_found_ws = wb['لم يُعثر عليه'] if 'لم يُعثر عليه' in wb.sheetnames else None
+             
+             matched_count = 0
+             rejected_count = 0
+-            
+-            # Read header
+-            header = [cell.value for cell in review_ws[1]]
+-            if not header or 'القرار (اختر)' not in header:
+-                return {"success": False, "error": "Invalid format: 'القرار (اختر)' column not found"}
+-                
+-            decision_col_idx = header.index('القرار (اختر)')
+-            
+             rows_to_delete = []
+             
++            # Columns in review sheet: القرار(A), اسم الصنف المطلوب(B), اسم المرشح(C), المخزن(D), السبب(E)
+             for row_idx in range(2, review_ws.max_row + 1):
+-                decision = review_ws.cell(row=row_idx, column=decision_col_idx + 1).value
++                decision = review_ws.cell(row=row_idx, column=1).value
++                req_name = review_ws.cell(row=row_idx, column=2).value
++                wh_candidate = review_ws.cell(row=row_idx, column=3).value
++                wh_name = review_ws.cell(row=row_idx, column=4).value
++                
+                 if decision == '✅ مطابق':
+-                    # Move to matched
+-                    row_data = [cell.value for cell in review_ws[row_idx]]
+-                    matched_ws.append(row_data)
++                    # Find the warehouse sheet and add the item there
++                    safe_wh_name = wh_name or ""
++                    for ch in r"[]:*?/\\":
++                        safe_wh_name = safe_wh_name.replace(ch, "_")
++                    safe_wh_name = safe_wh_name[:31]
++                    
++                    if safe_wh_name in wb.sheetnames:
++                        ws_target = wb[safe_wh_name]
++                        ws_target.append([req_name, wh_candidate, "تأكيد يدوي (مراجعة)"])
++                    
+                     matched_count += 1
+                     rows_to_delete.append(row_idx)
++                    
+                 elif decision == '❌ غير مطابق':
+-                    # Move to not found
+-                    row_data = [cell.value for cell in review_ws[row_idx]]
+-                    not_found_ws.append(row_data)
++                    # Move to "لم يُعثر عليه"
++                    if not_found_ws:
++                        not_found_ws.append([req_name, "مرفوض يدوياً"])
++                    
+                     rejected_count += 1
+                     rows_to_delete.append(row_idx)
+                     
+-            # Delete from bottom-up
++                # Empty decision = leave as is (user hasn't decided yet)
++                    
++            # Delete processed rows from bottom to top
+             for row_idx in sorted(rows_to_delete, reverse=True):
+                 review_ws.delete_rows(row_idx)
+                 
+@@ -304,8 +304,8 @@
+             remaining = review_ws.max_row - 1 if review_ws.max_row > 1 else 0
+             
+             # Update DB counts
+-            new_matched = proc['matched_count'] + matched_count
+-            new_not_found = proc['not_found_count'] + rejected_count
++            new_matched = (proc.get('matched_count', 0) or 0) + matched_count
++            new_not_found = (proc.get('not_found_count', 0) or 0) + rejected_count
+             new_review = remaining
+             status = 'completed' if remaining == 0 else 'reviewing'
+             
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

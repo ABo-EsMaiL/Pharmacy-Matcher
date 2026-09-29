@@ -1,0 +1,66 @@
+
+The command exited with code 0.
+Output:
+<truncated 48 lines>
+3. Shortage: ديكلوبرو150مجم 20قرص | Match: None | Warehouse: الهضبة الاثنين نقدى0.pdf | Reason: نفس اسم الدواء والشكل والتركيز، لكن يوجد اختلاف في عدد الأقراص: المطلوب 20 قرص والمرشح عبوة 10 أقراص.
+4. Shortage: كارفيد 25مجم 2شريط | Match: None | Warehouse: المكرومي المنصورة.pdf | Reason: نفس اسم الدواء كارفيد ونفس التركيز 25 مجم، لكن يوجد اختلاف في العبوة: المطلوب 2 شريط والمرشح يذكر 6 قرص.
+5. Shortage: باروفين 30قرص س ج | Match: None | Warehouse: كيور فارما خاص.pdf | Reason: نفس اسم المنتج والشكل، لكن يوجد اختلاف صريح في عدد الأقراص: المطلوب 30 قرص والمرشح 20 قرص.
+6. Shortage: افيروكوكسيب90مجم20قرص س ج | Match: None | Warehouse: كيور فارما خاص.pdf | Reason: نفس اسم المنتج والتركيز والشكل، لكن يوجد اختلاف صريح في العبوة: المطلوب 20 قرص والمرشح يذكر 1 قرص.
+
+=== ALL 29 DROPPED MATCHES (Present in PROC-001, Missing in PROC-002) ===
+1. Shortage: 'اريببركس100مل شراب' | Old Match: 'None' | Warehouse: كيور فارما خاص.pdf
+2. Shortage: 'اسبوسيد 20قرص اطفال س ج' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+3. Shortage: 'افيروكوكسيب90مجم20قرص س ج' | Old Match: 'None' | Warehouse: كيور فارما خاص.pdf
+4. Shortage: 'اليرزون كريم س ج' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+5. Shortage: 'امبوفير 5امبول س ج' | Old Match: 'None' | Warehouse: جملة العمروووو.pdf
+6. Shortage: 'بقدونس وكرفس ايزيس' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+7. Shortage: 'توب جنج ادفانس30كبسوله س ج' | Old Match: 'None' | Warehouse: السلام شبين.pdf
+8. Shortage: 'تورسامولكس10مجم اقراص س ج' | Old Match: 'None' | Warehouse: كيور فارما خاص.pdf
+9. Shortage: 'دابسوكيرل 50مجم جيل' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+10. Shortage: 'ريتشي بانثينول كريم ادفانس' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+11. Shortage: 'زانوجليد4/30اقراص س ج' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+12. Shortage: 'سكينورين كريم' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+13. Shortage: 'سيرفيتولكا ادفانس 20كبسوله س ج' | Old Match: 'None' | Warehouse: كيور فارما خاص.pdf
+14. Shortage: 'سينوبريل كواقراص س ج' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+15. Shortage: 'كارنيتول بلس برطمان س ج' | Old Match: 'None' | Warehouse: كيور فارما خاص.pdf
+16. Shortage: 'كوفي زنك لوسيون' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+17. Shortage: 'كولميتيدين  10شريط' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+18. Shortage: 'كويتابين 25مجم 30قرص س ج' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+19. Shortage: 'لبن بيبيلاك 3 بيبي جونيور' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+20. Shortage: 'ليفابيون 6امبول' | Old Match: 'None' | Warehouse: مخزن الحياة فارم اسكندريه-170.p
+21. Shortage: 'ليمتلس كروماكس كت30كيس س ج' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+22. Shortage: 'ليمتلس كروماكس كت30كيس س ج' | Old Match: 'None' | Warehouse: كيور فارما خاص.pdf
+23. Shortage: 'ميبو مرهم 15جم صغير س ج' | Old Match: 'None' | Warehouse: السلام شبين.pdf
+24. Shortage: 'ناتريلكس اس ار 30قرص س ج' | Old Match: 'None' | Warehouse: مخزن الحياة فارم اسكندريه-170.p
+25. Shortage: 'نانازوكسيد500مجم18قرص س ج' | Old Match: 'None' | Warehouse: كيور فارما خاص.pdf
+26. Shortage: 'نيتروماك ريتارد2.5مجم كبسول س ج' | Old Match: 'None' | Warehouse: السلام شبين.pdf
+27. Shortage: 'نيوكاربون30قرص س ج' | Old Match: 'None' | Warehouse: السلام شبين.pdf
+28. Shortage: 'هيدروكين 200مجم 20قرص س ج' | Old Match: 'None' | Warehouse: السلام شبين.pdf
+29. Shortage: 'يوكيراتو كريم س ج' | Old Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+
+=== ALL 24 NEW MATCHES (Missing in PROC-001, Present in PROC-002) ===
+1. Shortage: 'اتلابسلس نقط' | New Match: 'None' | Warehouse: مخزن الحياة فارم اسكندريه-170.p
+2. Shortage: 'اليرزون كريم س ج' | New Match: 'None' | Warehouse: كيور فارما خاص.pdf
+3. Shortage: 'ايتوريكوكس90مجم30قرص س ج' | New Match: 'None' | Warehouse: المكرومي المنصورة.pdf
+4. Shortage: 'ايجيكوستات بلس /مينالاكس' | New Match: 'None' | Warehouse: كيور فارما خاص.pdf
+5. Shortage: 'ايموكسكلاف642مجم شراب' | New Match: 'None' | Warehouse: المكرومي المنصورة.pdf
+6. Shortage: 'ب ك ميرز كبسول س ج' | New Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+7. Shortage: 'بانتوبرازول 40 مجم اقراص س ج' | New Match: 'None' | Warehouse: المكرومي المنصورة.pdf
+8. Shortage: 'باولوكير نقط س ج/بيكولاكس' | New Match: 'None' | Warehouse: المكرومي المنصورة.pdf
+9. Shortage: 'تادالاندرو5جم30قرص' | New Match: 'None' | Warehouse: المكرومي المنصورة.pdf
+10. Shortage: 'ترايملازما كريم س ج' | New Match: 'None' | Warehouse: كيور فارما خاص.pdf
+11. Shortage: 'ديكلوبرو150مجم 20قرص س ج' | New Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+12. Shortage: 'زنكترون 30كبسولة س ج' | New Match: 'None' | Warehouse: مخزن الحياة فارم اسكندريه-170.p
+13. Shortage: 'سيبروباي 750مجم10قرص' | New Match: 'None' | Warehouse: المكرومي المنصورة.pdf
+14. Shortage: 'سيبروسين500مجم10قرص س ج' | New Match: 'None' | Warehouse: كيور فارما خاص.pdf
+15. Shortage: 'سيبروسين500مجم10قرص س ج' | New Match: 'None' | Warehouse: مخزن الحياة فارم اسكندريه-170.p
+16. Shortage: 'سيرفيتولكا ادفانس 20كبسوله س ج' | New Match: 'None' | Warehouse: المكرومي المنصورة.pdf
+17. Shortage: 'سيفيتيل 1جم' | New Match: 'None' | Warehouse: كيور فارما خاص.pdf
+18. Shortage: 'فيوسيدل كريم' | New Match: 'None' | Warehouse: مخزن الحياة فارم اسكندريه-170.p
+19. Shortage: 'كارنيتول بلس برطمان س ج' | New Match: 'None' | Warehouse: المكرومي المنصورة.pdf
+20. Shortage: 'كولونا  3شريط' | New Match: 'None' | Warehouse: الهضبة الاثنين نقدى0.pdf
+21. Shortage: 'لاكتيز 15 ملل نقط 750مجم' | New Match: 'None' | Warehouse: المكرومي المنصورة.pdf
+22. Shortage: 'لاكتيز 15 ملل نقط 750مجم' | New Match: 'None' | Warehouse: كيور فارما خاص.pdf
+23. Shortage: 'نيتروماك ريتارد2.5مجم كبسول' | New Match: 'None' | Warehouse: السلام شبين.pdf
+24. Shortage: 'نيفيلوب12.5/5مجم بلاس20قرص' | New Match: 'None' | Warehouse: كيور فارما خاص.pdf
+

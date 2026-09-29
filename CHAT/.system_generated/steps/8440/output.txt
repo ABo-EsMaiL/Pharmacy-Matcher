@@ -1,0 +1,54 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -172,18 +172,16 @@
+         
+         try:
+             selectors = [
++                'button.model-selector-card',
++                '.settings-model-selector button',
++                '.settings-model-selector',
++                'button[aria-label*="Model" i]',
++                'ms-model-selector button',
++                '.model-selector button',
+                 'mat-select[aria-label*="Model" i]',
+                 'ms-model-selector mat-select',
+                 '.model-selector mat-select',
+-                'mat-select[formcontrolname="model"]',
+                 '[data-test-id="model-selector"]',
+-                '.run-settings-panel mat-select',
+-                'button[aria-label*="Model" i]',
+-                'ms-model-selector button',
+-                '.model-selector button',
+-                'button:has-text("Flash")',
+-                'button:has-text("Gemini")',
+-                'button:has-text("Pro")',
+             ]
+             
+             model_el = None
+@@ -191,6 +191,9 @@
+                 if await loc.count() > 0:
+                     try:
+                         await loc.first.wait_for(state="visible", timeout=2000)
++                        cls = (await loc.first.get_attribute("class") or "").lower()
++                        if "upgrade" in cls:
++                            continue
+                         model_el = loc.first
+                         break
+                     except Exception:
+@@ -201,9 +201,12 @@
+                     cnt = await all_selects.count()
+                     for i in range(cnt):
+                         s = all_selects.nth(i)
++                        cls = (await s.get_attribute("class") or "").lower()
++                        if "upgrade" in cls:
++                            continue
+                         label = (await s.get_attribute("aria-label") or "").lower()
+                         txt = (await s.inner_text() or "").lower()
+-                        if "model" in label or any(m in txt for m in ["gemini", "flash", "pro"]):
++                        if "model" in label or any(m in txt for m in ["gemini-3", "3.8", "flash"]):
+                             model_el = s
+                             break
+                 except Exception:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,26 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-001\input_warehouses
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         9/22/2026   6:43 PM          45658 السلام شبين.json                                                     
+-a----         9/20/2026   1:55 PM          87499 السلام شبين.pdf                                                      
+-a----         9/22/2026   6:56 PM         110366 المكرومي المنصورة.json                                               
+-a----         9/20/2026   1:55 PM         407697 المكرومي المنصورة.pdf                                                
+-a----         9/20/2026   1:55 PM         199787 الهضبة الاثنين نقدى0.pdf                                             
+-a----         9/22/2026   8:33 PM           6882 جملة العمروووو.json                                                  
+-a----         9/20/2026   1:55 PM          58850 جملة العمروووو.pdf                                                   
+-a----         9/22/2026   8:30 PM         151371 كيور فارما خاص.json                                                  
+-a----         9/20/2026   1:55 PM         299097 كيور فارما خاص.pdf                                                   
+-a----         9/22/2026   8:23 PM          49724 مخزن الحياة فارم اسكندريه-170.json                                   
+-a----         9/20/2026   1:55 PM         228520 مخزن الحياة فارم اسكندريه-170.pdf                                    
+
+
+

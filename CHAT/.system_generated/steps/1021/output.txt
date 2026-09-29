@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\file_handler.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -38,7 +38,7 @@
+         elif ext in _PDF_EXTENSIONS:
+             items = _process_pdf_file(filepath, api_key, base_url, gemini_api_key)
+         elif ext in _JSON_EXTENSIONS:
+-            items = _process_json_file(filepath)
++            items = _process_json_file(filepath, gemini_api_key)
+         else:
+             raise ValueError(
+                 f"[!] Unsupported extension: {ext}\n"
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

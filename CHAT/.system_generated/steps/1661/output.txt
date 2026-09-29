@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+Parsed items count: 187
+First 3 items: [{'item_name_raw': 'ابيكوتيل حقن/ابيكو', 'source_page': 1, 'source_file': 'السلام شبين.pdf'}, {'item_name_raw': 'ابينفرين ادرينالين شركة مصر كبير ١٠٠امبول', 'source_page': 1, 'source_file': 'السلام شبين.pdf'}, {'item_name_raw': 'ابينفرين ربع', 'source_page': 1, 'source_file': 'السلام شبين.pdf'}]
+

@@ -1,0 +1,62 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -9,10 +9,32 @@
+ from ..match.text_match import normalize_text
+ 
+ 
+-SYSTEM_PROMPT = """You are a pharmaceutical matching assistant.
+-You will receive a list of cases. Each case has a requested drug name and a list of specific candidate items found in the warehouse.
+-
+-Return ONLY a valid JSON object matching this exact schema:
++SYSTEM_PROMPT = """You are an expert clinical and Egyptian pharmaceutical matching assistant.
++You match requested drug names from pharmacy shortages with candidate items available in wholesale drug warehouses.
++
++CRITICAL PHARMACEUTICAL RULES:
++1. STRENGTH / CONCENTRATION (STRICTEST RULE - ZERO TOLERANCE):
++   - If the requested drug specifies a strength/concentration (e.g. 457mg, 600mg, 500mg, 1000mg/1gm, 20mg, 40mg, 50mg mono vs 50/500mg combination) and the candidate has a DIFFERENT strength:
++     YOU MUST RETURN "status": "no_match".
++     NEVER mark different strengths as "match" or "review"! Different strength = different medicine (e.g., Augmentin 457 vs Augmentin 600 is strictly no_match).
++   - Note equivalencies: 1000mg = 1gm (1000مجم = 1جم), 500mg = 0.5gm, 0.25mg = ربع (250mcg).
++
++2. DOSAGE FORM:
++   - If the requested drug specifies a dosage form (tablets vs syrup vs cream vs drops vs ampoules/injections) and the candidate is a DIFFERENT form (e.g. ampoule vs capsule, or syrup vs tablet):
++     YOU MUST RETURN "status": "no_match".
++
++3. PACKAGING, PACK SIZE, TABLET COUNT & WHOLESALE UNITS (MATCH vs REVIEW):
++   - "match": Exact same active drug brand, same strength, same dosage form.
++     If pack size is identical OR not specified in the requested shortage (e.g. "سيتال اقراص" matching "سيتال اقراص 20 قرص", or "كليكسان 40 حقن" matching "كليكسان 40مجم-84"), return "status": "match".
++   - "review": Same active drug brand, same strength, same dosage form, BUT different pack size, tablet count, or packaging variant (e.g. requested 15 tablets vs candidate 60 tablets, requested 24 tablets vs candidate 48 tablets, requested medium vs candidate large / باكو 25).
++     In this case, return "status": "review" AND provide a clear Arabic explanation in "reason" (e.g. "اختلاف عدد الأقراص: المطلوب 15 قرص والمرشح 60 قرص" or "اختلاف الحجم: المطلوب وسط والمرشح كبير باكو 25").
++
++4. WHOLESALE & PACKAGING METADATA:
++   - Terms like "باكو 25" (pack of 25), "كرتونه 100" (carton of 100), "سعر جديد", "سعر قديم", "س ج", "-84", "-50", "32ب", "/المهن", "/العامرية" indicate wholesale packaging, distributor codes, or prices.
++   - Take them into account to distinguish listings, but if candidate matches the drug, form, and strength, accept it or mark review if wholesale pack quantity differs from requested.
++
++SCHEMA:
++Return ONLY a valid JSON object matching this schema:
+ {
+   "results": [
+     {
+@@ -19,15 +19,11 @@
+-      "status": "match or no_match or review",
+-      "item_id": "string"
++      "status": "match" | "review" | "no_match",
++      "item_id": "string (candidate ID or empty string if no_match)",
++      "reason": "string (Arabic explanation when review, otherwise empty string)"
+     }
+   ]
+ }
+-
+ Rules:
+-1. "match" means the exact same product, strength, dosage form, and pack size. Set "item_id" to the ID of the matching candidate.
+-2. "no_match" means NONE of the provided candidates are a safe match. Set "item_id" to "".
+-3. "review" means there is a plausible candidate but details are ambiguous. Set "item_id" to that candidate's ID.
+-4. ONLY return results for the cases provided.
+-5. DO NOT return markdown blocks. Return ONLY the raw JSON starting with { and ending with }.
++- DO NOT return markdown blocks. Return ONLY the raw JSON starting with { and ending with }.
+ """
+ 
+ class FastCoordinator:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

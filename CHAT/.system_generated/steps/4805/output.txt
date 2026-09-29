@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+req brand: كويتابين
+wh brand: كوتيابين
+fuzz ratio: 87.5
+token sort: 87.5
+fuzz ratio with normalized spaces/farsi: 87.5
+b_sim: 87.5
+STATUS KEPT AS MATCH!
+

@@ -1,0 +1,51 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\fast_main.py","LineNumber":33,"LineContent":"    print(f\"  Model: {getattr(config, 'local_model', 'gpt-4o-mini')} (via MSEMAX Local API)\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\data\\settings.json","LineNumber":6,"LineContent":"  \"local_model\": \"msemax\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\data\\settings.json","LineNumber":7,"LineContent":"  \"msemax_dir\": \"D:\\\\AI_Engineer\\\\MSEMAX\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":15,"LineContent":"from desktop_app.server_manager import MSEMAXServerManager"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":52,"LineContent":"        msemax_dir = settings.get('msemax_dir', '')"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":53,"LineContent":"        if not msemax_dir:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":54,"LineContent":"            msemax_dir = str(PROJECT_ROOT / 'MSEMAX')"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":55,"LineContent":"        self._server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":126,"LineContent":"            \"msemax_dir\": \"\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":137,"LineContent":"            # Update server manager if msemax_dir changed"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":138,"LineContent":"            msemax_dir = settings.get('msemax_dir', '')"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":139,"LineContent":"            if not msemax_dir:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":140,"LineContent":"                msemax_dir = str(PROJECT_ROOT / 'MSEMAX')"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":142,"LineContent":"            if getattr(self._server_manager, 'msemax_dir', None) != msemax_dir:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":146,"LineContent":"                self._server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":163,"LineContent":"    def setup_msemax_requirements(self) -\u003e dict:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\data\\settings.json","LineNumber":5,"LineContent":"  \"msemax_dir\": \"\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":9,"LineContent":"class MSEMAXServerManager:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":10,"LineContent":"    def __init__(self, msemax_dir: str, logger_callback=None):"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":11,"LineContent":"        self.msemax_dir = msemax_dir"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":46,"LineContent":"            self.log(\"[SYSTEM] Starting MSEMAX Server...\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":49,"LineContent":"                cwd=self.msemax_dir,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":86,"LineContent":"            self.log(\"[SYSTEM] Installing MSEMAX requirements...\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":89,"LineContent":"                cwd=self.msemax_dir,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":109,"LineContent":"                cwd=self.msemax_dir,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":122,"LineContent":"                cwd=self.msemax_dir,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1228,"LineContent":"                    \u003cp data-i18n=\"settings_desc\"\u003eقم بضبط إعدادات الربط مع سيرفر الذكاء الاصطناعي (MSEMAX) و Unstructured API وجودة الاستخراج.\u003c/p\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1281,"LineContent":"                                \u003clabel data-i18n=\"lbl_local_url\"\u003eLocal AI URL (MSEMAX / vLLM)\u003c/label\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1299,"LineContent":"                            \u003ch3 data-i18n=\"server_header\"\u003eإعدادات سيرفر (MSEMAX)\u003c/h3\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1303,"LineContent":"                                \u003clabel data-i18n=\"lbl_msemax_dir\"\u003eمسار مجلد MSEMAX\u003c/label\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1305,"LineContent":"                                    \u003cinput type=\"text\" id=\"setting-msemax-dir\" class=\"form-control\" readonly\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1306,"LineContent":"                                    \u003cbutton class=\"btn btn-outline-secondary\" onclick=\"selectMsemaxDir()\" data-i18n=\"btn_select_dir\"\u003eتحديد المجلد\u003c/button\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1463,"LineContent":"        settings_desc: \"قم بضبط إعدادات الربط مع سيرفر الذكاء الاصطناعي (MSEMAX) و Unstructured API وجودة الاستخراج.\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1472,"LineContent":"        lbl_local_url: \"Local AI URL (MSEMAX / vLLM)\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1475,"LineContent":"        server_header: \"إعدادات سيرفر (MSEMAX)\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1476,"LineContent":"        lbl_msemax_dir: \"مسار مجلد MSEMAX\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1567,"LineContent":"        settings_desc: \"Configure AI server (MSEMAX), Unstructured API, and extraction profile.\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1576,"LineContent":"        lbl_local_url: \"Local AI URL (MSEMAX / vLLM)\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1579,"LineContent":"        server_header: \"Server Settings (MSEMAX)\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1580,"LineContent":"        lbl_msemax_dir: \"MSEMAX Directory Path\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2428,"LineContent":"            document.getElementById('setting-msemax-dir').value = settings.msemax_dir || '';"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2443,"LineContent":"        msemax_dir: document.getElementById('setting-msemax-dir').value"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2454,"LineContent":"async function selectMsemaxDir() {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2458,"LineContent":"            document.getElementById('setting-msemax-dir').value = dirPath;"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2469,"LineContent":"        const res = await window.pywebview.api.setup_msemax_requirements();"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":1228,"LineContent":"                    \u003cp data-i18n=\"settings_desc\"\u003eقم بضبط إعدادات الربط مع سيرفر الذكاء الاصطناعي (MSEMAX) و Unstructured API وجودة الاستخراج.\u003c/p\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":1281,"LineContent":"                                \u003clabel data-i18n=\"lbl_local_url\"\u003eLocal AI URL (MSEMAX / vLLM)\u003c/label\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":1299,"LineContent":"                            \u003ch3 data-i18n=\"server_header\"\u003eإعدادات سيرفر (MSEMAX)\u003c/h3\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":1303,"LineContent":"                                \u003clabel data-i18n=\"lbl_msemax_dir\"\u003eمسار مجلد MSEMAX\u003c/label\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\desktop_app\\templates\\index.html","LineNumber":1305,"LineContent":"                                    \u003cinput type=\"text\" id=\"setting-msemax-dir\" class=\"form-control\" readonly\u003e"}
+(...66 more results not shown)

@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+URL: https://accounts.google.com/v3/signin/identifier?continue=https://aistudio.google.com/prompts/new_chat&followup=https://aistudio.google.com/prompts/new_chat&passive=1209600&flowName=WebLiteSignIn&flowEntry=ServiceLogin&dsh=S1327166547:1790263026697464
+Title: Sign in - Google Accounts
+

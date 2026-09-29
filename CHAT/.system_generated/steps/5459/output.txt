@@ -1,0 +1,20 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+('البند', 'العدد', 'النسبة')
+('إجمالي طلبات النواقص (الأسطر)', 993, '-')
+('إجمالي الأصناف الفريدة (المطلوبة)', 591, '100%')
+('تم مطابقتها (مجموع المخازن)', None, None)
+('لم يُعثر عليها', None, None)
+('تحتاج مراجعة', None, None)
+(None, None, None)
+('─── تفاصيل المخازن ───', 'عدد المطابقات', 'أصناف للمراجعة')
+('السلام شبين.pdf', None, None)
+('جملة العمروووو.pdf', None, None)
+('المكرومي المنصورة.pdf', None, None)
+('مخزن الحياة فارم اسكندريه-170.pdf', None, None)
+('الهضبة الاثنين نقدى0.pdf', None, None)
+('كيور فارما خاص.pdf', None, None)
+

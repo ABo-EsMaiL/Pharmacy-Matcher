@@ -1,0 +1,29 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-4730
+Status: DONE
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-4730.log
+Log output:
+<truncated 566 lines>
+5652173913044)
+
+REQ: 'ميوكوسول شراب اطفال س ج'
+  -> WH (المكرومي المنصورة.pdf): 'ميو صغير' (Brand Sim: 85)
+
+REQ: 'نيفيلوب12.5/5مجم بلاس20قرص'
+  -> WH (المكرومي المنصورة.pdf): 'نيفيلوب ٢.٥ سعر جديد ٤٦ ج' (Brand Sim: 100.0)
+
+REQ: 'نيفيلوب12.5/5مجم بلاس20قرص'
+  -> WH (المكرومي المنصورة.pdf): 'نيفيلوب ٥ عاده سعر جديد' (Brand Sim: 85)
+
+REQ: 'نيفيلوب12.5/5مجم بلاس20قرص'
+  -> WH (كيور فارما خاص.pdf): 'نیفلوب مجم اقراص' (Brand Sim: 92.3076923076923)
+
+REQ: 'هيدروكين 200مجم 20قرص س ج'
+  -> WH (السلام شبين.pdf): 'هيدروكينينا' (Brand Sim: 85)
+
+REQ: 'يونيلوكسام500مجم2شريط س ج'
+  -> WH (الهضبة الاثنين نقدى0.pdf): 'یونی ام اقراص/باكت 20' (Brand Sim: 85)
+
+
+Total legitimate rejections with similar brand: 292
+
+Last progress: 6s ago

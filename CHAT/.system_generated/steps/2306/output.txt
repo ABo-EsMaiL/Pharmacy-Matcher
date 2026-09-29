@@ -1,0 +1,30 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2059,7 +2059,8 @@
+ window.addEventListener('process_complete', (e) => {
+     const data = e.detail;
+     
+-    if (data.process_id === currentProcessId) {
++    if (!currentProcessId || data.process_id === currentProcessId) {
++        currentProcessId = data.process_id;
+         const btn = document.getElementById('btn-submit');
+         const progressModal = document.getElementById('progress-modal');
+         const t = I18N[currentLang] || I18N.ar;
+@@ -2081,10 +2081,10 @@
+ 
+ // --- Results Logic ---
+ function loadResults(stats) {
+-    const total = stats.total || 0;
+-    const matched = stats.matched || 0;
+-    const notfound = stats.not_found || 0;
+-    const review = stats.review || 0;
++    const total = stats.total ?? stats.total_shortages ?? 0;
++    const matched = stats.matched ?? stats.matched_count ?? 0;
++    const notfound = stats.not_found ?? stats.not_found_count ?? 0;
++    const review = stats.review ?? stats.review_count ?? 0;
+     
+     document.getElementById('stat-total').innerText = total;
+     document.getElementById('stat-matched').innerText = matched;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

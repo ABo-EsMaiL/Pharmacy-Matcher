@@ -1,0 +1,12 @@
+
+The command exited with code 1.
+Output:
+Get-Process : The 'IncludeUserName' parameter requires elevated user rights. Try running the command again in a 
+session that has been opened with elevated user rights (that is, Run as Administrator).
+At line:1 char:1
++ Get-Process -Id 764 -IncludeUserName -ErrorAction SilentlyContinue
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Get-Process], InvalidOperationException
+    + FullyQualifiedErrorId : IncludeUserNameRequiresElevation,Microsoft.PowerShell.Commands.GetProcessCommand
+ 
+

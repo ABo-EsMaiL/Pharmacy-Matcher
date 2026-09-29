@@ -1,0 +1,2 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3058,"LineContent":"async function loadSettings() {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\app.js","LineNumber":257,"LineContent":"async function loadSettings() {"}

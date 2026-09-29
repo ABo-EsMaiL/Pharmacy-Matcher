@@ -1,0 +1,64 @@
+
+The command exited with code 0.
+Output:
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+
+    to { opacity: 1; transform: translateY(0) scale(1); }
+
+}
+
+
+
+/* -------------------- PROGRESS WIDGET -------------------- */
+
+#progress-modal {
+
+    position: fixed; 
+
+    bottom: 20px; 
+
+    left: 20px; 
+
+    width: 350px;
+
+    background: white; 
+
+    z-index: 9998; 
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    border: 1px solid var(--border-color);
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+#progress-modal .progress-box {
+
+    text-align: right;
+
+}
+
+#progress-modal h3 {
+
+    font-size: 14px;
+
+    margin-top: 0;
+
+    margin-bottom: 10px;
+
+}
+
+#progress-modal p {
+
+    font-size: 12px;
+
+    margin-bottom: 0;
+
+

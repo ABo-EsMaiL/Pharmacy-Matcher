@@ -1,0 +1,25 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\file_handler.py","LineNumber":117,"LineContent":"    \"\"\"Process cached Unstructured JSON to save API limits.\"\"\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":29,"LineContent":"    Checks local cache first, then existing server jobs, and finally uploads if new."}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":43,"LineContent":"            cached_items = parse_structured_result(result_data, filepath.name)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":44,"LineContent":"            if len(cached_items) \u003e 0:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":45,"LineContent":"                print(f\"[+] Loaded {len(cached_items)} items from alongside JSON: {alongside_json.name}\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":46,"LineContent":"                return cached_items"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":50,"LineContent":"    # 1. Local Cache Check"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":52,"LineContent":"    cache_dir = filepath.parent.parent.parent / 'data' / '.unstructured_cache'"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":53,"LineContent":"    cache_dir.mkdir(parents=True, exist_ok=True)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":54,"LineContent":"    cache_file = cache_dir / f\"{file_hash}_extract.json\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":56,"LineContent":"    if cache_file.exists():"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":58,"LineContent":"            with open(cache_file, \"r\", encoding=\"utf-8\") as f:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":60,"LineContent":"            cached_items = parse_structured_result(result_data, filepath.name)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":61,"LineContent":"            if len(cached_items) \u003e 0:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":62,"LineContent":"                print(f\"[+] Loaded {len(cached_items)} items from local cache: {filepath.name}\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":63,"LineContent":"                return cached_items"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":65,"LineContent":"                print(f\"[*] Local cache has 0 items for {filepath.name}. Checking server...\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":67,"LineContent":"            print(f\"[*] Local cache invalid for {filepath.name}. Checking server...\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":135,"LineContent":"                        # Cache locally"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":136,"LineContent":"                        with open(cache_file, \"w\", encoding=\"utf-8\") as f:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":214,"LineContent":"        # Cache only if items extracted"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":216,"LineContent":"            with open(cache_file, \"w\", encoding=\"utf-8\") as f:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":218,"LineContent":"            print(f\"[+] Saved valid local cache for: {filepath.name} ({len(items)} items)\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":239,"LineContent":"                    with open(cache_file, \"w\", encoding=\"utf-8\") as f:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\extract\\pdf_reader.py","LineNumber":243,"LineContent":"                    print(f\"[+] Saved valid local cache via Gemini for: {filepath.name} ({len(items)} items)\")"}

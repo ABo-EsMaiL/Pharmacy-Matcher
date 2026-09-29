@@ -1,0 +1,22 @@
+================================================================================
+VERIFYING MSEMAX LARGE BATCH (75 CASES) ADAPTIVE TIMEOUT & STATE MACHINE
+================================================================================
+[✓] Gateway: MSEMAX (AIStudio Web Hook)
+[✓] Active Model: Gemini 3.8 Flash
+gemini-3.8-fl... (Verified: True)
+[✓] Thinking Mode: High (Verified: True)
+[✓] Clear Chat On Request: True
+
+[+] Built full batch of 75 realistic cases for testing.
+
+[*] Dispatching 75 cases to MSEMAX Gateway...
+
+[✓] SUCCESS: Coordinator received response in 61.21s!
+    - Results count: 75
+    - Sample 1: {'case_id': 'TEST-01', 'status': 'no_match', 'item_id': '', 'reason': 'اختلاف في التركيز: المطلوب 250 مجم والمتاح 500 مجم'}
+    - Sample 2: {'case_id': 'TEST-02', 'status': 'review', 'item_id': 'W1-002', 'reason': 'نفس الدواء والتركيز ولكن الهيئة مختلفة: مطلوب مرهم والمخزن عنده كريم'}
+    - Sample 3: {'case_id': 'TEST-03', 'status': 'match', 'item_id': 'W1-003', 'reason': ''}
+    - Sample 4: {'case_id': 'TEST-04', 'status': 'match', 'item_id': 'W1-004', 'reason': ''}
+    - Sample 5: {'case_id': 'TEST-05', 'status': 'no_match', 'item_id': '', 'reason': 'اختلاف في الاسم التجاري (بديل تجاري): بنادول ليس سيتال'}
+    - Returned Case IDs: 75 / 75
+    [✓] EXACT MATCH: All 75 case IDs returned successfully!

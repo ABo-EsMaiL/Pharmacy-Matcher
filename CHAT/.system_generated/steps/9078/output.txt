@@ -1,0 +1,2 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":311,"LineContent":"class MultiServerManager:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":421,"LineContent":"MSEMAXServerManager = MultiServerManager"}

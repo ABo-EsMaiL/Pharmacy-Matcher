@@ -1,0 +1,11 @@
+
+The command exited with code 1.
+Output:
+Invoke-WebRequest : {"detail":"Not Found"}
+At line:1 char:1
++ Invoke-WebRequest -Uri "http://127.0.0.1:8000/shutdown" -TimeoutSec 2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+

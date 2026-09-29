@@ -1,0 +1,85 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\output\excel_writer.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -142,27 +142,33 @@
+     ws_summary.append(summary_headers)
+     _apply_header_style(ws_summary, len(summary_headers))
+ 
+-    # Row 2: إجمالي الأصناف المطلوبة = المطابقة + غير الموجود + المراجعة
+-    ws_summary.append(["إجمالي الأصناف المطلوبة", "=B3+B4+B5", "100%"])
+-
+-    # Row 3: تم مطابقتها (مجموع مطابقة المخازن من جدول التفاصيل بالأسفل)
++    raw_total = summary.get("total_shortages", 0)
++    unique_total = summary.get("unique_shortages", 0)
++
++    # Row 2: إجمالي طلبات النواقص (الأسطر الأصلية)
++    ws_summary.append(["إجمالي طلبات النواقص (الأسطر)", raw_total, "-"])
++
++    # Row 3: إجمالي الأصناف الفريدة
++    ws_summary.append(["إجمالي الأصناف الفريدة (المطلوبة)", unique_total, "100%"])
++
++    # Row 4: تم مطابقتها (مجموع مطابقة المخازن)
+     num_wh = len(warehouse_results)
+-    wh_sum_formula = f"=SUM(B8:B{7 + num_wh})" if num_wh > 0 else "0"
+-    ws_summary.append(["تم مطابقتها", wh_sum_formula, "=IF(B2>0, B3/B2, 0)"])
+-
+-    # Row 4: لم يُعثر عليها
+-    ws_summary.append(["لم يُعثر عليها", "=MAX(0, COUNTA('لم يُعثر عليه'!A:A)-1)", "=IF(B2>0, B4/B2, 0)"])
+-
+-    # Row 5: تحتاج مراجعة
+-    ws_summary.append(["تحتاج مراجعة", "=MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)", "=IF(B2>0, B5/B2, 0)"])
+-
+-    # Row 6: صف فارغ
++    wh_sum_formula = f"=SUM(B9:B{8 + num_wh})" if num_wh > 0 else "0"
++    ws_summary.append(["تم مطابقتها (مجموع المخازن)", wh_sum_formula, "=IF(B3>0, B4/B3, 0)"])
++
++    # Row 5: لم يُعثر عليها
++    ws_summary.append(["لم يُعثر عليها", "=MAX(0, COUNTA('لم يُعثر عليه'!A:A)-1)", "=IF(B3>0, B5/B3, 0)"])
++
++    # Row 6: تحتاج مراجعة
++    ws_summary.append(["تحتاج مراجعة", "=MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)", "=IF(B3>0, B6/B3, 0)"])
++
++    # Row 7: صف فارغ
+     ws_summary.append([])
+ 
+-    # Row 7: جدول تفاصيل كل مخزن
++    # Row 8: جدول تفاصيل كل مخزن
+     ws_summary.append(["─── تفاصيل المخازن ───", "عدد المطابقات", "أصناف للمراجعة"])
+     for c_idx in range(1, 4):
+-        c = ws_summary.cell(row=7, column=c_idx)
++        c = ws_summary.cell(row=8, column=c_idx)
+         c.fill = _HEADER_FILL
+         c.font = _HEADER_FONT
+         c.alignment = _HEADER_ALIGNMENT
+@@ -169,6 +169,6 @@
+ 
+-    # صفوف المخازن (Rows 8+)
+-    detail_row = 8
++    # صفوف المخازن (Rows 9+)
++    detail_row = 9
+     for wh_name in warehouse_results.keys():
+         sheet_name = _truncate_sheet_name(wh_name)
+         matched_formula = f"=MAX(0, COUNTA('{sheet_name}'!A:A)-1)"
+@@ -177,7 +177,7 @@
+ 
+     # تطبيق التنسيق والخطوط على كل خلايا الملخص
+     for r in range(2, detail_row):
+-        if r == 6 or r == 7:
++        if r == 7 or r == 8:
+             continue
+         for c in range(1, 4):
+             cell = ws_summary.cell(row=r, column=c)
+@@ -186,9 +186,10 @@
+ 
+     # تنسيق النسب المئوية كـ %
+     ws_summary.cell(row=2, column=3).alignment = _CELL_ALIGNMENT
+-    ws_summary.cell(row=3, column=3).number_format = "0.0%"
++    ws_summary.cell(row=3, column=3).alignment = _CELL_ALIGNMENT
+     ws_summary.cell(row=4, column=3).number_format = "0.0%"
+     ws_summary.cell(row=5, column=3).number_format = "0.0%"
++    ws_summary.cell(row=6, column=3).number_format = "0.0%"
+ 
+     _format_sheet(ws_summary, len(summary_headers))
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

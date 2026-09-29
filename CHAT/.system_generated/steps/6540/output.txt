@@ -1,0 +1,60 @@
+
+The command exited with code 1.
+Output:
+Stop-Process : Cannot stop process "python (764)" because of the following error: Access is denied
+At line:1 char:1
++ Stop-Process -Id 764, 1648, 2712, 3524, 18888, 20144, 20572 -Force -E ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (System.Diagnostics.Process (python):Process) [Stop-Process], ProcessCommand 
+   Exception
+    + FullyQualifiedErrorId : CouldNotStopProcess,Microsoft.PowerShell.Commands.StopProcessCommand
+ 
+Stop-Process : Cannot stop process "python (1648)" because of the following error: Access is denied
+At line:1 char:1
++ Stop-Process -Id 764, 1648, 2712, 3524, 18888, 20144, 20572 -Force -E ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (System.Diagnostics.Process (python):Process) [Stop-Process], ProcessCommand 
+   Exception
+    + FullyQualifiedErrorId : CouldNotStopProcess,Microsoft.PowerShell.Commands.StopProcessCommand
+ 
+Stop-Process : Cannot stop process "python (2712)" because of the following error: Access is denied
+At line:1 char:1
++ Stop-Process -Id 764, 1648, 2712, 3524, 18888, 20144, 20572 -Force -E ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (System.Diagnostics.Process (python):Process) [Stop-Process], ProcessCommand 
+   Exception
+    + FullyQualifiedErrorId : CouldNotStopProcess,Microsoft.PowerShell.Commands.StopProcessCommand
+ 
+Stop-Process : Cannot stop process "python (3524)" because of the following error: Access is denied
+At line:1 char:1
++ Stop-Process -Id 764, 1648, 2712, 3524, 18888, 20144, 20572 -Force -E ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (System.Diagnostics.Process (python):Process) [Stop-Process], ProcessCommand 
+   Exception
+    + FullyQualifiedErrorId : CouldNotStopProcess,Microsoft.PowerShell.Commands.StopProcessCommand
+ 
+Stop-Process : Cannot stop process "python (18888)" because of the following error: Access is denied
+At line:1 char:1
++ Stop-Process -Id 764, 1648, 2712, 3524, 18888, 20144, 20572 -Force -E ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (System.Diagnostics.Process (python):Process) [Stop-Process], ProcessCommand 
+   Exception
+    + FullyQualifiedErrorId : CouldNotStopProcess,Microsoft.PowerShell.Commands.StopProcessCommand
+ 
+Stop-Process : Cannot stop process "python (20144)" because of the following error: Access is denied
+At line:1 char:1
++ Stop-Process -Id 764, 1648, 2712, 3524, 18888, 20144, 20572 -Force -E ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (System.Diagnostics.Process (python):Process) [Stop-Process], ProcessCommand 
+   Exception
+    + FullyQualifiedErrorId : CouldNotStopProcess,Microsoft.PowerShell.Commands.StopProcessCommand
+ 
+Stop-Process : Cannot stop process "python (20572)" because of the following error: Access is denied
+At line:1 char:1
++ Stop-Process -Id 764, 1648, 2712, 3524, 18888, 20144, 20572 -Force -E ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (System.Diagnostics.Process (python):Process) [Stop-Process], ProcessCommand 
+   Exception
+    + FullyQualifiedErrorId : CouldNotStopProcess,Microsoft.PowerShell.Commands.StopProcessCommand
+ 
+

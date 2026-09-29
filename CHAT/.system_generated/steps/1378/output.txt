@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+Trying to call jobs.get
+Error: (400)
+Reason: Bad Request
+HTTP response headers: HTTPHeaderDict({'Date': 'Tue, 22 Sep 2026 09:48:53 GMT', 'Content-Type': 'application/json', 'Content-Length': '98', 'Connection': 'keep-alive', 'server': 'uvicorn'})
+HTTP response body: {"code":"invalid_input","message":"The 'include' parameter is only valid when output='elements'."}
+
+

@@ -1,0 +1,41 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -546,8 +546,8 @@
+                             mid = len(cases_chunk) // 2
+                             print(f"      [!] 413 Payload too large on batch {chunk_name}. Adaptively splitting into ({mid} + {len(cases_chunk)-mid})...")
+                             return process_chunk(cases_chunk[:mid], f"{chunk_name}.1") + process_chunk(cases_chunk[mid:], f"{chunk_name}.2")
+-                        if "429" in err_str:
+-                            wait_sec = 25 * (attempt + 1)
++                        if "429" in err_str or "Rate Limited" in err_str or "RateLimit" in err_str:
++                            wait_sec = 45 + (attempt * 25)
+                             print(f"      [!] HTTP 429 Rate Limit on batch {chunk_name}. Waiting {wait_sec}s before retry ({attempt+1}/{max_retries})...")
+                             time.sleep(wait_sec)
+                         elif "NO_RESPONSE_STARTED" in err_str or "NETWORK_CONNECTION_FAILED" in err_str or "Connection to local LLM failed" in err_str:
+@@ -558,7 +558,23 @@
+                         else:
+                             print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} error: {e}")
+                             time.sleep(5)
+-                # NO SILENT FALLBACK TO NO_MATCH! Surface provider failure clearly.
++
++                # If all retries failed due to Rate Limit, divert cases to review instead of crashing entire run!
++                if "429" in str(last_error) or "Rate Limited" in str(last_error) or "RateLimit" in str(last_error):
++                    print(f"      [!] Batch {chunk_name} ({len(cases_chunk)} items) hit persistent rate limit after {max_retries} attempts.")
++                    print(f"      [!] Diverting these items to 'Needs Review' tab to preserve all other warehouse matches safely.")
++                    fallback_parsed = []
++                    for case in cases_chunk:
++                        cand_name = case["candidates"][0]["name"] if case.get("candidates") else ""
++                        fallback_parsed.append({
++                            "shortage_name": case["requested_name"],
++                            "status": "review" if cand_name else "no_match",
++                            "warehouse_item": cand_name,
++                            "reason": "تجاوز حد رسائل ChatGPT (Rate Limit) - يحتاج مراجعة صيدلي" if cand_name else "لا يوجد مرشح مطابق"
++                        })
++                    return fallback_parsed
++
++                # NO SILENT FALLBACK TO NO_MATCH! Surface other provider failures clearly.
+                 print(f"      [X] PROVIDER FAILURE on Batch {chunk_name} after {max_retries} attempts ({last_error}).")
+                 raise RuntimeError(f"Provider failed on Batch {chunk_name}: {last_error}")
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

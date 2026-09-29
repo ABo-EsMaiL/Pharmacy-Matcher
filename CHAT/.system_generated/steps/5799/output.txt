@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+بروتولوك vs كونترولوك -> False (first_letter_mismatch)
+نيوكاربون vs اوكاربون -> False (first_letter_mismatch)
+زنكترون vs زنكتون -> True (valid_92.3076923076923)
+كارنيفيتا vs كارنتينا -> False (low_sim_70.58823529411764)
+جنتازون vs جينتازون -> True (valid_93.33333333333333)
+بروفين vs برونفين -> True (valid_92.3076923076923)
+زيثروماكس vs زيثرون -> False (low_sim_66.66666666666667)
+افيروكوكسيب vs افيروكوسيب -> True (valid_95.23809523809523)
+مكسيدرم vs ميكسيدرم -> True (valid_93.33333333333333)
+

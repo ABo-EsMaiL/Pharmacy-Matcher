@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\e2e_runtime_verification.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -171,6 +171,8 @@
+     print(f"7. Required Schema Conformance:   True (Contains 'results' array with case_id, status, item_id)")
+     print(f"8. Cases Sent vs Returned:        Sent: {len(cases)} cases | Parsed decisions: {len(raw_decisions)}")
+ 
++    res_map = {cases[i]["case_id"]: raw_decisions[i] for i in range(len(cases))}
++
+     print("\n" + "-" * 75)
+     print("           TEST CASES VERIFICATION (EVALUATING 5 RULES)")
+     print("-" * 75)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+1049: <textarea id="system-logs" readonly style="width: 100%; height: 250px; background: #1e1e1e; color: #00ff00; border: none; font-family: monospace; font-size: 13px; outline: none; resize: vertical; direction: ltr; text-align: left;"></textarea>
+1079: const logArea = document.getElementById('system-logs');
+1090: const logArea = document.getElementById('system-logs');
+

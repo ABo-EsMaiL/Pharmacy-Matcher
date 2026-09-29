@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -25,7 +25,7 @@
+      - Tablets/Capsules (اقراص, كبسول, حبوب, فيلم, شريط) ONLY match Tablets/Capsules.
+      - Syrups/Suspensions (شراب, شرب, معلق) ONLY match Syrups. NEVER match tablets with syrup.
+      - Creams (كريم) ONLY match Creams. NEVER match cream with ointment or suppository.
+-     - Oointments (مرهم, دهان) ONLY match Ointments.
++     - Ointments (مرهم, دهان) ONLY match Ointments.
+      - Injections/Ampoules (امبول, حقن, فيال) ONLY match Injections.
+      - Suppositories (لبوس) ONLY match Suppositories.
+      - Drops (نقط, قطرة) ONLY match Drops.
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

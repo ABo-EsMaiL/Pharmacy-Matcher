@@ -1,0 +1,31 @@
+import json
+import os
+import shutil
+import subprocess
+import sys
+import threading
+from pathlib import Path
+import openpyxl
+
+# Add project root to path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
+
+from desktop_app.database import HistoryDB
+from desktop_app.server_manager import MSEMAXServerManager
+
+class API:
+    def __init__(self, window=None):
+        self.window = window
+        self.db = HistoryDB()
+        
+        # Clean up any processes stuck in 'processing' state from a previous crash/close
+        try:
+            self.db.mark_stuck_processes_as_failed()
+        except:
+            pass
+            
+        self.settings_file = PROJECT_ROOT / 'data' / 'settings.json'
+        self.logs = []
+        self.dropped_files = []
+

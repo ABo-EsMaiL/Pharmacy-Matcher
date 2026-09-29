@@ -1,0 +1,127 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy\review\match_guards.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -64,49 +64,77 @@
+     return {form for form, aliases in FORMS.items() if tokens.intersection(normalize(a) for a in aliases.split())}
+ 
+ 
+-def measurements(text):
++STRENGTH_KINDS = {"mass_mg", "volume_ml", "percent"}
++
++def strength_measurements(text):
++    """Extracts only critical strengths/concentrations (mass, volume, percent).
++    Pack sizes (tablets, strips, counts) are excluded as they do not prevent matching.
++    """
+     found = Counter()
+     for match in MEASURE.finditer(product_text(text)):
+         kind, factor = UNITS[match["unit"]]
+-        found[(kind, Decimal(match["number"]) * factor)] += 1
++        if kind in STRENGTH_KINDS:
++            found[(kind, Decimal(match["number"]) * factor)] += 1
+     return found
+ 
+ 
+-def reversal_hint(request, candidate):
+-    left, right = TOKENS.findall(normalize(request)), TOKENS.findall(normalize(candidate))
+-    if len(left) != len(right):
+-        return False
+-    changed = False
+-    for a, b in zip(left, right):
+-        if a == b:
+-            continue
+-        if len(a) >= 4 and re.fullmatch(r"[\u0621-\u064a]+", a) and a == b[::-1]:
+-            changed = True
+-        else:
+-            return False
+-    return changed
+-
+-
+ def guard_decision(case, decision, catalog):
+-    result = {**decision, "model_status": decision["status"],
+-              "model_item_ids": list(decision["item_ids"]), "model_reason": decision["reason"],
+-              "guard_notes": []}
++    """
++    Applies the new approved pharmaceutical Decision Graph:
++    1. Strength / Concentration is a RED LINE: Explicit conflict -> NO_MATCH.
++    2. Dosage Form: Different form with matching product and strength -> REVIEW.
++    3. Packaging / Pack Count / Bare Numbers / Price markers -> DO NOT prevent MATCH.
++    4. Reversal / OCR hints -> REVIEW.
++    """
++    result = {
++        **decision,
++        "model_status": decision["status"],
++        "model_item_ids": list(decision.get("item_ids", [])),
++        "model_reason": decision.get("reason", ""),
++        "guard_notes": []
++    }
+     by_id = {p["id"]: p["name"] for p in catalog}
+-    if decision["status"] == "match":
+-        required = measurements(case["requested_name"])
+-        for item_id in decision["item_ids"]:
+-            missing = required - measurements(by_id[item_id])
+-            if missing:
+-                result["guard_notes"].append(
+-                    "الوصف المطلوب فيه قياس أو عدد صريح لم يثبت بنفس القيمة والوحدة في وصف المخزن: " + item_id)
+-            if bare_numbers(case["requested_name"]) - bare_numbers(by_id[item_id]):
+-                result["guard_notes"].append("يوجد رقم إضافي في وصف الطلب لم تُثبت دلالته ومقابلته في وصف المخزن: " + item_id)
+-            requested_forms, supplied_forms = dosage_forms(case["requested_name"]), dosage_forms(by_id[item_id])
+-            if requested_forms - supplied_forms or (requested_forms and supplied_forms - requested_forms):
+-                result["guard_notes"].append("الشكل المذكور صراحةً في الطلب غير مثبت أو متعارض مع وصف المخزن: " + item_id)
+-        if result["guard_notes"]:
+-            result["status"] = "review"
+-    elif decision["status"] == "no_match":
++
++    if decision.get("status") == "match":
++        req_strengths = strength_measurements(case["requested_name"])
++        requested_forms = dosage_forms(case["requested_name"])
++
++        valid_match_ids = []
++        for item_id in decision.get("item_ids", []):
++            cand_name = by_id.get(item_id, "")
++            cand_strengths = strength_measurements(cand_name)
++            supplied_forms = dosage_forms(cand_name)
++
++            # Rule 1: Strength conflict is a RED LINE (NO_MATCH)
++            # If both have explicit strengths and they conflict
++            if req_strengths and cand_strengths and req_strengths != cand_strengths:
++                result["guard_notes"].append(
++                    f"اختلاف صريح في التركيز (خط أحمر): {case['requested_name']} vs {cand_name}"
++                )
++                continue
++
++            # Rule 2: Dosage form conflict -> REVIEW (does not reject, but requires pharmacist review)
++            if requested_forms and supplied_forms and requested_forms != supplied_forms:
++                result["guard_notes"].append(
++                    f"نفس المنتج والتركيز ولكن مع اختلاف في الشكل الدوائي: مطلوب {requested_forms} والمخزن {supplied_forms}"
++                )
++
++            valid_match_ids.append(item_id)
++
++        # Evaluate final status
++        if not valid_match_ids and decision.get("item_ids"):
++            # All candidates failed the strength red line
++            result["status"] = "no_match"
++            result["item_ids"] = []
++            result["reason"] = "اختلاف صريح في التركيز يمنع المطابقة تماماً (خط أحمر)."
++        elif any("اختلاف في الشكل الدوائي" in note for note in result["guard_notes"]):
++            result["status"] = "review"
++            result["item_ids"] = valid_match_ids
++            result["reason"] = " | ".join(result["guard_notes"])
++        else:
++            result["item_ids"] = valid_match_ids
++
++    elif decision.get("status") == "no_match":
+         possible = [p["id"] for p in catalog if reversal_hint(case["requested_name"], p["name"])]
+         if possible:
+             result["status"] = "review"
+@@ -113,5 +113,5 @@
+-            result["guard_notes"].append("الكود وجد احتمال اسم بحروف عربية معكوسة مع تطابق بقية الكلمات والأرقام؛ يلزم فحصه.")
+-    if result["guard_notes"]:
+-        result["reason"] = " | ".join(result["guard_notes"])
++            result["guard_notes"].append("احتمال اسم بحروف عربية معكوسة مع تطابق بقية الرموز؛ يلزم فحصه.")
++            result["reason"] = " | ".join(result["guard_notes"])
++
+     return result
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

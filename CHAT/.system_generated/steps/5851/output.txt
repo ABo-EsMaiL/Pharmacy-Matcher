@@ -1,0 +1,4 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":15,"LineContent":"from desktop_app.server_manager import MSEMAXServerManager"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":55,"LineContent":"        self._server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":146,"LineContent":"                self._server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\server_manager.py","LineNumber":9,"LineContent":"class MSEMAXServerManager:"}

@@ -1,0 +1,217 @@
+
+The command exited with code 0.
+Output:
+<truncated 21 lines>
+
+
+def _poll_for_result(poll_url: str, headers: dict) -> dict:
+    """
+    الاستعلام المتكرر عن حالة مهمة غير متزامنة حتى اكتمالها.
+    """
+    for attempt in range(1, _MAX_POLL_ATTEMPTS + 1):
+        time.sleep(_POLL_INTERVAL_SECONDS)
+        resp = requests.get(poll_url, headers=headers)
+
+        if resp.status_code != 200:
+            print(f"  ⚠️ خطأ في الاستعلام (محاولة {attempt}): {resp.status_code}")
+            continue
+
+        data = resp.json()
+        status = data.get("status", "")
+
+        if status == "completed":
+            print(f"  ✅ اكتملت المهمة (بعد {attempt * _POLL_INTERVAL_SECONDS} ثانية)")
+            # النتائج قد تكون في data["elements"] أو data نفسه
+            return data.get("elements", data)
+
+        if status in ("failed", "error"):
+            raise RuntimeError(
+                f"❌ فشلت مهمة Unstructured API: {data.get('error', 'خطأ غير معروف')}"
+            )
+
+        print(
+            f"  ⏳ الحالة: {status} (محاولة {attempt}/{_MAX_POLL_ATTEMPTS})"
+        )
+
+    raise RuntimeError(
+        f"❌ انتهت مهلة الانتظار ({_MAX_POLL_ATTEMPTS * _POLL_INTERVAL_SECONDS} ثانية) "
+        f"للمهمة غير المتزامنة"
+    )
+
+
+def _normalize_response(response: dict | list) -> list[dict]:
+    """تحويل الاستجابة إلى قائمة عناصر موحدة."""
+    if isinstance(response, list):
+        return response
+    if isinstance(response, dict):
+        # قد تكون العناصر في مفتاح 'elements' أو الاستجابة نفسها عنصر واحد
+        if "elements" in response:
+            return response["elements"]
+        return [response]
+    return []
+
+
+def _try_extracted_data(elements: list[dict]) -> list[dict]:
+    """محاولة استخراج الأصناف من حقل extracted_data."""
+    items: list[dict] = []
+    for elem in elements:
+        extracted = elem.get("extracted_data")
+        if not extracted:
+            continue
+
+        # extracted_data قد يكون قائمة أو قاموس
+        if isinstance(extracted, list):
+            for entry in extracted:
+                name = entry.get("name") or entry.get("item_name") or entry.get("text", "")
+                name = str(name).strip()
+                if name:
+                    page = elem.get("metadata", {}).get("page_number")
+                    items.append({"item_name_raw": name, "source_page": page})
+        elif isinstance(extracted, dict):
+            # قد يحتوي على items أو rows
+            for key in ("items", "rows", "data"):
+                if key in extracted and isinstance(extracted[key], list):
+                    for entry in extracted[key]:
+                        if isinstance(entry, dict):
+                            name = (
+                                entry.get("name")
+                                or entry.get("item_name")
+                                or entry.get("text", "")
+                            )
+                        else:
+                            name = str(entry)
+                        name = str(name).strip()
+                        if name:
+                            page = elem.get("metadata", {}).get("page_number")
+                            items.append({"item_name_raw": name, "source_page": page})
+
+    return items
+
+
+def _try_html_tables(elements: list[dict]) -> list[dict]:
+    """
+    محاولة استخراج الأصناف من جداول HTML في عناصر Table.
+
+    يبحث عن العمود الذي يحتوي على أسماء الأدوية (نص عربي أو أطول النصوص).
+    """
+    items: list[dict] = []
+    arabic_pattern = re.compile(r"[\u0600-\u06FF]")
+
+    for elem in elements:
+        if elem.get("type") != "Table":
+            continue
+
+        html = elem.get("metadata", {}).get("text_as_html", "")
+        if not html:
+            continue
+
+        page = elem.get("metadata", {}).get("page_number")
+        table_items = _parse_html_table(html, arabic_pattern)
+
+        for name in table_items:
+            items.append({"item_name_raw": name, "source_page": page})
+
+    return items
+
+
+def _parse_html_table(html: str, arabic_pattern: re.Pattern) -> list[str]:
+    """
+    تحليل جدول HTML بسيط واستخراج أسماء الأدوية.
+
+    يبحث عن العمود الذي يحتوي على نصوص عربية أو أطول النصوص.
+    """
+    # استخراج الصفوف: كل <tr>...</tr>
+    row_pattern = re.compile(r"<tr[^>]*>(.*?)</tr>", re.DOTALL | re.IGNORECASE)
+    cell_pattern = re.compile(r"<t[dh][^>]*>(.*?)</t[dh]>", re.DOTALL | re.IGNORECASE)
+    tag_stripper = re.compile(r"<[^>]+>")
+
+    rows_html = row_pattern.findall(html)
+    if not rows_html:
+        return []
+
+    # تحليل جميع الصفوف إلى قائمة من قوائم الخلايا
+    parsed_rows: list[list[str]] = []
+    for row_html in rows_html:
+        cells = cell_pattern.findall(row_html)
+        cleaned = [tag_stripper.sub("", c).strip() for c in cells]
+        parsed_rows.append(cleaned)
+
+    if len(parsed_rows) < 2:
+        return []
+
+    # تحديد عدد الأعمدة
+    num_cols = max(len(row) for row in parsed_rows)
+    if num_cols == 0:
+        return []
+
+    # البحث عن عمود أسماء الأدوية
+    # تخطي الصف الأول (عناوين) وفحص بقية الصفوف
+    data_rows = parsed_rows[1:]
+    best_col = 0
+    best_score = -1
+
+    for col_idx in range(num_cols):
+        score = 0
+        for row in data_rows:
+            if col_idx >= len(row):
+                continue
+            cell_text = row[col_idx]
+            arabic_count = len(arabic_pattern.findall(cell_text))
+            if arabic_count > 0:
+                score += len(cell_text) * (arabic_count / max(len(cell_text), 1))
+
+        if score > best_score:
+            best_score = score
+            best_col = col_idx
+
+    # إذا لم يُعثر على نص عربي، اختيار العمود الأطول
+    if best_score <= 0:
+        col_lengths = [0] * num_cols
+        for row in data_rows:
+            for col_idx, cell in enumerate(row):
+                col_lengths[col_idx] += len(cell)
+        best_col = col_lengths.index(max(col_lengths)) if col_lengths else 0
+
+    # استخراج القيم من العمود المحدد
+    names: list[str] = []
+    for row in data_rows:
+        if best_col < len(row):
+            name = row[best_col].strip()
+            if name:
+                names.append(name)
+
+    return names
+
+
+def _try_text_content(elements: list[dict]) -> list[dict]:
+    """
+    محاولة استخراج الأصناف من المحتوى النصي.
+
+    يجمع النصوص من عناصر NarrativeText وTitle ويفصلها بالأسطر.
+    """
+    items: list[dict] = []
+    arabic_pattern = re.compile(r"[\u0600-\u06FF]")
+
+    for elem in elements:
+        text = elem.get("text", "").strip()
+        if not text:
+            continue
+
+        page = elem.get("metadata", {}).get("page_number")
+
+        # تقسيم النص إلى أسطر وفحص كل سطر
+        for line in text.split("\n"):
+            line = line.strip()
+            if not line or len(line) < 3:
+                continue
+
+            # قبول الأسطر التي تحتوي على نص عربي أو أسماء أدوية (حروف لاتينية + أرقام)
+            has_arabic = bool(arabic_pattern.search(line))
+            has_drug_chars = bool(re.search(r"[a-zA-Z]{3,}", line))
+
+            if has_arabic or has_drug_chars:
+                items.append({"item_name_raw": line, "source_page": page})
+
+    return items
+
+

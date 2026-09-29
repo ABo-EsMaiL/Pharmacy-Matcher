@@ -1,0 +1,11 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Amro cache files: []
+
+PROC-001 Amro sheet rows:
+  ('اسم الصنف المطلوب', 'اسم الصنف في المخزن', 'درجة التطابق')
+  ('امبوفير 5امبول س ج', 'امبوفير حقن جديد', 'مطابقة ذكية (AI)')
+

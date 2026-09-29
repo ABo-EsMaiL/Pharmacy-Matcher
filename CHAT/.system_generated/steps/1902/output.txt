@@ -1,0 +1,24 @@
+Found 23 results
+data
+data/history.db
+data/processes
+data/processes/PROC-001
+data/processes/PROC-001/input_shortages
+data/processes/PROC-001/input_warehouses
+data/processes/PROC-001/output
+data/processes/data
+desktop_app
+desktop_app/__pycache__
+desktop_app/static
+desktop_app/templates
+output
+src
+src/__pycache__
+src/extract
+src/extract/__pycache__
+src/fast_match
+src/fast_match/__pycache__
+src/match
+src/match/__pycache__
+src/output
+src/output/__pycache__

@@ -1,0 +1,25 @@
+
+The command exited with code 0.
+Output:
+[1] Extensions Check:
+  Excel: {'.xls', '.xlsx', '.xlsm'}
+  MD: {'.md', '.markdown'}
+  PDF: {'.pdf'}
+  -> Reading Markdown file: sample_test.md
+  -> Extracted 2 items from Markdown tables.
+
+[2] Markdown Items extracted: 2
+   - بانادول اكسترا 24 قرص
+   - اوجمنتين 1 جم 14 قرص
+
+[3] Config Check:
+  Vision URL: http://127.0.0.1:8001/v1/chat/completions
+  Vision Model: gemini-3.8-flash
+
+[4] Server Manager Check:
+  GAI Studio Dir: D:\AI_Engineer\MSEMAX-GAIStudio-vision
+  GAI Studio Port: 8001
+  GAI Studio Name: MSEMAX (Google AI Studio - Vision)
+
+[+] All core modules imported and verified successfully!
+

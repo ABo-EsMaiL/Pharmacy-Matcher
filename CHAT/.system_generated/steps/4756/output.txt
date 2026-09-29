@@ -1,0 +1,11 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\trace_dexa.py", line 17, in <module>
+    cands = finder.find_candidates("ديكساتوبرين مرهم س ج", limit=10, min_score=0.25)
+            ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'FastCandidateFinder' object has no attribute 'find_candidates'
+

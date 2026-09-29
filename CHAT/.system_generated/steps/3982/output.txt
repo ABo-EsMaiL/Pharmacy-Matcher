@@ -1,0 +1,15 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Total matched requested items across sheets: 0
+Total review requested items across sheets: 0
+Traceback (most recent call last):
+  File "D:\AI_Engineer\Pharmacy-agy\scratch\find_false_negatives.py", line 38, in <module>
+    shortage_rows = read_excel(shortages_file)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Engineer\Pharmacy-agy\src\extract\excel_reader.py", line 13, in read_excel
+    raise FileNotFoundError(f"File not found: {filepath}")
+FileNotFoundError: File not found: data\input\shortages\0913.xlsx
+

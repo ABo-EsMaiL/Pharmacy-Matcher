@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+B6: =MAX(0, COUNTA('يحتاج مراجعة'!B:B)-1)
+Review rows: 6
+

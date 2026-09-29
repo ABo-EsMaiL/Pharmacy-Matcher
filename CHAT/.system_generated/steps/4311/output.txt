@@ -1,0 +1,117 @@
+
+The command exited with code 0.
+Output:
+<truncated 133 lines>
+    Was matched with: 'کولمدیتین اقراص/پاکت 63'
+    Current status in PROC-002: NOT FOUND
+18. [الهضبة الاثنين نقدى0.pdf] Shortage: 'كويتابين 25مجم 30قرص س ج'
+    Was matched with: 'کوتیاپین 25 مج اقراص'
+    Current status in PROC-002: NOT FOUND
+19. [الهضبة الاثنين نقدى0.pdf] Shortage: 'لبن بيبيلاك 3 بيبي جونيور'
+    Was matched with: 'بیلاک 3 بیبی جونیر/باکت 12 تشغیلا'
+    Current status in PROC-002: NOT FOUND
+20. [مخزن الحياة فارم اسكندريه-170.p] Shortage: 'ليفابيون 6امبول'
+    Was matched with: 'لیپابیون آمپول باکت 25'
+    Current status in PROC-002: NOT FOUND
+21. [الهضبة الاثنين نقدى0.pdf] Shortage: 'ليمتلس كروماكس كت30كيس س ج'
+    Was matched with: 'يمتليس كروماتكس كت 30 كيس جديد'
+    Current status in PROC-002: Matched in other WH: ['مخزن الحياة فارم اسكندريه-170.p']
+22. [كيور فارما خاص.pdf] Shortage: 'ليمتلس كروماكس كت30كيس س ج'
+    Was matched with: 'لیمپس کرومکس کت ک/ایفا'
+    Current status in PROC-002: Matched in other WH: ['مخزن الحياة فارم اسكندريه-170.p']
+23. [السلام شبين.pdf] Shortage: 'ميبو مرهم 15جم صغير س ج'
+    Was matched with: 'ميمو مرهم صغير/جلفار'
+    Current status in PROC-002: NOT FOUND
+24. [مخزن الحياة فارم اسكندريه-170.p] Shortage: 'ناتريلكس اس ار 30قرص س ج'
+    Was matched with: 'ناتریلیکس اس ار سریدید'
+    Current status in PROC-002: NOT FOUND
+25. [كيور فارما خاص.pdf] Shortage: 'نانازوكسيد500مجم18قرص س ج'
+    Was matched with: 'نازروکسید اقراص'
+    Current status in PROC-002: NOT FOUND
+26. [السلام شبين.pdf] Shortage: 'نيتروماك ريتارد2.5مجم كبسول س ج'
+    Was matched with: 'نيتروماك ريتارد كبسول/التنشيط'
+    Current status in PROC-002: NOT FOUND
+27. [السلام شبين.pdf] Shortage: 'نيوكاربون30قرص س ج'
+    Was matched with: 'اوكاربون اقراص/اسبيكو'
+    Current status in PROC-002: NOT FOUND
+28. [السلام شبين.pdf] Shortage: 'هيدروكين 200مجم 20قرص س ج'
+    Was matched with: 'هيدروكينينا'
+    Current status in PROC-002: NOT FOUND
+29. [الهضبة الاثنين نقدى0.pdf] Shortage: 'يوكيراتو كريم س ج'
+    Was matched with: 'یوریکیر کریم/باكت 80'
+    Current status in PROC-002: NOT FOUND
+
+--- ALL NEWLY ADDED MATCHES IN PROC-002 ---
+1. [مخزن الحياة فارم اسكندريه-170.p] Shortage: 'اتلابسلس نقط'
+    Now matched with: 'اوتال نقط / باكه 66'
+    Previous status in PROC-001: WAS NOT FOUND
+2. [كيور فارما خاص.pdf] Shortage: 'اليرزون كريم س ج'
+    Now matched with: 'اليريزون ٢٥ مجم كريم'
+    Previous status in PROC-001: Was matched in other WH: ['الهضبة الاثنين نقدى0.pdf']
+3. [المكرومي المنصورة.pdf] Shortage: 'ايتوريكوكس90مجم30قرص س ج'
+    Now matched with: 'ريكوكسين ٩٠ سعر جديد ٢٩٧'
+    Previous status in PROC-001: WAS NOT FOUND
+4. [كيور فارما خاص.pdf] Shortage: 'ايجيكوستات بلس /مينالاكس'
+    Now matched with: 'ابيجيكوست بلس اقراص بديل مينالاكس'
+    Previous status in PROC-001: WAS NOT FOUND
+5. [المكرومي المنصورة.pdf] Shortage: 'ايموكسكلاف642مجم شراب'
+    Now matched with: 'ايموكسكلاف ٤٢،١ شراب'
+    Previous status in PROC-001: WAS NOT FOUND
+6. [الهضبة الاثنين نقدى0.pdf] Shortage: 'ب ك ميرز كبسول س ج'
+    Now matched with: 'ميرز كبسول/باكت 30'
+    Previous status in PROC-001: WAS NOT FOUND
+7. [المكرومي المنصورة.pdf] Shortage: 'بانتوبرازول 40 مجم اقراص س ج'
+    Now matched with: 'انتوبرال ٤٠ سعر جديد'
+    Previous status in PROC-001: WAS NOT FOUND
+8. [المكرومي المنصورة.pdf] Shortage: 'باولوكير نقط س ج/بيكولاكس'
+    Now matched with: 'بيولاكس نقط س.ج ٢٤ج'
+    Previous status in PROC-001: WAS NOT FOUND
+9. [المكرومي المنصورة.pdf] Shortage: 'تادالاندرو5جم30قرص'
+    Now matched with: 'تادانيرفي ٥ مجم سعر جديد ٢٧٠'
+    Previous status in PROC-001: WAS NOT FOUND
+10. [كيور فارما خاص.pdf] Shortage: 'ترايملازما كريم س ج'
+    Now matched with: 'ترابلاماز کریم جدید'
+    Previous status in PROC-001: WAS NOT FOUND
+11. [الهضبة الاثنين نقدى0.pdf] Shortage: 'ديكلوبرو150مجم 20قرص س ج'
+    Now matched with: 'دیکلوبرو 150 مج اقراض/باکت10'
+    Previous status in PROC-001: Was in REVIEW in الهضبة الاثنين نقدى0.pdf (Cand: دیکلوبرو 150 مج اقراض/باکت10)
+12. [مخزن الحياة فارم اسكندريه-170.p] Shortage: 'زنكترون 30كبسولة س ج'
+    Now matched with: 'زنكترون اقراص باكت 160'
+    Previous status in PROC-001: WAS NOT FOUND
+13. [المكرومي المنصورة.pdf] Shortage: 'سيبروباي 750مجم10قرص'
+    Now matched with: 'سيروفار ٧٥٠ اقراص/فاركو'
+    Previous status in PROC-001: WAS NOT FOUND
+14. [كيور فارما خاص.pdf] Shortage: 'سيبروسين500مجم10قرص س ج'
+    Now matched with: 'سيبرو ٥٠٠ مجم قرص/امفيس'
+    Previous status in PROC-001: WAS NOT FOUND
+15. [مخزن الحياة فارم اسكندريه-170.p] Shortage: 'سيبروسين500مجم10قرص س ج'
+    Now matched with: 'سيبرو 500 مجم فموي'
+    Previous status in PROC-001: WAS NOT FOUND
+16. [المكرومي المنصورة.pdf] Shortage: 'سيرفيتولكا ادفانس 20كبسوله س ج'
+    Now matched with: 'سيروفلوكا ادفانس ٢٠ كبسولة'
+    Previous status in PROC-001: Was matched in other WH: ['كيور فارما خاص.pdf']
+17. [كيور فارما خاص.pdf] Shortage: 'سيفيتيل 1جم'
+    Now matched with: 'سيديتيل ١ جم اقراص فوار'
+    Previous status in PROC-001: WAS NOT FOUND
+18. [مخزن الحياة فارم اسكندريه-170.p] Shortage: 'فيوسيدل كريم'
+    Now matched with: 'فیوسیدین کریم 20 جرام وسط'
+    Previous status in PROC-001: WAS NOT FOUND
+19. [المكرومي المنصورة.pdf] Shortage: 'كارنيتول بلس برطمان س ج'
+    Now matched with: 'ال كارنتين بلس ق س.ج ١١٦ج'
+    Previous status in PROC-001: Was matched in other WH: ['كيور فارما خاص.pdf']
+20. [الهضبة الاثنين نقدى0.pdf] Shortage: 'كولونا  3شريط'
+    Now matched with: 'کولونا 40 مج رگ پاکت 15'
+    Previous status in PROC-001: Was matched in other WH: ['المكرومي المنصورة.pdf']
+21. [المكرومي المنصورة.pdf] Shortage: 'لاكتيز 15 ملل نقط 750مجم'
+    Now matched with: 'لاكتيز نقط بالفم ٥ مل ١٩٠'
+    Previous status in PROC-001: WAS NOT FOUND
+22. [كيور فارما خاص.pdf] Shortage: 'لاكتيز 15 ملل نقط 750مجم'
+    Now matched with: 'لاکتز، ۷۵۰، ۱۵ قطره ۵ ملی جدید'
+    Previous status in PROC-001: WAS NOT FOUND
+23. [السلام شبين.pdf] Shortage: 'نيتروماك ريتارد2.5مجم كبسول'
+    Now matched with: 'نيتروماك ريتارد كبسول/التنشيط'
+    Previous status in PROC-001: WAS NOT FOUND
+24. [كيور فارما خاص.pdf] Shortage: 'نيفيلوب12.5/5مجم بلاس20قرص'
+    Now matched with: 'نیفلوب بلس ۰/۱۲/۵ مجم قرص'
+    Previous status in PROC-001: WAS NOT FOUND
+

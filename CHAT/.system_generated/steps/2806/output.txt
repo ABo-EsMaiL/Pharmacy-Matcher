@@ -1,0 +1,31 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2281,7 +2281,12 @@
+ 
+ async function restartProcess(processId) {
+     const t = I18N[currentLang] || I18N.ar;
+-    try {
++    if (isProcessRunning) {
++        showToast(currentLang === 'en' ? 'A matching process is currently running. Please wait.' : 'توجد عملية مطابقة قيد التشغيل حالياً، يرجى الانتظار حتى تنتهي', 'warning');
++        return;
++    }
++    try {
++        isProcessRunning = true;
+         const res = await window.pywebview.api.restart_process(processId);
+         if (res.success) {
+             currentProcessId = res.process_id;
+@@ -2300,9 +2300,11 @@
+             
+             showToast(t.toast_started, 'success');
+         } else {
++            isProcessRunning = false;
+             showToast(res.error || (currentLang === 'en' ? 'Restart failed' : 'حدث خطأ أثناء إعادة التشغيل'), 'error');
+         }
+     } catch (e) {
++        isProcessRunning = false;
+         showToast(currentLang === 'en' ? 'Connection error' : 'خطأ في الاتصال بالبرنامج', 'error');
+         console.error(e);
+     }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,60 @@
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+
+============================================================
+[*] Processing Warehouse files (6 file(s)) [PARALLEL WORKERS]
+============================================================
+
+  -> [START] Processing file: السلام شبين.pdf (Type: .pdf)
+[*] Processing PDF file: السلام شبين.pdf
+
+  -> [START] Processing file: المكرومي المنصورة.pdf (Type: .pdf)
+[*] Processing PDF file: المكرومي المنصورة.pdf
+
+  -> [START] Processing file: الهضبة الاثنين نقدى0.pdf (Type: .pdf)
+[*] Processing PDF file: الهضبة الاثنين نقدى0.pdf
+
+  -> [START] Processing file: جملة العمروووو.pdf (Type: .pdf)
+[*] Processing PDF file: جملة العمروووو.pdf
+
+  -> [START] Processing file: كيور فارما خاص.pdf (Type: .pdf)
+[+] Loaded 187 items from local cache: السلام شبين.pdf
+  -> [DONE] السلام شبين.pdf: 187 items extracted.
+
+  -> [START] Processing file: مخزن الحياة فارم اسكندريه-170.pdf (Type: .pdf)
+[*] Processing PDF file: كيور فارما خاص.pdf
+[*] Processing PDF file: مخزن الحياة فارم اسكندريه-170.pdf
+[+] Loaded 19 items from local cache: جملة العمروووو.pdf
+  -> [DONE] جملة العمروووو.pdf: 19 items extracted.
+[+] Loaded 1071 items from local cache: الهضبة الاثنين نقدى0.pdf
+  -> [DONE] الهضبة الاثنين نقدى0.pdf: 1071 items extracted.
+[+] Loaded 503 items from local cache: المكرومي المنصورة.pdf
+  -> [DONE] المكرومي المنصورة.pdf: 503 items extracted.
+[+] Loaded 715 items from local cache: كيور فارما خاص.pdf
+  -> [DONE] كيور فارما خاص.pdf: 715 items extracted.
+[+] Loaded 222 items from local cache: مخزن الحياة فارم اسكندريه-170.pdf
+  -> [DONE] مخزن الحياة فارم اسكندريه-170.pdf: 222 items extracted.
+
+============================================================
+[+] Completed Warehouse: 2717 items from 6 file(s)
+============================================================
+
+Loaded 591 unique shortages, 6 warehouses.
+السلام شبين.pdf: Exact=0 | AutoMatch=30 | AmbiguousSentToLLM=161
+جملة العمروووو.pdf: Exact=0 | AutoMatch=4 | AmbiguousSentToLLM=46
+الهضبة الاثنين نقدى0.pdf: Exact=0 | AutoMatch=48 | AmbiguousSentToLLM=271
+المكرومي المنصورة.pdf: Exact=1 | AutoMatch=40 | AmbiguousSentToLLM=244
+كيور فارما خاص.pdf: Exact=0 | AutoMatch=39 | AmbiguousSentToLLM=275
+مخزن الحياة فارم اسكندريه-170.pdf: Exact=0 | AutoMatch=23 | AmbiguousSentToLLM=193
+
+TOTAL ACROSS WAREHOUSES:
+Exact Text Matches: 1
+Deterministic Auto-Matches (Level 2): 184
+Total Direct Matches (Level 1+2 without LLM!): 185
+Ambiguous Cases Sent to LLM (Level 3): 1190

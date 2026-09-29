@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+1114 <button id="btn-submit" class="btn btn-primary btn-massive" onclick="submitProcess()" disabled>
+1931 document.getElementById('btn-submit').removeAttribute('disabled');
+1990 const btn = document.getElementById('btn-submit');
+2009 const btn = document.getElementById('btn-submit');
+2116 const btn = document.getElementById('btn-submit');
+2337 const btn = document.getElementById('btn-submit');
+

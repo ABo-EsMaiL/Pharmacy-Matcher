@@ -1,0 +1,34 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -998,7 +998,9 @@
+     chunk_id = f"chatcmpl-{uuid.uuid4().hex[:12]}"
+     now = int(time.time())
+     model_name = chat_request.model or DEFAULT_MODEL
+-    logger.info(f"Incoming /v1/chat/completions prompt ({len(prompt)} chars): {repr(prompt[:80])}")
++    batch_size_header = request.headers.get("x-batch-size")
++    batch_size = int(batch_size_header) if (batch_size_header and batch_size_header.isdigit()) else None
++    logger.info(f"Incoming /v1/chat/completions prompt ({len(prompt)} chars, batch_size={batch_size}): {repr(prompt[:80])}")
+ 
+     async def sse_generator():
+         async with sem:
+@@ -1011,7 +1011,7 @@
+                 }
+                 yield f"data: {json.dumps(first_chunk, ensure_ascii=False)}\n\n"
+ 
+-                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name):
++                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size):
+                     if isinstance(chunk_data, dict):
+                         delta = chunk_data["delta"]
+                     else:
+@@ -1050,7 +1050,7 @@
+         full_text = ""
+         async with sem:
+             async with browser_manager.lock:
+-                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name):
++                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size):
+                     if isinstance(chunk_data, dict):
+                         full_text = chunk_data["text"]
+                     else:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

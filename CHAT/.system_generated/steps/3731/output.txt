@@ -1,0 +1,11 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_rapidfuzz_scores.py", line 38, in <module>
+    print(f"{first_req:12s} vs {first_wh:12s} -> 1st_word: {first_ratio:2d} | token_set: {token_set:2d} | token_sort: {token_sort:2d}")
+                                                           ^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'd' for object of type 'float'
+

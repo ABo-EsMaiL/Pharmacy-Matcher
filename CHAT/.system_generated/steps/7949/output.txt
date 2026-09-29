@@ -1,0 +1,34 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -474,11 +474,12 @@
+                     });
+                 }
+                 const isUserTurn = (t) => {
++                    if (t.querySelector('.user-prompt-container')) return true;
++                    const author = (t.querySelector('.author-label, .turn-author, .role-label, ms-author-label')?.innerText || '').toLowerCase();
++                    if (author.includes('user') || author.includes('you')) return true;
+                     const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
+                     const cls = (t.className || (t.getAttribute('class') || '')).toLowerCase();
+                     if (role === 'user' || cls.includes('user')) return true;
+-                    const text = t.innerText || t.textContent || '';
+-                    if (text.match(/\bUser\b/i) && !text.match(/\bModel\b/i)) return true;
+                     return false;
+                 };
+                 const isModelTurn = (t) => {
+@@ -485,9 +485,10 @@
++                    if (t.querySelector('.model-prompt-container')) return true;
++                    const author = (t.querySelector('.author-label, .turn-author, .role-label, ms-author-label')?.innerText || '').toLowerCase();
++                    if (author.includes('model') || author.includes('gemini')) return true;
+                     const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
+                     const cls = (t.className || (t.getAttribute('class') || '')).toLowerCase();
+                     if (role === 'model' || cls.includes('model')) return true;
+-                    const text = t.innerText || t.textContent || '';
+-                    if (text.match(/\bModel\b/i)) return true;
+-                    return Boolean(t.querySelector('ms-thought-chunk, .thought-activity-host, [aria-label*="thumb" i], [aria-label*="Good response" i], [aria-label*="Bad response" i], .model-prompt-container, .response-container'));
++                    return Boolean(t.querySelector('ms-thought-chunk, .thought-activity-host, [aria-label*="thumb" i], [aria-label*="Good response" i], [aria-label*="Bad response" i]'));
+                 };
+                 const modelTurns = allTurns.filter(isModelTurn);
+                 return modelTurns.length;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

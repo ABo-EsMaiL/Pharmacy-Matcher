@@ -1,0 +1,159 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1539,6 +1539,153 @@
+                 </div>
+             </div>
+ 
++            <!-- Screen 5: AI Servers Manager -->
++            <div id="screen-servers" class="screen">
++                <header class="page-header">
++                    <h2><i class="ph-fill ph-hard-drives"></i> <span data-i18n="servers_title">إدارة سيرفرات الذكاء الاصطناعي (AI Servers)</span></h2>
++                    <p data-i18n="servers_desc">التحكم في سيرفرات MSEMAX (ChatGPT و Google AI Studio) واختبار الاتصال واختيار المزود النشط.</p>
++                </header>
++
++                <!-- Active Provider Banner -->
++                <div class="active-banner">
++                    <div class="active-banner-content">
++                        <i class="ph-fill ph-lightning active-banner-icon"></i>
++                        <div class="active-banner-text">
++                            <h4 id="active-banner-title">المزود النشط حالياً للمطابقة: جاري التحقق...</h4>
++                            <p id="active-banner-sub">سيتم توجيه جميع دفعات مطابقة النواقص تلقائياً إلى هذا السيرفر.</p>
++                        </div>
++                    </div>
++                    <button class="btn btn-outline" style="border-color:rgba(255,255,255,0.7); color:white;" onclick="loadServersUI()">
++                        <i class="ph-bold ph-arrows-clockwise"></i> <span data-i18n="btn_refresh">تحديث الحالة</span>
++                    </button>
++                </div>
++
++                <!-- Servers Grid -->
++                <div class="servers-grid">
++                    <!-- Card 1: Google AI Studio (Port 8001) -->
++                    <div class="server-card" id="card-server-gaistudio">
++                        <div class="server-card-header">
++                            <div class="server-card-title">
++                                <div class="server-card-icon gaistudio">
++                                    <i class="ph-fill ph-google-logo"></i>
++                                </div>
++                                <div class="server-card-info">
++                                    <h3 data-i18n="gaistudio_server_title">MSEMAX (Google AI Studio)</h3>
++                                    <span>Gemini 3.8 Flash • Port 8001</span>
++                                </div>
++                            </div>
++                            <div class="server-badges-row">
++                                <span id="badge-status-gaistudio" class="badge-pill status-offline">🔴 متوقف</span>
++                                <span id="badge-active-gaistudio" class="badge-pill active-server-badge" style="display:none;">⭐ المزود النشط</span>
++                            </div>
++                        </div>
++
++                        <div class="server-details-list">
++                            <div class="server-detail-row">
++                                <span class="server-detail-label" data-i18n="lbl_server_port">المنفذ (Port):</span>
++                                <span class="server-detail-value">8001</span>
++                            </div>
++                            <div class="server-detail-row">
++                                <span class="server-detail-label" data-i18n="lbl_server_model">الموديل (Model):</span>
++                                <span class="server-detail-value" id="val-model-gaistudio">gemini-3.8-flash</span>
++                            </div>
++                            <div class="server-detail-row">
++                                <span class="server-detail-label" data-i18n="lbl_server_url">رابط الخدمة:</span>
++                                <span class="server-detail-value" style="font-size:11px;">http://127.0.0.1:8001/v1/chat/completions</span>
++                            </div>
++                            <div class="server-detail-row">
++                                <span class="server-detail-label" data-i18n="lbl_server_dir">مسار المجلد:</span>
++                                <span class="server-detail-value" style="font-size:11px;">D:\AI_Engineer\MSEMAX-GAIStudio</span>
++                            </div>
++                        </div>
++
++                        <div class="server-actions-grid">
++                            <button id="btn-active-gaistudio" class="btn btn-outline" onclick="setActiveServer('gaistudio')">
++                                <i class="ph-bold ph-check"></i> <span data-i18n="btn_set_as_active">تفعيل كمزود نشط</span>
++                            </button>
++                            <button id="btn-toggle-gaistudio" class="btn btn-primary" onclick="toggleServerInstance('gaistudio')">
++                                <i class="ph-bold ph-play"></i> <span data-i18n="btn_start_instance">تشغيل السيرفر</span>
++                            </button>
++                            <button id="btn-test-gaistudio" class="btn btn-outline-secondary" onclick="testServerInstance('gaistudio')">
++                                <i class="ph-bold ph-lightning"></i> <span data-i18n="btn_test_connection">اختبار الاتصال</span>
++                            </button>
++                            <button class="btn btn-outline-secondary" onclick="openServerSession('gaistudio')">
++                                <i class="ph-bold ph-browser"></i> <span data-i18n="btn_login_session">فتح الجلسة (Login)</span>
++                            </button>
++                        </div>
++                    </div>
++
++                    <!-- Card 2: ChatGPT (Port 8000) -->
++                    <div class="server-card" id="card-server-chatgpt">
++                        <div class="server-card-header">
++                            <div class="server-card-title">
++                                <div class="server-card-icon">
++                                    <i class="ph-fill ph-robot"></i>
++                                </div>
++                                <div class="server-card-info">
++                                    <h3 data-i18n="chatgpt_server_title">MSEMAX (ChatGPT)</h3>
++                                    <span>GPT-4o • Port 8000</span>
++                                </div>
++                            </div>
++                            <div class="server-badges-row">
++                                <span id="badge-status-chatgpt" class="badge-pill status-offline">🔴 متوقف</span>
++                                <span id="badge-active-chatgpt" class="badge-pill active-server-badge" style="display:none;">⭐ المزود النشط</span>
++                            </div>
++                        </div>
++
++                        <div class="server-details-list">
++                            <div class="server-detail-row">
++                                <span class="server-detail-label" data-i18n="lbl_server_port">المنفذ (Port):</span>
++                                <span class="server-detail-value">8000</span>
++                            </div>
++                            <div class="server-detail-row">
++                                <span class="server-detail-label" data-i18n="lbl_server_model">الموديل (Model):</span>
++                                <span class="server-detail-value" id="val-model-chatgpt">gpt-4o</span>
++                            </div>
++                            <div class="server-detail-row">
++                                <span class="server-detail-label" data-i18n="lbl_server_url">رابط الخدمة:</span>
++                                <span class="server-detail-value" style="font-size:11px;">http://127.0.0.1:8000/v1/chat/completions</span>
++                            </div>
++                            <div class="server-detail-row">
++                                <span class="server-detail-label" data-i18n="lbl_server_dir">مسار المجلد:</span>
++                                <span class="server-detail-value" style="font-size:11px;">D:\AI_Engineer\MSEMAX</span>
++                            </div>
++                        </div>
++
++                        <div class="server-actions-grid">
++                            <button id="btn-active-chatgpt" class="btn btn-outline" onclick="setActiveServer('chatgpt')">
++                                <i class="ph-bold ph-check"></i> <span data-i18n="btn_set_as_active">تفعيل كمزود نشط</span>
++                            </button>
++                            <button id="btn-toggle-chatgpt" class="btn btn-primary" onclick="toggleServerInstance('chatgpt')">
++                                <i class="ph-bold ph-play"></i> <span data-i18n="btn_start_instance">تشغيل السيرفر</span>
++                            </button>
++                            <button id="btn-test-chatgpt" class="btn btn-outline-secondary" onclick="testServerInstance('chatgpt')">
++                                <i class="ph-bold ph-lightning"></i> <span data-i18n="btn_test_connection">اختبار الاتصال</span>
++                            </button>
++                            <button class="btn btn-outline-secondary" onclick="openServerSession('chatgpt')">
++                                <i class="ph-bold ph-browser"></i> <span data-i18n="btn_login_session">فتح الجلسة (Login)</span>
++                            </button>
++                        </div>
++                    </div>
++                </div>
++
++                <!-- Test Diagnostic Log Viewer -->
++                <div class="settings-card" style="border-color: var(--border);">
++                    <div class="card-header" style="background: var(--text-main); color: white; display: flex; justify-content: space-between; align-items: center;">
++                        <div style="display: flex; align-items: center; gap: 8px;">
++                            <i class="ph-fill ph-pulse"></i>
++                            <h3 data-i18n="test_panel_title">نتائج فحص واختبار السيرفر المباشر (Live Diagnostic Log):</h3>
++                        </div>
++                        <button class="btn btn-small btn-text" style="color: #94a3b8;" onclick="clearServerTestLog()">
++                            <i class="ph ph-trash"></i> <span data-i18n="btn_clear">مسح</span>
++                        </button>
++                    </div>
++                    <div style="background: #1e1e1e; padding: 14px;">
++                        <pre id="server-test-output" class="server-test-box">اضغط على زر "اختبار الاتصال السريع" في أي سيرفر لقياس زمن الاستجابة والتأكد من جاهزيته...</pre>
++                    </div>
++                </div>
++            </div>
++
+             <!-- PROGRESS MODAL OVERLAY (Inside main-content) -->
+             <div id="progress-modal" style="display: none;">
+                 <div class="progress-box">
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

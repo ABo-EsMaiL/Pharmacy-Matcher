@@ -1,0 +1,60 @@
+                    <div class="card-header" style="background: var(--text-main); color: white;">
+
+                        <i class="ph-fill ph-terminal-window"></i>
+
+                        <h3>سجل النظام (System Logs)</h3>
+
+                    </div>
+
+                    <div style="background: #1e1e1e; padding: 12px;">
+
+                        <textarea id="system-logs" readonly style="width: 100%; height: 250px; background: #1e1e1e; color: #00ff00; border: none; font-family: monospace; font-size: 13px; outline: none; resize: vertical; direction: ltr; text-align: left;"></textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- The original screen-home is removed. We use screen-new as the home page. 
+
+         To keep app.js happy if it references screen-home, we add a dummy hidden div -->
+
+    <div id="screen-home" style="display:none;"></div>
+
+
+
+    <script>
+
+let currentProcessId = null;
+
+let selectedWarehouseFiles = [];
+
+let selectedShortageFiles = [];
+
+let serverStatusInterval = null;
+
+let isServerRunning = false;
+
+
+
+// Ensure Pywebview API is ready
+
+window.addEventListener('pywebviewready', function() {
+
+    loadSettings();
+
+    loadLogs();
+
+    updateServerStatus();
+
+    serverStatusInterval = setInterval(updateServerStatus, 5000);
+

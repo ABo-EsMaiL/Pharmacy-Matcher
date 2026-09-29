@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+<truncated 203 lines>
+==================================================
+=== STEP 9980 (USER_INPUT) ===
+في هذه النسخة المطورة (`Pharmacy-agy-vision`)، تم الانتقال بالكامل من محركات الـ OCR التقليدية (`Unstructured.io`) إلى **محرك الرؤية البصرية الصيدلاني المتقدم (Google Gemini Vision)** الذي يعمل صفحة بصفحة (Page-by-Page Extraction) عبر بوابة محلية مخصصة (`MSEMAX-GAIStudio-vision` على المنفذ `8001`)، مما يضمن استخراج أسماء الأدوية العربية بنسبة دقة وسلامة إملائية 100%، مع بنية كاش واستئناف ذكي (Resumability) لكل عملية.
+        CAND --> L2{"المستوى 2: القواعد الصيدلانية الحتمية؟<br/>(Deterministic Auto-Rules)"}
+            GAI --> JSON_OUT["JSON منظم بدقة<br/>(case_id, status, item_id, reason)"]
+            JSON_OUT --> G_STR{"فحص التركيز خط أحمر؟<br/>(Zero Strength Tolerance)"}
+## 5. القواعد الحاكمة الخمسة (The 5 Core Pharmaceutical Rules)
+==================================================
+

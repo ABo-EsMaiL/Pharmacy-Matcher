@@ -1,0 +1,58 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1996,6 +1996,10 @@
+ 
+ async function submitProcess() {
+     const t = I18N[currentLang] || I18N.ar;
++    if (isProcessRunning) {
++        showToast(currentLang === 'en' ? 'A matching process is currently running. Please wait.' : 'توجد عملية مطابقة قيد التشغيل حالياً، يرجى الانتظار حتى تنتهي', 'warning');
++        return;
++    }
+     if (selectedShortageFiles.length === 0 || selectedWarehouseFiles.length === 0) {
+         showToast(t.select_at_least_one, 'error');
+         return;
+@@ -2004,6 +2004,7 @@
+     const progressModal = document.getElementById('progress-modal');
+     
+     // UI Loading state
++    isProcessRunning = true;
+     btn.classList.add('hidden');
+     progressModal.style.display = 'flex';
+     document.getElementById('progress-text').innerText = t.progress_init;
+@@ -2038,6 +2038,7 @@
+                 showToast(t.toast_started, 'success');
+             }
+         } else {
++            isProcessRunning = false;
+             showToast((currentLang === 'en' ? 'Error: ' : 'خطأ: ') + res.error, 'error');
+             btn.classList.remove('hidden');
+             progressModal.style.display = 'none';
+@@ -2044,5 +2044,6 @@
+         }
+     } catch (error) {
++        isProcessRunning = false;
+         showToast(currentLang === 'en' ? 'Connection error' : 'حدث خطأ أثناء الاتصال', 'error');
+         btn.classList.remove('hidden');
+         progressModal.style.display = 'none';
+@@ -2061,7 +2061,7 @@
+         }
+         
+         const pb = document.getElementById('progress-bar-fill');
+-        if (pb) {
++        if (pb && data.message) {
+             // Very simple heuristic to advance progress bar based on text
+             let pct = 10;
+             if (data.message.includes('استخراج') || data.message.includes('Extracting')) pct = 30;
+@@ -2073,6 +2073,7 @@
+ 
+ window.addEventListener('process_complete', (e) => {
+     const data = e.detail;
++    isProcessRunning = false;
+     
+     if (!currentProcessId || data.process_id === currentProcessId) {
+         currentProcessId = data.process_id;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

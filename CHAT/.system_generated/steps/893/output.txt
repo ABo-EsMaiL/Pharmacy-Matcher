@@ -1,0 +1,34 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1546,17 +1546,15 @@
+                     </div>
+                 </div>
+                 <div class="history-actions">
+-                    ${item.status !== 'processing' ? `
+-                        ${item.status === 'processing' 
+-                            ? `<button class="btn btn-primary" onclick="alert('العملية ما زالت قيد التشغيل')"><i class="ph-fill ph-spinner-gap spinner"></i> جاري التشغيل...</button>`
+-                            : (item.status === 'error'
+-                                ? `<button class="btn btn-warning" onclick="restartProcess('${item.id}')"><i class="ph-fill ph-arrow-counter-clockwise"></i> إعادة تشغيل</button>
+-                                   <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
+-                                : `<button class="btn btn-primary" onclick="viewProcess('${item.id}')"><i class="ph-fill ph-eye"></i> عرض النتائج</button>
+-                                   <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
+-                            )
+-                        }
+-                    ` : ''}
++                    ${item.status === 'processing' 
++                        ? `<button class="btn btn-primary" style="opacity:0.7; cursor:not-allowed;" disabled><i class="ph-fill ph-spinner-gap spinner"></i> جاري التشغيل...</button>`
++                        : (item.status === 'error'
++                            ? `<button class="btn btn-warning" onclick="restartProcess('${item.id}')"><i class="ph-fill ph-arrow-counter-clockwise"></i> إعادة تشغيل</button>
++                               <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
++                            : `<button class="btn btn-primary" onclick="viewProcess('${item.id}')"><i class="ph-fill ph-eye"></i> عرض النتائج</button>
++                               <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
++                        )
++                    }
+                 </div>
+             `;
+             listEl.appendChild(card);
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

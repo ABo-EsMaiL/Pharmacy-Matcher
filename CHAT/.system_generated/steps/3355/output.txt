@@ -1,0 +1,151 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -148,7 +148,7 @@
+                     input=f,
+                     schema=schema,
+                     profile=profile,
+-                    wait_seconds=600
++                    wait_seconds=20
+                 )
+         except Exception as err:
+             err_msg = str(err).lower()
+@@ -171,16 +171,20 @@
+             if job_id:
+                 print(f"[*] Processing on server (Job ID: {job_id}). Waiting for completion...")
+                 attempts = 0
+-                while attempts < 120:  # Up to 20 minutes
++                while attempts < 180:  # Up to 24 minutes
+                     time.sleep(8)
+                     attempts += 1
+-                    job_res = client.jobs.get(job_id)
+-                    if hasattr(job_res, 'model_dump'):
+-                        job_data = job_res.model_dump()
+-                    elif hasattr(job_res, '__dict__'):
+-                        job_data = job_res.__dict__
+-                    else:
+-                        job_data = dict(job_res)
++                    try:
++                        job_res = client.jobs.get(job_id)
++                        if hasattr(job_res, 'model_dump'):
++                            job_data = job_res.model_dump()
++                        elif hasattr(job_res, '__dict__'):
++                            job_data = job_res.__dict__
++                        else:
++                            job_data = dict(job_res)
++                    except Exception as poll_err:
++                        print(f"[*] Polling note ({filepath.name}): {poll_err}")
++                        continue
+ 
+                     cur_status = str(job_data.get("status", "")).lower()
+                     if "completed" in cur_status:
+@@ -187,16 +187,15 @@
+                         break
+                     elif "failed" in cur_status or "error" in cur_status:
+                         err_text = str(job_data.get("error", ""))
+-                        if profile != "balanced":
+-                            print(f"[*] Async job failed with profile {profile.upper()} ({err_text}). Retrying automatically with BALANCED profile...")
+-                            return extract_items_from_pdf(filepath, api_key, base_url, profile="balanced")
+-                        raise RuntimeError(f"Extraction failed on server: {err_text}")
++                        print(f"[!] Server job failed for {filepath.name}: {err_text}")
++                        return []
+ 
+                     if attempts % 3 == 0:
+-                        print(f"[*] Current status: {job_data.get('status')} ... ({attempts * 8}s)")
+-
+-                if attempts >= 120:
+-                    raise RuntimeError("Timeout reached (20 minutes) without job completion on server.")
++                        print(f"[*] {filepath.name} status: {job_data.get('status')} ... ({attempts * 8}s)")
++
++                if attempts >= 180:
++                    print(f"[!] Timeout reached (24 minutes) for {filepath.name}. Continuing with remaining files...")
++                    return []
+ 
+         items = parse_structured_result(result_data, filepath.name)
+ 
+@@ -218,7 +218,7 @@
+ 
+     except Exception as e:
+         print(f"[!] Extraction error for {filepath.name}: {e}")
+-        raise
++        return []
+ 
+ def parse_structured_result(result_data: dict, filename: str) -> list[dict]:
+     """
+@@ -225,5 +225,8 @@
+-    Supports both direct extracted_data and nested job.result.extracted_data.
+-    """
++    Supports:
++    1. Direct extracted_data / job.result.extracted_data (JSON schema output)
++    2. Markdown HTML tables in result_data["markdown"] (Fallback table output)
++    """
++    import re
+     items = []
+     if not isinstance(result_data, dict):
+         return items
+@@ -231,22 +231,47 @@
+     if "result" in result_data and isinstance(result_data["result"], dict):
+         result_data = result_data["result"]
+ 
++    # 1. Try extracted_data (schema output)
+     extracted_data = result_data.get("extracted_data", [])
+-    if not isinstance(extracted_data, list):
+-        return items
+-
+-    for block in extracted_data:
+-        data = block.get("data", {}) if isinstance(block, dict) else getattr(block, "data", {})
+-        if isinstance(data, dict) and "items" in data:
+-            for item in data.get("items", []):
+-                if not isinstance(item, dict):
+-                    continue
+-                name = item.get("item_name_raw")
+-                if name:
+-                    items.append({
+-                        "item_name_raw": str(name).strip(),
+-                        "source_page": item.get("source_page"),
+-                        "source_file": filename
+-                    })
++    if isinstance(extracted_data, list) and len(extracted_data) > 0:
++        for block in extracted_data:
++            data = block.get("data", {}) if isinstance(block, dict) else getattr(block, "data", {})
++            if isinstance(data, dict) and "items" in data:
++                for item in data.get("items", []):
++                    if not isinstance(item, dict):
++                        continue
++                    name = item.get("item_name_raw")
++                    if name:
++                        items.append({
++                            "item_name_raw": str(name).strip(),
++                            "source_page": item.get("source_page"),
++                            "source_file": filename
++                        })
++
++    # 2. Try markdown HTML tables if no items extracted yet
++    if not items and "markdown" in result_data and result_data["markdown"]:
++        md = str(result_data["markdown"])
++        rows = re.findall(r"<tr>(.*?)</tr>", md, re.DOTALL | re.IGNORECASE)
++        if rows:
++            name_col_idx = 1
++            header_cells = [re.sub(r"<.*?>", "", c).strip() for c in re.findall(r"<t[dh].*?>(.*?)</t[dh]>", rows[0], re.DOTALL | re.IGNORECASE)]
++            for idx, col in enumerate(header_cells):
++                col_lower = col.lower()
++                if any(k in col_lower for k in ["اسم الصنف", "اسم الدواء", "item name", "product name", "description", "اسم"]):
++                    if not any(nk in col_lower for nk in ["رقم", "كود", "code", "id", "number"]):
++                        name_col_idx = idx
++                        break
++
++            for r in rows[1:]:
++                cells = [re.sub(r"<.*?>", "", c).strip() for c in re.findall(r"<t[dh].*?>(.*?)</t[dh]>", r, re.DOTALL | re.IGNORECASE)]
++                if len(cells) > name_col_idx:
++                    val = cells[name_col_idx]
++                    if val and not val.isdigit() and len(val) >= 2 and val not in header_cells:
++                        items.append({
++                            "item_name_raw": val,
++                            "source_page": None,
++                            "source_file": filename
++                        })
++
+     return items
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

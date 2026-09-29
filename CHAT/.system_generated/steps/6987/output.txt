@@ -1,0 +1,15 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1047,6 +1047,9 @@
+         "profile_dir": CHROME_PROFILE_DIR,
+         "default_model": DEFAULT_MODEL,
+         "thinking_mode": THINKING_MODE,
++        "active_model": browser_manager.active_model,
++        "active_thinking": browser_manager.active_thinking,
++        "clear_chat_on_request": CLEAR_CHAT_ON_REQUEST,
+         "port": PORT,
+         "rate_limit": RATE_LIMIT
+     }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

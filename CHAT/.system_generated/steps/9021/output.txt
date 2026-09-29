@@ -1,0 +1,39 @@
+
+The command exited with code 0.
+Output:
+Starting chatgpt server...
+[MSEMAX (ChatGPT / OpenAI)] Starting server in D:\AI_Engineer\MSEMAX on port 8000...
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Will watch for changes in these directories: ['D:\\AI_Engineer\\MSEMAX']
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Started reloader process [8924] using WatchFiles
+[MSEMAX (ChatGPT / OpenAI)] Server process started successfully (PID: 8924).
+Start result: {'success': True, 'message': 'started', 'pid': 8924, 'port': 8000}
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Started server process [14280]
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Waiting for application startup.
+[MSEMAX (ChatGPT / OpenAI)] 2026-09-25 02:02:50,919 - msemax.api - INFO - Starting up MSEMAX FastAPI server...
+[MSEMAX (ChatGPT / OpenAI)] 2026-09-25 02:02:50,919 - msemax.api - INFO - Rate limit: 10/minute | Max concurrent: 3
+[MSEMAX (ChatGPT / OpenAI)] 2026-09-25 02:02:50,921 - msemax.pow - INFO - [POW] ProcessPool started with 4 workers
+[MSEMAX (ChatGPT / OpenAI)] 2026-09-25 02:02:50,921 - msemax.api - INFO - Concurrency semaphore initialized: max 3 simultaneous requests
+[MSEMAX (ChatGPT / OpenAI)] INFO:     Application startup complete.
+Waiting 1s... Running: True
+[MSEMAX (ChatGPT / OpenAI)] INFO:     127.0.0.1:57133 - "GET /health HTTP/1.1" 200 OK
+Health status code: 200 JSON: {'status': 'ok', 'version': 'MSEMAX 1.0', 'session_file_loaded': True, 'concurrent_slots_available': 3, 'max_concurrent': 3, 'rate_limit': '10/minute'}
+[MSEMAX (ChatGPT / OpenAI)] Sending test ping to MSEMAX (ChatGPT / OpenAI) on port 8000...
+[MSEMAX (ChatGPT / OpenAI)] INFO:     127.0.0.1:57134 - "GET /health HTTP/1.1" 200 OK
+[MSEMAX (ChatGPT / OpenAI)] 2026-09-25 02:02:51,420 - msemax.api - INFO - Session data reloaded from disk (file changed)
+[MSEMAX (ChatGPT / OpenAI)] 2026-09-25 02:02:51,930 - msemax.api - ERROR - chat-requirements failed: 401 - {
+[MSEMAX (ChatGPT / OpenAI)] "error": {
+[MSEMAX (ChatGPT / OpenAI)] "message": "Encountered invalidated oauth token for user, failing request",
+[MSEMAX (ChatGPT / OpenAI)] "type": null,
+[MSEMAX (ChatGPT / OpenAI)] "code": "token_revoked",
+[MSEMAX (ChatGPT / OpenAI)] "param": null
+[MSEMAX (ChatGPT / OpenAI)] },
+[MSEMAX (ChatGPT / OpenAI)] "status": 401
+[MSEMAX (ChatGPT / OpenAI)] }
+[MSEMAX (ChatGPT / OpenAI)] INFO:     127.0.0.1:57135 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+Test connection result: {'success': True, 'latency_ms': 577, 'reply': '[Error: Failed to get chat-requirements (session might be expired)]', 'model': 'gpt-4o', 'port': 8000, 'health': {'status': 'ok', 'version': 'MSEMAX 1.0', 'session_file_loaded': True, 'concurrent_slots_available': 3, 'max_concurrent': 3, 'rate_limit': '10/minute'}}
+Stopping server...
+[MSEMAX (ChatGPT / OpenAI)] Stopping MSEMAX (ChatGPT / OpenAI) on port 8000...
+[MSEMAX (ChatGPT / OpenAI)] INFO:     127.0.0.1:57139 - "GET /shutdown HTTP/1.1" 200 OK
+[MSEMAX (ChatGPT / OpenAI)] MSEMAX (ChatGPT / OpenAI) stopped successfully.
+

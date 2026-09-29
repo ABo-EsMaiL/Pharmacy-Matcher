@@ -1,0 +1,74 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -160,7 +160,7 @@
+                 })
+                 exact_count += 1
+             else:
+-                # Get top candidates locally in milliseconds
++                # Get top candidates locally in milliseconds (already validated for brand & dosage form!)
+                 top_candidates = finder.search(shortage_name, top_k=5)
+                 
+                 if not top_candidates:
+@@ -167,9 +167,10 @@
+                     
+                 best_score = top_candidates[0]["score"]
+                 best_name = top_candidates[0]["name"]
++                best_brand_sim = top_candidates[0].get("brand_sim", 0)
+                 
+                 # Rule 1: Very high confidence -> Auto Match (Bypass API entirely!)
+-                if best_score >= 0.88:
++                if best_score >= 0.88 and best_brand_sim >= 80:
+                     matched.append({
+                         "shortage_item": shortage_name,
+                         "warehouse_item": best_name,
+@@ -178,7 +178,7 @@
+                     tfidf_match_count += 1
+                 
+                 # Rule 2: Plausible candidate -> Ask LLM to evaluate with clinical rules
+-                elif best_score >= 0.20:
++                else:
+                     candidates_for_llm = [{"id": c["id"], "name": c["name"]} for c in top_candidates[:3]]
+                     llm_cases.append({
+                         "case_id": f"Q{idx:05}",
+@@ -185,9 +185,5 @@
+                         "candidates": candidates_for_llm
+                     })
+-                
+-                # Rule 3: Low confidence -> Auto Reject (Bypass API)
+-                else:
+-                    pass # Not found
+ 
+         print(f"  -> Exact Matches: {exact_count}")
+         print(f"  -> TF-IDF Auto-Matches (>88%): {tfidf_match_count}")
+@@ -219,6 +219,28 @@
+                                 else:
+                                     status = "no_match"
+                                     
++                            if status in ("match", "review"):
++                                # Deterministic Safety Check: Dosage form conflict
++                                req_form = extract_form_group(shortage_name)
++                                wh_form = extract_form_group(warehouse_item)
++                                if req_form and wh_form and req_form != wh_form:
++                                    status = "no_match"
++                                    
++                                # Deterministic Safety Check: Brand similarity
++                                req_b = extract_brand_tokens(shortage_name)
++                                wh_b = extract_brand_tokens(warehouse_item)
++                                if req_b and wh_b:
++                                    words_r = req_b.split()
++                                    words_w = wh_b.split()
++                                    if len(words_r) > 1 or len(words_w) > 1:
++                                        b_sim = fuzz.token_sort_ratio(req_b, wh_b)
++                                    else:
++                                        b_sim = fuzz.ratio(req_b, wh_b)
++                                    if req_b.startswith(wh_b) or wh_b.startswith(req_b):
++                                        b_sim = max(b_sim, 80)
++                                    if b_sim < 50:
++                                        status = "no_match"
++                                    
+                             if status == "match":
+                                 matched_in_chunk += 1
+                             elif status == "review":
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,39 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\output\excel_writer.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -256,14 +256,31 @@
+     ws_review.append(review_headers)
+     _apply_header_style(ws_review, len(review_headers))
+ 
++    # تجميع جميع الأصناف التي تمت مطابقتها بالفعل في أي مخزن لتجنب إشغال الصيدلي بها
++    all_confirmed_shortages = set()
++    for wh_data in warehouse_results.values():
++        for match in wh_data.get("matched", []):
++            name = match.get("shortage_item", "")
++            if name:
++                all_confirmed_shortages.add(name.strip())
++
+     review_rows = []
++    seen_review_pairs = set()
+     for wh_name, wh_data in warehouse_results.items():
+         for item in wh_data.get("needs_review", []):
++            req_item = item.get("shortage_item", "").strip()
++            wh_item = item.get("warehouse_item", "").strip()
++            if req_item in all_confirmed_shortages:
++                continue
++            pair_key = (req_item, wh_item, wh_name)
++            if pair_key in seen_review_pairs:
++                continue
++            seen_review_pairs.add(pair_key)
+             review_rows.append(
+                 [
+                     "", # خانة القرار فارغة ليختار منها الصيدلي
+-                    item.get("shortage_item", ""),
+-                    item.get("warehouse_item", ""),
++                    req_item,
++                    wh_item,
+                     wh_name,
+                     item.get("reason", ""),
+                 ]
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

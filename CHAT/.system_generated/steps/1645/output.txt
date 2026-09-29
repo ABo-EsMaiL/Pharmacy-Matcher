@@ -1,0 +1,11 @@
+
+The command exited with code 0.
+Output:
+Connecting to Unstructured with key: GQfocO...
+Total existing jobs found on server: 2
+Deleting job 4815cfaa-53fd-4d7c-b63a-18e25556bfbc (File: جملة العمروووو.pdf, Status: JobStatus.COMPLETED)...
+  -> Deleted 4815cfaa-53fd-4d7c-b63a-18e25556bfbc
+Deleting job bafca5c6-af42-42b8-81d5-e377bd9de1e8 (File: جملة العمروووو.pdf, Status: JobStatus.COMPLETED)...
+  -> Deleted bafca5c6-af42-42b8-81d5-e377bd9de1e8
+Successfully deleted 2 jobs.
+

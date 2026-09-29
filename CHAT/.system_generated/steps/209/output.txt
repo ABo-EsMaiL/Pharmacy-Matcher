@@ -1,0 +1,18 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\config.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -20,9 +20,9 @@
+     # إعدادات Unstructured API
+     unstructured_base_url: str = "https://transform.unstructured.io"
+ 
+-    # إعدادات OpenCode (Zen)
+-    opencode_api_key: str = "oc_sk_4c19f0812f56_Zc4m4WQRX9sI0aiGsr0iXgQV3pkMedIh"
+-    opencode_model: str = "deepseek-flash"
++    # إعدادات OpenRouter
++    openrouter_api_key: str = "[REDACTED_CREDENTIAL]"
++    openrouter_model: str = "google/gemini-2.0-flash-exp:free"
+ 
+     # إعدادات Gemini (لم تعد مستخدمة حاليا)
+     gemini_model: str = "gemini-3.5-flash"
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

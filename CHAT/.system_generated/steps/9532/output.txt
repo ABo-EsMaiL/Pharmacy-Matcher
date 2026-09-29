@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+Total text length: 187445
+Turn 1 pos: 75555
+Turn 2 pos: 176820
+Turn 2 text tail:
+ turn-16668AE7-EBC9-4060-8EC3-84F6774FB2A2" class="text-chunk-host ng-star-inserted"><div _ngcontent-ng-c1721878489="" tabindex="-1" cdkmonitorsubtreefocus="" class="chat-turn-container code-block-aligner model render ng-star-inserted"><div _ngcontent-ng-c1721878489="" class="actions-container"><div _ngcontent-ng-c1721878489="" class="actions hover-or-edit"><!----><button _ngcontent-ng-c1721878489="" ms-button="" variant="icon-borderless" mattooltipposition="below" class="mat-mdc-tooltip-trigger toggle-edit-button ms-button-borderless ms-button-icon ng-star-inserted" aria-label="Edit" jslog="269715;track:generic_click,impression;mutable:true" aria-disabled="false"><span _ngcontent-ng-c1721878489="" class="material-symbols-outlined notranslate ms-button-icon-symbol ng-star-inserted" aria-hidden="true">edit</span></button><!----><!----><!----><button _ngcontent-ng-c1721878489="" ms-button="" variant="icon-borderless" name="rerun-button" mattooltipposition="below" class="mat-mdc-tooltip-tr
+

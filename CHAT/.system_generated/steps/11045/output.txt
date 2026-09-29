@@ -1,0 +1,18 @@
+
+The command exited with code 0.
+Output:
+
+
+    Directory: D:\AI_Engineer
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         9/23/2026   1:57 AM                Pharmacy                                                             
+d-----         9/25/2026   3:40 PM                Pharmacy-agy                                                         
+d-----         9/25/2026   4:37 PM                Pharmacy-agy-vision                                                  
+-a----         9/24/2026   6:24 PM        7428441 Pharmacy (2).zip                                                     
+-a----         9/24/2026   3:19 PM        7416869 Pharmacy.zip                                                         
+
+
+

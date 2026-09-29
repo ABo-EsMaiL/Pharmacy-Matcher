@@ -1,0 +1,31 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -710,7 +710,7 @@
+     <div id="toast-container"></div>
+     
+     <!-- Custom Modal Overlay -->
+-    <div id="custom-modal" class="hidden" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); z-index: 9999; display: flex; align-items: center; justify-content: center;">
++    <div id="custom-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center;">
+         <div style="background: white; padding: 24px; border-radius: 12px; max-width: 400px; width: 90%; box-shadow: 0 10px 25px rgba(0,0,0,0.2); text-align: center;">
+             <h3 id="modal-title" style="margin-top: 0; margin-bottom: 12px;">تأكيد</h3>
+             <p id="modal-message" style="margin-bottom: 24px; color: var(--text-muted);"></p>
+@@ -735,13 +735,13 @@
+             btnCancel.parentNode.replaceChild(newCancel, btnCancel);
+             btnConfirm.parentNode.replaceChild(newConfirm, btnConfirm);
+             
+-            newCancel.onclick = () => modal.classList.add('hidden');
++            newCancel.onclick = () => modal.style.display = 'none';
+             newConfirm.onclick = () => {
+-                modal.classList.add('hidden');
++                modal.style.display = 'none';
+                 onConfirm();
+             };
+             
+-            modal.classList.remove('hidden');
++            modal.style.display = 'flex';
+         }
+     </script>
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,651 @@
+[
+  {
+    "case_id": "A0225",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات ستارفيل تفتيح"
+  },
+  {
+    "case_id": "A0226",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0380"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 2.5 مجم عن 5 مجم"
+  },
+  {
+    "case_id": "A0227",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0380"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 2.5 مجم عن 5 مجم"
+  },
+  {
+    "case_id": "A0228",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سترونج فيل سبراي"
+  },
+  {
+    "case_id": "A0229",
+    "status": "match",
+    "item_id": "I1284",
+    "plausible_ids": [
+      "I1284"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام للمنتج والتركيز والشكل"
+  },
+  {
+    "case_id": "A0230",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سفيرا لوشن"
+  },
+  {
+    "case_id": "A0231",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سكروفير امبول"
+  },
+  {
+    "case_id": "A0232",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1292"
+    ],
+    "no_match_basis": "different_product",
+    "reason": "سكينوريتش منتج تجاري مختلف عن سكينورين"
+  },
+  {
+    "case_id": "A0233",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سليب ايز اقراص"
+  },
+  {
+    "case_id": "A0234",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سنوليفا اقراص"
+  },
+  {
+    "case_id": "A0235",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سوبرانيل كبسول"
+  },
+  {
+    "case_id": "A0236",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1305",
+      "I0589"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف تركيز الدواء الثلاثي"
+  },
+  {
+    "case_id": "A0237",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سوكير اسبري للفم"
+  },
+  {
+    "case_id": "A0238",
+    "status": "match",
+    "item_id": "I1307",
+    "plausible_ids": [
+      "I1307",
+      "I1306"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام للاسم وسولو لوسيون"
+  },
+  {
+    "case_id": "A0239",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سوليوبريد"
+  },
+  {
+    "case_id": "A0240",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سومازينا سوبرا"
+  },
+  {
+    "case_id": "A0241",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سومازينا نقط"
+  },
+  {
+    "case_id": "A0242",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سوميناليتا شراب"
+  },
+  {
+    "case_id": "A0243",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سي اتش الفا بلس"
+  },
+  {
+    "case_id": "A0244",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيالونج اقراص"
+  },
+  {
+    "case_id": "A0245",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيبانوين جيل"
+  },
+  {
+    "case_id": "A0246",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيبروباي"
+  },
+  {
+    "case_id": "A0247",
+    "status": "review",
+    "item_id": "I1320",
+    "plausible_ids": [
+      "I1321",
+      "I1320"
+    ],
+    "no_match_basis": "",
+    "reason": "اختلاف الشكل الصيدلي اقراص بدلا محلول"
+  },
+  {
+    "case_id": "A0248",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيبروفلوكسميت"
+  },
+  {
+    "case_id": "A0249",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2628",
+      "I2252"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 500 مجم عن 1 جم"
+  },
+  {
+    "case_id": "A0250",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1326"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 8 مجم عن 4 مجم"
+  },
+  {
+    "case_id": "A0251",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيرازيت اقراص"
+  },
+  {
+    "case_id": "A0252",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2256"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 100 مجم عن 50 مجم"
+  },
+  {
+    "case_id": "A0253",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2310"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف النوع ممتد المفعول اس ار"
+  },
+  {
+    "case_id": "A0254",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2310"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف النوع ممتد المفعول اس ار"
+  },
+  {
+    "case_id": "A0255",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2631"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف نكهة ونوع السيريلاك"
+  },
+  {
+    "case_id": "A0256",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2631"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف نوع السيريلاك ارز بدلا قمح"
+  },
+  {
+    "case_id": "A0257",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0604"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف النوع سيستان الترا عن العادي"
+  },
+  {
+    "case_id": "A0258",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيفاثرد"
+  },
+  {
+    "case_id": "A0259",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيفاكسون"
+  },
+  {
+    "case_id": "A0260",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيفاكسون"
+  },
+  {
+    "case_id": "A0261",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيفاكسون"
+  },
+  {
+    "case_id": "A0262",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيفزيم فيال"
+  },
+  {
+    "case_id": "A0263",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيفيبم فيال"
+  },
+  {
+    "case_id": "A0264",
+    "status": "match",
+    "item_id": "I2266",
+    "plausible_ids": [
+      "I2266",
+      "I0606"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام للمنتج والتركيز"
+  },
+  {
+    "case_id": "A0265",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيفيكسيم شراب"
+  },
+  {
+    "case_id": "A0266",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيكلوبروجينوفا اقراص"
+  },
+  {
+    "case_id": "A0267",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيكلور شراب"
+  },
+  {
+    "case_id": "A0268",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيكلور شراب"
+  },
+  {
+    "case_id": "A0269",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيكوسيتام اقراص"
+  },
+  {
+    "case_id": "A0270",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيلجون لبوس"
+  },
+  {
+    "case_id": "A0271",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيلفازين كريم"
+  },
+  {
+    "case_id": "A0272",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيلفر سيز شراب"
+  },
+  {
+    "case_id": "A0273",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيلكتيفال كبسول"
+  },
+  {
+    "case_id": "A0274",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سيلينيكس شامبو"
+  },
+  {
+    "case_id": "A0275",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2269"
+    ],
+    "no_match_basis": "different_product",
+    "reason": "سيلينيوم ايه سى منتج مختلف"
+  },
+  {
+    "case_id": "A0276",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سينتروباكس ادفانس"
+  },
+  {
+    "case_id": "A0277",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات سينمت اقراص"
+  },
+  {
+    "case_id": "A0278",
+    "status": "match",
+    "item_id": "I1352",
+    "plausible_ids": [
+      "I1352",
+      "I1351"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام للمنتج سينوبريل كو اقراص"
+  },
+  {
+    "case_id": "A0279",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات شان سيكا كريم"
+  },
+  {
+    "case_id": "A0280",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات صابون سنسودرم"
+  },
+  {
+    "case_id": "A0281",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات صابون هاي ديرم"
+  },
+  {
+    "case_id": "A0282",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات صن توب كريم"
+  },
+  {
+    "case_id": "A0283",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات صن دراي"
+  },
+  {
+    "case_id": "A0284",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فاتروكسيم اقراص"
+  },
+  {
+    "case_id": "A0285",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فاردي اقراص"
+  },
+  {
+    "case_id": "A0286",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فاركولين محلول"
+  },
+  {
+    "case_id": "A0287",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فاموتاك اقراص"
+  },
+  {
+    "case_id": "A0288",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فانج رير جل شاور"
+  },
+  {
+    "case_id": "A0289",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فاينال تو شامبو"
+  },
+  {
+    "case_id": "A0290",
+    "status": "review",
+    "item_id": "I0112",
+    "plausible_ids": [
+      "I0112"
+    ],
+    "no_match_basis": "",
+    "reason": "اختلاف الشكل الصيدلي نقط بدلا اقراص"
+  },
+  {
+    "case_id": "A0291",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فلوادجست اقراص"
+  },
+  {
+    "case_id": "A0292",
+    "status": "review",
+    "item_id": "I0112",
+    "plausible_ids": [
+      "I0112"
+    ],
+    "no_match_basis": "",
+    "reason": "اختلاف الشكل الصيدلي نقط بدلا شراب"
+  },
+  {
+    "case_id": "A0293",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فلوتاك اقراص"
+  },
+  {
+    "case_id": "A0294",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فلوتن كبسول"
+  },
+  {
+    "case_id": "A0295",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فلورست ان اقراص"
+  },
+  {
+    "case_id": "A0296",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فلوروكينومكس نقط"
+  },
+  {
+    "case_id": "A0297",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فلوكسيبسي اقراص"
+  },
+  {
+    "case_id": "A0298",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات فليبوتون حقن"
+  },
+  {
+    "case_id": "A0299",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2090",
+      "I0356"
+    ],
+    "no_match_basis": "different_product",
+    "reason": "ريباريل بديل تجاري مختلف عن فليبوفينال"
+  }
+]

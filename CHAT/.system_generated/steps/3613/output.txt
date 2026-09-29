@@ -1,0 +1,53 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+السلام شبين: 0 items
+المكرومي المنصورة: 0 items
+جملة العمروووو: 0 items
+كيور فارما خاص: 0 items
+مخزن الحياة فارم اسكندريه-170: 0 items
+
+Searching for 'اسبرين':
+  [السلام شبين] 0 matches
+  [المكرومي المنصورة] 0 matches
+  [جملة العمروووو] 0 matches
+  [كيور فارما خاص] 0 matches
+  [مخزن الحياة فارم اسكندريه-170] 0 matches
+
+Searching for 'ابيماج':
+  [السلام شبين] 0 matches
+  [المكرومي المنصورة] 0 matches
+  [جملة العمروووو] 0 matches
+  [كيور فارما خاص] 0 matches
+  [مخزن الحياة فارم اسكندريه-170] 0 matches
+
+Searching for 'ابيمول':
+  [السلام شبين] 0 matches
+  [المكرومي المنصورة] 0 matches
+  [جملة العمروووو] 0 matches
+  [كيور فارما خاص] 0 matches
+  [مخزن الحياة فارم اسكندريه-170] 0 matches
+
+Searching for 'فولتارين':
+  [السلام شبين] 0 matches
+  [المكرومي المنصورة] 0 matches
+  [جملة العمروووو] 0 matches
+  [كيور فارما خاص] 0 matches
+  [مخزن الحياة فارم اسكندريه-170] 0 matches
+
+Searching for 'اوجمانتين':
+  [السلام شبين] 0 matches
+  [المكرومي المنصورة] 0 matches
+  [جملة العمروووو] 0 matches
+  [كيور فارما خاص] 0 matches
+  [مخزن الحياة فارم اسكندريه-170] 0 matches
+
+Searching for 'سيتال':
+  [السلام شبين] 0 matches
+  [المكرومي المنصورة] 0 matches
+  [جملة العمروووو] 0 matches
+  [كيور فارما خاص] 0 matches
+  [مخزن الحياة فارم اسكندريه-170] 0 matches
+

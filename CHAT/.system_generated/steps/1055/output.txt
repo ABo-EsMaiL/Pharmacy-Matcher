@@ -1,0 +1,84 @@
+
+The command exited with code 0.
+Output:
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+
+.status-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 16px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+
+.status-indicator {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background-color: var(--text-muted);
+
+    transition: all 0.3s ease;
+
+}
+
+.status-indicator.running { background-color: var(--success); box-shadow: 0 0 10px var(--success); }
+
+.status-indicator.stopped { background-color: var(--danger); box-shadow: 0 0 10px rgba(239, 68, 68, 0.4); }
+
+
+
+/* -------------------- MAIN CONTENT -------------------- */
+
+.main-content {
+
+    flex: 1;
+
+    position: relative;
+
+    overflow: hidden; /* NO SCROLLING on main app */
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+.screen {
+
+    display: none;
+
+    padding: 30px;
+
+    animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    background: var(--bg-card);
+
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-md);
+
+

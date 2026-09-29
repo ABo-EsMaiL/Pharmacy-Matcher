@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+Processes table cleared.
+Processes folders cleared.
+Unstructured cache cleared.
+

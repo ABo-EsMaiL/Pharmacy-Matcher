@@ -1,0 +1,8 @@
+Successfully scheduled one-shot timer.
+Expected to fire at: 2026-09-22T13:10:55+03:00
+Prompt: Check inspect job data
+Early Termination: 916274de-7f92-49fc-a0a8-d291664b474a/task-1514
+
+[2026-09-22T13:10:35+03:00] Still waiting. Remaining time: 20s
+[2026-09-22T13:10:45+03:00] Still waiting. Remaining time: 10s
+[2026-09-22T13:10:55+03:00] Timer fired.

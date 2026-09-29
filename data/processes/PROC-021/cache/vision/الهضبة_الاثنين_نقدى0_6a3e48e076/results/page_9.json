@@ -1,0 +1,405 @@
+{
+  "page": 9,
+  "items": [
+    {
+      "item_name_raw": "تكلو اقراص/ باكت 60",
+      "trade_name": "تكلو",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تمبورال شراب اطفال/ باكت 50",
+      "trade_name": "تمبورال اطفال",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تمبوكول كمادة ماسكوميد قديم",
+      "trade_name": "تمبوكول",
+      "strength": "",
+      "form": "كمادة",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "توب ريلاكس كريم",
+      "trade_name": "توب ريلاكس",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "توب زاد صابون/باكت 36",
+      "trade_name": "توب زاد",
+      "strength": "",
+      "form": "صابون",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "توب زاد صن كريم",
+      "trade_name": "توب زاد صن",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "توبراميت 100 مج اقراص/باكت160",
+      "trade_name": "توبراميت",
+      "strength": "100 مج",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "توبرين قطرة /باكت 81",
+      "trade_name": "توبرين",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "توبي جينت ديليكت/باكت 20",
+      "trade_name": "توبي جينت ديليكت",
+      "strength": "",
+      "form": "",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "توبي جينت سيبم/باكت 20",
+      "trade_name": "توبي جينت سيبم",
+      "strength": "",
+      "form": "",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "توبيمثرين 5% لوشن الباكت 15",
+      "trade_name": "توبيمثرين",
+      "strength": "5%",
+      "form": "لوشن",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تورسامولكس 20 مج اقراص/باكت 52",
+      "trade_name": "تورسامولكس",
+      "strength": "20 مج",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تولانجو سليم كبسول /باكت 20",
+      "trade_name": "تولانجو سليم",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تولانجوفيت شراب/الباكت 20",
+      "trade_name": "تولانجوفيت",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تونادوجست اقراص/باكت 60",
+      "trade_name": "تونادوجست",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "توينزول قطرة عادى شركة /باكت 100",
+      "trade_name": "توينزول",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تيابرايد كلافيتا فارما نقط/باكت24",
+      "trade_name": "تيابرايد",
+      "strength": "",
+      "form": "نقط",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تيراتام 1جم اقراص",
+      "trade_name": "تيراتام",
+      "strength": "1جم",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تيراتام شراب باكت15",
+      "trade_name": "تيراتام",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تيراميسين مرهم عين تاريخ 5/2027",
+      "trade_name": "تيراميسين",
+      "strength": "",
+      "form": "مرهم عين",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تيكانيز بلاس بخاخ/ باكت 25",
+      "trade_name": "تيكانيز بلاس",
+      "strength": "",
+      "form": "بخاخ",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تينتافير 80 بخاخ",
+      "trade_name": "تينتافير",
+      "strength": "80",
+      "form": "بخاخ",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تيندوزايم اقراص",
+      "trade_name": "تيندوزايم",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تينوفلوكساسين اقراص ج باكت 200",
+      "trade_name": "تينوفلوكساسين",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "تينياكيور كريم/القاهره/باكت12",
+      "trade_name": "تينياكيور",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ثرى زد لوسيون /باكت 36",
+      "trade_name": "ثرى زد",
+      "strength": "",
+      "form": "لوسيون",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ثيوتاسيد 600 مج مركب/باكت 48",
+      "trade_name": "ثيوتاسيد مركب",
+      "strength": "600 مج",
+      "form": "",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ثيوتاسيد بلس اكس ار اقراص",
+      "trade_name": "ثيوتاسيد بلس اكس ار",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ثيوديو 600 مج مركب كبسول",
+      "trade_name": "ثيوديو مركب",
+      "strength": "600 مج",
+      "form": "كبسول",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ج اكسير اقراص",
+      "trade_name": "ج اكسير",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "ج فيرا اقراص",
+      "trade_name": "ج فيرا",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جابيمدرا 15مج اقراص",
+      "trade_name": "جابيمدرا",
+      "strength": "15مج",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جابيمدرا 5 مج اقراص",
+      "trade_name": "جابيمدرا",
+      "strength": "5 مج",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جاني ستار قطرة/باكت 100",
+      "trade_name": "جاني ستار",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جاتيكسيل قطرة جديد",
+      "trade_name": "جاتيكسيل",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جاتيكسيل مرهم",
+      "trade_name": "جاتيكسيل",
+      "strength": "",
+      "form": "مرهم",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جاراميسين 80 مج امبول/باكت 400",
+      "trade_name": "جاراميسين",
+      "strength": "80 مج",
+      "form": "امبول",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جاروبرايد اقراص /الباكت49",
+      "trade_name": "جاروبرايد",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جاسترانيل اقراص",
+      "trade_name": "جاسترانيل",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جاستروبيوتيك 200 مج 20 قرص ب 5",
+      "trade_name": "جاستروبيوتيك",
+      "strength": "200 مج",
+      "form": "قرص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جاسترولوك اقراص باكت/50",
+      "trade_name": "جاسترولوك",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جاستيكول 10 مج 14 قرص ج",
+      "trade_name": "جاستيكول",
+      "strength": "10 مج",
+      "form": "قرص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جافيسكون اكياس/باكت 12",
+      "trade_name": "جافيسكون",
+      "strength": "",
+      "form": "اكياس",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "مبيرسيتال 10مجم/محلول/باراسيتامو",
+      "trade_name": "مبيرسيتال",
+      "strength": "10مجم",
+      "form": "محلول",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جاوتليس اقراص قديم",
+      "trade_name": "جاوتليس",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جروزا اقراص جديد",
+      "trade_name": "جروزا",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جلاسبومول 1000 مج كبسول",
+      "trade_name": "جلاسبومول",
+      "strength": "1000 مج",
+      "form": "كبسول",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "لوكوفاج 1000 مج اقراص/ باكت 00",
+      "trade_name": "لوكوفاج",
+      "strength": "1000 مج",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "جلومبينازين امبول / باكت 90",
+      "trade_name": "جلومبينازين",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    },
+    {
+      "item_name_raw": "بتوميت 50/1000 مج اقراص/باكت",
+      "trade_name": "بتوميت",
+      "strength": "50/1000 مج",
+      "form": "اقراص",
+      "source_page": 9,
+      "source_file": "الهضبة الاثنين نقدى0.pdf"
+    }
+  ]
+}

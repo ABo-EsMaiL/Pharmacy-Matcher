@@ -1,0 +1,71 @@
+
+The command exited with code 0.
+Output:
+Checking PROC-001: status=reviewing, rev_db=11, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-001\results_PROC-001.xlsx
+   -> Actual rows in Excel sheets: matched=93, not_found=498, review=11
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-001\results_PROC-001.xlsx
+   -> DB row was already matching actual Excel count (11).
+Checking PROC-002: status=reviewing, rev_db=6, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-002\results_PROC-002.xlsx
+   -> Actual rows in Excel sheets: matched=88, not_found=506, review=6
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-002\results_PROC-002.xlsx
+   -> DB row was already matching actual Excel count (6).
+Checking PROC-003: status=reviewing, rev_db=8, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-003\results_PROC-003.xlsx
+   -> Actual rows in Excel sheets: matched=100, not_found=496, review=8
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-003\results_PROC-003.xlsx
+   -> DB row was already matching actual Excel count (8).
+Checking PROC-004: status=reviewing, rev_db=2, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-004\results_PROC-004.xlsx
+   -> Actual rows in Excel sheets: matched=124, not_found=485, review=2
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-004\results_PROC-004.xlsx
+   -> DB row was already matching actual Excel count (2).
+Checking PROC-005: status=reviewing, rev_db=7, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-005\results_PROC-005.xlsx
+   -> Actual rows in Excel sheets: matched=109, not_found=492, review=7
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-005\results_PROC-005.xlsx
+   -> DB row was already matching actual Excel count (7).
+Checking PROC-006: status=reviewing, rev_db=33, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-006\results_PROC-006.xlsx
+   -> Actual rows in Excel sheets: matched=119, not_found=465, review=33
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-006\results_PROC-006.xlsx
+   -> DB row was already matching actual Excel count (33).
+Checking PROC-007: status=reviewing, rev_db=34, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-007\results_PROC-007.xlsx
+   -> Actual rows in Excel sheets: matched=119, not_found=466, review=34
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-007\results_PROC-007.xlsx
+   -> DB row was already matching actual Excel count (34).
+Checking PROC-008: status=reviewing, rev_db=30, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-008\results_PROC-008.xlsx
+   -> Actual rows in Excel sheets: matched=114, not_found=472, review=30
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-008\results_PROC-008.xlsx
+   -> DB row was already matching actual Excel count (30).
+Checking PROC-009: status=reviewing, rev_db=1176, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-009\results_PROC-009.xlsx
+   -> Actual rows in Excel sheets: matched=143, not_found=90, review=952
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-009\results_PROC-009.xlsx
+   -> Updated DB row for PROC-009: review was 1176 -> now 952
+Checking PROC-010: status=reviewing, rev_db=1171, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-010\results_PROC-010.xlsx
+   -> Actual rows in Excel sheets: matched=148, not_found=90, review=938
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-010\results_PROC-010.xlsx
+   -> Updated DB row for PROC-010: review was 1171 -> now 938
+Checking PROC-011: status=reviewing, rev_db=12, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-011\results_PROC-011.xlsx
+   -> Actual rows in Excel sheets: matched=123, not_found=483, review=8
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-011\results_PROC-011.xlsx
+   -> Updated DB row for PROC-011: review was 12 -> now 8
+Checking PROC-012: status=reviewing, rev_db=9, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-012\results_PROC-012.xlsx
+   -> Actual rows in Excel sheets: matched=129, not_found=483, review=5
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-012\results_PROC-012.xlsx
+   -> Updated DB row for PROC-012: review was 9 -> now 5
+Checking PROC-013: status=error, rev_db=0, file=None
+   -> Output file does not exist.
+Checking PROC-014: status=reviewing, rev_db=7, file=D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-014\results_PROC-014.xlsx
+   -> Actual rows in Excel sheets: matched=124, not_found=486, review=5
+   -> Cell B6 in summary: =MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)
+   -> Successfully fixed formulas and saved D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-014\results_PROC-014.xlsx
+   -> Updated DB row for PROC-014: review was 7 -> now 5
+

@@ -1,0 +1,17 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -797,6 +797,9 @@
+                 <button class="nav-item" onclick="showScreen('screen-settings', this)">
+                     <i class="ph ph-gear"></i> إعدادات النظام
+                 </button>
++                <button class="nav-item" onclick="showScreen('screen-logs', this)">
++                    <i class="ph ph-terminal"></i> سجل النظام (Terminal)
++                </button>
+             </nav>
+ 
+             <div class="sidebar-footer">
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

@@ -1,0 +1,30 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -122,8 +122,10 @@
+             if job_id:
+                 print(f"  ⏳ جاري المعالجة على الخادم (رقم المهمة: {job_id}). جاري الانتظار...")
+                 import time
+-                while True:
++                attempts = 0
++                while attempts < 120:  # 20 minutes max (120 * 10s)
+                     time.sleep(10)
++                    attempts += 1
+                     job_res = client.jobs.get(job_id)
+                     # Convert to dict
+                     if hasattr(job_res, 'model_dump'):
+@@ -139,7 +139,11 @@
+                     elif status in ["failed", "error"]:
+                         raise RuntimeError(f"فشلت عملية الاستخراج في الخادم: {job_data.get('error', '')}")
+                     
+-                    print(f"  ⏳ الحالة الحالية: {status} ...")
++                    if attempts % 3 == 0:
++                        print(f"  ⏳ الحالة الحالية: {status} ... (محاولة {attempts}/120)")
++                        
++                if attempts >= 120:
++                    raise RuntimeError("انتهت مهلة الانتظار (20 دقيقة) دون اكتمال المهمة على الخادم.")
+ 
+         # Cache the raw result
+         with open(cache_file, "w", encoding="utf-8") as f:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

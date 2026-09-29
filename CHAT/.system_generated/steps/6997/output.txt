@@ -1,0 +1,17 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-6995
+Status: RUNNING
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-6995.log
+Log output:
+<truncated 7 lines>
+09-24 17:53:29,728 - msemax.webhook - INFO - Port: 8001 | Max Concurrent: 1 | Rate Limit: 30/minute
+2026-09-24 17:53:29,728 - msemax.webhook - INFO - =================================================================
+2026-09-24 17:53:29,728 - msemax.webhook - INFO - Concurrency semaphore initialized: max 1 simultaneous requests
+2026-09-24 17:53:29,728 - msemax.webhook - INFO - Launching persistent Chromium context from: ./chrome_profile (headless=False, start-maximized)
+2026-09-24 17:53:31,114 - msemax.webhook - INFO - Navigating to https://aistudio.google.com/prompts/new_chat to ensure clean environment...
+2026-09-24 17:53:33,755 - msemax.webhook - INFO - Google AI Studio web page ready!
+2026-09-24 17:53:33,923 - msemax.webhook - INFO - Changing Thinking Level from 'Medium' to 'high'...
+2026-09-24 17:53:34,421 - msemax.webhook - INFO - Thinking Level set to 'High'.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+
+Last progress: 4s ago

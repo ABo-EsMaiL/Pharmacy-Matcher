@@ -1,0 +1,41 @@
+
+The command exited with code 0.
+Output:
+[*] Testing FastCoordinator with new Structured Vision items...
+
+============================================================
+[FAST ENGINE] Starting Match: 4 raw -> 4 UNIQUE shortages x 1 warehouses
+============================================================
+
+
+----------------------------------------
+[Warehouse] مخزن_الامانة.pdf (4 items)
+----------------------------------------
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 0
+  -> Deterministic Auto-Matches: 1
+  -> Final Warehouse Result: 1 matched, 0 review
+
+=== MATCHING TEST RESULTS ===
+Summary: {
+  "total_shortages": 4,
+  "unique_shortages": 4,
+  "matched_count": 1,
+  "not_found_count": 3,
+  "review_count": 0
+}
+
+Matched items (1):
+  [+] دوليبرين 1000 مجم 15 قرص -> دوليبرين 1000مجم 30قرص س.ج 45 (auto_rule)
+
+Needs Review items (0):
+
+Not Found items (3):
+  [-] فيوسيدين كريم 20 جم
+  [-] كتافلام 50 مجم اقراص
+  [-] كونكور 5 مجم اقراص
+[+] Results successfully saved to: scratch\test_pipeline_output.xlsx
+
+[+] Excel written successfully: D:\AI_Engineer\Pharmacy-agy-vision\scratch\test_pipeline_output.xlsx (Size: 8055 bytes)
+[SUCCESS] All pipeline stages verified 100% compatible with structured vision output!
+

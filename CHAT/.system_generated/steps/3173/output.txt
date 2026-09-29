@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+405 -> https://transform.unstructured.io/api/v2/upload
+    {"code":"method_not_allowed","message":"Method Not Allowed"}
+Done checking paths.
+

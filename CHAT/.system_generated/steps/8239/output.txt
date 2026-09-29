@@ -1,0 +1,36 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -772,8 +772,10 @@
+                 is_running: isRunning,
+                 is_done: isDone,
+                 has_error: false,
++                error_text: "",
+                 new_model_turn_started: newModelTurnStarted,
+-                model_count: currentModelCount
++                model_count: currentModelCount,
++                tool_calls: toolCallsCount
+             };
+         }'''
+ 
+@@ -806,11 +806,13 @@
+             is_done = state.get("is_done", False)
+             new_model_turn_started = state.get("new_model_turn_started", False)
+             has_error = state.get("has_error", False)
+-
+-            # Check for fatal error banner in AI Studio
+-            if has_error and not is_running and elapsed > 1.5:
+-                logger.error("Turn ended with an error ('permission denied' / 'internal error') from Google AI Studio. Aborting without retry.")
+-                yield {"delta": "", "text": "[Error: Google AI Studio encountered an error ('permission denied' / 'internal error'). Please check chat or try again.]"}
++            self.last_tool_calls_count = state.get("tool_calls", 0)
++
++            # Check for fatal or tool call error in AI Studio
++            if has_error and not is_running and elapsed > 0.5:
++                err_text = state.get("error_text") or "Google AI Studio encountered an error ('permission denied' / 'internal error')"
++                logger.error(f"Turn ended with an error from Google AI Studio: {err_text}")
++                yield {"delta": "", "text": f"[Error: {err_text}]"}
+                 break
+ 
+             # ------------------------------------------------------------------
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

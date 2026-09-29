@@ -1,0 +1,29 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-4014
+Status: DONE
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-4014.log
+Log output:
+<truncated 176 lines>
+ore    : token_sort=58.06451612903225 | Form: tablet vs tablet | St: [] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'فاركوسين مرهم س ج'
+  Warehouse: 'فاروكوين كريستال جديد'
+  Score    : token_sort=57.89473684210527 | Form: ointment vs None | St: [] vs []
+
+[السلام شبين]
+  Shortage : 'برونكوفين شراب س ج'
+  Warehouse: 'برونكوبينير سعر ٢٨١ج'
+  Score    : token_sort=57.89473684210527 | Form: syrup vs None | St: [] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'اكسترا بروتين اكياس فانيليا'
+  Warehouse: 'سيتال اكسترا/ايكيو'
+  Score    : token_sort=57.77777777777777 | Form: sachet vs None | St: [] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'ريبايون اسبراي'
+  Warehouse: 'ريبايون ان جل بديل ريباريل ٥٠جم'
+  Score    : token_sort=57.77777777777777 | Form: None vs gel | St: [] vs ['٥٠']
+
+
+Last progress: 7s ago

@@ -1,0 +1,93 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1010,6 +1010,34 @@
+ }
+ 
+ // --- Drag & Drop Logic ---
++window.activeDragZone = null;
++
++function handleNativeDrop(files) {
++    if (files && files.length > 0) {
++        if (window.activeDragZone === 'warehouse') {
++            selectedWarehouseFiles = [...selectedWarehouseFiles, ...files];
++            updateFileList('warehouse', selectedWarehouseFiles);
++        } else if (window.activeDragZone === 'shortage') {
++            selectedShortageFiles = [...selectedShortageFiles, ...files];
++            updateFileList('shortage', selectedShortageFiles);
++        } else {
++            // Default to shortages if zone wasn't active
++            selectedShortageFiles = [...selectedShortageFiles, ...files];
++            updateFileList('shortage', selectedShortageFiles);
++        }
++        checkSubmitState();
++        
++        ['zone-shortage', 'zone-warehouse'].forEach(id => {
++            const zone = document.getElementById(id);
++            if(zone) {
++                zone.style.borderColor = '';
++                zone.style.background = '';
++            }
++        });
++        window.activeDragZone = null;
++    }
++}
++
+ function setupDragAndDrop() {
+     const zones = [
+         { id: 'zone-shortage', type: 'shortage' },
+@@ -1019,8 +1019,10 @@
+         const zone = document.getElementById(id);
+         if (!zone) return;
+ 
++        zone.addEventListener('dragenter', () => { window.activeDragZone = type; });
+         zone.addEventListener('dragover', (e) => {
+             e.preventDefault();
++            window.activeDragZone = type;
+             zone.style.borderColor = 'var(--primary)';
+             zone.style.background = '#f0f9ff';
+         });
+@@ -1028,31 +1028,20 @@
+             e.preventDefault();
+             zone.style.borderColor = '';
+             zone.style.background = '';
+-        });
+-
++            // We do not set activeDragZone to null here, 
++            // because dragleave fires right before the native drop event!
++        });
++
++        // The native JS drop is blocked by Edge WebView2, 
++        // but we intercept the drop in Python and call handleNativeDrop!
+         zone.addEventListener('drop', (e) => {
+             e.preventDefault();
+-            zone.style.borderColor = '';
+-            zone.style.background = '';
+-            
++            // Just in case Edge *does* expose path on a future update or on Mac:
+             if (e.dataTransfer && e.dataTransfer.files) {
+                 const files = Array.from(e.dataTransfer.files).map(f => f.path || f.name).filter(p => p);
+-                if (files.length > 0) {
+-                    // Because pywebview might strip full path, we show a warning if path is not absolute
+-                    const hasPath = files[0].includes('\\') || files[0].includes('/');
+-                    if (!hasPath) {
+-                        showToast('غير مدعوم: يرجى استخدام زر التصفح لاختيار الملفات بدلاً من السحب بسبب قيود الأمان في المتصفح.', 'error');
+-                        return;
+-                    }
+-
+-                    if (type === 'warehouse') {
+-                        selectedWarehouseFiles = [...selectedWarehouseFiles, ...files];
+-                        updateFileList('warehouse', selectedWarehouseFiles);
+-                    } else {
+-                        selectedShortageFiles = [...selectedShortageFiles, ...files];
+-                        updateFileList('shortage', selectedShortageFiles);
+-                    }
+-                    checkSubmitState();
++                const hasPath = files.length > 0 && (files[0].includes('\\') || files[0].includes('/'));
++                if (hasPath) {
++                    handleNativeDrop(files);
+                 }
+             }
+         });
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

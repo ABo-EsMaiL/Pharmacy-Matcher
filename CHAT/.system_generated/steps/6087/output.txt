@@ -1,0 +1,16 @@
+
+The command exited with code 0.
+Output:
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-013
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         9/24/2026   3:35 AM                input_shortages                                                      
+d-----         9/24/2026   3:35 AM                input_warehouses                                                     
+d-----         9/24/2026   3:35 AM                output                                                               
+
+
+

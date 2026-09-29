@@ -1,0 +1,23 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -424,7 +424,7 @@
+                 copied_warehouses.append(dest)
+                 
+             if self._window:
+-                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Reading files...'}}}}));")
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'جاري فحص وقراءة الملفات...'}}}}));")
+                 
+             # Import actual project modules
+             from src.config import load_config
+@@ -444,7 +444,7 @@
+             
+             self.add_log("[PROCESS] Config loaded (Vision Gateway: active).")
+             if self._window:
+-                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Extracting data from files...'}}}}));")
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'جاري استخراج الأصناف من الفواتير والملفات...'}}}}));")
+             
+             # Read input files (Pure Gemini Vision for PDF, Smart Excel & Markdown parsers)
+             vision_url = config.vision_api_url
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

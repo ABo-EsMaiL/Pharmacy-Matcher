@@ -1,0 +1,17 @@
+Found 16 results
+history.db
+processes
+processes/PROC-001
+processes/PROC-001/input_shortages
+processes/PROC-001/input_shortages/0913.xlsx
+processes/PROC-001/input_warehouses
+processes/PROC-001/input_warehouses/السلام شبين.json
+processes/PROC-001/input_warehouses/السلام شبين.pdf
+processes/PROC-001/input_warehouses/المكرومي المنصورة.pdf
+processes/PROC-001/input_warehouses/الهضبة الاثنين نقدى0.pdf
+processes/PROC-001/input_warehouses/جملة العمروووو.pdf
+processes/PROC-001/input_warehouses/كيور فارما خاص.pdf
+processes/PROC-001/input_warehouses/مخزن الحياة فارم اسكندريه-170.pdf
+processes/PROC-001/output
+processes/data
+settings.json

@@ -1,0 +1,30 @@
+[
+  {
+    "requested": "فيتا دي ثري4000ميكروفيلم",
+    "target": "فيتا د 3 4000 لزقة باكت 200",
+    "request_view": "فيتا d 3 4000",
+    "candidate_view": "فيتا d 3",
+    "request_anchor": "فيتا",
+    "candidate_anchor": "فيتا",
+    "route": [
+      "ambiguous",
+      "ocr_or_incomplete_name"
+    ],
+    "source_file": "الهضبة الاثنين نقدى0.pdf",
+    "source_page": 15
+  },
+  {
+    "requested": "هيرو دي3+كي2 نقط",
+    "target": "هيرو فى اى دى ثرى كيه نقط\"جديد",
+    "request_view": "هيرو d 3 k 2",
+    "candidate_view": "هيرو v e d 3 k",
+    "request_anchor": "هيرو",
+    "candidate_anchor": "هيرو",
+    "route": [
+      "ambiguous",
+      "ocr_or_incomplete_name"
+    ],
+    "source_file": "كيور فارما خاص.pdf",
+    "source_page": 8
+  }
+]

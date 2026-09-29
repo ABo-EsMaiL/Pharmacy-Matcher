@@ -1,0 +1,6 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\fast_match\\coordinator.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\match\\gemini_match.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\match\\coordinator.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\gemini_match.py"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py"}

@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+('PROC-002', '2026-09-22T14:11:05.298875', 'reviewing', 993, 19, 20, 552, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-002\\results_PROC-002.xlsx')
+('PROC-003', '2026-09-22T14:45:28.706248', 'reviewing', 207, 150, 16, 41, 'D:\\AI_Engineer\\Pharmacy-agy\\data\\processes\\PROC-003\\results_PROC-003.xlsx')
+

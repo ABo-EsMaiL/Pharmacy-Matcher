@@ -1,0 +1,16 @@
+[*] Starting Chained Parse + Extract on جملة العمروووو.pdf...
+1. Submitting Parse job...
+   -> Parse Job ID: 0eebb564-59f3-41ec-a7d3-2b650df4d411
+2. Polling Parse job...
+   -> Status: JobStatus.PROCESSING
+   -> Status: JobStatus.PROCESSING
+   -> Status: JobStatus.PROCESSING
+   -> Status: JobStatus.PROCESSING
+   -> Status: JobStatus.COMPLETED
+[+] Parse completed! Result ID: 0eebb564-59f3-41ec-a7d3-2b650df4d411
+3. Running Extract with Schema...
+[+] Extract finished! Extraction type: <class 'unstructured_transform_client._generated.models.job_accepted.JobAccepted'>
+[+] Extracted items count: 0
+[+] First 3 items: []
+4. Cleaning up job...
+[+] Test job deleted. Server is clean!

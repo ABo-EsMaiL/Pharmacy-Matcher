@@ -1,0 +1,20 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Total raw rows: 993
+Unique distinct drug names: 592
+
+Top 10 repeated drugs:
+  [8 times] اسبرين بروتكت 100مجم3شريط
+  [7 times] اريثركس200مجم2شريط
+  [7 times] ديوراسيف  250مجم شراب س ج
+  [7 times] لبن هيرو بيبي 2
+  [6 times] ليبانتيل145اقراص س ج
+  [6 times] فانج رير جل شاور
+  [6 times] يورينكس كبسول
+  [5 times] كانديكيور لبوس مهبلي
+  [5 times] دولفين 50مجم لبوس 2شريط
+  [5 times] سيتال1جم اقراص س ج
+

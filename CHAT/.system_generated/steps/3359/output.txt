@@ -1,0 +1,103 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\file_handler.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -13,6 +13,37 @@
+ _JSON_EXTENSIONS = {".json"}
+ 
+ 
++from concurrent.futures import ThreadPoolExecutor, as_completed
++
++
++def _process_single_file(
++    filepath: Path,
++    api_key: str | None,
++    base_url: str,
++    gemini_api_key: str | None,
++    profile: str
++) -> tuple[str, list[dict]]:
++    filepath = Path(filepath)
++    ext = filepath.suffix.lower()
++    print(f"\n  -> [START] Processing file: {filepath.name} (Type: {ext})")
++    try:
++        if ext in _EXCEL_EXTENSIONS:
++            items = _process_excel_file(filepath)
++        elif ext in _PDF_EXTENSIONS:
++            items = _process_pdf_file(filepath, api_key, base_url, gemini_api_key, profile)
++        elif ext in _JSON_EXTENSIONS:
++            items = _process_json_file(filepath)
++        else:
++            print(f"[!] Unsupported extension: {ext} for {filepath.name}")
++            return filepath.name, []
++
++        print(f"  -> [DONE] {filepath.name}: {len(items)} items extracted.")
++        return filepath.name, items
++    except Exception as e:
++        print(f"[!] Exception processing {filepath.name}: {e}")
++        return filepath.name, []
++
++
+ def read_input_files(
+     filepaths: list[Path],
+     role: str,
+@@ -22,7 +22,7 @@
+ ) -> dict[str, list[dict]]:
+     role_label = "Shortages" if role == "shortages" else "Warehouse"
+     print(f"\n{'='*60}")
+-    print(f"[*] Processing {role_label} files ({len(filepaths)} file(s))")
++    print(f"[*] Processing {role_label} files ({len(filepaths)} file(s)) [PARALLEL WORKERS]")
+     print(f"{'='*60}")
+ 
+     results: dict[str, list[dict]] = {}
+@@ -29,27 +29,29 @@
+-    for filepath in filepaths:
+-        filepath = Path(filepath)
+-        ext = filepath.suffix.lower()
+-
+-        print(f"\n  -> File: {filepath.name} (Type: {ext})")
+-
+-        if ext in _EXCEL_EXTENSIONS:
+-            items = _process_excel_file(filepath)
+-        elif ext in _PDF_EXTENSIONS:
+-            items = _process_pdf_file(filepath, api_key, base_url, gemini_api_key, profile)
+-        elif ext in _JSON_EXTENSIONS:
+-            items = _process_json_file(filepath)
+-        else:
+-            raise ValueError(
+-                f"[!] Unsupported extension: {ext}\n"
+-                f"    Supported: {', '.join(sorted(_EXCEL_EXTENSIONS | _PDF_EXTENSIONS | _JSON_EXTENSIONS))}"
+-            )
+-
+-        results[filepath.name] = items
+-        print(f"     Extracted items: {len(items)}")
++    if not filepaths:
++        return results
++
++    if len(filepaths) == 1:
++        fname, items = _process_single_file(filepaths[0], api_key, base_url, gemini_api_key, profile)
++        results[fname] = items
++    else:
++        # Run in parallel across worker threads
++        max_workers = min(len(filepaths), 8)
++        with ThreadPoolExecutor(max_workers=max_workers) as executor:
++            futures = {
++                executor.submit(_process_single_file, fp, api_key, base_url, gemini_api_key, profile): Path(fp).name
++                for fp in filepaths
++            }
++            for future in as_completed(futures):
++                fname = futures[future]
++                try:
++                    name, items = future.result()
++                    results[name] = items
++                except Exception as e:
++                    print(f"[!] Worker failed for {fname}: {e}")
++                    results[fname] = []
+ 
+     total = sum(len(items) for items in results.values())
+     print(f"\n{'='*60}")
+-    print(f"[+] Completed {role_label}: {total} items from {len(filepaths)} file(s)")
++    print(f"[+] Completed {role_label}: {total} items from {len(results)} file(s)")
+     print(f"{'='*60}\n")
+ 
+     return results
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

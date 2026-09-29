@@ -1,0 +1,23 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Extracted 993 items from column 'أسم الصنف'
+[*] Processing PDF file: جملة العمروووو.pdf
+[+] Loaded 19 items from local cache: جملة العمروووو.pdf
+  -> Indexing warehouse for Fast Search...
+  -> Exact Matches: 0
+  -> TF-IDF Auto-Matches (>88%): 0
+  -> Sending 52 ambiguous items to Local API (MSEMAX) in 1 large batch(es) (Max ~75 items/msg)...
+      [*] Sending Batch 1/1 (52 items)...
+      [✓] Batch 1 (52 items) done: 1 matched, 1 review.
+  -> Final Warehouse Result: 1 matched, 1 review
+Amro Result now:
+Matched: [{'shortage_item': 'امبوفير 5امبول س ج', 'warehouse_item': 'امبوفير حقن جديد', 'confidence': 'llm', 'method': 'fast_llm'}]
+Review: [{'shortage_item': 'افيروكوكسيب90مجم20قرص س ج', 'warehouse_item': 'افيرو كوكسبيب 90مجم-32ب', 'reason': 'نفس الاسم التجاري والشكل والتركيز، لكن يوجد اختلاف في بيانات العبوة: المطلوب 20 قرص والمرشح مذكور 32ب.'}]
+

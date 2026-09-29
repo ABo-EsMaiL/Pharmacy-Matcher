@@ -1,0 +1,116 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -216,53 +216,66 @@
+             return str(result[0])
+         return ""
+ 
++    def is_process_running(self) -> dict:
++        running = bool(self._worker_thread and self._worker_thread.is_alive())
++        return {"running": running}
++
+     def start_process(self, shortage_paths_json: str, warehouse_paths_json: str) -> dict:
+-        try:
+-            shortage_paths = json.loads(shortage_paths_json)
+-            warehouse_paths = json.loads(warehouse_paths_json)
+-            
+-            shortage_filenames = [Path(p).name for p in shortage_paths]
+-            warehouse_filenames = [Path(p).name for p in warehouse_paths]
+-            
+-            process_id = self._db.create_process(shortage_filenames, warehouse_filenames)
+-            
+-            thread = threading.Thread(target=self._process_worker, args=(process_id, shortage_paths, warehouse_paths))
+-            thread.start()
+-            
+-            return {"success": True, "process_id": process_id}
+-            
+-        except Exception as e:
+-            return {"success": False, "error": str(e)}
++        with self._worker_lock:
++            if self._worker_thread and self._worker_thread.is_alive():
++                return {"success": False, "error": "توجد عملية مطابقة قيد التشغيل حالياً، يرجى الانتظار حتى تنتهي"}
++
++            try:
++                shortage_paths = json.loads(shortage_paths_json)
++                warehouse_paths = json.loads(warehouse_paths_json)
++                
++                shortage_filenames = [Path(p).name for p in shortage_paths]
++                warehouse_filenames = [Path(p).name for p in warehouse_paths]
++                
++                process_id = self._db.create_process(shortage_filenames, warehouse_filenames)
++                
++                self._worker_thread = threading.Thread(target=self._process_worker, args=(process_id, shortage_paths, warehouse_paths))
++                self._worker_thread.daemon = True
++                self._worker_thread.start()
++                
++                return {"success": True, "process_id": process_id}
++                
++            except Exception as e:
++                return {"success": False, "error": str(e)}
+ 
+     def restart_process(self, process_id: str) -> dict:
+-        try:
+-            workspace = PROJECT_ROOT / 'data' / 'inputs' / process_id
+-            if not workspace.exists():
+-                return {"success": False, "error": "ملفات العملية غير موجودة لإعادة التشغيل"}
+-            
+-            # get process details
+-            cursor = self._db.conn.cursor()
+-            cursor.execute('SELECT shortage_files, warehouse_files FROM processes WHERE id = ?', (process_id,))
+-            row = cursor.fetchone()
+-            if not row:
+-                return {"success": False, "error": "العملية غير موجودة"}
+-                
+-            shortage_filenames = json.loads(row['shortage_files'])
+-            warehouse_filenames = json.loads(row['warehouse_files'])
+-            
+-            shortage_paths = [str(workspace / name) for name in shortage_filenames]
+-            warehouse_paths = [str(workspace / name) for name in warehouse_filenames]
+-            
+-            # Reset status
+-            self._db.update_process_status(process_id, 'processing')
+-            
+-            thread = threading.Thread(target=self._process_worker, args=(process_id, shortage_paths, warehouse_paths, True))
+-            thread.daemon = True
+-            thread.start()
+-            
+-            return {"success": True, "process_id": process_id}
+-        except Exception as e:
+-            return {"success": False, "error": str(e)}
++        with self._worker_lock:
++            if self._worker_thread and self._worker_thread.is_alive():
++                return {"success": False, "error": "توجد عملية مطابقة قيد التشغيل حالياً، يرجى الانتظار حتى تنتهي"}
++
++            try:
++                workspace = PROJECT_ROOT / 'data' / 'inputs' / process_id
++                if not workspace.exists():
++                    return {"success": False, "error": "ملفات العملية غير موجودة لإعادة التشغيل"}
++                
++                # get process details
++                cursor = self._db.conn.cursor()
++                cursor.execute('SELECT shortage_files, warehouse_files FROM processes WHERE id = ?', (process_id,))
++                row = cursor.fetchone()
++                if not row:
++                    return {"success": False, "error": "العملية غير موجودة"}
++                    
++                shortage_filenames = json.loads(row['shortage_files'])
++                warehouse_filenames = json.loads(row['warehouse_files'])
++                
++                shortage_paths = [str(workspace / name) for name in shortage_filenames]
++                warehouse_paths = [str(workspace / name) for name in warehouse_filenames]
++                
++                # Reset status
++                self._db.update_process_status(process_id, 'processing')
++                
++                self._worker_thread = threading.Thread(target=self._process_worker, args=(process_id, shortage_paths, warehouse_paths, True))
++                self._worker_thread.daemon = True
++                self._worker_thread.start()
++                
++                return {"success": True, "process_id": process_id}
++            except Exception as e:
++                return {"success": False, "error": str(e)}
+ 
+     def _process_worker(self, process_id: str, shortage_paths: list, warehouse_paths: list, is_restart: bool = False):
+         try:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

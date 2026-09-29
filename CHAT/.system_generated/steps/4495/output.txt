@@ -1,0 +1,63 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -236,7 +236,7 @@
+                                     status = "no_match"
+                                     
+                             if status in ("match", "review"):
+-                                # Deterministic Safety Check: Dosage form conflict
++                                # 1. Dosage form conflict
+                                 req_form = extract_form_group(shortage_name)
+                                 wh_form = extract_form_group(warehouse_item)
+                                 if req_form and wh_form and req_form != wh_form:
+@@ -243,5 +243,27 @@
+                                     
+-                                # Deterministic Safety Check: Brand similarity
++                                # 2. Multi-strength slash mismatch (e.g. 4/30 vs 4)
++                                slash_req = re.search(r'\b(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)\b', shortage_name)
++                                slash_wh = re.search(r'\b(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)\b', warehouse_item)
++                                if slash_req and not slash_wh:
++                                    status = "no_match"
++                                elif slash_wh and not slash_req:
++                                    status = "no_match"
++                                elif slash_req and slash_wh and slash_req.group(1) != slash_wh.group(1):
++                                    status = "no_match"
++                                    
++                                # 3. Combination suffix mismatch (كو / بلس / co / plus)
++                                is_req_co = bool(re.search(r'\b(كو|بلس|بلاس|كومب|co|plus|comp)\b', shortage_name.lower()))
++                                is_wh_co = bool(re.search(r'\b(كو|بلس|بلاس|كومب|co|plus|comp)\b', warehouse_item.lower()))
++                                if is_req_co != is_wh_co:
++                                    status = "no_match"
++                                    
++                                # 4. Commercial prefix mismatch (نيو / new)
++                                is_req_new = bool(re.search(r'\b(نيو|new)\b', shortage_name.lower()))
++                                is_wh_new = bool(re.search(r'\b(نيو|new)\b', warehouse_item.lower()))
++                                if is_req_new != is_wh_new:
++                                    status = "no_match"
++                                    
++                                # 5. Deterministic Safety Check: Brand similarity
+                                 req_b = extract_brand_tokens(shortage_name)
+                                 wh_b = extract_brand_tokens(warehouse_item)
+                                 if req_b and wh_b:
+@@ -252,7 +252,18 @@
+                                         b_sim = fuzz.ratio(req_b, wh_b)
+                                     if req_b.startswith(wh_b) or wh_b.startswith(req_b):
+                                         b_sim = max(b_sim, 80)
+-                                    if b_sim < 50:
++                                    if b_sim < 65:
++                                        status = "no_match"
++                                        
++                                # 6. Known distinct look-alike brand pairs (strict zero tolerance)
++                                distinct_pairs = {
++                                    ('امبوفير', 'اميفير'), ('اميفير', 'امبوفير'),
++                                    ('جرانتريل', 'جرانتيل'), ('جرانتيل', 'جرانتريل'),
++                                    ('ديباكين', 'ديبيكان'), ('ديبيكان', 'ديباكين'),
++                                    ('اولفن', 'البيران'), ('البيران', 'اولفن'),
++                                }
++                                for p1, p2 in distinct_pairs:
++                                    if p1 in req_b and p2 in wh_b:
+                                         status = "no_match"
+                                     
+                             if status == "match":
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,32 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-4189
+Status: DONE
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-4189.log
+Log output:
+<truncated 728 lines>
+ الاثنين نقدى0]
+  Req: 'برونكوفين شراب س ج'
+  Wh : 'پروفین شراب/باکت 30'
+  Score: ts=27.027027027027028 | b_ratio=80.0 | form=syrup vs syrup
+
+[كيور فارما خاص]
+  Req: 'اومنيك 0.4مجم30قرص'
+  Wh : 'اوميبك ٢٠مجم ٤ كبسوله'
+  Score: ts=25.64102564102564 | b_ratio=83.33333333333334 | form=tablet vs tablet
+
+[المكرومي المنصورة]
+  Req: 'كوتارج 160/12.5مجم4شريط س ج'
+  Wh : 'تارج ٢٠ مجم ١٠ اقراص'
+  Score: ts=25.531914893617024 | b_ratio=80.0 | form=tablet vs tablet
+
+[المكرومي المنصورة]
+  Req: 'فلوتاك 75مجم اقراص س ج'
+  Wh : 'فلوزاك ٢٠ مجم/امون'
+  Score: ts=25.0 | b_ratio=83.33333333333334 | form=tablet vs None
+
+[كيور فارما خاص]
+  Req: 'جليبوفين500/5مجم30قرص'
+  Wh : 'جلیویین ٥/١٠٠٠ اقراص'
+  Score: ts=24.390243902439025 | b_ratio=80.0 | form=tablet vs tablet
+
+
+Last progress: 0s ago

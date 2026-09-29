@@ -1,0 +1,5 @@
+{"File":"C:\\Users\\kakak\\.gemini\\antigravity\\brain\\916274de-7f92-49fc-a0a8-d291664b474a\\scratch\\debug_false_matches.py","LineNumber":8,"LineContent":"    (\"اولفن100مجم اس ار10كبسول س ج\", \"البيران اس ار اقراص / باكت 10\"),"}
+{"File":"C:\\Users\\kakak\\.gemini\\antigravity\\brain\\916274de-7f92-49fc-a0a8-d291664b474a\\scratch\\test_11_cases.py","LineNumber":8,"LineContent":"    {\"cid\": \"C1\", \"shortage\": \"اولفن100مجم اس ار10كبسول س ج\", \"cand\": \"البيران اس ار اقراص / باكت 10\", \"llm_status\": \"no_match\"},"}
+{"File":"C:\\Users\\kakak\\.gemini\\antigravity\\brain\\916274de-7f92-49fc-a0a8-d291664b474a\\scratch\\test_11_cases.py","LineNumber":73,"LineContent":"            ('اولفن', 'البيران'), ('البيران', 'اولفن'),"}
+{"File":"C:\\Users\\kakak\\.gemini\\antigravity\\brain\\916274de-7f92-49fc-a0a8-d291664b474a\\scratch\\test_clean_brand.py","LineNumber":25,"LineContent":"b2 = clean_brand(\"البيران اس ار اقراص / باكت 10\")"}
+{"File":"C:\\Users\\kakak\\.gemini\\antigravity\\brain\\916274de-7f92-49fc-a0a8-d291664b474a\\scratch\\test_sr.py","LineNumber":2,"LineContent":"print(\"اولفن vs البيران:\", fuzz.ratio('اولفن', 'البيران'))"}

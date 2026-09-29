@@ -1,0 +1,20 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -965,9 +965,11 @@
+             tag: t.tagName,
+             cls: t.className,
+             role: t.getAttribute('data-turn-role'),
+-            has_prompt: t.querySelector('ms-prompt-chunk') !== null,
+-            has_thought: t.querySelector('ms-thought-chunk, .thought-activity-host') !== null,
+-            text_chunks: t.querySelectorAll('ms-text-chunk, ms-code-block, ms-code-chunk').length,
++            author_elements: Array.from(t.querySelectorAll('*')).filter(e => {
++                const txt = (e.innerText || '').trim();
++                return txt === 'User' || txt === 'Model' || txt.startsWith('User ') || txt.startsWith('Model ');
++            }).map(e => ({ tag: e.tagName, cls: e.className, text: e.innerText })),
++            has_thumb: t.querySelector('mat-icon, [aria-label*="thumb" i]') !== null,
+             preview: (t.innerText || '').slice(0, 150)
+         }));
+     }''')
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

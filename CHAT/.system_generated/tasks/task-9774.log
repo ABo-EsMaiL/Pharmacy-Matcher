@@ -1,0 +1,17 @@
+Navigating to AI Studio...
+State 1 (Empty): {'tag': 'BUTTON', 'outer': '<button _ngcontent-ng-c2081246445="" ms-button="" mattooltipclass="run-button-tooltip" class="mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary" aria-disabled="true" j', 'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary'}
+Image uploaded! Monitoring Run button state every 0.5s for 10s...
+t=0.0s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=0.5s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=1.0s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=1.5s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=2.0s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=2.5s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=3.0s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=3.5s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=4.0s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=4.5s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=5.0s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=5.5s: {'disabled': False, 'ariaDisabled': 'true', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+t=6.0s: {'disabled': False, 'ariaDisabled': 'false', 'classes': 'mat-mdc-tooltip-trigger ng-tns-c2081246445-11 ctrl-enter-submits ms-button-primary', 'text': 'Run Ctrl keyboard_return', 'hasTokens': True}
+[+] Run button is ACTIVE at t=6.0s!

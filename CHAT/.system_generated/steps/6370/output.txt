@@ -1,0 +1,26 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1897,7 +1897,7 @@
+         terminal_subtitle: "يُظهر مخرجات العمليات الجارية في الخلفية",
+ 
+         // Screen AI Servers
+-        nav_servers: "إدارة السيرفرات (AI Servers)",
++        nav_servers: "إدارة السيرفرات",
+         servers_title: "إدارة سيرفرات الذكاء الاصطناعي (AI Servers)",
+         servers_desc: "التحكم في سيرفرات MSEMAX (ChatGPT و Google AI Studio) واختبار الاتصال واختيار المزود النشط.",
+         gaistudio_server_title: "MSEMAX (Google AI Studio)",
+@@ -1911,8 +1911,9 @@
+         btn_stop_instance: "إيقاف السيرفر",
+         btn_test_connection: "اختبار الاتصال",
+         btn_login_session: "فتح الجلسة (Login)",
+-        test_panel_title: "نتائج فحص واختبار السيرفر المباشر (Live Diagnostic Log):",
+-        btn_refresh: "تحديث الحالة",
++        server_terminal_title: "شاشة سجلات وخادم الذكاء الاصطناعي (AI Server Console)",
++        server_terminal_sub: "مخرجات Uvicorn المباشرة، فحص الاتصال، ورسائل بدء وإيقاف السيرفرات",
++        btn_refresh: "تحديث",
+         btn_clear: "مسح",
+ 
+         // Dialogs & Confirmations
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

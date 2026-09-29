@@ -1,0 +1,381 @@
+{
+  "page": 3,
+  "items": [
+    {
+      "item_name_raw": "دافلون 1000قراص",
+      "trade_name": "دافلون",
+      "strength": "1000",
+      "form": "أقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": ".دافلون 500 2قراص 2شريط سعر جديد",
+      "trade_name": "دافلون",
+      "strength": "500",
+      "form": "أقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "دانتريلاكس عادى 25مجم /باكو 60",
+      "trade_name": "دانتريلاكس عادي",
+      "strength": "25مجم",
+      "form": "",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "دانتريلاكس مركب 3شريط باكت40",
+      "trade_name": "دانتريلاكس مركب",
+      "strength": "",
+      "form": "",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "دايجست ايز20ك باكت 26",
+      "trade_name": "دايجست ايز",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "دوفاستون اقراص سعر جديد",
+      "trade_name": "دوفاستون",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "دوفالاك شراب /باكو24",
+      "trade_name": "دوفالاك",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "دوكسيوم 500باكت 5 س ج",
+      "trade_name": "دوكسيوم",
+      "strength": "500",
+      "form": "",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "دولفين ك6 امبول",
+      "trade_name": "دولفين ك",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "دولفين 25لبوس 2شريط/باكو90",
+      "trade_name": "دولفين",
+      "strength": "25",
+      "form": "لبوس",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديامونريكتا5مجم/باكو56",
+      "trade_name": "ديامونريكتا",
+      "strength": "5مجم",
+      "form": "",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديامكرون30مجم 3شريط",
+      "trade_name": "ديامكرون",
+      "strength": "30مجم",
+      "form": "",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديامونريكتا2قرص باكت 35",
+      "trade_name": "ديامونريكتا",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديامونريكتا4قرص/باكو35",
+      "trade_name": "ديامونريكتا",
+      "strength": "",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديجينورم شراب باكو 25",
+      "trade_name": "ديجينورم",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديكسافلوكس قطرة سعرجديد",
+      "trade_name": "ديكسافلوكس",
+      "strength": "",
+      "form": "قطرة",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديكساميثازون امبول العامرية/باكو50",
+      "trade_name": "ديكساميثازون",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديكساميثازون5امبول سيجما",
+      "trade_name": "ديكساميثازون",
+      "strength": "",
+      "form": "امبول",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديكلاك150اقراص باكت 20",
+      "trade_name": "ديكلاك",
+      "strength": "150",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديكلاك75اقراص 3شريط باكت 100",
+      "trade_name": "ديكلاك",
+      "strength": "75",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديلاترول25مجم30ق",
+      "trade_name": "ديلاترول",
+      "strength": "25مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديلاترول6.25مجم30ق",
+      "trade_name": "ديلاترول",
+      "strength": "6.25مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ديلزوسين500مجم اقرص",
+      "trade_name": "ديلزوسين",
+      "strength": "500مجم",
+      "form": "اقرص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ريجيماكس اقراص باكت 30",
+      "trade_name": "ريجيماكس",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ريلاكسون كبسول باكت 60",
+      "trade_name": "ريلاكسون",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "زنك اوليف كريم سعر جديدباكت 0.",
+      "trade_name": "زنك اوليف",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "زنكترون اقراص باكت 160",
+      "trade_name": "زنكترون",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "زوفيراكس شراب/باكو24",
+      "trade_name": "زوفيراكس",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "زيثروكان500اقراص 3ق باكت 60",
+      "trade_name": "زيثروكان",
+      "strength": "500",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "زيترون500مجم 5قرص/باكو45",
+      "trade_name": "زيترون",
+      "strength": "500مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "زيترون500مجم 3قراص/باكو45",
+      "trade_name": "زيترون",
+      "strength": "500مجم",
+      "form": "أقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "زيرتك اقراص سعر جديد/باكو117",
+      "trade_name": "زيرتك",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "زيرتك شرب باكت 24",
+      "trade_name": "زيرتك",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "زيرودوكس بلس كبسول باكت 138",
+      "trade_name": "زيرودوكس بلس",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "يسروسين كبسول سعر جديد باكت 0",
+      "trade_name": "يسروسين",
+      "strength": "",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ستريتوكين2شريط باكت 20",
+      "trade_name": "ستريتوكين",
+      "strength": "",
+      "form": "",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ستروبانتين كريم/باكو12",
+      "trade_name": "ستروبانتين",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "ستيرونات نور اقراص/باكو40",
+      "trade_name": "ستيرونات نور",
+      "strength": "",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "سليبركس200مجم15قرص باكت 35",
+      "trade_name": "سليبركس",
+      "strength": "200مجم",
+      "form": "قرص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "سوبراكس200مجم كبسول",
+      "trade_name": "سوبراكس",
+      "strength": "200مجم",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "سوبراكس400مجم كبسول",
+      "trade_name": "سوبراكس",
+      "strength": "400مجم",
+      "form": "كبسول",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "سوبراكس60مل شراب",
+      "trade_name": "سوبراكس",
+      "strength": "60مل",
+      "form": "شراب",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "سى ريتارد 500باكت 20",
+      "trade_name": "سى ريتارد",
+      "strength": "500",
+      "form": "",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "سيبرو 500 م جم م ف ي س",
+      "trade_name": "سيبرو",
+      "strength": "500 م جم",
+      "form": "",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "سيتال اقراص 500 س ج",
+      "trade_name": "سيتال",
+      "strength": "500",
+      "form": "اقراص",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "سيتال شراب س ج باكت20",
+      "trade_name": "سيتال",
+      "strength": "",
+      "form": "شراب",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    },
+    {
+      "item_name_raw": "سيدوبروكت كريم",
+      "trade_name": "سيدوبروكت",
+      "strength": "",
+      "form": "كريم",
+      "source_page": 3,
+      "source_file": "مخزن الحياة فارم اسكندريه-170.pdf"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2275,9 +2275,10 @@
+         listEl.innerHTML = '';
+         history.forEach(item => {
+             const date = new Date(item.created_at).toLocaleString(currentLang === 'ar' ? 'ar-EG' : 'en-US');
+-            const statusClass = item.status === 'completed' ? 'badge-completed' : (item.status === 'processing' ? 'badge-processing' : 'badge-reviewing');
++            const statusClass = item.status === 'completed' ? 'badge-completed' : (item.status === 'processing' ? 'badge-processing' : (item.status === 'queued' ? 'badge-queued' : 'badge-reviewing'));
+             let statusText = item.status === 'completed' ? t.status_completed : t.status_reviewing;
+             if (item.status === 'processing') statusText = t.status_processing;
++            else if (item.status === 'queued') statusText = t.status_queued || (currentLang === 'en' ? 'Queued' : 'في الانتظار');
+             else if (item.status === 'error') statusText = t.status_error;
+             
+             const card = document.createElement('div');
+@@ -2284,4 +2284,4 @@
+-            card.onclick = () => { if(item.status !== 'processing') viewProcess(item.id); };
++            card.onclick = () => { if(item.status !== 'processing' && item.status !== 'queued') viewProcess(item.id); };
+             
+             card.innerHTML = `
+                 <div class="history-info">
+@@ -2297,11 +2297,15 @@
+                 <div class="history-actions">
+                     ${item.status === 'processing' 
+                         ? `<button class="btn btn-primary" style="opacity:0.7; cursor:not-allowed;" disabled><i class="ph-fill ph-spinner-gap spinner"></i> ${t.status_processing}</button>`
+-                        : (item.status === 'error'
+-                            ? `<button class="btn btn-warning" onclick="restartProcess('${item.id}')"><i class="ph-fill ph-arrow-counter-clockwise"></i> ${t.btn_restart}</button>
+-                               <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
+-                            : `<button class="btn btn-primary" onclick="viewProcess('${item.id}')"><i class="ph-fill ph-eye"></i> ${t.btn_view_results}</button>
+-                               <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
++                        : (item.status === 'queued'
++                            ? `<button class="btn btn-secondary" style="opacity:0.85; cursor:not-allowed;" disabled><i class="ph ph-clock"></i> ${statusText}</button>
++                               <button class="btn btn-danger btn-icon" title="${currentLang === 'en' ? 'Cancel' : 'إلغاء'}" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
++                            : (item.status === 'error'
++                                ? `<button class="btn btn-warning" onclick="restartProcess('${item.id}')"><i class="ph-fill ph-arrow-counter-clockwise"></i> ${t.btn_restart}</button>
++                                   <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
++                                : `<button class="btn btn-primary" onclick="viewProcess('${item.id}')"><i class="ph-fill ph-eye"></i> ${t.btn_view_results}</button>
++                                   <button class="btn btn-danger btn-icon" onclick="event.stopPropagation(); deleteProcess('${item.id}')"><i class="ph ph-trash"></i></button>`
++                            )
+                         )
+                     }
+                 </div>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

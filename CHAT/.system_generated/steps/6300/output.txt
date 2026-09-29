@@ -1,0 +1,79 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\server_manager.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -126,14 +126,31 @@
+     def stop(self) -> dict:
+         try:
+             self.log("Stopping server...")
++            
++            # Step 1: Call graceful /shutdown endpoint
++            try:
++                requests.get(f"http://127.0.0.1:{self.port}/shutdown", timeout=1.5)
++            except Exception:
++                pass
++
++            # Wait briefly for port to release
++            for _ in range(8):
++                if not is_port_listening(self.port):
++                    break
++                time.sleep(0.15)
++
++            # Step 2: Terminate tracked process if still alive
+             if self.process is not None:
+-                if os.name == 'nt':
+-                    subprocess.run(['taskkill', '/F', '/T', '/PID', str(self.process.pid)], capture_output=True)
+-                else:
+-                    os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
++                try:
++                    if os.name == 'nt':
++                        subprocess.run(['taskkill', '/F', '/T', '/PID', str(self.process.pid)], capture_output=True)
++                    else:
++                        os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
++                except Exception:
++                    pass
+                 self.process = None
+ 
+-            # If port is still listening by another orphaned instance, try to find and terminate it
++            # Step 3: Check if port is still listening by any orphaned process
+             if is_port_listening(self.port) and os.name == 'nt':
+                 try:
+                     res = subprocess.run(
+@@ -147,7 +147,17 @@
+                 except Exception:
+                     pass
+ 
+-            self.log("Server stopped.")
++            time.sleep(0.3)
++            if is_port_listening(self.port):
++                self.log(f"⚠️ Port {self.port} is still in use by an external or elevated process.")
++                return {
++                    "success": False,
++                    "message": f"المنفذ {self.port} محجوز بواسطة عملية خارجية أو تعمل كمسؤول (Administrator).",
++                    "elevated": True,
++                    "port": self.port
++                }
++
++            self.log("Server stopped successfully.")
+             return {"success": True, "message": "stopped"}
+         except Exception as e:
+             self.log(f"Failed to stop server: {e}")
+@@ -154,7 +154,17 @@
+ 
+     def test(self) -> dict:
+         """Sends a test ping to the server to check connectivity and response time."""
++        if not self.is_running():
++            return {
++                "success": False,
++                "latency_ms": 0,
++                "error": "السيرفر متوقف حالياً. يرجى الضغط على 'تشغيل السيرفر' أولاً ثم إعادة فحص الاتصال.",
++                "is_stopped": True,
++                "name": self.name,
++                "port": self.port
++            }
+         t0 = time.time()
++        self.log(f"Sending test ping to {self.name} on port {self.port}...")
+         try:
+             # First check health endpoint
+             health_url = f"http://127.0.0.1:{self.port}/health"
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

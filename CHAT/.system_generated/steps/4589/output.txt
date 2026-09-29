@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+'جرانتريل' (جرانتريل) vs 'جرانتيل' (جرانتيل) -> sim: 93.33333333333333
+'امبوفير' (امبوفير) vs 'اميفير' (اميفير) -> sim: 76.92307692307692
+'ديباكين 500' (ديباكين) vs 'ديبيكان 500' (ديبيكان) -> sim: 71.42857142857143
+'اولفن 100 اس ار' (اولفن) vs 'البيران اس ار' (البيران) -> sim: 50.0
+

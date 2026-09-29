@@ -1,0 +1,56 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Found 6 warehouse files.
+
+============================================================
+[*] Processing Warehouse files (6 file(s)) [PARALLEL WORKERS]
+============================================================
+
+  -> [START] Processing file: السلام شبين.pdf (Type: .pdf)
+[!] Exception processing السلام شبين.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+  -> [START] Processing file: المكرومي المنصورة.pdf (Type: .pdf)
+[!] Exception processing المكرومي المنصورة.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+  -> [START] Processing file: الهضبة الاثنين نقدى0.pdf (Type: .pdf)
+[!] Exception processing الهضبة الاثنين نقدى0.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+  -> [START] Processing file: جملة العمروووو.pdf (Type: .pdf)
+[!] Exception processing جملة العمروووو.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+  -> [START] Processing file: كيور فارما خاص.pdf (Type: .pdf)
+[!] Exception processing كيور فارما خاص.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+  -> [START] Processing file: مخزن الحياة فارم اسكندريه-170.pdf (Type: .pdf)
+[!] Exception processing مخزن الحياة فارم اسكندريه-170.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+============================================================
+[+] Completed Warehouse: 0 items from 6 file(s)
+============================================================
+
+
+--- Item: [سكينورين كريم] in [الهضبة الاثنين نقدى0.pdf] ---
+
+--- Item: [زنكترون 30كبسولة س ج] in [مخزن الحياة فارم اسكندريه-170.pdf] ---
+
+--- Item: [بالموكورت  25. مجم امبول س ج] in [السلام شبين.pdf] ---
+
+--- Item: [كارنيفيتا ادفانس للرجال30كيس س ج] in [مخزن الحياة فارم اسكندريه-170.pdf] ---
+
+--- Item: [ب ك ميرز كبسول س ج] in [الهضبة الاثنين نقدى0.pdf] ---
+
+--- Item: [سينوبريل كواقراص س ج] in [الهضبة الاثنين نقدى0.pdf] ---
+
+--- Item: [تادالاندرو5جم30قرص] in [الهضبة الاثنين نقدى0.pdf] ---
+
+--- Item: [هيرو دي3+كي2 نقط] in [كيور فارما خاص.pdf] ---
+

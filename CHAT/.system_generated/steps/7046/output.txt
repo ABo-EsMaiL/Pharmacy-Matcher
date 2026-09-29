@@ -1,0 +1,32 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-7038
+Status: DONE
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-7038.log
+Log output:
+<truncated 39 lines>
+eason": ""
+},
+{
+"case_id": "TEST-04-OCR-CORRUPTION",
+"status": "match",
+"item_id": "W1-004",
+"reason": ""
+}
+]
+}
+
+6. Valid JSON from AI Studio:     True
+7. Required Schema Conformance:   True (Contains 'results' array with case_id, status, item_id)
+8. Cases Sent vs Returned:        Sent: 5 cases | Parsed decisions: 5
+
+---------------------------------------------------------------------------
+           TEST CASES VERIFICATION (EVALUATING 5 RULES)
+---------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\e2e_runtime_verification.py", line 207, in <module>
+    run_verification()
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\e2e_runtime_verification.py", line 182, in run_verification
+    dec = res_map.get(cid, {})
+          ^^^^^^^
+NameError: name 'res_map' is not defined
+
+Last progress: 8s ago

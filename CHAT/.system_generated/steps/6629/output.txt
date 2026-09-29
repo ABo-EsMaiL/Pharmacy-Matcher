@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+
+desktop_app\templates\index.html:3110:async function updateServerStatus(statusData) {
+
+
+

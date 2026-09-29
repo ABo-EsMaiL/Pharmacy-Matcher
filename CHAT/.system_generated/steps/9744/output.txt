@@ -1,0 +1,41 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio-vision\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1232,7 +1232,7 @@
+             detail={"error": "Server busy — browser tab currently processing another request.", "type": "concurrency_limit"}
+         )
+ 
+-    prompt = format_messages_to_prompt(chat_request.messages)
++    prompt, images = extract_prompt_and_images(chat_request.messages)
+     chunk_id = f"chatcmpl-{uuid.uuid4().hex[:12]}"
+     now = int(time.time())
+     model_name = chat_request.model or DEFAULT_MODEL
+@@ -1247,7 +1247,7 @@
+         enable_search = ENABLE_SEARCH_GROUNDING
+ 
+     logger.info(
+-        f"Incoming /v1/chat/completions prompt ({len(prompt)} chars, batch_size={batch_size}, "
++        f"Incoming /v1/chat/completions prompt ({len(prompt)} chars, images={len(images)}, batch_size={batch_size}, "
+         f"google_search={'ENABLED' if enable_search else 'DISABLED'}): {repr(prompt[:80])}"
+     )
+ 
+@@ -1262,7 +1262,7 @@
+                 }
+                 yield f"data: {json.dumps(first_chunk, ensure_ascii=False)}\n\n"
+ 
+-                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size, enable_search=enable_search):
++                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size, enable_search=enable_search, images=images):
+                     if isinstance(chunk_data, dict):
+                         delta = chunk_data["delta"]
+                     else:
+@@ -1301,7 +1301,7 @@
+         full_text = ""
+         async with sem:
+             async with browser_manager.lock:
+-                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size, enable_search=enable_search):
++                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size, enable_search=enable_search, images=images):
+                     if isinstance(chunk_data, dict):
+                         full_text = chunk_data["text"]
+                     else:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

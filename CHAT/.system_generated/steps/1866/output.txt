@@ -1,0 +1,72 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1996,6 +1996,8 @@
+         const settings = await window.pywebview.api.get_settings();
+         if (settings) {
+             document.getElementById('setting-unstructured-key').value = settings.unstructured_api_key || '';
++            const profileEl = document.getElementById('setting-unstructured-profile');
++            if (profileEl) profileEl.value = settings.unstructured_profile || 'best';
+             document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8000/v1/chat/completions';
+             document.getElementById('setting-local-key').value = settings.local_api_key || '';
+             document.getElementById('setting-model-name').value = settings.local_model || 'gpt-4o-mini';
+@@ -2006,8 +2006,10 @@
+ }
+ 
+ async function saveSettings() {
++    const profileEl = document.getElementById('setting-unstructured-profile');
+     const settings = {
+         unstructured_api_key: document.getElementById('setting-unstructured-key').value,
++        unstructured_profile: profileEl ? profileEl.value : 'best',
+         local_api_url: document.getElementById('setting-local-url').value,
+         local_api_key: document.getElementById('setting-local-key').value,
+         local_model: document.getElementById('setting-model-name').value,
+@@ -2015,9 +2015,9 @@
+     
+     try {
+         await window.pywebview.api.save_settings(JSON.stringify(settings));
+-        showToast('تم حفظ الإعدادات بنجاح', 'success');
+-    } catch (error) {
+-        showToast('حدث خطأ أثناء حفظ الإعدادات', 'error');
++        showToast(I18N[currentLang]?.toast_saved || 'تم حفظ الإعدادات بنجاح', 'success');
++    } catch (error) {
++        showToast(currentLang === 'en' ? 'Error saving settings' : 'حدث خطأ أثناء حفظ الإعدادات', 'error');
+     }
+ }
+ 
+@@ -2071,6 +2071,7 @@
+     const indicator = document.getElementById('server-indicator');
+     const text = document.getElementById('server-status-text');
+     const btn = document.getElementById('btn-toggle-server');
++    const t = I18N[currentLang] || I18N.ar;
+     
+     let isRunning = false;
+     if (statusData !== undefined) {
+@@ -2086,13 +2086,13 @@
+     
+     if (isRunning) {
+         if (indicator) indicator.className = 'status-indicator running';
+-        if (text) text.textContent = 'السيرفر يعمل';
+-        if (btn) btn.innerHTML = '<i class="ph ph-stop"></i> إيقاف السيرفر';
++        if (text) text.textContent = t.server_running;
++        if (btn) btn.innerHTML = `<i class="ph ph-stop"></i> ${t.btn_stop_server}`;
+         isServerRunning = true;
+     } else {
+         if (indicator) indicator.className = 'status-indicator stopped';
+-        if (text) text.textContent = 'السيرفر متوقف';
+-        if (btn) btn.innerHTML = '<i class="ph ph-play"></i> تشغيل السيرفر';
++        if (text) text.textContent = t.server_stopped;
++        if (btn) btn.innerHTML = `<i class="ph ph-play"></i> ${t.btn_start_server}`;
+         isServerRunning = false;
+     }
+ }
+@@ -2140,6 +2140,7 @@
+         };
+         // Auto select first nav item
+         document.addEventListener("DOMContentLoaded", () => {
++            setLanguage(currentLang);
+             const firstNav = document.querySelector('.nav-item');
+             if (firstNav) firstNav.classList.add('active');
+         });
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

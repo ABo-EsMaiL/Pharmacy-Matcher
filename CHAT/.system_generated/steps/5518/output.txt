@@ -1,0 +1,41 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -305,7 +305,7 @@
+                 })
+                 exact_count += 1
+             else:
+-                top_candidates = finder.search(shortage_name, top_k=5)
++                top_candidates = finder.search(shortage_name, top_k=6)
+                 if not top_candidates:
+                     continue
+                     
+@@ -312,14 +312,7 @@
+                 best_name = top_candidates[0]["name"]
+-                best_brand_sim = top_candidates[0].get("brand_sim", 0)
+                 
+                 # Level 2: Deterministic High-Confidence Auto-Match
+-                is_auto = False
+-                if best_score >= 0.88 and best_brand_sim >= 80:
+-                    is_auto = True
+-                else:
+-                    is_auto_safe, _ = is_safe_auto_match(shortage_name, best_name)
+-                    if is_auto_safe:
+-                        is_auto = True
++                is_auto, _ = is_safe_auto_match(shortage_name, best_name)
+                         
+                 if is_auto:
+                     matched.append({
+@@ -329,8 +329,8 @@
+                     })
+                     auto_match_count += 1
+                 else:
+-                    # Level 3: Ambiguous items sent to LLM with Safety Net
+-                    candidates_for_llm = [{"id": c["id"], "name": c["name"]} for c in top_candidates[:3]]
++                    # Level 3: Ambiguous items sent to LLM with top 5 candidates
++                    candidates_for_llm = [{"id": c["id"], "name": c["name"]} for c in top_candidates[:5]]
+                     llm_cases.append({
+                         "case_id": f"Q{idx:05}",
+                         "requested_name": shortage_name,
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

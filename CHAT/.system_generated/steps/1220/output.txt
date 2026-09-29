@@ -1,0 +1,56 @@
+The search for ""https://transform.unstructured.io" extract schema parse_id" returned the following summary:
+To extract data using Unstructured's API with a defined schema, you typically utilize the `structured_data_extractor` within a workflow job[1][2].
+
+### How to Use Extraction with Schema
+The `parse_id` is generally associated with the result of a partitioning or processing job[3]. When using the API for structured extraction, you define your requirements in a JSON schema and include them in the `job_nodes` configuration of your request[2].
+
+#### Example API Request Structure
+You can perform extraction by sending a `POST` request to the Unstructured API. Below is the conceptual structure for a job that performs both parsing and structured extraction[2]:
+
+```json
+{
+  "job_nodes": [
+    {
+      "name": "Partitioner",
+      "type": "partition",
+      "subtype": "vlm",
+      "settings": { "is_dynamic": true, "allow_fast": true }
+    },
+    {
+      "name": "Extractor",
+      "type": "structured_data_extractor",
+      "subtype": "llm",
+      "settings": {
+        "schema_to_extract": {
+          "json_schema": {
+            "type": "object",
+            "properties": {
+              "field_name": { "type": "string" }
+            },
+            "required": ["field_name"]
+          },
+          "extraction_guidance": "Instructions for the model..."
+        },
+        "provider": "openai",
+        "model": "gpt-5-mini"
+      }
+    }
+  ]
+}
+```
+
+### Key Steps
+1.  **Define Your Schema**: Your schema must conform to **OpenAI’s Structured Outputs guidelines**[1]. Note that there is a maximum nesting depth of 10 levels for JSON schemas[1].
+2.  **API Integration**: Use the `/jobs/` endpoint to submit your document and your `job_nodes` configuration (as shown above)[2].
+3.  **Extraction Methods**: In the Unstructured UI or API, you can choose between **LLM** (default) or **Regex** methods for extraction[1].
+4.  **Workflow**: If you are using the Unstructured web interface, you can define your schema visually in the **Define Schema** pane after uploading a file[1][4]. The "Get Code" feature in the UI can also generate the specific API request code for your defined workflow[3][5].
+
+For detailed implementation, refer to the [Unstructured API reference documentation](https://docs.unstructured.io/api-reference/workflow/workflows)[6].
+
+Sources:
+[1] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIhfXAfBFnJ98UwDKYMS_a6Mx77jhVrOmEBx8yT1IdlPyAvV_GvCZ_rF8Ww7xH3Gv7xELjWBJ3KKowS3JkNp40u9iFuz40L3o-gy0auA18Ueafk6ZfcAgH2lILAfP77QEGaO7z4Qj6eKe5c8QnBtZ3_mY3ftPKW8HLSvd2JNd-TS2KzWZZedO7J4vuZQYmgc87Pl-c_75AhAY=)
+[2] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZBH1dkJg_1jdudeW46f4syTpkWldsoc95SMz9gTaOwIOONxo0MXb7N0O_X1Pqcw8coqo3fJwVYYRpGZJbAecI7Y4YjCd4D9dJtvEjI5V3tHKhX_dzRyWynpdPC5fbiFG7QEuLaLIK6i8Q1NEIubOBmzc1A6j2pmIo4N3xuA==)
+[3] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6thzFMCwznq1PAWL7fqE3RuTKopatHoSkRsP0MhY34xgKBETj-n6uGh5SAXD8-QmdTzjKEInM4ariziCS0tU4ON4PpDFWlponBYVCAwkMvUi3DEswEPNWrr1tzUAIaxHCJfR6496e4FiQ)
+[4] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIhfXAfBFnJ98UwDKYMS_a6Mx77jhVrOmEBx8yT1IdlPyAvV_GvCZ_rF8Ww7xH3Gv7xELjWBJ3KKowS3JkNp40u9iFuz40L3o-gy0auA18Ueafk6ZfcAgH2lILAfP77QEGaO7z4Qj6eKe5c8QnBtZ3_mY3ftPKW8HLSvd2JNd-TS2KzWZZedO7J4vuZQYmgc87Pl-c_75AhAY=)
+[5] [unstructured.io](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6thzFMCwznq1PAWL7fqE3RuTKopatHoSkRsP0MhY34xgKBETj-n6uGh5SAXD8-QmdTzjKEInM4ariziCS0tU4ON4PpDFWlponBYVCAwkMvUi3DEswEPNWrr1tzUAIaxHCJfR6496e4FiQ)
+[6] [youtube.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOpIqguBuKmHOMYtwgc6daYiy4y7pVjZjvvD6n_nXDcVsLpFrv1d1NWWy4q81jOurwXFevD9a_CYNoot6hkg960bJ8U4IdI_yiTBGF7rA4hijeiafBhKUlEJGhluxtQ8av)

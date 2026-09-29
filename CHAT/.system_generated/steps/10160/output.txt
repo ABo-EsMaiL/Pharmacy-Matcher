@@ -1,0 +1,17 @@
+
+The command exited with code 0.
+Output:
+<USER_REQUEST>
+أنا ملاحظ إن أنت بتستخدم بايثون عادية وناسي إن إحنا عندنا كوندًا إنفايرونمنت. 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-25T15:29:48+03:00.
+</ADDITIONAL_METADATA>
+You cannot call a method on a null-valued expression.
+At line:1 char:199
++ ... ch-Object { ($_ | ConvertFrom-Json).content.Substring(0, [Math]::Min( ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+

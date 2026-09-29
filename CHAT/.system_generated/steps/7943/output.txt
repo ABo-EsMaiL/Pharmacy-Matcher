@@ -1,0 +1,18 @@
+
+The command exited with code 0.
+Output:
+--- Turn 0 ---
+Tag: MS-CHAT-TURN
+Cls: text-chunk-host ng-star-inserted
+Role: None
+Author elements: [{'tag': 'DIV', 'cls': 'virtual-scroll-container user-prompt-container', 'text': 'User 7:45\u202fPM\n\nRespond with JSON: {"message": "pong"}'}, {'tag': 'DIV', 'cls': 'turn-content', 'text': 'User 7:45\u202fPM\n\nRespond with JSON: {"message": "pong"}'}, {'tag': 'DIV', 'cls': 'author-label ng-star-inserted', 'text': 'User 7:45\u202fPM'}]
+Preview:
+ 'edit\nmore_vert\nUser 7:45\u202fPM\n\nRespond with JSON: {"message": "pong"}'
+--- Turn 1 ---
+Tag: MS-CHAT-TURN
+Cls: text-chunk-host ng-star-inserted
+Role: None
+Author elements: [{'tag': 'DIV', 'cls': 'virtual-scroll-container model-prompt-container', 'text': 'Model 7:45\u202fPM\ncode\nJSON\ndownload\ncontent_copy\nexpand_less\n{"message": "pong"}'}, {'tag': 'DIV', 'cls': 'turn-content', 'text': 'Model 7:45\u202fPM\ncode\nJSON\ndownload\ncontent_copy\nexpand_less\n{"message": "pong"}'}, {'tag': 'DIV', 'cls': 'author-label ng-star-inserted', 'text': 'Model 7:45\u202fPM'}]
+Preview:
+ 'edit\nmore_vert\nModel 7:45\u202fPM\ncode\nJSON\ndownload\ncontent_copy\nexpand_less\n{"message": "pong"}\nthumb_up\nthumb_down'
+

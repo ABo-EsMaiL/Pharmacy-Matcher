@@ -1,0 +1,9 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "d:\AI_Engineer\Pharmacy-agy\test_unstructured.py", line 6, in <module>
+    with open("dummy.txt", "w") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'dummy.txt'
+

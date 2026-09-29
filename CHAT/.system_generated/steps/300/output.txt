@@ -1,0 +1,37 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\output\excel_writer.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -204,6 +204,7 @@
+     # ────────────────────────────────────────
+     ws_review = wb.create_sheet(title="يحتاج مراجعة")
+     review_headers = [
++        "القرار (اختر)",
+         "اسم الصنف المطلوب",
+         "اسم المرشح في المخزن",
+         "المخزن",
+@@ -216,6 +216,7 @@
+         for item in wh_data.get("needs_review", []):
+             review_rows.append(
+                 [
++                    "", # خانة القرار فارغة ليختار منها الصيدلي
+                     item.get("shortage_item", ""),
+                     item.get("warehouse_item", ""),
+                     wh_name,
+@@ -225,6 +225,15 @@
+     _add_data_rows(ws_review, review_rows)
+     _format_sheet(ws_review, len(review_headers))
+ 
++    # إضافة Dropdown List (Data Validation) لعمود القرار
++    from openpyxl.worksheet.datavalidation import DataValidation
++    dv = DataValidation(type="list", formula1='"✅ مطابق,❌ غير مطابق"', allow_blank=True)
++    ws_review.add_data_validation(dv)
++    
++    # تطبيق الـ Dropdown على كل الخلايا في العمود الأول (تحت الرأس)
++    if len(review_rows) > 0:
++        dv.add(f"A2:A{len(review_rows) + 1}")
++
+     # ────────────────────────────────────────
+     # حفظ الملف
+     # ────────────────────────────────────────
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

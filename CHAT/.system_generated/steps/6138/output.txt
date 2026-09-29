@@ -1,0 +1,23 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1512,6 +1512,17 @@
+                                 </div>
+                             </div>
+ 
++                            <div style="background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 12px; margin-bottom: 16px;">
++                                <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
++                                    <span style="font-size: 13px; font-weight: 700; color: #166534;">
++                                        ⚡ يدعم البرنامج الآن سيرفرين: Google AI Studio (منفذ 8001) و ChatGPT (منفذ 8000)
++                                    </span>
++                                    <button type="button" class="btn btn-small btn-primary" onclick="showScreen('screen-servers'); loadServersUI();">
++                                        <i class="ph ph-hard-drives"></i> <span>فتح إدارة السيرفرات المتقدمة</span>
++                                    </button>
++                                </div>
++                            </div>
++
+                             <div class="btn-group-vertical">
+                                 <button class="btn btn-outline" onclick="setupRequirements()">
+                                     <i class="ph ph-download-simple"></i>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

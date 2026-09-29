@@ -1,0 +1,24 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\sim_auto_all.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -6,7 +6,8 @@
+ from src.fast_match.coordinator import is_safe_auto_match
+ from src.fast_match.search import FastCandidateFinder, normalize_text
+ 
+-shortages_data = read_excel(Path("data/0913.xlsx"))
++proc_dir = Path("data/processes/PROC-009")
++shortages_data = read_excel(proc_dir / "input_shortages" / "0913.xlsx")
+ shortage_items = extract_item_names(shortages_data, "أسم الصنف")
+ 
+ # Deduplicate
+@@ -16,7 +16,7 @@
+         unique_shortages[name] = item
+ deduped_shortages = list(unique_shortages.values())
+ 
+-wh_files = list(Path("data").glob("*.pdf"))
++wh_files = list((proc_dir / "input_warehouses").glob("*.pdf"))
+ print(f"Loaded {len(deduped_shortages)} unique shortages and {len(wh_files)} warehouse files.")
+ 
+ total_auto = 0
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,101 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -173,7 +173,8 @@
+         warehouse_items: list[dict],
+         warehouse_name: str,
+     ) -> list[dict]:
+-        # Smaller batch size for free/open-source models so they don't lose context
++        import concurrent.futures
++
+         batch_size = 50
+         all_results = []
+ 
+@@ -192,17 +192,18 @@
+             })
+ 
+         total_batches = (len(cases) + batch_size - 1) // batch_size
++        batches = []
+         for batch_idx in range(total_batches):
+             start = batch_idx * batch_size
+             end = min(start + batch_size, len(cases))
+-            batch_cases = cases[start:end]
+-
+-            print(f"  -> [OpenRouter] Batch {batch_idx+1}/{total_batches} ({len(batch_cases)} items)... ", end="", flush=True)
+-
++            batches.append((batch_idx, cases[start:end]))
++
++        print(f"  -> [OpenRouter] Executing {total_batches} batches in parallel... This will be MUCH faster!")
++
++        def process_batch(batch_data):
++            batch_idx, batch_cases = batch_data
+             inputs = {"catalogs": {wid: catalog}, "cases": batch_cases}
+-            
+             max_retries = 3
+-            success = False
+             
+             for attempt in range(max_retries):
+                 try:
+@@ -209,3 +209,4 @@
++                    parsed_results = []
+                     for case, decision in zip(batch_cases, results):
+                         shortage_name = case["requested_name"]
+                         status = decision.get("status", "no_match")
+@@ -212,9 +212,7 @@
+-
+                         warehouse_item = ""
+                         if isinstance(item_ids, list) and item_ids:
+                             warehouse_item = catalog_by_id.get(item_ids[0], "")
+-
+-                        all_results.append({
++                        parsed_results.append({
+                             "shortage_name": shortage_name,
+                             "status": status,
+                             "warehouse_item": warehouse_item,
+@@ -221,25 +221,25 @@
+-                    print(f"OK", flush=True)
+-                    success = True
+-                    break
+-                
++                    print(f"      [✓] Batch {batch_idx+1}/{total_batches} completed.")
++                    return parsed_results
+                 except Exception as e:
+-                    error_msg = str(e)
+-                    wait_time = 5.0
+                     if attempt < max_retries - 1:
+-                        print(f"\n      [!] Error. Retrying in {wait_time:.1f}s... ", end="", flush=True)
+-                        time.sleep(wait_time)
++                        time.sleep(3.0)
+                     else:
+-                        print(f"\n      [!] Failed: {error_msg}", flush=True)
+-                        break
+-                        
+-            if not success:
+-                for case in batch_cases:
+-                    if not any(r["shortage_name"] == case["requested_name"] for r in all_results):
+-                        all_results.append({
+-                            "shortage_name": case["requested_name"],
+-                            "status": "no_match",
+-                            "warehouse_item": "",
+-                        })
++                        print(f"      [!] Batch {batch_idx+1} failed: {e}")
++            
++            # Fallback if completely failed
++            return [{
++                "shortage_name": case["requested_name"],
++                "status": "no_match",
++                "warehouse_item": ""
++            } for case in batch_cases]
++
++        # Use ThreadPoolExecutor to run multiple requests at the same time
++        with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
++            # Map returns results in the same order
++            results_list = list(executor.map(process_batch, batches))
++
++        for res in results_list:
++            all_results.extend(res)
+ 
+         return all_results
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

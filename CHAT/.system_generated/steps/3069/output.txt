@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+=== Testing Queue & Auto-Start ===
+-> Worker executing for: PROC-001
+Started process 1: PROC-001 Queued: False
+Started process 2: PROC-002 Queued: True
+Triggering queued: PROC-002
+-> Worker executing for: PROC-002
+Executed order: ['PROC-001', 'PROC-002']
+P1 status: processing, P2 status: processing
+Queue Auto-Start Test PASSED!
+

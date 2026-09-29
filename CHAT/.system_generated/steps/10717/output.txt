@@ -1,0 +1,15 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_matching_pipeline.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -85,7 +85,8 @@
+     ]
+ }
+ 
+-config = Config()
++from src.config import load_config
++config = load_config()
+ # Disable local API network call for pure offline unit test of the coordinator algorithms
+ config.local_api_url = ""
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

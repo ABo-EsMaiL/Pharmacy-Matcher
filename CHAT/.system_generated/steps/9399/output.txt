@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+['id', 'created_at', 'status', 'shortage_files', 'warehouse_files', 'total_shortages', 'matched_count', 'not_found_count', 'review_count', 'output_file']
+

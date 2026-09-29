@@ -1,0 +1,29 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -386,8 +386,8 @@
+                                     status = "no_match"
+                                     
+                                 # 2. Multi-strength slash mismatch (e.g. 4/30 vs 4)
+-                                slash_req = re.search(r'(?:^|[^\d/])(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)(?:[^\d/]|$)', shortage_name)
+-                                slash_wh = re.search(r'(?:^|[^\d/])(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)(?:[^\d/]|$)', warehouse_item)
++                                slash_req = re.search(r'(?:^|[^\d/])(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)(?:[^\d/]|$)', norm_req)
++                                slash_wh = re.search(r'(?:^|[^\d/])(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)(?:[^\d/]|$)', norm_wh)
+                                 if slash_req and not slash_wh:
+                                     status = "no_match"
+                                 elif slash_wh and not slash_req:
+@@ -394,6 +394,12 @@
+                                 elif slash_req and slash_wh and slash_req.group(1) != slash_wh.group(1):
+                                     status = "no_match"
+                                     
++                                # 2b. Drops vs Non-Drops conflict
++                                is_r_drops = 'نقط' in shortage_name or 'قطره' in shortage_name or 'قطرة' in shortage_name
++                                is_wh_drops = 'نقط' in warehouse_item or 'قطره' in warehouse_item or 'قطرة' in warehouse_item
++                                if is_r_drops != is_wh_drops:
++                                    status = "no_match"
++                                    
+                                 # 3. Combination suffix mismatch (كو / بلس / co / plus)
+                                 is_req_co = has_co(shortage_name)
+                                 is_wh_co = has_co(warehouse_item)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

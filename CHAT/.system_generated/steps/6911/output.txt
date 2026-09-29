@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+Log exists: True
+Log content preview: :17.816601
+ERROR TYPE: TEST_ERROR
+URL: http://test | MODEL: test-model
+CASE COUNT: 1 | CASES: ['T1']
+RAW RESPONSE:
+Some raw text
+======================================================================
+
+

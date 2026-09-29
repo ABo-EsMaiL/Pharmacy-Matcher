@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Candidates for 'فنتال بخاخ العربية': []
+Found in Cure Pharma: {'id': 'WH_00456', 'name': 'فتال عادى بخاخ'}
+Found in Cure Pharma: {'id': 'WH_00458', 'name': 'فتال مركب بخاخ جديد'}
+

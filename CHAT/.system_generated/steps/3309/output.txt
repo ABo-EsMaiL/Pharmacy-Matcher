@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+code=<ErrorCode.COULD_NOT_PARSE: 'could_not_parse'> message='The document could not be parsed. Check that the file is readable.'
+

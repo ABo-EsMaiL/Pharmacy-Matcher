@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName                                                  
+-------  ------    -----      -----     ------     --  -- -----------                                                  
+    281      27    40760       1260     102.52   3524   1 python                                                       
+
+
+

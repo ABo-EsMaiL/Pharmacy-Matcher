@@ -1,0 +1,24 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -480,7 +480,7 @@
+             }
+ 
+     async def send_prompt_and_stream(
+-        self, prompt: str, model_name: Optional[str] = None, batch_size: Optional[int] = None
++        self, prompt: str, model_name: Optional[str] = None, batch_size: Optional[int] = None, enable_search: Optional[bool] = None
+     ) -> AsyncGenerator[Union[dict, str], None]:
+         """Injects the prompt into Google AI Studio and yields streaming text deltas."""
+         t_req_start = time.time()
+@@ -508,6 +508,9 @@
+             await self.ensure_model(model_name)
+             await self.ensure_thinking_mode()
+ 
++        # Explicitly ensure Google Search Grounding state (default: OFF)
++        await self.ensure_tools(enable_search=enable_search)
++
+         # Ensure no stray menus or overlays exist
+         try:
+             await self.page.keyboard.press("Escape")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

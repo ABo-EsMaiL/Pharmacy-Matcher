@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Found in sheet 'لم يُعثر عليه' at R384C1: كويتابين 25مجم 30قرص س ج
+

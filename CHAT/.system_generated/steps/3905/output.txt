@@ -1,0 +1,18 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-3903
+Status: DONE
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-3903.log
+Log output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+[*] Processing PDF file: جملة العمروووو.pdf
+[+] Loaded 19 items from alongside JSON: جملة العمروووو.json
+Req 'امبوفير 5امبول س ج': cands = [{'id': 'W-00001', 'name': 'امبوفير حقن جديد', 'score': 0.6581471063637366, 'brand_sim': 100.0}, {'id': 'W-00010', 'name': 'لوفير 400 سعر جديد باكو 45', 'score': 0.1517022297665568, 'brand_sim': 66.66666666666667}]
+Was Ampover sent to LLM? True
+
+Last progress: 6s ago

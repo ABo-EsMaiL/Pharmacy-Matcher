@@ -1,0 +1,37 @@
+
+The command exited with code 0.
+Output:
+0913.xlsx (Type: .xlsx)
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+  -> [DONE] 0913.xlsx: 993 items extracted.
+
+============================================================
+[+] Com
+<truncated 11082 bytes>
+o establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))). Retrying...
+      [X] PROVIDER FAILURE on Batch 1 after 3 attempts (Connection to local LLM failed (http://127.0.0.1:8001/v1/chat/completions): HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))).
+Traceback (most recent call last):
+  File "D:\AI_Engineer\Pharmacy-agy-vision\desktop_app\backend.py", line 494, in _process_worker
+    results = coordinator.process(all_shortages, warehouse_data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\coordinator.py", line 240, in process
+    wh_result = self._match_warehouse(deduped_shortages, wh_items, wh_name)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\coordinator.py", line 584, in _match_warehouse
+    chunk_results = process_chunk(batch, str(idx + 1))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Engineer\Pharmacy-agy-vision\src\fast_match\coordinator.py", line 580, in process_chunk
+    raise RuntimeError(f"Provider failed on Batch {chunk_name}: {last_error}")
+RuntimeError: Provider failed on Batch 1: Connection to local LLM failed (http://127.0.0.1:8001/v1/chat/completions): HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-25T17:06:04+03:00.
+</ADDITIONAL_METADATA>
+

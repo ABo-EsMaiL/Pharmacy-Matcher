@@ -1,0 +1,51 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -258,10 +258,14 @@
+                 self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Saving results...'}}}}));")
+                 
+             # Write results
+-            excel_path = proc_dir / f"results_{process_id}.xlsx"
+-            stats = write_results_excel(results, excel_path)
++            out_file = proc_dir / f"results_{process_id}.xlsx"
++            write_results_excel(results, out_file)
+             
+             # Update DB
++            summary = results.get("summary", {})
++            self.db.update_process(
++                process_id,
++                status='reviewing' if summary.get('review_count', 0) > 0 else 'completed',
+                 total_shortages=summary.get('total_shortages', 0),
+                 matched_count=summary.get('matched_count', 0),
+                 not_found_count=summary.get('not_found_count', 0),
+@@ -268,9 +268,13 @@
+                 output_file=str(out_file)
+             )
+             
+-            self.add_log(f"--- اكتملت العملية بنجاح [{process_id}] ---")
+-            if self.window:
+-                self.window.evaluate_js("window.dispatchEvent(new CustomEvent('process_complete', {detail: {process_id: '%s'}}));" % process_id)
++            self.add_log(f"[PROCESS] Saved results to {out_file.name}")
++            self.add_log(f"--- Process completed successfully [{process_id}] ---")
++            
++            # Send completion event back to UI
++            if self.window:
++                safe_stats = json.dumps(summary).replace('\\', '\\\\').replace('"', '\\"')
++                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: true, stats: JSON.parse('{safe_stats}')}}}}));")
+                 
+         except Exception as e:
+             import traceback
+@@ -277,8 +277,8 @@
+             self.add_log(f"[PROCESS ERROR] Exception occurred: {str(e)}")
+             self.db.update_process(process_id, status='error')
+-            err_msg = str(e).replace("'", "\\'").replace("\n", " ")
+-            if self.window:
+-                self.window.evaluate_js("window.dispatchEvent(new CustomEvent('process_error', {detail: {process_id: '%s', error: '%s'}}));" % (process_id, err_msg))
++            err_msg = str(e).replace("'", "\\'").replace("\n", " ").replace('"', '\\"')
++            if self.window:
++                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_complete', {{detail: {{process_id: '{process_id}', success: false, error: \"{err_msg}\"}}}}));")
+ 
+     def get_process_result(self, process_id: str) -> dict:
+         proc = self.db.get_process(process_id)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

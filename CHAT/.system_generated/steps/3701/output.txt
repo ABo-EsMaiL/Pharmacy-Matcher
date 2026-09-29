@@ -1,0 +1,17 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_search_filter.py", line 21, in <module>
+    old_finder.fit([{"id": f"wh_{i}", "name": item["item_name_raw"]} for i, item in enumerate(wh_data)])
+                                              ~~~~^^^^^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+

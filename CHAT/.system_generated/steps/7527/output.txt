@@ -1,0 +1,57 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1142,7 +1142,9 @@
+     if not prompt:
+         prompt = "Hello"
+ 
+-    logger.info(f"Incoming /v1/responses prompt ({len(prompt)} chars): {repr(prompt[:80])}")
++    batch_size_header = request.headers.get("x-batch-size")
++    batch_size = int(batch_size_header) if (batch_size_header and batch_size_header.isdigit()) else None
++    logger.info(f"Incoming /v1/responses prompt ({len(prompt)} chars, batch_size={batch_size}): {repr(prompt[:80])}")
+ 
+     now = int(time.time())
+     resp_id = f"resp_{uuid.uuid4().hex[:16]}"
+@@ -1150,7 +1150,7 @@
+         async def sse_response_generator():
+             async with sem:
+                 async with browser_manager.lock:
+-                    async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name):
++                    async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size):
+                         if isinstance(chunk_data, dict):
+                             delta = chunk_data["delta"]
+                         else:
+@@ -1184,7 +1184,7 @@
+         full_text = ""
+         async with sem:
+             async with browser_manager.lock:
+-                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name):
++                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size):
+                     if isinstance(chunk_data, dict):
+                         full_text = chunk_data["text"]
+                     else:
+@@ -1237,6 +1237,8 @@
+     if isinstance(prompt, list):
+         prompt = " ".join([str(p) for p in prompt])
+     model_name = body.get("model", DEFAULT_MODEL)
++    batch_size_header = request.headers.get("x-batch-size")
++    batch_size = int(batch_size_header) if (batch_size_header and batch_size_header.isdigit()) else None
+     now = int(time.time())
+     chunk_id = f"cmpl-{uuid.uuid4().hex[:12]}"
+ 
+@@ -1243,8 +1243,11 @@
+     sem = _get_semaphore()
+     async with sem:
+         async with browser_manager.lock:
+-            async for delta in browser_manager.send_prompt_and_stream(str(prompt)):
+-                full_text += delta
++            async for chunk_data in browser_manager.send_prompt_and_stream(str(prompt), batch_size=batch_size):
++                if isinstance(chunk_data, dict):
++                    full_text = chunk_data["text"]
++                else:
++                    full_text += chunk_data
+ 
+     return JSONResponse({
+         "id": chunk_id,
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+Line 424: .main-content {
+Screen Line 438: .screen {
+Screen Line 453: .screen.active {
+Action Bar Line 674: .action-bar-bottom {
+Line 1495: <main class="main-content">
+Action Bar Line 1578: <div class="action-bar-bottom">
+Action Bar Line 1799: <div class="action-bar-bottom mt-3">
+Screen Line 2284: const activeScreen = document.querySelector('.screen.active');
+Screen Line 3579: document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+

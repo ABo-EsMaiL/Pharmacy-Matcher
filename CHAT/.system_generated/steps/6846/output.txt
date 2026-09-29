@@ -1,0 +1,139 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\dist_production\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -551,46 +551,102 @@
+                 
+         api_key = getattr(self.config, 'local_api_key', '[REDACTED_CREDENTIAL]')
+         
+-        response = http_requests.post(
+-            url,
+-            headers={
+-                "Authorization": f"Bearer {api_key}",
+-                "Content-Type": "application/json",
+-            },
+-            json=body,
+-            timeout=(30, 300),
+-        )
++        try:
++            response = http_requests.post(
++                url,
++                headers={
++                    "Authorization": f"Bearer {api_key}",
++                    "Content-Type": "application/json",
++                },
++                json=body,
++                timeout=(30, 300),
++            )
++        except Exception as conn_err:
++            self._log_provider_error(url, model, inputs, str(conn_err), "NETWORK_CONNECTION_FAILED")
++            raise RuntimeError(f"Connection to local LLM failed ({url}): {conn_err}")
+ 
+         if response.status_code != 200:
+-            raise RuntimeError(f"HTTP {response.status_code}: {response.text[:200]}")
+-
+-        resp_json = response.json()
+-        content = resp_json["choices"][0]["message"]["content"]
+-        
++            err_msg = f"HTTP {response.status_code}: {response.text[:300]}"
++            self._log_provider_error(url, model, inputs, response.text, f"HTTP_{response.status_code}")
++            raise RuntimeError(err_msg)
++
++        try:
++            resp_json = response.json()
++        except Exception as e:
++            self._log_provider_error(url, model, inputs, response.text, "INVALID_HTTP_JSON")
++            raise RuntimeError(f"Local API did not return valid HTTP JSON: {response.text[:300]}")
++
++        choices = resp_json.get("choices")
++        if not choices or not isinstance(choices, list):
++            self._log_provider_error(url, model, inputs, response.text, "EMPTY_CHOICES")
++            raise RuntimeError(f"Local API returned no choices: {response.text[:300]}")
++
++        content = choices[0].get("message", {}).get("content", "")
++        if not isinstance(content, str):
++            content = str(content or "")
++
+         # Check if MSEMAX returned an error string inside content
+         if content.strip().startswith("[Error:"):
++            self._log_provider_error(url, model, inputs, content, "MSEMAX_ERROR_STRING")
+             raise RuntimeError(f"MSEMAX Error: {content.strip()}")
+-            
+-        # Clean markdown wrappers if any
++
++        # Robust JSON extraction
+         clean = content.strip()
+-        if "```" in clean:
+-            clean = re.sub(r"^```(?:json)?\s*", "", clean, flags=re.MULTILINE)
+-            clean = re.sub(r"```\s*$", "", clean, flags=re.MULTILINE)
+-            clean = clean.strip()
+-            
+-        json_match = re.search(r'\{.*\}', clean, re.DOTALL)
+-        if json_match:
+-            clean = json_match.group(0)
+-            
++        # 1. Try markdown code block extraction
++        md_match = re.search(r"```(?:json)?\s*(\{.*\}|\[.*\])\s*```", clean, re.DOTALL)
++        if md_match:
++            clean = md_match.group(1).strip()
++        else:
++            # 2. Try outermost curly braces
++            curly_match = re.search(r'\{.*\}', clean, re.DOTALL)
++            if curly_match:
++                clean = curly_match.group(0).strip()
++            else:
++                # 3. Try outermost square brackets
++                bracket_match = re.search(r'\[.*\]', clean, re.DOTALL)
++                if bracket_match:
++                    clean = bracket_match.group(0).strip()
++
+         try:
+             answer = json.loads(clean)
+         except json.JSONDecodeError as jde:
+-            raise RuntimeError(f"JSON Parse Error ({jde}): Model output was: {clean[:300]}")
+-            
+-        results = answer.get("results", [])
+-        
++            self._log_provider_error(url, model, inputs, content, f"JSON_DECODE_ERROR: {jde}")
++            raise RuntimeError(f"JSON Parse Error ({jde}): Model output was: {content[:300]}")
++
++        # If answer is a list of results directly
++        if isinstance(answer, list):
++            results = answer
++        elif isinstance(answer, dict):
++            results = answer.get("results", [])
++        else:
++            results = []
++
+         # Map by case_id
+-        decision_map = {d.get("case_id"): d for d in results}
+-        
++        decision_map = {d.get("case_id"): d for d in results if isinstance(d, dict)}
++
+         return [decision_map.get(c["case_id"], {"status": "no_match", "item_id": ""}) for c in inputs["cases"]]
++
++    def _log_provider_error(self, url: str, model: str, inputs: dict, raw_response: str, error_type: str):
++        try:
++            from datetime import datetime
++            import os
++            log_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "data")
++            os.makedirs(log_dir, exist_ok=True)
++            log_file = os.path.join(log_dir, "provider_errors.log")
++            
++            case_ids = [c.get("case_id") for c in inputs.get("cases", [])]
++            entry = (
++                f"\n{'='*70}\n"
++                f"TIMESTAMP: {datetime.now().isoformat()}\n"
++                f"ERROR TYPE: {error_type}\n"
++                f"URL: {url} | MODEL: {model}\n"
++                f"CASE COUNT: {len(case_ids)} | CASES: {case_ids}\n"
++                f"RAW RESPONSE:\n{raw_response}\n"
++                f"{'='*70}\n"
++            )
++            with open(log_file, "a", encoding="utf-8") as f:
++                f.write(entry)
++        except Exception as log_err:
++            print(f"[!] Warning: Failed to write to provider_errors.log: {log_err}")
++
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

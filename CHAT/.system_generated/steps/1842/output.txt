@@ -1,0 +1,293 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1159,6 +1159,279 @@
+     <div id="screen-home" style="display:none;"></div>
+ 
+     <script>
++const I18N = {
++    ar: {
++        brand_title: "فارما ماتش",
++        brand_subtitle: "Pharmacy Matcher",
++        lang_btn: "EN",
++        
++        // Navigation
++        nav_new: "عملية مطابقة جديدة",
++        nav_history: "سجل العمليات",
++        nav_settings: "إعدادات النظام",
++        nav_logs: "سجل النظام (Terminal)",
++        server_checking: "جاري التحقق...",
++        server_running: "السيرفر يعمل",
++        server_stopped: "السيرفر متوقف",
++        btn_start_server: "تشغيل السيرفر",
++        btn_stop_server: "إيقاف السيرفر",
++        btn_exit_app: "إغلاق البرنامج",
++
++        // Screen New
++        new_title: "مطابقة نواقص ومخازن جديدة",
++        new_desc: "قم بإدراج ملفات النواقص وملفات المخازن للبدء في المطابقة الذكية.",
++        shortages_title: "1. ملفات النواقص",
++        shortages_drop_title: "اضغط لاختيار الملفات",
++        shortages_drop_sub: "(يدعم PDF / Excel)",
++        warehouses_title: "2. قوائم المخازن",
++        warehouses_drop_title: "اضغط لاختيار الملفات",
++        warehouses_drop_sub: "(يدعم PDF / Excel / JSON)",
++        browse_files: "تصفح الملفات",
++        btn_start_matching: "بدء عملية المطابقة",
++        progress_init: "جاري تهيئة العملية...",
++        progress_sub: "العملية تعمل في الخلفية. يمكنك متابعة السجلات من تبويب \"سجل النظام\".",
++
++        // Screen Results
++        results_title: "تقرير نتائج المطابقة",
++        results_desc: "تم الانتهاء من فحص الملفات وإنشاء تقرير الإكسيل بنجاح.",
++        stat_total_title: "إجمالي الأصناف المطلوبة",
++        stat_matched_title: "تمت المطابقة بنجاح",
++        stat_review_title: "يحتاج مراجعة (غير مؤكد)",
++        stat_notfound_title: "غير متوفر في المخازن",
++        workflow_title: "خطوات المراجعة النهائية:",
++        step1_title: "افتح ملف الإكسيل",
++        step1_desc: "اضغط على الزر لفتح الملف، ثم اذهب لشيت \"يحتاج مراجعة\".",
++        btn_open_excel: "فتح الإكسيل",
++        step2_title: "راجع واتخذ القرار",
++        step2_desc: "اختر (✅ مطابق) أو (❌ غير مطابق) لكل صنف، ثم احفظ الملف وأغلقه.",
++        step3_title: "طبق التعديلات",
++        step3_desc: "اضغط هنا لنقل الأصناف لشيتات المخازن وتنظيف القائمة.",
++        btn_apply_reviews: "تنفيذ التعديلات",
++        btn_open_folder: "فتح مجلد حفظ النتائج (Folder)",
++
++        // Screen History
++        history_title: "سجل العمليات السابقة",
++        history_desc: "هنا تجد جميع عمليات المطابقة التي قمت بها سابقاً، يمكنك العودة إليها في أي وقت.",
++        history_empty: "لا توجد عمليات سابقة مسجلة.",
++        status_completed: "مكتمل",
++        status_reviewing: "قيد المراجعة",
++        status_processing: "قيد التشغيل...",
++        status_error: "فشل",
++        btn_view_results: "عرض النتائج",
++        btn_restart: "إعادة تشغيل",
++        badge_shortages: "نواقص",
++        badge_warehouses: "مخازن",
++        process_label: "العملية",
++
++        // Screen Settings
++        settings_title: "إعدادات النظام",
++        settings_desc: "قم بضبط إعدادات الربط مع سيرفر الذكاء الاصطناعي (MSEMAX) و Unstructured API وجودة الاستخراج.",
++        api_keys_header: "مفاتيح الربط وخيارات المعالجة",
++        lbl_unstructured_profile: "وضع معالجة PDF (Parse Profile)",
++        opt_profile_best: "جودة فائقة (Best - دقة عالية جداً للأسماء الطبية)",
++        opt_profile_balanced: "متوازن (Balanced - أسرع)",
++        profile_note: "Best يضمن دقة قراءة الأسماء الطبية العربية المعقدة ويمنع أخطاء الحروف.",
++        lbl_unstructured_key: "Unstructured API Key",
++        lbl_local_url: "Local AI URL (MSEMAX / vLLM)",
++        lbl_local_key: "Local AI Key (إن وجد)",
++        lbl_model_name: "اسم الموديل (Model Name)",
++        server_header: "إعدادات سيرفر (MSEMAX)",
++        lbl_msemax_dir: "مسار مجلد MSEMAX",
++        btn_select_dir: "تحديد المجلد",
++        btn_install_reqs: "تثبيت متطلبات الجهاز الأساسية",
++        btn_renew_session: "تجديد الجلسة (Get Session)",
++        btn_save_settings: "حفظ الإعدادات",
++        system_logs_title: "سجل النظام (System Logs)",
++
++        // Screen Terminal
++        terminal_title: "سجل النظام (Terminal)",
++        terminal_subtitle: "يُظهر مخرجات العمليات الجارية في الخلفية",
++
++        // Dialogs & Confirmations
++        confirm_exit_title: "تأكيد الإغلاق",
++        confirm_exit_msg: "توجد عمليات مطابقة قيد التشغيل في الخلفية. هل أنت متأكد من الإغلاق؟",
++        confirm_delete_title: "تأكيد الحذف",
++        confirm_delete_msg: "هل أنت متأكد من حذف هذه العملية نهائياً من السجل؟",
++        toast_deleted: "تم الحذف بنجاح",
++        toast_started: "بدأت العملية بنجاح في الخلفية",
++        toast_saved: "تم حفظ الإعدادات بنجاح",
++        toast_matching_done: "تمت المطابقة بنجاح!",
++        toast_reviews_applied: "تم تنفيذ التعديلات بنجاح!",
++        select_at_least_one: "يرجى اختيار ملف نواقص وملف مخزن واحد على الأقل",
++        process_existing: "هذه العملية مسجلة بالفعل، جاري عرض النتائج..."
++    },
++    en: {
++        brand_title: "Pharma Match",
++        brand_subtitle: "Pharmacy Matcher",
++        lang_btn: "عربي",
++
++        // Navigation
++        nav_new: "New Match Process",
++        nav_history: "Process History",
++        nav_settings: "System Settings",
++        nav_logs: "System Logs (Terminal)",
++        server_checking: "Checking...",
++        server_running: "Server Running",
++        server_stopped: "Server Stopped",
++        btn_start_server: "Start Server",
++        btn_stop_server: "Stop Server",
++        btn_exit_app: "Exit Application",
++
++        // Screen New
++        new_title: "Match Shortages & Warehouses",
++        new_desc: "Import shortages and warehouse lists to run smart AI matching.",
++        shortages_title: "1. Shortage Files",
++        shortages_drop_title: "Click or drag files here",
++        shortages_drop_sub: "(Supports PDF / Excel)",
++        warehouses_title: "2. Warehouse Lists",
++        warehouses_drop_title: "Click or drag files here",
++        warehouses_drop_sub: "(Supports PDF / Excel / JSON)",
++        browse_files: "Browse Files",
++        btn_start_matching: "Start Matching Process",
++        progress_init: "Initializing process...",
++        progress_sub: "Process is running in background. You can track logs in the System Logs tab.",
++
++        // Screen Results
++        results_title: "Matching Results Report",
++        results_desc: "File analysis completed and Excel report generated successfully.",
++        stat_total_title: "Total Requested Items",
++        stat_matched_title: "Matched Successfully",
++        stat_review_title: "Needs Review (Uncertain)",
++        stat_notfound_title: "Not Found in Warehouses",
++        workflow_title: "Final Review Steps:",
++        step1_title: "Open Excel File",
++        step1_desc: "Click to open file, then go to 'Needs Review' sheet.",
++        btn_open_excel: "Open Excel",
++        step2_title: "Review & Decide",
++        step2_desc: "Select (✅ Match) or (❌ No Match) for each item, then save and close.",
++        step3_title: "Apply Changes",
++        step3_desc: "Click here to transfer items to warehouse sheets and clean the list.",
++        btn_apply_reviews: "Apply Changes",
++        btn_open_folder: "Open Results Folder",
++
++        // Screen History
++        history_title: "Process History",
++        history_desc: "Here you can find all previous matching runs and return to them anytime.",
++        history_empty: "No previous operations recorded.",
++        status_completed: "Completed",
++        status_reviewing: "Under Review",
++        status_processing: "Running...",
++        status_error: "Failed",
++        btn_view_results: "View Results",
++        btn_restart: "Restart",
++        badge_shortages: "shortages",
++        badge_warehouses: "warehouses",
++        process_label: "Process",
++
++        // Screen Settings
++        settings_title: "System Settings",
++        settings_desc: "Configure AI server (MSEMAX), Unstructured API, and extraction profile.",
++        api_keys_header: "API Keys & Processing Options",
++        lbl_unstructured_profile: "PDF Parse Profile",
++        opt_profile_best: "High Precision (Best - Highest accuracy for Arabic drugs)",
++        opt_profile_balanced: "Balanced (Faster processing)",
++        profile_note: "Best eliminates OCR misreads on complex Arabic medical names.",
++        lbl_unstructured_key: "Unstructured API Key",
++        lbl_local_url: "Local AI URL (MSEMAX / vLLM)",
++        lbl_local_key: "Local AI Key (Optional)",
++        lbl_model_name: "Model Name",
++        server_header: "Server Settings (MSEMAX)",
++        lbl_msemax_dir: "MSEMAX Directory Path",
++        btn_select_dir: "Select Folder",
++        btn_install_reqs: "Install Core Requirements",
++        btn_renew_session: "Renew Session (Get Session)",
++        btn_save_settings: "Save Settings",
++        system_logs_title: "System Logs",
++
++        // Screen Terminal
++        terminal_title: "System Logs (Terminal)",
++        terminal_subtitle: "Displays background process output in real-time",
++
++        // Dialogs & Confirmations
++        confirm_exit_title: "Confirm Exit",
++        confirm_exit_msg: "Matching processes are currently running in the background. Are you sure you want to exit?",
++        confirm_delete_title: "Confirm Deletion",
++        confirm_delete_msg: "Are you sure you want to permanently delete this process from history?",
++        toast_deleted: "Deleted successfully",
++        toast_started: "Process started in the background",
++        toast_saved: "Settings saved successfully",
++        toast_matching_done: "Matching completed successfully!",
++        toast_reviews_applied: "Changes applied successfully!",
++        select_at_least_one: "Please select at least one shortage file and one warehouse file",
++        process_existing: "This run already exists, loading results..."
++    }
++};
++
++let currentLang = localStorage.getItem('pharmacy_app_lang') || 'ar';
++let progressTimerInterval = null;
++let progressStartTime = null;
++
++function setLanguage(lang) {
++    currentLang = lang;
++    localStorage.setItem('pharmacy_app_lang', lang);
++    const htmlEl = document.documentElement;
++    htmlEl.lang = lang;
++    htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr';
++
++    const t = I18N[lang] || I18N.ar;
++
++    // Update label on toggle button
++    const labelEl = document.getElementById('lang-label');
++    if (labelEl) labelEl.textContent = t.lang_btn;
++
++    // Update all elements with data-i18n
++    document.querySelectorAll('[data-i18n]').forEach(el => {
++        const key = el.getAttribute('data-i18n');
++        if (t[key]) {
++            el.textContent = t[key];
++        }
++    });
++
++    // Update select options for profile
++    const optBest = document.querySelector('#setting-unstructured-profile option[value="best"]');
++    if (optBest) optBest.textContent = t.opt_profile_best;
++    const optBalanced = document.querySelector('#setting-unstructured-profile option[value="balanced"]');
++    if (optBalanced) optBalanced.textContent = t.opt_profile_balanced;
++
++    // Update server status text if currently static
++    updateServerStatusTextOnly();
++}
++
++function toggleLanguage() {
++    setLanguage(currentLang === 'ar' ? 'en' : 'ar');
++}
++
++function updateServerStatusTextOnly() {
++    const text = document.getElementById('server-status-text');
++    const btn = document.getElementById('btn-toggle-server');
++    const t = I18N[currentLang] || I18N.ar;
++    if (isServerRunning) {
++        if (text) text.textContent = t.server_running;
++        if (btn) btn.innerHTML = `<i class="ph ph-stop"></i> ${t.btn_stop_server}`;
++    } else {
++        if (text) text.textContent = t.server_stopped;
++        if (btn) btn.innerHTML = `<i class="ph ph-play"></i> ${t.btn_start_server}`;
++    }
++}
++
++function startProgressTimer() {
++    progressStartTime = Date.now();
++    const timerEl = document.getElementById('progress-timer');
++    if (timerEl) timerEl.textContent = '⏱️ 00:00';
++    clearInterval(progressTimerInterval);
++    progressTimerInterval = setInterval(() => {
++        const elapsed = Math.floor((Date.now() - progressStartTime) / 1000);
++        const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
++        const secs = String(elapsed % 60).padStart(2, '0');
++        if (timerEl) timerEl.textContent = `⏱️ ${mins}:${secs}`;
++    }, 1000);
++}
++
++function stopProgressTimer() {
++    clearInterval(progressTimerInterval);
++    progressTimerInterval = null;
++}
++
+ let currentProcessId = null;
+ let selectedWarehouseFiles = [];
+ let selectedShortageFiles = [];
+@@ -1166,6 +1166,7 @@
+ 
+ // Ensure Pywebview API is ready
+ window.addEventListener('pywebviewready', function() {
++    setLanguage(currentLang);
+     loadSettings();
+     loadLogs();
+     updateServerStatus();
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

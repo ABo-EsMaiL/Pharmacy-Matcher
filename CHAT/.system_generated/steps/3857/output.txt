@@ -1,0 +1,16 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -5,8 +5,9 @@
+ import requests as http_requests
+ 
+ from ..config import Config
+-from .search import FastCandidateFinder
++from .search import FastCandidateFinder, extract_form_group, extract_brand_tokens
+ from ..match.text_match import normalize_text
++from rapidfuzz import fuzz
+ 
+ 
+ SYSTEM_PROMPT = """You are an expert clinical and Egyptian pharmaceutical matching assistant.
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

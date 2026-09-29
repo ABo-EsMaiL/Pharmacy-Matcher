@@ -1,0 +1,24 @@
+Found 23 results
+desktop_app/__init__.py
+desktop_app/app.py
+desktop_app/backend.py
+desktop_app/database.py
+desktop_app/server_manager.py
+fast_main.py
+finalize.py
+main.py
+src/__init__.py
+src/config.py
+src/extract/__init__.py
+src/extract/excel_reader.py
+src/extract/file_handler.py
+src/extract/pdf_reader.py
+src/fast_match/__init__.py
+src/fast_match/coordinator.py
+src/fast_match/search.py
+src/match/__init__.py
+src/match/coordinator.py
+src/match/gemini_match.py
+src/match/text_match.py
+src/output/__init__.py
+src/output/excel_writer.py

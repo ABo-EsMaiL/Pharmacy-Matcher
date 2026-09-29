@@ -1,0 +1,40 @@
+
+The command exited with code 0.
+Output:
+
+
+    Directory: C:\Users\kakak\AppData\Roaming\pywebview\EBWebView
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         9/22/2026   1:53 AM                AutoLaunchProtocolsComponent                                         
+d-----         9/24/2026   3:55 AM                BrowserMetrics                                                       
+d-----         9/22/2026   1:54 AM                CertificateRevocation                                                
+d-----         9/22/2026   1:56 AM                component_crx_cache                                                  
+d-----         9/22/2026   3:13 AM                Crashpad                                                             
+d-----         9/24/2026   3:55 AM                Default                                                              
+d-----         9/22/2026   1:46 AM                extensions_crx_cache                                                 
+d-----         9/22/2026   1:39 AM                GPUPersistentCache                                                   
+d-----         9/23/2026   5:10 PM                GrShaderCache                                                        
+d-----         9/22/2026   1:55 AM                hyphen-data                                                          
+d-----         9/22/2026   1:39 AM                MEIPreload                                                           
+d-----         9/22/2026   1:52 AM                OriginTrials                                                         
+d-----         9/22/2026   1:54 AM                PKIMetadata                                                          
+d-----         9/22/2026   1:39 AM                ShaderCache                                                          
+d-----         9/22/2026   1:39 AM                SmartScreen                                                          
+d-----         9/22/2026   1:55 AM                Speech Recognition                                                   
+d-----         9/22/2026   1:56 AM                Subresource Filter                                                   
+d-----         9/22/2026   1:39 AM                Trust Protection Lists                                               
+d-----         9/22/2026   1:53 AM                TrustTokenKeyCommitments                                             
+d-----         9/22/2026   1:39 AM                WidevineCdm                                                          
+-a----         9/24/2026   3:55 AM          16384 CrashpadMetrics-active.pma                                           
+-a----         9/24/2026   3:55 AM             13 Last Version                                                         
+-a----         9/24/2026   3:55 AM          14726 Local State                                                          
+-a----         9/24/2026   3:55 AM             85 Variations                                                           
+-a----         9/24/2026   3:32 AM            428 VariationsRuntimeSeedV2                                              
+-a----         9/24/2026   3:32 AM           1201 VariationsSafeSeedV2                                                 
+-a----         9/24/2026   3:32 AM             76 VariationsSeedV2                                                     
+
+
+

@@ -1,0 +1,29 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+[*] Processing PDF file: السلام شبين.pdf
+[+] Loaded 187 items from alongside JSON: السلام شبين.json
+=== SCORES OF TRUE MATCHES ===
+Match: ماريفان3مجم3شريط س ج      -> ماريفان ٣ مجم/جلاكسو      | Rank: 1 | Score: 0.562
+Match: ديوراسيف  250مجم شراب س ج -> ديوراسيف ٢٥٠ شراب/سكويب   | Rank: 1 | Score: 0.724
+Match: ديكساتوبرين مرهم س ج      -> ديكسا توبيرين مرهم/ايكو   | Rank: 1 | Score: 0.610
+Match: رانديل10مجم اقراص         -> رانديل ١٠ مجم             | Rank: 1 | Score: 0.684
+Match: بيتادين  مطهر النيل 60مل  -> بيتادين مطهر/النيل        | Rank: 1 | Score: 0.794
+Match: نيتروماك ريتارد2.5مجم كبس -> نيتروماك ريتارد كبسول/الت | Rank: 1 | Score: 0.747
+Match: ديجستين 20قرص س ج         -> ديجستين اقراص/فاركو       | Rank: 1 | Score: 0.589
+Match: ايفاستين اقراص2 شريط س ج  -> ايفاستين اقراص/ايفا فارم  | Rank: 1 | Score: 0.681
+Match: ادولور 30مجم 3امبول       -> ادولور - ٣٠مجم/٢ مللي ٣ ا | Rank: 1 | Score: 0.743
+Match: كوللوماك محلول س ج        -> كولومالك مس               | Rank: 2 | Score: 0.364
+Match: برونشيكم شراب س ج         -> برونشيكم شراب الكيسير/افن | Rank: 1 | Score: 0.668
+Match: جوسبرين اقراص 3شريط       -> جوسبرين اقراص/اجفار       | Rank: 1 | Score: 0.696
+Match: سيديبروكت كريم س ج        -> سيديبروك كريم/المهن       | Rank: 1 | Score: 0.729
+Match: كلوسول سبراي س ج          -> كولوسول بخاخة/الاوروبيه   | Rank: 1 | Score: 0.247
+Match: برايم روز بلاس اقراص      -> برايم روز بلاس اقراص/ايفا | Rank: 1 | Score: 0.825
+Match: توب جنج ادفانس30كبسوله س  -> توب جينج كبسول/ماش        | Rank: 1 | Score: 0.458
+Match: كيتولاك 5 امبوله          -> كيتولاك امبول/العامريه    | Rank: 1 | Score: 0.718
+Match: سبازموفري امبول           -> سبازموفري ٣امبول/ادوبا    | Rank: 1 | Score: 0.780
+
+Minimum score among all true matches: 0.247
+

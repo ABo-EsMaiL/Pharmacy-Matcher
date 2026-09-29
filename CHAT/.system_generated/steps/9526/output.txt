@@ -1,0 +1,11 @@
+
+The command exited with code 0.
+Output:
+Found 1 <code> blocks in HTML.
+
+--- Code block 1 has JSON! Length: 13004 ---
+Successfully parsed JSON in block 1! Items count: 146
+
+Total Gemini extracted items from DOM: 146
+Saved to scratch/gemini_dom_items.json
+

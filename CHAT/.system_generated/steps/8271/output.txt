@@ -1,0 +1,124 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1102,9 +1102,9 @@
+ # Helpers
+ # ------------------------------------------------------------------------------
+ def format_messages_to_prompt(messages: List[ChatMessage]) -> str:
+-    """Combines user/system/assistant messages into a clean prompt string."""
++    """Combines user/system messages into a pristine, clean prompt string, completely omitting any historical reasoning."""
+     system_lines = []
+-    dialogue_lines = []
++    user_lines = []
+ 
+     for m in messages:
+         content = m.content or ""
+@@ -1116,18 +1116,18 @@
+         if m.role == "system":
+             system_lines.append(content)
+         elif m.role == "user":
+-            dialogue_lines.append(f"User: {content}")
+-        elif m.role == "assistant":
+-            dialogue_lines.append(f"Assistant: {content}")
+-
+-    # In continuous chat mode where CLEAR_CHAT_ON_REQUEST is False,
+-    # previous assistant/user turns already live in the browser session.
+-    # But system instructions must ALWAYS be preserved if provided.
+-    if not CLEAR_CHAT_ON_REQUEST and dialogue_lines:
+-        last_user = dialogue_lines[-1].replace("User: ", "", 1)
+-        if system_lines:
+-            return f"[System Instructions]\n" + "\n\n".join(system_lines) + "\n\n" + last_user
+-        return last_user
++            user_lines.append(content)
++        # Assistant messages and previous reasoning are intentionally IGNORED in matching to keep the prompt 100% clean
++
++    # Sanitize user content: remove any leaked thoughts or historical reasoning markers
++    clean_user_lines = []
++    for u in user_lines:
++        u_clean = re.sub(r'<\s*thought\b[^>]*>.*?<\s*/\s*thought\s*>', '', u, flags=re.DOTALL | re.IGNORECASE)
++        u_clean = re.sub(r'\*\*(?:Defining the Problem|Refining the Matching Criteria|Analyzing Match Results|Thinking Process)\*\*.*?(?=\n\n|$)', '', u_clean, flags=re.DOTALL)
++        u_clean = re.sub(r'(?:Defining the Problem|Refining the Matching Criteria|Analyzing Match Results|I\'ve just\b).*?(?=\n\n|$)', '', u_clean, flags=re.DOTALL)
++        u_clean = u_clean.strip()
++        if u_clean:
++            clean_user_lines.append(u_clean)
+ 
+     parts = []
+     if system_lines:
+@@ -1134,9 +1134,6 @@
+ 
+-    if len(dialogue_lines) == 1:
+-        # Clean single user prompt without "User:" prefix
+-        parts.append(dialogue_lines[0].replace("User: ", "", 1))
+-    elif dialogue_lines:
+-        parts.append("\n\n".join(dialogue_lines))
++    if clean_user_lines:
++        parts.append("\n\n".join(clean_user_lines))
+ 
+     return "\n\n".join(parts)
+ 
+@@ -1159,7 +1159,19 @@
+     model_name = chat_request.model or DEFAULT_MODEL
+     batch_size_header = request.headers.get("x-batch-size")
+     batch_size = int(batch_size_header) if (batch_size_header and batch_size_header.isdigit()) else None
+-    logger.info(f"Incoming /v1/chat/completions prompt ({len(prompt)} chars, batch_size={batch_size}): {repr(prompt[:80])}")
++
++    # Check search toggle header
++    search_hdr = request.headers.get("x-google-search-enabled") or request.headers.get("x-enable-search")
++    enable_search = None
++    if search_hdr is not None:
++        enable_search = search_hdr.lower() in ("true", "1", "yes")
++    else:
++        enable_search = ENABLE_SEARCH_GROUNDING
++
++    logger.info(
++        f"Incoming /v1/chat/completions prompt ({len(prompt)} chars, batch_size={batch_size}, "
++        f"google_search={'ENABLED' if enable_search else 'DISABLED'}): {repr(prompt[:80])}"
++    )
+ 
+     async def sse_generator():
+         async with sem:
+@@ -1172,7 +1172,7 @@
+                 }
+                 yield f"data: {json.dumps(first_chunk, ensure_ascii=False)}\n\n"
+ 
+-                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size):
++                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size, enable_search=enable_search):
+                     if isinstance(chunk_data, dict):
+                         delta = chunk_data["delta"]
+                     else:
+@@ -1211,17 +1211,22 @@
+         full_text = ""
+         async with sem:
+             async with browser_manager.lock:
+-                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size):
+-                    if isinstance(chunk_data, dict):
+-                        full_text = chunk_data["text"]
+-                    else:
+-                        full_text += chunk_data
+-
+-        timings = getattr(browser_manager, "last_timings", {})
+-        headers = {
+-            "X-Timing-PreExec": f"{timings.get('pre_exec', 0.0):.2f}s",
+-            "X-Timing-Generation": f"{timings.get('generation', 0.0):.2f}s",
+-            "X-Timing-Total": f"{timings.get('total', 0.0):.2f}s"
++                async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_size=batch_size, enable_search=enable_search):
++                    if isinstance(chunk_data, dict):
++                        full_text = chunk_data["text"]
++                    else:
++                        full_text += chunk_data
++
++        timings = getattr(browser_manager, "last_timings", {})
++        headers = {
++            "X-Timing-PreExec": f"{timings.get('pre_exec', 0.0):.2f}s",
++            "X-Timing-Generation": f"{timings.get('generation', 0.0):.2f}s",
++            "X-Timing-Total": f"{timings.get('total', 0.0):.2f}s",
++            "X-Batch-Size": str(batch_size or 0),
++            "X-Google-Search-Enabled": str(browser_manager.google_search_enabled).lower(),
++            "X-Tool-Calls-Count": str(browser_manager.last_tool_calls_count),
++            "X-Thinking-Mode": str(browser_manager.active_thinking),
++            "X-Final-Status": str(timings.get('state', 'UNKNOWN')),
+         }
+         return JSONResponse({
+             "id": chunk_id,
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

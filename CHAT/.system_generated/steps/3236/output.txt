@@ -1,0 +1,67 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2015,8 +2015,13 @@
+     
+     // UI Loading state
+     isProcessRunning = true;
+-    btn.classList.add('hidden');
+-    progressModal.style.display = 'flex';
++    if (btn) {
++        btn.classList.add('hidden');
++        btn.style.display = 'none';
++    }
++    if (progressModal) {
++        progressModal.style.display = 'flex';
++    }
+     document.getElementById('progress-text').innerText = t.progress_init;
+     document.getElementById('progress-bar-fill').style.width = '5%';
+     startProgressTimer();
+@@ -2033,8 +2033,13 @@
+             
+             if (res.queued) {
+                 isProcessRunning = false;
+-                btn.classList.remove('hidden');
+-                progressModal.style.display = 'none';
++                if (btn) {
++                    btn.classList.remove('hidden');
++                    btn.style.display = '';
++                }
++                if (progressModal) {
++                    progressModal.style.display = 'none';
++                }
+                 stopProgressTimer();
+                 
+                 selectedShortageFiles = [];
+@@ -2070,8 +2070,13 @@
+         } else {
+             isProcessRunning = false;
+             showToast((currentLang === 'en' ? 'Error: ' : 'خطأ: ') + res.error, 'error');
+-            btn.classList.remove('hidden');
+-            progressModal.style.display = 'none';
++            if (btn) {
++                btn.classList.remove('hidden');
++                btn.style.display = '';
++            }
++            if (progressModal) {
++                progressModal.style.display = 'none';
++            }
+             stopProgressTimer();
+         }
+     } catch (error) {
+@@ -2078,6 +2078,11 @@
+         showToast(currentLang === 'en' ? 'Connection error' : 'حدث خطأ أثناء الاتصال', 'error');
+-        btn.classList.remove('hidden');
+-        progressModal.style.display = 'none';
++        if (btn) {
++            btn.classList.remove('hidden');
++            btn.style.display = '';
++        }
++        if (progressModal) {
++            progressModal.style.display = 'none';
++        }
+         stopProgressTimer();
+     }
+ }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,27 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1424,11 +1424,20 @@
+     try {
+         const dataStr = await window.pywebview.api.get_process_details(processId);
+         const data = JSON.parse(dataStr);
++        if (!data || !data.id) throw new Error("لم يتم العثور على العملية");
++        
+         currentProcessId = processId;
+-        loadResults(data.stats || {});
++        const stats = {
++            total: data.total_shortages || 0,
++            matched: data.matched_count || 0,
++            not_found: data.not_found_count || 0,
++            review: data.review_count || 0
++        };
++        loadResults(stats);
+         window.showScreen('screen-results');
+     } catch (error) {
+         showToast('تعذر تحميل تفاصيل العملية', 'error');
++        console.error(error);
+     }
+ }
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

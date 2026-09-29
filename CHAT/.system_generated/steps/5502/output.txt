@@ -1,0 +1,19 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\calibrate_matcher.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -91,9 +91,12 @@
+     # Do NOT allow single-character fuzzy changes on short brand names (e.g. سينوبريت vs سينوبريل, ديوزمين vs ديبوزين)
+     if len(words_r) == 1 and len(words_c) == 1:
+         if first_r != first_c:
+-            # Only allow if one is exact prefix of another and length difference is 1 (e.g. زنكترون vs زنكتون)
+             if fuzz.ratio(first_r, first_c) < 90:
+                 return False, f"brand_diff_{first_r}_vs_{first_c}"
++    elif len(words_r) == len(words_c):
++        for w_r, w_c in zip(words_r, words_c):
++            if w_r != w_c and fuzz.ratio(w_r, w_c) < 85:
++                return False, f"brand_word_diff_{w_r}_vs_{w_c}"
+     else:
+         if fuzz.ratio(brand_r, brand_c) < 85:
+             return False, "low_brand_sim"
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

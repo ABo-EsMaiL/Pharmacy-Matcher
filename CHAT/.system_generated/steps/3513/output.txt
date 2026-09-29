@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Status: 200
+Raw response json:
+Keys: dict_keys(['id', 'object', 'created', 'model', 'choices'])
+Content repr:
+'\n\n[Error: Failed to get chat-requirements (session might be expired)]'
+Content raw:
+
+
+[Error: Failed to get chat-requirements (session might be expired)]
+

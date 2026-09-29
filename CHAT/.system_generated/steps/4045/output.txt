@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Found in Sheet 'لم يُعثر عليه', Row 93: ('باروفين 30قرص س ج', '0913.xlsx')
+Found in Sheet 'لم يُعثر عليه', Row 210: ('ديورافوس 1 امبول', '0913.xlsx')
+

@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Candidates for 'ليفانوكس2شريط س ج': [{'id': 'WH_00912', 'name': 'ليفانوكس كبسول/باكت 200', 'score': 0.5914291698334905, 'brand_sim': 100.0}]
+Found in Hadaba: {'id': 'WH_00912', 'name': 'ليفانوكس كبسول/باكت 200'}
+

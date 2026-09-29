@@ -1,0 +1,26 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2357,6 +2357,11 @@
+         const secs = String(elapsed % 60).padStart(2, '0');
+         if (timerEl) timerEl.textContent = `⏱️ ${mins}:${secs}`;
+     }, 1000);
++    const screenNew = document.getElementById('screen-new');
++    if (screenNew) {
++        screenNew.scrollTop = 0;
++        screenNew.style.overflowY = 'hidden';
++    }
+ }
+ 
+ function stopProgressTimer() {
+@@ -2363,4 +2363,8 @@
+     progressTimerInterval = null;
++    const screenNew = document.getElementById('screen-new');
++    if (screenNew) {
++        screenNew.style.overflowY = 'auto';
++    }
+ }
+ 
+ let currentProcessId = null;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,51 @@
+
+The command exited with code 0.
+Output:
+Total Not Found items in PROC-014: 486
+
+============================================================
+[*] Processing Warehouse files (6 file(s)) [PARALLEL WORKERS]
+============================================================
+
+  -> [START] Processing file: السلام شبين.pdf (Type: .pdf)
+[!] Exception processing السلام شبين.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+  -> [START] Processing file: المكرومي المنصورة.pdf (Type: .pdf)
+[!] Exception processing المكرومي المنصورة.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+  -> [START] Processing file: الهضبة الاثنين نقدى0.pdf (Type: .pdf)
+[!] Exception processing الهضبة الاثنين نقدى0.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+  -> [START] Processing file: جملة العمروووو.pdf (Type: .pdf)
+[!] Exception processing جملة العمروووو.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+  -> [START] Processing file: كيور فارما خاص.pdf (Type: .pdf)
+[!] Exception processing كيور فارما خاص.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+  -> [START] Processing file: مخزن الحياة فارم اسكندريه-170.pdf (Type: .pdf)
+[!] Exception processing مخزن الحياة فارم اسكندريه-170.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+============================================================
+[+] Completed Warehouse: 0 items from 6 file(s)
+============================================================
+
+Loaded warehouse catalogs:
+  - المكرومي المنصورة.pdf: 0 items
+  - السلام شبين.pdf: 0 items
+  - الهضبة الاثنين نقدى0.pdf: 0 items
+  - كيور فارما خاص.pdf: 0 items
+  - جملة العمروووو.pdf: 0 items
+  - مخزن الحياة فارم اسكندريه-170.pdf: 0 items
+Total warehouse items: 0
+
+================================================================================
+DEEP SCAN: CHECKING NOT-FOUND ITEMS FOR MISSED MATCHES
+================================================================================
+Found 0 suspicious candidates with score >= 70% in Not Found items:
+

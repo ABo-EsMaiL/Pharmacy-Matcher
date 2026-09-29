@@ -1,0 +1,26 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+API key loaded: GQfocO...
+
+--- Listing Jobs on Unstructured Server ---
+Total jobs found: 13
+Job ID: e1aa28f8-7800-4898-8cf0-06598c2aeb04 | File: المكرومي المنصورة.pdf | Status: JobStatus.COMPLETED | Created: 2026-09-22 13:03:30.209031+00:00
+Job ID: 1b809037-2422-4a42-a8a6-314f89a08ae0 | File: المكرومي المنصورة.pdf | Status: JobStatus.FAILED | Created: 2026-09-22 13:03:23.443320+00:00
+Job ID: fc75c9a1-7490-4654-b273-19bd569de26d | File: المكرومي المنصورة.pdf | Status: JobStatus.COMPLETED | Created: 2026-09-22 12:44:12.700721+00:00
+Job ID: d1f1d4eb-4e70-41f9-b9e5-79a92a01da58 | File: المكرومي المنصورة.pdf | Status: JobStatus.COMPLETED | Created: 2026-09-22 12:42:55.096887+00:00
+Job ID: b7b54e20-41b4-4476-bc0c-f5dc31632cf3 | File: المكرومي المنصورة.pdf | Status: JobStatus.FAILED | Created: 2026-09-22 12:42:46.181965+00:00
+Job ID: 6bd4ca20-1076-42dd-b3de-3ae100417a24 | File: المكرومي المنصورة.pdf | Status: JobStatus.FAILED | Created: 2026-09-22 12:42:41.864713+00:00
+Job ID: 4e1bee74-a667-4e5f-872f-af27e51fa1bd | File: المكرومي المنصورة.pdf | Status: JobStatus.FAILED | Created: 2026-09-22 12:42:39.828585+00:00
+Job ID: 665cfff1-7d95-4318-97eb-315cd909a7a0 | File: المكرومي المنصورة.pdf | Status: JobStatus.FAILED | Created: 2026-09-22 12:42:37.904158+00:00
+Job ID: 2eed8de2-6aac-48ce-a012-149031d90160 | File: المكرومي المنصورة.pdf | Status: JobStatus.FAILED | Created: 2026-09-22 12:42:31.928232+00:00
+Job ID: 3ea8dd11-cb1d-44b4-8bb1-9f7b9bc8e864 | File: جملة العمروووو.pdf | Status: JobStatus.FAILED | Created: 2026-09-22 12:39:56.722739+00:00
+Job ID: 39affceb-b0f1-4e3a-b8bb-71248c97f1c1 | File: جملة العمروووو.pdf | Status: JobStatus.FAILED | Created: 2026-09-22 12:39:07.924178+00:00
+Job ID: 31fccd1a-5675-4508-87fe-e374e0cf57da | File: جملة العمروووو.pdf | Status: JobStatus.COMPLETED | Created: 2026-09-22 11:18:04.706693+00:00
+Job ID: d5f72b8b-4533-4e9c-b04f-e45380c23cbd | File: السلام شبين.pdf | Status: JobStatus.COMPLETED | Created: 2026-09-22 11:11:11.509044+00:00
+
+--- Client APIs ---
+JobsApi methods: ['cancel', 'delete', 'get', 'iterate', 'list', 'stream']
+

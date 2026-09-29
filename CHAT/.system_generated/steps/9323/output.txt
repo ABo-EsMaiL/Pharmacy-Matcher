@@ -1,0 +1,19 @@
+
+The command exited with code 0.
+Output:
+Loading Excel workbooks for PROC-012, 014, 015, 016...
+Loaded PROC-012: 0 matches, 5 reviews, 0 not found.
+Loaded PROC-014: 0 matches, 5 reviews, 0 not found.
+Loaded PROC-015: 0 matches, 9 reviews, 0 not found.
+Loaded PROC-016: 0 matches, 77 reviews, 0 not found.
+
+======================================================================
+1. SUMMARY METRICS COMPARISON (المقارنة الرقمية الشاملة)
+======================================================================
+[PROC-012]: Total Matches = 0, Reviews = 5, Not Found = 0
+[PROC-014]: Total Matches = 0, Reviews = 5, Not Found = 0
+[PROC-015]: Total Matches = 0, Reviews = 9, Not Found = 0
+[PROC-016]: Total Matches = 0, Reviews = 77, Not Found = 0
+
+Saved full extracted data to extracted_comparison_data.json.
+

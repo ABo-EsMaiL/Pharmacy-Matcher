@@ -1,0 +1,48 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -641,21 +641,35 @@
+ 
+         elapsed_total = time.time() - start_time
+         is_json = False
++        json_err_msg = ""
+         try:
+             clean_test = prev_text.strip()
+-            if "```" in clean_test:
++            # 1. Direct parse
++            try:
++                json.loads(clean_test)
++                is_json = True
++            except Exception as e1:
++                # 2. Strip code fences
+                 clean_test = re.sub(r"^```(?:json)?\s*", "", clean_test, flags=re.MULTILINE)
+                 clean_test = re.sub(r"```\s*$", "", clean_test, flags=re.MULTILINE).strip()
+-            m = re.search(r'\{.*\}', clean_test, re.DOTALL) or re.search(r'\[.*\]', clean_test, re.DOTALL)
+-            if m:
+-                json.loads(m.group(0))
+-                is_json = True
+-        except Exception:
++                try:
++                    json.loads(clean_test)
++                    is_json = True
++                except Exception as e2:
++                    # 3. Outer { } or [ ]
++                    m = re.search(r'\{.*\}', clean_test, re.DOTALL) or re.search(r'\[.*\]', clean_test, re.DOTALL)
++                    if m:
++                        json.loads(m.group(0))
++                        is_json = True
++                    else:
++                        json_err_msg = f" (no JSON structure found; direct err: {e1})"
++        except Exception as e:
+             is_json = False
++            json_err_msg = f" ({e})"
+ 
+         logger.info(
+             f"Stream finished in {elapsed_total:.2f}s | chars: {len(prev_text)} | "
+-            f"Valid JSON: {is_json} | Sample: {repr(prev_text[:60])}"
++            f"Valid JSON: {is_json}{json_err_msg} | Sample: {repr(prev_text[:60])}"
+         )
+ 
+ browser_manager = WebHookBrowserManager()
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

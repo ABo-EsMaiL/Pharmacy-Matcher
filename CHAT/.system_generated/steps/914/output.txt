@@ -1,0 +1,20 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -201,10 +201,10 @@
+     filepath = Path(filepath)
+ 
+     # استخراج البيانات من PDF
+-    response = extract_from_pdf(filepath, api_key, base_url)
++    result = extract_from_pdf(filepath, api_key, base_url)
+ 
+     # تحليل الاستجابة
+-    items = parse_items_from_response(response)
++    items = parse_items_from_response(result, gemini_api_key)
+ 
+     # إضافة اسم الملف المصدر لكل عنصر
+     for item in items:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

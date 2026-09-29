@@ -1,0 +1,30 @@
+{"name":"AKTB","isDir":true}
+{"name":"Book","isDir":true}
+{"name":"Football Player Career Simulator","isDir":true}
+{"name":"MSEMAX","isDir":true}
+{"name":"MSEMAX - Copy","isDir":true}
+{"name":"MSEMAX-AIStudio","isDir":true}
+{"name":"MSEMAX-AIStudio.zip","sizeBytes":"9520"}
+{"name":"MSEMAX-GAIStudio","isDir":true}
+{"name":"MSEMAX-GAIStudio.zip","sizeBytes":"8040044"}
+{"name":"MSEMAX-main.zip","sizeBytes":"21181"}
+{"name":"Miniconda3-latest-Linux-x86_64.sh","sizeBytes":"296602766"}
+{"name":"N8N","isDir":true}
+{"name":"OpusClip","isDir":true}
+{"name":"OpusClip.zip","sizeBytes":"823381"}
+{"name":"Pharmacy","isDir":true}
+{"name":"Pharmacy-agy","isDir":true}
+{"name":"Pharmacy.zip","sizeBytes":"7416869"}
+{"name":"Portfolio","isDir":true}
+{"name":"ProjectBattle","isDir":true}
+{"name":"RAGbot","isDir":true}
+{"name":"cuda_13.3.0_windows.exe","sizeBytes":"2510583272"}
+{"name":"desktop.ini","sizeBytes":"69"}
+{"name":"favorites_6_14_26.html","sizeBytes":"2178112"}
+{"name":"huggingface","isDir":true}
+{"name":"omni-agent","isDir":true}
+{"name":"psoriasis-api","isDir":true}
+{"name":"rag-playground","isDir":true}
+{"name":"smart-rag-api","isDir":true}
+
+Summary: This directory contains 19 subdirectories and 9 files.

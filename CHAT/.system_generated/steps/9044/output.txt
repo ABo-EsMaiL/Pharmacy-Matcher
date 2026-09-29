@@ -1,0 +1,4 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\fast_match\\coordinator.py","LineNumber":393,"LineContent":"                        raw_results = self._call_local_api({\"cases\": cases_chunk})"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\fast_match\\coordinator.py","LineNumber":589,"LineContent":"    def _call_local_api(self, inputs: dict) -\u003e list[dict]:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":398,"LineContent":"                        raw_results = self._call_local_api({\"cases\": cases_chunk})"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":594,"LineContent":"    def _call_local_api(self, inputs: dict) -\u003e list[dict]:"}

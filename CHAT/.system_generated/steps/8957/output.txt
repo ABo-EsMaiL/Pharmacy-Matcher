@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+
+
+Id          : 20572
+ProcessName : python
+StartTime   : 9/22/2026 9:48:12 PM
+Path        : 
+
+
+
+

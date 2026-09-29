@@ -1,0 +1,11 @@
+
+The command exited with code 0.
+Output:
+Offline report rebuild. No API call.
+Controls: 9/10 matched expected answers.
+Real decisions: {"no_match": 14, "review": 3, "match": 3}
+Cases flagged by code: C04
+DONE - SAMPLE NEEDS HUMAN REVIEW; this is not the final order workbook.
+Report: D:\AI_Engineer\Pharmacy\review\gemini_probe\run_20260921_155657_616007\reviewed_report.html
+Send back: D:\AI_Engineer\Pharmacy\review\gemini_probe\latest_results.json
+

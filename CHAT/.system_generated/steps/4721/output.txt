@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Total not-found items to scan: 485
+Total warehouse items indexed: 2717
+
+Scan Complete!
+Items with potential warehouse mentions (score >= 70): 392 / 485
+Items with ZERO mentions across all 6 PDFs: 93 / 485
+

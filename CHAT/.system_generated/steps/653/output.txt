@@ -1,0 +1,62 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1078,20 +1078,43 @@
+ }
+ 
+ // Exit App
+-async function exitApp() {
++function exitApp() {
+     if (window.activeProcesses > 0) {
+-        if (!confirm('هل أنت متأكد من الإغلاق؟ توجد عمليات مطابقة قيد التشغيل في الخلفية.')) {
+-            return;
+-        }
+-    }
+-    
+-    try {
+-        if (window.pywebview && window.pywebview.api) {
+-            await window.pywebview.api.exit_app();
+-        }
+-    } catch (e) {
+-        console.error(e);
+-    }
++        showCustomConfirm('تأكيد الإغلاق', 'توجد عمليات مطابقة قيد التشغيل في الخلفية. هل أنت متأكد من الإغلاق؟', async () => {
++            try {
++                if (window.pywebview && window.pywebview.api) {
++                    await window.pywebview.api.exit_app();
++                }
++            } catch (e) {
++                console.error(e);
++            }
++        });
++    } else {
++        try {
++            if (window.pywebview && window.pywebview.api) {
++                window.pywebview.api.exit_app();
++            }
++        } catch (e) {
++            console.error(e);
++        }
++    }
++}
++
++// Delete Process
++function deleteProcess(processId) {
++    showCustomConfirm('تأكيد الحذف', 'هل أنت متأكد من حذف هذه العملية نهائياً من السجل؟', async () => {
++        try {
++            const res = await window.pywebview.api.delete_process(processId);
++            if (res.success) {
++                showToast('تم الحذف بنجاح', 'success');
++                loadHistory();
++            } else {
++                showToast('خطأ: ' + res.error, 'error');
++            }
++        } catch (error) {
++            showToast('خطأ في الحذف', 'error');
++        }
++    });
+ }
+ 
+ // --- Drag & Drop Logic ---
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

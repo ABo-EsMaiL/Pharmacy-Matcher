@@ -1,0 +1,117 @@
+{
+  "id": "b76a14fa-8fca-4ce7-9c51-d3ff8e9bfbfd",
+  "status": "completed",
+  "filename": "جملة العمروووو.pdf",
+  "file_id": "جملة-العمروووو-b8e99d97.pdf",
+  "cancellation_requested": false,
+  "source": {
+    "file_id": "جملة-العمروووو-b8e99d97.pdf",
+    "filename": "جملة العمروووو.pdf",
+    "mimetype": "application/pdf",
+    "expires_at": "2026-09-23 17:32:25.904625+00:00"
+  },
+  "error": null,
+  "result": {
+    "id": "b76a14fa-8fca-4ce7-9c51-d3ff8e9bfbfd",
+    "status": "completed",
+    "profile": "balanced",
+    "markdown": "مخزن العمرو فارما للادوية و المستلزمات الطبية بالجملة\nشارع الاديب من شارع الترعة\n01068887710 - 01021046455 - 2360627 - 2360397 - 2245105 - 2224728\nس.ت: 122371 ب.ض : 501545298 - 6220002045876 : GLN\n\n# طلبية توريد\nالتاريخ : 14/11/2026\n\nطلبية توريد\n\nرقم الطلبية: 7\nالتاريخ: 14/11/2026\nالمخزن: المخزن الرئيسي\nالمورد: العمروووووو\nملاحظات:\n\n<table><tr><th>القيمة</th><th>الخصم</th><th>السعر</th><th>الكمية</th><th>اسم الصنف</th><th>كود الصنف</th></tr><tr><td>0.00</td><td>30</td><td>228.00</td><td>0</td><td>افيرو كوكسبيب 90مجم-32ب</td><td>11494</td></tr><tr><td>0.00</td><td>25</td><td>275.00</td><td>0</td><td>امبوفير حقن جديد</td><td>19730</td></tr><tr><td>0.00</td><td>29</td><td>192.00</td><td>0</td><td>ايزوتريتينوين 10 مجم 3 شريط -28</td><td>15289</td></tr><tr><td>0.00</td><td>26</td><td>372.00</td><td>0</td><td>ايزوتريتينوين 20م جديد -50</td><td>15296</td></tr><tr><td>0.00</td><td>37.5</td><td>116.00</td><td>0</td><td>بانادول اكسترا 48 قرص-96ب</td><td>21654</td></tr><tr><td>0.00</td><td>31</td><td>72.00</td><td>0</td><td>بانثينول كريم كبير سعر قديم باكو 25</td><td>20965</td></tr><tr><td>0.00</td><td>35</td><td>105.00</td><td>0</td><td>ترايكوبافيت 100مجم 3شريط</td><td>17053</td></tr><tr><td>0.00</td><td>39</td><td>69.00</td><td>0</td><td>رانسيف 500 مجم قرص جديد45</td><td>21422</td></tr><tr><td>0.00</td><td>34</td><td>48.00</td><td>0</td><td>ستيميبولان 400مجم كبسول</td><td>12523</td></tr><tr><td>0.00</td><td>28</td><td>311.00</td><td>0</td><td>كلبيكان 40مجم-84</td><td>12386</td></tr><tr><td>0.00</td><td>36</td><td>76.00</td><td>0</td><td>لوفير 400 سعر جديد باكو 45</td><td>10460</td></tr><tr><td>0.00</td><td>37</td><td>300.00</td><td>0</td><td>لوفير 800 سعر جديد-باكو25</td><td>19438</td></tr><tr><td>0.00</td><td>34</td><td>101.00</td><td>0</td><td>ليفوفلو تافيت 750 فيال باكو 12 كرتونه 144</td><td>20607</td></tr><tr><td>0.00</td><td>14</td><td>281.00</td><td>0</td><td>هيرو 111 عادى جديد -12ب لا يفرط</td><td>17597</td></tr><tr><td>0.00</td><td>14</td><td>384.00</td><td>0</td><td>هيرو 222 نيوتر ادينس 384</td><td>18438</td></tr><tr><td>0.00</td><td>14</td><td>499.00</td><td>0</td><td>هيرو اتش ايه جديد 499</td><td>11797</td></tr><tr><td>0.00</td><td>13</td><td>404.00</td><td>0</td><td>هيرو اف ال جديدج ك 12الافريط</td><td>20697</td></tr><tr><td>0.00</td><td>14</td><td>429.00</td><td>0</td><td>هيرو ايه ار جديدد لايفرط</td><td>22289</td></tr><tr><td>0.00</td><td>14</td><td>414.00</td><td>0</td><td>هيرو داجست 12لايفرط</td><td>15124</td></tr></table>\n\nMIS 01008081299 - 0502265751\n1/1 صفحة",
+    "format_version": "2.0",
+    "metadata": {
+      "page_count": 1
+    },
+    "extracted_data": [
+      {
+        "data": {
+          "items": [
+            {
+              "item_name_raw": "افيرو كوكسبيب 90مجم-32ب",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "امبوفير حقن جديد",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "ايزوتريتينوين 10 مجم 3 شريط -28",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "ايزوتريتينوين 20م جديد -50",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "بانادول اكسترا 48 قرص-96ب",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "بانثينول كريم كبير سعر قديم باكو 25",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "ترايكوبافيت 100مجم 3شريط",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "رانسيف 500 مجم قرص جديد45",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "ستيميبولان 400مجم كبسول",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "كلبيكان 40مجم-84",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "لوفير 400 سعر جديد باكو 45",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "لوفير 800 سعر جديد-باكو25",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "ليفوفلو تافيت 750 فيال باكو 12 كرتونه 144",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "هيرو 111 عادى جديد -12ب لا يفرط",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "هيرو 222 نيوتر ادينس 384",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "هيرو اتش ايه جديد 499",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "هيرو اف ال جديدج ك 12الافريط",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "هيرو ايه ار جديدد لايفرط",
+              "source_page": 1
+            },
+            {
+              "item_name_raw": "هيرو داجست 12لايفرط",
+              "source_page": 1
+            }
+          ]
+        },
+        "field_metadata": null
+      }
+    ],
+    "warnings": [],
+    "elements": [],
+    "source": {
+      "file_id": "جملة-العمروووو-b8e99d97.pdf",
+      "filename": "جملة العمروووو.pdf",
+      "mimetype": "application/pdf",
+      "expires_at": "2026-09-23 17:32:25.904625+00:00"
+    }
+  }
+}

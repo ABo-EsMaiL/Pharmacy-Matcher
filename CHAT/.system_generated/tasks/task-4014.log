@@ -1,0 +1,197 @@
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Total matched requested items in results: 67
+Total review requested items in results: 5
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Extracted 993 items from column 'أسم الصنف'
+Total unique shortages in 0913.xlsx: 591
+Total unmatched shortages: 520
+Loaded Warehouse: السلام شبين (187 items)
+Loaded Warehouse: المكرومي المنصورة (503 items)
+Loaded Warehouse: الهضبة الاثنين نقدى0 (1071 items)
+Loaded Warehouse: جملة العمروووو (19 items)
+Loaded Warehouse: كيور فارما خاص (715 items)
+Loaded Warehouse: مخزن الحياة فارم اسكندريه-170 (222 items)
+
+Total potential false negatives found: 45
+Unique candidate pairs: 45
+
+--- TOP 35 CANDIDATES ---
+[كيور فارما خاص]
+  Shortage : 'برونكوفين شراب'
+  Warehouse: 'برونكوف شراب'
+  Score    : token_sort=92.3076923076923 | Form: syrup vs syrup | St: [] vs []
+
+[مخزن الحياة فارم اسكندريه-170]
+  Shortage : 'سيتال1جم اقراص س ج'
+  Warehouse: 'سيتال اقراص 500 س ج'
+  Score    : token_sort=81.08108108108108 | Form: tablet vs tablet | St: ['1'] vs []
+
+[كيور فارما خاص]
+  Shortage : 'برونكوفين شراب س ج'
+  Warehouse: 'برونكوف شراب'
+  Score    : token_sort=80.0 | Form: syrup vs syrup | St: [] vs []
+
+[كيور فارما خاص]
+  Shortage : 'برونكوفين شراب س ج'
+  Warehouse: 'بروفين شراب جديد'
+  Score    : token_sort=76.47058823529412 | Form: syrup vs syrup | St: [] vs []
+
+[الهضبة الاثنين نقدى0]
+  Shortage : 'كوفي زنك لوسيون'
+  Warehouse: 'زنك اوليف لوسيون كوليج'
+  Score    : token_sort=75.67567567567568 | Form: topical_solution vs topical_solution | St: [] vs []
+
+[كيور فارما خاص]
+  Shortage : 'برونكوفين شراب'
+  Warehouse: 'بروفين شراب جديد'
+  Score    : token_sort=73.33333333333334 | Form: syrup vs syrup | St: [] vs []
+
+[مخزن الحياة فارم اسكندريه-170]
+  Shortage : 'سيالس 2قرص س ج'
+  Warehouse: 'سيتال اقراص 500 س ج'
+  Score    : token_sort=72.72727272727273 | Form: tablet vs tablet | St: [] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'جينوزول كريم س ج'
+  Warehouse: 'جينوفازول ٤٪ كريم'
+  Score    : token_sort=72.72727272727273 | Form: cream vs cream | St: [] vs []
+
+[السلام شبين]
+  Shortage : 'برايم روز اي اقراص س ج'
+  Warehouse: 'برايم روز بلاس اقراص/ايفافارم'
+  Score    : token_sort=70.58823529411764 | Form: tablet vs None | St: [] vs []
+
+[السلام شبين]
+  Shortage : 'زنكو بلاس شراب'
+  Warehouse: 'زنك اورجين شراب'
+  Score    : token_sort=68.96551724137932 | Form: syrup vs syrup | St: [] vs []
+
+[الهضبة الاثنين نقدى0]
+  Shortage : 'ميتفورمين1000مجم اكس ار اقراص'
+  Warehouse: 'ميتفون 1000 مج اقراص اكس ار'
+  Score    : token_sort=67.85714285714286 | Form: tablet vs tablet | St: ['1000'] vs ['1000']
+
+[كيور فارما خاص]
+  Shortage : 'ديورافوس 1 امبول'
+  Warehouse: 'دیورافس امول = دیور فوس'
+  Score    : token_sort=66.66666666666667 | Form: injection vs None | St: [] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'جينوزول كريم س ج'
+  Warehouse: 'جينوفازول ٨ كريم ٤٦ج'
+  Score    : token_sort=66.66666666666667 | Form: cream vs cream | St: [] vs []
+
+[كيور فارما خاص]
+  Shortage : 'ريتشي بانثينول كريم ادفانس'
+  Warehouse: 'بانثينول ٣٠جم كريم اروكس جديد'
+  Score    : token_sort=65.45454545454545 | Form: cream vs cream | St: [] vs ['٣٠']
+
+[الهضبة الاثنين نقدى0]
+  Shortage : 'لبن بيديا ستارت 2'
+  Warehouse: 'لبن بدیا ستارت رقم 1/ باکت 24'
+  Score    : token_sort=65.21739130434783 | Form: None vs None | St: [] vs []
+
+[الهضبة الاثنين نقدى0]
+  Shortage : 'ليبونكس 25مجم اقراص'
+  Warehouse: 'ليبونس سبراى / باكت 25'
+  Score    : token_sort=63.41463414634146 | Form: tablet vs None | St: ['25'] vs []
+
+[السلام شبين]
+  Shortage : 'بيتادين دش مهبلي س ج'
+  Warehouse: 'بيتادين مطهر/النيل'
+  Score    : token_sort=63.1578947368421 | Form: None vs None | St: [] vs []
+
+[السلام شبين]
+  Shortage : 'بيتاديرم مرهم س ج'
+  Warehouse: 'بيتاديرم كريم/ايكو'
+  Score    : token_sort=62.857142857142854 | Form: ointment vs None | St: [] vs []
+
+[الهضبة الاثنين نقدى0]
+  Shortage : 'بروفين 200مجم 30قرص س ج'
+  Warehouse: 'بروفن 30 کیس جدید باکت 20'
+  Score    : token_sort=62.5 | Form: tablet vs None | St: ['200'] vs []
+
+[جملة العمروووو]
+  Shortage : 'ريتشي بانثينول كريم ادفانس'
+  Warehouse: 'بانثينول كريم كبير سعر قديم باكو 25'
+  Score    : token_sort=62.295081967213115 | Form: cream vs cream | St: [] vs []
+
+[الهضبة الاثنين نقدى0]
+  Shortage : 'باروفين 30قرص س ج'
+  Warehouse: 'بروفن 30 کیس جدید باکت 20'
+  Score    : token_sort=61.904761904761905 | Form: tablet vs None | St: [] vs []
+
+[السلام شبين]
+  Shortage : 'ايفرزين لوشن'
+  Warehouse: 'ايسفرين ربع'
+  Score    : token_sort=60.86956521739131 | Form: topical_solution vs None | St: [] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'لبن بيبيلاك بريماتيور'
+  Warehouse: 'بيبيلك ١ لبن'
+  Score    : token_sort=60.60606060606061 | Form: None vs None | St: [] vs []
+
+[كيور فارما خاص]
+  Shortage : 'اكسترا بروتين اكياس فانيليا'
+  Warehouse: 'بولي فريش اكسترا'
+  Score    : token_sort=60.46511627906976 | Form: sachet vs None | St: [] vs []
+
+[كيور فارما خاص]
+  Shortage : 'كالسيزوم د 60 كبسوله'
+  Warehouse: 'السيزول ٥٠٠مجم كبسول'
+  Score    : token_sort=60.0 | Form: tablet vs tablet | St: [] vs ['٥٠٠']
+
+[كيور فارما خاص]
+  Shortage : 'برايم روز اي اقراص س ج'
+  Warehouse: 'برايم روز بلاس كبسول جديد'
+  Score    : token_sort=59.57446808510638 | Form: tablet vs tablet | St: [] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'كولوفيرين  أيه 30قرص س ج'
+  Warehouse: 'كولوفين ٥٠ قرص'
+  Score    : token_sort=59.45945945945945 | Form: tablet vs tablet | St: [] vs []
+
+[السلام شبين]
+  Shortage : 'برونكوفين شراب'
+  Warehouse: 'برونكوبينير سعر ٢٨١ج'
+  Score    : token_sort=58.82352941176471 | Form: syrup vs None | St: [] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'ليمتلس ليبوفيركس40مجم كبسولات'
+  Warehouse: 'ليمتلس فيش اويل/كبسولة'
+  Score    : token_sort=58.82352941176471 | Form: tablet vs None | St: ['40'] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'ليمتلس بي كومبلكس لزقه'
+  Warehouse: 'ليمتلس كروماماكس كت ٣٠ كبس'
+  Score    : token_sort=58.33333333333333 | Form: None vs None | St: [] vs []
+
+[كيور فارما خاص]
+  Shortage : 'باروفين 30قرص س ج'
+  Warehouse: 'باروفين ٢٠ قرص'
+  Score    : token_sort=58.06451612903225 | Form: tablet vs tablet | St: [] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'فاركوسين مرهم س ج'
+  Warehouse: 'فاروكوين كريستال جديد'
+  Score    : token_sort=57.89473684210527 | Form: ointment vs None | St: [] vs []
+
+[السلام شبين]
+  Shortage : 'برونكوفين شراب س ج'
+  Warehouse: 'برونكوبينير سعر ٢٨١ج'
+  Score    : token_sort=57.89473684210527 | Form: syrup vs None | St: [] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'اكسترا بروتين اكياس فانيليا'
+  Warehouse: 'سيتال اكسترا/ايكيو'
+  Score    : token_sort=57.77777777777777 | Form: sachet vs None | St: [] vs []
+
+[المكرومي المنصورة]
+  Shortage : 'ريبايون اسبراي'
+  Warehouse: 'ريبايون ان جل بديل ريباريل ٥٠جم'
+  Score    : token_sort=57.77777777777777 | Form: None vs gel | St: [] vs ['٥٠']
+

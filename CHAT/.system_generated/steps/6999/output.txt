@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+{'status': 'ok', 'gateway': 'MSEMAX (AIStudio Web Hook)', 'version': '2.1.0', 'browser_ready': True, 'session_file_exists': True, 'headless': False, 'profile_dir': './chrome_profile', 'default_model': 'gemini-3.8-flash', 'thinking_mode': 'high', 'active_model': '', 'active_thinking': 'High', 'clear_chat_on_request': True, 'port': 8001, 'rate_limit': '30/minute'}
+

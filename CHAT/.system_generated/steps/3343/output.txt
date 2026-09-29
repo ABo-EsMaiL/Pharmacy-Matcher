@@ -1,0 +1,17 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_parser_hadaba.py", line 65, in <module>
+    items = parse_structured_result_test(data, "الهضبة الاثنين نقدى0.pdf")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_parser_hadaba.py", line 48, in parse_structured_result_test
+    if not any(num_k in col_lower for k in ["رقم", "كود", "code", "id", "number"]):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_parser_hadaba.py", line 48, in <genexpr>
+    if not any(num_k in col_lower for k in ["رقم", "كود", "code", "id", "number"]):
+               ^^^^^
+NameError: name 'num_k' is not defined
+

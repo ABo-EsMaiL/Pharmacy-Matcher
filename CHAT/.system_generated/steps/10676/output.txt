@@ -1,0 +1,43 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_endpoint_vision.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -25,14 +25,30 @@
+ with open(temp_img_path, "rb") as f:
+     img_b64 = base64.b64encode(f.read()).decode("utf-8")
+ 
+-# 4. الـ Prompt الصارم للاستخراج
++# 4. الـ Prompt الصارم المنظم للاستخراج
+ prompt_text = (
+-    "أنت خبير صيدلي متخصص في استخراج بيانات فواتير وقوائم الأدوية.\n"
+-    "قم باستخراج جميع أسماء الأدوية والمنتجات الطبية الموجودة في هذه الصورة بدقة كاملة.\n"
+-    "القواعد:\n"
+-    "1. انقل اسم الصنف كاملاً في (item_name_raw) متضمناً الاسم والتركيز والهيئة والشركة، وتجاهل الأسعار والكميات.\n"
+-    "2. الحروف باللغة العربية السليمة فقط (كاف وباء عربية).\n"
+-    "3. الرد بصيغة JSON فقط: {\"items\": [{\"item_name_raw\": \"...\", \"source_page\": 1}]}"
++    "أنت خبير صيدلي متخصص في استخراج وتحليل بيانات فواتير وقوائم الأدوية.\n"
++    "قم باستخراج جميع الأدوية والمنتجات الطبية الموجودة في هذه الصورة بدقة صيدلانية كاملة.\n"
++    "القواعد الصارمة:\n"
++    "1. استخرج كل صنف أو سطر منتج دوائي يظهر في الصورة كعنصر مستقل.\n"
++    "2. (item_name_raw): انقل اسم الصنف كاملاً كما هو في الفاتورة بالحرف دون أي تعديل أو اختصار مع الاحتفاظ بالاسم والتركيز والهيئة الدوائية والشركة.\n"
++    "3. (trade_name): الاسم التجاري الصافي للدواء فقط بدون التركيز أو الهيئة الدوائية (مثال: دوليبرين، كيتولاك، كونكور، اوجمنتين).\n"
++    "4. (strength): تركيز الدواء كما هو مكتوب في الصورة (مثال: 1000 مجم، 500 mg، 1 جم، 20/40) أو اتركه فارغاً إذا لم يذكر.\n"
++    "5. (form): الهيئة الدوائية (أقراص، كبسول، شراب، حقن، أمبول، نقط، كريم، مرهم، جل، بخاخ...) أو اتركها فارغة إذا لم تذكر.\n"
++    "6. تجنب تصحيح الأخطاء الإملائية أو ترجمة الكلمات أو تغيير الأرقام. لا تُدرج أسعار أو كميات أو خصومات أو أرقام أكواد.\n"
++    "7. الحروف باللغة العربية والإنجليزية السليمة فقط.\n"
++    "8. الرد يجب أن يكون كائن JSON صالح فقط بدون أي نصوص تمهيدية:\n"
++    "{\n"
++    '  "items": [\n'
++    "    {\n"
++    '      "item_name_raw": "الاسم المكتوب كاملاً بالتركيز والهيئة كما هو",\n'
++    '      "trade_name": "الاسم التجاري فقط",\n'
++    '      "strength": "التركيز",\n'
++    '      "form": "الهيئة",\n'
++    '      "source_page": 1\n'
++    "    }\n"
++    "  ]\n"
++    "}"
+ )
+ 
+ # 5. تجهيز الـ Payload
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

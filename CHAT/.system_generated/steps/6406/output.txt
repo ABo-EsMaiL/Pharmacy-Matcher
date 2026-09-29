@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+125: self.on_closing()
+726: def on_closing(self):
+

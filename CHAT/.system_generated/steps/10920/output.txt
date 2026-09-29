@@ -1,0 +1,24 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2835,10 +2835,14 @@
+         
+         if (data.success) {
+             showToast(t.toast_matching_done, 'success');
+-            if (data.stats) {
+-                loadResults(data.stats);
+-            }
+-            window.showScreen('screen-results');
++            if (data.process_id && typeof viewProcess === 'function') {
++                viewProcess(data.process_id);
++            } else {
++                if (data.stats) {
++                    loadResults(data.stats);
++                }
++                window.showScreen('screen-results');
++            }
+         } else {
+             showToast((currentLang === 'en' ? 'Matching failed: ' : 'فشلت عملية المطابقة: ') + data.error, 'error');
+         }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

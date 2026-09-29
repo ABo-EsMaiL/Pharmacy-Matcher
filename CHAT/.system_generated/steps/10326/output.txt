@@ -1,0 +1,57 @@
+
+The command exited with code 0.
+Output:
+=== STEP 9533 ===
+<USER_REQUEST>
+في مشكلة ومبعتش صورة والبرومبت مش عارف ولا اصلا انت عاوز كدا ؟؟
+
+<div _ngcontent-ng-c1480764559="" class="chat-view-container ng-star-inserted"><!----><!----><ms-chat-session _ngcontent-ng-c1480764559="" _nghost-ng-c2680143636="" class="ng-star-inserted"><ms-autoscroll-container _ngcontent-ng-c2680143636="" tabindex="-1" class="hide-scrollbar" _nghost-ng-c4246658289="" style="--ms-autoscroll-container-scrolled: 1;"><div _ngcontent-ng-c4246658289=""><div _ngcontent-ng-c2680143636="" class="chat-session-content"><!----><ms-chat-turn _ngcontent-ng-c2680143636="" _nghost-ng-c1083380779="" id="turn-9CF7E204-4C3C-48C3-9CE0-A43B32E2A597" class="text-chunk-host ng-star-inserted"><div _ngcontent-ng-c1083380779="" tabindex="-1" cdkmonitorsubtreefocus="" class="chat-turn-container code-block-aligner render user ng-star-inserted"><div _ngcontent-ng-c1083380779="" class="actions-container"><div _ngcontent-ng-c1083380779="" class="actions hover-or-edit"><!----><button _ngcontent-ng-c1083380779="" ms-button="" variant="icon-borderless" mattooltipposition="below" class="mat-mdc-tooltip-trigger toggle-edit-button ms-button-borderless ms-button-icon ng-star-inserted" aria-label="Edit" jslog="228330;track:generic_click,impression;mutable:true" aria-disabled="false"><span _ngcontent-ng-c1083380779="" class="material-symbols-outlined notranslate ms-button-icon-symbol ng-star-inserted" aria-hidden="true">edit</span></button><!----><button _ngcontent-ng-c1083380779="" ms-button="" variant="icon-borderless" name="rerun-button" mattooltipposition="below" class="mat-mdc-tooltip-trigger rerun-button ms-button-borderless ms-button-icon ng-star-inserted" aria-label="Rerun this turn" jslog="228331;track:generic_click,impression" aria-disabled="false"><svg _ngcontent-ng-c1083380779="" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="ng-star-inserted"><g _ngcontent-ng-c1083380779="" clip-path="url(#clip0_10012_165935)"><path _ngcontent-ng-c1083380779="" d="M10 17.5833C10 16.5278 9.79861 15.5417 9.39583 14.625C9.00694 13.7083 8.46528 12.9097 7.77083 12.2292C7.09028 11.5347 6.29167 10.9931 5.375 10.6042C4.45833 10.2014 3.47222 10 2.41667 10C3.47222 10 4.45833 9.80556 5.375 9.41667C6.29167 9.01389 7.09028 8.47222 7.77083 7.79167C8.46528 7.09722 9.00694 6.29167 9.39583 5.375C9.79861 4.44444 10 3.45833 10 2.41667C10 3.45833 10.1944 4.44444 10.5833 5.375C10.9861 6.29167 11.5278 7.09722 12.2083 7.79167C12.9028 8.47222 13.7083 9.0138
+==================================================
+=== STEP 9574 ===
+**لا طبعاً! ده مش اللي أنا عاوزه إطلاقاً!** 
+
+أنا طلبت منك تشغّل السكريبت التجريبي وتراقب المتصفح بعينك مخصوص عشان النقطة دي بالتحديد: **نتأكد هل الـ Gateway المحلي (`MSEMAX-GAIStudio`) بيعرف يستقبل ويرفع صور للمتصفح، ولا شغال نصوص فقط؟**
+
+وهذه التجربة كشفت لنا "السبب الجذري" بكل دقة.
+
+---
+
+### ما الذي حدث بالضبط في التجربة؟
+
+1. **سكريبت التجربة (`test_endpoint_vision.py`):**
+   * قام بدوره بنجاح: حوّل الصفحة الأولى من ملف `المكرومي المنصورة.pdf` إلى صورة `WebP` ممتازة وفائقة النقاء وبحجم صغير جداً (**299.8 KB**).
+   * جهز الطلب بنظام `OpenAI Vision` القياسي (صورة Base64 + برومبت الاستخراج) وأرسله للـ Endpoint.
+
+2. **الـ Gateway المحلي (`MSEMAX-GAIStudio`):**
+   * هذا الـ Gateway تم برمجته في الأساس لمرحلة **المطابقات النصية فقط** (Text Only).
+   * لما استلم الطلب:
+     * دالة `format_messages_to_prompt` استخرجت النصوص فقط، **وتجاهلت كائن الصورة (`image_url`) تماماً**.
+     * كود الأتمتة (Playwright) داخل الـ Gateway متبرمج إنه يكتب النص فقط في خانة الشات عبر `textarea.value = text`، **ولا يحتوي على أي كود لرفع الملفات أو الصور (`file upload`)** في Google AI Studio.
+
+3. **رد فعل Gemini والهلوسة بأسماء أدوية غريبة:**
+   * في نافذة المتصفح، ظهر لـ Gemini نص البرومبت فقط: *"أنت خبير صيدلي متخصص في استخراج بيانات الأدوية... قم باستخراج جميع أسماء الأدوية الموجودة في هذه الصورة..."*.
+   * ولأنه **لم يجد أي صورة مرفقة في الشات أصلاً**، Gemini افترض أنك تطلب منه "مثالاً تجريبياً"، فقام باختراع أدوية من خياله (أدوية سورية وشركات افتراضية: *ش جلفار، ش ابن زهر، ش اوغاريت، ش رامي...*)!
+
+---
+
+### الدليل القاطع على الفرق (بين اليدوي والآلي):
+
+* **في التجربة اليدوية** (التي قمت بها بنفسك ورفعت فيها الصورة في شات المكرومي):
+  * رأينا في الـ DOM أن Gemini استخرج **146 صنفاً حقيقياً بنسبة دقة 100%** (*ايراستابكس، ايفيو سبان، بوسكوبان، بروكاسوفت...*).
+* **في التجربة الآلية عبر الـ Gateway الحالي:**
+  * لم ترتفع الصورة، فجاء الرد عبارة عن هلوسة افتراضية.
+
+---
+
+### كيف نخطط لحل هذه النقطة؟ (بناءً على طلبك أن نخطط سوياً قبل أي تعديل):
+
+أمامنا حلّان رئيسيان لجعل الاستخراج عبر Gemini Vision يعمل بشكل آلي:
+
+#### الحل الأول: تحديث الـ Gateway المحلي (`MSEMAX-GAIStudio`) ليدعم الصور
+* نعدل في كود `MSEMAX-GAIStudio\app.py`:
+  1. استقبال كائنات الصور `image_url` وحفظ الصورة مؤقتاً على الجهاز.
+  2. إضافة كود في Playwright لرفع ملف الصورة في Google AI Studio (عبر استهداف زر الإرفاق `(+)` أو `input[type="file"]`) والانتظار حتى تظهر الصورة المصغرة في المربع.
+  3. كتابة البرومبت وإرساله والتقاط رد الـ JSON كما نفعل في المطابقات.
+* **الميزة:** تستمر في العمل عبر شاشة المتصفح المفتوحة أمامك
+==================================================
+

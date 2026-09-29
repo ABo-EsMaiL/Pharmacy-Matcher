@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+Total llm_cases: 355
+Found case Q00136: 'كويتابين 25مجم 30قرص س ج' in Batch 2, position 7
+Candidates: [{'id': 'W_855', 'name': 'کوتیاپین 25 مج اقراص', 'score': 0.26950719304691334, 'brand_sim': 87.5}, {'id': 'W_102', 'name': 'املوديبين 5 مج 30 قرص/باكت 15', 'score': 0.1697102651400335, 'brand_sim': 58.82352941176471}, {'id': 'W_18', 'name': 'ادويتين 30 مج اقراص ج', 'score': 0.16922922775689572, 'brand_sim': 66.66666666666667}]
+

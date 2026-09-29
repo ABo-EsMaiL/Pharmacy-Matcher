@@ -1,0 +1,64 @@
+
+The command exited with code 0.
+Output:
+                    <div class="folder-action">
+
+                        <button class="btn btn-text" onclick="openFolder()"><i class="ph-fill ph-folder-open"></i> فتح مجلد حفظ النتائج (Folder)</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Screen 3: History -->
+
+            <div id="screen-history" class="screen">
+
+                <header class="page-header">
+
+                    <h2><i class="ph-fill ph-clock-counter-clockwise"></i> سجل العمليات السابقة</h2>
+
+                    <p>هنا تجد جميع عمليات المطابقة التي قمت بها سابقاً، يمكنك العودة إليها في أي وقت.</p>
+
+                </header>
+
+                
+
+                <div id="history-list" class="history-grid">
+
+                    <!-- History items will be injected here -->
+
+                    <div class="empty-state">
+
+                        <i class="ph-fill ph-empty"></i>
+
+                        <p>لا توجد عمليات سابقة مسجلة.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Screen 4: Settings -->
+
+            <div id="screen-settings" class="screen">
+
+                <header class="page-header">
+
+                    <h2><i class="ph-fill ph-gear"></i> إعدادات النظام</h2>
+
+                    <p>قم بضبط إعدادات الربط مع سيرفر الذكاء الاصطناعي (MSEMAX) و Unstructured API.</p>
+
+                </header>
+
+
+
+                <div class="settings-grid">
+
+

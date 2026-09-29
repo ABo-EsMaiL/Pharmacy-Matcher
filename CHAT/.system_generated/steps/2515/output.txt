@@ -1,0 +1,25 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -34,6 +34,19 @@
+ 
+     print(f"[*] Processing PDF file: {filepath.name}")
+ 
++    # 0. Alongside JSON Check (Instant load from previous runs)
++    alongside_json = filepath.with_suffix('.json')
++    if alongside_json.exists():
++        try:
++            with open(alongside_json, "r", encoding="utf-8") as f:
++                result_data = json.load(f)
++            cached_items = parse_structured_result(result_data, filepath.name)
++            if len(cached_items) > 0:
++                print(f"[+] Loaded {len(cached_items)} items from alongside JSON: {alongside_json.name}")
++                return cached_items
++        except Exception as e:
++            print(f"[*] Could not read alongside JSON: {e}")
++
+     # 1. Local Cache Check
+     file_hash = _get_file_hash(filepath)
+     cache_dir = filepath.parent.parent.parent / 'data' / '.unstructured_cache'
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

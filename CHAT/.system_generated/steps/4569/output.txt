@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+جرانتريل vs جرانتيل: ratio = 93.33333333333333, token_sort = 93.33333333333333
+امبوفير vs اميفير: ratio = 76.92307692307692, token_sort = 76.92307692307692
+ديباكين vs ديبيكان: ratio = 71.42857142857143, token_sort = 71.42857142857143
+

@@ -1,0 +1,52 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -195,8 +195,7 @@
+ .main-content {
+     flex: 1;
+     position: relative;
+-    overflow-y: auto;
+-    overflow-x: hidden;
++    overflow: hidden; /* NO SCROLLING on main app */
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+@@ -209,7 +209,7 @@
+     border-radius: var(--radius-xl);
+     box-shadow: var(--shadow-md);
+     flex: 1;
+-    overflow-y: auto;
++    overflow-y: auto; /* Screens scroll internally if needed */
+ }
+ 
+ .screen.active {
+@@ -221,6 +221,27 @@
+     to { opacity: 1; transform: translateY(0) scale(1); }
+ }
+ 
++/* -------------------- PROGRESS MODAL -------------------- */
++#progress-modal {
++    position: fixed; 
++    top: 0; left: 0; 
++    width: 100vw; height: 100vh; 
++    background: rgba(255, 255, 255, 0.85); 
++    z-index: 9998; 
++    align-items: center; 
++    justify-content: center;
++    backdrop-filter: blur(5px);
++}
++#progress-modal .progress-box {
++    background: white; 
++    padding: 40px; 
++    border-radius: 20px; 
++    max-width: 500px; 
++    width: 90%; 
++    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
++    text-align: center;
++}
++
+ .page-header {
+     margin-bottom: 32px;
+ }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

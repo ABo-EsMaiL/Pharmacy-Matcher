@@ -1,0 +1,6 @@
+{"name":"input_shortages","isDir":true}
+{"name":"input_warehouses","isDir":true}
+{"name":"output","isDir":true}
+{"name":"results_PROC-015.xlsx","sizeBytes":"31566"}
+
+Summary: This directory contains 3 subdirectories and 1 files.

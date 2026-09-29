@@ -1,0 +1,15 @@
+
+The command exited with code 1.
+Output:
+At line:1 char:291
++ ... sure_tools\" in line:\n            print(f\"{i}: {line.strip()[:90]}\ ...
++                                                                  ~
+An expression was expected after '('.
+At line:1 char:293
++ ... re_tools\" in line:\n            print(f\"{i}: {line.strip()[:90]}\") ...
++                                                                  ~
+Array index expression is missing or not valid.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedExpression
+ 
+

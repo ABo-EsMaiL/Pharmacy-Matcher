@@ -1,0 +1,82 @@
+
+The command exited with code 0.
+Output:
+<truncated 1 lines>
+68\nTotal Bytes: 7178\nShowing lines 1 to 68\nThe following code has been modified to include a line number before 
+every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code 
+should remove the line number, colon, and leading space.\n1: INFO:     Started server process [26536]\r\n2: INFO:     
+Waiting for application startup.\r\n3: 2026-09-24 17:53:29,728 - msemax.webhook - INFO - 
+=================================================================\r\n4: 2026-09-24 17:53:29,728 - msemax.webhook - 
+INFO - Starting MSEMAX — Google AI Studio Web Hook Gateway\r\n5: 2026-09-24 17:53:29,728 - msemax.webhook - INFO - 
+Default Model: gemini-3.8-flash | Thinking: high\r\n6: 2026-09-24 17:53:29,728 - msemax.webhook - INFO - Profile: 
+./chrome_profile | Headless: False\r\n7: 2026-09-24 17:53:29,728 - msemax.webhook - INFO - Port: 8001 | Max 
+Concurrent: 1 | Rate Limit: 30/minute\r\n8: 2026-09-24 17:53:29,728 - msemax.webhook - INFO - 
+=================================================================\r\n9: 2026-09-24 17:53:29,728 - msemax.webhook - 
+INFO - Concurrency semaphore initialized: max 1 simultaneous requests\r\n10: 2026-09-24 17:53:29,728 - msemax.webhook 
+- INFO - Launching persistent Chromium context from: ./chrome_profile (headless=False, start-maximized)\r\n11: 
+2026-09-24 17:53:31,114 - msemax.webhook - INFO - Navigating to https://aistudio.google.com/prompts/new_chat to ensure 
+clean environment...\r\n12: 2026-09-24 17:53:33,755 - msemax.webhook - INFO - Google AI Studio web page ready!\r\n13: 
+2026-09-24 17:53:33,923 - msemax.webhook - INFO - Changing Thinking Level from 'Medium' to 'high'...\r\n14: 2026-09-24 
+17:53:34,421 - msemax.webhook - INFO - Thinking Level set to 'High'.\r\n15: INFO:     Application startup 
+complete.\r\n16: INFO:     Uvicorn running on http://0.0.0.0:8\n<truncated 3941 
+bytes>\ne.com/$rpc/google.internal.alkali.appl\r\n51: 2026-09-24 17:57:01,031 - msemax.webhook - INFO - Model response 
+completed via stability! Total characters: 363\r\n52: 2026-09-24 17:57:01,031 - msemax.webhook - INFO - Stream 
+finished in 14.20s | chars: 363 | Valid JSON: False | Sample: '{\\n\"results\": [\\n{\\n\"case_id\": 
+\"TEST-02-DOSAGE-FORM\",\\n\"status\":'\r\n53: INFO:     127.0.0.1:57662 - \"POST /v1/chat/completions HTTP/1.1\" 200 
+OK\r\n54: INFO:     127.0.0.1:57663 - \"GET /health HTTP/1.1\" 200 OK\r\n55: INFO:     127.0.0.1:59961 - \"GET /health 
+HTTP/1.1\" 200 OK\r\n56: 2026-09-24 17:58:35,737 - msemax.webhook - INFO - Incoming /v1/chat/completions prompt (4459 
+chars): '[System Instructions]\\nYou are an expert clinical and Egyptian pharmaceutical mat'\r\n57: 2026-09-24 
+17:58:36,712 - msemax.webhook - INFO - Fast chat reset succeeded via UI button.\r\n58: 2026-09-24 17:58:36,890 - 
+msemax.webhook - INFO - Thinking Level already verified as 'High'.\r\n59: 2026-09-24 17:58:37,017 - msemax.webhook - 
+INFO - Initial model turns count: 0\r\n60: 2026-09-24 17:58:37,053 - msemax.webhook - INFO - Injecting prompt via 
+JavaScript and triggering native events...\r\n61: 2026-09-24 17:58:37,724 - msemax.webhook - INFO - Submitting prompt 
+(4459 chars) to Google AI Studio natively...\r\n62: 2026-09-24 17:58:37,885 - msemax.webhook - INFO - Dispatched 
+native Control+Enter.\r\n63: 2026-09-24 17:58:39,427 - msemax.webhook - INFO - [Google Backend Status 200] URL: 
+https://alkalimakersuite-pa.clients6.google.com/$rpc/google.internal.alkali.appl\r\n64: 2026-09-24 17:58:50,155 - 
+msemax.webhook - INFO - Model response completed via stability! Total characters: 354\r\n65: 2026-09-24 17:58:50,155 - 
+msemax.webhook - INFO - Stream finished in 11.77s | chars: 354 | Valid JSON: False | Sample: '{\\n\"results\": 
+[\\n{\\n\"case_id\": \"TEST-02-DOSAGE-FORM\",\\n\"status\":'\r\n66: INFO:     127.0.0.1:59963 - \"POST 
+/v1/chat/completions HTTP/1.1\" 200 OK\r\n67: INFO:     127.0.0.1:59966 - \"GET /health HTTP/1.1\" 200 OK\r\n68: \nThe 
+above content shows the entire, complete file contents of the requested file.\n","truncated_fields":["content"]}
+> C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\logs\transcript.jsonl
+:7023:{"step_index":7079,"source":"SYSTEM","type":"SYSTEM_MESSAGE","status":"DONE","created_at":"2026-09-24T15:02:51Z",
+"content":"The following is a <SYSTEM_MESSAGE> not actually sent by the user. It is provided by the system as 
+important information to pay attention to.\n\n<SYSTEM_MESSAGE>\n[Message] timestamp=2026-09-24T15:02:45Z 
+sender=916274de-7f92-49fc-a0a8-d291664b474a/task-6995 priority=MESSAGE_PRIORITY_LOW content=Task id 
+\"916274de-7f92-49fc-a0a8-d291664b474a/task-6995\" was canceled with result:\nTool execution was 
+canceled\n</SYSTEM_MESSAGE>"}
+  C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\logs\transcript.jsonl
+:7024:{"step_index":7080,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-09-24T15:02:51Z"
+,"tool_calls":[{"name":"grep_search","args":{"MatchPerLine":"true","Query":"\"Valid 
+JSON\"","SearchPath":"\"D:\\\\AI_Engineer\\\\MSEMAX-GAIStudio\\\\app.py\"","toolAction":"\"Searching for Valid JSON in 
+app.py\"","toolSummary":"\"Find Valid JSON log in app.py\""}}]}
+  C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\logs\transcript.jsonl
+:7025:{"step_index":7081,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-09-24T15:02:55Z","content
+":"Created At: 2026-09-24T18:02:55+03:00\nCompleted At: 2026-09-24T18:02:55+03:00\nNo results found"}
+  C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\logs\transcript.jsonl
+:7214:{"step_index":7270,"source":"MODEL","type":"GENERIC","status":"DONE","created_at":"2026-09-24T15:13:42Z","content
+":"Created At: 2026-09-24T18:13:42+03:00\nCompleted At: 2026-09-24T18:13:43+03:00\n\nThe command exited with code 
+0.\nOutput:\n{'url': 'https://accounts.google.com/v3/signin/identifier?continue=https://aistudio.google.com/prompts/new
+_chat&followup=https://aistudio.google.com/prompts/new_chat&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLog
+in&dsh=S-333380123:1790262725976611', 'title': 'Sign in - Google Accounts', 'matSelects': [], 'buttonsCount': 5, 
+'modelKeywords': []}\r\n\n"}
+  C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\logs\transcript.jsonl
+:7215:{"step_index":7271,"source":"SYSTEM","type":"SYSTEM_MESSAGE","status":"DONE","created_at":"2026-09-24T15:13:44Z",
+"content":"The following is a <SYSTEM_MESSAGE> not actually sent by the user. It is provided by the system as 
+important information to pay attention to.\n\n<SYSTEM_MESSAGE>\n[Message] timestamp=2026-09-24T15:13:43Z 
+sender=916274de-7f92-49fc-a0a8-d291664b474a/task-7256 priority=MESSAGE_PRIORITY_HIGH content=Task id 
+\"916274de-7f92-49fc-a0a8-d291664b474a/task-7256\" finished with result:\n\nThe command exited with code 
+1.\nOutput:\n\r\nFullName                                      \r\n--------                                      
+\r\nD:\\AI_Engineer\\MSEMAX\\chrome_profile          \r\nD:\\AI_Engineer\\MSEMAX - Copy\\chrome_profile   
+\r\nD:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\r\nD:\\AI_Engineer\\Pharmacy-agy\\chrome_profile    
+\r\n\r\n\r\n\n\n</SYSTEM_MESSAGE>"}
+> C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\logs\transcript.jsonl
+:7216:{"step_index":7272,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-09-24T15:13:44Z"
+,"tool_calls":[{"name":"run_command","args":{"CommandLine":"\"Select-String -Path \\\"C:\\\\Users\\\\kakak\\\\.gemini\\
+\\antigravity\\\\brain\\\\916274de-7f92-49fc-a0a8-d291664b474a\\\\.system_generated\\\\logs\\\\transcript.jsonl\\\" 
+-Pattern \\\"task-6995\\\" -Context 2,2\"","Cwd":"\"D:\\\\AI_Engineer\\\\Pharmacy-agy\"","IsDaemon":"false","WaitMsBefo
+reAsync":"5000","toolAction":"\"Finding task-6995 in transcript\"","toolSummary":"\"Find task-6995 launch command in 
+transcript\""}}]}
+
+
+

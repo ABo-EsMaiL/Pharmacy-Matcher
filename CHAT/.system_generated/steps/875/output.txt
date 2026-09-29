@@ -1,0 +1,46 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -231,7 +231,37 @@
+         except Exception as e:
+             return {"success": False, "error": str(e)}
+ 
+-    def _process_worker(self, process_id, shortage_paths, warehouse_paths):
++    def restart_process(self, process_id: str) -> dict:
++        try:
++            workspace = PROJECT_ROOT / 'data' / 'inputs' / process_id
++            if not workspace.exists():
++                return {"success": False, "error": "ملفات العملية غير موجودة لإعادة التشغيل"}
++            
++            # get process details
++            cursor = self.db.conn.cursor()
++            cursor.execute('SELECT shortage_files, warehouse_files FROM processes WHERE id = ?', (process_id,))
++            row = cursor.fetchone()
++            if not row:
++                return {"success": False, "error": "العملية غير موجودة"}
++                
++            shortage_filenames = json.loads(row['shortage_files'])
++            warehouse_filenames = json.loads(row['warehouse_files'])
++            
++            shortage_paths = [str(workspace / name) for name in shortage_filenames]
++            warehouse_paths = [str(workspace / name) for name in warehouse_filenames]
++            
++            # Reset status
++            self.db.update_process_status(process_id, 'processing')
++            
++            thread = threading.Thread(target=self._process_worker, args=(process_id, shortage_paths, warehouse_paths, True))
++            thread.daemon = True
++            thread.start()
++            
++            return {"success": True, "process_id": process_id}
++        except Exception as e:
++            return {"success": False, "error": str(e)}
++
++    def _process_worker(self, process_id: str, shortage_paths: list, warehouse_paths: list, is_restart: bool = False):
+         try:
+             self.add_log(f"--- Starting new process [{process_id}] ---")
+             proc_dir = self.db.get_process_dir(process_id)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

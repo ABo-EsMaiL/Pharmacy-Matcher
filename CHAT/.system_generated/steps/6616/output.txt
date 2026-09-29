@@ -1,0 +1,113 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -3210,7 +3210,13 @@
+         const servers = info.servers || {};
+         const activeKey = info.active_server || 'gaistudio';
+         
+-        // Update Active Provider Banner
++        // 1. Update 1-Click Provider Switcher Pills
++        const pillGai = document.getElementById('pill-provider-gaistudio');
++        const pillChat = document.getElementById('pill-provider-chatgpt');
++        if (pillGai) pillGai.classList.toggle('active', activeKey === 'gaistudio');
++        if (pillChat) pillChat.classList.toggle('active', activeKey === 'chatgpt');
++
++        // Backward compatibility for hidden elements
+         const activeSrv = servers[activeKey];
+         const bannerTitle = document.getElementById('active-banner-title');
+         const bannerSub = document.getElementById('active-banner-sub');
+@@ -3224,7 +3224,7 @@
+                 : `سيتم توجيه جميع دفعات مطابقة النواقص تلقائياً إلى هذا السيرفر (${activeSrv ? activeSrv.name : activeKey}).`;
+         }
+ 
+-        // Update each server card
++        // 2. Update each server card
+         ['gaistudio', 'chatgpt'].forEach(key => {
+             const srv = servers[key];
+             if (!srv) return;
+@@ -3238,6 +3238,8 @@
+             if (valModel) valModel.textContent = srv.default_model;
+ 
+             const isRunning = !!srv.running;
++            const isExternal = !!srv.is_external;
++            const isManaged = !!srv.is_managed;
+             const isActive = (key === activeKey);
+ 
+             // Active Card Highlight & Badge
+@@ -3245,7 +3245,7 @@
+             }
+             if (badgeActive) {
+                 badgeActive.style.display = isActive ? 'inline-flex' : 'none';
+-                badgeActive.textContent = t.btn_already_active;
++                badgeActive.textContent = t.btn_already_active || '⭐ المزود النشط';
+             }
+ 
+             // Running Status Badge
+@@ -3252,7 +3252,13 @@
+-                badgeStatus.className = isRunning ? 'badge-pill status-online' : 'badge-pill status-offline';
+-                badgeStatus.textContent = isRunning 
+-                    ? (currentLang === 'en' ? `🟢 Online (Port ${srv.port})` : `🟢 متصل ومستمع (${srv.port})`) 
+-                    : (currentLang === 'en' ? '🔴 Stopped' : '🔴 متوقف');
++                if (isManaged) {
++                    badgeStatus.className = 'badge-pill status-online';
++                    badgeStatus.textContent = currentLang === 'en' ? `🟢 Online (${srv.port})` : `🟢 متصل ومُدار (${srv.port})`;
++                } else if (isExternal) {
++                    badgeStatus.className = 'badge-pill status-warning';
++                    badgeStatus.textContent = currentLang === 'en' ? `⚠️ Occupied (${srv.port})` : `⚠️ محجوز خارجياً (${srv.port})`;
++                } else {
++                    badgeStatus.className = 'badge-pill status-offline';
++                    badgeStatus.textContent = currentLang === 'en' ? '🔴 Stopped' : '🔴 متوقف';
++                }
+             }
+ 
+             // Active Switch Button
+@@ -3259,16 +3259,16 @@
+                 if (isActive) {
+-                    btnActive.className = 'btn btn-outline';
++                    btnActive.className = 'btn btn-small btn-outline';
+                     btnActive.style.borderColor = 'var(--primary)';
+                     btnActive.style.background = '#e0f2fe';
+                     btnActive.style.color = 'var(--primary)';
+-                    btnActive.innerHTML = `<i class="ph-fill ph-star"></i> <span>${t.btn_already_active}</span>`;
++                    btnActive.innerHTML = `<i class="ph-fill ph-star"></i> <span>${t.btn_already_active || 'المزود النشط'}</span>`;
+                     btnActive.disabled = true;
+                 } else {
+-                    btnActive.className = 'btn btn-outline';
++                    btnActive.className = 'btn btn-small btn-outline';
+                     btnActive.style.borderColor = '';
+                     btnActive.style.background = '';
+                     btnActive.style.color = '';
+-                    btnActive.innerHTML = `<i class="ph-bold ph-check"></i> <span>${t.btn_set_as_active}</span>`;
++                    btnActive.innerHTML = `<i class="ph-bold ph-check"></i> <span>${t.btn_set_as_active || 'تفعيل كمزود نشط'}</span>`;
+                     btnActive.disabled = false;
+                 }
+             }
+@@ -3275,12 +3275,19 @@
+             // Toggle Run / Stop Button
+             if (btnToggle) {
+-                if (isRunning) {
+-                    btnToggle.className = 'btn btn-outline-secondary text-danger';
+-                    btnToggle.innerHTML = `<i class="ph-bold ph-stop"></i> <span>${t.btn_stop_instance}</span>`;
+-                    btnToggle.onclick = () => toggleServerInstance(key, false);
+-                } else {
+-                    btnToggle.className = 'btn btn-primary';
+-                    btnToggle.innerHTML = `<i class="ph-bold ph-play"></i> <span>${t.btn_start_instance}</span>`;
++                if (isManaged) {
++                    btnToggle.className = 'btn btn-small btn-outline-secondary text-danger';
++                    btnToggle.innerHTML = `<i class="ph-bold ph-stop"></i> <span>${t.btn_stop_instance || 'إيقاف السيرفر'}</span>`;
++                    btnToggle.title = currentLang === 'en' ? 'Stop server process' : 'إيقاف عملية السيرفر المُدارة';
++                    btnToggle.onclick = () => toggleServerInstance(key, false);
++                } else if (isExternal) {
++                    btnToggle.className = 'btn btn-small btn-outline-warning';
++                    btnToggle.innerHTML = `<i class="ph-bold ph-lightning"></i> <span>${currentLang === 'en' ? 'Free Port' : 'تحرير المنفذ'}</span>`;
++                    btnToggle.title = currentLang === 'en' ? 'Port occupied by another process. Click to free.' : 'المنفذ محجوز بعملية سابقة. اضغط للتحرير والإغلاق الإجباري.';
++                    btnToggle.onclick = () => toggleServerInstance(key, false);
++                } else {
++                    btnToggle.className = 'btn btn-small btn-primary';
++                    btnToggle.innerHTML = `<i class="ph-bold ph-play"></i> <span>${t.btn_start_instance || 'تشغيل السيرفر'}</span>`;
++                    btnToggle.title = currentLang === 'en' ? 'Start server instance' : 'بدء تشغيل السيرفر';
+                     btnToggle.onclick = () => toggleServerInstance(key, true);
+                 }
+             }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

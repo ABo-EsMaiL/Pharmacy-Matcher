@@ -1,0 +1,16 @@
+        return result
+
+    print(f"📄 جارٍ رفع ملف PDF إلى Unstructured API: {filepath.name}")
+
+    # Fallback to general API URL if transform fails or isn't correct
+    if "transform.unstructured.io" in base_url:
+        url = "https://api.unstructured.io/general/v0/general"
+    else:
+        url = f"{base_url.rstrip('/')}/api/v2/parse"
+        
+    headers = {"unstructured-api-key": api_key, "accept": "application/json"}
+
+    # رفع الملف مع إعدادات الاستخراج
+    with open(filepath, "rb") as f:
+        files = {
+

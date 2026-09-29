@@ -1,0 +1,111 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Testing parallel extraction on ALL 6 files...
+
+============================================================
+[*] Processing Warehouse files (6 file(s)) [PARALLEL WORKERS]
+============================================================
+
+  -> [START] Processing file: السلام شبين.pdf (Type: .pdf)
+[*] Processing PDF file: السلام شبين.pdf
+
+  -> [START] Processing file: المكرومي المنصورة.pdf (Type: .pdf)
+[*] Processing PDF file: المكرومي المنصورة.pdf
+
+  -> [START] Processing file: الهضبة الاثنين نقدى0.pdf (Type: .pdf)
+[+] Loaded 187 items from alongside JSON: السلام شبين.json
+  -> [DONE] السلام شبين.pdf: 187 items extracted.
+
+  -> [START] Processing file: جملة العمروووو.pdf (Type: .pdf)
+[*] Processing PDF file: الهضبة الاثنين نقدى0.pdf
+[+] Loaded 503 items from alongside JSON: المكرومي المنصورة.json
+  -> [DONE] المكرومي المنصورة.pdf: 503 items extracted.
+[*] Processing PDF file: جملة العمروووو.pdf
+
+  -> [START] Processing file: كيور فارما خاص.pdf (Type: .pdf)
+[*] Processing PDF file: كيور فارما خاص.pdf
+
+  -> [START] Processing file: مخزن الحياة فارم اسكندريه-170.pdf (Type: .pdf)
+[*] Processing PDF file: مخزن الحياة فارم اسكندريه-170.pdf
+[+] Loaded 1071 items from local cache: الهضبة الاثنين نقدى0.pdf
+  -> [DONE] الهضبة الاثنين نقدى0.pdf: 1071 items extracted.
+[*] Checking if كيور فارما خاص.pdf is already processed on Unstructured server...
+[*] Checking if جملة العمروووو.pdf is already processed on Unstructured server...
+[*] Checking if مخزن الحياة فارم اسكندريه-170.pdf is already processed on Unstructured server...
+[*] Uploading and extracting جملة العمروووو.pdf via Unstructured AI (Profile: BALANCED)...
+[*] Uploading and extracting كيور فارما خاص.pdf via Unstructured AI (Profile: BALANCED)...
+[*] Uploading and extracting مخزن الحياة فارم اسكندريه-170.pdf via Unstructured AI (Profile: BALANCED)...
+[!] Extraction error for جملة العمروووو.pdf: (422)
+Reason: Unprocessable Content
+HTTP response headers: HTTPHeaderDict({'Date': 'Tue, 22 Sep 2026 17:17:31 GMT', 'Content-Type': 'application/json', 'Content-Length': '105', 'Connection': 'keep-alive', 'server': 'uvicorn'})
+HTTP response body: {"code":"could_not_parse","message":"The document could not be parsed. Check that the file is readable."}
+
+  -> [DONE] جملة العمروووو.pdf: 0 items extracted.
+[*] Processing on server (Job ID: 0a9f1095-d5d5-413e-a691-382bf2d53026). Waiting for completion...
+[*] Processing on server (Job ID: 673b32fa-29bd-4291-ba0b-8dffd6476f84). Waiting for completion...
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (24s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (24s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (48s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (48s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (72s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (72s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (96s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (96s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (120s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (120s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (144s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (144s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (168s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (168s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (192s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (192s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (216s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (216s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (240s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (240s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (264s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (264s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (288s)
+[*] مخزن الحياة فارم اسكندريه-170.pdf status: JobStatus.PROCESSING ... (288s)
+[+] Saved valid local cache for: مخزن الحياة فارم اسكندريه-170.pdf (222 items)
+[+] Successfully extracted 222 items from مخزن الحياة فارم اسكندريه-170.pdf
+  -> [DONE] مخزن الحياة فارم اسكندريه-170.pdf: 222 items extracted.
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (312s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (336s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (360s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (384s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (408s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (432s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (456s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (480s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (504s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (528s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (552s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (576s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (600s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (624s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (648s)
+[*] كيور فارما خاص.pdf status: JobStatus.PROCESSING ... (672s)
+[+] Saved valid local cache for: كيور فارما خاص.pdf (715 items)
+[+] Successfully extracted 715 items from كيور فارما خاص.pdf
+  -> [DONE] كيور فارما خاص.pdf: 715 items extracted.
+
+============================================================
+[+] Completed Warehouse: 2698 items from 6 file(s)
+============================================================
+
+
+============================================================
+Extraction finished in 762.39s
+  المكرومي المنصورة.pdf: 503 items
+  السلام شبين.pdf: 187 items
+  الهضبة الاثنين نقدى0.pdf: 1071 items
+  جملة العمروووو.pdf: 0 items
+  مخزن الحياة فارم اسكندريه-170.pdf: 222 items
+  كيور فارما خاص.pdf: 715 items
+Total warehouse items: 2698
+============================================================
+

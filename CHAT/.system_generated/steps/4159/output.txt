@@ -1,0 +1,54 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\search.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -17,7 +17,7 @@
+     'باكت', 'باكو', 'كرتونه', 'كرتونة', 'فلتر',
+     # trade metadata
+     'س', 'ج', 'سعر', 'جديد', 'قديم', 'تاريخ', 'بعيد', 'قريب', 'صغير', 'كبير', 'وسط',
+-    'محلي', 'مستورد', 'خاص', 'نقدى', 'اجل'
++    'محلي', 'مستورد', 'خاص', 'نقدى', 'اجل', 'عادي', 'عادى', 'مركب'
+ }
+ 
+ FORM_GROUPS = {
+@@ -36,6 +36,7 @@
+ 
+ def extract_form_group(text: str) -> str | None:
+     text = re.sub(r'(\d+)', r' \1 ', str(text))
++    text = re.sub(r'[^\w\s]', ' ', text)
+     norm = normalize_text(text)
+     words = set(norm.split())
+     for group_name, group_words in FORM_GROUPS.items():
+@@ -44,8 +44,9 @@
+ 
+ def extract_brand_tokens(text: str) -> str:
+     text = re.sub(r'(\d+)', r' \1 ', text)
+-    norm = normalize_text(text)
+-    norm = re.sub(r'/.*', '', norm)  # remove manufacturer after slash
++    text = re.sub(r'/.*', '', text)  # remove manufacturer after slash
++    text = re.sub(r'[^\w\s]', ' ', text)
++    norm = normalize_text(text)
+     words = [w for w in norm.split() if w not in PHARMA_STOPWORDS and not w.isdigit() and len(w) > 1]
+     return " ".join(words)
+ 
+@@ -52,4 +52,4 @@
+-    """Enhanced normalization for Arabic pharmaceutical search."""
++    """Enhanced normalization for Arabic pharmaceutical search with full OCR support."""
+     if not text:
+         return ""
+     text = str(text).lower()
+@@ -56,8 +56,9 @@
+-    text = re.sub(r'[أإآ]', 'ا', text)
++    text = re.sub(r'[أإآٱ]', 'ا', text)
+     text = re.sub(r'ة', 'ه', text)
+-    text = re.sub(r'ى', 'ي', text)
+-    # Eastern Arabic to Western digits
+-    for e, w in zip('٠١٢٣٤٥٦٧٨٩', '0123456789'):
++    text = re.sub(r'[ىي\u06CC]', 'ي', text)  # Arabic Yeh, Alef Maqsura, Farsi Yeh
++    text = text.replace('\u06A9', 'ك').replace('\u067E', 'ب').replace('\u06C0', 'ه').replace('\u06C1', 'ه')
++    # Eastern Arabic and Persian digits to Western
++    for e, w in zip('٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹', '01234567890123456789'):
+         text = text.replace(e, w)
+     text = re.sub(r'[^\w\s]', ' ', text)  # Replace punctuation with spaces
+     text = re.sub(r'\s+', ' ', text).strip()
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

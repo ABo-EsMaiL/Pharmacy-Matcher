@@ -1,0 +1,18 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\database.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -97,6 +97,12 @@
+         cursor.execute('SELECT * FROM processes ORDER BY created_at DESC')
+         return [dict(row) for row in cursor.fetchall()]
+ 
++    def mark_stuck_processes_as_failed(self):
++        """Called on startup to clean up any processes that were running when the app was closed."""
++        cursor = self.conn.cursor()
++        cursor.execute("UPDATE processes SET status = 'error' WHERE status = 'processing'")
++        self.conn.commit()
++
+     def delete_process(self, process_id):
+         cursor = self.conn.cursor()
+         cursor.execute('DELETE FROM processes WHERE id = ?', (process_id,))
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,52 @@
+Found 53 results
+Dockerfile
+Google AI Studio - Chromium 2026-09-23 12-57-27.mp4
+LICENSE
+README.md
+__pycache__
+__pycache__/app.cpython-312.pyc
+__pycache__/app.cpython-313.pyc
+__pycache__/pow_solver.cpython-312.pyc
+app.py
+c hrome_profile
+c hrome_profile/Crashpad
+c hrome_profile/Default
+chrome_profile
+chrome_profile/Ad Blocking
+chrome_profile/Avatars
+chrome_profile/BrowserMetrics-spare.pma
+chrome_profile/Crashpad
+chrome_profile/CrashpadMetrics-active.pma
+chrome_profile/Default
+chrome_profile/FirstLaunchAfterInstallation
+chrome_profile/GPUPersistentCache
+chrome_profile/GrShaderCache
+chrome_profile/GraphiteDawnCache
+chrome_profile/Last Browser
+chrome_profile/Last Version
+chrome_profile/Local State
+chrome_profile/Nurturing
+chrome_profile/Safe Browsing
+chrome_profile/ShaderCache
+chrome_profile/SmartScreen
+chrome_profile/Variations
+chrome_profile/VariationsRuntimeSeedV2
+chrome_profile/VariationsSafeSeedV2
+chrome_profile/VariationsSeedV2
+chrome_profile/component_crx_cache
+chrome_profile/extensions_crx_cache
+chrome_profile/first_party_sets.db
+chrome_profile/first_party_sets.db-journal
+chrome_profile/segmentation_platform
+debug_screen.png
+debug_state.png
+debug_stuck.png
+docker-compose.yml
+get_session.py
+mse.bat
+pow_solver.py
+powershell.cmd
+requirements.txt
+scratch_studio_tools.png
+session_data.json
+(...3 more results not shown)

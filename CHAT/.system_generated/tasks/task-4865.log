@@ -1,0 +1,22 @@
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+Total cases in Batch 3: 75
+
+Items in Batch 3 that were MATCHED in PROC-004:
+  - [DROPPED IN P5] 'بروتولوك40مجم اقراص س ج' vs 'پانتولوک 40 مج اقراص/باکت 102'
+  - [DROPPED IN P5] 'زنكترون 30كبسولة س ج' vs 'زنكتون اقراص/باكت 160'
+  - [STILL IN P5] 'يوكيراتو كريم س ج' vs 'یوریکیر کریم/باكت 80'
+  - [DROPPED IN P5] 'نيوروفيت اقراص  3 شريط' vs 'نیکسوروف 10 مج اقراص'
+  - [DROPPED IN P5] 'بلانكا كريم 5 جرام' vs 'بلانکا کریم عادی جدید/باکت 92'
+  - [DROPPED IN P5] 'اسبوسيد 20قرص اطفال س ج' vs 'اسبوبسيد 75 مج اقراص/باكت 120'
+  - [DROPPED IN P5] 'كوفي زنك شامبو' vs 'کوف زنگ شامپو ج'
+  - [DROPPED IN P5] 'ديكلوبرو150مجم 20قرص س ج' vs 'دیکلوبرو 150 مج اقراض/باکت10'
+  - [DROPPED IN P5] 'ريتشي بانثينول كريم ادفانس' vs 'یوریتشی پانتیول ادفانس کریم جیل'
+
+Total matched in Batch 3 in PROC-004: 9

@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+
+desktop_app\server_manager.py:288:        is_external = is_listening and not is_managed
+desktop_app\server_manager.py:295:            "is_external": is_external,
+
+
+

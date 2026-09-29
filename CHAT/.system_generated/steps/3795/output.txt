@@ -1,0 +1,51 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_live_enhanced_salam.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -8,7 +8,44 @@
+ from src.extract.excel_reader import read_excel, extract_item_names
+ from src.extract.pdf_reader import extract_items_from_pdf
+ from src.fast_match.search import FastCandidateFinder
+-from scratch.test_strict_brand import extract_brand_tokens, extract_form_group
++PHARMA_STOPWORDS = {
++    'اقراص', 'قرص', 'كبسول', 'كبسوله', 'كبسولات', 'شراب', 'شرب', 'معلق', 'سائل', 'مرهم', 'كريم', 
++    'جل', 'جيل', 'امبول', 'امبوله', 'امبولات', 'حقن', 'فيال', 'لبوس', 'لبوسة', 'لبوسه',
++    'نقط', 'قطرة', 'قطره', 'بخاخ', 'بخاخة', 'بخاخه', 'سبراي', 'فوار', 'اكياس', 'كيس',
++    'شامبو', 'غسول', 'صابون', 'صابونة', 'صابونه', 'محلول', 'مس', 'دهان', 'فيلم',
++    'مجم', 'جم', 'جرام', 'مل', 'مللي', 'لتر', 'ميكرو', 'شريط', 'علبه', 'علبة',
++    'باكت', 'باكو', 'كرتونه', 'كرتونة', 'فلتر',
++    'س', 'ج', 'سعر', 'جديد', 'قديم', 'تاريخ', 'بعيد', 'قريب', 'صغير', 'كبير', 'وسط',
++    'محلي', 'مستورد', 'خاص', 'نقدى', 'اجل'
++}
++
++FORM_GROUPS = {
++    'tablet': {'اقراص', 'قرص', 'كبسول', 'كبسوله', 'كبسولات', 'حبوب', 'فيلم'},
++    'syrup': {'شراب', 'شرب', 'معلق', 'سائل'},
++    'cream_ointment': {'كريم', 'مرهم', 'دهان'},
++    'gel': {'جل', 'جيل'},
++    'suppository': {'لبوس', 'لبوسه', 'لبوسة', 'تحاميل', 'اقماع'},
++    'injection': {'امبول', 'امبوله', 'امبولات', 'حقن', 'فيال'},
++    'drops': {'نقط', 'قطرة', 'قطره'},
++    'spray': {'بخاخ', 'بخاخة', 'بخاخه', 'سبراي'},
++    'sachet': {'فوار', 'اكياس', 'كيس'},
++    'wash': {'شامبو', 'غسول', 'صابون', 'صابونة', 'صابونه'},
++}
++
++def extract_form_group(text: str) -> str | None:
++    norm = normalize_text(text)
++    words = set(norm.split())
++    for group_name, group_words in FORM_GROUPS.items():
++        if words & group_words:
++            return group_name
++    return None
++
++def extract_brand_tokens(text: str) -> str:
++    text = re.sub(r'(\d+)', r' \1 ', text)
++    norm = normalize_text(text)
++    norm = re.sub(r'/.*', '', norm)
++    words = [w for w in norm.split() if w not in PHARMA_STOPWORDS and not w.isdigit() and len(w) > 1]
++    return " ".join(words)
+ from rapidfuzz import fuzz
+ 
+ NEW_SYSTEM_PROMPT = """You are an expert clinical and Egyptian pharmaceutical matching assistant.
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

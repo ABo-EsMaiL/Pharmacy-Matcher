@@ -1,0 +1,28 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -3628,11 +3628,17 @@
+             }
+ 
+             const progressModal = document.getElementById('progress-modal');
++            const screenNewEl = document.getElementById('screen-new');
+             if (screenId === 'screen-new') {
+                 if (typeof isProcessRunning !== 'undefined' && isProcessRunning) {
+                     if (progressModal) progressModal.style.display = 'flex';
++                    if (screenNewEl) {
++                        screenNewEl.scrollTop = 0;
++                        screenNewEl.style.overflowY = 'hidden';
++                    }
+                 } else {
+                     if (progressModal) progressModal.style.display = 'none';
++                    if (screenNewEl) screenNewEl.style.overflowY = 'auto';
+                     resetNewProcessForm();
+                 }
+             } else {
+@@ -3639,3 +3639,4 @@
++                if (screenNewEl) screenNewEl.style.overflowY = 'auto';
+                 if (screenId === 'screen-logs' || screenId === 'screen-settings') {
+                     loadLogs();
+                 } else if (screenId === 'screen-servers') {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

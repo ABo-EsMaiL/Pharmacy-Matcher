@@ -1,0 +1,12 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1025,"LineContent":"                \u003cbutton class=\"nav-item active\" onclick=\"showScreen('screen-new', this)\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1028,"LineContent":"                \u003cbutton class=\"nav-item\" onclick=\"loadHistory(); showScreen('screen-history', this)\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1031,"LineContent":"                \u003cbutton class=\"nav-item\" onclick=\"showScreen('screen-settings', this)\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1034,"LineContent":"                \u003cbutton class=\"nav-item\" onclick=\"showScreen('screen-logs', this)\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1986,"LineContent":"            window.showScreen('screen-results');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2151,"LineContent":"        window.showScreen('screen-results');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2294,"LineContent":"        // Override showScreen to handle active states on sidebar"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2295,"LineContent":"        const originalShowScreen = window.showScreen;"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2296,"LineContent":"        window.showScreen = function(screenId, element = null) {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":14,"LineContent":"function showScreen(screenId) {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":134,"LineContent":"            showScreen('screen-results');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":249,"LineContent":"        showScreen('screen-results');"}

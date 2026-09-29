@@ -32,8 +32,7 @@ python -m unittest discover -s tests
 ```
 
 The full local suite currently has 123 tests. One historical retrieval test reads
-private PROC-019 cache fixtures, so it requires those local data files; they are
-not distributed in this repository. The new cache and attribute tests use synthetic
+the included PROC-019 cache fixtures. The new cache and attribute tests use synthetic
 fixtures and mocked gateway responses:
 
 ```powershell
@@ -44,9 +43,15 @@ python -m unittest discover -s tests -p test_structured_attribute_normalization.
 Run the official `tests/` directory explicitly; root-level discovery may include
 historical scratch scripts on a development machine.
 
-## Local files
+## Data, outputs and development history
 
-Credentials, warehouse PDFs/Excel inputs, process results, OCR caches, databases,
-conversation histories, scratch work and build output stay local and are ignored
-by Git. No real gateway credential is included. Application settings and data
-directories are created locally when needed.
+`data/`, `output/`, and `CHAT/` include warehouse inputs, process results,
+OCR caches, audit reports, Excel outputs and archived development sessions.
+Historical credential strings in `CHAT/` are replaced with `[REDACTED_CREDENTIAL]`.
+Some archived transcript chunks split UTF-8 characters across files; they are
+kept as archival chunks rather than rewritten or treated as standalone JSON.
+
+Live credentials remain local: `.env` and `data/settings.json` are ignored.
+Use `.env.example` and `data/settings.example.json` as configuration templates.
+Top-level scratch work, original unredacted backups, bytecode, transient locks
+and build output are not published.

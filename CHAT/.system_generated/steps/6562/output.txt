@@ -1,0 +1,12 @@
+
+The command exited with code 1.
+Output:
+powershell : The term 'powershell' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ powershell -Command "Start-Process cmd -ArgumentList '/c taskkill /F  ...
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (powershell:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+

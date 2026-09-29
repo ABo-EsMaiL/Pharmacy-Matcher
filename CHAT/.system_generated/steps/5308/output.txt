@@ -1,0 +1,76 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Found 6 warehouse files.
+
+============================================================
+[*] Processing Warehouse files (6 file(s)) [PARALLEL WORKERS]
+============================================================
+
+  -> [START] Processing file: السلام شبين.pdf (Type: .pdf)
+[*] Processing PDF file: السلام شبين.pdf
+
+  -> [START] Processing file: المكرومي المنصورة.pdf (Type: .pdf)
+[*] Processing PDF file: المكرومي المنصورة.pdf
+
+  -> [START] Processing file: الهضبة الاثنين نقدى0.pdf (Type: .pdf)
+
+  -> [START] Processing file: جملة العمروووو.pdf (Type: .pdf)
+[*] Processing PDF file: الهضبة الاثنين نقدى0.pdf
+[*] Processing PDF file: جملة العمروووو.pdf
+
+  -> [START] Processing file: كيور فارما خاص.pdf (Type: .pdf)
+[*] Processing PDF file: كيور فارما خاص.pdf
+
+  -> [START] Processing file: مخزن الحياة فارم اسكندريه-170.pdf (Type: .pdf)
+[*] Processing PDF file: مخزن الحياة فارم اسكندريه-170.pdf
+[+] Loaded 187 items from local cache: السلام شبين.pdf
+  -> [DONE] السلام شبين.pdf: 187 items extracted.
+[+] Loaded 19 items from local cache: جملة العمروووو.pdf
+  -> [DONE] جملة العمروووو.pdf: 19 items extracted.
+[+] Loaded 503 items from local cache: المكرومي المنصورة.pdf
+  -> [DONE] المكرومي المنصورة.pdf: 503 items extracted.
+[+] Loaded 1071 items from local cache: الهضبة الاثنين نقدى0.pdf
+  -> [DONE] الهضبة الاثنين نقدى0.pdf: 1071 items extracted.
+[+] Loaded 715 items from local cache: كيور فارما خاص.pdf
+  -> [DONE] كيور فارما خاص.pdf: 715 items extracted.
+[+] Loaded 222 items from local cache: مخزن الحياة فارم اسكندريه-170.pdf
+  -> [DONE] مخزن الحياة فارم اسكندريه-170.pdf: 222 items extracted.
+
+============================================================
+[+] Completed Warehouse: 2717 items from 6 file(s)
+============================================================
+
+
+--- Item: [سكينورين كريم] in [الهضبة الاثنين نقدى0.pdf] ---
+   Candidate: [سکینوریتش کریم] | Score: 0.765 | BrandSim: 82.35294117647058
+
+--- Item: [زنكترون 30كبسولة س ج] in [مخزن الحياة فارم اسكندريه-170.pdf] ---
+   Candidate: [زنكترون اقراص باكت 160] | Score: 0.617 | BrandSim: 100.0
+
+--- Item: [بالموكورت  25. مجم امبول س ج] in [السلام شبين.pdf] ---
+   Candidate: [بالمكيرت ٥٠٠ مجم حقن] | Score: 0.350 | BrandSim: 82.35294117647058
+   Candidate: [بالمكيرت ربع] | Score: 0.281 | BrandSim: 66.66666666666667
+
+--- Item: [كارنيفيتا ادفانس للرجال30كيس س ج] in [مخزن الحياة فارم اسكندريه-170.pdf] ---
+   Candidate: [کارنتینا ادفانس رجال/باکت16] | Score: 0.569 | BrandSim: 60.46511627906976
+
+--- Item: [ب ك ميرز كبسول س ج] in [الهضبة الاثنين نقدى0.pdf] ---
+   Candidate: [ميرز كبسول/باكت 30] | Score: 0.811 | BrandSim: 100.0
+   Candidate: [اومیز 20 مج کپسول ج/باکت 70] | Score: 0.281 | BrandSim: 66.66666666666667
+   Candidate: [ميراجو 20 كبسولة/باكت20] | Score: 0.277 | BrandSim: 60.0
+
+--- Item: [سينوبريل كواقراص س ج] in [الهضبة الاثنين نقدى0.pdf] ---
+   Candidate: [سینوبریل 2 مجم اقراص/باکت 90] | Score: 0.706 | BrandSim: 80
+   Candidate: [سینوبیور 2 اقراص/جلوبال باکت 90] | Score: 0.341 | BrandSim: 66.66666666666667
+
+--- Item: [تادالاندرو5جم30قرص] in [الهضبة الاثنين نقدى0.pdf] ---
+   Candidate: [تادالونج 5 مج 30 قرص/باکت 25] | Score: 0.420 | BrandSim: 66.66666666666667
+
+--- Item: [هيرو دي3+كي2 نقط] in [كيور فارما خاص.pdf] ---
+   Candidate: [هیدرو فی ای دی تری کیه نقط"جدید] | Score: 0.422 | BrandSim: 62.5
+   Candidate: [هیدرو فی دی تری نقطه"جدید] | Score: 0.324 | BrandSim: 60.0
+   Candidate: [کاپسی هیر ماسک] | Score: 0.212 | BrandSim: 58.33333333333333
+

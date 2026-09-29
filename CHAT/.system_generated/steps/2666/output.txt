@@ -1,0 +1,1 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\output\\excel_writer.py","LineNumber":107,"LineContent":"    # ورقة الملخص"}

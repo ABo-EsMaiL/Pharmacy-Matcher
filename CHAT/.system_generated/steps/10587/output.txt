@@ -1,0 +1,18 @@
+
+The command exited with code 0.
+Output:
+Line 1459: <button class="nav-item active" onclick="showScreen('screen-new', this)">
+Line 1462: <button class="nav-item" onclick="loadHistory(); showScreen('screen-history', this)">
+Line 1465: <button class="nav-item" onclick="showScreen('screen-settings', this)">
+Line 1468: <button class="nav-item" onclick="loadLogs(); showScreen('screen-logs', this)">
+Line 1471: <button class="nav-item" onclick="showScreen('screen-servers', this); loadServersUI(); loadServerLog
+Line 1477: <div class="server-status-card" style="cursor: pointer;" onclick="showScreen('screen-servers'); load
+Line 1502: <div id="top-bar-process-badge" class="server-badge-pill" style="display: none; background: #eff6ff;
+Line 1506: <div id="top-bar-server-badge" class="server-badge-pill stopped" style="cursor: pointer;" onclick="s
+Line 1529: <div class="active-server-home-bar" onclick="showScreen('screen-servers'); loadServersUI();" style="
+Line 1602: <button type="button" class="btn btn-outline" style="font-size: 12px; padding: 6px 14px; border-radi
+Line 1783: <button type="button" class="btn btn-primary" onclick="showScreen('screen-servers'); loadServersUI()
+Line 3556: const originalShowScreen = window.showScreen;
+Line 3557: window.showScreen = function(screenId, element = null) {
+Line 3559: if (typeof originalShowScreen === 'function') {
+

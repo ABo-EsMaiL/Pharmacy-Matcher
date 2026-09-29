@@ -1,0 +1,60 @@
+
+The command exited with code 0.
+Output:
+Total lines: 1666
+Line 63: REQUEST_TIMEOUT = float(os.getenv("MSE_REQUEST_TIMEOUT", "180"))
+Line 136: await self.page.goto(TARGET_URL, timeout=60000, wait_until="domcontentloaded")
+Line 195: await loc.first.wait_for(state="visible", timeout=2000)
+Line 296: await thinking_select.first.wait_for(state="visible", timeout=6000)
+Line 397: await self.playwright.stop()
+Line 415: await new_btn.click(timeout=1500)
+Line 427: await self.page.goto(TARGET_URL, timeout=30000, wait_until="domcontentloaded")
+Line 444: def get_adaptive_timeouts(case_count: int) -> dict:
+Line 446: Adaptive timeout configuration based on batch size:
+Line 450: - 51-75+ cases: highest timeout
+Line 454: "initial_start_timeout": 60.0,
+Line 455: "first_token_timeout": 90.0,
+Line 456: "stagnation_timeout": 60.0,
+Line 463: "initial_start_timeout": 60.0,
+Line 464: "first_token_timeout": 120.0,
+Line 465: "stagnation_timeout": 75.0,
+Line 472: "initial_start_timeout": 90.0,
+Line 473: "first_token_timeout": 180.0,
+Line 474: "stagnation_timeout": 90.0,
+Line 481: "initial_start_timeout": 120.0,
+Line 482: "first_token_timeout": 240.0,
+Line 483: "stagnation_timeout": 120.0,
+Line 571: await prompt_locator.wait_for(state="attached", timeout=8000)
+Line 572: await prompt_locator.wait_for(state="visible", timeout=3000)
+Line 589: await file_input.wait_for(state="attached", timeout=10000)
+Line 617: await ta.wait_for(state="visible", timeout=5000)
+Line 644: t_cfg = self.get_adaptive_timeouts(case_count)
+Line 646: # 4. Wait for Run button to become ACTIVE (Tokenization and Image ready)
+Line 647: logger.info(f"Waiting for Google AI Studio Run button to become active (tokenizing/ready)...")
+Line 648: run_btn = self.page.locator('button.ctrl-enter, button:has-text("Run"), button[mattooltipclass="run-
+Line 653: aria_dis = await run_btn.get_attribute("aria-disabled")
+Line 654: is_dis = await run_btn.is_disabled()
+Line 657: logger.info(f"[+] Run button is ACTIVE after {time.time() - t_wait_start:.2f}s! Ready to execute.")
+Line 676: await run_btn.click()
+Line 677: logger.info(f"[{case_count} cases] Clicked active Run button. Pre-exec took {t_pre_exec:.2f}s.")
+Line 679: logger.warning(f"Run button did not signal active in time. Falling back to native Control+Enter...")
+Line 683: logger.warning(f"Error submitting via Run button: {e}. Falling back to Control+Enter...")
+Line 692: f"Timeout Tier: {t_cfg['tier']} | Start: {t_cfg['initial_start_timeout']:.0f}s | "
+Line 693: f"First Token: {t_cfg['first_token_timeout']:.0f}s | Stagnation: {t_cfg['stagnation_timeout']:.0f}s 
+Line 698: // 1. Generation Running Check (Stop button or active spinners)
+Line 699: const stopBtn = Array.from(document.querySelectorAll('button')).find(b => {
+Line 894: if elapsed > t_cfg["initial_start_timeout"]:
+Line 895: logger.error(f"[{case_count} cases] Generation failed to start within {t_cfg['initial_start_timeout'
+Line 896: yield {"delta": "", "text": f"[Error: NO_RESPONSE_STARTED - Google AI Studio did not start generatin
+Line 919: if (now - t_submit) > t_cfg["first_token_timeout"]:
+Line 922: yield {"delta": "", "text": f"[Error: FIRST_TOKEN_TIMEOUT - Model finished without producing any tex
+Line 924: logger.error(f"[{case_count} cases] Model thinking exceeded first_token_timeout ({t_cfg['first_token
+Line 925: yield {"delta": "", "text": f"[Error: FIRST_TOKEN_TIMEOUT - Model stayed in thinking for >{t_cfg['fi
+Line 943: # is_running is True: NEVER timeout while running, EXCEPT stagnation guardrail
+Line 945: if (now - t_last_growth) > t_cfg["stagnation_timeout"]:
+Line 946: logger.error(f"[{case_count} cases] Stagnation: no character growth for {t_cfg['stagnation_timeout']
+Line 947: yield {"delta": "", "text": f"[Error: STAGNATION_TIMEOUT - Text generation stalled for {t_cfg['stagn
+Line 958: yield {"delta": "", "text": f"[Error: HARD_CEILING_TIMEOUT - Request exceeded safe upper bound {t_cf
+Line 983: f"timeout: {t_cfg['first_token_timeout']:.0f}s"
+Line 1078: await browser_manager.stop()
+

@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+MSEMAX
+MSEMAX - Copy
+MSEMAX-AIStudio
+MSEMAX-AIStudio.zip
+MSEMAX-GAIStudio
+MSEMAX-main.zip
+

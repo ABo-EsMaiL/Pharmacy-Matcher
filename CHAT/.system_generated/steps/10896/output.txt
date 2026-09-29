@@ -1,0 +1,153 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -551,9 +551,9 @@
+ .btn-text { background: transparent; color: var(--text-muted); padding: 8px; }
+ .btn-text:hover { color: var(--primary); background: var(--bg-main); }
+ 
+-.btn-small { padding: 8px 12px; font-size: 12px; }
++.btn-small { padding: 6px 12px; font-size: 12px; }
+ .btn-full { width: 100%; }
+-.btn-massive { padding: 16px 32px; font-size: 18px; border-radius: var(--radius-lg); }
++.btn-massive { padding: 12px 32px; font-size: 16px; border-radius: var(--radius-md); font-weight: 800; }
+ 
+ /* -------------------- NEW PROCESS SCREEN -------------------- */
+ .upload-grid {
+@@ -560,6 +560,6 @@
+     grid-template-columns: 1fr 1fr;
+-    gap: 24px;
+-    margin-bottom: 32px;
++    gap: 16px;
++    margin-bottom: 12px;
+ }
+ 
+ .upload-card {
+@@ -567,17 +567,19 @@
+     border: 1px solid var(--border);
+     overflow: hidden;
+     box-shadow: var(--shadow-sm);
++    display: flex;
++    flex-direction: column;
+ }
+ 
+ .card-header {
+-    padding: 16px 20px;
+-    display: flex;
+-    align-items: center;
+-    gap: 12px;
+-    color: white;
+-}
+-.card-header h3 { font-size: 16px; margin: 0; }
+-.card-header i { font-size: 24px; }
++    padding: 10px 16px;
++    display: flex;
++    align-items: center;
++    gap: 10px;
++    color: white;
++}
++.card-header h3 { font-size: 15px; margin: 0; }
++.card-header i { font-size: 20px; }
+ 
+ .card-header.primary { background: var(--primary); }
+ .card-header.secondary { background: var(--secondary); }
+@@ -585,10 +585,10 @@
+ 
+ .drop-zone {
+     cursor: pointer;
+-    padding: 40px 20px;
++    padding: 16px 14px;
+     text-align: center;
+     border: 2px dashed var(--border);
+-    margin: 20px;
++    margin: 12px;
+     border-radius: var(--radius-md);
+     background: var(--bg-main);
+     transition: all 0.2s;
+@@ -603,18 +603,23 @@
+ }
+ 
+ .drop-icon {
+-    font-size: 48px;
+-    color: var(--text-muted);
+-    margin-bottom: 12px;
++    font-size: 32px;
++    color: var(--text-muted);
++    margin-bottom: 4px;
+ }
+ .drop-zone h4 {
+     color: var(--text-main);
+-    margin-bottom: 4px;
++    font-size: 14px;
++    margin-bottom: 3px;
+ }
+ .drop-zone p {
+     color: var(--text-muted);
+-    font-size: 13px;
+-    margin-bottom: 16px;
++    font-size: 12px;
++    margin-bottom: 10px;
++}
++.drop-zone .btn {
++    padding: 6px 14px;
++    font-size: 12.5px;
+ }
+ 
+ .file-list {
+@@ -621,5 +621,5 @@
+-    margin: 0 20px 20px;
+-    max-height: 200px;
++    margin: 0 12px 12px;
++    max-height: 120px;
+     overflow-y: auto;
+     padding-right: 5px;
+ }
+@@ -626,9 +626,9 @@
+-    padding: 12px 16px;
++    padding: 8px 12px;
+     background: #f8fafc;
+     border: 1px solid #e2e8f0;
+     border-radius: 8px;
+-    margin-bottom: 8px;
+-    font-size: 14px;
++    margin-bottom: 6px;
++    font-size: 13px;
+     font-weight: 600;
+     display: flex;
+     align-items: center;
+@@ -649,7 +649,7 @@
+ }
+ .file-item-name i {
+     color: var(--primary);
+-    font-size: 20px;
++    font-size: 18px;
+ }
+ .file-item-delete {
+     background: transparent;
+@@ -658,7 +658,7 @@
+     display: flex;
+     align-items: center;
+     justify-content: center;
+-    padding: 6px;
++    padding: 4px;
+     border-radius: 50%;
+     transition: all 0.2s;
+ }
+@@ -665,4 +665,4 @@
+-    font-size: 20px;
++    font-size: 18px;
+ }
+ .file-item-delete:hover {
+     color: var(--danger);
+@@ -671,7 +671,9 @@
+ .action-bar-bottom {
+     display: flex;
+     justify-content: center;
+-    margin-top: 20px;
++    margin-top: 10px;
++    padding-bottom: 8px;
++    flex-shrink: 0;
+ }
+ 
+ /* -------------------- PROGRESS OVERLAY -------------------- */
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

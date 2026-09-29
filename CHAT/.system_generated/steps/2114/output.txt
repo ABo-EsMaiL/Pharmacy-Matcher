@@ -1,0 +1,3 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1333,"LineContent":"                    \u003cbutton class=\"btn btn-primary btn-massive\" onclick=\"saveSettings()\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2266,"LineContent":"async function saveSettings() {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":271,"LineContent":"async function saveSettings() {"}

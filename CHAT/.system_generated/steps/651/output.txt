@@ -1,0 +1,49 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -708,6 +708,43 @@
+ </head>
+ <body>
+     <div id="toast-container"></div>
++    
++    <!-- Custom Modal Overlay -->
++    <div id="custom-modal" class="hidden" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); z-index: 9999; display: flex; align-items: center; justify-content: center;">
++        <div style="background: white; padding: 24px; border-radius: 12px; max-width: 400px; width: 90%; box-shadow: 0 10px 25px rgba(0,0,0,0.2); text-align: center;">
++            <h3 id="modal-title" style="margin-top: 0; margin-bottom: 12px;">تأكيد</h3>
++            <p id="modal-message" style="margin-bottom: 24px; color: var(--text-muted);"></p>
++            <div style="display: flex; gap: 12px; justify-content: center;">
++                <button id="modal-btn-cancel" class="btn btn-outline" style="flex: 1;">إلغاء</button>
++                <button id="modal-btn-confirm" class="btn btn-primary" style="flex: 1;">تأكيد</button>
++            </div>
++        </div>
++    </div>
++
++    <script>
++        function showCustomConfirm(title, message, onConfirm) {
++            const modal = document.getElementById('custom-modal');
++            document.getElementById('modal-title').innerText = title;
++            document.getElementById('modal-message').innerText = message;
++            
++            const btnCancel = document.getElementById('modal-btn-cancel');
++            const btnConfirm = document.getElementById('modal-btn-confirm');
++            
++            // Clean up old listeners
++            const newCancel = btnCancel.cloneNode(true);
++            const newConfirm = btnConfirm.cloneNode(true);
++            btnCancel.parentNode.replaceChild(newCancel, btnCancel);
++            btnConfirm.parentNode.replaceChild(newConfirm, btnConfirm);
++            
++            newCancel.onclick = () => modal.classList.add('hidden');
++            newConfirm.onclick = () => {
++                modal.classList.add('hidden');
++                onConfirm();
++            };
++            
++            modal.classList.remove('hidden');
++        }
++    </script>
+ 
+     <div class="app-layout">
+         <!-- Sidebar Navigation -->
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

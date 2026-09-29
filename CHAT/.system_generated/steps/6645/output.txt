@@ -1,0 +1,18 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\scripts\package_production.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -39,6 +39,12 @@
+         ignore=shutil.ignore_patterns("__pycache__", "*.pyc", ".pytest_cache")
+     )
+ 
++    # 2.5 Copy scripts (like free_ports.bat)
++    print("[+] Copying scripts/ ...")
++    (DIST_DIR / "scripts").mkdir(exist_ok=True)
++    if (PROJECT_ROOT / "scripts" / "free_ports.bat").exists():
++        shutil.copy2(PROJECT_ROOT / "scripts" / "free_ports.bat", DIST_DIR / "scripts" / "free_ports.bat")
++
+     # 3. Copy root essential files
+     essential_files = [
+         "requirements.txt",
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

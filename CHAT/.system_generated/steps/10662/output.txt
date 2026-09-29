@@ -1,0 +1,5 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\fast_match\\coordinator.py","LineNumber":222,"LineContent":"            name = item.get(\"item_name_raw\", \"\")"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\fast_match\\coordinator.py","LineNumber":247,"LineContent":"        all_shortage_names = {item[\"item_name_raw\"] for item in deduped_shortages}"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\fast_match\\coordinator.py","LineNumber":272,"LineContent":"                 if item.get(\"item_name_raw\") == name), \"\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\fast_match\\coordinator.py","LineNumber":301,"LineContent":"        wh_catalog = [{\"id\": f\"W-{i:05}\", \"name\": item.get(\"item_name_raw\", \"\")} for i, item in enumerate(warehouse_items)]"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\fast_match\\coordinator.py","LineNumber":314,"LineContent":"            shortage_name = item.get(\"item_name_raw\", \"\")"}

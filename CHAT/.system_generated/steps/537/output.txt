@@ -1,0 +1,78 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1237,20 +1237,61 @@
+         
+         if (result && result.process_id) {
+             currentProcessId = result.process_id;
++            window.activeProcesses = (window.activeProcesses || 0) + 1;
++            showToast('بدأت المطابقة في الخلفية!', 'success');
++        } else if (result && result.existing) {
++            // Already exists
++            currentProcessId = result.process_id;
++            showToast('هذه العملية مسجلة بالفعل، جاري عرض النتائج...', 'success');
++            if (result.stats) {
++                loadResults(result.stats);
++                window.showScreen('screen-results');
++            }
++            btn.classList.remove('hidden');
++            progressArea.classList.add('hidden');
++        } else {
++            throw new Error(result.error || 'لم يتم إرجاع معرف العملية');
++        }
++    } catch (error) {
++        showToast('حدث خطأ أثناء بدء المطابقة: ' + error, 'error');
++        console.error(error);
++        btn.classList.remove('hidden');
++        progressArea.classList.add('hidden');
++    }
++}
++
++window.addEventListener('process_update', (e) => {
++    const data = e.detail;
++    const progressArea = document.getElementById('progress-area');
++    if (progressArea && !progressArea.classList.contains('hidden') && data.process_id === currentProcessId) {
++        // Update a hypothetical progress text element if it existed, or just keep loading
++        const msgEl = progressArea.querySelector('p');
++        if (msgEl && data.message) msgEl.innerText = data.message;
++    }
++});
++
++window.addEventListener('process_complete', (e) => {
++    const data = e.detail;
++    window.activeProcesses = Math.max(0, (window.activeProcesses || 1) - 1);
++    
++    if (data.process_id === currentProcessId) {
++        const btn = document.getElementById('btn-submit');
++        const progressArea = document.getElementById('progress-area');
++        
++        btn.classList.remove('hidden');
++        progressArea.classList.add('hidden');
++        
++        if (data.success) {
+             showToast('تمت المطابقة بنجاح!', 'success');
+-            loadResults(result.stats || {});
++            if (data.stats) {
++                loadResults(data.stats);
++            }
+             window.showScreen('screen-results');
+         } else {
+-            throw new Error('لم يتم إرجاع معرف العملية');
+-        }
+-    } catch (error) {
+-        showToast('حدث خطأ أثناء المطابقة: ' + error, 'error');
+-        console.error(error);
+-    } finally {
+-        btn.classList.remove('hidden');
+-        progressArea.classList.add('hidden');
+-    }
+-}
++            showToast('فشلت عملية المطابقة: ' + data.error, 'error');
++        }
++    }
++});
+ 
+ // --- Results Logic ---
+ function loadResults(stats) {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

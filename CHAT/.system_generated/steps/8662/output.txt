@@ -1,0 +1,24 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -127,7 +127,7 @@
+         return False
+     return True
+ 
+-BRAND_FAMILIES = {'بيتادين', 'هيرو', 'انسولين', 'ليمتلس', 'سيتال', 'لبن'}
++BRAND_FAMILIES = {'بيتادين', 'هيرو', 'انسولين', 'ليمتلس', 'سيتال'}
+ 
+ def classify_pair(req: str, cand: str) -> tuple[str, str]:
+     """
+@@ -148,7 +148,8 @@
+     
+     # 1. Brand Family Protection
+     if first_r in BRAND_FAMILIES or first_c in BRAND_FAMILIES:
+-        if fuzz.ratio(brand_r, brand_c) < 85:
++        family_sim = max(fuzz.ratio(brand_r, brand_c), fuzz.token_set_ratio(brand_r, brand_c))
++        if family_sim < 85:
+             return "reject", "brand_family_conflict"
+             
+     # 2. Combination check (كو / بلس)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

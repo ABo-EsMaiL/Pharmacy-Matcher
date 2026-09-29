@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+d:\AI_Engineer\Pharmacy-agy\transform-result-5adb330b-3b30-4894-9d61-d31e1197080a.json
+d:\AI_Engineer\Pharmacy-agy\transform-result-f5254d99-e492-48f1-8a36-1688af690395.json
+d:\AI_Engineer\Pharmacy-agy\data\settings.json
+d:\AI_Engineer\Pharmacy-agy\data\processes\data\.unstructured_cache\74a49179bf3b521749a23af2e245c686_extract.json
+d:\AI_Engineer\Pharmacy-agy\data\processes\data\.unstructured_cache\a4f524fd75cf223f927a228ad87319f0_extract.json
+d:\AI_Engineer\Pharmacy-agy\data\processes\data\.unstructured_cache\b05e9145cb816a75e8b2d6ff44abeca4_extract.json
+d:\AI_Engineer\Pharmacy-agy\data\processes\data\.unstructured_cache\d0c1443b3b0a6e2287def7b8f4816fc0_extract.json
+d:\AI_Engineer\Pharmacy-agy\data\processes\data\.unstructured_cache\e73a8ca2ebcd549dffb5c91934ada9be.json
+d:\AI_Engineer\Pharmacy-agy\data\processes\data\.unstructured_cache\e73a8ca2ebcd549dffb5c91934ada9be_extract.json
+d:\AI_Engineer\Pharmacy-agy\data\processes\data\.unstructured_cache\ebc3fcf9fdcc6cb525f174254a00f5d5.json
+d:\AI_Engineer\Pharmacy-agy\data\processes\data\.unstructured_cache\ebc3fcf9fdcc6cb525f174254a00f5d5_extract.json
+

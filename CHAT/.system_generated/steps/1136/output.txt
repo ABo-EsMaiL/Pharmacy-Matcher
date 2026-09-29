@@ -1,0 +1,35 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -659,6 +659,29 @@
+     grid-template-columns: 1fr;
+     gap: 16px;
+ }
++
++@media (max-width: 1100px) {
++    .upload-grid, .settings-grid {
++        grid-template-columns: 1fr;
++    }
++    .stats-grid {
++        grid-template-columns: repeat(2, 1fr);
++    }
++}
++
++@media (max-width: 768px) {
++    .app-container {
++        flex-direction: column;
++    }
++    .sidebar {
++        width: 100%;
++        border-right: none;
++        border-bottom: 1px solid var(--border-color);
++    }
++    .stats-grid, .workflow-steps {
++        grid-template-columns: 1fr;
++    }
++}
+ .form-group {
+     display: flex;
+     flex-direction: column;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

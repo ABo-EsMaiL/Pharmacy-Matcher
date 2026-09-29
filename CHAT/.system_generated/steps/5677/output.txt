@@ -1,0 +1,65 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -521,51 +521,18 @@
+                             "reason": reason
+                         })
+                     else: # status == "no_match"
+-                        # Level 3 Safety Net: If the candidate has a REAL brand connection (same brand or brand_sim >= 80),
+-                        # route to needs_review instead of losing to "لم يتم العثور عليه"!
++                        # If LLM rejected or had no OCR match, check if any candidate is a legitimate form difference
++                        # (same commercial brand + same strength, but different dosage form).
+                         cands = candidates_by_shortage.get(shortage_name, [])
+-                        if cands:
+-                            top_c = cands[0]
+-                            top_name = top_c["name"]
+-                            top_brand_sim = top_c.get("brand_sim", 0)
+-                            
+-                            is_req_syrup = bool(re.search(r'\b(شراب|شرب|معلق)\b', shortage_name))
+-                            is_cand_syrup = bool(re.search(r'\b(شراب|شرب|معلق)\b', top_name))
+-                            has_c_solid_mg = bool(re.search(r'\b(100|125|200|250|300|400|500|600|800|1000)\s*(?:مجم|مج|mg)\b', norm_num(top_name))) and not re.search(r'\b(مل|ملل|ml|/5|5مل)\b', norm_num(top_name))
+-                            has_r_solid_mg = bool(re.search(r'\b(100|125|200|250|300|400|500|600|800|1000)\s*(?:مجم|مج|mg)\b', norm_num(shortage_name))) and not re.search(r'\b(مل|ملل|ml|/5|5مل)\b', norm_num(shortage_name))
+-                            is_syrup_conflict = (is_req_syrup and not is_cand_syrup and has_c_solid_mg) or (is_cand_syrup and not is_req_syrup and has_r_solid_mg)
+-                            is_co_conflict = (has_co(shortage_name) != has_co(top_name))
+-                            
+-                            form_r = extract_form_group(shortage_name)
+-                            form_c = extract_form_group(top_name)
+-                            is_form_conflict = bool(form_r and form_c and not are_forms_compatible(form_r, form_c))
+-                            
+-                            is_r_drops = 'نقط' in shortage_name or 'قطره' in shortage_name or 'قطرة' in shortage_name
+-                            is_c_drops = 'نقط' in top_name or 'قطره' in top_name or 'قطرة' in top_name
+-                            is_drops_conflict = (is_r_drops != is_c_drops)
+-
+-                            b_r = extract_brand_tokens(shortage_name)
+-                            b_c = extract_brand_tokens(top_name)
+-                            effective_brand_sim = max(
+-                                top_brand_sim,
+-                                fuzz.ratio(b_r, b_c),
+-                                fuzz.token_sort_ratio(b_r, b_c)
+-                            )
+-                            w_r = b_r.split()
+-                            w_c = b_c.split()
+-                            if w_r and w_c and (w_r[0] == w_c[0] or fuzz.ratio(w_r[0], w_c[0]) >= 85):
+-                                effective_brand_sim = max(effective_brand_sim, 85)
+-                            
+-                            if (w_r and w_r[0] in BRAND_FAMILIES) or (w_c and w_c[0] in BRAND_FAMILIES):
+-                                if fuzz.ratio(b_r, b_c) < 80:
+-                                    effective_brand_sim = 50
+-
+-                            if not is_syrup_conflict and not is_co_conflict and not is_form_conflict and not is_drops_conflict and effective_brand_sim >= 80:
++                        for c in cands:
++                            c_status, c_reason = classify_pair(shortage_name, c["name"])
++                            if c_status == "review":
+                                 needs_review.append({
+                                     "shortage_item": shortage_name,
+-                                    "warehouse_item": top_name,
+-                                    "reason": "تشابه في الاسم التجاري مع وجود تفاوت (في التركيز أو الحجم أو قراءة الحروف)، يحتاج مراجعة الصيدلي"
++                                    "warehouse_item": c["name"],
++                                    "reason": "نفس الدواء والتركيز ولكن الهيئة مختلفة (الصيدلي يقرر)"
+                                 })
++                                break
+ 
+         print(f"  -> Final Warehouse Result: {len(matched)} matched, {len(needs_review)} review")
+         return {"matched": matched, "needs_review": needs_review}
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

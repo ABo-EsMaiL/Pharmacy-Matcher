@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+Initial count search_toggle: 2
+Initial count remove_btn: 1
+Clicking remove_btn...
+State after: remove_btn count=0, toggle checked=false
+

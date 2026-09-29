@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+ParseResult fields: ['id', 'status', 'profile', 'markdown', 'format_version', 'metadata', 'extracted_data', 'warnings', 'elements', 'source']
+

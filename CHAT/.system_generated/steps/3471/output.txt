@@ -1,0 +1,17 @@
+{"name":".env","sizeBytes":"2122"}
+{"name":".env.example","sizeBytes":"2082"}
+{"name":".github","isDir":true}
+{"name":"Dockerfile","sizeBytes":"393"}
+{"name":"LICENSE","sizeBytes":"1063"}
+{"name":"README.md","sizeBytes":"15342"}
+{"name":"__pycache__","isDir":true}
+{"name":"app.py","sizeBytes":"30198"}
+{"name":"chrome_profile","isDir":true}
+{"name":"docker-compose.yml","sizeBytes":"652"}
+{"name":"get_session.py","sizeBytes":"6093"}
+{"name":"mse.bat","sizeBytes":"264"}
+{"name":"pow_solver.py","sizeBytes":"6295"}
+{"name":"requirements.txt","sizeBytes":"124"}
+{"name":"session_data.json","sizeBytes":"65667"}
+
+Summary: This directory contains 3 subdirectories and 12 files.

@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import json; data = json.load(open(r'C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\extracted_4way_data.json', encoding='utf-8')); print('Matches keys:', list(data['PROC-015']['matches'][0].keys())); print('Review keys:', list(data['PROC-015']['review'][0].keys()) if data['PROC-015']['review'] else 'empty'); print('NF keys:', list(data['PROC-015']['not_found'][0].keys()))
+                                                                                                                                                                                                                                                                                                                       ~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'review'
+Matches keys: ['اسم الصنف المطلوب', 'اسم الصنف في المخزن', 'درجة التطابق', 'المخزن']
+

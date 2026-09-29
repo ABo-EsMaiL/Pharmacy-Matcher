@@ -1,0 +1,163 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -112,7 +112,16 @@
+         if self._settings_file.exists():
+             try:
+                 with open(self._settings_file, 'r', encoding='utf-8') as f:
+-                    return json.load(f)
++                    data = json.load(f)
++                    # Normalize local_api_url if missing /chat/completions
++                    if "local_api_url" in data:
++                        raw = str(data["local_api_url"]).strip().rstrip("/")
++                        if not raw.endswith("/chat/completions"):
++                            if raw.endswith("/v1"):
++                                data["local_api_url"] = f"{raw}/chat/completions"
++                            else:
++                                data["local_api_url"] = f"{raw}/v1/chat/completions"
++                    return data
+             except:
+                 pass
+         return {
+@@ -119,7 +119,10 @@
+-            "local_api_url": "http://127.0.0.1:8000/v1/chat/completions",
+-            "local_api_key": "",
+-            "local_model": "gpt-4o-mini",
+-            "msemax_dir": "",
++            "local_api_url": "http://127.0.0.1:8001/v1/chat/completions",
++            "local_api_key": "[REDACTED_CREDENTIAL]",
++            "local_model": "gemini-3.8-flash",
++            "active_server": "gaistudio",
++            "msemax_dir": r"D:\AI_Engineer\MSEMAX",
++            "msemax_chatgpt_dir": r"D:\AI_Engineer\MSEMAX",
++            "msemax_gaistudio_dir": r"D:\AI_Engineer\MSEMAX-GAIStudio",
+             "unstructured_profile": "balanced"
+         }
+ 
+@@ -126,5 +126,14 @@
+         try:
+             settings = json.loads(settings_json)
++            # Ensure URL has /chat/completions
++            if "local_api_url" in settings:
++                raw = str(settings["local_api_url"]).strip().rstrip("/")
++                if not raw.endswith("/chat/completions"):
++                    if raw.endswith("/v1"):
++                        settings["local_api_url"] = f"{raw}/chat/completions"
++                    else:
++                        settings["local_api_url"] = f"{raw}/v1/chat/completions"
++
+             self._settings_file.parent.mkdir(parents=True, exist_ok=True)
+             with open(self._settings_file, 'w', encoding='utf-8') as f:
+                 json.dump(settings, f, ensure_ascii=False, indent=2)
+@@ -131,39 +131,80 @@
+-            # Update server manager if msemax_dir changed
+-            msemax_dir = settings.get('msemax_dir', '')
+-            if not msemax_dir:
+-                msemax_dir = str(PROJECT_ROOT / 'MSEMAX')
+-                
+-            if getattr(self._server_manager, 'msemax_dir', None) != msemax_dir:
+-                was_running = self._server_manager.is_running()
+-                if was_running:
+-                    self._server_manager.stop()
+-                self._server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)
+-                if was_running:
+-                    self._server_manager.start()
+-                    
+-            return {"success": True}
+-        except Exception as e:
+-            return {"success": False, "error": str(e)}
+-
++            # Refresh server manager with latest settings
++            self._server_manager = MSEMAXServerManager(settings, logger_callback=self.add_log)
++            return {"success": True}
++        except Exception as e:
++            return {"success": False, "error": str(e)}
++
++    def get_servers_info(self) -> str:
++        """Returns JSON of all servers status and configuration."""
++        settings = self.get_settings()
++        active_key = settings.get("active_server", "gaistudio")
++        statuses = self._server_manager.get_all_status(active_key=active_key)
++        return json.dumps({
++            "servers": statuses,
++            "active_server": active_key,
++            "current_url": settings.get("local_api_url", ""),
++            "current_model": settings.get("local_model", "")
++        }, ensure_ascii=False)
++
++    def start_server_instance(self, server_key: str) -> dict:
++        """Starts a specific server by key ('chatgpt' or 'gaistudio')."""
++        return self._server_manager.start(server_key)
++
++    def stop_server_instance(self, server_key: str) -> dict:
++        """Stops a specific server by key."""
++        return self._server_manager.stop(server_key)
++
++    def test_server_instance(self, server_key: str) -> dict:
++        """Sends a test ping to the specified server and measures latency."""
++        return self._server_manager.test(server_key)
++
++    def run_server_session(self, server_key: str) -> dict:
++        """Launches get_session.py for the specified server."""
++        return self._server_manager.run_get_session(server_key)
++
++    def set_active_ai_server(self, server_key: str) -> dict:
++        """
++        1-Click Active Switch:
++        Switches which server will receive matching batches.
++        Updates settings.json (local_api_url, local_model, active_server) automatically.
++        """
++        try:
++            settings = self.get_settings()
++            srv = self._server_manager.get_server(server_key)
++            if not srv:
++                return {"success": False, "error": f"Server {server_key} not found"}
++
++            settings["active_server"] = server_key
++            settings["local_api_url"] = srv.url
++            settings["local_model"] = srv.default_model
++
++            self.save_settings(json.dumps(settings))
++            self.add_log(f"[SYSTEM] Switched active AI server to: {srv.name} (Port: {srv.port}, Model: {srv.default_model})")
++            return {"success": True, "active_server": server_key, "url": srv.url, "model": srv.default_model}
++        except Exception as e:
++            return {"success": False, "error": str(e)}
++
++    # Legacy compatibility methods
+     def start_server(self) -> dict:
+-        return self._server_manager.start()
++        settings = self.get_settings()
++        active_key = settings.get("active_server", "gaistudio")
++        return self._server_manager.start(active_key)
+ 
+     def stop_server(self) -> dict:
+-        return self._server_manager.stop()
++        settings = self.get_settings()
++        active_key = settings.get("active_server", "gaistudio")
++        return self._server_manager.stop(active_key)
+ 
+     def get_server_status(self) -> dict:
+-        return self._server_manager.get_status()
+-
+-    def setup_msemax_requirements(self) -> dict:
+-        res1 = self._server_manager.install_requirements()
+-        res2 = self._server_manager.install_playwright()
+-        return {
+-            "success": res1.get("success", False) and res2.get("success", False),
+-            "output": f"Requirements:\n{res1.get('output', '')}\n\nPlaywright:\n{res2.get('output', '')}"
+-        }
++        settings = self.get_settings()
++        active_key = settings.get("active_server", "gaistudio")
++        srv = self._server_manager.get_server(active_key)
++        return srv.get_status() if srv else {"running": False}
+ 
+     def run_get_session(self) -> dict:
+-        return self._server_manager.run_get_session()
++        settings = self.get_settings()
++        active_key = settings.get("active_server", "gaistudio")
++        return self._server_manager.run_get_session(active_key)
+ 
+     def select_files(self, file_type: str) -> str:
+         """Opens a native file dialog. Returns JSON list of selected file paths."""
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

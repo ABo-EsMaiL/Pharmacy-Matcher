@@ -1,0 +1,44 @@
+
+The command exited with code 0.
+Output:
+Line 56: TEMP_UPLOADS_DIR = os.path.join(BASE_DIR, "temp_uploads")
+Line 57: os.makedirs(TEMP_UPLOADS_DIR, exist_ok=True)
+Line 490: self, prompt: str, model_name: Optional[str] = None, batch_size: Optional[int] = None, enable_search
+Line 492: """Injects the prompt (and optional images) into Google AI Studio and yields streaming text deltas."
+Line 582: # 2.5 Attach images if provided (Vision Multi-Modal Support)
+Line 583: if images:
+Line 584: logger.info(f"Attaching {len(images)} image(s) to prompt via file input: {images}")
+Line 588: file_input = self.page.locator('input[type="file"], [data-test-upload-file-input]').first
+Line 590: await file_input.set_input_files(images)
+Line 598: logger.info(f"Detected {chip_count} uploaded media chip(s) in AI Studio UI.")
+Line 605: logger.warning(f"Error attaching images on attempt {attempt}: {e}")
+Line 609: logger.error("CRITICAL: Failed to attach image to Google AI Studio prompt! Aborting to prevent text-
+Line 610: yield "[Error: Image could not be attached to Google AI Studio prompt. File upload failed.]"
+Line 646: # 4. Wait for Run button to become ACTIVE (Tokenization and Image ready)
+Line 651: for i in range(50):  # up to 25s for large images/prompts
+Line 1164: def extract_prompt_and_images(messages: List[ChatMessage]) -> Tuple[str, List[str]]:
+Line 1166: Combines user/system messages into a pristine prompt string and extracts any image URLs
+Line 1171: image_paths = []
+Line 1194: elif p_type == "image_url":
+Line 1195: img_info = part.get("image_url", {})
+Line 1200: if url.startswith("data:image/"):
+Line 1202: # format: data:image/webp;base64,...
+Line 1204: ext = header.split("data:image/", 1)[1].split(";")[0].strip()
+Line 1209: filename = f"upload_{uuid.uuid4().hex[:12]}.{ext}"
+Line 1210: file_path = os.path.join(TEMP_UPLOADS_DIR, filename)
+Line 1213: image_paths.append(file_path)
+Line 1214: logger.info(f"Saved incoming Base64 image to: {file_path} ({os.path.getsize(file_path)} bytes)")
+Line 1216: logger.error(f"Failed to decode base64 image: {e}")
+Line 1218: image_paths.append(os.path.abspath(url))
+Line 1224: file_path = os.path.join(TEMP_UPLOADS_DIR, filename)
+Line 1226: image_paths.append(file_path)
+Line 1227: logger.info(f"Downloaded remote image to: {file_path}")
+Line 1229: logger.error(f"Failed to download image URL {url}: {e}")
+Line 1249: return prompt, image_paths
+Line 1253: prompt, _ = extract_prompt_and_images(messages)
+Line 1259: @app.post("/v1/chat/completions", dependencies=[Depends(verify_api_key)])
+Line 1270: prompt, images = extract_prompt_and_images(chat_request.messages)
+Line 1286: f"Incoming /v1/chat/completions prompt ({len(prompt)} chars, images={len(images)}, batch_size={batch
+Line 1302: async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_
+Line 1342: async for chunk_data in browser_manager.send_prompt_and_stream(prompt, model_name=model_name, batch_
+

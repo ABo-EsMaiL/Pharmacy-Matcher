@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_parser_hadaba.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -45,7 +45,7 @@
+             for idx, col in enumerate(header_cells):
+                 col_lower = col.lower()
+                 if any(k in col_lower for k in ["اسم الصنف", "اسم الدواء", "item name", "product name", "description", "اسم"]):
+-                    if not any(num_k in col_lower for k in ["رقم", "كود", "code", "id", "number"]):
++                    if not any(nk in col_lower for nk in ["رقم", "كود", "code", "id", "number"]):
+                         name_col_idx = idx
+                         break
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

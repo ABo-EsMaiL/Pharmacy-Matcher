@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_tricky_cases.py", line 3, in <module>
+    from scratch.test_safe_auto import is_safe_auto_match
+ModuleNotFoundError: No module named 'scratch.test_safe_auto'
+

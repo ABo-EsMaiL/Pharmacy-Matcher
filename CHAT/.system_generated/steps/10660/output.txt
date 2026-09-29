@@ -1,0 +1,53 @@
+
+The command exited with code 0.
+Output:
+ أي تشويش تاريخي.
+
+---
+
+### 4. بنية البيانات (Structure) — مرونة تامة دون التقيد بـ Unstructured
+
+اتفق معك تماماً: لا نأخذ شكل Unstructured كقرآن مقدس. 
+والنقطة التي ذكرتها بخصوص التباين البشري (`دوليبرين 1000 مجم` مقابل `1 جم`) في غاية الأهمية.
+
+**البنية المقترحة للـ JSON:**
+```json
+{
+  "items": [
+    {
+      "item_name_raw": "الاسم المكتوب في الفاتورة نصاً وبالحرف دون أي تعديل أو توحيد",
+      "trade_name": "الاسم التجاري فقط (مثال: دوليبرين)",
+      "strength": "التركيز كما هو مكتوب (مثال: 1000 مجم أو 1 جم)",
+      "form": "الهيئة (أقراص / شراب / كريم / ...)",
+      "source_page": 1
+    }
+  ]
+}
+```
+* الميزة الكبرى هنا: الحقل الأساسي هو `item_name_raw` ينقل ما هو مكتوب بالملف تماماً حتى لا نخسر أي معلومة دخلها الإنسان، مع حقول اختيارية للتركيز والهيئة تساعد في تسريع الفلترة.
+
+---
+
+### 5. كود الاختبار المنفصل (Manual Test Script)
+
+هذا الكود مصمم للتشغيل من بيئة الكوندَا (`D:\miniconda3\envs\venv\python.exe`)، يقوم بالآتي:
+1. تحويل الصفحة الأولى من ملف المكرومي إلى صورة عالية الجودة وصغيرة الحجم مؤقتة.
+2. تجهيز الطلب بصيغة OpenAI Vision القياسية (Image Base64 + Text Prompt).
+3. إرساله إلى الـ Endpoint Gateway على `http://127.0.0.1:8001/v1/chat/completions`.
+4. طباعة الاستجابة ومراقبة وصولها.
+
+لقد حفظت لك السكريبت في مجلد `scratch`:
+`C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_endpoint_vision.py`
+
+محتوى الكود:
+```python
+import base64
+import json
+import time
+from pathlib import Path
+import pypdfium2 as pdfium
+import requests
+
+# 1. إعداد المسارات والملف
+PDF_PATH = Path(r"D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-015\input_wa
+

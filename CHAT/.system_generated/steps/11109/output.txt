@@ -1,0 +1,29 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy-vision\src\extract\gemini_vision_extractor.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -240,7 +240,7 @@
+             try:
+                 print(f"     [*] Sending Vision request to gateway (Attempt {attempt}/{max_retries})...")
+                 with _GATEWAY_MUTEX:
+-                    resp = requests.post(api_url, json=payload, headers=headers, timeout=240)
++                    resp = requests.post(api_url, json=payload, headers=headers, timeout=900)
+                 elapsed = time.time() - t0
+ 
+                 if resp.status_code == 200:
+@@ -247,7 +247,14 @@
+                     raw_content = data.get("choices", [{}])[0].get("message", {}).get("content", "")
++                    if raw_content.strip().startswith("[Error:"):
++                        raise RuntimeError(f"Gateway returned error: {raw_content.strip()}")
+                     parsed = _clean_json_response(raw_content)
+ 
+                     items = parsed.get("items", [])
++                    if not isinstance(items, list):
++                        raise ValueError(f"Vision response missing 'items' array: {raw_content[:200]}")
++                    if len(items) == 0:
++                        raise ValueError(f"Extracted items empty from gateway response: {raw_content[:200]}")
++
+                     # Verify page number
+                     for item in items:
+                         item["source_page"] = page_num
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

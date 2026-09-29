@@ -1,0 +1,25 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Candidates for 'ليفانوكس2شريط س ج': [{'id': 'WH_00912', 'name': 'ليفانوكس كبسول/باكت 200', 'score': 0.5914291698334905, 'brand_sim': 100.0}]
+Found in Hadaba: {'id': 'WH_00912', 'name': 'ليفانوكس كبسول/باكت 200'}
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Extracted 993 items from column 'أسم الصنف'
+Total llm_cases for Hadaba: 246
+Found Levanox in Hadaba llm_cases index 43 -> Batch 1, Pos 43:
+{
+  "case_id": "Q00118",
+  "requested_name": "ليفانوكس2شريط س ج",
+  "candidates": [
+    {
+      "id": "WH_00912",
+      "name": "ليفانوكس كبسول/باكت 200"
+    }
+  ]
+}
+

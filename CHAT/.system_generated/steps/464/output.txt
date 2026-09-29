@@ -1,0 +1,51 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -19,6 +19,7 @@
+         self.window = window
+         self.db = HistoryDB()
+         self.settings_file = PROJECT_ROOT / 'data' / 'settings.json'
++        self.logs = []
+         
+         settings = self.get_settings()
+         msemax_dir = settings.get('msemax_dir', '')
+@@ -25,6 +25,26 @@
+             msemax_dir = str(PROJECT_ROOT / 'MSEMAX')
+-        self.server_manager = MSEMAXServerManager(msemax_dir)
+-        
++        self.server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)
++        
++    def add_log(self, message: str):
++        self.logs.append(message)
++        if len(self.logs) > 1000:
++            self.logs.pop(0)
++        
++        if self.window:
++            try:
++                safe_msg = message.replace("'", "\\'").replace('\n', '\\n').replace('\r', '')
++                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('new_log', {{detail: '{safe_msg}'}}));")
++            except:
++                pass
++
++    def get_logs(self) -> str:
++        return json.dumps(self.logs)
++
++    def exit_app(self):
++        self.on_closing()
++        if self.window:
++            self.window.destroy()
++            
+     def get_settings(self) -> dict:
+         if self.settings_file.exists():
+             try:
+@@ -55,7 +55,7 @@
+                 was_running = self.server_manager.is_running()
+                 if was_running:
+                     self.server_manager.stop()
+-                self.server_manager = MSEMAXServerManager(msemax_dir)
++                self.server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)
+                 if was_running:
+                     self.server_manager.start()
+                     
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

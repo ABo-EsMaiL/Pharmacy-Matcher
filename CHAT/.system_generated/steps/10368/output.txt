@@ -1,0 +1,53 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\MSEMAX-GAIStudio-vision\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -582,20 +582,33 @@
+         # 2.5 Attach images if provided (Vision Multi-Modal Support)
+         if images:
+             logger.info(f"Attaching {len(images)} image(s) to prompt via file input: {images}")
+-            try:
+-                file_input = self.page.locator('input[type="file"], [data-test-upload-file-input]').first
+-                await file_input.wait_for(state="attached", timeout=6000)
+-                await file_input.set_input_files(images)
+-                logger.info("Successfully set files on file input. Waiting for thumbnail chip...")
+-                await asyncio.sleep(1.2)
+-                for _ in range(12):
+-                    chip_count = await self.page.locator('.prompt-box-container img, ms-prompt-box img, .media-chunk, .file-chip, [data-test*="media"]').count()
+-                    if chip_count > 0:
+-                        logger.info(f"Detected {chip_count} uploaded media chip(s).")
+-                        break
+-                    await asyncio.sleep(0.5)
+-            except Exception as e:
+-                logger.error(f"Error attaching images via file input: {e}")
++            attached_ok = False
++            for attempt in range(1, 4):
++                try:
++                    file_input = self.page.locator('input[type="file"], [data-test-upload-file-input]').first
++                    await file_input.wait_for(state="attached", timeout=10000)
++                    await file_input.set_input_files(images)
++                    logger.info(f"Files set on input (attempt {attempt}). Waiting for thumbnail chip...")
++                    await asyncio.sleep(1.0)
++                    for _ in range(16):
++                        chip_count = await self.page.locator(
++                            '.prompt-box-container img, ms-prompt-box img, .media-chunk, .file-chip, [data-test*="media"], ms-file-chip, [data-test-id*="media"]'
++                        ).count()
++                        if chip_count > 0:
++                            logger.info(f"Detected {chip_count} uploaded media chip(s) in AI Studio UI.")
++                            attached_ok = True
++                            break
++                        await asyncio.sleep(0.5)
++                    if attached_ok:
++                        break
++                except Exception as e:
++                    logger.warning(f"Error attaching images on attempt {attempt}: {e}")
++                    await asyncio.sleep(1.0)
++
++            if not attached_ok:
++                logger.error("CRITICAL: Failed to attach image to Google AI Studio prompt! Aborting to prevent text-only hallucination.")
++                yield "[Error: Image could not be attached to Google AI Studio prompt. File upload failed.]"
++                return
+ 
+         # 3. Focus, clear, and insert prompt text cleanly via JAVASCRIPT
+         try:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

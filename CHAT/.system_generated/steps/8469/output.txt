@@ -1,0 +1,53 @@
+
+The command exited with code 0.
+Output:
+================================================================================
+COMPARATIVE AUDIT: PROC-014 vs PROC-012
+================================================================================
+
+[1] Sheet Names Comparison:
+PROC-012 sheets: ['ملخص', 'السلام شبين.pdf', 'جملة العمروووو.pdf', 'الهضبة الاثنين نقدى0.pdf', 'كيور فارما خاص.pdf', 'مخزن الحياة فارم اسكندريه-170.p', 'المكرومي المنصورة.pdf', 'لم يُعثر عليه', 'يحتاج مراجعة']
+PROC-014 sheets: ['ملخص', 'المكرومي المنصورة.pdf', 'جملة العمروووو.pdf', 'السلام شبين.pdf', 'مخزن الحياة فارم اسكندريه-170.p', 'كيور فارما خاص.pdf', 'الهضبة الاثنين نقدى0.pdf', 'لم يُعثر عليه', 'يحتاج مراجعة']
+
+--- Warehouse: المكرومي المنصورة.pdf ---
+  PROC-012: 20 matches
+  PROC-014: 18 matches
+
+--- Warehouse: جملة العمروووو.pdf ---
+  PROC-012: 3 matches
+  PROC-014: 3 matches
+
+--- Warehouse: السلام شبين.pdf ---
+  PROC-012: 22 matches
+  PROC-014: 22 matches
+
+--- Warehouse: مخزن الحياة فارم اسكندريه-170.p ---
+  PROC-012: 15 matches
+  PROC-014: 13 matches
+
+--- Warehouse: كيور فارما خاص.pdf ---
+  PROC-012: 32 matches
+  PROC-014: 29 matches
+
+--- Warehouse: الهضبة الاثنين نقدى0.pdf ---
+  PROC-012: 37 matches
+  PROC-014: 39 matches
+
+[2] Needs Review Comparison:
+  PROC-012: 5 items
+  PROC-014: 5 items
+
+--- PROC-014 Needs Review Items ---
+  * Shortage: None | WH: None | المخزن: المكرومي المنصورة.pdf | السبب: None
+  * Shortage: None | WH: None | المخزن: المكرومي المنصورة.pdf | السبب: None
+  * Shortage: None | WH: None | المخزن: السلام شبين.pdf | السبب: None
+  * Shortage: None | WH: None | المخزن: مخزن الحياة فارم اسكندريه-170.pdf | السبب: None
+  * Shortage: None | WH: None | المخزن: الهضبة الاثنين نقدى0.pdf | السبب: None
+
+--- PROC-012 Needs Review Items ---
+  * Shortage: None | WH: None | المخزن: الهضبة الاثنين نقدى0.pdf | السبب: None
+  * Shortage: None | WH: None | المخزن: مخزن الحياة فارم اسكندريه-170.pdf | السبب: None
+  * Shortage: None | WH: None | المخزن: المكرومي المنصورة.pdf | السبب: None
+  * Shortage: None | WH: None | المخزن: المكرومي المنصورة.pdf | السبب: None
+  * Shortage: None | WH: None | المخزن: المكرومي المنصورة.pdf | السبب: None
+

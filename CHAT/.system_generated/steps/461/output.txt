@@ -1,0 +1,140 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\server_manager.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -3,12 +3,20 @@
+ import signal
+ import time
+ import sys
++import threading
+ from pathlib import Path
+ 
+ class MSEMAXServerManager:
+-    def __init__(self, msemax_dir: str):
++    def __init__(self, msemax_dir: str, logger_callback=None):
+         self.msemax_dir = msemax_dir
+         self.process = None
++        self.logger = logger_callback
++
++    def log(self, message):
++        if self.logger:
++            self.logger(message)
++        else:
++            print(message)
+ 
+     def is_running(self) -> bool:
+         if self.process is None:
+@@ -15,7 +15,18 @@
+         return self.process.poll() is None
+ 
++    def _read_output(self, pipe, prefix):
++        try:
++            for line in iter(pipe.readline, ''):
++                if line:
++                    self.log(f"{prefix} {line.strip()}")
++        except Exception:
++            pass
++        finally:
++            pipe.close()
++
+     def start(self) -> dict:
+         if self.is_running():
++            self.log("[SYSTEM] Server is already running.")
+             return {"success": True, "message": "already running"}
+             
+         try:
+@@ -22,13 +22,24 @@
+             if os.name == 'nt':
+                 creationflags = subprocess.CREATE_NO_WINDOW
+                 
++            self.log("[SYSTEM] Starting MSEMAX Server...")
+             self.process = subprocess.Popen(
+                 [sys.executable, "app.py"],
+                 cwd=self.msemax_dir,
+-                creationflags=creationflags
+-            )
++                creationflags=creationflags,
++                stdout=subprocess.PIPE,
++                stderr=subprocess.STDOUT,
++                text=True,
++                bufsize=1
++            )
++            
++            t = threading.Thread(target=self._read_output, args=(self.process.stdout, "[SERVER]"), daemon=True)
++            t.start()
++            
++            self.log("[SYSTEM] Server process started successfully.")
+             return {"success": True, "message": "started"}
+         except Exception as e:
++            self.log(f"[SYSTEM ERROR] Failed to start server: {str(e)}")
+             return {"success": False, "message": str(e)}
+ 
+     def stop(self) -> dict:
+@@ -35,6 +35,7 @@
+             return {"success": True, "message": "not running"}
+             
+         try:
++            self.log("[SYSTEM] Stopping server...")
+             if os.name == 'nt':
+                 subprocess.run(['taskkill', '/F', '/T', '/PID', str(self.process.pid)], capture_output=True)
+             else:
+@@ -41,7 +41,9 @@
+                 
+             self.process = None
++            self.log("[SYSTEM] Server stopped.")
+             return {"success": True, "message": "stopped"}
+         except Exception as e:
++            self.log(f"[SYSTEM ERROR] Failed to stop server: {str(e)}")
+             return {"success": False, "message": str(e)}
+ 
+     def install_requirements(self) -> dict:
+@@ -48,3 +48,4 @@
++            self.log("[SYSTEM] Installing MSEMAX requirements...")
+             result = subprocess.run(
+                 [sys.executable, "-m", "pip", "install", "-r", "requirements.txt"],
+                 cwd=self.msemax_dir,
+@@ -51,7 +51,10 @@
+                 text=True
+             )
+-            return {"success": result.returncode == 0, "output": result.stdout + "\n" + result.stderr}
+-        except Exception as e:
++            out = result.stdout + "\n" + result.stderr
++            self.log(f"[PIP] {out.strip()}")
++            return {"success": result.returncode == 0, "output": out}
++        except Exception as e:
++            self.log(f"[SYSTEM ERROR] {str(e)}")
+             return {"success": False, "output": str(e)}
+ 
+     def run_get_session(self) -> dict:
+@@ -58,3 +58,4 @@
++            self.log("[SYSTEM] Launching get_session.py...")
+             creationflags = 0
+             if os.name == 'nt':
+                 creationflags = subprocess.CREATE_NEW_CONSOLE
+@@ -65,6 +65,7 @@
+             )
+             return {"success": True, "output": "Browser session started. Please complete login."}
+         except Exception as e:
++            self.log(f"[SYSTEM ERROR] {str(e)}")
+             return {"success": False, "output": str(e)}
+ 
+     def install_playwright(self) -> dict:
+@@ -71,3 +71,4 @@
++            self.log("[SYSTEM] Installing playwright browsers...")
+             result = subprocess.run(
+                 [sys.executable, "-m", "playwright", "install", "chromium"],
+                 cwd=self.msemax_dir,
+@@ -74,7 +74,10 @@
+                 text=True
+             )
+-            return {"success": result.returncode == 0, "output": result.stdout + "\n" + result.stderr}
+-        except Exception as e:
++            out = result.stdout + "\n" + result.stderr
++            self.log(f"[PLAYWRIGHT] {out.strip()}")
++            return {"success": result.returncode == 0, "output": out}
++        except Exception as e:
++            self.log(f"[SYSTEM ERROR] {str(e)}")
+             return {"success": False, "output": str(e)}
+ 
+     def get_status(self) -> dict:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+dict_keys(['id', 'status', 'filename', 'file_id', 'cancellation_requested', 'source', 'error', 'result'])
+

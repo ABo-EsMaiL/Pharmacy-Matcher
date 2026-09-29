@@ -1,0 +1,32 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy\data
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         9/22/2026   3:11 PM          12070 test_shortages_200.xlsx                                              
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-001
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         9/23/2026   1:08 AM          28890 results_PROC-001.xlsx                                                
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-001\input_shortages
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         9/20/2026   1:55 PM          41471 0913.xlsx                                                            
+
+
+

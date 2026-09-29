@@ -1,0 +1,8 @@
+Found 7 results
+__init__.py
+__pycache__
+__pycache__/__init__.cpython-312.pyc
+__pycache__/text_match.cpython-312.pyc
+coordinator.py
+gemini_match.py
+text_match.py

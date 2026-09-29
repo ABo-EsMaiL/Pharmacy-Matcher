@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+['DEFAULT_SERVER_URL', 'JobEvent', 'RetryConfig', 'TransformClient', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', '_client', '_files', '_generated', '_host_headers', '_multipart', '_retry', '_sse', '_version', 'annotations']
+C:\Users\kakak\AppData\Roaming\Python\Python313\site-packages\unstructured_transform_client\_client.py
+

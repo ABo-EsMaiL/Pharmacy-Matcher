@@ -1,0 +1,13 @@
+
+The command exited with code 1.
+Output:
+
+FullName                                      
+--------                                      
+D:\AI_Engineer\MSEMAX\chrome_profile          
+D:\AI_Engineer\MSEMAX - Copy\chrome_profile   
+D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile
+D:\AI_Engineer\Pharmacy-agy\chrome_profile    
+
+
+

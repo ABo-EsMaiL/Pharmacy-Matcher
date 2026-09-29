@@ -31,12 +31,9 @@ data/output/
 Thumbs.db
 desktop.ini
 
-# Local credentials, warehouse data, session history and generated artifacts
+# Local credentials and generated development artifacts
 .env.*
 !.env.example
-/data/
-/output/
-/CHAT/
 /scratch/
 scratch_*
 /dist_production/
@@ -51,3 +48,19 @@ Check_out_this_chat.md
 *.key
 .pytest_cache/
 /[{]classify_pair*
+
+# Explicitly publish requested data, outputs and development history.
+!/data/**
+!/output/**
+!/CHAT/**
+
+# Credentials and transient bytecode/locks remain local.
+/data/settings.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+__pycache__/
+*.py[cod]
+.lock

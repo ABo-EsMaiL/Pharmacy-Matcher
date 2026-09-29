@@ -1,0 +1,13 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":55,"LineContent":"        self.server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":134,"LineContent":"            if getattr(self.server_manager, 'msemax_dir', None) != msemax_dir:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":135,"LineContent":"                was_running = self.server_manager.is_running()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":137,"LineContent":"                    self.server_manager.stop()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":138,"LineContent":"                self.server_manager = MSEMAXServerManager(msemax_dir, logger_callback=self.add_log)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":140,"LineContent":"                    self.server_manager.start()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":147,"LineContent":"        return self.server_manager.start()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":150,"LineContent":"        return self.server_manager.stop()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":153,"LineContent":"        return self.server_manager.get_status()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":156,"LineContent":"        res1 = self.server_manager.install_requirements()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":157,"LineContent":"        res2 = self.server_manager.install_playwright()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":164,"LineContent":"        return self.server_manager.run_get_session()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":539,"LineContent":"        self.server_manager.cleanup()"}

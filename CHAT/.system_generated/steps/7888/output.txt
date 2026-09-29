@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+HEALTH: {'status': 'ok', 'gateway': 'MSEMAX (AIStudio Web Hook)', 'version': '2.1.0', 'browser_ready': True, 'session_file_exists': True, 'headless': False, 'profile_dir': 'D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile', 'default_model': 'gemini-3.8-flash', 'thinking_mode': 'high', 'active_model': 'Gemini 3.8 Flash\ngemini-3.8-flash\nOur most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.', 'model_verified': True, 'active_thinking': 'High', 'thinking_verified': True, 'clear_chat_on_request': True, 'port': 8001, 'rate_limit': '30/minute'}
+Browser is ready!
+

@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+1187 <button class="btn btn-outline" style="border-color: var(--primary); color: var(--primary); font-weight: 600;" onclick="rerunMatching()">
+1189 <span data-i18n="btn_rerun_match">إعادة المطابقة (Re-run)</span>
+1432 btn_rerun_match: "إعادة المطابقة (Re-run)",
+1535 btn_rerun_match: "Re-run Matching",
+2153 async function rerunMatching() {
+2181 const res = await window.pywebview.api.rerun_process(currentProcessId);
+

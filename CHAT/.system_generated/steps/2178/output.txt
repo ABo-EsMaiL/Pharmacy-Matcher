@@ -1,0 +1,5 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":47,"LineContent":"        self.settings_file = PROJECT_ROOT / 'data' / 'settings.json'"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":107,"LineContent":"        if self.settings_file.exists():"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":109,"LineContent":"                with open(self.settings_file, 'r', encoding='utf-8') as f:"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":125,"LineContent":"            self.settings_file.parent.mkdir(parents=True, exist_ok=True)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":126,"LineContent":"            with open(self.settings_file, 'w', encoding='utf-8') as f:"}

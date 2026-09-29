@@ -1,0 +1,4 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":674,"LineContent":".action-bar-bottom {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":1578,"LineContent":"                \u003cdiv class=\"action-bar-bottom\"\u003e"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":1799,"LineContent":"                \u003cdiv class=\"action-bar-bottom mt-3\"\u003e"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\style.css","LineNumber":324,"LineContent":".action-bar-bottom {"}

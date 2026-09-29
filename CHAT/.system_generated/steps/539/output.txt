@@ -1,0 +1,83 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -171,6 +171,15 @@
+             shortage_filenames = [Path(p).name for p in shortage_paths]
+             warehouse_filenames = [Path(p).name for p in warehouse_paths]
+             
++            # Check for existing process with same files
++            existing_processes = self.db.get_all_processes()
++            for p in existing_processes:
++                if sorted(p.get('shortage_files', [])) == sorted(shortage_filenames) and sorted(p.get('warehouse_files', [])) == sorted(warehouse_filenames):
++                    if p.get('status') in ['completed', 'reviewing']:
++                        # It's an identical process that finished
++                        stats = self.db.get_process_stats(p['id'])
++                        return {"success": True, "existing": True, "process_id": p['id'], "stats": stats}
++            
+             process_id = self.db.create_process(shortage_filenames, warehouse_filenames)
+             
+             thread = threading.Thread(target=self._process_worker, args=(process_id, shortage_paths, warehouse_paths))
+@@ -182,7 +182,7 @@
+ 
+     def _process_worker(self, process_id, shortage_paths, warehouse_paths):
+         try:
+-            self.add_log(f"--- بدء عملية جديدة [{process_id}] ---")
++            self.add_log(f"--- Starting new process [{process_id}] ---")
+             proc_dir = self.db.get_process_dir(process_id)
+             
+             # Copy files to process directory
+@@ -198,7 +198,7 @@
+                 copied_warehouses.append(dst)
+                 
+             if self.window:
+-                self.window.evaluate_js("window.dispatchEvent(new CustomEvent('process_update', {detail: {process_id: '%s', status: 'processing', message: 'جاري قراءة الملفات...'}}));" % process_id)
++                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Reading files...'}}}}));")
+                 
+             # Import actual project modules
+             from src.config import load_config
+@@ -215,7 +215,7 @@
+             
+             self.add_log("[PROCESS] Config loaded.")
+             if self.window:
+-                self.window.evaluate_js("window.dispatchEvent(new CustomEvent('process_update', {detail: {process_id: '%s', status: 'processing', message: 'جاري استخراج البيانات من الملفات...'}}));" % process_id)
++                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Extracting data from files...'}}}}));")
+             
+             # Read input files (this handles PDF→Unstructured API automatically)
+             api_key = settings.get('unstructured_api_key', '') or config.unstructured_api_key
+@@ -234,7 +234,7 @@
+             self.add_log(f"[PROCESS] Extracted total {len(all_shortages)} shortage items. Starting coordinator...")
+             
+             if self.window:
+-                self.window.evaluate_js("window.dispatchEvent(new CustomEvent('process_update', {detail: {process_id: '%s', status: 'processing', message: 'جاري مطابقة %d صنف...'}}));" % (process_id, len(all_shortages)))
++                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Matching {len(all_shortages)} items...'}}}}));")
+             
+             # Run matching
+             coordinator = FastCoordinator(config)
+@@ -241,18 +241,13 @@
+             
+             self.add_log(f"[PROCESS] Matching completed.")
+             if self.window:
+-                self.window.evaluate_js("window.dispatchEvent(new CustomEvent('process_update', {detail: {process_id: '%s', status: 'processing', message: 'جاري حفظ النتائج...'}}));" % process_id)
+-                
+-            # Save results
+-            out_file = proc_dir / 'output' / 'results.xlsx'
+-            write_results_excel(results, out_file)
+-            self.add_log(f"[PROCESS] Saved results to {out_file.name}")
++                self.window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Saving results...'}}}}));")
++                
++            # Write results
++            excel_path = proc_dir / f"results_{process_id}.xlsx"
++            stats = write_results_excel(results, excel_path)
+             
+             # Update DB
+-            summary = results.get("summary", {})
+-            self.db.update_process(
+-                process_id,
+-                status='reviewing' if summary.get('review_count', 0) > 0 else 'completed',
+                 total_shortages=summary.get('total_shortages', 0),
+                 matched_count=summary.get('matched_count', 0),
+                 not_found_count=summary.get('not_found_count', 0),
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

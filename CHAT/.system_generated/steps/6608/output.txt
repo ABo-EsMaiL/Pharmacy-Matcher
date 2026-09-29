@@ -1,0 +1,276 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1783,70 +1783,63 @@
+                 </div>
+             </div>
+ 
+-            <!-- Screen 5: AI Servers Manager -->
++            <!-- Screen 5: AI Servers Manager (Zero-Scroll Responsive Dashboard) -->
+             <div id="screen-servers" class="screen">
+-                <header class="page-header">
+-                    <h2><i class="ph-fill ph-hard-drives"></i> <span data-i18n="servers_title">إدارة سيرفرات الذكاء الاصطناعي (AI Servers)</span></h2>
+-                    <p data-i18n="servers_desc">التحكم في سيرفرات MSEMAX (ChatGPT و Google AI Studio) واختبار الاتصال واختيار المزود النشط.</p>
+-                </header>
+-
+-                <!-- Active Provider Banner -->
+-                <div class="active-banner">
+-                    <div class="active-banner-content">
+-                        <i class="ph-fill ph-lightning active-banner-icon"></i>
+-                        <div class="active-banner-text">
+-                            <h4 id="active-banner-title">المزود النشط حالياً للمطابقة: جاري التحقق...</h4>
+-                            <p id="active-banner-sub">سيتم توجيه جميع دفعات مطابقة النواقص تلقائياً إلى هذا السيرفر.</p>
+-                        </div>
+-                    </div>
+-                    <button class="btn btn-outline" style="border-color:rgba(255,255,255,0.7); color:white;" onclick="loadServersUI()">
+-                        <i class="ph-bold ph-arrows-clockwise"></i> <span data-i18n="btn_refresh">تحديث الحالة</span>
+-                    </button>
+-                </div>
+-
+-                <!-- Servers Grid -->
+-                <div class="servers-grid">
+-                    <!-- Card 1: Google AI Studio (Port 8001) -->
+-                    <div class="server-card" id="card-server-gaistudio">
+-                        <div class="server-card-header">
+-                            <div class="server-card-title">
+-                                <div class="server-card-icon gaistudio">
++                <div class="servers-dashboard-header">
++                    <div class="dashboard-header-title">
++                        <i class="ph-fill ph-hard-drives"></i>
++                        <div>
++                            <h2 data-i18n="servers_title">إدارة سيرفرات الذكاء الاصطناعي (AI Servers)</h2>
++                            <span data-i18n="servers_desc">التحكم في سيرفرات MSEMAX، فحص الاتصال، والتيرمينال المباشر</span>
++                        </div>
++                    </div>
++
++                    <!-- 1-Click Active Provider Switcher Pills -->
++                    <div class="active-switcher-container">
++                        <span class="switcher-label"><i class="ph-fill ph-lightning"></i> <span data-i18n="lbl_active_provider">المزود النشط للمطابقة:</span></span>
++                        <div class="switcher-pills">
++                            <button id="pill-provider-gaistudio" class="switcher-pill" onclick="setActiveServer('gaistudio')">
++                                <i class="ph-fill ph-google-logo"></i> <span>Google AI Studio (8001)</span>
++                            </button>
++                            <button id="pill-provider-chatgpt" class="switcher-pill" onclick="setActiveServer('chatgpt')">
++                                <i class="ph-fill ph-robot"></i> <span>ChatGPT (8000)</span>
++                            </button>
++                        </div>
++                        <button class="btn btn-outline btn-small" onclick="loadServersUI()" title="تحديث الحالة" style="padding: 6px 10px;">
++                            <i class="ph-bold ph-arrows-clockwise"></i>
++                        </button>
++                    </div>
++                </div>
++
++                <!-- Hidden elements for backward JS compatibility -->
++                <div id="active-banner-title" style="display:none;"></div>
++                <div id="active-banner-sub" style="display:none;"></div>
++
++                <!-- Compact Servers Grid (~135px height) -->
++                <div class="servers-grid-compact">
++                    <!-- Server 1: Google AI Studio (Port 8001) -->
++                    <div class="server-card-compact" id="card-server-gaistudio">
++                        <div class="card-compact-top">
++                            <div class="card-compact-identity">
++                                <div class="server-avatar gaistudio">
+                                     <i class="ph-fill ph-google-logo"></i>
+                                 </div>
+-                                <div class="server-card-info">
+-                                    <h3 data-i18n="gaistudio_server_title">MSEMAX (Google AI Studio)</h3>
+-                                    <span>Gemini 3.8 Flash • Port 8001</span>
+-                                </div>
+-                            </div>
+-                            <div class="server-badges-row">
+-                                <span id="badge-status-gaistudio" class="badge-pill status-offline">🔴 متوقف</span>
++                                <div class="server-title-group">
++                                    <div class="server-title-line">
++                                        <h3 data-i18n="gaistudio_server_title">MSEMAX (Google AI Studio)</h3>
++                                        <span class="meta-tag port">Port 8001</span>
++                                        <span class="meta-tag model" id="val-model-gaistudio">gemini-3.8-flash</span>
++                                    </div>
++                                    <span class="server-url-caption">http://127.0.0.1:8001/v1/chat/completions</span>
++                                </div>
++                            </div>
++                            <div class="server-badges-cluster">
+                                 <span id="badge-active-gaistudio" class="badge-pill active-server-badge" style="display:none;">⭐ المزود النشط</span>
+-                            </div>
+-                        </div>
+-
+-                        <div class="server-details-list">
+-                            <div class="server-detail-row">
+-                                <span class="server-detail-label" data-i18n="lbl_server_port">المنفذ (Port):</span>
+-                                <span class="server-detail-value">8001</span>
+-                            </div>
+-                            <div class="server-detail-row">
+-                                <span class="server-detail-label" data-i18n="lbl_server_model">الموديل (Model):</span>
+-                                <span class="server-detail-value" id="val-model-gaistudio">gemini-3.8-flash</span>
+-                            </div>
+-                            <div class="server-detail-row">
+-                                <span class="server-detail-label" data-i18n="lbl_server_url">رابط الخدمة:</span>
+-                                <span class="server-detail-value" style="font-size:11px;">http://127.0.0.1:8001/v1/chat/completions</span>
+-                            </div>
+-                            <div class="server-detail-row">
+-                                <span class="server-detail-label" data-i18n="lbl_server_dir">مسار المجلد:</span>
+-                                <span class="server-detail-value" style="font-size:11px;">D:\AI_Engineer\MSEMAX-GAIStudio</span>
+-                            </div>
+-                        </div>
+-
+-                        <div class="server-actions-grid">
+-                            <button id="btn-active-gaistudio" class="btn btn-outline" onclick="setActiveServer('gaistudio')">
+-                                <i class="ph-bold ph-check"></i> <span data-i18n="btn_set_as_active">تفعيل كمزود نشط</span>
+-                            </button>
++                                <span id="badge-status-gaistudio" class="badge-pill status-offline">🔴 متوقف</span>
++                            </div>
++                        </div>
++
++                        <div class="card-compact-actions">
+                             <button id="btn-toggle-gaistudio" class="btn btn-primary" onclick="toggleServerInstance('gaistudio')">
+                                 <i class="ph-bold ph-play"></i> <span data-i18n="btn_start_instance">تشغيل السيرفر</span>
+                             </button>
+@@ -1853,52 +1853,37 @@
+                                 <i class="ph-bold ph-lightning"></i> <span data-i18n="btn_test_connection">اختبار الاتصال</span>
+                             </button>
+-                            <button class="btn btn-outline-secondary" onclick="openServerSession('gaistudio')">
+-                                <i class="ph-bold ph-browser"></i> <span data-i18n="btn_login_session">فتح الجلسة (Login)</span>
+-                            </button>
+-                        </div>
+-                    </div>
+-
+-                    <!-- Card 2: ChatGPT (Port 8000) -->
+-                    <div class="server-card" id="card-server-chatgpt">
+-                        <div class="server-card-header">
+-                            <div class="server-card-title">
+-                                <div class="server-card-icon">
++                            <button class="btn btn-outline-secondary" onclick="openServerSession('gaistudio')" title="فتح جلسة تسجيل الدخول">
++                                <i class="ph-bold ph-browser"></i> <span data-i18n="btn_login_session">فتح الجلسة (Login)</span>
++                            </button>
++                            <button id="btn-active-gaistudio" class="btn btn-outline" onclick="setActiveServer('gaistudio')">
++                                <i class="ph-bold ph-check"></i> <span data-i18n="btn_set_as_active">تفعيل كمزود نشط</span>
++                            </button>
++                        </div>
++                    </div>
++
++                    <!-- Server 2: ChatGPT (Port 8000) -->
++                    <div class="server-card-compact" id="card-server-chatgpt">
++                        <div class="card-compact-top">
++                            <div class="card-compact-identity">
++                                <div class="server-avatar chatgpt">
+                                     <i class="ph-fill ph-robot"></i>
+                                 </div>
+-                                <div class="server-card-info">
+-                                    <h3 data-i18n="chatgpt_server_title">MSEMAX (ChatGPT)</h3>
+-                                    <span>GPT-4o • Port 8000</span>
+-                                </div>
+-                            </div>
+-                            <div class="server-badges-row">
+-                                <span id="badge-status-chatgpt" class="badge-pill status-offline">🔴 متوقف</span>
++                                <div class="server-title-group">
++                                    <div class="server-title-line">
++                                        <h3 data-i18n="chatgpt_server_title">MSEMAX (ChatGPT)</h3>
++                                        <span class="meta-tag port">Port 8000</span>
++                                        <span class="meta-tag model" id="val-model-chatgpt">gpt-4o</span>
++                                    </div>
++                                    <span class="server-url-caption">http://127.0.0.1:8000/v1/chat/completions</span>
++                                </div>
++                            </div>
++                            <div class="server-badges-cluster">
+                                 <span id="badge-active-chatgpt" class="badge-pill active-server-badge" style="display:none;">⭐ المزود النشط</span>
+-                            </div>
+-                        </div>
+-
+-                        <div class="server-details-list">
+-                            <div class="server-detail-row">
+-                                <span class="server-detail-label" data-i18n="lbl_server_port">المنفذ (Port):</span>
+-                                <span class="server-detail-value">8000</span>
+-                            </div>
+-                            <div class="server-detail-row">
+-                                <span class="server-detail-label" data-i18n="lbl_server_model">الموديل (Model):</span>
+-                                <span class="server-detail-value" id="val-model-chatgpt">gpt-4o</span>
+-                            </div>
+-                            <div class="server-detail-row">
+-                                <span class="server-detail-label" data-i18n="lbl_server_url">رابط الخدمة:</span>
+-                                <span class="server-detail-value" style="font-size:11px;">http://127.0.0.1:8000/v1/chat/completions</span>
+-                            </div>
+-                            <div class="server-detail-row">
+-                                <span class="server-detail-label" data-i18n="lbl_server_dir">مسار المجلد:</span>
+-                                <span class="server-detail-value" style="font-size:11px;">D:\AI_Engineer\MSEMAX</span>
+-                            </div>
+-                        </div>
+-
+-                        <div class="server-actions-grid">
+-                            <button id="btn-active-chatgpt" class="btn btn-outline" onclick="setActiveServer('chatgpt')">
+-                                <i class="ph-bold ph-check"></i> <span data-i18n="btn_set_as_active">تفعيل كمزود نشط</span>
+-                            </button>
++                                <span id="badge-status-chatgpt" class="badge-pill status-offline">🔴 متوقف</span>
++                            </div>
++                        </div>
++
++                        <div class="card-compact-actions">
+                             <button id="btn-toggle-chatgpt" class="btn btn-primary" onclick="toggleServerInstance('chatgpt')">
+                                 <i class="ph-bold ph-play"></i> <span data-i18n="btn_start_instance">تشغيل السيرفر</span>
+                             </button>
+@@ -1905,28 +1905,35 @@
+                                 <i class="ph-bold ph-lightning"></i> <span data-i18n="btn_test_connection">اختبار الاتصال</span>
+                             </button>
+-                            <button class="btn btn-outline-secondary" onclick="openServerSession('chatgpt')">
+-                                <i class="ph-bold ph-browser"></i> <span data-i18n="btn_login_session">فتح الجلسة (Login)</span>
+-                            </button>
+-                        </div>
+-                    </div>
+-                </div>
+-
+-                <!-- Dedicated AI Server Terminal Console -->
+-                <div class="settings-card" style="border-color: var(--border); margin-top: 6px;">
+-                    <div class="card-header" style="background: var(--text-main); color: white; display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; border-radius: var(--radius-md) var(--radius-md) 0 0;">
+-                        <div style="display: flex; align-items: center; gap: 10px;">
+-                            <i class="ph-fill ph-terminal-window" style="font-size: 20px; color: #38bdf8;"></i>
++                            <button class="btn btn-outline-secondary" onclick="openServerSession('chatgpt')" title="فتح جلسة تسجيل الدخول">
++                                <i class="ph-bold ph-browser"></i> <span data-i18n="btn_login_session">فتح الجلسة (Login)</span>
++                            </button>
++                            <button id="btn-active-chatgpt" class="btn btn-outline" onclick="setActiveServer('chatgpt')">
++                                <i class="ph-bold ph-check"></i> <span data-i18n="btn_set_as_active">تفعيل كمزود نشط</span>
++                            </button>
++                        </div>
++                    </div>
++                </div>
++
++                <!-- Dedicated Full-Height AI Server Live Console (flex: 1) -->
++                <div class="server-terminal-container">
++                    <div class="server-terminal-toolbar">
++                        <div class="terminal-left-info">
++                            <i class="ph-fill ph-terminal-window" style="font-size: 19px; color: #38bdf8;"></i>
+                             <div>
+-                                <h3 style="margin: 0; font-size: 14px; font-weight: 700;" data-i18n="server_terminal_title">شاشة سجلات وخادم الذكاء الاصطناعي (AI Server Console)</h3>
+-                                <span style="font-size: 11px; color: #94a3b8;" data-i18n="server_terminal_sub">مخرجات Uvicorn المباشرة، فحص الاتصال، ورسائل بدء وإيقاف السيرفرات</span>
+-                            </div>
+-                        </div>
+-                        <div style="display: flex; align-items: center; gap: 8px;">
+-                            <span id="server-terminal-status" style="font-size: 11px; background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 8px; border-radius: 6px; color: #38bdf8; font-family: monospace;">Live Console</span>
+-                            <button class="btn btn-small btn-text" style="color: #94a3b8;" onclick="loadServerLogs()" title="تحديث السجل">
++                                <span class="terminal-title" data-i18n="server_terminal_title">شاشة سجلات وخادم الذكاء الاصطناعي (AI Server Console)</span>
++                                <span class="terminal-sub" data-i18n="server_terminal_sub">مخرجات السيرفرات المباشرة، فحص الاتصال، ورسائل Uvicorn</span>
++                            </div>
++                        </div>
++
++                        <div class="terminal-actions-group">
++                            <span id="server-terminal-status" class="terminal-badge-live">Live Console</span>
++                            <button type="button" class="btn btn-outline-warning" onclick="freeServerPorts()" title="إغلاق إجباري لأي عمليات معلقة على 8000 أو 8001">
++                                <i class="ph-bold ph-lightning"></i> <span>تحرير المنافذ (Free Ports)</span>
++                            </button>
++                            <button type="button" class="btn btn-terminal-action" onclick="loadServerLogs()" title="تحديث السجل">
+                                 <i class="ph ph-arrows-clockwise"></i> <span data-i18n="btn_refresh">تحديث</span>
+                             </button>
+-                            <button class="btn btn-small btn-text" style="color: #f87171;" onclick="clearServerLogs()" title="مسح السجل">
++                            <button type="button" class="btn btn-terminal-action danger" onclick="clearServerLogs()" title="مسح السجل">
+                                 <i class="ph ph-trash"></i> <span data-i18n="btn_clear">مسح</span>
+                             </button>
+                         </div>
+@@ -1933,5 +1933,6 @@
+-                    <div style="background: #111827; padding: 14px; border-radius: 0 0 var(--radius-md) var(--radius-md);">
+-                        <textarea id="ai-server-terminal" readonly style="width: 100%; height: 260px; min-height: 180px; max-height: 450px; background: #111827; color: #38bdf8; border: none; font-family: 'Consolas', 'Courier New', monospace; font-size: 12.5px; line-height: 1.55; outline: none; resize: vertical; direction: ltr; text-align: left; box-sizing: border-box;"></textarea>
++
++                    <div class="server-terminal-body">
++                        <textarea id="ai-server-terminal" readonly spellcheck="false"></textarea>
+                     </div>
+                 </div>
+             </div>
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

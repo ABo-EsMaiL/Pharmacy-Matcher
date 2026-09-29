@@ -1,0 +1,27 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -46,8 +46,8 @@
+   "results": [
+     {
+       "case_id": "string",
+-      "status": "match" | "review" | "no_match",
+-      "item_id": "string (candidate ID or empty string if no_match)",
++      "status": "match" | "review",
++      "item_id": "string (the matching candidate ID)",
+       "reason": "string (Arabic explanation when review, otherwise empty string)"
+     }
+   ]
+@@ -54,5 +54,8 @@
+-Rules:
+-- DO NOT return markdown blocks. Return ONLY the raw JSON starting with { and ending with }.
++
++CRITICAL RULES FOR RESPONSE:
++- ONLY include cases that are "match" or "review".
++- DO NOT return cases that are "no_match" (any omitted case_id is automatically considered no_match).
++- DO NOT return markdown blocks (no ```json). Return ONLY the raw JSON starting with { and ending with }.
+ """
+ 
+ class FastCoordinator:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

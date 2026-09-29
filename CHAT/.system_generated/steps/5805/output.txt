@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -16,7 +16,7 @@
+ CRITICAL PHARMACEUTICAL RULES:
+ 1. STRICT BRAND IDENTITY (NO GENERICS / NO ALTERNATIVES):
+    - You MUST match the EXACT SAME commercial trade brand name.
+-   - NEVER suggest or accept alternative brand names, different trade names, or generics (e.g. Panadol is NOT Cetal, Brufen is NOT Cataflam, Augmentin is NOT Curam, Ebastine is NOT Loratadine, Triactin is NOT Claritin, Sinopril is NOT Sinupret, Depozine is NOT Diosmin).
++   - NEVER suggest or accept alternative brand names, different trade names, or generics (e.g. Panadol is NOT Cetal, Brufen is NOT Cataflam, Augmentin is NOT Curam, Ebastine is NOT Loratadine, Triactin is NOT Claritin, Sinopril is NOT Sinupret, Depozine is NOT Diosmin, Controloc/كونترولوك is NOT Protiloc/بروتولوك, Eucarbon/اوكاربون is NOT Neocarbon/نيوكاربون, Zithron/زيثرون is NOT Zithromax/زيثروماكس, Carntina/كارنتينا is NOT Carnivita/كارنيفيتا).
+    - If the trade brand is a different commercial brand or generic substitute, YOU MUST RETURN "status": "no_match" (or omit it).
+    - Allow common Arabic OCR scanning artifacts, dropped letters/syllables, phonetic variants, and Arabic/Persian letter substitutions of the SAME exact commercial brand (e.g. فيوسيدين/فيوسيدل where connected 'ين' is read as 'ل', ميبو/ميو where 'ب' is dropped, بروفين/برونفين, امبوفير/اميفير, ديباكين/ديبيكان, or dropped initial 'ا', dropped single letters or missing dots like 'ن' or 'ب', Persian/Urdu letters like پ for ب or ک for ك or گ for ك/ج, visually confused OCR letters like 'ف' vs 'د', or slight vowel variations).
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

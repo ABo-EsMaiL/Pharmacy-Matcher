@@ -1,0 +1,11 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_chatgpt_server.py", line 28, in <module>
+    main()
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_chatgpt_server.py", line 11, in main
+    mgr = MultiServerManager(logger_callback=print)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MultiServerManager.__init__() missing 1 required positional argument: 'settings'
+

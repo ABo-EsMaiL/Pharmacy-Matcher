@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\config.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -22,7 +22,7 @@
+ 
+     # إعدادات OpenRouter
+     openrouter_api_key: str = "[REDACTED_CREDENTIAL]"
+-    openrouter_model: str = "google/gemini-2.0-flash-exp:free"
++    openrouter_model: str = "openrouter/free"
+ 
+     # إعدادات Gemini (لم تعد مستخدمة حاليا)
+     gemini_model: str = "gemini-3.5-flash"
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

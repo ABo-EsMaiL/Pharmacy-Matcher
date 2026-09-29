@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+{'status': 'ok', 'gateway': 'MSEMAX (AIStudio Web Hook)', 'version': '2.1.0', 'browser_ready': True, 'session_file_exists': True, 'headless': False, 'profile_dir': 'D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile', 'default_model': 'gemini-3.8-flash', 'thinking_mode': 'high', 'active_model': 'Upgrade to unlock more\nAccess higher limits, Pro models, and more.', 'model_verified': False, 'active_thinking': 'Medium', 'thinking_verified': False, 'google_search_enabled': False, 'search_verified': True, 'clear_chat_on_request': True, 'port': 8001, 'rate_limit': '30/minute'}
+

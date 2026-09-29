@@ -1,0 +1,25 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -545,6 +545,7 @@
+ .card-header.warning { background: var(--warning); }
+ 
+ .drop-zone {
++    cursor: pointer;
+     padding: 40px 20px;
+     text-align: center;
+     border: 2px dashed var(--border);
+@@ -555,6 +555,11 @@
+ .drop-zone:hover {
+     border-color: var(--primary);
+     background: #f0f9ff;
++    transform: translateY(-2px);
++    box-shadow: var(--shadow-sm);
++}
++.drop-zone:active {
++    transform: translateY(0);
+ }
+ 
+ .drop-icon {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

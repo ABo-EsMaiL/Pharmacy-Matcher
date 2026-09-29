@@ -1,0 +1,8 @@
+Successfully scheduled one-shot timer.
+Expected to fire at: 2026-09-21T13:50:29+03:00
+Prompt: Check on the pharmacy builder subagents
+Early Termination: any
+
+[2026-09-21T13:47:59+03:00] Still waiting. Remaining time: 2m30s
+[2026-09-21T13:48:29+03:00] Still waiting. Remaining time: 2m0s
+[2026-09-21T13:48:56+03:00] Timer cancelled: early-termination condition (any) met by a message from system.

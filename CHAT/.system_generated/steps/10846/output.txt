@@ -1,0 +1,89 @@
+
+The command exited with code 0.
+Output:
+=== screen-results (lines 1611-1691) ===
+  1611: <div id="screen-results" class="screen">
+  1612: <header class="page-header">
+  1613: <h2><i class="ph-fill ph-check-circle"></i> <span data-i18n="results_title">تقرير نتائج ال
+  1614: <p data-i18n="results_desc">تم الانتهاء من فحص الملفات وإنشاء تقرير الإكسيل بنجاح.</p>
+  1615: </header>
+  1616: 
+  1617: <div class="stats-grid">
+  1618: <div class="stat-card">
+  1619: <div class="stat-icon"><i class="ph-fill ph-list-numbers"></i></div>
+  1620: <div class="stat-info">
+  1621: <span class="stat-title" data-i18n="stat_total_title">إجمالي الأصناف المطلوبة</span>
+  1622: <strong id="stat-total" class="stat-value">0</strong>
+  1623: </div>
+  1624: </div>
+  1625: <div class="stat-card stat-success">
+  1626: <div class="stat-icon"><i class="ph-fill ph-check-fat"></i></div>
+=== screen-history (lines 1692-1707) ===
+  1692: <div id="screen-history" class="screen">
+  1693: <header class="page-header">
+  1694: <h2><i class="ph-fill ph-clock-counter-clockwise"></i> <span data-i18n="history_title">سجل
+  1695: <p data-i18n="history_desc">هنا تجد جميع عمليات المطابقة التي قمت بها سابقاً، يمكنك العودة
+  1696: </header>
+  1697: 
+  1698: <div id="history-list" class="history-grid">
+  1699: <!-- History items will be injected here -->
+  1700: <div class="empty-state">
+  1701: <i class="ph-fill ph-empty"></i>
+  1702: <p data-i18n="history_empty">لا توجد عمليات سابقة مسجلة.</p>
+  1703: </div>
+  1704: </div>
+  1705: </div>
+  1706: 
+  1707: <!-- Screen 4: Settings -->
+=== screen-settings (lines 1708-1809) ===
+  1708: <div id="screen-settings" class="screen">
+  1709: <header class="page-header">
+  1710: <h2><i class="ph-fill ph-gear"></i> <span data-i18n="settings_title">إعدادات النظام</span>
+  1711: <p data-i18n="settings_desc">قم بضبط إعدادات الربط مع سيرفر الذكاء الاصطناعي (MSEMAX) و Un
+  1712: </header>
+  1713: 
+  1714: <div class="settings-grid">
+  1715: <!-- Language Selection Card (Prominent & Clear) -->
+  1716: <div class="settings-card" style="grid-column: 1 / -1; border-color: var(--primary);">
+  1717: <div class="card-header primary">
+  1718: <i class="ph-fill ph-translate"></i>
+  1719: <h3 data-i18n="settings_lang_header">لغة واجهة البرنامج (Interface Language)</h3>
+  1720: </div>
+  1721: <div class="card-body">
+  1722: <p style="margin-top: 0; margin-bottom: 14px; color: var(--text-muted); font-size: 13px;" 
+  1723: <div class="language-selection-boxes">
+=== screen-logs (lines 1810-1827) ===
+  1810: <div id="screen-logs" class="screen">
+  1811: <div class="screen-header">
+  1812: <h2 data-i18n="terminal_title">سجل النظام (Terminal)</h2>
+  1813: <p class="subtitle" data-i18n="terminal_subtitle">يُظهر مخرجات العمليات الجارية في الخلفية
+  1814: </div>
+  1815: 
+  1816: <div class="card" style="flex:1; display:flex; flex-direction:column; background:#1e1e1e; 
+  1817: <div class="card-header" style="background: var(--text-main); color: white;">
+  1818: <i class="ph-fill ph-terminal"></i>
+  1819: <h3 style="margin:0; font-size:14px;">Pipeline Terminal</h3>
+  1820: </div>
+  1821: <div style="flex:1; padding: 12px; overflow: hidden; display:flex;">
+  1822: <textarea id="pipeline-log-terminal" readonly style="flex:1; width: 100%; height: 100%; mi
+  1823: </div>
+  1824: </div>
+  1825: </div>
+=== screen-servers (lines 1828-1983) ===
+  1828: <div id="screen-servers" class="screen">
+  1829: <div class="servers-dashboard-header">
+  1830: <div class="dashboard-header-title">
+  1831: <i class="ph-fill ph-hard-drives"></i>
+  1832: <div>
+  1833: <h2 data-i18n="servers_title">إدارة سيرفرات الذكاء الاصطناعي (AI Servers)</h2>
+  1834: <span data-i18n="servers_desc">التحكم في سيرفرات MSEMAX، فحص الاتصال، والتيرمينال المباشر<
+  1835: </div>
+  1836: </div>
+  1837: 
+  1838: <!-- 1-Click Active Provider Switcher Pills -->
+  1839: <div class="active-switcher-container">
+  1840: <span class="switcher-label"><i class="ph-fill ph-lightning"></i> <span data-i18n="lbl_act
+  1841: <div class="switcher-pills">
+  1842: <button id="pill-provider-gaistudio" class="switcher-pill" onclick="setActiveServer('gaist
+  1843: <i class="ph-fill ph-google-logo"></i> <span>Google AI Studio (8001)</span>
+

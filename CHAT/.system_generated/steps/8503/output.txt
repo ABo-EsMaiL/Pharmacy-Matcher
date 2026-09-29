@@ -1,0 +1,10 @@
+{"name":"__init__.py","sizeBytes":"15"}
+{"name":"__pycache__","isDir":true}
+{"name":"app.py","sizeBytes":"2029"}
+{"name":"backend.py","sizeBytes":"33830"}
+{"name":"database.py","sizeBytes":"4073"}
+{"name":"server_manager.py","sizeBytes":"17143"}
+{"name":"static","isDir":true}
+{"name":"templates","isDir":true}
+
+Summary: This directory contains 3 subdirectories and 5 files.

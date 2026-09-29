@@ -1,0 +1,1 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":1974,"LineContent":"         To keep app.js happy if it references screen-home, we add a dummy hidden div --\u003e"}

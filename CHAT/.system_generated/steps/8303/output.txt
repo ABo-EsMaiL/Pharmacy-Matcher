@@ -1,0 +1,16 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -667,6 +667,10 @@
+             self._log_provider_error(url, model, inputs, content, "MSEMAX_ERROR_STRING")
+             raise RuntimeError(f"MSEMAX Error: {content.strip()}")
+ 
++        if "too_many_tool_calls" in content.lower():
++            self._log_provider_error(url, model, inputs, content, "TOO_MANY_TOOL_CALLS")
++            raise RuntimeError(f"too_many_tool_calls error from provider: {content[:400]}")
++
+         # Robust JSON extraction
+         clean = content.strip()
+         # 1. Try markdown code block extraction
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

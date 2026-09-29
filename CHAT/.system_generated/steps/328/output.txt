@@ -1,0 +1,16 @@
+Created the following subagents:
+{
+  "conversationId": "78556a8d-8b4e-4647-a699-1929cb9e3e1a",
+  "logAbsoluteUri": "file:///C:/Users/kakak/.gemini/antigravity/brain/78556a8d-8b4e-4647-a699-1929cb9e3e1a/.system_generated/logs/transcript.jsonl",
+  "workspaceUris": [
+    "file:///d%3A/AI_Engineer/Pharmacy-agy"
+  ]
+}
+{
+  "conversationId": "90761d3d-59f2-4ed1-92bf-a470ccfdb240",
+  "logAbsoluteUri": "file:///C:/Users/kakak/.gemini/antigravity/brain/90761d3d-59f2-4ed1-92bf-a470ccfdb240/.system_generated/logs/transcript.jsonl",
+  "workspaceUris": [
+    "file:///d%3A/AI_Engineer/Pharmacy-agy"
+  ]
+}
+The subagents will send you a message when they have completed their task or require guidance. There is no need to poll for their responses.

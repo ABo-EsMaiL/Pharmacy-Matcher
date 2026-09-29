@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\forensic_not_found_audit.py", line 6, in <module>
+    from rapidfuzz import fuzz
+ModuleNotFoundError: No module named 'rapidfuzz'
+

@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio-vision\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -53,6 +53,8 @@
+ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ if not os.path.isabs(CHROME_PROFILE_DIR):
+     CHROME_PROFILE_DIR = os.path.normpath(os.path.join(BASE_DIR, CHROME_PROFILE_DIR))
++TEMP_UPLOADS_DIR = os.path.join(BASE_DIR, "temp_uploads")
++os.makedirs(TEMP_UPLOADS_DIR, exist_ok=True)
+ HEADLESS = os.getenv("HEADLESS", "true").lower() in ("true", "1", "yes")
+ DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "gemini-3.8-flash").strip()
+ THINKING_MODE = os.getenv("THINKING_MODE", "high").strip().lower()
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

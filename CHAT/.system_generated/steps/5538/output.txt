@@ -1,0 +1,30 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Extracted 993 items from column 'أسم الصنف'
+Loaded 591 unique shortages and 6 warehouse files.
+
+============================================================
+[*] Processing Warehouse files (1 file(s)) [PARALLEL WORKERS]
+============================================================
+
+  -> [START] Processing file: السلام شبين.pdf (Type: .pdf)
+[!] Exception processing السلام شبين.pdf: [!] Unstructured API Key required for PDF files.
+    Please set UNSTRUCTURED_API_KEY in .env
+
+============================================================
+[+] Completed Warehouse: 0 items from 1 file(s)
+============================================================
+
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\sim_auto_all.py", line 28, in <module>
+    finder = FastCandidateFinder(wh_items)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: FastCandidateFinder.__init__() takes 1 positional argument but 2 were given
+

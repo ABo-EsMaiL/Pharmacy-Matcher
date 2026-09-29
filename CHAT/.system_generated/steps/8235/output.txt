@@ -1,0 +1,42 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -646,18 +646,31 @@
+             const hasSpinner = document.querySelector('mat-progress-spinner, .typing-indicator, ms-spinner, .thought-activity-host[aria-expanded="true"]') !== null;
+             const isRunning = Boolean(stopBtn) || hasSpinner;
+ 
+-            // Check for internal errors
++            // Check for internal errors and tool call errors
+             let hasError = false;
++            let errorText = "";
+             const alertEl = document.querySelector('mat-snack-bar-container, .toast, [role="alert"]');
+             if (alertEl) {
+                 const atxt = (alertEl.innerText || alertEl.textContent || '').toLowerCase();
+-                if (atxt.includes('permission denied') || atxt.includes('internal error') || atxt.includes('failed to generate')) {
++                if (atxt.includes('permission denied') || atxt.includes('internal error') || atxt.includes('failed to generate') || atxt.includes('too_many_tool_calls') || atxt.includes('too many tool calls')) {
+                     hasError = true;
+-                }
+-            }
++                    errorText = alertEl.innerText || alertEl.textContent || '';
++                }
++            }
++
++            const bodyTxt = (document.body.innerText || '');
++            if (bodyTxt.includes('too_many_tool_calls') || bodyTxt.includes('Too many tool calls')) {
++                hasError = true;
++                errorText = 'TOO_MANY_TOOL_CALLS: ' + bodyTxt.slice(0, 500);
++            }
++
++            // Count tool call chips in DOM
++            let toolCallsCount = 0;
++            const toolChips = document.querySelectorAll('ms-grounding-chip, ms-search-query, [data-test-id*="tool" i], .grounding-chip, .tool-call, mat-chip');
++            toolCallsCount = toolChips.length;
+ 
+             if (hasError) {
+-                return { text: "", is_running: isRunning, is_done: false, has_error: true, new_turn_started: true, model_count: 0 };
++                return { text: "", is_running: isRunning, is_done: false, has_error: true, error_text: errorText, new_turn_started: true, model_count: 0, tool_calls: toolCallsCount };
+             }
+ 
+             // Find all chat turns (top-level elements only)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

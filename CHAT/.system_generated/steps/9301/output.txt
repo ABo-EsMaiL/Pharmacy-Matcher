@@ -1,0 +1,16 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -388,8 +388,8 @@
+             
+             if is_chatgpt:
+                 batch_size = 100
+-                # If total ambiguous items <= 120, group into 1 single message to strictly save ChatGPT prompt quota
+-                if len(llm_cases) <= 120:
++                # If total ambiguous items <= 125, group into 1 single message to strictly save ChatGPT prompt quota
++                if len(llm_cases) <= 125:
+                     batches = [llm_cases]
+                 else:
+                     batches = [llm_cases[i:i + batch_size] for i in range(0, len(llm_cases), batch_size)]
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

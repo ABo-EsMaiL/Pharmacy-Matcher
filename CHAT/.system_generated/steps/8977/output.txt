@@ -1,0 +1,12 @@
+
+The command exited with code 1.
+Output:
+Invoke-WebRequest : The operation has timed out.
+At line:1 char:1
++ Invoke-WebRequest -Uri "http://127.0.0.1:8000/health" -TimeoutSec 2
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+ 
+

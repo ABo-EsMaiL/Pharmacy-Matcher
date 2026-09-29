@@ -1,0 +1,26 @@
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+'سينوبريت اقراص' vs 'سينوبريل 2 مجم اقراص/باکت 90':
+  Brand: 'سينوبريت' vs 'سينوبريل'
+  Result: True, Reason: auto_matched
+
+'ديوزمين 30 قرص' vs 'ديبوزين 500مجم اقراص':
+  Brand: 'ديوزمين' vs 'ديبوزين'
+  Result: True, Reason: auto_matched
+
+'فيتا زنك  كبسول' vs 'فیتا زون قرص قدیم':
+  Brand: 'فيتا زنك' vs 'فيتا زون'
+  Result: True, Reason: auto_matched
+
+'سيتال1جم اقراص س ج' vs 'سيتال اقراص 500 س ج':
+  Brand: 'سيتال' vs 'سيتال'
+  Result: True, Reason: auto_matched
+
+'كتافلام  نقط' vs 'كتافلام ٥٠ س.ج ٨٦ج':
+  Brand: 'كتافلام' vs 'كتافلام'
+  Result: True, Reason: auto_matched
+
+'الكابرس تريو5/160/12.5مجم س ج' vs 'الكابرس تربو ١٠/١٦/١٢٤٠ قرص':
+  Brand: 'الكابرس تريو' vs 'الكابرس تربو'
+  Result: True, Reason: auto_matched
+

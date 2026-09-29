@@ -1,0 +1,16 @@
+
+The command exited with code 0.
+Output:
+
+Name                       Length LastWriteTime       
+----                       ------ -------------       
+__pycache__                       9/25/2026 7:23:50 PM
+excel_reader.py            4368   9/21/2026 7:00:44 PM
+file_handler.py            4881   9/25/2026 5:06:55 PM
+gemini_vision_extractor.py 12993  9/25/2026 6:00:32 PM
+markdown_reader.py         6436   9/25/2026 4:28:10 PM
+pdf_reader.py              17945  9/25/2026 2:58:14 PM
+__init__.py                21     9/21/2026 1:48:51 PM
+
+
+

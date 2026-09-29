@@ -1,0 +1,11 @@
+
+The command exited with code 1.
+Output:
+Get-CimInstance : The query is not valid for the specified query language.
+At line:1 char:1
++ Get-CimInstance Win32_Process -Filter "ProcessId in (764, 1648, 2712, ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-CimInstance], CimException
+    + FullyQualifiedErrorId : HRESULT 0x80041017,Microsoft.Management.Infrastructure.CimCmdlets.GetCimInstanceCommand
+ 
+

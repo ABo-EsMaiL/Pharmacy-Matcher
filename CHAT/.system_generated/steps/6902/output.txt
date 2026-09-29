@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+Result Fresh Chat:
+[System Instructions]
+RULE: OUTPUT JSON
+
+Hello
+

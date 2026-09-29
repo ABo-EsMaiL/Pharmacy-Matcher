@@ -1,0 +1,36 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -618,13 +618,11 @@
+ 
+             // Count model turns using strict model turn vs user turn discriminators
+             const isUserTurn = (t) => {
+-                const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
+-                const cls = (t.className || (t.getAttribute('class') || '')).toLowerCase();
+-                const author = (t.querySelector('.author-label, .turn-author, .role-label, ms-author-label')?.innerText || '').toLowerCase();
+-                const hasUserElem = t.querySelector('[data-turn-role="User"], .user-prompt-container, .user, ms-prompt-chunk, textarea') !== null;
+-                const hasModelContent = t.querySelector('ms-thought-chunk, .thought-activity-host, ms-text-chunk, ms-code-block, ms-code-chunk, .model-prompt-container') !== null;
++                if (t.querySelector('ms-prompt-chunk, textarea, .user-prompt-container')) return true;
++                const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
++                const cls = (t.className || (t.getAttribute('class') || '')).toLowerCase();
++                const author = (t.querySelector('.author-label, .turn-author, .role-label, ms-author-label')?.innerText || '').toLowerCase();
+                 if (role === 'user' || cls.includes('user') || author.includes('user') || author.includes('you')) return true;
+-                if (hasUserElem && !hasModelContent) return true;
+                 return false;
+             };
+ 
+@@ -631,4 +631,6 @@
+                 if (isUserTurn(t)) return false;
++                const hasThought = t.querySelector('ms-thought-chunk, .thought-activity-host') !== null;
++                const hasModelText = Array.from(t.querySelectorAll('ms-text-chunk, ms-code-block, ms-code-chunk, .cmark-node')).some(c => !c.closest('ms-prompt-chunk'));
+                 const role = (t.getAttribute('data-turn-role') || '').toLowerCase();
+                 const cls = (t.className || (t.getAttribute('class') || '')).toLowerCase();
+                 const author = (t.querySelector('.author-label, .turn-author, .role-label, ms-author-label')?.innerText || '').toLowerCase();
+@@ -635,4 +635,4 @@
+-                return Boolean(t.querySelector('ms-thought-chunk, .thought-activity-host, ms-text-chunk, ms-code-block, ms-code-chunk, .model-prompt-container, .response-container'));
++                return hasThought || hasModelText || Boolean(t.querySelector('.model-prompt-container, .response-container'));
+             };
+ 
+             const modelTurns = allTurns.filter(isModelTurn);
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

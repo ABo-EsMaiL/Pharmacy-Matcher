@@ -1,0 +1,25 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\server_manager.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -282,8 +282,11 @@
+             return {"success": False, "output": str(e)}
+ 
+     def get_status(self) -> dict:
+-        running = self.is_running()
+-        pid = self.process.pid if self.process and self.process.poll() is None else None
++        is_listening = is_port_listening(self.port)
++        is_managed = (self.process is not None and self.process.poll() is None)
++        running = is_listening or is_managed
++        is_external = is_listening and not is_managed
++        pid = self.process.pid if is_managed else None
+         return {
+             "key": self.key,
+             "name": self.name,
+@@ -290,3 +290,5 @@
++            "is_managed": is_managed,
++            "is_external": is_external,
+             "pid": pid,
+             "port": self.port,
+             "dir": self.dir,
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

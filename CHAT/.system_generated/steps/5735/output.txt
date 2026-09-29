@@ -1,0 +1,19 @@
+
+The command exited with code 1.
+Output:
+Total rows in PROC-009 review sheet: 952
+
+=== DESTINATION OF OLD 1176 REVIEW ROWS IN PROC-011 ===
+  not_found: 920 rows
+  matched: 23 rows
+  stayed_review: 9 rows
+
+Unique shortage items in old review: 381
+  -> Unique Matched in PROC-011: 6
+  -> Unique Stayed in Review in PROC-011: 4
+  -> Unique Moved to Not Found in PROC-011: 371
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\compare_proc9_vs_proc11.py", line 85, in <module>
+    from src.fast_match.coordinator import classify_pair
+ModuleNotFoundError: No module named 'src'
+

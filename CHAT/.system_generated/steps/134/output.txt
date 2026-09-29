@@ -1,0 +1,20 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\file_handler.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -57,6 +57,8 @@
+             items = _process_excel_file(filepath)
+         elif ext in _PDF_EXTENSIONS:
+             items = _process_pdf_file(filepath, api_key, base_url)
++        elif ext in _JSON_EXTENSIONS:
++            items = _process_json_file(filepath)
+         else:
+             raise ValueError(
+                 f"❌ امتداد الملف غير مدعوم: {ext}\n"
+@@ -63,4 +63,4 @@
+-                f"{', '.join(sorted(_EXCEL_EXTENSIONS | _PDF_EXTENSIONS))}"
++                f"{', '.join(sorted(_EXCEL_EXTENSIONS | _PDF_EXTENSIONS | _JSON_EXTENSIONS))}"
+             )
+ 
+         results[filepath.name] = items
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

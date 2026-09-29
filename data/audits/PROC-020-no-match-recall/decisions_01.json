@@ -1,0 +1,667 @@
+[
+  {
+    "case_id": "A0000",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد منتجات مطابقة لـ كال فود د3 بين المرشحين"
+  },
+  {
+    "case_id": "A0001",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم ابيتنس بين المرشحين"
+  },
+  {
+    "case_id": "A0002",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم ابيسفين بين المرشحين"
+  },
+  {
+    "case_id": "A0003",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم ابيكوفلوسين بين المرشحين"
+  },
+  {
+    "case_id": "A0004",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم ابيماج بين المرشحين"
+  },
+  {
+    "case_id": "A0005",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0301"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "ابيمول اكسترا اقراص يختلف في التركيبة والشكل عن ابيمول اطفال لبوس المطلوب"
+  },
+  {
+    "case_id": "A0006",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0301"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "ابيمول اكسترا اقراص يختلف في التركيبة والشكل عن ابيمول اطفال لبوس المطلوب"
+  },
+  {
+    "case_id": "A0007",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اتلابسلس نقط بين المرشحين"
+  },
+  {
+    "case_id": "A0008",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اتلانتو ثري بين المرشحين"
+  },
+  {
+    "case_id": "A0009",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اتلانتيكو بين المرشحين"
+  },
+  {
+    "case_id": "A0010",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اتميبرازول وتشابه اللاحقة برازول لا يعد دليلاً كافياً"
+  },
+  {
+    "case_id": "A0011",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اجيولاكس بين المرشحين"
+  },
+  {
+    "case_id": "A0012",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم ادرينوكورتين بين المرشحين"
+  },
+  {
+    "case_id": "A0013",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم ادويفلام بين المرشحين"
+  },
+  {
+    "case_id": "A0014",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اريببركس بين المرشحين"
+  },
+  {
+    "case_id": "A0015",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اريثركس بين المرشحين"
+  },
+  {
+    "case_id": "A0016",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم ازارجا قطرة بين المرشحين"
+  },
+  {
+    "case_id": "A0017",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم ازمازون بين المرشحين"
+  },
+  {
+    "case_id": "A0018",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اسبروتكت بين المرشحين"
+  },
+  {
+    "case_id": "A0019",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اسبرين بروتكت بين المرشحين"
+  },
+  {
+    "case_id": "A0020",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0317",
+      "I0729",
+      "I2504",
+      "I0318"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "المرشحون اسبوسيد عادي وأطفال بدون فيتامين سي فوار المطلوب"
+  },
+  {
+    "case_id": "A0021",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم استرامارك بين المرشحين"
+  },
+  {
+    "case_id": "A0022",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم استربسلز بين المرشحين"
+  },
+  {
+    "case_id": "A0023",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم استربسلز بين المرشحين"
+  },
+  {
+    "case_id": "A0024",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم افاندروكس بين المرشحين"
+  },
+  {
+    "case_id": "A0025",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم افروزوليد بين المرشحين"
+  },
+  {
+    "case_id": "A0026",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم افروزوليد بين المرشحين"
+  },
+  {
+    "case_id": "A0027",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم افيل حقن بين المرشحين"
+  },
+  {
+    "case_id": "A0028",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اكسبتو برو بين المرشحين"
+  },
+  {
+    "case_id": "A0029",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0744"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اكسترا بروتين شيكولاته يختلف في النكهة عن فانيليا المطلوب"
+  },
+  {
+    "case_id": "A0030",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0327",
+      "I2505",
+      "I2506",
+      "I0326"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "مرشحو اكسفورج إما بتركيز 5 بدلاً من 10 أو بدون تركيبة اتش سي تي"
+  },
+  {
+    "case_id": "A0031",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اكني اكت بين المرشحين"
+  },
+  {
+    "case_id": "A0032",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم البيوستكس بين المرشحين"
+  },
+  {
+    "case_id": "A0033",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم التراسولف بين المرشحين"
+  },
+  {
+    "case_id": "A0034",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم الفابرينزيما بين المرشحين"
+  },
+  {
+    "case_id": "A0035",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم الفاثرومب بين المرشحين"
+  },
+  {
+    "case_id": "A0036",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1794",
+      "I0242"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "الكابرس تريو متوفر بتركيز 10/160/12.5 وهو مختلف صراحة عن التركيز المطلوب 5/160/12.5"
+  },
+  {
+    "case_id": "A0037",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0242",
+      "I1794"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "الكابرس متاح بتركيز 5 مجم وهو مختلف صراحة عن التركيز المطلوب 10 مجم"
+  },
+  {
+    "case_id": "A0038",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0242",
+      "I1794"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "الكابرس المتاح إما أحادي أو تريو بتركيز مختلف ولا يطابق الكابرس بلاس 5/160"
+  },
+  {
+    "case_id": "A0039",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم الكافتابرو بين المرشحين"
+  },
+  {
+    "case_id": "A0040",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم الليرديب بين المرشحين"
+  },
+  {
+    "case_id": "A0041",
+    "status": "match",
+    "item_id": "I0254",
+    "plausible_ids": [
+      "I0254"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام في اسم المنتج املوسازايد والتركيز 5/12.5/40"
+  },
+  {
+    "case_id": "A0042",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0797"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اميبرايد متاح بتركيز 200 مجم وهو مختلف صراحة عن التركيز المطلوب 50 مجم"
+  },
+  {
+    "case_id": "A0043",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم انترستو بين المرشحين"
+  },
+  {
+    "case_id": "A0044",
+    "status": "match",
+    "item_id": "I1817",
+    "plausible_ids": [
+      "I0804",
+      "I0263",
+      "I2518",
+      "I1817",
+      "I1818"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام مع انتودين 20 مجم 30 قرص في المرشح I1817"
+  },
+  {
+    "case_id": "A0045",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم انتي كرامب بين المرشحين"
+  },
+  {
+    "case_id": "A0046",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اندرال بين المرشحين"
+  },
+  {
+    "case_id": "A0047",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اندوديرما صن سكرين بين المرشحين"
+  },
+  {
+    "case_id": "A0048",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم انزيماتريبس بين المرشحين"
+  },
+  {
+    "case_id": "A0049",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0810"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "انزيماكس دوال ريليس يختلف عن انزيماكس ديوبايوتكس المطلوب"
+  },
+  {
+    "case_id": "A0050",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم لانتوس سولوستار بين المرشحين"
+  },
+  {
+    "case_id": "A0051",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم انسولين نوفورابيد بين المرشحين"
+  },
+  {
+    "case_id": "A0052",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0812",
+      "I0811"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "انسيلاكوكس متاح بتركيز 90 مجم و120 مجم وهو تعارض صريح مع تركيز 60 مجم"
+  },
+  {
+    "case_id": "A0053",
+    "status": "review",
+    "item_id": "I0823",
+    "plausible_ids": [
+      "I0823"
+    ],
+    "no_match_basis": "",
+    "reason": "نفس المنتج انوكسيكام ولكن الشكل الصيدلي مختلف (لبوس بدلاً من أقراص)"
+  },
+  {
+    "case_id": "A0054",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم انونا لوسيون بين المرشحين"
+  },
+  {
+    "case_id": "A0055",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اوبتاديرول بلس بين المرشحين"
+  },
+  {
+    "case_id": "A0056",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اوبتك سالين قطرة بين المرشحين"
+  },
+  {
+    "case_id": "A0057",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0834",
+      "I0835",
+      "I0836",
+      "I0837",
+      "I0271",
+      "I1935",
+      "I1936",
+      "I1937"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اوجرام المتاح أقراص 1 جم أو شراب بتركيزات أخرى وتتعارض مع 312.5 مجم"
+  },
+  {
+    "case_id": "A0058",
+    "status": "match",
+    "item_id": "I1936",
+    "plausible_ids": [
+      "I0834",
+      "I0835",
+      "I0836",
+      "I0837",
+      "I0271",
+      "I1935",
+      "I1936",
+      "I1937"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام في الاسم اوجرام والتركيز 457 مجم شراب معلق في المرشح I1936"
+  },
+  {
+    "case_id": "A0059",
+    "status": "match",
+    "item_id": "I0840",
+    "plausible_ids": [
+      "I0840",
+      "I0841"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام لـ اورامكس بخاخ (اسبراي) في المرشح I0840"
+  },
+  {
+    "case_id": "A0060",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اوسوبان بين المرشحين"
+  },
+  {
+    "case_id": "A0061",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اوفيونهيبيتا بين المرشحين"
+  },
+  {
+    "case_id": "A0062",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اوكسازوليد بين المرشحين"
+  },
+  {
+    "case_id": "A0063",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اوكيوسيليرج فورت بين المرشحين"
+  },
+  {
+    "case_id": "A0064",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اوكيوميثيل بين المرشحين"
+  },
+  {
+    "case_id": "A0065",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اولانفيكسا بين المرشحين"
+  },
+  {
+    "case_id": "A0066",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اولفن بين المرشحين"
+  },
+  {
+    "case_id": "A0067",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اولوجنت بين المرشحين"
+  },
+  {
+    "case_id": "A0068",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اولوهيستين فورت بين المرشحين"
+  },
+  {
+    "case_id": "A0069",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1950"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اومنيك اوكايس يمثل صيغة مختلفة (اوكاس) عن اومنيك العادي"
+  },
+  {
+    "case_id": "A0070",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اوني شراب بين المرشحين"
+  },
+  {
+    "case_id": "A0071",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم اي يست كبسول بين المرشحين"
+  },
+  {
+    "case_id": "A0072",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم ايبويتين بين المرشحين"
+  },
+  {
+    "case_id": "A0073",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم ايبياكتو كريم بين المرشحين"
+  },
+  {
+    "case_id": "A0074",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد تطابق لاسم ايتوريكوكس بين المرشحين والبدائل العلاجية لا تطابق المنتج"
+  }
+]

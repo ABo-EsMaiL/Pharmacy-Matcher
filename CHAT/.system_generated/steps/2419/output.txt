@@ -1,0 +1,3 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":8,"LineContent":"from .search import FastCandidateFinder"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":103,"LineContent":"        finder = FastCandidateFinder()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\search.py","LineNumber":16,"LineContent":"class FastCandidateFinder:"}

@@ -1,0 +1,18 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -224,9 +224,9 @@
+ 
+ /* -------------------- PROGRESS MODAL -------------------- */
+ #progress-modal {
+-    position: fixed; 
+-    top: 0; left: 0; 
+-    width: 100vw; height: 100vh; 
++    position: absolute; 
++    top: 0; left: 0; right: 0; bottom: 0;
++    width: 100%; height: 100%; 
+     background: rgba(255, 255, 255, 0.85); 
+     z-index: 9998; 
+     align-items: center; 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

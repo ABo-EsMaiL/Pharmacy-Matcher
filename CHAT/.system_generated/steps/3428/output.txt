@@ -1,0 +1,27 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+Gemini extracted items: 19
+  {'item_name_raw': 'افيروكوكسيب 90مجم- 32ب', 'source_page': 1}
+  {'item_name_raw': 'امبوفير حقن جديدد', 'source_page': 1}
+  {'item_name_raw': 'ايزوتريتينوين 10 مجم 3 شريييط - 28', 'source_page': 1}
+  {'item_name_raw': 'ايزوتريتينوين 20م جديييد - 50', 'source_page': 1}
+  {'item_name_raw': 'بانادول اكسترا 48 قرص- 96ب', 'source_page': 1}
+  {'item_name_raw': 'بانثينول كريم كبييير سعر قدييم باكو 25', 'source_page': 1}
+  {'item_name_raw': 'ترايكوبافيت 100مجم 3شريط', 'source_page': 1}
+  {'item_name_raw': 'رانسيف 500 مجم قرص جدييييد45', 'source_page': 1}
+  {'item_name_raw': 'ستيميولان 400مجم كبسول', 'source_page': 1}
+  {'item_name_raw': 'كليكسان 40مجم- 84', 'source_page': 1}
+  {'item_name_raw': 'لوفير 400 سعر جديييد باكو 45', 'source_page': 1}
+  {'item_name_raw': 'لوفير800 سعرجدديد- باكو25', 'source_page': 1}
+  {'item_name_raw': 'ليفوفلوتانيت 750 فيال باكو 12 كرتونه 144', 'source_page': 1}
+  {'item_name_raw': 'هيرو 111 عادى جديد - 12ب لا يفرط', 'source_page': 1}
+  {'item_name_raw': 'هيرو 222 نيوتراديفنس 384', 'source_page': 1}
+  {'item_name_raw': 'هيرو اتش ايه جديد 499', 'source_page': 1}
+  {'item_name_raw': 'هيرو اف ال جديدج ك 12لايفرط', 'source_page': 1}
+  {'item_name_raw': 'هيرو ايه ار جديددد لايفرط', 'source_page': 1}
+  {'item_name_raw': 'هيرو دايجست 12لايفرط', 'source_page': 1}
+

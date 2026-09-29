@@ -1,0 +1,21 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+[*] Processing PDF file: السلام شبين.pdf
+[+] Loaded 187 items from alongside JSON: السلام شبين.json
+Threshold 50%: Shortages sent to LLM = 404 | Missed true matches = 0
+Threshold 55%: Shortages sent to LLM = 292 | Missed true matches = 0
+Threshold 60%: Shortages sent to LLM = 182 | Missed true matches = 0
+Threshold 65%: Shortages sent to LLM = 123 | Missed true matches = 1
+   Missed at 65%: توب جنج ادفانس30كبسوله س ج -> توب جينج كبسول/ماش
+Threshold 70%: Shortages sent to LLM =  94 | Missed true matches = 1
+   Missed at 70%: توب جنج ادفانس30كبسوله س ج -> توب جينج كبسول/ماش
+

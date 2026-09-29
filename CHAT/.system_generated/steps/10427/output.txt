@@ -1,0 +1,35 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\config.py","LineNumber":28,"LineContent":"    # Vision Gateway (MSEMAX-GAIStudio-vision)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\config.py","LineNumber":29,"LineContent":"    vision_api_url: str = \"http://127.0.0.1:8001/v1/chat/completions\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\config.py","LineNumber":30,"LineContent":"    vision_api_key: str = \"[REDACTED_CREDENTIAL]\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\config.py","LineNumber":31,"LineContent":"    vision_model: str = \"gemini-3.8-flash\""}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\config.py","LineNumber":59,"LineContent":"    vision_url = os.getenv(\"VISION_API_URL\", \"http://127.0.0.1:8001/v1/chat/completions\").strip()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\config.py","LineNumber":60,"LineContent":"    vision_key = os.getenv(\"VISION_API_KEY\", \"[REDACTED_CREDENTIAL]\").strip()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\config.py","LineNumber":61,"LineContent":"    vision_model = os.getenv(\"VISION_MODEL\", \"gemini-3.8-flash\").strip()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\config.py","LineNumber":66,"LineContent":"        vision_api_url=vision_url,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\config.py","LineNumber":67,"LineContent":"        vision_api_key=vision_key,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\config.py","LineNumber":68,"LineContent":"        vision_model=vision_model,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":10,"LineContent":"from .gemini_vision_extractor import extract_items_from_pdf_vision"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":24,"LineContent":"    vision_api_url: str = \"http://127.0.0.1:8001/v1/chat/completions\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":25,"LineContent":"    vision_api_key: str = \"[REDACTED_CREDENTIAL]\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":26,"LineContent":"    vision_model: str = \"gemini-3.8-flash\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":43,"LineContent":"                vision_api_url=vision_api_url,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":44,"LineContent":"                vision_api_key=vision_api_key,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":45,"LineContent":"                vision_model=vision_model,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":65,"LineContent":"    vision_api_url: str = \"http://127.0.0.1:8001/v1/chat/completions\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":66,"LineContent":"    vision_api_key: str = \"[REDACTED_CREDENTIAL]\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":67,"LineContent":"    vision_model: str = \"gemini-3.8-flash\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":88,"LineContent":"            vision_api_url=vision_api_url,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":89,"LineContent":"            vision_api_key=vision_api_key,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":90,"LineContent":"            vision_model=vision_model,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":118,"LineContent":"    vision_api_url: str = \"http://127.0.0.1:8001/v1/chat/completions\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":119,"LineContent":"    vision_api_key: str = \"[REDACTED_CREDENTIAL]\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":120,"LineContent":"    vision_model: str = \"gemini-3.8-flash\","}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":125,"LineContent":"    return extract_items_from_pdf_vision("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":127,"LineContent":"        api_url=vision_api_url,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":128,"LineContent":"        api_key=vision_api_key,"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\file_handler.py","LineNumber":129,"LineContent":"        model=vision_model"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\gemini_vision_extractor.py","LineNumber":38,"LineContent":"    places cache under data/processes/PROC-XXX/cache/vision/\u003cfile_slug\u003e_\u003chash[:10]\u003e."}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\gemini_vision_extractor.py","LineNumber":39,"LineContent":"    Otherwise places it under \u003cparent\u003e/.vision_cache/\u003cfile_slug\u003e_\u003chash[:10]\u003e."}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\gemini_vision_extractor.py","LineNumber":56,"LineContent":"        cache_dir = proc_root / \"cache\" / \"vision\" / folder_name"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\gemini_vision_extractor.py","LineNumber":58,"LineContent":"        cache_dir = filepath.parent / \".vision_cache\" / folder_name"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\src\\extract\\gemini_vision_extractor.py","LineNumber":83,"LineContent":"def extract_items_from_pdf_vision("}

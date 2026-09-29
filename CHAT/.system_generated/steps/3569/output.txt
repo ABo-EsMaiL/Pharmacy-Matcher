@@ -1,0 +1,155 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -193,74 +193,83 @@
+         print(f"  -> Exact Matches: {exact_count}")
+         print(f"  -> TF-IDF Auto-Matches (>88%): {tfidf_match_count}")
+         
+-        # 3. Process via LLM in 1 single message without splitting
++        # 3. Process via LLM in large optimal chunks (75 items per message)
+         if llm_cases and hasattr(self.config, 'local_api_url'):
+-            print(f"  -> Sending ALL {len(llm_cases)} ambiguous items to Local API (MSEMAX) in 1 SINGLE MESSAGE...")
+-            max_retries = 3
+-            parsed_results = []
+-            for attempt in range(max_retries):
+-                try:
+-                    time.sleep(2)
+-                    raw_results = self._call_local_api({"cases": llm_cases})
+-                    matched_count = 0
+-                    review_count = 0
+-                    for case, decision in zip(llm_cases, raw_results):
+-                        shortage_name = case["requested_name"]
+-                        status = decision.get("status", "no_match")
+-                        item_id = decision.get("item_id", "")
+-                        warehouse_item = catalog_by_id.get(item_id, "")
+-                        reason = decision.get("reason", "")
+-                        
+-                        if status in ("match", "review") and not warehouse_item:
+-                            if case.get("candidates"):
+-                                warehouse_item = case["candidates"][0]["name"]
+-                            else:
+-                                status = "no_match"
+-                                
+-                        if status == "match":
+-                            matched_count += 1
+-                        elif status == "review":
+-                            review_count += 1
++            batch_size = 75
++            batches = [llm_cases[i:i + batch_size] for i in range(0, len(llm_cases), batch_size)]
++            print(f"  -> Sending {len(llm_cases)} ambiguous items to Local API (MSEMAX) in {len(batches)} large batch(es) (Max ~75 items/msg)...")
++            
++            def process_chunk(cases_chunk, chunk_name):
++                max_retries = 3
++                for attempt in range(max_retries):
++                    try:
++                        time.sleep(2)
++                        raw_results = self._call_local_api({"cases": cases_chunk})
++                        parsed = []
++                        matched_in_chunk = 0
++                        review_in_chunk = 0
++                        for case, decision in zip(cases_chunk, raw_results):
++                            shortage_name = case["requested_name"]
++                            status = decision.get("status", "no_match")
++                            item_id = decision.get("item_id", "")
++                            warehouse_item = catalog_by_id.get(item_id, "")
++                            reason = decision.get("reason", "")
+                             
+-                        parsed_results.append({
+-                            "shortage_name": shortage_name,
+-                            "status": status,
+-                            "warehouse_item": warehouse_item,
+-                            "reason": reason
+-                        })
+-                    print(f"      [✓] Single-message completed: {matched_count} matched, {review_count} review.")
+-                    break
+-                except Exception as e:
+-                    err_str = str(e)
+-                    if "session might be expired" in err_str or "Session expired" in err_str:
+-                        print(f"      [!] خطأ في جلسة MSEMAX: انتهت صلاحية الجلسة على السيرفر.")
+-                        print(f"      [!] يرجى تشغيل python get_session.py في مجلد MSEMAX لتحديث الجلسة.")
+-                        break
+-                    if "429" in err_str:
+-                        wait_sec = 25 * (attempt + 1)
+-                        print(f"      [!] HTTP 429 Rate Limit. Waiting {wait_sec}s before retry ({attempt+1}/{max_retries})...")
+-                        time.sleep(wait_sec)
+-                    else:
+-                        print(f"      [!] Attempt {attempt+1}/{max_retries} error: {e}")
+-                        time.sleep(5)
+-            
+-            if not parsed_results:
+-                parsed_results = [{"shortage_name": c["requested_name"], "status": "no_match", "warehouse_item": "", "reason": ""} for c in llm_cases]
+-
+-            for result in parsed_results:
+-                if result["status"] == "match":
+-                    matched.append({
+-                        "shortage_item": result["shortage_name"],
+-                        "warehouse_item": result["warehouse_item"],
+-                        "confidence": "llm",
+-                        "method": "fast_llm"
+-                    })
+-                elif result["status"] == "review":
+-                    needs_review.append({
+-                        "shortage_item": result["shortage_name"],
+-                        "warehouse_item": result["warehouse_item"],
+-                        "reason": result.get("reason", "")
+-                    })
++                            if status in ("match", "review") and not warehouse_item:
++                                if case.get("candidates"):
++                                    warehouse_item = case["candidates"][0]["name"]
++                                else:
++                                    status = "no_match"
++                                    
++                            if status == "match":
++                                matched_in_chunk += 1
++                            elif status == "review":
++                                review_in_chunk += 1
++                                
++                            parsed.append({
++                                "shortage_name": shortage_name,
++                                "status": status,
++                                "warehouse_item": warehouse_item,
++                                "reason": reason
++                            })
++                        print(f"      [✓] Batch {chunk_name} ({len(cases_chunk)} items) done: {matched_in_chunk} matched, {review_in_chunk} review.")
++                        return parsed
++                    except Exception as e:
++                        err_str = str(e)
++                        if "session might be expired" in err_str or "Session expired" in err_str:
++                            print(f"      [!] خطأ في جلسة MSEMAX: انتهت صلاحية الجلسة على السيرفر.")
++                            print(f"      [!] يرجى تشغيل python get_session.py في مجلد MSEMAX لتحديث الجلسة.")
++                            break
++                        if "413" in err_str and len(cases_chunk) > 20:
++                            mid = len(cases_chunk) // 2
++                            print(f"      [!] 413 Payload too large on batch {chunk_name}. Adaptively splitting into ({mid} + {len(cases_chunk)-mid})...")
++                            return process_chunk(cases_chunk[:mid], f"{chunk_name}.1") + process_chunk(cases_chunk[mid:], f"{chunk_name}.2")
++                        if "429" in err_str:
++                            wait_sec = 25 * (attempt + 1)
++                            print(f"      [!] HTTP 429 Rate Limit on batch {chunk_name}. Waiting {wait_sec}s before retry ({attempt+1}/{max_retries})...")
++                            time.sleep(wait_sec)
++                        else:
++                            print(f"      [!] Batch {chunk_name} attempt {attempt+1}/{max_retries} error: {e}")
++                            time.sleep(5)
++                return [{"shortage_name": c["requested_name"], "status": "no_match", "warehouse_item": "", "reason": ""} for c in cases_chunk]
++
++            for idx, batch in enumerate(batches):
++                print(f"      [*] Sending Batch {idx + 1}/{len(batches)} ({len(batch)} items)...")
++                chunk_results = process_chunk(batch, str(idx + 1))
++                for result in chunk_results:
++                    if result["status"] == "match":
++                        matched.append({
++                            "shortage_item": result["shortage_name"],
++                            "warehouse_item": result["warehouse_item"],
++                            "confidence": "llm",
++                            "method": "fast_llm"
++                        })
++                    elif result["status"] == "review":
++                        needs_review.append({
++                            "shortage_item": result["shortage_name"],
++                            "warehouse_item": result["warehouse_item"],
++                            "reason": result.get("reason", "")
++                        })
+ 
+         print(f"  -> Final Warehouse Result: {len(matched)} matched, {len(needs_review)} review")
+         return {"matched": matched, "needs_review": needs_review}
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,27 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -64,21 +64,7 @@
+         except Exception:
+             pass
+ 
+-    # Native Drag and Drop handler
+-    def on_dropped(files):
+-        try:
+-            api.dropped_files.extend(files)
+-            window.evaluate_js("if(window.handleNativeDrop) window.handleNativeDrop();")
+-        except Exception as e:
+-            print(f"Error handling drop: {e}")
+-
+     window.events.closing += on_closing
+-    
+-    # Safely bind dropped event (if supported by pywebview version)
+-    try:
+-        window.events.dropped += on_dropped
+-    except AttributeError:
+-        pass
+ 
+     # Start the application (blocks until window is closed)
+     webview.start(
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

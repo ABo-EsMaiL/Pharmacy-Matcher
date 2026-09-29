@@ -1,0 +1,77 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\match\text_match.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -9,11 +9,11 @@
+ 
+ 
+ # ──────────────────────────────────────────────
+-# خريطة الأرقام العربية-الهندية إلى الأرقام الغربية
++# خريطة الأرقام العربية-الهندية والفارسية إلى الأرقام الغربية
+ # ──────────────────────────────────────────────
+ _ARABIC_INDIC_MAP = str.maketrans(
+-    "٠١٢٣٤٥٦٧٨٩",
+-    "0123456789",
++    "٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹",
++    "01234567890123456789",
+ )
+ 
+ # أحرف الألف المختلفة → ا
+@@ -30,24 +30,7 @@
+ 
+ def normalize_text(text: str) -> str:
+     """
+-    تنظيف وتوحيد نص اسم الدواء العربي للمقارنة.
+-
+-    الخطوات:
+-      1. تحويل الأرقام العربية-الهندية (٠-٩) إلى غربية (0-9)
+-      2. إزالة التطويل/الكشيدة (ـ)
+-      3. إزالة التشكيل (الحركات)
+-      4. توحيد أشكال الألف (أ، إ، آ → ا)
+-      5. تحويل التاء المربوطة (ة → ه) لأغراض البحث
+-      6. توحيد المسافات (مسافات متعددة → مسافة واحدة)
+-      7. حذف المسافات من البداية والنهاية
+-
+-    ملاحظة: لا يتم حذف أي كلمات أو اختصارات أو أرقام.
+-
+-    Args:
+-        text: النص الأصلي لاسم الدواء.
+-
+-    Returns:
+-        النص بعد التنظيف والتوحيد.
++    تنظيف وتوحيد نص اسم الدواء العربي للمقارنة مع دعم معالجة أخطاء الـ OCR واليونيكود.
+     """
+     if not text:
+         return ""
+@@ -54,5 +54,5 @@
+-    # 1. تحويل الأرقام العربية-الهندية إلى غربية
+-    result = text.translate(_ARABIC_INDIC_MAP)
++    # 1. تحويل الأرقام العربية-الهندية والفارسية إلى غربية
++    result = str(text).translate(_ARABIC_INDIC_MAP)
+ 
+     # 2. إزالة التطويل/الكشيدة
+     result = result.replace(_TATWEEL, "")
+@@ -62,13 +62,19 @@
+     # 4. توحيد أشكال الألف
+     result = _ALEF_VARIANTS.sub("ا", result)
+ 
+-    # 5. تحويل التاء المربوطة إلى هاء
++    # 5. توحيد الياء والألف المقصورة والياء الفارسية (OCR)
++    result = re.sub(r"[ىي\u06CC]", "ي", result)
++
++    # 6. توحيد حروف الـ OCR الشائعة في ملفات PDF (الكاف والباء والهاء الفارسية)
++    result = result.replace("\u06A9", "ك").replace("\u067E", "ب").replace("\u06C0", "ه").replace("\u06C1", "ه")
++
++    # 7. تحويل التاء المربوطة إلى هاء
+     result = result.replace("ة", "ه")
+ 
+-    # 6. توحيد المسافات
++    # 8. توحيد المسافات
+     result = re.sub(r"\s+", " ", result)
+ 
+-    # 7. حذف المسافات من البداية والنهاية
++    # 9. حذف المسافات من البداية والنهاية
+     result = result.strip()
+ 
+     return result
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,76 @@
+
+The command exited with code 0.
+Output:
+
+
+Name                       : python
+Id                         : 1648
+PriorityClass              : 
+FileVersion                : 
+HandleCount                : 281
+WorkingSet                 : 1314816
+PagedMemorySize            : 41472000
+PrivateMemorySize          : 41472000
+VirtualMemorySize          : 196927488
+TotalProcessorTime         : 00:01:57.2968750
+SI                         : 1
+Handles                    : 281
+VM                         : 4491894784
+WS                         : 1314816
+PM                         : 41472000
+NPM                        : 27192
+Path                       : 
+Company                    : 
+CPU                        : 117.296875
+ProductVersion             : 
+Description                : 
+Product                    : 
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   : 
+HasExited                  : 
+ExitTime                   : 
+Handle                     : 
+SafeHandle                 : 
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            : 
+MainModule                 : 
+MaxWorkingSet              : 
+MinWorkingSet              : 
+Modules                    : 
+NonpagedSystemMemorySize   : 27192
+NonpagedSystemMemorySize64 : 27192
+PagedMemorySize64          : 41472000
+PagedSystemMemorySize      : 250040
+PagedSystemMemorySize64    : 250040
+PeakPagedMemorySize        : 41828352
+PeakPagedMemorySize64      : 41828352
+PeakWorkingSet             : 61603840
+PeakWorkingSet64           : 61603840
+PeakVirtualMemorySize      : 212992000
+PeakVirtualMemorySize64    : 4507959296
+PriorityBoostEnabled       : 
+PrivateMemorySize64        : 41472000
+PrivilegedProcessorTime    : 00:00:59.9375000
+ProcessName                : python
+ProcessorAffinity          : 
+Responding                 : True
+SessionId                  : 1
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  : 9/22/2026 6:38:38 PM
+SynchronizingObject        : 
+Threads                    : {3024, 20364, 22336, 6300...}
+UserProcessorTime          : 00:00:57.3593750
+VirtualMemorySize64        : 4491894784
+EnableRaisingEvents        : False
+StandardInput              : 
+StandardOutput             : 
+StandardError              : 
+WorkingSet64               : 1314816
+Site                       : 
+Container                  : 
+
+
+
+

@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+Server jobs count: 0
+Local DB processes count: 0
+

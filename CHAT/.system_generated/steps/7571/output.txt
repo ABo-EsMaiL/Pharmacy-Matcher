@@ -1,0 +1,21 @@
+
+The command exited with code 1.
+Output:
+================================================================================
+VERIFYING MSEMAX LARGE BATCH (75 CASES) ADAPTIVE TIMEOUT & STATE MACHINE
+================================================================================
+[✓] Gateway: MSEMAX (AIStudio Web Hook)
+[✓] Active Model: Gemini 3.8 Flash
+gemini-3.8-fl... (Verified: True)
+[✓] Thinking Mode: High (Verified: True)
+[✓] Clear Chat On Request: True
+
+[+] Built full batch of 75 realistic cases for testing.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\verify_large_batch_timing.py", line 111, in <module>
+    main()
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\verify_large_batch_timing.py", line 76, in main
+    cfg = Config()
+          ^^^^^^^^
+TypeError: Config.__init__() missing 2 required positional arguments: 'unstructured_api_key' and 'gemini_api_key'
+

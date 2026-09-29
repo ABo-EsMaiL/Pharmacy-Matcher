@@ -1,0 +1,26 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1274,9 +1274,18 @@
+     const data = e.detail;
+     const progressArea = document.getElementById('progress-area');
+     if (progressArea && !progressArea.classList.contains('hidden') && data.process_id === currentProcessId) {
+-        // Update a hypothetical progress text element if it existed, or just keep loading
+-        const msgEl = progressArea.querySelector('p');
++        const msgEl = document.getElementById('progress-text');
+         if (msgEl && data.message) msgEl.innerText = data.message;
++        
++        const pb = document.getElementById('progress-bar-fill');
++        if (pb) {
++            // Very simple heuristic to advance progress bar based on text
++            let pct = 10;
++            if (data.message.includes('استخراج') || data.message.includes('Extracting')) pct = 30;
++            if (data.message.includes('مطابقة') || data.message.includes('Matching')) pct = 60;
++            if (data.message.includes('حفظ') || data.message.includes('Saving')) pct = 90;
++            pb.style.width = pct + '%';
++        }
+     }
+ });
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

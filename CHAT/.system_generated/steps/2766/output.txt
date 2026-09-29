@@ -1,0 +1,143 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -483,24 +483,57 @@
+             for row_idx in sorted(rows_to_delete, reverse=True):
+                 review_ws.delete_rows(row_idx)
+                 
++            # Recalculate totals across all sheets
++            total_wh_matched = 0
++            wh_sheet_names = [s for s in wb.sheetnames if s not in ('ملخص', 'لم يُعثر عليه', 'يحتاج مراجعة')]
++            for sname in wh_sheet_names:
++                total_wh_matched += max(0, wb[sname].max_row - 1)
++                
++            curr_not_found = max(0, not_found_ws.max_row - 1) if not_found_ws else 0
++            curr_review = max(0, review_ws.max_row - 1) if review_ws.max_row > 1 else 0
++            curr_total = total_wh_matched + curr_not_found + curr_review
++
++            # Update the Summary (ملخص) sheet formulas and structure
++            if 'ملخص' in wb.sheetnames:
++                ws_summary = wb['ملخص']
++                ws_summary['B2'] = "=B3+B4+B5"
++                num_wh = len(wh_sheet_names)
++                ws_summary['B3'] = f"=SUM(B8:B{7 + num_wh})" if num_wh > 0 else "0"
++                ws_summary['B4'] = "=MAX(0, COUNTA('لم يُعثر عليه'!A:A)-1)"
++                ws_summary['B5'] = "=MAX(0, COUNTA('يحتاج مراجعة'!A:A)-1)"
++                
++                # Update warehouse detail rows (Row 8+)
++                for r in range(8, ws_summary.max_row + 1):
++                    wh_title = ws_summary.cell(row=r, column=1).value
++                    if wh_title:
++                        safe_title = wh_title
++                        for ch in r"[]:*?/\\":
++                            safe_title = safe_title.replace(ch, "_")
++                        safe_title = safe_title[:31]
++                        ws_summary.cell(row=r, column=2, value=f"=MAX(0, COUNTA('{safe_title}'!A:A)-1)")
++                        ws_summary.cell(row=r, column=3, value=f'=COUNTIF(\'يحتاج مراجعة\'!D:D, "{wh_title}")')
++
+             wb.save(proc['output_file'])
+             
+-            remaining = review_ws.max_row - 1 if review_ws.max_row > 1 else 0
+-            
+-            # Update DB counts
+-            new_matched = (proc.get('matched_count', 0) or 0) + matched_count
+-            new_not_found = (proc.get('not_found_count', 0) or 0) + rejected_count
+-            new_review = remaining
+-            status = 'completed' if remaining == 0 else 'reviewing'
+-            
+-            self._db.update_process(
+-                process_id,
+-                matched_count=new_matched,
+-                not_found_count=new_not_found,
+-                review_count=new_review,
++            status = 'completed' if curr_review == 0 else 'reviewing'
++            self._db.update_process(
++                process_id,
++                total_shortages=curr_total,
++                matched_count=total_wh_matched,
++                not_found_count=curr_not_found,
++                review_count=curr_review,
+                 status=status
+             )
+             
++            new_stats = {
++                "total": curr_total,
++                "total_shortages": curr_total,
++                "matched_count": total_wh_matched,
++                "not_found_count": curr_not_found,
++                "review_count": curr_review,
++                "status": status
++            }
++            
+             return {
+                 "success": True,
+                 "matched": matched_count,
+@@ -507,4 +507,5 @@
+-                "remaining": remaining
++                "remaining": curr_review,
++                "new_stats": new_stats
+             }
+             
+         except Exception as e:
+@@ -511,30 +511,34 @@
+ 
+     def rerun_process(self, process_id: str) -> dict:
+-        proc = self._db.get_process(process_id)
+-        if not proc:
+-            return {"success": False, "error": "العملية غير موجودة"}
+-        
+-        proc_dir = Path("data") / "processes" / process_id
+-        shortage_dir = proc_dir / "input_shortages"
+-        warehouse_dir = proc_dir / "input_warehouses"
+-        
+-        # Collect original input files
+-        shortage_paths = [str(f) for f in shortage_dir.glob("*") if f.is_file() and not f.name.endswith(".json")]
+-        warehouse_paths = [str(f) for f in warehouse_dir.glob("*") if f.is_file() and not f.name.endswith(".json")]
+-        
+-        if not shortage_paths or not warehouse_paths:
+-            return {"success": False, "error": "ملفات العملية غير موجودة في المجلد لإعادة تشغيلها"}
+-            
+-        self._db.update_process(process_id, status='processing')
+-        self.add_log(f"--- Starting Re-run for Process [{process_id}] ---")
+-        
+-        t = threading.Thread(
+-            target=self._process_worker,
+-            args=(process_id, shortage_paths, warehouse_paths, True),
+-            daemon=True
+-        )
+-        t.start()
+-        return {"success": True, "process_id": process_id}
++        with self._worker_lock:
++            if self._worker_thread and self._worker_thread.is_alive():
++                return {"success": False, "error": "توجد عملية مطابقة قيد التشغيل حالياً، يرجى الانتظار حتى تنتهي"}
++
++            proc = self._db.get_process(process_id)
++            if not proc:
++                return {"success": False, "error": "العملية غير موجودة"}
++            
++            proc_dir = Path("data") / "processes" / process_id
++            shortage_dir = proc_dir / "input_shortages"
++            warehouse_dir = proc_dir / "input_warehouses"
++            
++            # Collect original input files
++            shortage_paths = [str(f) for f in shortage_dir.glob("*") if f.is_file() and not f.name.endswith(".json")]
++            warehouse_paths = [str(f) for f in warehouse_dir.glob("*") if f.is_file() and not f.name.endswith(".json")]
++            
++            if not shortage_paths or not warehouse_paths:
++                return {"success": False, "error": "ملفات العملية غير موجودة في المجلد لإعادة تشغيلها"}
++                
++            self._db.update_process(process_id, status='processing')
++            self.add_log(f"--- Starting Re-run for Process [{process_id}] ---")
++            
++            self._worker_thread = threading.Thread(
++                target=self._process_worker,
++                args=(process_id, shortage_paths, warehouse_paths, True),
++                daemon=True
++            )
++            self._worker_thread.start()
++            return {"success": True, "process_id": process_id}
+ 
+     def get_history(self) -> str:
+         return json.dumps(self._db.get_all_processes())
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

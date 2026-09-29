@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Shortage files in PROC-003:
+  test_shortages_200.xlsx
+
+Warehouse files in PROC-003:
+  السلام شبين.pdf
+  جملة العمروووو.pdf
+

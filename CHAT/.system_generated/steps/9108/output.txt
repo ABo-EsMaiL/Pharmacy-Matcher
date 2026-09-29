@@ -1,0 +1,10 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":193,"LineContent":"    def start_server_instance(self, server_key: str) -\u003e dict:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":239,"LineContent":"    def start_server(self) -\u003e dict:"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1482,"LineContent":"                    \u003cbutton id=\"btn-toggle-server\" class=\"btn btn-small btn-full\" onclick=\"event.stopPropagation(); toggleServer();\" data-i18n=\"btn_start_server\"\u003eتشغيل السيرفر\u003c/button\u003e"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":1975,"LineContent":"        btn_start_server: \"تشغيل السيرفر\","}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2101,"LineContent":"        btn_start_server: \"Start Server\","}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2299,"LineContent":"        if (btn) btn.innerHTML = `\u003ci class=\"ph ph-play\"\u003e\u003c/i\u003e ${t.btn_start_server}`;"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3137,"LineContent":"        if (btn) btn.innerHTML = `\u003ci class=\"ph ph-play\"\u003e\u003c/i\u003e ${t.btn_start_server}`;"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3190,"LineContent":"            await window.pywebview.api.start_server();"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3332,"LineContent":"            res = await window.pywebview.api.start_server_instance(serverKey);"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":387,"LineContent":"            await window.pywebview.api.start_server();"}

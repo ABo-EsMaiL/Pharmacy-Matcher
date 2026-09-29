@@ -1,0 +1,24 @@
+
+The command exited with code 0.
+Output:
+P15 Makroumi matches: 22
+P16 Makroumi matches: 32
+
+--- Items matched in P16 (ChatGPT) but NOT in P15 (Gemini) in Makroumi ---
+  Shortage: ريبايون اسبراي -> Warehouse: ريبايون ان جل بديل ريباريل ٥٠جم
+  Shortage: براديبيكت 5 مجم 28 قرص -> Warehouse: ديبيكان اقراص/العامرية
+  Shortage: سكروفير امبول -> Warehouse: اميفير امبول
+  Shortage: بانتوبرازول 40 مجم اقراص س ج -> Warehouse: انتوبرال ٤٠ سعر جديد
+  Shortage: ايتوريكوكس90مجم30قرص س ج -> Warehouse: ريكوكسين ٩٠ سعر جديد ٢٩٧
+  Shortage: كولوفيرين  أيه 30قرص س ج -> Warehouse: كولوفين ٥٠ قرص
+  Shortage: ليفوفلوكساسين500مجم اقراص -> Warehouse: ليفوكسين ٥٠٠ مجم/امون
+  Shortage: ستاركوبينا5مجم20قرص -> Warehouse: ستاركوبركس ٥ مجم ٢٥٢ج
+  Shortage: ستاركوبينا5مجم3شريط س ج -> Warehouse: ستاركوبركس ٥ مجم ٢٥٢ج
+  Shortage: باولوكير نقط س ج/بيكولاكس -> Warehouse: بيولاكس نقط س.ج ٢٤ج
+  Shortage: افيروكوكسيب90مجم20قرص س ج -> Warehouse: فيزوكسيب ٩٠ مجم ٢٠ قرص
+  Shortage: فلابو 600 اقراص -> Warehouse: فلامولام ٦٠٠مجم اقراص
+
+--- Items matched in P15 (Gemini) but NOT in P16 (ChatGPT) in Makroumi ---
+  Shortage: اسبوسيد 20قرص اطفال س ج -> Warehouse: استوسيد اطفال ٣٥جنية
+  Shortage: اسبوسيد 20قرص اطفال -> Warehouse: استوسيد اطفال ٣٥جنية
+

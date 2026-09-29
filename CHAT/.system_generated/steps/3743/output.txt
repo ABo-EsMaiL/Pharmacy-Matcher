@@ -1,0 +1,33 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+=== TRUE MATCHES BRAND EXTRACTION & SIMILARITY ===
+Req: 'ماريفان' (None)  vs  WH: 'ماريفان' (None)  -> Sim: 100%
+Req: 'ديوراسيف' (syrup)  vs  WH: 'ديوراسيف' (None)  -> Sim: 100%
+Req: 'ديكساتوبرين' (cream_ointment)  vs  WH: 'ديكسا توبيرين' (None)  -> Sim: 92%
+Req: 'رانديل' (tablet)  vs  WH: 'رانديل' (None)  -> Sim: 100%
+Req: 'بيتادين مطهر النيل' (None)  vs  WH: 'بيتادين مطهر' (None)  -> Sim: 80%
+Req: 'نيتروماك ريتارد' (tablet)  vs  WH: 'نيتروماك ريتارد' (None)  -> Sim: 100%
+Req: 'ديجستين' (None)  vs  WH: 'ديجستين' (None)  -> Sim: 100%
+Req: 'ايفاستين' (None)  vs  WH: 'ايفاستين' (None)  -> Sim: 100%
+Req: 'ادولور' (None)  vs  WH: 'ادولور' (injection)  -> Sim: 100%
+Req: 'كوللوماك' (None)  vs  WH: 'كولومالك' (None)  -> Sim: 88%
+Req: 'برونشيكم' (syrup)  vs  WH: 'برونشيكم الكيسير' (syrup)  -> Sim: 67%
+Req: 'جوسبرين' (tablet)  vs  WH: 'جوسبرين' (None)  -> Sim: 100%
+Req: 'سيديبروكت' (cream_ointment)  vs  WH: 'سيديبروك' (None)  -> Sim: 94%
+Req: 'كلوسول' (spray)  vs  WH: 'كولوسول' (None)  -> Sim: 92%
+Req: 'برايم روز بلاس' (tablet)  vs  WH: 'برايم روز بلاس' (None)  -> Sim: 100%
+Req: 'توب جنج ادفانس' (None)  vs  WH: 'توب جينج' (None)  -> Sim: 64%
+Req: 'كيتولاك' (injection)  vs  WH: 'كيتولاك' (None)  -> Sim: 100%
+Req: 'سبازموفري' (injection)  vs  WH: 'سبازموفري' (None)  -> Sim: 100%
+
+=== FALSE MATCHES ===
+Req: 'كونفاجران' (None) vs WH: 'فياجرا' (tablet) -> Sim: 67% | Form Conflict: False
+Req: 'انتودين' (None) vs WH: 'فاستلام' (None) -> Sim: 29% | Form Conflict: False
+Req: 'ميبو' (cream_ointment) vs WH: 'برناسورس' (cream_ointment) -> Sim: 33% | Form Conflict: False
+Req: 'دولفين' (suppository) vs WH: 'اندوميثاسين العربيه' (suppository) -> Sim: 32% | Form Conflict: False
+Req: 'سيتال' (tablet) vs WH: 'سيتال' (syrup) -> Sim: 100% | Form Conflict: True
+Req: 'جينوزول' (cream_ointment) vs WH: 'جينوزول' (suppository) -> Sim: 100% | Form Conflict: True
+

@@ -1,0 +1,19 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -237,10 +237,12 @@
+         }
+ 
+         url = getattr(self.config, 'local_api_url', "http://127.0.0.1:8000/v1/chat/completions")
++        api_key = getattr(self.config, 'local_api_key', '[REDACTED_CREDENTIAL]')
++        
+         response = http_requests.post(
+             url,
+             headers={
+-                "Authorization": "Bearer dummy_key",
++                "Authorization": f"Bearer {api_key}",
+                 "Content-Type": "application/json",
+             },
+             json=body,
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

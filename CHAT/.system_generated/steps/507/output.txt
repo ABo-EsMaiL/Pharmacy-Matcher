@@ -1,0 +1,36 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1178,12 +1178,27 @@
+     const listEl = document.getElementById(`list-${type}`);
+     listEl.innerHTML = '';
+     files.forEach((path, index) => {
+-        const fileName = path.split('\\').pop().split('/').pop();
++        let fileName = path.split('\\').pop().split('/').pop();
++        if (fileName.includes('?')) {
++            fileName = fileName.split('?')[0];
++        }
++        
++        let iconClass = 'ph-file';
++        const ext = fileName.split('.').pop().toLowerCase();
++        if (ext === 'pdf') iconClass = 'ph-file-pdf text-danger';
++        else if (ext === 'xlsx' || ext === 'xls' || ext === 'csv') iconClass = 'ph-file-xls text-success';
++        else if (ext === 'json') iconClass = 'ph-file-code text-warning';
++
+         const li = document.createElement('li');
+         li.className = 'file-item';
+         li.innerHTML = `
+-            <span title="${path}">${fileName}</span>
+-            <button class="btn-text text-danger" onclick="removeFile('${type}', ${index})"><i class="ph-fill ph-x-circle"></i></button>
++            <div class="file-item-name" title="${path}">
++                <i class="ph-fill ${iconClass}"></i>
++                <span>${fileName}</span>
++            </div>
++            <button class="file-item-delete" onclick="removeFile('${type}', ${index})" title="إزالة الملف">
++                <i class="ph-fill ph-trash"></i>
++            </button>
+         `;
+         listEl.appendChild(li);
+     });
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

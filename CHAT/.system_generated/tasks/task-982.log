@@ -1,0 +1,40 @@
+                            <div class="spinner" style="width: 20px; height: 20px; border-width: 2px;"></div>
+
+                            <h3 id="progress-text" style="margin: 0; font-size: 14px; font-weight: bold;">جاري معالجة الملفات...</h3>
+
+                        </div>
+
+                        <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; margin: 10px 0; overflow: hidden;">
+
+                            <div id="progress-bar-fill" style="width: 10%; height: 100%; background: var(--primary); transition: width 0.5s ease;"></div>
+
+                        </div>
+
+                        
+
+                        <!-- Pipeline Log Terminal -->
+
+                        <div style="background: #1e293b; color: #38bdf8; font-family: monospace; font-size: 11px; padding: 10px; border-radius: 6px; height: 120px; overflow-y: auto; text-align: left; direction: ltr;" id="pipeline-log-terminal">
+
+                            [System] Started pipeline...
+
+                        </div>
+
+                        
+
+                        <p style="color: var(--text-muted); font-size: 11px; margin-top: 10px; text-align: center;">العملية تعمل في الخلفية. يمكنك متابعة استخدام البرنامج.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Screen 2: Results -->
+
+            <div id="screen-results" class="screen">
+
+                <header class="page-header">
+

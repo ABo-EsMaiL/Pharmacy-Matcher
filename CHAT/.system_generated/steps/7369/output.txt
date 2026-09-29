@@ -1,0 +1,26 @@
+
+Encountered error in step execution: context canceled
+Output:
+INFO:     Started server process [7808]
+INFO:     Waiting for application startup.
+2026-09-24 18:20:32,868 - msemax.webhook - INFO - =================================================================
+2026-09-24 18:20:32,868 - msemax.webhook - INFO - Starting MSEMAX — Google AI Studio Web Hook Gateway
+2026-09-24 18:20:32,868 - msemax.webhook - INFO - Default Model: gemini-3.8-flash | Thinking: high
+2026-09-24 18:20:32,868 - msemax.webhook - INFO - Profile: D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile | Headless: False
+2026-09-24 18:20:32,868 - msemax.webhook - INFO - Port: 8001 | Max Concurrent: 1 | Rate Limit: 30/minute
+2026-09-24 18:20:32,868 - msemax.webhook - INFO - =================================================================
+2026-09-24 18:20:32,868 - msemax.webhook - INFO - Concurrency semaphore initialized: max 1 simultaneous requests
+2026-09-24 18:20:32,869 - msemax.webhook - INFO - Launching persistent Chromium context from: D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile (headless=False, start-maximized)
+2026-09-24 18:20:34,197 - msemax.webhook - INFO - Navigating to https://aistudio.google.com/prompts/new_chat to ensure clean environment...
+2026-09-24 18:20:36,847 - msemax.webhook - WARNING - =================================================================
+2026-09-24 18:20:36,847 - msemax.webhook - WARNING - [ACTION REQUIRED] Google AI Studio requires Google Account login!
+2026-09-24 18:20:36,847 - msemax.webhook - WARNING - Please sign into your Google account in the Chromium window.
+2026-09-24 18:20:36,847 - msemax.webhook - WARNING - Waiting for login completion...
+2026-09-24 18:20:36,847 - msemax.webhook - WARNING - =================================================================
+2026-09-24 18:23:38,002 - msemax.webhook - INFO - Google AI Studio web page ready!
+2026-09-24 18:23:38,002 - msemax.webhook - INFO - Target model: 'gemini-3.8-flash'
+2026-09-24 18:23:38,154 - msemax.webhook - INFO - Current model before: ''
+2026-09-24 18:23:38,154 - msemax.webhook - INFO - Current model after: 'gemini-3.8-flash' | MODEL VERIFIED = False
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+

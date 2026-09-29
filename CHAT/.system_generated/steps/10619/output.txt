@@ -1,0 +1,31 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -3360,7 +3360,24 @@
+             }
+         });
+     } catch (e) {
+-        console.error('Failed to load servers UI:', e);
++}
++}
++
++async function chooseServerDir(serverKey) {
++    if (!window.pywebview || !window.pywebview.api) return;
++    try {
++        const dir = await window.pywebview.api.select_directory();
++        if (dir) {
++            const res = await window.pywebview.api.update_server_dir(serverKey, dir);
++            if (res && res.success) {
++                const valDir = document.getElementById(`val-dir-${serverKey}`);
++                if (valDir) valDir.textContent = dir;
++                showToast(currentLang === 'en' ? `Updated ${serverKey} directory` : `تم تحديث مسار مجلد السيرفر بنجاح`, 'success');
++                await loadServersUI();
++            }
++        }
++    } catch (e) {
++        showToast(currentLang === 'en' ? 'Error selecting directory' : 'حدث خطأ أثناء اختيار المجلد', 'error');
+     }
+ }
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

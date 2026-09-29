@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -42,7 +42,7 @@
+ class Coordinator:
+     def __init__(self, config: Config):
+         self.config = config
+-        self.opencode_api_key = getattr(config, 'opencode_api_key', None)
++        self.openrouter_api_key = getattr(config, 'openrouter_api_key', None)
+ 
+     def process(
+         self,
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

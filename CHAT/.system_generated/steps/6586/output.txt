@@ -1,0 +1,56 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\server_manager.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -373,6 +373,7 @@
+     def force_free_ports(self) -> dict:
+         """Kills any process listening on ports 8000 and 8001 using elevated taskkill if necessary."""
+         killed = []
++        pids_needing_elevation = set()
+         for port in [8000, 8001]:
+             if is_port_listening(port) and os.name == 'nt':
+                 try:
+@@ -384,20 +384,31 @@
+                         if len(parts) >= 5 and "LISTENING" in line:
+                             pid = parts[-1]
+                             r_k = subprocess.run(['taskkill', '/F', '/PID', pid], capture_output=True, text=True)
+-                            if "Access is denied" in r_k.stderr:
+-                                try:
+-                                    import ctypes
+-                                    ctypes.windll.shell32.ShellExecuteW(
+-                                        None, "runas", "cmd.exe", f"/c taskkill /F /PID {pid}", None, 0
+-                                    )
+-                                except Exception:
+-                                    pass
+-                            killed.append(pid)
++                            if "Access is denied" in r_k.stderr or r_k.returncode != 0:
++                                pids_needing_elevation.add(pid)
++                            else:
++                                killed.append(pid)
+                 except Exception as e:
+                     if self.logger:
+                         self.logger(f"Error freeing port {port}: {e}")
+-        time.sleep(1.0)
+-        return {"success": True, "killed": killed}
++
++        elevated_needed = False
++        if pids_needing_elevation and os.name == 'nt':
++            elevated_needed = True
++            try:
++                import ctypes
++                pid_args = " ".join([f"/PID {p}" for p in pids_needing_elevation])
++                if self.logger:
++                    self.logger(f"[ELEVATION] Requesting administrator rights to terminate PIDs: {pid_args}")
++                ctypes.windll.shell32.ShellExecuteW(
++                    None, "runas", "cmd.exe", f"/c taskkill /F {pid_args}", None, 0
++                )
++            except Exception as e:
++                if self.logger:
++                    self.logger(f"Elevation request failed: {e}")
++
++        time.sleep(1.2)
++        return {"success": True, "killed": killed, "elevated_needed": elevated_needed}
+ 
+     def cleanup(self):
+         for srv in self.servers.values():
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

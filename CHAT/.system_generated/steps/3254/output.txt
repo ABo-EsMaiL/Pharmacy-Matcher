@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Cleared history.db processes
+Removed directory data\processes\data
+Removed directory data\processes\PROC-001
+Cleanup completed successfully.
+

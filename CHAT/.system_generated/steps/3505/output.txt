@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Health status: 200
+Health body: {"status":"ok","version":"MSEMAX 1.0","session_file_loaded":true,"concurrent_slots_available":3,"max_concurrent":3,"rate_limit":"10/minute"}
+

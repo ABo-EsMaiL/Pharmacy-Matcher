@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+--- from_document ---
+pass exactly one of api_key or bearer_token, or set UNSTRUCTURED_API_KEY — they are different identities, not interchangeable spellings of one credential
+

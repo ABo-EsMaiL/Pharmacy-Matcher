@@ -1,0 +1,20 @@
+
+The command exited with code 0.
+Output:
+    def get_all_processes(self) -> list[dict]:
+        cursor = self.conn.cursor()
+        cursor.execute('SELECT * FROM processes ORDER BY created_at DESC')
+        return [dict(row) for row in cursor.fetchall()]
+
+    def mark_stuck_processes_as_failed(self):
+        """Called on startup to clean up any processes that were running when the app was closed."""
+        cursor = self.conn.cursor()
+        cursor.execute("UPDATE processes SET status = 'error' WHERE status = 'processing'")
+        self.conn.commit()
+
+    def delete_process(self, process_id):
+        cursor = self.conn.cursor()
+        cursor.execute('DELETE FROM processes WHERE id = ?', (process_id,))
+        self.conn.commit()
+
+

@@ -1,0 +1,10 @@
+
+
+ComputerName     : 127.0.0.1
+RemoteAddress    : 127.0.0.1
+RemotePort       : 8000
+InterfaceAlias   : Loopback Pseudo-Interface 1
+SourceAddress    : 127.0.0.1
+TcpTestSucceeded : True
+
+WARNING: TCP connect to (127.0.0.1 : 8001) failed

@@ -1,0 +1,103 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -386,32 +386,24 @@
+                                     status = "no_match"
+                                     
+                             if status in ("match", "review"):
+-                                # 1. Dosage form conflict
+-                                req_form = extract_form_group(shortage_name)
+-                                wh_form = extract_form_group(warehouse_item)
+-                                if req_form and wh_form and req_form != wh_form:
+-                                    status = "no_match"
+-                                    
+-                                # 1b. Liquids vs Plain Solid Tablet Strength conflict
+-                                is_req_syrup = bool(re.search(r'\b(شراب|شرب|معلق)\b', shortage_name))
+-                                is_wh_syrup = bool(re.search(r'\b(شراب|شرب|معلق)\b', warehouse_item))
+-                                norm_wh = warehouse_item
+-                                for e, w in zip('٠١٢٣٤٥٦٧٨٩', '0123456789'):
+-                                    norm_wh = norm_wh.replace(e, w)
+-                                norm_req = shortage_name
+-                                for e, w in zip('٠١٢٣٤٥٦٧٨٩', '0123456789'):
+-                                    norm_req = norm_req.replace(e, w)
+-                                has_wh_solid_mg = bool(re.search(r'\b(100|125|200|250|300|400|500|600|800|1000)\s*(?:مجم|مج|mg)\b', norm_wh)) and not re.search(r'\b(مل|ملل|ml|/5|5مل)\b', norm_wh)
+-                                has_req_solid_mg = bool(re.search(r'\b(100|125|200|250|300|400|500|600|800|1000)\s*(?:مجم|مج|mg)\b', norm_req)) and not re.search(r'\b(مل|ملل|ml|/5|5مل)\b', norm_req)
+-                                if (is_req_syrup and not is_wh_syrup and has_wh_solid_mg) or (is_wh_syrup and not is_req_syrup and has_req_solid_mg):
+-                                    status = "no_match"
+-                                    
+-                                # 2. Multi-strength slash mismatch (e.g. 4/30 vs 4)
++                                norm_wh = norm_num(warehouse_item)
++                                norm_req = norm_num(shortage_name)
++                                
++                                # 1. Strength check (التركيز خط أحمر - zero tolerance)
++                                str_r = get_strength_pattern(shortage_name)
++                                str_w = get_strength_pattern(warehouse_item)
++                                if str_r and str_w:
++                                    try:
++                                        if float(str_r) != float(str_w):
++                                            status = "no_match"
++                                    except:
++                                        if str_r != str_w:
++                                            status = "no_match"
++                                            
++                                # 1b. Multi-strength slash mismatch
+                                 slash_req = re.search(r'(?:^|[^\d/])(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)(?:[^\d/]|$)', norm_req)
+                                 slash_wh = re.search(r'(?:^|[^\d/])(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)(?:[^\d/]|$)', norm_wh)
+-                                if slash_req and not slash_wh:
+-                                    status = "no_match"
+-                                elif slash_wh and not slash_req:
++                                if (slash_req and not slash_wh) or (slash_wh and not slash_req):
+                                     status = "no_match"
+                                 elif slash_req and slash_wh and slash_req.group(1) != slash_wh.group(1):
+                                     status = "no_match"
+@@ -418,16 +418,8 @@
+-                                # 2b. Drops vs Non-Drops conflict
+-                                is_r_drops = 'نقط' in shortage_name or 'قطره' in shortage_name or 'قطرة' in shortage_name
+-                                is_wh_drops = 'نقط' in warehouse_item or 'قطره' in warehouse_item or 'قطرة' in warehouse_item
+-                                if is_r_drops != is_wh_drops:
+-                                    status = "no_match"
+-                                    
+-                                # 3. Combination suffix mismatch (كو / بلس / co / plus)
+-                                is_req_co = has_co(shortage_name)
+-                                is_wh_co = has_co(warehouse_item)
+-                                if is_req_co != is_wh_co:
+-                                    status = "no_match"
+-                                    
+-                                # 4. Commercial prefix mismatch (نيو / new)
++                                # 2. Combination suffix mismatch (كو / بلس / co / plus)
++                                if has_co(shortage_name) != has_co(warehouse_item):
++                                    status = "no_match"
++                                    
++                                # 3. Commercial prefix mismatch (نيو / new)
+                                 is_req_new = bool(re.search(r'\b(نيو|new)\b', shortage_name.lower()))
+                                 is_wh_new = bool(re.search(r'\b(نيو|new)\b', warehouse_item.lower()))
+                                 if is_req_new != is_wh_new:
+@@ -434,5 +434,5 @@
+                                     
+-                                # 5. Deterministic Safety Check: Brand similarity
++                                # 4. Deterministic Safety Check: Brand similarity
+                                 req_b = extract_brand_tokens(shortage_name)
+                                 wh_b = extract_brand_tokens(warehouse_item)
+                                 if req_b and wh_b:
+@@ -464,6 +464,19 @@
+ 
+                                     if b_sim < 65:
+                                         status = "no_match"
++
++                                # 5. Dosage form check (same drug & same strength, but different form -> "review")
++                                if status == "match":
++                                    form_r = extract_form_group(shortage_name)
++                                    wh_form = extract_form_group(warehouse_item)
++                                    is_r_drops = 'نقط' in shortage_name or 'قطره' in shortage_name or 'قطرة' in shortage_name
++                                    is_wh_drops = 'نقط' in warehouse_item or 'قطره' in warehouse_item or 'قطرة' in warehouse_item
++                                    is_r_syrup = bool(re.search(r'\b(شراب|شرب|معلق)\b', shortage_name))
++                                    is_wh_syrup = bool(re.search(r'\b(شراب|شرب|معلق)\b', warehouse_item))
++                                    
++                                    if not are_forms_identical(form_r, wh_form) or (is_r_drops != is_wh_drops) or (is_r_syrup != is_wh_syrup):
++                                        status = "review"
++                                        reason = f"نفس الدواء والتركيز ولكن الهيئة مختلفة: {form_r or 'أصلي'} ضد {wh_form or 'المخزن'} (الصيدلي يقرر)"
+                                         
+                                     
+                             if status == "match":
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

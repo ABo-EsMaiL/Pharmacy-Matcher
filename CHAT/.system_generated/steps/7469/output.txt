@@ -1,0 +1,12 @@
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":59,"LineContent":"REQUEST_TIMEOUT = float(os.getenv(\"MSE_REQUEST_TIMEOUT\", \"180\"))"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":129,"LineContent":"            await self.page.goto(TARGET_URL, timeout=60000, wait_until=\"domcontentloaded\")"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":189,"LineContent":"                        await loc.first.wait_for(state=\"visible\", timeout=2000)"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":284,"LineContent":"                await thinking_select.first.wait_for(state=\"visible\", timeout=6000)"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":365,"LineContent":"                await self.page.goto(TARGET_URL, timeout=30000, wait_until=\"domcontentloaded\")"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":433,"LineContent":"            await prompt_locator.wait_for(state=\"attached\", timeout=8000)"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":434,"LineContent":"            await prompt_locator.wait_for(state=\"visible\", timeout=3000)"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":448,"LineContent":"            await ta.wait_for(state=\"visible\", timeout=5000)"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\app.py","LineNumber":591,"LineContent":"        while time.time() - start_time \u003c REQUEST_TIMEOUT:"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\get_session.py","LineNumber":88,"LineContent":"            await page.goto(TARGET_URL, timeout=60000, wait_until=\"domcontentloaded\")"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\README.md","LineNumber":80,"LineContent":"MSE_REQUEST_TIMEOUT=180"}
+{"File":"D:\\AI_Engineer\\MSEMAX-GAIStudio\\chrome_profile\\Default\\Workspaces\\Logs\\Workspaces Internals Logs","LineNumber":3,"LineContent":"{\"logTime\": \"0923/142345\", {\"lineNo\":0,\"logLevel\":2,\"message\":\"Migrate_FeatureCheck: Migration mode: enabled=true automatic=true manual=false dry_run=false dry_run_version=0 aad=true require_sync=false reset=false force_completion=true ignore_in_use=true timeout_minutes=5 max_retries=3 retry_backoff_hours=1 failure_backoff_hours=1 shared_failures_soft=true stale_failures_soft_days=30 max_soft_failures=-1 dev_ui=false\",\"source\":\"Workspace Migration\",\"timestamp\":\"2026-09-23T14:23:45.702Z\"}}"}

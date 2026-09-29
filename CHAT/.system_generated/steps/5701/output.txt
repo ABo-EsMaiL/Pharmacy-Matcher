@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+زنكترون: ('match', 'exact_brand_and_form')
+سيتال: ('reject', 'strength_conflict_1000.0_vs_500')
+ميبو: ('review', 'different_form_cream_vs_ointment')
+كتافلام: ('review', 'different_form_drops_vs_tablet')
+برونفين: ('ambiguous', 'ocr_check_needed_92.3%')
+

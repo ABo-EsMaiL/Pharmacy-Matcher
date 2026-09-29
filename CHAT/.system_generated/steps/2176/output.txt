@@ -1,0 +1,18 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":39,"LineContent":"        self.db = HistoryDB()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":43,"LineContent":"            self.db.mark_stuck_processes_as_failed()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":220,"LineContent":"            process_id = self.db.create_process(shortage_filenames, warehouse_filenames)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":237,"LineContent":"            cursor = self.db.conn.cursor()"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":250,"LineContent":"            self.db.update_process_status(process_id, 'processing')"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":263,"LineContent":"            proc_dir = self.db.get_process_dir(process_id)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":350,"LineContent":"            self.db.update_process("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":372,"LineContent":"            self.db.update_process(process_id, status='error')"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":378,"LineContent":"        proc = self.db.get_process(process_id)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":386,"LineContent":"        proc = self.db.get_process(process_id)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":397,"LineContent":"            folder = self.db.get_process_dir(process_id)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":415,"LineContent":"        proc = self.db.get_process(process_id)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":476,"LineContent":"            self.db.update_process("}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":495,"LineContent":"        return json.dumps(self.db.get_all_processes())"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":498,"LineContent":"        proc = self.db.get_process(process_id)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":507,"LineContent":"            self.db.delete_process(process_id)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":514,"LineContent":"            proc = self.db.get_process(process_id)"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":524,"LineContent":"            proc_dir = self.db.get_process_dir(process_id)"}

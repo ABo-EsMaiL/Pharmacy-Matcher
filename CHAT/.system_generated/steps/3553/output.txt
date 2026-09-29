@@ -1,0 +1,34 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+
+Testing count=50 (Payload: 13.3 KB)...
+SUCCESS in 7.3s! Response length: 2631 chars
+Preview: ```json
+{
+  "cases": [
+    {"case_id":"Q00001","selected_id":"WH00001_1"},
+    {"case_id":"Q00002","selected_id":"WH00002_1"},
+    {"case_id":"Q00003"
+
+Testing count=100 (Payload: 26.6 KB)...
+SUCCESS in 16.4s! Response length: 4413 chars
+Preview: {"results":[{"case_id":"Q00001","match_id":"WH00001_1"},{"case_id":"Q00002","match_id":"WH00002_1"},{"case_id":"Q00003","match_id":"WH00003_1"},{"case
+
+Testing count=150 (Payload: 39.9 KB)...
+SUCCESS in 12.4s! Response length: 313 chars
+Preview: I created the JSON results file for all 150 items. Each requested product is matched to the first candidate (`_1`), which is the exact product-name ma
+
+Testing count=200 (Payload: 53.3 KB)...
+SUCCESS in 16.0s! Response length: 170 chars
+Preview: تم إنشاء ملف JSON يحتوي على نتائج المطابقة لـ 200 عنصر.
+
+يمكنك فتحه من هنا:
+[تحميل ملف sital_matching_results_200.json](sandbox:/mnt/data/sital_matchi
+
+Testing count=300 (Payload: 80.1 KB)...
+FAILED in 4.3s: [ChatGPT returned 413]
+--> Limit is below 300 items!
+

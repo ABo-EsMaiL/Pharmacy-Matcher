@@ -1,0 +1,18 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Current count: 190
+Found 10 more unique unmatched rows:
+  Row 56: 'اريثركس200مجم2شريط'
+  Row 57: 'الكابرس تريو5/160/12.5مجم س ج'
+  Row 58: 'الكابرس تريو5/160/12.5مجم س ج'
+  Row 59: 'فلوب شراب س ج'
+  Row 60: 'فلوب شراب س ج'
+  Row 61: 'فليبوتون حقن 3امبولات س ج'
+  Row 62: 'انتي كوكس 6امبول'
+  Row 65: 'روزاسيف 30 كبسوله/ برايم روز'
+  Row 66: 'كورتكس شامبو للقشره'
+  Row 67: 'بيدورا كالسيوم 20 كبسوله'
+

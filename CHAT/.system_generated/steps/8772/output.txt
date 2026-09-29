@@ -1,0 +1,23 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -436,10 +436,13 @@
+                                     status = "no_match"
+                                     
+                                 # 3. Commercial prefix mismatch (نيو / new)
+-                                is_r_neo = 'نيو' in shortage_name or 'new' in shortage_name.lower()
+-                                is_w_neo = 'نيو' in warehouse_item or 'new' in warehouse_item.lower()
+-                                if is_r_neo != is_w_neo:
+-                                    status = "no_match"
++                                # [COMMENTED OUT per user instruction: LLM already evaluates prefix variations;
++                                # naive substring check breaks on Persian/Arabic Yeh differences (نيو vs نيو)
++                                # and breaks on 'Neuro' prefix words like (نيوروفيت vs نيروفيت)]
++                                # is_r_neo = 'نيو' in shortage_name or 'new' in shortage_name.lower()
++                                # is_w_neo = 'نيو' in warehouse_item or 'new' in warehouse_item.lower()
++                                # if is_r_neo != is_w_neo:
++                                #     status = "no_match"
+                                     
+                                 # 4. Deterministic Safety Check: Brand similarity & root integrity
+                                 req_b = extract_brand_tokens(shortage_name)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

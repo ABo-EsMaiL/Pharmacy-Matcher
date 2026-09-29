@@ -1,0 +1,96 @@
+
+The command exited with code 0.
+Output:
+--- client.jobs dir ---
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__firstlineno__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__static_attributes__', '__str__', '__subclasshook__', '__weakref__', '_client', 'cancel', 'delete', 'get', 'iterate', 'list', 'stream']
+--- cancel ---
+    def cancel(self, job_id: str) -> Any:
+        return JobsApi(self._client._api_client).jobs_cancel(job_id)
+
+--- delete ---
+    def delete(self, job_id: str) -> None:
+        JobsApi(self._client._api_client).jobs_delete(job_id)
+
+--- get ---
+    def get(
+        self,
+        job_id: str,
+        *,
+        output: str | None = None,
+        include: list[str] | None = None,
+    ) -> Any:
+        """The job's status, and its parsed content once available.
+
+        `output` and `include` select the representation, exactly as on
+        parse.run — omitting them here would have made the job route able to
+        return only the server default, so a caller who asked for elements on
+        the original request could not retrieve them.
+        """
+        return JobsApi(self._client._api_client).jobs_get(
+            job_id, output=output, include=include
+        )
+
+--- iterate ---
+    def iterate(
+        self,
+        *,
+        cursor: str | None = None,
+        limit: int | None = None,
+        status: str | None = None,
+    ) -> Iterator[Any]:
+        while True:
+            page = self.list(cursor=cursor, limit=limit, status=status)
+            yield from page.jobs
+            cursor = page.next_cursor
+            if cursor is None:
+                return
+
+--- list ---
+    def list(
+        self,
+        *,
+        cursor: str | None = None,
+        limit: int | None = None,
+        status: str | None = None,
+    ) -> Any:
+        return JobsApi(self._client._api_client).jobs_list(
+            cursor=cursor, limit=limit, status=status
+        )
+
+--- stream ---
+    def stream(
+        self,
+        job_id: str,
+        *,
+        output: str | None = None,
+        include: list[str] | None = None,
+    ) -> Iterator[JobEvent]:
+        """Progress events for a running job, as they happen.
+
+        The same resource as `get(job_id)`, selected by Accept — not a second
+        route. Yields `status` events on every public status change and then
+        exactly one terminal `result` or `error`, after which the stream ends.
+        Keep-alive comments are consumed here and never surface as events.
+        """
+        # The terminal `result` event carries the same representation the
+        # JSON path would return, so these have to reach the stream too — a
+        # stream that could only ever deliver the server default would be a
+        # second-class way to read the same resource.
+        query: dict[str, Any] = {}
+        if output is not None:
+            query["output"] = output
+        if include:
+            query["include"] = include
+
+        url = f"{self._client._server_url}/api/v2/jobs/{quote(job_id, safe='')}"
+        if query:
+            url = f"{url}?{urlencode(query, doseq=True)}"
+
+        return stream_job_events(
+            url=url,
+            headers=self._client._request_headers(),
+            timeout_seconds=self._client._timeout_seconds,
+            retries=self._client._retries,
+        )
+
+

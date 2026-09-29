@@ -1,0 +1,59 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -423,7 +423,10 @@
+             # Load and update config with current settings
+             settings = self.get_settings()
+             config = load_config()
+-            config.unstructured_api_key = settings.get('unstructured_api_key', '') or config.unstructured_api_key
++            config.unstructured_api_key = settings.get('unstructured_api_key', '') or getattr(config, 'unstructured_api_key', '')
++            config.vision_api_url = settings.get('vision_api_url', '') or getattr(config, 'vision_api_url', 'http://127.0.0.1:8001/v1/chat/completions')
++            config.vision_api_key = settings.get('vision_api_key', '') or getattr(config, 'vision_api_key', '[REDACTED_CREDENTIAL]')
++            config.vision_model = settings.get('vision_model', '') or getattr(config, 'vision_model', 'gemini-3.8-flash')
+             config.local_api_url = settings.get('local_api_url', '') or config.local_api_url
+             config.local_api_key = settings.get('local_api_key', '') or config.local_api_key
+             config.local_model = settings.get('local_model', '') or config.local_model
+@@ -430,18 +430,33 @@
+-            self.add_log("[PROCESS] Config loaded.")
++            self.add_log("[PROCESS] Config loaded (Vision Gateway: active).")
+             if self._window:
+                 self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Extracting data from files...'}}}}));")
+             
+-            # Read input files (this handles PDF→Unstructured API automatically)
+-            api_key = settings.get('unstructured_api_key', '') or config.unstructured_api_key
+-            gemini_key = settings.get('gemini_api_key', '') or config.gemini_api_key
++            # Read input files (Pure Gemini Vision for PDF, Smart Excel & Markdown parsers)
++            vision_url = config.vision_api_url
++            vision_key = config.vision_api_key
++            vision_model = config.vision_model
+             profile = settings.get('unstructured_profile', 'balanced')
+             
+-            self.add_log(f"[PROCESS] Reading Shortages files (Profile: {profile.upper()})...")
+-            shortage_data = read_input_files(copied_shortages, role="shortages", api_key=api_key, gemini_api_key=gemini_key, profile=profile)
++            self.add_log(f"[PROCESS] Reading Shortages files (Multi-Format Engine)...")
++            shortage_data = read_input_files(
++                copied_shortages,
++                role="shortages",
++                vision_api_url=vision_url,
++                vision_api_key=vision_key,
++                vision_model=vision_model,
++                profile=profile
++            )
+             self.add_log(f"[PROCESS] Read {len(shortage_data)} shortage files.")
+             
+-            self.add_log(f"[PROCESS] Reading Warehouse files (Profile: {profile.upper()})...")
+-            warehouse_data = read_input_files(copied_warehouses, role="warehouse", api_key=api_key, gemini_api_key=gemini_key, profile=profile)
++            self.add_log(f"[PROCESS] Reading Warehouse files (Multi-Format / Vision Engine)...")
++            warehouse_data = read_input_files(
++                copied_warehouses,
++                role="warehouse",
++                vision_api_url=vision_url,
++                vision_api_key=vision_key,
++                vision_model=vision_model,
++                profile=profile
++            )
+             self.add_log(f"[PROCESS] Read {len(warehouse_data)} warehouse files.")
+             
+             # Flatten shortages
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

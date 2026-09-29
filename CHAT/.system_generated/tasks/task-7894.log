@@ -1,0 +1,3 @@
+Sending test request...
+Status: 200 in 50.48s
+Response: {"id":"chatcmpl-63dd12eaf995","object":"chat.completion","created":1790268124,"model":"gemini-3.8-flash","choices":[{"index":0,"message":{"role":"assistant","content":"[Error: NO_RESPONSE_STARTED - Google AI Studio did not start generating within 45s]"},"finish_reason":"stop"}]}

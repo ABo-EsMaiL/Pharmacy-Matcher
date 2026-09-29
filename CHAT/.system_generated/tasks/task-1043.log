@@ -1,0 +1,9 @@
+d:\AI_Engineer\Pharmacy-agy\venv\Scripts\python.exe : The term 'd:\AI_Engineer\Pharmacy-agy\venv\Scripts\python.exe' 
+is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, 
+or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ d:\AI_Engineer\Pharmacy-agy\venv\Scripts\python.exe -c "import webvie ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (d:\AI_Engineer\...ipts\python.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 

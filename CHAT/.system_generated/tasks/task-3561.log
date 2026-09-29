@@ -1,0 +1,14 @@
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+
+Testing count=80 (Payload: 21.3 KB)...
+SUCCESS in 11.0s! Response length: 3533 chars
+Preview: '{"results":[{"case_id":"Q00001","match_id":"WH00001_1"},{"case_id":"Q00002","match_id":"WH00002_1"},{"case_id":"Q00003","match_id":"WH00003_1"},{"case'
+
+Testing count=100 (Payload: 26.6 KB)...
+SUCCESS in 7.3s! Response length: 60 chars
+Preview: '{"results":[{"case_id":"Q00001-Q00100","match_id":"WH*_1"}]}'
+
+Testing count=120 (Payload: 31.9 KB)...
+SUCCESS in 17.2s! Response length: 142 chars
+Preview: '{"results":{"matching_rule":"For every case_id Qxxxxx, the matched_candidate_id is the first candidate with the corresponding WHxxxxx_1 id."}}'

@@ -1,0 +1,30 @@
+
+The command exited with code 0.
+Output:
+    items = _try_text_content(elements)
+    print(f"     -> Extracted {len(items)} items from raw text content")
+    return items
+
+
+def extract_items_from_pdf(
+    filepath: Path,
+    api_key: str,
+    base_url: str = "https://transform.unstructured.io",
+) -> list[dict]:
+    """
+    استخراج أسماء الأصناف من ملف PDF (الدالة الرئيسية).
+
+    تجمع بين رفع الملف وتحليل الاستجابة.
+
+    Args:
+        filepath: مسار ملف PDF.
+        api_key: مفتاح Unstructured API.
+        base_url: عنوان خادم Unstructured API.
+
+    Returns:
+        قائمة من القواميس بالشكل:
+        {"item_name_raw": str, "source_page": int|None, "source_file": str}
+    """
+    filepath = Path(filepath)
+
+

@@ -1,0 +1,23 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2252,7 +2252,7 @@
+         if (settings) {
+             document.getElementById('setting-unstructured-key').value = settings.unstructured_api_key || '';
+             const profileEl = document.getElementById('setting-unstructured-profile');
+-            if (profileEl) profileEl.value = settings.unstructured_profile || 'best';
++            if (profileEl) profileEl.value = settings.unstructured_profile || 'balanced';
+             document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8000/v1/chat/completions';
+             document.getElementById('setting-local-key').value = settings.local_api_key || '';
+             document.getElementById('setting-model-name').value = settings.local_model || 'gpt-4o-mini';
+@@ -2266,7 +2266,7 @@
+     const profileEl = document.getElementById('setting-unstructured-profile');
+     const settings = {
+         unstructured_api_key: document.getElementById('setting-unstructured-key').value,
+-        unstructured_profile: profileEl ? profileEl.value : 'best',
++        unstructured_profile: profileEl ? profileEl.value : 'balanced',
+         local_api_url: document.getElementById('setting-local-url').value,
+         local_api_key: document.getElementById('setting-local-key').value,
+         local_model: document.getElementById('setting-model-name').value,
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

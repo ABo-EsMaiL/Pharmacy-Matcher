@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Submitting with wait_seconds=0...
+Returned in 1.99s!
+Response type: <class 'unstructured_transform_client._generated.models.job_accepted.JobAccepted'>
+Data: {'id': 'fb88bea2-438c-4e9e-bcc7-1092cd19946c', 'status': 'queued', 'poll_url': '/api/v2/jobs/fb88bea2-438c-4e9e-bcc7-1092cd19946c', 'profile': None, 'prompt': None, 'source': {'file_id': 'جملة-العمروووو-53d8f4c4.pdf', 'filename': 'جملة العمروووو.pdf', 'mimetype': 'application/pdf', 'expires_at': datetime.datetime(2026, 9, 23, 17, 11, 15, 903339, tzinfo=TzInfo(0))}}
+

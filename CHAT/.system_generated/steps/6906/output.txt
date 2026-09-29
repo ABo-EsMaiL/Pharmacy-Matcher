@@ -1,0 +1,9 @@
+Task: 916274de-7f92-49fc-a0a8-d291664b474a/task-6904
+Status: DONE
+Log: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\.system_generated\tasks\task-6904.log
+Log output:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+TypeError: Config.__init__() missing 2 required positional arguments: 'unstructured_api_key' and 'gemini_api_key'
+
+Last progress: 2s ago

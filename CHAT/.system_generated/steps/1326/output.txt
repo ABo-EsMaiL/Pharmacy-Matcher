@@ -1,0 +1,49 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\file_handler.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -6,7 +6,7 @@
+ from pathlib import Path
+ 
+ from .excel_reader import read_excel, extract_item_names
+-from .pdf_reader import extract_items_from_pdf, parse_items_from_response
++from .pdf_reader import extract_items_from_pdf, parse_structured_result
+ 
+ _EXCEL_EXTENSIONS = {".xlsx", ".xls", ".xlsm"}
+ _PDF_EXTENSIONS = {".pdf"}
+@@ -37,7 +37,7 @@
+         elif ext in _PDF_EXTENSIONS:
+             items = _process_pdf_file(filepath, api_key, base_url, gemini_api_key)
+         elif ext in _JSON_EXTENSIONS:
+-            items = _process_json_file(filepath, gemini_api_key)
++            items = _process_json_file(filepath)
+         else:
+             raise ValueError(
+                 f"[!] Unsupported extension: {ext}\n"
+@@ -76,7 +76,7 @@
+     return items
+ 
+ 
+-def _process_json_file(filepath: Path, gemini_api_key: str | None = None) -> list[dict]:
++def _process_json_file(filepath: Path) -> list[dict]:
+     """Process cached Unstructured JSON to save API limits."""
+     with open(filepath, "r", encoding="utf-8-sig") as f:
+         data = json.load(f)
+@@ -83,13 +83,5 @@
+-    items = parse_items_from_response(data, gemini_api_key)
+-    
+-    doc_name = filepath.name
+-    if isinstance(data, dict):
+-        doc_name = (data.get("source") or {}).get("filename") or doc_name
+-    elif isinstance(data, list) and data:
+-        doc_name = (data[0].get("metadata") or {}).get("filename") or doc_name
+-
+-    for item in items:
+-        item["source_file"] = doc_name
+-        
++    # We now assume the JSON is a saved ExtractionResult
++    items = parse_structured_result(data, filepath.name)
++    
+     return items
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

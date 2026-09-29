@@ -1,0 +1,21 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -316,12 +316,13 @@
+             
+             # Read input files (this handles PDF→Unstructured API automatically)
+             api_key = settings.get('unstructured_api_key', '') or config.unstructured_api_key
++            gemini_key = settings.get('gemini_api_key', '') or config.gemini_api_key
+             self.add_log("[PROCESS] Reading Shortages files...")
+-            shortage_data = read_input_files(copied_shortages, role="shortages", api_key=api_key)
++            shortage_data = read_input_files(copied_shortages, role="shortages", api_key=api_key, gemini_api_key=gemini_key)
+             self.add_log(f"[PROCESS] Read {len(shortage_data)} shortage files.")
+             
+             self.add_log("[PROCESS] Reading Warehouse files...")
+-            warehouse_data = read_input_files(copied_warehouses, role="warehouse", api_key=api_key)
++            warehouse_data = read_input_files(copied_warehouses, role="warehouse", api_key=api_key, gemini_api_key=gemini_key)
+             self.add_log(f"[PROCESS] Read {len(warehouse_data)} warehouse files.")
+             
+             # Flatten shortages
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

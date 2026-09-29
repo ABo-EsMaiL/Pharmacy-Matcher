@@ -1,0 +1,60 @@
+async function submitProcess() {
+
+    if (selectedShortageFiles.length === 0 || selectedWarehouseFiles.length === 0) {
+
+        showToast('يرجى اختيار ملف نواقص وملف مخزن واحد على الأقل', 'error');
+
+        return;
+
+    }
+
+    
+
+    const btn = document.getElementById('btn-submit');
+
+    const progressModal = document.getElementById('progress-modal');
+
+    
+
+    // UI Loading state
+
+    btn.classList.add('hidden');
+
+    progressModal.style.display = 'flex';
+
+    document.getElementById('progress-text').innerText = 'جاري تهيئة العملية...';
+
+    document.getElementById('progress-bar-fill').style.width = '5%';
+
+    
+
+    const termEl = document.getElementById('pipeline-log-terminal');
+
+    if (termEl) termEl.innerHTML = '[System] Started pipeline...\n';
+
+    
+
+    try {
+
+        const res = await window.pywebview.api.start_process(
+
+            JSON.stringify(selectedShortageFiles), 
+
+            JSON.stringify(selectedWarehouseFiles)
+
+        );
+
+        if (res.success) {
+
+            currentProcessId = res.process_id;
+
+            
+
+            // If the backend detected an identical exact match that was already completed!
+
+            if (res.existing) {
+
+                showToast('هذه العملية مسجلة بالفعل، جاري عرض النتائج...', 'info');
+
+                // Simulate process_complete event
+

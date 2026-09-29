@@ -1,0 +1,57 @@
+
+Encountered error in step execution: context canceled
+Output:
+INFO:     Started server process [3860]
+INFO:     Waiting for application startup.
+2026-09-24 19:35:40,680 - msemax.webhook - INFO - =================================================================
+2026-09-24 19:35:40,680 - msemax.webhook - INFO - Starting MSEMAX — Google AI Studio Web Hook Gateway
+2026-09-24 19:35:40,680 - msemax.webhook - INFO - Default Model: gemini-3.8-flash | Thinking: high
+2026-09-24 19:35:40,680 - msemax.webhook - INFO - Profile: D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile | Headless: False
+2026-09-24 19:35:40,680 - msemax.webhook - INFO - Port: 8001 | Max Concurrent: 1 | Rate Limit: 30/minute
+2026-09-24 19:35:40,680 - msemax.webhook - INFO - =================================================================
+2026-09-24 19:35:40,680 - msemax.webhook - INFO - Concurrency semaphore initialized: max 1 simultaneous requests
+2026-09-24 19:35:40,680 - msemax.webhook - INFO - Launching persistent Chromium context from: D:\AI_Engineer\MSEMAX-GAIStudio\chrome_profile (headless=False, start-maximized)
+2026-09-24 19:35:42,167 - msemax.webhook - INFO - Navigating to https://aistudio.google.com/prompts/new_chat to ensure clean environment...
+2026-09-24 19:35:44,650 - msemax.webhook - INFO - Google AI Studio web page ready!
+2026-09-24 19:35:44,650 - msemax.webhook - INFO - Target model: 'gemini-3.8-flash'
+2026-09-24 19:35:44,776 - msemax.webhook - INFO - Current model before: 'Gemini 3.8 Flash
+gemini-3.8-flash
+Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.'
+2026-09-24 19:35:44,776 - msemax.webhook - INFO - Current model after: 'Gemini 3.8 Flash
+gemini-3.8-flash
+Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.' | MODEL VERIFIED = true
+2026-09-24 19:35:44,813 - msemax.webhook - INFO - Changing Thinking Level from 'Medium' to 'high'...
+2026-09-24 19:35:45,337 - msemax.webhook - INFO - Thinking Level set to 'High' | THINKING VERIFIED = true
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:65252 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57338 - "GET /health HTTP/1.1" 200 OK
+2026-09-24 19:35:57,727 - msemax.webhook - INFO - Incoming /v1/chat/completions prompt (15633 chars, batch_size=75): '[System Instructions]\nYou are an expert clinical and Egyptian pharmaceutical mat'
+2026-09-24 19:35:59,387 - msemax.webhook - INFO - Starting fresh chat session (navigating to new chat)...
+2026-09-24 19:36:00,726 - msemax.webhook - INFO - Target model: 'gemini-3.8-flash'
+2026-09-24 19:36:00,850 - msemax.webhook - INFO - Current model before: 'Gemini 3.8 Flash
+gemini-3.8-flash
+Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.'
+2026-09-24 19:36:00,850 - msemax.webhook - INFO - Current model after: 'Gemini 3.8 Flash
+gemini-3.8-flash
+Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.' | MODEL VERIFIED = true
+2026-09-24 19:36:00,889 - msemax.webhook - INFO - Changing Thinking Level from 'Medium' to 'high'...
+2026-09-24 19:36:01,394 - msemax.webhook - INFO - Thinking Level set to 'High' | THINKING VERIFIED = true
+2026-09-24 19:36:01,692 - msemax.webhook - INFO - [TIMING-PREEXEC] Chat reset & setup took 3.95s (reset_done=False)
+2026-09-24 19:36:01,829 - msemax.webhook - INFO - Initial model turns count: 0
+2026-09-24 19:36:01,864 - msemax.webhook - INFO - Injecting prompt via JavaScript and triggering native events...
+2026-09-24 19:36:02,566 - msemax.webhook - INFO - Submitting prompt (15633 chars) to Google AI Studio natively...
+2026-09-24 19:36:02,838 - msemax.webhook - INFO - Dispatched native Control+Enter.
+2026-09-24 19:36:03,336 - msemax.webhook - INFO - [75 cases] Prompt submitted (15633 chars). Pre-exec took 5.61s. Timeout Tier: 51-75+ cases (75 cases) | Start: 120s | First Token: 240s | Stagnation: 120s | Ceiling: 480s
+2026-09-24 19:36:05,843 - msemax.webhook - INFO - [Google Backend Status 200] URL: https://alkalimakersuite-pa.clients6.google.com/$rpc/google.internal.alkali.appl
+2026-09-24 19:36:12,359 - msemax.webhook - INFO - [75 cases] State -> RESPONSE_IN_PROGRESS at 8.99s (is_running=False, new_model_turn=True, initial_chars=0)
+2026-09-24 19:40:03,366 - msemax.webhook - ERROR - [75 cases] Model stopped without producing tokens after 240.0s.
+2026-09-24 19:40:03,366 - msemax.webhook - INFO - [TIMING] 75 cases | first token: N/A | completed: INCOMPLETE | timeout: 240s
+2026-09-24 19:40:03,366 - msemax.webhook - INFO - [TIMING_DETAILS] 75 cases | state: RESPONSE_IN_PROGRESS | turn detected: 9.0s | first token: N/A | last growth: 9.0s | completed: INCOMPLETE | total: 240.0s | chars: 0 | tier: 51-75+ cases (75 cases)
+2026-09-24 19:40:03,366 - msemax.webhook - INFO - [TIMING_BREAKDOWN] 75 cases | Total: 245.64s | Pre-exec: 5.61s | Model Gen: 240.03s | Chars: 0
+2026-09-24 19:40:03,366 - msemax.webhook - INFO - Stream finished in 240.03s | chars: 0 | Valid JSON: False (no JSON structure found; direct err: Expecting value: line 1 column 1 (char 0)) | Sample: ''
+
+[AI STUDIO TIMING] 75 cases | first token: N/A | completed: INCOMPLETE | timeout: 240s (Total Roundtrip: 245.64s)
+
+INFO:     127.0.0.1:57339 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+

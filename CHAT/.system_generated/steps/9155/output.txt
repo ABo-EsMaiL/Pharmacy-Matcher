@@ -1,0 +1,34 @@
+
+The command exited with code 0.
+Output:
+INFO:     Will watch for changes in these directories: ['D:\\AI_Engineer\\MSEMAX']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [17968] using WatchFiles
+INFO:     Started server process [16444]
+INFO:     Waiting for application startup.
+2026-09-25 02:07:59,420 - msemax.api - INFO - Starting up MSEMAX FastAPI server...
+2026-09-25 02:07:59,420 - msemax.api - INFO - Rate limit: 10/minute | Max concurrent: 3
+2026-09-25 02:07:59,421 - msemax.pow - INFO - [POW] ProcessPool started with 4 workers
+2026-09-25 02:07:59,422 - msemax.api - INFO - Concurrency semaphore initialized: max 3 simultaneous requests
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58212 - "GET /health HTTP/1.1" 200 OK
+2026-09-25 02:08:00,379 - msemax.api - INFO - Session data reloaded from disk (file changed)
+2026-09-25 02:08:00,677 - msemax.api - ERROR - chat-requirements failed: 401 - {
+  "error": {
+    "message": "Encountered invalidated oauth token for user, failing request",
+    "type": null,
+    "code": "token_revoked",
+    "param": null
+  },
+  "status": 401
+}
+INFO:     127.0.0.1:58213 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+Starting MSEMAX using: D:\miniconda3\envs\venv\python.exe
+Process spawned with PID 17968
+Waiting 1s...
+Server healthy after 2s: {'status': 'ok', 'version': 'MSEMAX 1.0', 'session_file_loaded': True, 'concurrent_slots_available': 3, 'max_concurrent': 3, 'rate_limit': '10/minute'}
+Chat completion status: 200
+Response: {"id":"chatcmpl-bf279ac8a4cd","object":"chat.completion","created":1790291280,"model":"gpt-4o","choices":[{"index":0,"message":{"role":"assistant","content":"\n\n[Error: Failed to get chat-requirements (session might be expired)]"},"finish_reason":"stop"}]}
+Terminating process...
+Done.
+

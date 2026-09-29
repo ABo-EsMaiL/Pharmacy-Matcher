@@ -1,0 +1,17 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Total cure items: 715
+Found in Cure Pharma: باروفين ٢٠ قرص
+Found in Cure Pharma: دیوراسف پم ٤ قرص جدید
+Found in Cure Pharma: دیورافس امول = دیور فوس
+
+Candidates for 'ديورافوس 1 امبول':
+
+Candidates for 'باروفين 30قرص س ج':
+  -> {'id': 'WH_00114', 'name': 'باروفين ٢٠ قرص', 'score': 0.6542083381376625, 'brand_sim': 100.0}
+  -> {'id': 'WH_00146', 'name': 'بروفين ٤٠٠ مجم قرص', 'score': 0.34656366791925924, 'brand_sim': 92.3076923076923}
+  -> {'id': 'WH_00148', 'name': 'بروفين ٦٠٠ مجم قرص', 'score': 0.3336320233084005, 'brand_sim': 92.3076923076923}
+

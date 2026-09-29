@@ -1,0 +1,92 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -101,7 +101,16 @@
+     text = norm_num(text.lower())
+     m = re.search(r'(\d+(?:\.\d+)?)\s*(?:مجم|مج|جم|جرام|gm|mg|mcg|مكجم)', text)
+     if m:
+-        return m.group(1)
++        val = m.group(1)
++        if any(unit in m.group(0) for unit in ['جم', 'جرام', 'gm']):
++            try:
++                val = str(float(val) * 1000)
++            except:
++                pass
++        return val
++    m2 = re.search(r'\b(1000|875|625|500|400|300|250|200|150|125|100|80|75|50|40|25|20|15|10|5|2.5|1)\b', text)
++    if m2:
++        return m2.group(1)
+     if 'ربع' in text or '25.' in text:
+         return '0.25'
+     if 'نص' in text or 'نصف' in text or '.5' in text or '0.5' in text:
+@@ -112,7 +112,7 @@
+     return bool(re.search(r'(?:^|[^\w])(كو|بلس|بلاس|كومب|co|plus|comp)(?:[^\w]|$)|كواقراص|كوأقراص|بلساقراص|بلسكبسول', t))
+ 
+ def are_forms_compatible(form1: str | None, form2: str | None) -> bool:
+-    if not form1 or not form2:
++    if not form1 and not form2:
+         return True
+     if form1 == form2:
+         return True
+@@ -121,7 +121,11 @@
+         ('cream', 'gel'), ('gel', 'cream'),
+         ('injection', 'ampoule'), ('ampoule', 'injection'),
+     }
+-    return (form1, form2) in compat
++    if (form1, form2) in compat:
++        return True
++    if form1 and form2 and form1 != form2:
++        return False
++    return True
+ 
+ BRAND_FAMILIES = {'بيتادين', 'هيرو', 'انسولين', 'ليمتلس', 'سيتال', 'لبن'}
+ 
+@@ -139,14 +139,17 @@
+         if fuzz.ratio(brand_r, brand_c) < 85:
+             return False, "brand_family_ambiguity"
+             
+-    b_sim = fuzz.ratio(brand_r, brand_c)
+-    if words_r and words_c and (words_r[0] == words_c[0] or fuzz.ratio(words_r[0], words_c[0]) >= 85):
+-        if len(words_r) == 1 and len(words_c) == 1:
+-            b_sim = max(b_sim, 90)
+-            
+-    if b_sim < 85:
+-        return False, "low_brand_sim"
+-        
++    if len(words_r) == 1 and len(words_c) == 1:
++        if first_r != first_c and fuzz.ratio(first_r, first_c) < 90:
++            return False, f"brand_diff_{first_r}_vs_{first_c}"
++    elif len(words_r) == len(words_c):
++        for w_r, w_c in zip(words_r, words_c):
++            if w_r != w_c and fuzz.ratio(w_r, w_c) < 85:
++                return False, f"brand_word_diff_{w_r}_vs_{w_c}"
++    else:
++        if fuzz.ratio(brand_r, brand_c) < 85:
++            return False, "low_brand_sim"
++            
+     form_r = extract_form_group(req)
+     form_c = extract_form_group(cand)
+     if not are_forms_compatible(form_r, form_c):
+@@ -153,4 +153,9 @@
+         
++    is_r_drops = 'نقط' in req or 'قطره' in req or 'قطرة' in req
++    is_c_drops = 'نقط' in cand or 'قطره' in cand or 'قطرة' in cand
++    if is_r_drops != is_c_drops:
++        return False, "drops_conflict"
++        
+     is_req_syrup = bool(re.search(r'\b(شراب|شرب|معلق)\b', req))
+     is_cand_syrup = bool(re.search(r'\b(شراب|شرب|معلق)\b', cand))
+     norm_c = norm_num(cand)
+@@ -172,8 +172,8 @@
+             if str_r != str_c:
+                 return False, f"strength_mismatch_{str_r}_vs_{str_c}"
+                 
+-    slash_r = re.search(r'(?:^|[^\d/])(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)(?:[^\d/]|$)', req)
+-    slash_c = re.search(r'(?:^|[^\d/])(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)(?:[^\d/]|$)', cand)
++    slash_r = re.search(r'(?:^|[^\d/])(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)(?:[^\d/]|$)', norm_num(req))
++    slash_c = re.search(r'(?:^|[^\d/])(\d+(?:\.\d+)?\/\d+(?:\.\d+)?)(?:[^\d/]|$)', norm_num(cand))
+     if (slash_r and not slash_c) or (slash_c and not slash_r):
+         return False, "slash_strength_mismatch"
+     if slash_r and slash_c and slash_r.group(1) != slash_c.group(1):
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

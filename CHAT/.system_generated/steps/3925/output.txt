@@ -1,0 +1,46 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -15,16 +15,17 @@
+ 
+ CRITICAL PHARMACEUTICAL RULES:
+ 1. STRICT BRAND IDENTITY (NO GENERICS / NO ALTERNATIVES):
+-   - You MUST match the EXACT SAME trade brand name (e.g. Mebo matching Mebo, Dolphin matching Dolphin, Confragran matching Confragran).
+-   - NEVER suggest or accept alternative brand names, different trade names, or generics (e.g. Mebo != Bernasource, Dolphin != Indomethacin, Confragran != Viagra, Bronchophane != Brufen, Sinupret != Sinopril, PK-Merz != Merz Spezial, E-Moxclav != Curam, Averocoxib != Arcoxia, Herobaby != Bebelac).
+-   - If the trade brand name is different or unrelated, YOU MUST RETURN "status": "no_match" (or omit it). NEVER mark different brands as "match" or "review"!
+-   - Allow ONLY minor spelling variants or OCR typos of the SAME brand (e.g. كوللوماك vs كولومالك, سيديبروكت vs سيديبروك, ينسون ايزيس vs زيس ينسون, اسبوسيد vs اسبوبسيد).
++   - You MUST match the EXACT SAME commercial trade brand name.
++   - NEVER suggest or accept alternative brand names, different trade names, or generics (e.g. Panadol is NOT Cetal, Brufen is NOT Cataflam, Augmentin is NOT Curam).
++   - If the trade brand name is different, unrelated, or an alternative product, YOU MUST RETURN "status": "no_match" (or omit it). NEVER mark different brands as "match" or "review"!
++   - Allow ONLY minor spelling variants, phonetic transliterations, or common OCR scanning typos of the SAME exact brand (e.g. dropped initial letters like 'ا', slight typo in dots like 'ب' vs 'م', or slight Arabic vowel variations).
+ 
+ 2. DOSAGE FORM (ZERO TOLERANCE FOR CONFLICTS):
+-   - Dosage forms MUST be compatible:
++   - Dosage forms MUST be strictly compatible:
+      - Tablets/Capsules (اقراص, كبسول, حبوب, فيلم, شريط) ONLY match Tablets/Capsules.
+-     - Syrups/Suspensions (شراب, شرب, معلق) ONLY match Syrups. NEVER match tablets with syrup (e.g. Cetal tablets != Cetal syrup).
+-     - Creams/Ointments (كريم, مرهم) ONLY match Creams/Ointments. NEVER match cream with suppository (e.g. Gynozol cream != Gynozol suppository).
++     - Syrups/Suspensions (شراب, شرب, معلق) ONLY match Syrups. NEVER match tablets with syrup.
++     - Creams (كريم) ONLY match Creams. NEVER match cream with ointment or suppository.
++     - Ointments (مرهم, دهان) ONLY match Ointments.
+      - Injections/Ampoules (امبول, حقن, فيال) ONLY match Injections.
+      - Suppositories (لبوس) ONLY match Suppositories.
+      - Drops (نقط, قطرة) ONLY match Drops.
+@@ -37,11 +37,11 @@
+ 
+ 4. PACKAGING, PACK SIZE & WHOLESALE UNITS (MATCH vs REVIEW):
+    - "match": Same brand, same form, same strength.
+-     - STANDARD PACKS: If requested shortage specifies standard pack count (e.g. "ديجستين 20قرص", "كيتولاك 5 امبوله", "كولونا 3شريط", "ايفاستين 2 شريط", "ماريفان 3شريط") and warehouse candidate has the same drug, form, and strength but does not explicitly state the pack size (e.g. "ديجستين اقراص/فاركو", "كيتولاك امبول/العامريه", "كولونا اقراص"):
++     - STANDARD PACKS: If requested shortage specifies standard packaging count (e.g. 20 tablets, 5 ampoules, 3 strips) and warehouse candidate has the same drug, form, and strength but does not explicitly state the pack size (e.g. standard listing without count):
+        THIS IS A 100% MATCH ("status": "match")! NEVER mark this as review!
+-     - Suffixes like "/فاركو", "/جلاكسو", "س ج", "سعر جديد", "سعر قديم" do not change the product.
+-   - "review": ONLY for the SAME EXACT medicine brand when there is an EXPLICIT, CONFLICTING pack count on BOTH sides (e.g. requested 15 tablets vs candidate explicitly writes 60 tablets of Doliprane).
+-     - Wholesale bundles like "باكت 120" (meaning a carton of 120 boxes) or "باكت 50" are wholesale lot sizes, NOT the blister/tablet count inside a single box! Do not confuse wholesale carton count with tablet count.
++     - Manufacturer suffixes (/فاركو, /جلاكسو), commercial indicators ("س ج", "سعر جديد", "سعر قديم") do not change the product.
++   - "review": ONLY for the SAME EXACT medicine brand when there is an EXPLICIT, CONFLICTING pack count on BOTH sides (e.g. requested 15 tablets vs candidate explicitly writes 60 tablets of the same medicine).
++     - Wholesale bundles like "باكت 120" (meaning a shipping carton of 120 boxes) or "باكت 50" are wholesale lot sizes, NOT the blister/tablet count inside a single box! Do not confuse wholesale carton count with tablet count.
+ 
+ SCHEMA:
+ Return ONLY a valid JSON object matching this schema:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

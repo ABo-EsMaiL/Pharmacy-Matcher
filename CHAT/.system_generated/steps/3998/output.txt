@@ -1,0 +1,16 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+
+
+    Directory: D:\AI_Engineer\Pharmacy-agy\data\processes\PROC-001\input_warehouses
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         9/20/2026   1:55 PM         199787 الهضبة الاثنين نقدى0.pdf                                             
+
+
+

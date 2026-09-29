@@ -1,0 +1,671 @@
+[
+  {
+    "case_id": "A0150",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر جانوفيا بين المرشحين"
+  },
+  {
+    "case_id": "A0151",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر جانيوميت بين المرشحين"
+  },
+  {
+    "case_id": "A0152",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر جانيوميت بين المرشحين"
+  },
+  {
+    "case_id": "A0153",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر جاوتيفيد بين المرشحين"
+  },
+  {
+    "case_id": "A0154",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر جراليبنتين بين المرشحين"
+  },
+  {
+    "case_id": "A0155",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0391"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 2 ملجم مقابل 3 مجم"
+  },
+  {
+    "case_id": "A0156",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر جلوتاثايون بين المرشحين"
+  },
+  {
+    "case_id": "A0157",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2009"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف تركيز الميتفورمين 1000 مقابل 500"
+  },
+  {
+    "case_id": "A0158",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر جلينسيرت كريم بين المرشحين"
+  },
+  {
+    "case_id": "A0159",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر جي سي فارم بالمرشحين"
+  },
+  {
+    "case_id": "A0160",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر جيت وايت كريم بالمرشحين"
+  },
+  {
+    "case_id": "A0161",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر جيوكاند بلس بين المرشحين"
+  },
+  {
+    "case_id": "A0162",
+    "status": "match",
+    "item_id": "I1160",
+    "plausible_ids": [
+      "I1160"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام للمنتج والشكل الصيدلي"
+  },
+  {
+    "case_id": "A0163",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر دال دروب بين المرشحين"
+  },
+  {
+    "case_id": "A0164",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر دايسينون بين المرشحين"
+  },
+  {
+    "case_id": "A0165",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر دورفين كبسول بين المرشحين"
+  },
+  {
+    "case_id": "A0166",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0415"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 4 مجم مقابل 2 مجم"
+  },
+  {
+    "case_id": "A0167",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2593",
+      "I2592"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 25 مجم مقابل 12.5"
+  },
+  {
+    "case_id": "A0168",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2593",
+      "I2592"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 25 مجم مقابل 50"
+  },
+  {
+    "case_id": "A0169",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2593",
+      "I2592"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 25 مجم مقابل 75"
+  },
+  {
+    "case_id": "A0170",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر دي 3 تاج بالمرشحين"
+  },
+  {
+    "case_id": "A0171",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر دي جي كير بالمرشحين"
+  },
+  {
+    "case_id": "A0172",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديافانس بين المرشحين"
+  },
+  {
+    "case_id": "A0173",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديافانس بين المرشحين"
+  },
+  {
+    "case_id": "A0174",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0421",
+      "I1193",
+      "I2157"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 200 مجم مقابل 500"
+  },
+  {
+    "case_id": "A0175",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0425",
+      "I1196",
+      "I2160"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "تعارض إضافة بلس واختلاف الشكل الصيدلي"
+  },
+  {
+    "case_id": "A0176",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0425",
+      "I1196",
+      "I2160"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "تعارض إضافة بلس واختلاف الشكل الصيدلي"
+  },
+  {
+    "case_id": "A0177",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديديرا نقط بين المرشحين"
+  },
+  {
+    "case_id": "A0178",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديرموفيت كريم بين المرشحين"
+  },
+  {
+    "case_id": "A0179",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديسبروديرم كريم بين المرشحين"
+  },
+  {
+    "case_id": "A0180",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديفارول امبول بين المرشحين"
+  },
+  {
+    "case_id": "A0181",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0429",
+      "I0430",
+      "I2166",
+      "I1207"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف في التركيز والشكل الصيدلي"
+  },
+  {
+    "case_id": "A0182",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديكابرينو امبول بالمرشحين"
+  },
+  {
+    "case_id": "A0183",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديكسافين شراب بين المرشحين"
+  },
+  {
+    "case_id": "A0184",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديكلوتازين بين المرشحين"
+  },
+  {
+    "case_id": "A0185",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديكلوفلام بين المرشحين"
+  },
+  {
+    "case_id": "A0186",
+    "status": "review",
+    "item_id": "I0345",
+    "plausible_ids": [
+      "I0345"
+    ],
+    "no_match_basis": "",
+    "reason": "اختلاف الشكل الصيدلي أمبول بدلا من لبوس"
+  },
+  {
+    "case_id": "A0187",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديمانكورتيل بين المرشحين"
+  },
+  {
+    "case_id": "A0188",
+    "status": "match",
+    "item_id": "I2082",
+    "plausible_ids": [
+      "I2082"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام للمنتج ديورافوس أمبول"
+  },
+  {
+    "case_id": "A0189",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ديوزمين بين المرشحين"
+  },
+  {
+    "case_id": "A0190",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر راميكسول بين المرشحين"
+  },
+  {
+    "case_id": "A0191",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر راميكسول بين المرشحين"
+  },
+  {
+    "case_id": "A0192",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر رايوفيت شراب بين المرشحين"
+  },
+  {
+    "case_id": "A0193",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0026",
+      "I1895"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "اختلاف تجاري وإضافة بلس للمنتج"
+  },
+  {
+    "case_id": "A0194",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر روزوكوليست بين المرشحين"
+  },
+  {
+    "case_id": "A0195",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر روزينول كبسول بين المرشحين"
+  },
+  {
+    "case_id": "A0196",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر روكسيكام بين المرشحين"
+  },
+  {
+    "case_id": "A0197",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر رونكس دش مهبلي بالمرشحين"
+  },
+  {
+    "case_id": "A0198",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر رويال جيلي بين المرشحين"
+  },
+  {
+    "case_id": "A0199",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر رويال ريجيم بين المرشحين"
+  },
+  {
+    "case_id": "A0200",
+    "status": "review",
+    "item_id": "I0357",
+    "plausible_ids": [
+      "I0357"
+    ],
+    "no_match_basis": "",
+    "reason": "اختلاف الشكل الصيدلي جيل بدلا من سبراي"
+  },
+  {
+    "case_id": "A0201",
+    "status": "match",
+    "item_id": "I1747",
+    "plausible_ids": [
+      "I1745",
+      "I1746",
+      "I1747",
+      "I1748"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق ريتشي بانثينول أدفانس كريم جيل"
+  },
+  {
+    "case_id": "A0202",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ريستيبرو نقط بين المرشحين"
+  },
+  {
+    "case_id": "A0203",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ريلاكومب جيل بين المرشحين"
+  },
+  {
+    "case_id": "A0204",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ريلاكومب جيل بين المرشحين"
+  },
+  {
+    "case_id": "A0205",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر رينومول شراب بين المرشحين"
+  },
+  {
+    "case_id": "A0206",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر زادميسن بين المرشحين"
+  },
+  {
+    "case_id": "A0207",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر زاكاجلون بين المرشحين"
+  },
+  {
+    "case_id": "A0208",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر زانثيبوكس بين المرشحين"
+  },
+  {
+    "case_id": "A0209",
+    "status": "match",
+    "item_id": "I1253",
+    "plausible_ids": [
+      "I1253"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق المنتج زانوجليد مع توافق التركيز"
+  },
+  {
+    "case_id": "A0210",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر زنكو بلاس شراب بالمرشحين"
+  },
+  {
+    "case_id": "A0211",
+    "status": "match",
+    "item_id": "I2107",
+    "plausible_ids": [
+      "I0367",
+      "I2107",
+      "I2108",
+      "I2109"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام للمنتج والتركيز زوركال 20"
+  },
+  {
+    "case_id": "A0212",
+    "status": "review",
+    "item_id": "I2611",
+    "plausible_ids": [
+      "I2611",
+      "I0094",
+      "I0093",
+      "I2110"
+    ],
+    "no_match_basis": "",
+    "reason": "اختلاف الشكل الصيدلي شراب بدلا من كريم"
+  },
+  {
+    "case_id": "A0213",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر زولمسولان بين المرشحين"
+  },
+  {
+    "case_id": "A0214",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2119",
+      "I2120"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 5 و10 مقابل 20"
+  },
+  {
+    "case_id": "A0215",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر سالبين فيال بين المرشحين"
+  },
+  {
+    "case_id": "A0216",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر سالميتوكورت بين المرشحين"
+  },
+  {
+    "case_id": "A0217",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2221"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "تعارض في الصنف انتي اوكسيدانت"
+  },
+  {
+    "case_id": "A0218",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2221"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "تعارض في نوع الصنف انتي اوكسيدانت"
+  },
+  {
+    "case_id": "A0219",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر سايبنتولا قطرة بين المرشحين"
+  },
+  {
+    "case_id": "A0220",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر سبازموفين امبول بين المرشحين"
+  },
+  {
+    "case_id": "A0221",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2223"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف التركيز 50 مجم مقابل 100"
+  },
+  {
+    "case_id": "A0222",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر سبكتراسيف بين المرشحين"
+  },
+  {
+    "case_id": "A0223",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر سبلفكت بين المرشحين"
+  },
+  {
+    "case_id": "A0224",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "عدم توفر ستارفيل رول اون بالمرشحين"
+  }
+]

@@ -1,0 +1,108 @@
+
+The command exited with code 0.
+Output:
+Gemini Page 1 items count: 146
+Unstructured Page 1 items count: 146
+
+--- 25 BIGGEST DIFFERENCES (Where Unstructured corrupted the drug name) ---
+
+1. [SIM: 50%]
+   Gemini:       'الفاكيموتريبسين'
+   Unstructured: 'بليفانكوسيلين نقط'
+
+2. [SIM: 56%]
+   Gemini:       'بريجناكير سعر ۲۲۰'
+   Unstructured: 'برجيناكسيير ٢٢٠'
+
+3. [SIM: 60%]
+   Gemini:       'ارث فری ۳۰ قرص'
+   Unstructured: 'ارت فنزي ٤ اقراص'
+
+4. [SIM: 61%]
+   Gemini:       'بايلولجام ٦/١٠٠مجم ٨ قرص ۱۹۲ ج'
+   Unstructured: 'بايوجلام ١٠/٦٠، ٢٠مجم اقراص ١٩٢ج'
+
+5. [SIM: 61%]
+   Gemini:       'استنشنال ۳۰۰ ق'
+   Unstructured: 'استنشال ٣٠٠٠'
+
+6. [SIM: 64%]
+   Gemini:       'بروتوفكس ٤٠ جم قديم ١١٦ج'
+   Unstructured: 'بروتوفين ٤٠ مجم ، ٤ حقن ١٤'
+
+7. [SIM: 64%]
+   Gemini:       'اتكوكوكسيب ۹۰ ملی ۳۰ قرص'
+   Unstructured: 'انتوكسكيب ، ٩٠ مل ، ٢٠ قرص'
+
+8. [SIM: 64%]
+   Gemini:       'ايكوزاليب ١جم'
+   Unstructured: 'إيكوزابيل ٢٠مجم'
+
+9. [SIM: 64%]
+   Gemini:       'اكسفورج ١٦٠/٥عادى س.ج ۲۱۸ ج'
+   Unstructured: 'اكسفورج ١٠/١٦٠ اقراص س.ج ٢١٨ج'
+
+10. [SIM: 64%]
+   Gemini:       'انتروجرمينا امبول ۲ بليون سعر =260'
+   Unstructured: 'السرجرمينا امبول ٦٠٠ سعر ٢٦٠'
+
+11. [SIM: 65%]
+   Gemini:       'املوسازايد ٥/١٢,٥/٤٠'
+   Unstructured: 'المولساريد ٥/٤٠/١٢/٥'
+
+12. [SIM: 65%]
+   Gemini:       'ايزوجست ٤٠جم ١٤ ك س ج'
+   Unstructured: 'إيزوجست ، ١٤ك س ج ، ٢٠مجم'
+
+13. [SIM: 65%]
+   Gemini:       'اكسفورج اتش ١٦٠/٥ س.ج ٢٧٠ج'
+   Unstructured: 'اكسفورج ١٠/١٦٠ اقراص س.ج ٢١٨ج'
+
+14. [SIM: 66%]
+   Gemini:       'بروتوفكس ۲۰ مجم ۲۱ قرص'
+   Unstructured: 'بروتوفين ٤٠مجم ، ١٠ قرص'
+
+15. [SIM: 66%]
+   Gemini:       'بستول ٥مج ٢٠ق/الحكمة'
+   Unstructured: 'بستول ٢٠مجم ، ٢٠العلبة'
+
+16. [SIM: 66%]
+   Gemini:       'بكتول برتقال استحلاب'
+   Unstructured: 'بتكون نعناع استحلاب'
+
+17. [SIM: 66%]
+   Gemini:       'اوجرام اجم ١٤ قرص ١٥٢ج'
+   Unstructured: 'اوجمنتين ١جم ، ١٤ قرص ٢٥٢ج'
+
+18. [SIM: 66%]
+   Gemini:       'ابی رایز شراب ٤٥ج'
+   Unstructured: 'ابي رايز اقراص ج'
+
+19. [SIM: 67%]
+   Gemini:       'ايزوتريتينوين ٢٠ مجم ٣٠ كبسولة'
+   Unstructured: 'إنتروتينين ٢٠مجم ، ٢مجم ، كبسولة'
+
+20. [SIM: 67%]
+   Gemini:       'اوكساليبتال ٦٠٠ ق س ج ۳۰۳ ج'
+   Unstructured: 'اوكساليبلاتين ٦٠٠مجم س ج ٣٠٣ج'
+
+21. [SIM: 68%]
+   Gemini:       'اوفلام ٥٠ مجم اقراص/المهن'
+   Unstructured: 'اكساميد ١٠ مجم اقراص/ايكس'
+
+22. [SIM: 68%]
+   Gemini:       'ابيكوجيل شراب/ايبيكو'
+   Unstructured: 'ايكوجلش جل/ايبو'
+
+23. [SIM: 69%]
+   Gemini:       'ايراستابكس بلس ٢٠مجم ٣٠قرص'
+   Unstructured: 'إبراستكليس بلس ، أمجم ، ٢٠قرص'
+
+24. [SIM: 69%]
+   Gemini:       'ايراستابكس بلس ٤٠مجم ٣٠قرص'
+   Unstructured: 'إبراستكليس بلس ، أمجم ، ٢٠قرص'
+
+25. [SIM: 69%]
+   Gemini:       'ايفيوسبان شراب س.ج ٥٥ ج'
+   Unstructured: 'إيفيروس شراب س.ج،٣٠ج'
+

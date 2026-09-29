@@ -1,0 +1,42 @@
+
+The command exited with code 1.
+Output:
+
+LocalAddress LocalPort     State OwningProcess
+------------ ---------     ----- -------------
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+127.0.0.1         8000 CloseWait         18888
+0.0.0.0           8000    Listen          3524
+
+
+

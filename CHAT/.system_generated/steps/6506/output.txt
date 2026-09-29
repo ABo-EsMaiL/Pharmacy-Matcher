@@ -1,0 +1,14 @@
+
+The command exited with code 0.
+Output:
+
+desktop_app\templates\index.html:1309:            <div id="screen-new" class="screen active">
+desktop_app\templates\index.html:1373:            <div id="screen-results" class="screen">
+desktop_app\templates\index.html:1454:            <div id="screen-history" class="screen">
+desktop_app\templates\index.html:1470:            <div id="screen-settings" class="screen">
+desktop_app\templates\index.html:1572:            <div id="screen-logs" class="screen">
+desktop_app\templates\index.html:1590:            <div id="screen-servers" class="screen">
+desktop_app\templates\index.html:1775:    <div id="screen-home" style="display:none;"></div>
+
+
+

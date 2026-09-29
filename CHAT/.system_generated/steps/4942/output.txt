@@ -1,0 +1,54 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+============================================================
+1. DETAILS OF 'يحتاج مراجعة' IN PROC-006 (Total: 33 rows)
+============================================================
+Headers: ['القرار (اختر)', 'اسم الصنف المطلوب', 'اسم المرشح في المخزن', 'المخزن', 'السبب']
+- Shortage: None | Candidate: روزاسيف 30 كبسوله/ برايم روز | Warehouse: ديوراسيف ١ جم اقراص/سكويب | Reason: السلام شبين.pdf
+- Shortage: None | Candidate: دوكسي بروكت بلس مرهم س ج | Warehouse: دوكسيسيروك بلس مرهم/ميڤافارم | Reason: السلام شبين.pdf
+- Shortage: None | Candidate: برونكوفين شراب س ج | Warehouse: برونكوبينير سعر ٢٨١ج | Reason: السلام شبين.pdf
+- Shortage: None | Candidate: برونكوفين شراب | Warehouse: برونكوبينير سعر ٢٨١ج | Reason: السلام شبين.pdf
+- Shortage: None | Candidate: فلوب شراب س ج | Warehouse: فلویر شراب / باکت 25 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: هيلسك 20مجم14كبسول س ج | Warehouse: هیلیکور کپسول/باكت 90 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: ديبوفيت  5امبول س ج | Warehouse: دیبوین امبول/المهن باکت 64 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: مويست 1 كريم | Warehouse: ایا موست کریم/باکت 30 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: ستلاسيل 5 جم اقراص س ج | Warehouse: متاسيل 5 مج اقراص/باكت 150 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: يوكيراتو كريم س ج | Warehouse: یوریکیر کریم/باكت 80 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: سينوبريت اقراص | Warehouse: سینوریت اقراص عادی/باکت150 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: ريتشي بانثينول كريم ادفانس | Warehouse: یوریتشی پانتیول ادفانس کریم جیل | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: اوبتك سالين قطرة س ج | Warehouse: اوبست قطره للعين/باكت 60 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: فاتروكسيم200مجم10قرص س ج | Warehouse: زروكسيمور اقراص/باكت 200 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: ينسون ايزيس س ج | Warehouse: ایزس ينسون بالليمون 20 فلتر | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: ماجيك اويل  60 ملل زيت | Warehouse: ماجيك اويل 120 مل زيت /باكت20 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: فيتا زنك  كبسول | Warehouse: فیتا زون قرص قدیم | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: هيرو دي3+كي2 نقط | Warehouse: هیدرو فی ای دی تری کیه نقط"جدید | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: ليفست 20قرص | Warehouse: لیفوستام اقراص جدید | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: برونكوفين شراب س ج | Warehouse: برونكوف شراب | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: بروتولوك40مجم اقراص س ج | Warehouse: کونترولوک ۴۰مجم اقراص | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: برونكوفين شراب | Warehouse: برونكوف شراب | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: بانثينول النيل2%كريم وسط | Warehouse: بانثينول ٣٠جم كريم اروكس جديد | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: باروفين 30قرص س ج | Warehouse: باروفين ٢٠ قرص | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: يوريفين فوار | Warehouse: یورین فوار | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: ليفانيك500مجم 7قرص س ج | Warehouse: تافانیک ۵۰۰ جم اقراص | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: ايموكسكلاف642مجم شراب | Warehouse: ايموكسكلاف ٤٢،١ شراب | Reason: المكرومي المنصورة.pdf
+- Shortage: None | Candidate: بروفين 200مجم 30قرص س ج | Warehouse: برونفين ٤٠٠مجم ، ١٠قرص س.ج ٩٩ج | Reason: المكرومي المنصورة.pdf
+- Shortage: None | Candidate: اسبوسيد 20قرص اطفال | Warehouse: استوسيد اطفال ٣٥جنية | Reason: المكرومي المنصورة.pdf
+- Shortage: None | Candidate: ستاركوبينا5مجم20قرص | Warehouse: ستاركوبركس ٥ مجم ٢٥٢ج | Reason: المكرومي المنصورة.pdf
+- Shortage: None | Candidate: ستاركوبينا5مجم3شريط س ج | Warehouse: ستاركوبركس ٥ مجم ٢٥٢ج | Reason: المكرومي المنصورة.pdf
+- Shortage: None | Candidate: زوركال20مجم14قرص س ج | Warehouse: زوراكان ٢٠ مجم، ٤٠مجم اقراص س.ج | Reason: المكرومي المنصورة.pdf
+- Shortage: None | Candidate: كيروفيت 3شريط | Warehouse: نيروفيت اقراص سعر جديد | Reason: المكرومي المنصورة.pdf
+
+============================================================
+2. DETAILS OF 'يحتاج مراجعة' IN PROC-005 (Total: 7 rows)
+============================================================
+- Shortage: None | Candidate: اوجرام457مجم بودره60مل | Warehouse: وجرام 457 شراب 80 مل ج باکت 20 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: دانست  4 مجم 3 امبول س ج | Warehouse: دانتسيت 4 مج 6 امبول | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: ماجيك اويل  60 ملل زيت | Warehouse: ماجيك اويل 120 مل زيت /باكت20 | Reason: الهضبة الاثنين نقدى0.pdf
+- Shortage: None | Candidate: ليفابيون 6امبول | Warehouse: لیپابیون آمپول باکت 25 | Reason: مخزن الحياة فارم اسكندريه-170.pdf
+- Shortage: None | Candidate: لاكتيز 15 ملل نقط 750مجم | Warehouse: لاکتز، ۷۵۰، ۱۵ قطره ۵ ملی جدید | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: دانست  4 مجم 3 امبول س ج | Warehouse: داست ٤مجم ١ امپول ١٥ | Reason: كيور فارما خاص.pdf
+- Shortage: None | Candidate: لاكتيز 15 ملل نقط 750مجم | Warehouse: لاكتيز نقط بالفم ٥ مل ١٩٠ | Reason: المكرومي المنصورة.pdf
+

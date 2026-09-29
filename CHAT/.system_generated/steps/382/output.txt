@@ -1,0 +1,243 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\static\style.css. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -14,27 +14,147 @@
+ }
+ 
+ * {
+-    box-sizing: border-box;
+     margin: 0;
+     padding: 0;
++    box-sizing: border-box;
++    font-family: 'Cairo', sans-serif;
+ }
+ 
+ body {
+-    font-family: 'Cairo', sans-serif;
+-    background-color: var(--bg-color);
+-    color: var(--text-main);
+-    line-height: 1.6;
+-    overflow-x: hidden;
+-}
+-
+-/* App Container and Screens */
+-.app-container {
+-    max-width: 1200px;
+-    margin: 0 auto;
+-    padding: 20px;
++    background-color: var(--bg-main);
++    color: var(--text-main);
++    overflow: hidden; /* Prevent body scroll in desktop app */
++    user-select: none; /* Make it feel like a desktop app */
++}
++
++/* -------------------- LAYOUT -------------------- */
++.app-layout {
++    display: flex;
+     height: 100vh;
+-    display: flex;
+-    flex-direction: column;
++    width: 100vw;
++}
++
++/* -------------------- SIDEBAR -------------------- */
++.sidebar {
++    width: var(--sidebar-width);
++    background-color: var(--bg-sidebar);
++    border-left: 1px solid var(--border); /* RTL */
++    display: flex;
++    flex-direction: column;
++    box-shadow: var(--shadow-sm);
++    z-index: 10;
++}
++
++.brand {
++    padding: 24px;
++    display: flex;
++    align-items: center;
++    gap: 16px;
++    border-bottom: 1px solid var(--border);
++    color: var(--primary);
++}
++
++.brand i {
++    font-size: 36px;
++}
++
++.brand-text h1 {
++    font-size: 20px;
++    font-weight: 800;
++    line-height: 1.2;
++    color: var(--text-main);
++}
++
++.brand-text span {
++    font-size: 12px;
++    color: var(--text-muted);
++    font-weight: 600;
++}
++
++.nav-menu {
++    padding: 16px;
++    display: flex;
++    flex-direction: column;
++    gap: 8px;
++    flex: 1;
++}
++
++.nav-item {
++    display: flex;
++    align-items: center;
++    gap: 12px;
++    width: 100%;
++    padding: 14px 16px;
++    background: transparent;
++    border: none;
++    border-radius: var(--radius-md);
++    color: var(--text-muted);
++    font-size: 15px;
++    font-weight: 600;
++    text-align: right;
++    cursor: pointer;
++    transition: all 0.2s;
++}
++
++.nav-item i {
++    font-size: 20px;
++}
++
++.nav-item:hover {
++    background-color: var(--bg-main);
++    color: var(--primary);
++}
++
++.nav-item.active {
++    background-color: var(--primary);
++    color: white;
++    box-shadow: var(--shadow-md);
++}
++
++.sidebar-footer {
++    padding: 16px;
++    border-top: 1px solid var(--border);
++}
++
++.text-danger {
++    color: var(--danger) !important;
++}
++.text-danger:hover {
++    background-color: #fef2f2 !important;
++}
++
++.server-status-card {
++    background-color: var(--bg-main);
++    border: 1px solid var(--border);
++    border-radius: var(--radius-md);
++    padding: 12px;
++    margin-bottom: 16px;
++}
++
++.status-header {
++    display: flex;
++    align-items: center;
++    gap: 8px;
++    margin-bottom: 12px;
++    font-size: 13px;
++    font-weight: 600;
++}
++
++.status-indicator {
++    width: 10px;
++    height: 10px;
++    border-radius: 50%;
++    background-color: var(--text-muted);
++}
++.status-indicator.running { background-color: var(--success); box-shadow: 0 0 8px var(--success); }
++.status-indicator.stopped { background-color: var(--danger); }
++
++/* -------------------- MAIN CONTENT -------------------- */
++.main-content {
++    flex: 1;
++    position: relative;
++    overflow-y: auto;
++    overflow-x: hidden;
+ }
+ 
+ .screen {
+@@ -41,10 +41,9 @@
++    padding: 40px;
+     animation: fadeIn 0.3s ease;
+-    flex: 1;
+-    flex-direction: column;
+ }
+ 
+ .screen.active {
+-    display: flex;
++    display: block;
+ }
+ 
+ @keyframes fadeIn {
+@@ -51,38 +51,28 @@
+     to { opacity: 1; transform: translateY(0); }
+ }
+ 
+-/* Header & Server Status */
+-.home-header, .screen-header {
+-    display: flex;
+-    justify-content: space-between;
+-    align-items: center;
+-    margin-bottom: 30px;
+-    padding-bottom: 15px;
+-    border-bottom: 1px solid var(--border-color);
+-}
+-
+-.server-status-container {
+-    display: flex;
+-    align-items: center;
+-    gap: 10px;
+-    background-color: var(--card-bg);
+-    padding: 8px 15px;
+-    border-radius: 20px;
+-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+-}
+-
+-.status-indicator {
+-    width: 12px;
+-    height: 12px;
+-    border-radius: 50%;
+-    background-color: var(--text-muted);
+-}
+-.status-indicator.active { background-color: var(--success-color); }
+-.status-indicator.inactive { background-color: var(--danger-color); }
+-
+-/* Buttons */
++.page-header {
++    margin-bottom: 32px;
++}
++
++.page-header h2 {
++    font-size: 28px;
++    color: var(--text-main);
++    display: flex;
++    align-items: center;
++    gap: 12px;
++    margin-bottom: 8px;
++}
++.page-header h2 i {
++    color: var(--primary);
++}
++.page-header p {
++    color: var(--text-muted);
++    font-size: 16px;
++}
++
++/* -------------------- BUTTONS -------------------- */
+ .btn {
+-    font-family: 'Cairo', sans-serif;
+     font-weight: 600;
+     padding: 10px 20px;
+     border: none;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+
+We did our best to apply changes despite some inaccuracies. Double check if the edit applied is what you intended.

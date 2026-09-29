@@ -1,0 +1,35 @@
+
+The command exited with code 0.
+Output:
+=== Testing New Classifier ===
+'زنكترون 30 كبسولة' vs 'زنكترون أقراص باكت 160'
+  -> [MATCH]: exact_brand_and_form
+
+'سيتال 1جم أقراص' vs 'سيتال 500 أقراص'
+  -> [REJECT]: strength_conflict_1000.0_vs_500
+
+'نويوريك 300 مجم' vs 'نو-يوريك 100 مجم'
+  -> [REJECT]: strength_conflict_300_vs_100
+
+'ميبو كريم 15جم' vs 'ميبو مرهم 15جم'
+  -> [REVIEW]: different_form_cream_vs_ointment
+
+'كتافلام نقط' vs 'كتافلام 50 اقراص'
+  -> [REVIEW]: different_form_drops_vs_tablet
+
+'انسولين نوفورابيد' vs 'انسولين اكترابيد'
+  -> [REJECT]: brand_family_conflict
+
+'سينوبريت اقراص' vs 'سينوبريل 2 مجم اقراص'
+  -> [AMBIGUOUS]: ocr_check_needed_87.5%
+
+'برونفين 400مجم' vs 'بروفين 400مجم'
+  -> [MATCH]: exact_brand_and_form
+
+'ماريفان 3مجم 3شريط س ج' vs 'ماريفان ٣ مجم/جلاكسو'
+  -> [MATCH]: exact_brand_and_form
+
+'كلاريتين اقراص' vs 'ترايكيتين اقراص'
+  -> [REJECT]: low_brand_sim_58.82352941176471%
+
+

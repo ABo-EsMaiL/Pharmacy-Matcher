@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Candidates for 'بالموكورت 25. مجم امبول س ج': [{'id': 'WH_00025', 'name': 'بالمكيرت ٥٠٠ مجم حقن', 'score': 0.3502128819899226, 'brand_sim': 82.35294117647058}, {'id': 'WH_00024', 'name': 'بالمكيرت ربع', 'score': 0.2808906221128538, 'brand_sim': 66.66666666666667}]
+Found in Salam: {'id': 'WH_00024', 'name': 'بالمكيرت ربع'}
+Found in Salam: {'id': 'WH_00025', 'name': 'بالمكيرت ٥٠٠ مجم حقن'}
+

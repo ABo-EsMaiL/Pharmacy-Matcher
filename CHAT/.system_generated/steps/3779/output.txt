@@ -1,0 +1,32 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+Total Unique Shortages: 591
+===========================================================================
+[*] Processing PDF file: السلام شبين.pdf
+[+] Loaded 187 items from alongside JSON: السلام شبين.json
+Warehouse: السلام شبين.pdf                  | Items:  187 | Sent to LLM: 261 (was ~580!)
+[*] Processing PDF file: كيور فارما خاص.pdf
+[+] Loaded 715 items from alongside JSON: كيور فارما خاص.json
+Warehouse: كيور فارما خاص.pdf               | Items:  715 | Sent to LLM: 247 (was ~580!)
+[*] Processing PDF file: جملة العمروووو.pdf
+[+] Loaded 19 items from alongside JSON: جملة العمروووو.json
+Warehouse: جملة العمروووو.pdf               | Items:   19 | Sent to LLM:  66 (was ~580!)
+[*] Processing PDF file: المكرومي المنصورة.pdf
+[+] Loaded 503 items from alongside JSON: المكرومي المنصورة.json
+Warehouse: المكرومي المنصورة.pdf            | Items:  503 | Sent to LLM: 316 (was ~580!)
+[*] Processing PDF file: مخزن الحياة فارم اسكندريه-170.pdf
+[+] Loaded 222 items from alongside JSON: مخزن الحياة فارم اسكندريه-170.json
+Warehouse: مخزن الحياة فارم اسكندريه-170.pdf | Items:  222 | Sent to LLM: 193 (was ~580!)
+[*] Processing PDF file: الهضبة الاثنين نقدى0.pdf
+[+] Loaded 1071 items from local cache: الهضبة الاثنين نقدى0.pdf
+Warehouse: الهضبة الاثنين نقدى0.pdf         | Items: 1071 | Sent to LLM: 253 (was ~580!)
+

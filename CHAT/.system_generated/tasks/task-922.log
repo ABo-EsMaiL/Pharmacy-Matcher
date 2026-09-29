@@ -1,0 +1,21 @@
+    items = _try_html_tables(elements)
+    if items and len(items) > 5:
+        print(f"     -> Extracted {len(items)} items from HTML tables")
+        return items
+
+    # Fallback to Gemini if normal extraction fails or extracts very few items
+    if gemini_api_key:
+        print(f"     -> Basic extraction yielded {len(items)} items. Attempting Gemini AI extraction...")
+        gemini_items = _extract_with_gemini(elements, gemini_api_key)
+        if gemini_items:
+            print(f"     -> Extracted {len(gemini_items)} items using Gemini AI")
+            return gemini_items
+
+    items = _try_text_content(elements)
+    print(f"     -> Extracted {len(items)} items from raw text content")
+    return items
+
+def _extract_with_gemini(elements: list[dict], api_key: str) -> list[dict]:
+    try:
+        from google import genai
+

@@ -1,0 +1,5 @@
+{"name":"PROC-002","isDir":true}
+{"name":"PROC-003","isDir":true}
+{"name":"data","isDir":true}
+
+Summary: This directory contains 3 subdirectories and 0 files.

@@ -1,0 +1,45 @@
+
+The command exited with code 0.
+Output:
+================================================================================
+SENDING AMBIGUOUS CASES DIRECTLY TO GEMINI VIA LOCAL API
+================================================================================
+Received 9 results from Gemini:
+
+[TEST-NEURO-1] Shortage: 'نيوروفيت اقراص  3 شريط' vs Candidate: 'نيروفيت اقراص سعر جديد'
+       -> Gemini returned: status='match', item_id='W1-01', reason=''
+       -> Guardrail result: status='match' (Override: NONE)
+
+[TEST-NEURO-2] Shortage: 'نيوروفيت اقراص  3 شريط' vs Candidate: 'نیروپفیت اقراص/باكت 15'
+       -> Gemini returned: status='match', item_id='W2-01', reason=''
+       -> Guardrail result: status='match' (Override: NONE)
+
+[TEST-TRYPT] Shortage: 'تربتيزول10 مجم اقراص' vs Candidate: 'تریپتازول 10 مج اقراس/باکت 200'
+       -> Gemini returned: status='match', item_id='W2-02', reason=''
+       -> Guardrail result: status='no_match' (Override: b_sim_too_low (63.6 < 72))
+
+[TEST-PARSLEY] Shortage: 'بقدونس وكرفس ايزيس' vs Candidate: 'ایزیز بقدونس وکرکس 20 فلتر'
+       -> Gemini returned: status='match', item_id='W2-03', reason=''
+       -> Guardrail result: status='no_match' (Override: first_letter_mismatch (ب vs ا))
+
+[TEST-SKINOREN] Shortage: 'سكينورين كريم' vs Candidate: 'سکینوریتش کریم'
+       -> Gemini returned: status='match', item_id='W2-04', reason=''
+       -> Guardrail result: status='match' (Override: NONE)
+
+[TEST-CARNIVITA] Shortage: 'كارنيفيتا ادفانس للرجال30كيس س ج' vs Candidate: 'کارنتینا ادفانس رجال/باکت16'
+       -> Gemini returned: status='no_match', item_id='', reason='اختلاف الاسم التجاري: كارنتينا بديل تجاري لصنف كارنيفيتا'
+       -> Guardrail result: status='no_match' (Override: NONE)
+
+[TEST-CHROMAX] Shortage: 'ليمتلس كروماكس كت30كيس س ج' vs Candidate: 'يمتليس كروماتكس كت 30 كيس جديد'
+       -> Gemini returned: status='match', item_id='W2-05', reason=''
+       -> Guardrail result: status='no_match' (Override: first_letter_mismatch (ل vs ي))
+
+[TEST-NEOCARBON] Shortage: 'نيوكاربون30قرص س ج' vs Candidate: 'نیوکاربن ۳۰کپسول'
+       -> Gemini returned: status='match', item_id='W4-01', reason=''
+       -> Guardrail result: status='match' (Override: NONE)
+
+[TEST-HERO] Shortage: 'لبن هيرو بيبي 2' vs Candidate: 'هيرو بيبي ٢'
+       -> Gemini returned: status='match', item_id='W1-02', reason=''
+       -> Guardrail result: status='no_match' (Override: first_letter_mismatch (ل vs ه))
+
+

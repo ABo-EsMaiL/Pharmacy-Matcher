@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+[*] Testing FastCoordinator with new Structured Vision items...
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_matching_pipeline.py", line 88, in <module>
+    config = Config()
+             ^^^^^^^^
+TypeError: Config.__init__() missing 2 required positional arguments: 'unstructured_api_key' and 'gemini_api_key'
+

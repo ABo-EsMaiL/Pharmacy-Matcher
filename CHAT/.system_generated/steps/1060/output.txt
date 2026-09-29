@@ -1,0 +1,64 @@
+
+The command exited with code 0.
+Output:
+    flex: 1;
+
+    overflow-y: auto; /* Screens scroll internally if needed */
+
+}
+
+
+
+.screen.active {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+@keyframes slideIn {
+
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+
+    to { opacity: 1; transform: translateY(0) scale(1); }
+
+}
+
+
+
+/* -------------------- PROGRESS OVERLAY -------------------- */
+
+#progress-modal {
+
+    position: absolute; 
+
+    top: 0; left: 0; right: 0; bottom: 0;
+
+    width: 100%; height: 100%; 
+
+    background: rgba(255, 255, 255, 0.85); 
+
+    z-index: 9998; 
+
+    align-items: center; 
+
+    justify-content: center;
+
+    backdrop-filter: blur(5px);
+
+    display: none;
+
+}
+
+#progress-modal .progress-box {
+
+    background: white; 
+
+    padding: 30px; 
+
+    border-radius: 12px; 
+
+

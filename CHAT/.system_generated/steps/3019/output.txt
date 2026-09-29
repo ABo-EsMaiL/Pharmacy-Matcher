@@ -1,0 +1,13 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1440,6 +1440,7 @@
+         status_completed: "مكتمل",
+         status_reviewing: "قيد المراجعة",
+         status_processing: "قيد التشغيل...",
++        status_queued: "في الانتظار",
+         status_error: "فشل",
+         btn_view_results: "عرض النتائج",
+         btn_restart: "إعادة تشغيل",
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\verify_large_batch_timing.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -73,7 +73,7 @@
+     print(f"\n[+] Built full batch of {len(cases_75)} realistic cases for testing.")
+ 
+     # 3. Call Pharmacy Coordinator's _call_local_api
+-    cfg = Config()
++    cfg = Config(unstructured_api_key="dummy", gemini_api_key="dummy")
+     cfg.local_api_url = API_URL
+     cfg.local_api_key = API_KEY
+     cfg.local_model = "gemini-3.8-flash"
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

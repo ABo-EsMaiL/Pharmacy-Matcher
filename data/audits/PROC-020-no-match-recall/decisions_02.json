@@ -1,0 +1,678 @@
+[
+  {
+    "case_id": "A0075",
+    "status": "match",
+    "item_id": "I1958",
+    "plausible_ids": [
+      "I1958",
+      "I0880"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام في اسم المنتج (ايجيكيوستات بلس اقراص بديل مينالاكس) والشكل الصيدلي"
+  },
+  {
+    "case_id": "A0076",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد أي منتج يطابق اسم ايرون جلور بين المرشحين"
+  },
+  {
+    "case_id": "A0077",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم ايرون ليبوزومال شراب"
+  },
+  {
+    "case_id": "A0078",
+    "status": "match",
+    "item_id": "I0890",
+    "plausible_ids": [
+      "I0890"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق المنتج والتركيز 40 مج والشكل أقراص مع وجود خطأ قراءة بسيط في الحروف (ايزومومب / ايزوميم)"
+  },
+  {
+    "case_id": "A0079",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح يحمل اسماً مطابقاً لايستوزا اقراص"
+  },
+  {
+    "case_id": "A0080",
+    "status": "review",
+    "item_id": "I1974",
+    "plausible_ids": [
+      "I1974",
+      "I0923",
+      "I0924"
+    ],
+    "no_match_basis": "",
+    "reason": "نفس المنتج ايفرزين متوفر كشكل صيدلي مختلف (كريم وأقراص بدلاً من لوشن)"
+  },
+  {
+    "case_id": "A0081",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج يطابق ايكاندرا بلس بين المرشحين المتاحين"
+  },
+  {
+    "case_id": "A0082",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم ايليديل كريم"
+  },
+  {
+    "case_id": "A0083",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج باسم ايليديل بين المرشحين"
+  },
+  {
+    "case_id": "A0084",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0943"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف صريح في التركيز: المطلوب 250مجم والمتوفر 500 مج كبسول"
+  },
+  {
+    "case_id": "A0085",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2538",
+      "I0204",
+      "I0205",
+      "I0206",
+      "I0944",
+      "I1881",
+      "I1882"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف صريح في التركيز: المطلوب 625 مجم والمتوفر 1 جم وتراكيز شراب أخرى"
+  },
+  {
+    "case_id": "A0086",
+    "status": "match",
+    "item_id": "I0206",
+    "plausible_ids": [
+      "I0206",
+      "I2538",
+      "I0204",
+      "I0205",
+      "I0944",
+      "I1881",
+      "I1882"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق اسم المنتج ايموكسكلاف والشكل الصيدلي شراب والتركيز (642,9 مقابل 642)"
+  },
+  {
+    "case_id": "A0087",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0256"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف صريح في التركيز: المطلوب 8 مجم والمتوفر اميرست حقن 4 مجم"
+  },
+  {
+    "case_id": "A0088",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد أي منتج مطابق لاسم اينوفاجار نقط"
+  },
+  {
+    "case_id": "A0089",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد أدلة اسمية مطابقة لمنتج ب ك ميرز بين المرشحين"
+  },
+  {
+    "case_id": "A0090",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم باروكسيديب"
+  },
+  {
+    "case_id": "A0091",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم بانتروجلوب فيال"
+  },
+  {
+    "case_id": "A0092",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح يحمل الاسم التجاري بانتوبرازول (المرشحون أسماء تجارية بديلة مختلفة)"
+  },
+  {
+    "case_id": "A0093",
+    "status": "match",
+    "item_id": "I1767",
+    "plausible_ids": [
+      "I1767",
+      "I1889"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق في اسم المنتج والشكل الصيدلي (بانثينول كريم) واختلاف الحجم لا يمنع التطابق"
+  },
+  {
+    "case_id": "A0094",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح باسم باولوكير، وبيكولاكس بديل تجاري مستقل لا يطابق المطلوب"
+  },
+  {
+    "case_id": "A0095",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم براديبيكت"
+  },
+  {
+    "case_id": "A0096",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0026",
+      "I1895"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "تعارض في المتغير التجاري: المطلوب برايم روز اي والمتوفر برايم روز بلاس"
+  },
+  {
+    "case_id": "A0097",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم بروستيترول، والمرشح I1248 بديل تجاري وليس نفس المنتج"
+  },
+  {
+    "case_id": "A0098",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد أي منتج مطابق لاسم بروليفز شراب"
+  },
+  {
+    "case_id": "A0099",
+    "status": "match",
+    "item_id": "I0027",
+    "plausible_ids": [
+      "I0027"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق تام في اسم المنتج برونشيكم والشكل الصيدلي شراب (اليكسير)"
+  },
+  {
+    "case_id": "A0100",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم برونكوفين شراب"
+  },
+  {
+    "case_id": "A0101",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح باسم برونكوفين بين الخيارات المعروضة"
+  },
+  {
+    "case_id": "A0102",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم برونكولين اس، وفنتال بديل تجاري مستقل"
+  },
+  {
+    "case_id": "A0103",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0981",
+      "I1912"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "تعارض في رقم المرحلة/المتغير: المطلوب بريجناستيب 2 والمتوفر بريجناستيب 1"
+  },
+  {
+    "case_id": "A0104",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم بليتال أقراص"
+  },
+  {
+    "case_id": "A0105",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم بنتافليكس كريم"
+  },
+  {
+    "case_id": "A0106",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم بنتافليكس"
+  },
+  {
+    "case_id": "A0107",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد أي مرشح باسم بنتاكولد شراب"
+  },
+  {
+    "case_id": "A0108",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم بنتاكولد"
+  },
+  {
+    "case_id": "A0109",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم بوديكسان حقن"
+  },
+  {
+    "case_id": "A0110",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج باسم بون كير بين المرشحين"
+  },
+  {
+    "case_id": "A0111",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم بي كوم امبولات"
+  },
+  {
+    "case_id": "A0112",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1008",
+      "I1009"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف صريح في التركيز: المطلوب بيا 400مجم والمتوفر 300 مج و600 مج"
+  },
+  {
+    "case_id": "A0113",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم بيتابرونيت بلس كريم"
+  },
+  {
+    "case_id": "A0114",
+    "status": "review",
+    "item_id": "I0041",
+    "plausible_ids": [
+      "I0041",
+      "I0042",
+      "I0437"
+    ],
+    "no_match_basis": "",
+    "reason": "نفس المنتج بيتادين ولكن باختلاف واضح في الشكل الصيدلي والاستخدام (دش مهبلي مقابل مطهر/غرغرة)"
+  },
+  {
+    "case_id": "A0115",
+    "status": "review",
+    "item_id": "I0041",
+    "plausible_ids": [
+      "I0041",
+      "I0042",
+      "I0437"
+    ],
+    "no_match_basis": "",
+    "reason": "نفس العلامة التجارية بيتادين مع اختلاف الشكل الصيدلي (شامبو مقابل مطهر ومنظف جلد)"
+  },
+  {
+    "case_id": "A0116",
+    "status": "review",
+    "item_id": "I0041",
+    "plausible_ids": [
+      "I0041",
+      "I0042",
+      "I0437"
+    ],
+    "no_match_basis": "",
+    "reason": "نفس منتج بيتادين ولكن الشكل الصيدلي مختلف (شامبو مقابل مطهر/منظف جلد)"
+  },
+  {
+    "case_id": "A0117",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم بيتافوس، والمرشح I1657 بديل تجاري وليس نفس المنتج"
+  },
+  {
+    "case_id": "A0118",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم بيتاكاروتين فورت"
+  },
+  {
+    "case_id": "A0119",
+    "status": "match",
+    "item_id": "I1025",
+    "plausible_ids": [
+      "I1025",
+      "I1026"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق في اسم المنتج بيدرو والشكل الصيدلي اسبراي (سبراى للفم مطهر)"
+  },
+  {
+    "case_id": "A0120",
+    "status": "review",
+    "item_id": "I1026",
+    "plausible_ids": [
+      "I1025",
+      "I1026"
+    ],
+    "no_match_basis": "",
+    "reason": "نفس المنتج بيدرو ولكن بشكل صيدلي مختلف (غسول بدلاً من كريم)"
+  },
+  {
+    "case_id": "A0121",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم بيدورا كالسيوم"
+  },
+  {
+    "case_id": "A0122",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم بيرافين امبول"
+  },
+  {
+    "case_id": "A0123",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد أي منتج مطابق لاسم بيسلفون شراب"
+  },
+  {
+    "case_id": "A0124",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح باسم بيكوزيم امبول"
+  },
+  {
+    "case_id": "A0125",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0781",
+      "I0782"
+    ],
+    "no_match_basis": "insufficient_information",
+    "reason": "الاسم المحتمل هو اليمبوسيس لكن الطلب يفتقر للتركيز ويتوفر تركيزان مختلفان (2.5 و5 مج)"
+  },
+  {
+    "case_id": "A0126",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم تادالاندرو بين المرشحين"
+  },
+  {
+    "case_id": "A0127",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح باسم تاريفلوكس (المرشحون منتجات أخرى تشترك في المقطع فلوكس)"
+  },
+  {
+    "case_id": "A0128",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم تاريفيد 200مجم"
+  },
+  {
+    "case_id": "A0129",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج يطابق تاموكسيفين بين المرشحين"
+  },
+  {
+    "case_id": "A0130",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم تجريتول سي ار"
+  },
+  {
+    "case_id": "A0131",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد أي منتج مطابق لتجريتول بين الخيارات المتاحة"
+  },
+  {
+    "case_id": "A0132",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم تراي بيتابرونات كريم"
+  },
+  {
+    "case_id": "A0133",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0459"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "تعارض في المتغير: المطلوب ترايتكت أطفال صابونة والمتوفر تراي تكت حب شباب"
+  },
+  {
+    "case_id": "A0134",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم ترايلبتال"
+  },
+  {
+    "case_id": "A0135",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم ترايمدفلو"
+  },
+  {
+    "case_id": "A0136",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم تربين كريم"
+  },
+  {
+    "case_id": "A0137",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح يطابق ترياكور أقراص"
+  },
+  {
+    "case_id": "A0138",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد أي منتج مطابق لاسم تريامريكان فيال"
+  },
+  {
+    "case_id": "A0139",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم تريتاس أقراص"
+  },
+  {
+    "case_id": "A0140",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح مطابق لاسم تريتاس"
+  },
+  {
+    "case_id": "A0141",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I2068"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "تعارض في المتغير التجاري: المطلوب تشيكس اميون والمتوفر تشيكس جروى"
+  },
+  {
+    "case_id": "A0142",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I0053"
+    ],
+    "no_match_basis": "combination_or_variant_conflict",
+    "reason": "تعارض في المتغير: المطلوب توب جنج ادفانس والمتوفر توب جينج العادي"
+  },
+  {
+    "case_id": "A0143",
+    "status": "match",
+    "item_id": "I1981",
+    "plausible_ids": [
+      "I1981",
+      "I1982",
+      "I1096"
+    ],
+    "no_match_basis": "",
+    "reason": "تطابق في اسم المنتج تورسامولكس والشكل أقراص والتركيز 10 (مع كتابتها ۱۰جم بدلاً من مجم في OCR)"
+  },
+  {
+    "case_id": "A0144",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج باسم توسيستوب شراب بين المرشحين"
+  },
+  {
+    "case_id": "A0145",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج باسم تي 4 ثيرو (يوثيروكس بديل تجاري وليس نفس المنتج)"
+  },
+  {
+    "case_id": "A0146",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد مرشح باسم جابتن كبسول"
+  },
+  {
+    "case_id": "A0147",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا يوجد منتج مطابق لاسم جابتن بين الخيارات"
+  },
+  {
+    "case_id": "A0148",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [],
+    "no_match_basis": "no_name_evidence",
+    "reason": "لا توجد أي أدلة اسمية مطابقة لمنتج جابتن"
+  },
+  {
+    "case_id": "A0149",
+    "status": "no_match",
+    "item_id": "",
+    "plausible_ids": [
+      "I1124"
+    ],
+    "no_match_basis": "explicit_strength_conflict",
+    "reason": "اختلاف صريح في التركيز: المطلوب جاستروبيوتك 550 مج والمتوفر 200 مج"
+  }
+]

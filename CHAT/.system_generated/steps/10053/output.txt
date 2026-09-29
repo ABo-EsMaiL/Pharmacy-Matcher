@@ -1,0 +1,11 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":464,"LineContent":"#progress-modal {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":475,"LineContent":"#progress-modal .progress-box {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":484,"LineContent":"#progress-modal h3 {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":489,"LineContent":"#progress-modal p {"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":1937,"LineContent":"            \u003cdiv id=\"progress-modal\" style=\"display: none;\"\u003e"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":2637,"LineContent":"    const progressModal = document.getElementById('progress-modal');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":2734,"LineContent":"    const progressModal = document.getElementById('progress-modal');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":2764,"LineContent":"        const progressModal = document.getElementById('progress-modal');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":2859,"LineContent":"            const progressModal = document.getElementById('progress-modal');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":2990,"LineContent":"            const progressModal = document.getElementById('progress-modal');"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":3551,"LineContent":"                    const progressModal = document.getElementById('progress-modal');"}

@@ -1,0 +1,46 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -344,6 +344,7 @@
+         """Ensures the chat interface is clean for a new request."""
+         if not self.page or self.page.is_closed() or self.is_shutting_down:
+             return
++        t_reset_start = time.time()
+         try:
+             await self.page.keyboard.press("Escape")
+             await asyncio.sleep(0.1)
+@@ -351,7 +351,7 @@
+             try:
+                 new_btn = self.page.locator('button[aria-label*="New prompt" i], button[aria-label*="New chat" i], a[aria-label*="New prompt" i]').first
+                 if await new_btn.is_visible():
+-                    await new_btn.click()
++                    await new_btn.click(timeout=1500)
+                     await asyncio.sleep(0.5)
+                     ta = self.page.locator('textarea[placeholder*="Type something" i], textarea[aria-label*="prompt" i], ms-autosize-textarea textarea').first
+                     if await ta.is_visible():
+@@ -358,5 +358,6 @@
+                         logger.info("Fast chat reset succeeded via UI button.")
+-            except Exception:
++            except Exception as e:
++                logger.debug(f"Fast reset button click skipped/failed ({e}). Falling back to navigation.")
+                 reset_done = False
+ 
+             if not reset_done:
+@@ -363,9 +363,10 @@
+                 await self.page.goto(TARGET_URL, timeout=30000, wait_until="domcontentloaded")
+-                await asyncio.sleep(1.0)
+-
+-            await self.page.keyboard.press("Escape")
+-            await self.ensure_model(model_name)
+-            await self.ensure_thinking_mode()
++                await asyncio.sleep(0.8)
++
++            await self.page.keyboard.press("Escape")
++            await self.ensure_model(model_name)
++            await self.ensure_thinking_mode()
++            logger.info(f"[TIMING-PREEXEC] Chat reset & setup took {time.time() - t_reset_start:.2f}s (reset_done={reset_done})")
+         except Exception as e:
+             logger.warning(f"Error resetting chat: {e}")
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

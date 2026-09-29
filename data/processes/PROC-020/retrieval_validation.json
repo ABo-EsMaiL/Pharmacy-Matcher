@@ -1,0 +1,192 @@
+{
+  "process_id": "PROC-020",
+  "actual_llm_cases": 295,
+  "actual_llm_candidate_pairs": 363,
+  "llm_batches": 7,
+  "checks": {
+    "actual_cases_equal_preflight": true,
+    "actual_candidate_pairs_equal_preflight": true,
+    "seven_observed_candidates_reached_llm": true,
+    "first_six_observed_pairs_match": true,
+    "first_six_observed_pairs_present_in_excel": true,
+    "fixture_json_matches_excel": true
+  },
+  "fixtures": [
+    {
+      "requested_fixture": "فلوبادكس 8مجم اقراص",
+      "candidate": "فلوبادكس ۸ مجم اقراص جديد/ايفا",
+      "reached_llm": true,
+      "adjudications": [
+        {
+          "requested": "فلوبادكس 8مجم اقراص",
+          "decision": {
+            "status": "match",
+            "warehouse_item": "فلوبادكس ۸ مجم اقراص جديد/ايفا",
+            "reason": ""
+          }
+        }
+      ],
+      "match_rows": [
+        {
+          "warehouse": "كيور فارما خاص.pdf",
+          "shortage_item": "فلوبادكس 8مجم اقراص",
+          "warehouse_item": "فلوبادكس ۸ مجم اقراص جديد/ايفا",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "excel_match": true
+    },
+    {
+      "requested_fixture": "ديوراسيف 250مجم شراب",
+      "candidate": "ديوراسيف ٢٥٠ شراب/سكويب",
+      "reached_llm": true,
+      "adjudications": [
+        {
+          "requested": "ديوراسيف  250مجم شراب س ج",
+          "decision": {
+            "status": "match",
+            "warehouse_item": "ديوراسيف ٢٥٠ شراب/سكويب",
+            "reason": ""
+          }
+        }
+      ],
+      "match_rows": [
+        {
+          "warehouse": "السلام شبين.pdf",
+          "shortage_item": "ديوراسيف  250مجم شراب س ج",
+          "warehouse_item": "ديوراسيف ٢٥٠ شراب/سكويب",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "excel_match": true
+    },
+    {
+      "requested_fixture": "فايركتا بلاس 4قرص",
+      "candidate": "فايركتابلاس 4قرص/باكت72",
+      "reached_llm": true,
+      "adjudications": [
+        {
+          "requested": "فايركتا بلاس 4قرص",
+          "decision": {
+            "status": "match",
+            "warehouse_item": "فايركتابلاس 4قرص/باكت72",
+            "reason": ""
+          }
+        }
+      ],
+      "match_rows": [
+        {
+          "warehouse": "مخزن الحياة فارم اسكندريه-170.pdf",
+          "shortage_item": "فايركتا بلاس 4قرص",
+          "warehouse_item": "فايركتابلاس 4قرص/باكت72",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "excel_match": true
+    },
+    {
+      "requested_fixture": "ديسبركام 20مجم اقراص",
+      "candidate": "ديسبركام 20 مج اقراص/المهن",
+      "reached_llm": true,
+      "adjudications": [
+        {
+          "requested": "ديسبركام  20مجم اقراص",
+          "decision": {
+            "status": "match",
+            "warehouse_item": "ديسبركام 20 مج اقراص/المهن",
+            "reason": ""
+          }
+        }
+      ],
+      "match_rows": [
+        {
+          "warehouse": "الهضبة الاثنين نقدى0.pdf",
+          "shortage_item": "ديسبركام  20مجم اقراص",
+          "warehouse_item": "ديسبركام 20 مج اقراص/المهن",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "excel_match": true
+    },
+    {
+      "requested_fixture": "ادولور 30مجم 3امبول",
+      "candidate": "ادولور ۳۰مج/۲ مللي۳امبول",
+      "reached_llm": true,
+      "adjudications": [
+        {
+          "requested": "ادولور 30مجم 3امبول",
+          "decision": {
+            "status": "match",
+            "warehouse_item": "ادولور ۳۰مج/۲ مللي۳امبول",
+            "reason": ""
+          }
+        }
+      ],
+      "match_rows": [
+        {
+          "warehouse": "السلام شبين.pdf",
+          "shortage_item": "ادولور 30مجم 3امبول",
+          "warehouse_item": "ادولور ۳۰مج/۲ مللي۳امبول",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "excel_match": true
+    },
+    {
+      "requested_fixture": "فنتال بخاخ العربية",
+      "candidate": "فنتال بخاخ الجديده /العربيه",
+      "reached_llm": true,
+      "adjudications": [
+        {
+          "requested": "فنتال بخاخ العربية",
+          "decision": {
+            "status": "match",
+            "warehouse_item": "فنتال بخاخ الجديده /العربيه",
+            "reason": ""
+          }
+        }
+      ],
+      "match_rows": [
+        {
+          "warehouse": "المكرومي المنصورة.pdf",
+          "shortage_item": "فنتال بخاخ العربية",
+          "warehouse_item": "فنتال بخاخ الجديده /العربيه",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "excel_match": true
+    },
+    {
+      "requested_fixture": "كوفي زنك شامبو",
+      "candidate": "كوفى زنك شامبوج",
+      "reached_llm": true,
+      "adjudications": [
+        {
+          "requested": "كوفي زنك شامبو",
+          "decision": {
+            "status": "match",
+            "warehouse_item": "كوفى زنك شامبوج",
+            "reason": ""
+          }
+        }
+      ],
+      "match_rows": [
+        {
+          "warehouse": "الهضبة الاثنين نقدى0.pdf",
+          "shortage_item": "كوفي زنك شامبو",
+          "warehouse_item": "كوفى زنك شامبوج",
+          "confidence": "llm",
+          "method": "fast_llm"
+        }
+      ],
+      "excel_match": true
+    }
+  ],
+  "passed": true
+}

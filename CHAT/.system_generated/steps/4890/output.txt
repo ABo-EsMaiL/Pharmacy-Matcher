@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+فيوسيدل vs فيوسيدين: 80.0
+ميبو vs ميو: 85.71428571428572
+

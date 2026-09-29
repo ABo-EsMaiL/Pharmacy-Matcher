@@ -1,0 +1,24 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -247,6 +247,18 @@
+             return {"success": True, "active_server": server_key, "url": srv.url, "model": srv.default_model}
+         except Exception as e:
+             return {"success": False, "error": str(e)}
++    def update_server_dir(self, server_key: str, new_dir: str) -> dict:
++        """Updates directory path for a server instance and saves to settings."""
++        settings = self.get_settings()
++        if server_key == "gaistudio":
++            settings["msemax_gaistudio_dir"] = new_dir
++            settings["msemax_dir"] = new_dir
++        elif server_key == "chatgpt":
++            settings["msemax_chatgpt_dir"] = new_dir
++        self.save_settings(json.dumps(settings))
++        self._server_manager = MSEMAXServerManager(settings, server_logger_callback=self.add_server_log)
++        self.add_log(f"[SETTINGS] Updated {server_key} folder to: {new_dir}")
++        return {"success": True, "dir": new_dir}
+ 
+     # Legacy compatibility methods
+     def start_server(self) -> dict:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

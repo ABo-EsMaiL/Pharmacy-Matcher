@@ -1,0 +1,17 @@
+
+The command exited with code 0.
+Output:
+            f"    Please set UNSTRUCTURED_API_KEY in .env"
+        )
+
+    items = extract_items_from_pdf(filepath, api_key, base_url, gemini_api_key)
+    return items
+
+
+def _process_json_file(filepath: Path) -> list[dict]:
+    """Process cached Unstructured JSON to save API limits."""
+    with open(filepath, "r", encoding="utf-8-sig") as f:
+        data = json.load(f)
+    
+
+

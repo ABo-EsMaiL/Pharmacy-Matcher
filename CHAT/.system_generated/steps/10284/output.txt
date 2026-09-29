@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+2026-09-25 17:30:08,980 - msemax.webhook - ERROR - Failed to decode base64 image: Invalid base64-encoded string: number of data characters (97) cannot be 1 more than a multiple of 4
+PROMPT: Extract these items
+IMAGES: []
+

@@ -1,0 +1,96 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Auto-detected drug name column: أسم الصنف
+  -> Extracted 993 items from column 'أسم الصنف'
+
+============================================================
+[*] Processing Warehouse files (6 file(s)) [PARALLEL WORKERS]
+============================================================
+
+  -> [START] Processing file: السلام شبين.pdf (Type: .pdf)
+[*] Processing PDF file: السلام شبين.pdf
+
+  -> [START] Processing file: المكرومي المنصورة.pdf (Type: .pdf)
+[*] Processing PDF file: المكرومي المنصورة.pdf
+
+  -> [START] Processing file: الهضبة الاثنين نقدى0.pdf (Type: .pdf)
+[*] Processing PDF file: الهضبة الاثنين نقدى0.pdf
+
+  -> [START] Processing file: جملة العمروووو.pdf (Type: .pdf)
+[*] Processing PDF file: جملة العمروووو.pdf
+
+  -> [START] Processing file: كيور فارما خاص.pdf (Type: .pdf)
+[*] Processing PDF file: كيور فارما خاص.pdf
+
+  -> [START] Processing file: مخزن الحياة فارم اسكندريه-170.pdf (Type: .pdf)
+[*] Processing PDF file: مخزن الحياة فارم اسكندريه-170.pdf
+[+] Loaded 187 items from local cache: السلام شبين.pdf
+  -> [DONE] السلام شبين.pdf: 187 items extracted.
+[+] Loaded 19 items from local cache: جملة العمروووو.pdf
+  -> [DONE] جملة العمروووو.pdf: 19 items extracted.
+[+] Loaded 503 items from local cache: المكرومي المنصورة.pdf
+  -> [DONE] المكرومي المنصورة.pdf: 503 items extracted.
+[+] Loaded 1071 items from local cache: الهضبة الاثنين نقدى0.pdf
+  -> [DONE] الهضبة الاثنين نقدى0.pdf: 1071 items extracted.
+[+] Loaded 715 items from local cache: كيور فارما خاص.pdf
+  -> [DONE] كيور فارما خاص.pdf: 715 items extracted.
+[+] Loaded 222 items from local cache: مخزن الحياة فارم اسكندريه-170.pdf
+  -> [DONE] مخزن الحياة فارم اسكندريه-170.pdf: 222 items extracted.
+
+============================================================
+[+] Completed Warehouse: 2717 items from 6 file(s)
+============================================================
+
+
+Unique shortages: 591
+Warehouses: 6
+
+=== EVALUATION OF THE 8 ITEMS UNDER 3-LEVEL HIERARCHY ===
+
+الصنف: [سكينورين كريم]
+   أفضل مرشح: [سکینوریتش کریم] في (الهضبة الاثنين نقدى0.pdf) | BrandSim=82.4
+   تحليل: Target(brand=سكينورين, form=cream) vs Cand(brand=سكينوريتش, form=cream)
+   -> النتيجة المنطقية: خرج تماماً من 'لم يتم العثور عليه'! إما مطابقة مباشرة أو مراجعة.
+
+الصنف: [زنكترون 30كبسولة س ج]
+   أفضل مرشح: [زنكترون اقراص باكت 160] في (مخزن الحياة فارم اسكندريه-170.pdf) | BrandSim=100.0
+   تحليل: Target(brand=زنكترون, form=tablet) vs Cand(brand=زنكترون, form=tablet)
+   -> النتيجة المنطقية: خرج تماماً من 'لم يتم العثور عليه'! إما مطابقة مباشرة أو مراجعة.
+
+الصنف: [بالموكورت  25. مجم امبول س ج]
+   أفضل مرشح: [بالمكيرت ٥٠٠ مجم حقن] في (السلام شبين.pdf) | BrandSim=82.4
+   تحليل: Target(brand=بالموكورت, form=injection) vs Cand(brand=بالمكيرت, form=injection)
+   -> النتيجة المنطقية: خرج تماماً من 'لم يتم العثور عليه'! إما مطابقة مباشرة أو مراجعة.
+
+الصنف: [كارنيفيتا ادفانس للرجال30كيس س ج]
+   أفضل مرشح: [اكتو كولا ادفانس ١٠ كيس] في (المكرومي المنصورة.pdf) | BrandSim=61.5
+   تحليل: Target(brand=كارنيفيتا ادفانس للرجال, form=sachet) vs Cand(brand=اكتو كولا ادفانس, form=sachet)
+   -> النتيجة المنطقية: خرج تماماً من 'لم يتم العثور عليه'! إما مطابقة مباشرة أو مراجعة.
+
+الصنف: [ب ك ميرز كبسول س ج]
+   أفضل مرشح: [ميرز كبسول/باكت 30] في (الهضبة الاثنين نقدى0.pdf) | BrandSim=100.0
+   تحليل: Target(brand=ميرز, form=tablet) vs Cand(brand=ميرز, form=tablet)
+   -> النتيجة المنطقية: خرج تماماً من 'لم يتم العثور عليه'! إما مطابقة مباشرة أو مراجعة.
+
+الصنف: [سينوبريل كواقراص س ج]
+   أفضل مرشح: [سینوبریل 2 مجم اقراص/باکت 90] في (الهضبة الاثنين نقدى0.pdf) | BrandSim=80.0
+   تحليل: Target(brand=سينوبريل كواقراص, form=None) vs Cand(brand=سينوبريل, form=tablet)
+   -> النتيجة المنطقية: خرج تماماً من 'لم يتم العثور عليه'! إما مطابقة مباشرة أو مراجعة.
+
+الصنف: [تادالاندرو5جم30قرص]
+   أفضل مرشح: [تادالونج 5 مج 30 قرص/باکت 25] في (الهضبة الاثنين نقدى0.pdf) | BrandSim=66.7
+   تحليل: Target(brand=تادالاندرو, form=tablet) vs Cand(brand=تادالونج, form=tablet)
+   -> النتيجة المنطقية: خرج تماماً من 'لم يتم العثور عليه'! إما مطابقة مباشرة أو مراجعة.
+
+الصنف: [هيرو دي3+كي2 نقط]
+   أفضل مرشح: [هيرو بيبي ٢] في (المكرومي المنصورة.pdf) | BrandSim=73.7
+   تحليل: Target(brand=هيرو دي كي, form=drops) vs Cand(brand=هيرو بيبي, form=None)
+   -> النتيجة المنطقية: خرج تماماً من 'لم يتم العثور عليه'! إما مطابقة مباشرة أو مراجعة.
+

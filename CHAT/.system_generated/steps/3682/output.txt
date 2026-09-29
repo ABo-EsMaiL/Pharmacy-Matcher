@@ -1,0 +1,10 @@
+
+The command exited with code 1.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "C:\Users\kakak\.gemini\antigravity\brain\916274de-7f92-49fc-a0a8-d291664b474a\scratch\test_search_filter.py", line 2, in <module>
+    from src.extract.excel_reader import read_excel, extract_item_names
+ModuleNotFoundError: No module named 'src'
+

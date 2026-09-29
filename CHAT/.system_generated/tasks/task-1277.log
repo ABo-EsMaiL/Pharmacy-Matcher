@@ -1,0 +1,840 @@
+"""The public surface: `client.parse.run(...)`, `client.extract.run(...)`.
+
+
+
+WHY A FACADE AT ALL
+
+───────────────────
+
+openapi-generator produces `ParseApi(api_client).parse_run(...)` across four
+
+unrelated Api classes. That is not the surface openapi.yaml says we ship — the
+
+spec declares `tags` + `x-sdk-method-name` per operation precisely so the call
+
+reads `client.parse.run(document)` (decision N1, API v2 Surface Proposal), and
+
+no generator reads those. This module is where that declaration becomes real.
+
+
+
+It also supplies three things the generator cannot:
+
+
+
+1. `extract.from_document(...)`. POST /api/v2/extract declares BOTH an
+
+   application/json body (ExtractRequest, the parse_id flow) and a
+
+   multipart/form-data body (ExtractDocumentRequest, the raw-document flow).
+
+   openapi-generator emits only the first and drops the second without a
+
+   warning — ExtractDocumentRequest is absent from the generated models
+
+   entirely. One of the three launch flows, silently missing, in both Python
+
+   and TypeScript. It is reconstructed here over the generated transport.
+
+2. `jobs.stream(...)`. The SSE progress stream the service really serves.
+
+3. `schema=` instead of `var_schema=`. The generator renames the field to dodge
+
+   Pydantic's `BaseModel.schema()`; the wire name stays `schema` via an alias,
+
+   so only the Python signature is ugly. Callers should never see it.
+
+
+
+The method names here are not free-form: `tests/test_facade_matches_the_spec.py`
+
+reads openapi.yaml and asserts this module exposes exactly the calls the
+
+contract declares. The spec stays the source of truth; this file is held to it.
+
+"""
+
+
+
+from __future__ import annotations
+
+
+
+import json
+
+import os
+
+from typing import Any, Iterator
+
+from urllib.parse import quote, urlencode
+
+
+
+from . import _host_headers
+
+from ._generated.api.extract_api import ExtractApi
+
+from ._generated.api.jobs_api import JobsApi
+
+from ._generated.api.parse_api import ParseApi
+
+from ._generated.api.upload_api import UploadApi
+
+from ._generated.api_client import ApiClient
+
+from ._generated.configuration import Configuration
+
+from ._files import FileInput, as_file_part
+
+from ._generated.models.extract_request import ExtractRequest
+
+from ._multipart import post_multipart
+
+from ._retry import RetryConfig, call_with_retries
+
+from ._sse import JobEvent, stream_job_events
+
+
+
+DEFAULT_SERVER_URL = "https://transform.unstructured.io"
+
+
+
+# Matches the service's own security scheme names; see openapi.yaml's
+
+# `securitySchemes` and the generated Configuration.auth_settings.
+
+_API_KEY_HEADER = "unstructured-api-key"
+
+_API_KEY_ENV_VAR = "UNSTRUCTURED_API_KEY"
+
+
+
+
+
+class TransformClient:
+
+    """A client for the Unstructured Transform v2 API.
+
+
+
+    Pass an API key or bearer token explicitly, or leave both out to read
+
+    `UNSTRUCTURED_API_KEY`. Both credential types are accepted by the service
+
+    and whichever you send is forwarded upstream verbatim, so an API key and a
+
+    bearer token are not interchangeable in what they authorise — they are two
+
+    different identities, and sending both would leave which one is in force up
+
+    to the server's precedence rules rather than your intent.
+
+    """
+
+
+
+    def __init__(
+
+        self,
+
+        *,
+
+        api_key: str | None = None,
+
+        bearer_token: str | None = None,
+
+        server_url: str = DEFAULT_SERVER_URL,
+
+        send_host_headers: bool | None = None,
+
+        user_agent_suffix: str | None = None,
+
+        timeout_seconds: float | None = None,
+
+        retries: RetryConfig | None = RetryConfig(),
+
+    ) -> None:
+
+        # An explicit credential always wins. A bearer token is intentionally
+
+        # independent from the API-key environment variable: callers who pass
+
+        # one have made an explicit authentication choice.
+
+        if api_key is None and bearer_token is None:
+
+            api_key = os.environ.get(_API_KEY_ENV_VAR) or None
+
+
+
+        if (api_key is None) == (bearer_token is None):
+
+            raise ValueError(
+
+                "pass exactly one of api_key or bearer_token, or set "
+
+                f"{_API_KEY_ENV_VAR} — they are different identities, not "
+
+                "interchangeable spellings of one credential"
+
+            )
+
+
+
+        self._server_url = server_url.rstrip("/")
+
+        self._timeout_seconds = timeout_seconds
+
+        self._retries = retries
+
+
+
+        configuration = Configuration(host=self._server_url)
+
+        if api_key is not None:
+
+            configuration.api_key["ApiKeyAuth"] = api_key
+
+            self._auth_headers = {_API_KEY_HEADER: api_key}
+
+        else:
+
+            configuration.access_token = bearer_token
+
+            self._auth_headers = {"Authorization": f"Bearer {bearer_token}"}
+
+        # urllib3 has its own Retry layer underneath the generated client. Keep
+
+        # retry decisions in this facade so non-idempotent submit safety and
+
+        # Retry-After caps are applied consistently.
+
+        configuration.retries = False
+
+
+
+        self._api_client = ApiClient(configuration)
+
+
+
+        if timeout_seconds is not None:
+
+            self._apply_default_timeout(self._api_client, timeout_seconds)
+
+        self._apply_retries(self._api_client, retries)
+
+
+
+        # Identification headers, per TRNSFRM-91. Set as ApiClient defaults so
+
+        # every generated call carries them without each namespace remembering
+
+        # to; the SSE path is not a generated call, so it merges the same dict
+
+        # itself rather than relying on that.
+
+        self._client_headers = _host_headers.build(
+
+            send_host_headers=send_host_headers,
+
+            user_agent_suffix=user_agent_suffix,
+
+        )
+
+        for name, value in self._client_headers.items():
+
+            self._api_client.set_default_header(name, value)
+
+
+
+        self.parse = _Parse(self)
+
+        self.extract = _Extract(self)
+
+        self.jobs = _Jobs(self)
+
+        self.upload = _Upload(self)
+
+
+
+    @staticmethod
+
+    def _apply_default_timeout(api_client: ApiClient, seconds: float) -> None:
+
+        """Make `timeout_seconds` apply to every request, not just some.
+
+
+
+        The generated code has no notion of a default timeout: `Configuration`
+
+        carries no `timeout` attribute, and the rest client honours only a
+
+        per-call `_request_timeout`. So an earlier version of this client
+
+        accepted `timeout_seconds` and then silently ignored it on all fourteen
+
+        generated operations — only the two hand-written paths, which build
+
+        their own requests, ever used it. A caller who asked for a 5-second
+
+        timeout could still wait forever on an ordinary parse.
+
+
+
+        Threading the argument through fourteen call sites would work and would
+
+        be fourteen places to forget it on the fifteenth. `call_api` is the
+
+        single point every generated operation funnels through, so the default
+
+        is injected there instead — and only when the caller has not passed one
+
+        explicitly, so a per-call override still wins.
+
+        """
+
+        original = api_client.call_api
+
+
+
+        def call_api(*args: Any, **kwargs: Any) -> Any:
+
+            # Not setdefault: the generated operations always pass the keyword,
+
+            # with None when the caller supplied nothing. So the check is on the
+
+            # VALUE being absent, not the key.
+
+            if kwargs.get("_request_timeout") is None:
+
+                kwargs["_request_timeout"] = seconds
+
+            return original(*args, **kwargs)
+
+
+
+        api_client.call_api = call_api  # type: ignore[method-assign]
+
+
+
+    @staticmethod
+
+    def _apply_retries(api_client: ApiClient, retries: RetryConfig | None) -> None:
+
+        """Make retries cover generated operations through the same funnel.
+
+
+
+        Generated calls do not expose a retry hook. `call_api` is the one point
+
+        every generated request reaches, while `_sse.py` and `_multipart.py`
+
+        pass through this facade explicitly because they bypass generation.
+
+        """
+
+        original = api_client.call_api
+
+
+
+        def call_api(*args: Any, **kwargs: Any) -> Any:
+
+            method = args[0] if args else kwargs["method"]
+
+            return call_with_retries(
+
+                retries=retries,
+
+                method=method,
+
+                send=lambda: original(*args, **kwargs),
+
+            )
+
+
+
+        api_client.call_api = call_api  # type: ignore[method-assign]
+
+
+
+    # ── plumbing shared with the namespaces ──────────────────────────────────
+
+
+
+    def _request_headers(self) -> dict[str, str]:
+
+        """Auth plus identification, for calls that bypass the generated APIs."""
+
+        return {**self._auth_headers, **self._client_headers}
+
+
+
+    def close(self) -> None:
+
+        """Release the underlying connection pool.
+
+
+
+        The generated `ApiClient` has no `close()` and its `__exit__` is a bare
+
+        `pass`, so there is nothing to delegate to — an earlier version called
+
+        `self._api_client.close()` and raised AttributeError on every
+
+        `with` block's exit. Nothing caught it until the built package was
+
+        driven against a real socket.
+
+
+
+        `clear()` on the pool manager is what actually frees the sockets.
+
+        Guarded, because the attribute belongs to generated code: a generator
+
+        change should not turn cleanup into a crash.
+
+        """
+
+        rest_client = getattr(self._api_client, "rest_client", None)
+
+        pool_manager = getattr(rest_client, "pool_manager", None)
+
+        if pool_manager is not None:
+
+            pool_manager.clear()
+
+
+
+    def __enter__(self) -> TransformClient:
+
+        return self
+
+
+
+    def __exit__(self, *exc: object) -> None:
+
+        self.close()
+
+
+
+
+
+class _Namespace:
+
+    def __init__(self, client: TransformClient) -> None:
+
+        self._client = client
+
+
+
+
+
+class _Parse(_Namespace):
+
+    def run(
+
+        self,
+
+        *,
+
+        input: FileInput | None = None,
+
+        file_id: str | None = None,
+
+        schema: dict[str, Any] | str | None = None,
+
+        prompt: str | None = None,
+
+        output: str | None = None,
+
+        include: list[str] | None = None,
+
+        profile: str | None = None,
+
+        wait_seconds: int | None = None,
+
+    ) -> Any:
+
+        """Parse a document. Supplying `schema` extracts in the same job.
+
+
+
+        `schema` is accepted as a dict and serialized here. The wire format is
+
+        a JSON *string* on this operation and a JSON *object* on extract.run —
+
+        an inconsistency in the contract that callers should not have to know,
+
+        so both take a dict.
+
+        """
+
+        if (input is None) == (file_id is None):
+
+            raise ValueError("pass exactly one of input or file_id")
+
+
+
+        return ParseApi(self._client._api_client).parse_run(
+
+            prefer=_prefer(wait_seconds),
+
+            include=include,
+
+            input=as_file_part(input) if input is not None else None,
+
+            file_id=file_id,
+
+            output=output,
+
+            # `var_schema` is the generator's rename of `schema`; a str is
+
+            # passed through so a caller holding a pre-serialized schema is not
+
+            # forced to round-trip it through json.loads.
+
+            var_schema=schema if isinstance(schema, str) or schema is None else json.dumps(schema),
+
+            prompt=prompt,
+
+            profile=profile,
+
+        )
+
+
+
+
+
+class _Extract(_Namespace):
+
+    def run(
+
+        self,
+
+        *,
+
+        parse_id: str,
+
+        schema: dict[str, Any],
+
+        prompt: str | None = None,
+
+        wait_seconds: int | None = None,
+
+    ) -> Any:
+
+        """Extract against an existing parse. The document is not parsed again."""
+
+        api = ExtractApi(self._client._api_client)
+
+        return api.extract_run(
+
+            ExtractRequest(parse_id=parse_id, var_schema=schema, prompt=prompt),
+
+            prefer=_prefer(wait_seconds),
+
+        )
+
+
+
+    def from_document(
+
+        self,
+
+        *,
+
+        input: FileInput | None = None,
+
+        file_id: str | None = None,
+
+        filename: str | None = None,
+
+        schema: dict[str, Any],
+
+        prompt: str | None = None,
+
+        profile: str | None = None,
+
+        wait_seconds: int | None = None,
+
+    ) -> Any:
+
+        """Extract directly from a document, in one call.
+
+
+
+        The multipart variant of POST /api/v2/extract. Reconstructed over the
+
+        generated transport because openapi-generator emits only the JSON body
+
+        for this path — see this module's docstring.
+
+
+
+        Takes a document OR the id of one already uploaded, exactly as
+
+        parse.run does: ExtractDocumentRequest declares both `input` and
+
+        `file_id`, so requiring the bytes would have made an already-uploaded
+
+        file unusable here and forced a needless re-upload. `filename` only
+
+        applies to the `file_id` path — a raw `input` upload already carries
+
+        its own name.
+
+        """
+
+        if (input is None) == (file_id is None):
+
+            raise ValueError("pass exactly one of input or file_id")
+
+        if input is not None and filename is not None:
+
+            raise ValueError("filename only applies to file_id; input already carries its name")
+
+
+
+        return post_multipart(
+
+            self._client,
+
+            path="/api/v2/extract",
+
+            file_field="input",
+
+            file_value=None if input is None else as_file_part(input),
+
+            fields={
+
+                "file_id": file_id,
+
+                "filename": filename,
+
+                "schema": json.dumps(schema),
+
+                "prompt": prompt,
+
+                "profile": profile,
+
+            },
+
+            wait_seconds=wait_seconds,
+
+        )
+
+
+
+
+
+class _Jobs(_Namespace):
+
+    def get(
+
+        self,
+
+        job_id: str,
+
+        *,
+
+        output: str | None = None,
+
+        include: list[str] | None = None,
+
+    ) -> Any:
+
+        """The job's status, and its parsed content once available.
+
+
+
+        `output` and `include` select the representation, exactly as on
+
+        parse.run — omitting them here would have made the job route able to
+
+        return only the server default, so a caller who asked for elements on
+
+        the original request could not retrieve them.
+
+        """
+
+        return JobsApi(self._client._api_client).jobs_get(
+
+            job_id, output=output, include=include
+
+        )
+
+
+
+    def list(
+
+        self,
+
+        *,
+
+        cursor: str | None = None,
+
+        limit: int | None = None,
+
+        status: str | None = None,
+
+    ) -> Any:
+
+        return JobsApi(self._client._api_client).jobs_list(
+
+            cursor=cursor, limit=limit, status=status
+
+        )
+
+
+
+    def iterate(
+
+        self,
+
+        *,
+
+        cursor: str | None = None,
+
+        limit: int | None = None,
+
+        status: str | None = None,
+
+    ) -> Iterator[Any]:
+
+        while True:
+
+            page = self.list(cursor=cursor, limit=limit, status=status)
+
+            yield from page.jobs
+
+            cursor = page.next_cursor
+
+            if cursor is None:
+
+                return
+
+
+
+    def cancel(self, job_id: str) -> Any:
+
+        return JobsApi(self._client._api_client).jobs_cancel(job_id)
+
+
+
+    def delete(self, job_id: str) -> None:
+
+        JobsApi(self._client._api_client).jobs_delete(job_id)
+
+
+
+    def stream(
+
+        self,
+
+        job_id: str,
+
+        *,
+
+        output: str | None = None,
+
+        include: list[str] | None = None,
+
+    ) -> Iterator[JobEvent]:
+
+        """Progress events for a running job, as they happen.
+
+
+
+        The same resource as `get(job_id)`, selected by Accept — not a second
+
+        route. Yields `status` events on every public status change and then
+
+        exactly one terminal `result` or `error`, after which the stream ends.
+
+        Keep-alive comments are consumed here and never surface as events.
+
+        """
+
+        # The terminal `result` event carries the same representation the
+
+        # JSON path would return, so these have to reach the stream too — a
+
+        # stream that could only ever deliver the server default would be a
+
+        # second-class way to read the same resource.
+
+        query: dict[str, Any] = {}
+
+        if output is not None:
+
+            query["output"] = output
+
+        if include:
+
+            query["include"] = include
+
+
+
+        url = f"{self._client._server_url}/api/v2/jobs/{quote(job_id, safe='')}"
+
+        if query:
+
+            url = f"{url}?{urlencode(query, doseq=True)}"
+
+
+
+        return stream_job_events(
+
+            url=url,
+
+            headers=self._client._request_headers(),
+
+            timeout_seconds=self._client._timeout_seconds,
+
+            retries=self._client._retries,
+
+        )
+
+
+
+
+
+class _Upload(_Namespace):
+
+    def run(self, input: FileInput) -> Any:
+
+        return UploadApi(self._client._api_client).upload_run(as_file_part(input))
+
+
+
+    def get(self, file_id: str) -> Any:
+
+        return UploadApi(self._client._api_client).upload_get(file_id)
+
+
+
+    def delete(self, file_id: str) -> None:
+
+        UploadApi(self._client._api_client).upload_delete(file_id)
+
+
+
+
+
+def _prefer(wait_seconds: int | None) -> str | None:
+
+    """`Prefer: wait=N`, the contract's spelling for "block for up to N seconds".
+
+
+
+    Exposed as `wait_seconds=` rather than making callers hand-build a header
+
+    value; `wait_seconds=0` is meaningful (return the job handle immediately),
+
+    so the check is against None rather than falsiness.
+
+    """
+
+    return None if wait_seconds is None else f"wait={wait_seconds}"
+

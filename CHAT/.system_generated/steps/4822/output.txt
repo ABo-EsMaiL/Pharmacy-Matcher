@@ -1,0 +1,195 @@
+
+The command exited with code 0.
+Output:
+<truncated 1 lines>
+     Candidate: 'برايم روز بلاس كبسول جديد'
+
+[ 9] Warehouse: 'كيور فارما خاص.pdf'
+     Shortage: 'نيوكاربون30قرص س ج'
+     Candidate: 'نیوکاربن ۳۰کپسول'
+
+[10] Warehouse: 'كيور فارما خاص.pdf'
+     Shortage: 'دانست  4 مجم 3 امبول س ج'
+     Candidate: 'داست ٤مجم ١ امپول ١٥'
+
+[11] Warehouse: 'كيور فارما خاص.pdf'
+     Shortage: 'ليمتلس كروماكس كت30كيس س ج'
+     Candidate: 'لیمپس کرومکس کت ک/ایفا'
+
+[12] Warehouse: 'كيور فارما خاص.pdf'
+     Shortage: 'كولميتيدين  10شريط'
+     Candidate: 'کولمدین ۱۰ مجم - شریط'
+
+[13] Warehouse: 'كيور فارما خاص.pdf'
+     Shortage: 'ليفانيك500مجم 7قرص س ج'
+     Candidate: 'تافانیک ۵۰۰ جم اقراص'
+
+[14] Warehouse: 'كيور فارما خاص.pdf'
+     Shortage: 'سيفيتيل 1جم'
+     Candidate: 'سيديتيل ١ جم اقراص فوار'
+
+[15] Warehouse: 'مخزن الحياة فارم اسكندريه-170.p'
+     Shortage: 'زنكترون 30كبسولة س ج'
+     Candidate: 'زنكترون اقراص باكت 160'
+
+[16] Warehouse: 'مخزن الحياة فارم اسكندريه-170.p'
+     Shortage: 'اوسوبان800مجم 20قرص'
+     Candidate: 'بوسکوبان اقراص باکت 100'
+
+[17] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'جنكو بلاس اقراص'
+     Candidate: 'جنكو بلس كبسول/باكت 30'
+
+[18] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'لاكتيز 15 ملل نقط 750مجم'
+     Candidate: 'لاتیز 15 مل نقط بویید/باکت100'
+
+[19] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'بقدونس وكرفس ايزيس'
+     Candidate: 'ایزیز بقدونس وکرکس 20 فلتر'
+
+[20] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'ليفانوكس2شريط س ج'
+     Candidate: 'ليفانوكس كبسول/باكت 200'
+
+[21] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'اورامكس 30مل اسبراي س ج'
+     Candidate: 'اورامکس بخاخ/باکت 56'
+
+[22] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'كولونا  3شريط'
+     Candidate: 'کولونا 40 مج رگ پاکت 15'
+
+[23] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'بروتولوك40مجم اقراص س ج'
+     Candidate: 'پانتولوک 40 مج اقراص/باکت 102'
+
+[24] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'زنكترون 30كبسولة س ج'
+     Candidate: 'زنكتون اقراص/باكت 160'
+
+[25] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'يوكيراتو كريم س ج'
+     Candidate: 'یوریکیر کریم/باكت 80'
+
+[26] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'ريتشي بانثينول كريم ادفانس'
+     Candidate: 'یوریتشی پانتیول ادفانس کریم جیل'
+
+[27] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'تربتيزول10 مجم اقراص'
+     Candidate: 'تریپتازول 10 مج اقراس/باکت 200'
+
+[28] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'سيديرال بمبي10كيس س ج'
+     Candidate: 'سیدرال بیج جدید/باکت 10'
+
+[29] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'دانست  4 مجم 3 امبول س ج'
+     Candidate: 'دانتسيت 4 مج 6 امبول'
+
+[30] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'اوبتك سالين قطرة س ج'
+     Candidate: 'اوبست قطره للعين/باكت 60'
+
+[31] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'انزيماكس ديوبايوتكس كبسول'
+     Candidate: 'انزيمكس دوال ريليز/باكت 66'
+
+[32] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'ينسون ايزيس س ج'
+     Candidate: 'زيس ينسون 12 فلتر صغير ج/باكو 6'
+
+[33] Warehouse: 'المكرومي المنصورة.pdf'
+     Shortage: 'ميبو مرهم 15جم صغير س ج'
+     Candidate: 'ميو صغير'
+
+[34] Warehouse: 'المكرومي المنصورة.pdf'
+     Shortage: 'برونكوفين شراب س ج'
+     Candidate: 'برونفين ٤٠٠مجم س.ج ٢٨'
+
+[35] Warehouse: 'المكرومي المنصورة.pdf'
+     Shortage: 'كتافلام  نقط'
+     Candidate: 'كتافلام ٥٠ س.ج ٨٦ج'
+
+[36] Warehouse: 'المكرومي المنصورة.pdf'
+     Shortage: 'اسبوسيد 20قرص اطفال س ج'
+     Candidate: 'استوسيد اطفال ٣٥جنية'
+
+[37] Warehouse: 'المكرومي المنصورة.pdf'
+     Shortage: 'جينوفيل 50قرص اوريجنال س ج'
+     Candidate: 'جينوفيل اوريجينال ٣٠ قرص س.ج'
+
+[38] Warehouse: 'المكرومي المنصورة.pdf'
+     Shortage: 'كارفيد 25مجم 2شريط'
+     Candidate: 'كارفيد ٢٥، ٦ قرص سعر جديد'
+
+[39] Warehouse: 'المكرومي المنصورة.pdf'
+     Shortage: 'ليمتلس كروماكس كت30كيس س ج'
+     Candidate: 'ليمتلس كروماماكس كت ٣٠ كبس'
+
+
+Removed in PROC-004 (were in PROC-003): 15 items
+[ 1] Warehouse: 'السلام شبين.pdf'
+     Shortage: 'ديكساتوبرين مرهم س ج'
+     Candidate: 'ديكسا توبيرين مرهم/ايكو'
+
+[ 2] Warehouse: 'كيور فارما خاص.pdf'
+     Shortage: 'نيفيلوب12.5/5مجم بلاس20قرص'
+     Candidate: 'نیفلوب بلس ۰/۱۲/۵ مجم قرص'
+
+[ 3] Warehouse: 'كيور فارما خاص.pdf'
+     Shortage: 'كارنيتول بلس برطمان س ج'
+     Candidate: 'کارنتول پلس کپسول جدید'
+
+[ 4] Warehouse: 'كيور فارما خاص.pdf'
+     Shortage: 'برونكوفين شراب س ج'
+     Candidate: 'برونكوف شراب'
+
+[ 5] Warehouse: 'كيور فارما خاص.pdf'
+     Shortage: 'زوكوزيت 20/10مجم اقراص'
+     Candidate: 'زکوژینت ٢٠/١٠ مجم قرص'
+
+[ 6] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'فلوب شراب س ج'
+     Candidate: 'فلویر شراب / باکت 25'
+
+[ 7] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'زانوجليد4/30اقراص س ج'
+     Candidate: 'زانوچيلد 4 مج اقراص/باكت 60'
+
+[ 8] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'مويست 1 كريم'
+     Candidate: 'ایا موست کریم/باکت 30'
+
+[ 9] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'فيتا زنك  كبسول'
+     Candidate: 'فیتازاک ان کپسول/ایکو'
+
+[10] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'اولفن100مجم اس ار10كبسول س ج'
+     Candidate: 'البیران اس ار اقراص / باکت 10'
+
+[11] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'كويتابين 25مجم 30قرص س ج'
+     Candidate: 'کوتیاپین 25 مج اقراص'
+
+[12] Warehouse: 'الهضبة الاثنين نقدى0.pdf'
+     Shortage: 'ب ك ميرز كبسول س ج'
+     Candidate: 'ميرز كبسول/باكت 30'
+
+[13] Warehouse: 'المكرومي المنصورة.pdf'
+     Shortage: 'جوسبرين اقراص 3شريط'
+     Candidate: 'جوسبرين اقراص س.ج ٨١ج'
+
+[14] Warehouse: 'المكرومي المنصورة.pdf'
+     Shortage: 'باولوكير نقط س ج/بيكولاكس'
+     Candidate: 'بيولاكس نقط س.ج ٢٤ج'
+
+[15] Warehouse: 'مخزن الحياة فارم اسكندريه-170.p'
+     Shortage: 'سيبروسين500مجم10قرص س ج'
+     Candidate: 'سيبرو 500 مجم فموي'
+
+
+Changed candidate in PROC-004: 0 items
+

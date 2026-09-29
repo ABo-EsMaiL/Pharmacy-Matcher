@@ -1,0 +1,26 @@
+The search for "OpenRouter best free models 2026 site:openrouter.ai" returned the following summary:
+To access free AI models on OpenRouter in 2026, the most efficient method is using the **Free Models Router** (`openrouter/free`)[1][2].
+
+### How to Use Free Models
+*   **Free Models Router (`openrouter/free`):** This is an automated router that intelligently selects a free model for you[1][2]. It is designed to filter for models that support the specific features your request requires, such as vision (image understanding), tool calling, and structured outputs[1][3].
+*   **Getting Started:** You can use this by selecting the `openrouter/free` model in the OpenRouter Chat Playground or via the API[4][3]. It serves as a simple, single-endpoint solution that rotates through available free models[3][5].
+
+### Finding Specific Free Models
+If you prefer to choose specific models rather than using the auto-router, you can browse them directly on the platform:
+*   **Model Collection:** Visit the **Models** or **Collections** section on the OpenRouter website and filter by the "Free" collection[6][7].
+*   **Rankings:** OpenRouter provides frequently updated rankings based on real usage data, which can help you identify popular or high-performing free models[8][6].
+*   **Transparency:** OpenRouter maintains a list of over 20+ free models (as of mid-2026), allowing you to prototype and learn without needing a credit card for those specific tiers[9][10].
+
+For developers, using `openrouter/free` is recommended as a fallback or primary tool to ensure your application always has access to an available free-tier model without needing to manually update your implementation when availability changes[2][5].
+
+Sources:
+[1] [openrouter.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVIAbN8GF-OPtegqG8SSrcs2hsk6FJDXrD5SPTeTs7PdIHHu8yoyGwDiC8HU-ZDCeHzhBAqFumSeSV4diS9g1qPP2Jdns-C2yNiJWiok4GYtW5Mxf7Ecy5hdzk)
+[2] [openrouter.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNvrnSYFyWNn5Rrnpo02smZljDbjTSpjP3Z4LINPAdXd1fmo5MxYn5tIyEgkTsIo7aMaduOR3B7ewYA67mMmIkbHrenELacNr642LkuNYamiU-J8L0qjzvFWwNXxFV_WmDG9sK4n-2tk9e6Pfx8r7ly-Ju)
+[3] [openrouter.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVIAbN8GF-OPtegqG8SSrcs2hsk6FJDXrD5SPTeTs7PdIHHu8yoyGwDiC8HU-ZDCeHzhBAqFumSeSV4diS9g1qPP2Jdns-C2yNiJWiok4GYtW5Mxf7Ecy5hdzk)
+[4] [openrouter.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvjUNWVwQUnwM9DKEJBT5PsSlQaeP_rnwTMPAjxwDmQ02ZY3oO3biGRd2gs_aiSfG_U1jxEVg0lt01eQSoih0asA0lGtxwJS9x9owJ43NnKur7Kn-A9QWDt0iMLYWWJyvoiWrU03zwaR_77FT9BfXogkD8tEEo7PbKeAvuJz37-n0Vkg==)
+[5] [buldrr.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo4_1-VV6nPSd2EUzS1HlllFf33TUxFR0fuxVRL1uYzsO5v2lmqL2boincYjYUvQrHYvQKDNEYNsefZxW4-5iVZDT9A-CaWHvJwEtd3szHgohhwfuSlEuM5Q6F_dHoZLbDc9MNiPnJM_0vrEFAyaSU1uAClKsTkVEuZz0=)
+[6] [openrouter.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECjxVVbIBq-uot7rxaFO2DUrvvbzuupR_pb9TWrqAgL9KrWTnYNcMeEpdZEesw6LqIVLjePbuUdLw4zxb8hJ71IwRq9VICIGZfIZ_0jijucPzA1HhESSAddUbwqne_GlE=)
+[7] [openrouter.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHCHwtPSlLAGKA6jZIK8xKITNl1UYMTgu3Q7FToWEhJUGUNL6Pd2kOlmPnX2Z0tRSrUd135xGtWUL1Tb4n-s7vrqCY3mSdbhthGh6e7uUGmXm4IJU=)
+[8] [openrouter.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAryhXpQqozyEenQwqyZpnnIou1ljg9v18fbBFhodWmdKDhKOFhEsaE4vfWMkT0C4rJ7ixdmteILuYCodMRkZ5ja-v7l5d9TJi8D_wnwNkH18PH4m2ZLd66Qi_rm3baX_yeew=)
+[9] [openrouter.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHS1210SYQ35_ZD3HCWkeYW62aX_LctUKaqQcAJVbLoOFpOB-IR6NopZeowOEqVyHRtZ_kJNmrcStqReh9xTT7GetRQLy2mjbU2TyBVgEZPYcUsFNiEPksoOyCqJk5D7cmE4A-IzjwOgOFaJghbyWsCyy8=)
+[10] [openrouter.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAryhXpQqozyEenQwqyZpnnIou1ljg9v18fbBFhodWmdKDhKOFhEsaE4vfWMkT0C4rJ7ixdmteILuYCodMRkZ5ja-v7l5d9TJi8D_wnwNkH18PH4m2ZLd66Qi_rm3baX_yeew=)

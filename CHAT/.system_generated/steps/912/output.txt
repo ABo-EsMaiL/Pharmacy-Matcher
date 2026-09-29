@@ -1,0 +1,86 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -110,7 +110,7 @@
+     return result
+ 
+ 
+-def parse_items_from_response(response: dict | list) -> list[dict]:
++def parse_items_from_response(response: dict | list, gemini_api_key: str = None) -> list[dict]:
+     elements = _normalize_response(response)
+ 
+     items = _try_extracted_data(elements)
+@@ -118,10 +118,18 @@
+         return items
+ 
+     items = _try_html_tables(elements)
+-    if items:
++    if items and len(items) > 5:
+         print(f"     -> Extracted {len(items)} items from HTML tables")
+         return items
+ 
++    # Fallback to Gemini if normal extraction fails or extracts very few items
++    if gemini_api_key:
++        print(f"     -> Basic extraction yielded {len(items)} items. Attempting Gemini AI extraction...")
++        gemini_items = _extract_with_gemini(elements, gemini_api_key)
++        if gemini_items:
++            print(f"     -> Extracted {len(gemini_items)} items using Gemini AI")
++            return gemini_items
++
+     items = _try_text_content(elements)
+     print(f"     -> Extracted {len(items)} items from raw text content")
+     return items
+@@ -128,3 +128,45 @@
++def _extract_with_gemini(elements: list[dict], api_key: str) -> list[dict]:
++    try:
++        from google import genai
++        client = genai.Client(api_key=api_key)
++        
++        # Collect all raw text from the elements
++        full_text = "\n".join([elem.get("text", "").strip() for elem in elements if elem.get("text")])
++        if not full_text.strip():
++            return []
++            
++        prompt = f"""
++        أنت مساعد ذكي متخصص في قراءة فواتير ونواقص الأدوية والصيدليات.
++        مرفق لك النص الخام المستخرج من ملف PDF.
++        قم باستخراج جميع أسماء الأدوية والأصناف الموجودة في هذا النص.
++        أرجع النتيجة **فقط** على شكل مصفوفة JSON تحتوي على أسماء الأدوية كنصوص (Strings).
++        لا تقم بإضافة أي نصوص أخرى، أو markdown tags مثل ```json، فقط المصفوفة.
++        
++        النص:
++        {full_text[:35000]}
++        """
++        
++        response = client.models.generate_content(
++            model='gemini-2.5-flash',
++            contents=prompt,
++        )
++        text = response.text.strip()
++        
++        # Clean markdown
++        if text.startswith('```json'): text = text[7:-3]
++        elif text.startswith('```'): text = text[3:-3]
++        
++        import json
++        extracted = json.loads(text.strip())
++        
++        items = []
++        for name in extracted:
++            if isinstance(name, str) and name.strip():
++                items.append({"item_name_raw": name.strip(), "source_page": 1})
++        return items
++    except Exception as e:
++        print(f"     -> Gemini extraction failed: {e}")
++        return []
+ 
+ def extract_items_from_pdf(
+     filepath: Path,
+@@ -131,4 +131,5 @@
+     base_url: str = "https://transform.unstructured.io",
++    gemini_api_key: str = None,
+ ) -> list[dict]:
+     """
+     استخراج أسماء الأصناف من ملف PDF (الدالة الرئيسية).
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,47 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1498,6 +1498,7 @@
+ 
+ // Exit App
+ async function exitApp() {
++    const t = I18N[currentLang] || I18N.ar;
+     try {
+         let isRunning = false;
+         if (window.pywebview && window.pywebview.api) {
+@@ -1506,7 +1506,7 @@
+         }
+         
+         if (isRunning) {
+-            showCustomConfirm('تأكيد الإغلاق', 'توجد عمليات مطابقة قيد التشغيل في الخلفية. هل أنت متأكد من الإغلاق؟', async () => {
++            showCustomConfirm(t.confirm_exit_title, t.confirm_exit_msg, async () => {
+                 await window.pywebview.api.exit_app();
+             });
+         } else {
+@@ -1524,17 +1524,18 @@
+ 
+ // Delete Process
+ function deleteProcess(processId) {
+-    showCustomConfirm('تأكيد الحذف', 'هل أنت متأكد من حذف هذه العملية نهائياً من السجل؟', async () => {
++    const t = I18N[currentLang] || I18N.ar;
++    showCustomConfirm(t.confirm_delete_title, t.confirm_delete_msg, async () => {
+         try {
+             const res = await window.pywebview.api.delete_process(processId);
+             if (res.success) {
+-                showToast('تم الحذف بنجاح', 'success');
++                showToast(t.toast_deleted, 'success');
+                 loadHistory();
+             } else {
+-                showToast('خطأ: ' + res.error, 'error');
+-            }
+-        } catch (error) {
+-            showToast('خطأ في الحذف', 'error');
++                showToast((currentLang === 'en' ? 'Error: ' : 'خطأ: ') + res.error, 'error');
++            }
++        } catch (error) {
++            showToast(currentLang === 'en' ? 'Deletion error' : 'خطأ في الحذف', 'error');
+         }
+     });
+ }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

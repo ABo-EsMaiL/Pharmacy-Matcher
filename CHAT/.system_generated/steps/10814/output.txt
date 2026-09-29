@@ -1,0 +1,11 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":582,"LineContent":".drop-zone {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":592,"LineContent":".drop-zone:hover {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":598,"LineContent":".drop-zone:active {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":607,"LineContent":".drop-zone h4 {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":611,"LineContent":".drop-zone p {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":1553,"LineContent":"                        \u003cdiv class=\"drop-zone\" id=\"zone-shortage\" onclick=\"selectFiles('shortage')\"\u003e"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\templates\\index.html","LineNumber":1568,"LineContent":"                        \u003cdiv class=\"drop-zone\" id=\"zone-warehouse\" onclick=\"selectFiles('warehouse')\"\u003e"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\style.css","LineNumber":275,"LineContent":".drop-zone {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\style.css","LineNumber":284,"LineContent":".drop-zone:hover {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\style.css","LineNumber":294,"LineContent":".drop-zone h4 {"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy-vision\\desktop_app\\static\\style.css","LineNumber":298,"LineContent":".drop-zone p {"}

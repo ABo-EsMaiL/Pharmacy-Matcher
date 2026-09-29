@@ -1,0 +1,37 @@
+{
+  "official_tests_passed": 123,
+  "new_synthetic_tests": 23,
+  "cache_tests": 9,
+  "attribute_tests": 14,
+  "recall": {
+    "pages": 46,
+    "warehouse_items": 2718,
+    "cases": 42,
+    "retrieved_targets": 42,
+    "candidate_pairs_before_gate": 114156,
+    "candidate_pairs": 134,
+    "no_candidate_cases": 0,
+    "retrieved_target_routes": {
+      "review": 7,
+      "match": 7,
+      "ambiguous": 28
+    },
+    "llm_calls": 0
+  },
+  "unchanged_protected_files": 686,
+  "changed_search_functions": [
+    "unified_item",
+    "item_payload"
+  ],
+  "live_gemini_calls": 0,
+  "new_process_runs": 0,
+  "implementation_hashes": {
+    "src/extract/gemini_vision_extractor.py": "b6537db8f41bde503fbd9762f4f0209e4d3401c76e2fad9e996537f507013cd2",
+    "src/fast_match/attributes.py": "a5b1b5ba892ea34e00105d0e988329cc5f4e4fb71ed34295a79c2e76f5782a3c",
+    "src/fast_match/search.py": "1aead8ed044a5fa639da2c8fa95ff196b5cbf96f26fcf21d2c24185ce86e042e",
+    "src/fast_match/coordinator.py": "4d61fb2ea0c2f166990a2c21579467a226b0a8d174afe92d673a064933bbf421",
+    "tests/test_global_vision_cache.py": "008b242445461becd15ce1759ab52375b6aeeb1a7a6982088b00f2b108af1788",
+    "tests/test_structured_attribute_normalization.py": "0ce863e7eb8106ed90cf9ffebe2afefbca3eb0728f5027cdf86b3b00a9702310",
+    "tests/test_structured_presence.py": "10c03877594aec48498c52678898c3a355840fed139adf77deb437f0884f90df"
+  }
+}

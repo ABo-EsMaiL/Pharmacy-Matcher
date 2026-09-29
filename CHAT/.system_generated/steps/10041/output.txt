@@ -1,0 +1,18 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\run.bat. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1,6 +1,12 @@
+ @echo off
+ cd /d "%~dp0"
+ 
++:: Check Conda environment first (recommended)
++if exist "D:\miniconda3\envs\venv\pythonw.exe" (
++    start "" /B "D:\miniconda3\envs\venv\pythonw.exe" desktop_app\app.py
++    exit /b 0
++)
++
+ :: Try to use local venv if it exists
+ if exist "venv\Scripts\pythonw.exe" (
+     start "" /B venv\Scripts\pythonw.exe desktop_app\app.py
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

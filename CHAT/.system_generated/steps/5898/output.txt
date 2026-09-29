@@ -1,0 +1,21 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -541,7 +541,14 @@
+             ]
+         }
+ 
+-        url = getattr(self.config, 'local_api_url', "http://127.0.0.1:8000/v1/chat/completions")
++        raw_url = getattr(self.config, 'local_api_url', "http://127.0.0.1:8000/v1/chat/completions")
++        url = str(raw_url).strip().rstrip("/")
++        if not url.endswith("/chat/completions"):
++            if url.endswith("/v1"):
++                url = f"{url}/chat/completions"
++            else:
++                url = f"{url}/v1/chat/completions"
++                
+         api_key = getattr(self.config, 'local_api_key', '[REDACTED_CREDENTIAL]')
+         
+         response = http_requests.post(
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

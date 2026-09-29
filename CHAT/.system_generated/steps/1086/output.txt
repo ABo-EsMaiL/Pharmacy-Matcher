@@ -1,0 +1,64 @@
+
+The command exited with code 0.
+Output:
+                    <div class="stat-card">
+
+                        <div class="stat-icon"><i class="ph-fill ph-list-numbers"></i></div>
+
+                        <div class="stat-info">
+
+                            <span class="stat-title">إجمالي الأصناف المطلوبة</span>
+
+                            <strong id="stat-total" class="stat-value">0</strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card stat-success">
+
+                        <div class="stat-icon"><i class="ph-fill ph-check-fat"></i></div>
+
+                        <div class="stat-info">
+
+                            <span class="stat-title">تمت المطابقة بنجاح</span>
+
+                            <div class="stat-flex">
+
+                                <strong id="stat-matched" class="stat-value">0</strong>
+
+                                <span id="stat-matched-pct" class="stat-badge">0%</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card stat-warning">
+
+                        <div class="stat-icon"><i class="ph-fill ph-warning"></i></div>
+
+                        <div class="stat-info">
+
+                            <span class="stat-title">يحتاج مراجعة (غير مؤكد)</span>
+
+                            <div class="stat-flex">
+
+                                <strong id="stat-review" class="stat-value">0</strong>
+
+                                <span id="stat-review-pct" class="stat-badge">0%</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card stat-danger">
+
+                        <div class="stat-icon"><i class="ph-fill ph-x-circle"></i></div>
+
+                        <div class="stat-info">
+
+

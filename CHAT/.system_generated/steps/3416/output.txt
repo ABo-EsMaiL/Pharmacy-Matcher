@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Normalized: '11494 ب32 - مجم 90 افيروكوكسيب 228.00 0.00 030'
+Extracted name: 'ب32 - مجم 90 افيروكوكسيب'
+

@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+58: ENABLE_SEARCH_GROUNDING = os.getenv("ENABLE_SEARCH_GROUNDING", "true").lower() in ("true", "1", "yes
+884: m = re.search(r'\{.*\}', clean_test, re.DOTALL) or re.search(r'\[.*\]', clean_test, re.DOTALL)
+

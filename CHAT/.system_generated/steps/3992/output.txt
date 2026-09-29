@@ -1,0 +1,21 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Workbook sheet names: ['ملخص', 'السلام شبين.pdf', 'المكرومي المنصورة.pdf', 'مخزن الحياة فارم اسكندريه-170.p', 'كيور فارما خاص.pdf', 'جملة العمروووو.pdf', 'الهضبة الاثنين نقدى0.pdf', 'لم يُعثر عليه', 'يحتاج مراجعة']
+Total matched requested items across sheets: 0
+Total review requested items across sheets: 0
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Extracted 993 items from column 'أسم الصنف'
+Total unique shortages in 0913.xlsx: 591
+Total unmatched shortages: 591
+
+Potential candidate matches found: 0
+Clean candidates (no form or strength conflict): 0
+
+--- TOP CLEAN CANDIDATES (Could any of these be real false negatives?) ---
+

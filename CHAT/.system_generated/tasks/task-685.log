@@ -1,0 +1,8 @@
+body {
+    background-color: var(--bg-main);
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 30px 30px;
+    color: var(--text-main);
+    overflow: hidden; /* Prevent body scroll in desktop app */
+    user-select: none; /* Make it feel like a desktop app */
+}

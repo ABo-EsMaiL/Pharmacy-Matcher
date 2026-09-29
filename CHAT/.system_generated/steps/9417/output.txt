@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+السلام شبين.pdf: 187 items parsed from cache.
+المكرومي المنصورة.pdf: 503 items parsed from cache.
+الهضبة الاثنين نقدى0.pdf: 1071 items parsed from cache.
+جملة العمروووو.pdf: 19 items parsed from cache.
+كيور فارما خاص.pdf: 715 items parsed from cache.
+مخزن الحياة فارم اسكندريه-170.pdf: 222 items parsed from cache.
+

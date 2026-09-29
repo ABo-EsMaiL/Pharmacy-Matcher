@@ -1,0 +1,76 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\extract\pdf_reader.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -16,6 +16,17 @@
+ _POLL_INTERVAL_SECONDS = 5
+ 
+ 
++import hashlib
++
++def _get_file_hash(filepath: Path) -> str:
++    hasher = hashlib.md5()
++    with open(filepath, 'rb') as f:
++        buf = f.read(65536)
++        while len(buf) > 0:
++            hasher.update(buf)
++            buf = f.read(65536)
++    return hasher.hexdigest()
++
+ def extract_from_pdf(
+     filepath: Path,
+     api_key: str,
+@@ -22,20 +22,6 @@
+ ) -> dict:
+     """
+     رفع ملف PDF إلى Unstructured API واستخراج العناصر المهيكلة.
+-
+-    يدعم كلاً من الاستجابة الفورية (200) والمهام غير المتزامنة (202).
+-
+-    Args:
+-        filepath: مسار ملف PDF.
+-        api_key: مفتاح Unstructured API.
+-        base_url: عنوان خادم Unstructured API.
+-
+-    Returns:
+-        استجابة API كاملة (قاموس أو قائمة عناصر).
+-
+-    Raises:
+-        FileNotFoundError: إذا لم يُوجد الملف.
+-        RuntimeError: إذا فشل الاتصال بـ API أو انتهت مهلة الانتظار.
+     """
+     filepath = Path(filepath)
+     if not filepath.exists():
+@@ -42,8 +42,29 @@
+ 
++    # Check global cache first
++    file_hash = _get_file_hash(filepath)
++    cache_dir = filepath.parent.parent.parent / 'data' / '.unstructured_cache'
++    cache_dir.mkdir(parents=True, exist_ok=True)
++    cache_file = cache_dir / f"{file_hash}.json"
++    
++    if cache_file.exists():
++        print(f"📄 تم العثور على الملف في الذاكرة المؤقتة (Cache). جاري تحميل البيانات المستخرجة مباشرة: {filepath.name}")
++        with open(cache_file, "r", encoding="utf-8") as f:
++            result = json.load(f)
++        # Also copy to local process directory
++        json_path = filepath.with_suffix(".json")
++        with open(json_path, "w", encoding="utf-8") as jf:
++            json.dump(result, jf, ensure_ascii=False, indent=2)
++        return result
++
+     print(f"📄 جارٍ رفع ملف PDF إلى Unstructured API: {filepath.name}")
+ 
+-    url = f"{base_url.rstrip('/')}/api/v2/parse"
+-    headers = {"unstructured-api-key": api_key}
++    # Fallback to general API URL if transform fails or isn't correct
++    if "transform.unstructured.io" in base_url:
++        url = "https://api.unstructured.io/general/v0/general"
++    else:
++        url = f"{base_url.rstrip('/')}/api/v2/parse"
++        
++    headers = {"unstructured-api-key": api_key, "accept": "application/json"}
+ 
+     # رفع الملف مع إعدادات الاستخراج
+     with open(filepath, "rb") as f:
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,19 @@
+The search for ""opencode.ai" API base url chat completions" returned the following summary:
+For OpenCode's Inference API, the base URL for the OpenAI-compatible chat completions endpoint is:
+
+**`https://opencode.ai/inference/openai/v1/chat/completions`**[1][2]
+
+### Key Details for Usage:
+*   **Endpoint Path:** `POST /inference/openai/v1/chat/completions`[2]
+*   **Authentication:** Requires an `Authorization: Bearer <token>` header, where `<token>` is your service account key[1][2]. Note that some free chat models may be accessible without this header[2].
+*   **Other Endpoints:** Depending on the specific service or model you are accessing (such as their "Go" or "Zen" model sets), you may encounter other endpoints like `https://opencode.ai/zen/go/v1/chat/completions` or `https://opencode.ai/zen/v1/chat/completions`[3][4][5]. 
+
+If you are configuring a custom provider in your `opencode.json` configuration file, ensure your `baseURL` points to the appropriate versioned endpoint (e.g., ending in `/v1`)[6].
+
+Sources:
+[1] [opencode.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH14fHXDet4_ERgSZ9vnZx4ubvTBbADpVRflYpXgVoUIxGEGZmdV7fT8sqOyYNkGx9qEQo06Qh8C9OgSI4KuLuaa2FS9WTMrYRvGcDefdIWRpF7FiXVe9FW)
+[2] [opencode.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH14fHXDet4_ERgSZ9vnZx4ubvTBbADpVRflYpXgVoUIxGEGZmdV7fT8sqOyYNkGx9qEQo06Qh8C9OgSI4KuLuaa2FS9WTMrYRvGcDefdIWRpF7FiXVe9FW)
+[3] [github.com](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoZSZNGds-HWQb9ECokCUT-QVMISyziRuZ1VlpWI7JtmYUFFd_FoceyXKsZM7JpA_ANblikM_uzU860XTQAzHfAKtAm4i_4i1Xwl7nA-BIa5GoY_BJ4uVGCJOlGaDiYHanD_E3zaaPlZJxRu_RWmmgZdI4ow==)
+[4] [opencode.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu60v6EC5d5CmYFHnIT_FJ7yTLKRJ0L1O74OmrZ99VjFRzbbwwj9mTNweXdy6XQ97PU9t3rRQ0KQOXLCg2lmh-lQH26II65GPqRa_HpqUSVjsj)
+[5] [opencode.ai](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKohE2Z7evZdmgfkpf0p41OOKqNPYPV0Bp5oIh6Fj3I__lg011oHjsjGEWQEVuZZ6Dr0Te2UZ6qd_z_k22zYc25CUGbVifmyXZAa6RBeiaVrgIAQ==)
+[6] [zenn.dev](https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZEQUI865btgSRWhn3LUCBiLq4yBw2Mn2dzU9vQWfYsemjnoFNwKWvouuQxBS1woaxqtBGcGz2S0frRkP3ElIyUa8GzhYq6-ub6J64RQDtVVsTOolCKfoqfnwo6m4BpGc1btagCnozhfEpu39-1XSYkBg0IXs=)

@@ -1,0 +1,21 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -643,8 +643,13 @@
+         try:
+             answer = json.loads(clean)
+         except json.JSONDecodeError as jde:
+-            self._log_provider_error(url, model, inputs, content, f"JSON_DECODE_ERROR: {jde}")
+-            raise RuntimeError(f"JSON Parse Error ({jde}): Model output was: {content[:300]}")
++            # Fallback: if extra data or multiple concatenated JSONs exist, decode the first valid JSON
++            try:
++                decoder = json.JSONDecoder()
++                answer, _ = decoder.raw_decode(clean)
++            except Exception:
++                self._log_provider_error(url, model, inputs, content, f"JSON_DECODE_ERROR: {jde}")
++                raise RuntimeError(f"JSON Parse Error ({jde}): Model output was: {content[:300]}")
+ 
+         # If answer is a list of results directly
+         if isinstance(answer, list):
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,22 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\Pharmacy-agy\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -231,6 +231,16 @@
+ 
+             self.save_settings(json.dumps(settings))
+             self.add_log(f"[SYSTEM] Switched active AI server to: {srv.name} (Port: {srv.port}, Model: {srv.default_model})")
++
++            # Auto-start target server if currently stopped
++            if not srv.is_running():
++                self.add_log(f"[SYSTEM] Server {srv.name} is not running. Starting it automatically...")
++                start_res = srv.start()
++                if start_res.get("success"):
++                    self.add_log(f"[SYSTEM] Server {srv.name} started successfully (PID: {start_res.get('pid')}).")
++                else:
++                    self.add_log(f"[WARNING] Could not auto-start {srv.name}: {start_res.get('message')}")
++
+             return {"success": True, "active_server": server_key, "url": srv.url, "model": srv.default_model}
+         except Exception as e:
+             return {"success": False, "error": str(e)}
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

@@ -1,0 +1,185 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -964,11 +964,12 @@
+     try {
+         const filePaths = await window.pywebview.api.select_files(type);
+         if (filePaths && filePaths.length > 0) {
++            const pathList = JSON.parse(filePaths);
+             if (type === 'warehouse') {
+-                selectedWarehouseFiles = [...selectedWarehouseFiles, ...filePaths];
++                selectedWarehouseFiles = [...selectedWarehouseFiles, ...pathList];
+                 updateFileList('warehouse', selectedWarehouseFiles);
+             } else if (type === 'shortage') {
+-                selectedShortageFiles = [...selectedShortageFiles, ...filePaths];
++                selectedShortageFiles = [...selectedShortageFiles, ...pathList];
+                 updateFileList('shortage', selectedShortageFiles);
+             }
+             checkSubmitState();
+@@ -1022,14 +1022,14 @@
+     
+     try {
+         const result = await window.pywebview.api.start_process(
+-            selectedWarehouseFiles,
+-            selectedShortageFiles
++            JSON.stringify(selectedWarehouseFiles),
++            JSON.stringify(selectedShortageFiles)
+         );
+         
+-        if (result && result.processId) {
+-            currentProcessId = result.processId;
++        if (result && result.process_id) {
++            currentProcessId = result.process_id;
+             showToast('تمت المطابقة بنجاح!', 'success');
+-            loadResults(result.stats);
++            loadResults(result.stats || {});
+             window.showScreen('screen-results');
+         } else {
+             throw new Error('لم يتم إرجاع معرف العملية');
+@@ -1103,7 +1103,8 @@
+     listEl.innerHTML = '<div class="spinner"></div>';
+     
+     try {
+-        const history = await window.pywebview.api.get_history();
++        const historyStr = await window.pywebview.api.get_history();
++        const history = JSON.parse(historyStr);
+         
+         if (!history || history.length === 0) {
+             listEl.innerHTML = '<div class="empty-state"><i class="ph-fill ph-empty"></i><p>لا توجد عمليات سابقة مسجلة.</p></div>';
+@@ -1122,7 +1122,7 @@
+             card.innerHTML = `
+                 <div class="history-info">
+                     <div class="history-header">
+-                        <h4>العملية ${item.processId.substring(0,8)}...</h4>
++                        <h4>العملية ${item.process_id.substring(0,8)}...</h4>
+                         <span class="badge-status ${item.status === 'completed' ? 'completed' : 'reviewing'}">${statusText}</span>
+                     </div>
+                     <div class="history-date">${date}</div>
+@@ -1129,7 +1129,7 @@
+                 <div class="history-stats">
+-                    <div><span>مكتمل</span><strong>${item.stats.matched}</strong></div>
+-                    <div><span>يحتاج مراجعة</span><strong>${item.stats.review}</strong></div>
+-                    <div><span>غير متوفر</span><strong>${item.stats.not_found}</strong></div>
++                    <div><span>مكتمل</span><strong>${item.matched_count || 0}</strong></div>
++                    <div><span>يحتاج مراجعة</span><strong>${item.review_count || 0}</strong></div>
++                    <div><span>غير متوفر</span><strong>${item.not_found_count || 0}</strong></div>
+                 </div>
+             `;
+             listEl.appendChild(card);
+@@ -1140,9 +1140,10 @@
+ 
+ async function viewProcess(processId) {
+     try {
+-        const data = await window.pywebview.api.get_process_details(processId);
++        const dataStr = await window.pywebview.api.get_process_details(processId);
++        const data = JSON.parse(dataStr);
+         currentProcessId = processId;
+-        loadResults(data.stats);
++        loadResults(data.stats || {});
+         window.showScreen('screen-results');
+     } catch (error) {
+         showToast('تعذر تحميل تفاصيل العملية', 'error');
+@@ -1153,10 +1153,10 @@
+     try {
+         const settings = await window.pywebview.api.get_settings();
+         if (settings) {
+-            document.getElementById('setting-unstructured-key').value = settings.unstructured_key || '';
++            document.getElementById('setting-unstructured-key').value = settings.unstructured_api_key || '';
+             document.getElementById('setting-local-url').value = settings.local_api_url || 'http://127.0.0.1:8000/v1/chat/completions';
+             document.getElementById('setting-local-key').value = settings.local_api_key || '';
+-            document.getElementById('setting-model-name').value = settings.model_name || 'gpt-4o-mini';
++            document.getElementById('setting-model-name').value = settings.local_model || 'gpt-4o-mini';
+             document.getElementById('setting-msemax-dir').value = settings.msemax_dir || '';
+         }
+     } catch (error) {
+@@ -1165,10 +1165,10 @@
+ 
+ async function saveSettings() {
+     const settings = {
+-        unstructured_key: document.getElementById('setting-unstructured-key').value,
++        unstructured_api_key: document.getElementById('setting-unstructured-key').value,
+         local_api_url: document.getElementById('setting-local-url').value,
+         local_api_key: document.getElementById('setting-local-key').value,
+-        model_name: document.getElementById('setting-model-name').value,
++        local_model: document.getElementById('setting-model-name').value,
+         msemax_dir: document.getElementById('setting-msemax-dir').value
+     };
+     
+@@ -1175,4 +1175,4 @@
+-        await window.pywebview.api.save_settings(settings);
++        await window.pywebview.api.save_settings(JSON.stringify(settings));
+         showToast('تم حفظ الإعدادات بنجاح', 'success');
+     } catch (error) {
+         showToast('حدث خطأ أثناء حفظ الإعدادات', 'error');
+@@ -1180,7 +1180,7 @@
+ 
+ async function selectMsemaxDir() {
+     try {
+-        const dirPath = await window.pywebview.api.select_folder();
++        const dirPath = await window.pywebview.api.select_directory();
+         if (dirPath) {
+             document.getElementById('setting-msemax-dir').value = dirPath;
+         }
+@@ -1192,9 +1192,14 @@
+     const statusEl = document.getElementById('req-status');
+     statusEl.innerHTML = '⏳';
+     try {
+-        await window.pywebview.api.setup_msemax_requirements();
+-        statusEl.innerHTML = '✅';
+-        showToast('تم تثبيت المتطلبات بنجاح', 'success');
++        const res = await window.pywebview.api.setup_msemax_requirements();
++        if (res.success) {
++            statusEl.innerHTML = '✅';
++            showToast('تم تثبيت المتطلبات بنجاح', 'success');
++        } else {
++            statusEl.innerHTML = '❌';
++            showToast('فشل تثبيت المتطلبات', 'error');
++        }
+     } catch (error) {
+         statusEl.innerHTML = '❌';
+         showToast('فشل تثبيت المتطلبات', 'error');
+@@ -1204,9 +1204,14 @@
+     const statusEl = document.getElementById('session-status');
+     statusEl.innerHTML = '⏳';
+     try {
+-        await window.pywebview.api.get_msemax_session();
+-        statusEl.innerHTML = '✅';
+-        showToast('تم تجديد الجلسة بنجاح', 'success');
++        const res = await window.pywebview.api.run_get_session();
++        if (res.success) {
++            statusEl.innerHTML = '✅';
++            showToast('تم فتح الجلسة، يرجى تسجيل الدخول', 'success');
++        } else {
++            statusEl.innerHTML = '❌';
++            showToast('فشل تجديد الجلسة', 'error');
++        }
+     } catch (error) {
+         statusEl.innerHTML = '❌';
+         showToast('فشل تجديد الجلسة', 'error');
+@@ -1219,10 +1219,11 @@
+     
+     let isRunning = false;
+     if (statusData !== undefined) {
+-        isRunning = typeof statusData === 'object' ? statusData.is_running : statusData;
++        isRunning = typeof statusData === 'object' ? statusData.running : statusData;
+     } else {
+         try {
+-            isRunning = await window.pywebview.api.is_server_running();
++            const status = await window.pywebview.api.get_server_status();
++            isRunning = status.running;
+         } catch (error) {
+             console.error('Failed to get server status', error);
+             return;
+@@ -1243,8 +1243,8 @@
+ 
+ async function toggleServer() {
+     try {
+-        const isRunning = await window.pywebview.api.is_server_running();
+-        if (isRunning) {
++        const status = await window.pywebview.api.get_server_status();
++        if (status.running) {
+             await window.pywebview.api.stop_server();
+             showToast('تم إيقاف السيرفر', 'success');
+         } else {
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

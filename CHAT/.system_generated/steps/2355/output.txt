@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Total shortages: 993
+Total Amr items: 19
+Total Salam items: 187
+Salam matches from 0913: 35
+Salam generated items: 115
+Unmatched items from 0913: 35
+Total benchmark items: 200
+

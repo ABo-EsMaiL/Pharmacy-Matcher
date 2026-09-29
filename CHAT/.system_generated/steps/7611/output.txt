@@ -1,0 +1,21 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -589,8 +589,13 @@
+                 return { text: "", is_running: isRunning, is_done: false, has_error: true, new_turn_started: true, model_count: 0 };
+             }
+ 
+-            // Find all chat turns
+-            const allTurns = Array.from(document.querySelectorAll('ms-chat-turn, .chat-turn-container, .chat-turn, [data-turn-role]'));
++            // Find all chat turns (top-level elements only)
++            let allTurns = Array.from(document.querySelectorAll('ms-chat-turn'));
++            if (allTurns.length === 0) {
++                allTurns = Array.from(document.querySelectorAll('.chat-turn-container, .chat-turn, [data-turn-role]')).filter(el => {
++                    return !el.parentElement.closest('.chat-turn-container, .chat-turn, [data-turn-role]');
++                });
++            }
+             if (allTurns.length === 0) {
+                 return { text: "", is_running: isRunning, is_done: false, has_error: false, new_turn_started: isRunning, model_count: 0 };
+             }
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

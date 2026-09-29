@@ -1,0 +1,24 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+  -> Reading Excel file: 0913.xlsx
+  -> Active sheet: ورقة2
+  -> Header row: 6 -> ['أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية']
+  -> Extracted 993 data rows
+  -> Extracted 993 items from column 'أسم الصنف'
+[*] Processing PDF file: جملة العمروووو.pdf
+[+] Loaded 19 items from local cache: جملة العمروووو.pdf
+=== ALL AMRO CANDIDATES FOR KEY SHORTAGES ===
+Shortage: 'امبوفير 5امبول س ج'
+  -> Cand: 'امبوفير حقن جديد' (score: 0.66, brand_sim: 100.00)
+  -> Cand: 'لوفير 400 سعر جديد باكو 45' (score: 0.15, brand_sim: 66.67)
+  -> Cand: 'لوفير 800 سعر جديد-باكو25' (score: 0.15, brand_sim: 66.67)
+Shortage: 'ريتشي بانثينول كريم ادفانس'
+  -> Cand: 'بانثينول كريم كبير سعر قديم باكو 25' (score: 0.61, brand_sim: 55.17)
+Shortage: 'بانثينول النيل2%كريم وسط'
+  -> Cand: 'بانثينول كريم كبير سعر قديم باكو 25' (score: 0.67, brand_sim: 80.00)
+Shortage: 'افيروكوكسيب90مجم20قرص س ج'
+  -> Cand: 'افيرو كوكسبيب 90مجم-32ب' (score: 0.52, brand_sim: 91.67)
+

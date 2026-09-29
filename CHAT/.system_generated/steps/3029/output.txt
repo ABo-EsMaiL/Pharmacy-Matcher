@@ -1,0 +1,32 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -2028,6 +2028,26 @@
+         if (res.success) {
+             currentProcessId = res.process_id;
+             
++            if (res.queued) {
++                isProcessRunning = false;
++                btn.classList.remove('hidden');
++                progressModal.style.display = 'none';
++                stopProgressTimer();
++                
++                selectedShortageFiles = [];
++                selectedWarehouseFiles = [];
++                renderFileList('shortages-list', selectedShortageFiles, 'shortages');
++                renderFileList('warehouses-list', selectedWarehouseFiles, 'warehouses');
++                updateSubmitButton();
++                
++                const queueMsg = currentLang === 'en'
++                    ? `Process added to queue (Position #${res.position || 1}). It will start automatically once the current process completes.`
++                    : `تمت إضافة العملية إلى قائمة الانتظار (الترتيب #${res.position || 1})، وستبدأ تلقائياً فور انتهاء العملية الحالية.`;
++                showToast(queueMsg, 'info');
++                loadHistory();
++                return;
++            }
++
+             // If the backend detected an identical exact match that was already completed!
+             if (res.existing) {
+                 showToast(t.process_existing, 'info');
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

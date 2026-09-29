@@ -1,0 +1,87 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\desktop_app\templates\index.html. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1012,21 +1012,54 @@
+ // --- Drag & Drop Logic ---
+ window.activeDragZone = null;
+ 
+-function handleNativeDrop(files) {
+-    if (files && files.length > 0) {
+-        if (window.activeDragZone === 'warehouse') {
+-            selectedWarehouseFiles = [...selectedWarehouseFiles, ...files];
++function processSelectedFiles(files, targetZone) {
++    const validShortageExts = ['.pdf', '.xlsx', '.xls', '.csv'];
++    const validWarehouseExts = ['.pdf', '.xlsx', '.xls', '.csv', '.json'];
++    
++    const validExts = targetZone === 'warehouse' ? validWarehouseExts : validShortageExts;
++    const validFiles = [];
++    const invalidFiles = [];
++    
++    files.forEach(f => {
++        const ext = f.substring(f.lastIndexOf('.')).toLowerCase();
++        if (validExts.includes(ext) || !f.includes('.')) {
++            validFiles.push(f);
++        } else {
++            invalidFiles.push(f);
++        }
++    });
++    
++    if (invalidFiles.length > 0) {
++        showToast(`تم تجاهل ${invalidFiles.length} ملفات غير مدعومة. المسموح: ${validExts.join(', ')}`, 'error');
++    }
++    
++    if (validFiles.length > 0) {
++        if (targetZone === 'warehouse') {
++            selectedWarehouseFiles = [...selectedWarehouseFiles, ...validFiles];
+             updateFileList('warehouse', selectedWarehouseFiles);
+-        } else if (window.activeDragZone === 'shortage') {
+-            selectedShortageFiles = [...selectedShortageFiles, ...files];
+-            updateFileList('shortage', selectedShortageFiles);
+-        } else {
+-            // Default to shortages if zone wasn't active
+-            selectedShortageFiles = [...selectedShortageFiles, ...files];
++        } else {
++            selectedShortageFiles = [...selectedShortageFiles, ...validFiles];
+             updateFileList('shortage', selectedShortageFiles);
+         }
+         checkSubmitState();
+-        
++    }
++}
++
++async function handleNativeDrop(filesOverride) {
++    try {
++        let files = filesOverride;
++        if (!files) {
++            const filesStr = await window.pywebview.api.get_dropped_files();
++            files = JSON.parse(filesStr);
++        }
++        
++        if (files && files.length > 0) {
++            const zone = window.activeDragZone || 'shortage'; // Default to shortage if unknown
++            processSelectedFiles(files, zone);
++        }
++    } catch (e) {
++        console.error("Error handling native drop:", e);
++    } finally {
+         ['zone-shortage', 'zone-warehouse'].forEach(id => {
+             const zone = document.getElementById(id);
+             if(zone) {
+@@ -1095,14 +1095,7 @@
+         const filePaths = await window.pywebview.api.select_files(type);
+         if (filePaths && filePaths.length > 0) {
+             const pathList = JSON.parse(filePaths);
+-            if (type === 'warehouse') {
+-                selectedWarehouseFiles = [...selectedWarehouseFiles, ...pathList];
+-                updateFileList('warehouse', selectedWarehouseFiles);
+-            } else if (type === 'shortage') {
+-                selectedShortageFiles = [...selectedShortageFiles, ...pathList];
+-                updateFileList('shortage', selectedShortageFiles);
+-            }
+-            checkSubmitState();
++            processSelectedFiles(pathList, type);
+         }
+     } catch (error) {
+         showToast('حدث خطأ أثناء اختيار الملفات', 'error');
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

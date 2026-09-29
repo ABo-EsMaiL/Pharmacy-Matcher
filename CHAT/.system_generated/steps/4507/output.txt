@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+b1: لاكتيز ملل
+b2: لاكتيز بالفم
+fuzz ratio: 72.72727272727273
+fuzz token sort: 54.54545454545454
+

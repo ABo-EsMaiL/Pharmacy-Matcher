@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Fetching jobs on Unstructured server...
+Found 1 jobs to delete.
+Deleting job 79e72a8d-0287-4597-81a2-dea3aa04b39b (السلام شبين.pdf)...
+
+Deleted: 1 | Failed: 0
+Remaining jobs on Unstructured server: 0
+

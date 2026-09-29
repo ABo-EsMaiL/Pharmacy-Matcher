@@ -1,0 +1,24 @@
+{"name":".env","sizeBytes":"1324"}
+{"name":".env.example","sizeBytes":"949"}
+{"name":".github","isDir":true}
+{"name":"Dockerfile","sizeBytes":"393"}
+{"name":"Google AI Studio - Chromium 2026-09-23 12-57-27.mp4","sizeBytes":"3952921"}
+{"name":"LICENSE","sizeBytes":"1063"}
+{"name":"README.md","sizeBytes":"5787"}
+{"name":"__pycache__","isDir":true}
+{"name":"app.py","sizeBytes":"41919"}
+{"name":"c hrome_profile","isDir":true}
+{"name":"chrome_profile","isDir":true}
+{"name":"debug_screen.png","sizeBytes":"85032"}
+{"name":"debug_stuck.png","sizeBytes":"85032"}
+{"name":"docker-compose.yml","sizeBytes":"652"}
+{"name":"get_session.py","sizeBytes":"4468"}
+{"name":"mse.bat","sizeBytes":"264"}
+{"name":"pow_solver.py","sizeBytes":"6295"}
+{"name":"requirements.txt","sizeBytes":"121"}
+{"name":"session_data.json","sizeBytes":"192"}
+{"name":"stealth.min.js","sizeBytes":"180468"}
+{"name":"test_webdriver.py","sizeBytes":"781"}
+{"name":"test_webdriver2.py","sizeBytes":"944"}
+
+Summary: This directory contains 4 subdirectories and 18 files.

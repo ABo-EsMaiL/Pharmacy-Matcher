@@ -1,0 +1,23 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\desktop_app\backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -499,7 +499,7 @@
+                         self.add_log(f"[PROCESS WARNING] Could not auto-start {srv.name}: {start_res.get('message')}")
+ 
+             if self._window:
+-                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Matching {len(all_shortages)} items...'}}}}));")
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'جاري مطابقة {len(all_shortages)} صنف...'}}}}));")
+             
+             # Run matching
+             coordinator = FastCoordinator(config)
+@@ -506,7 +506,7 @@
+             
+             self.add_log(f"[PROCESS] Matching completed.")
+             if self._window:
+-                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'Saving results...'}}}}));")
++                self._window.evaluate_js(f"window.dispatchEvent(new CustomEvent('process_update', {{detail: {{process_id: '{process_id}', status: 'processing', message: 'جاري حفظ نتائج المطابقة وإعداد التقرير...'}}}}));")
+                 
+             # Write results
+             out_file = proc_dir / f"results_{process_id}.xlsx"
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

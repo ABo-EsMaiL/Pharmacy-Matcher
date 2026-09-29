@@ -1,0 +1,8 @@
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":461,"LineContent":"                status='reviewing' if summary.get('review_count', 0) \u003e 0 else 'completed',"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":465,"LineContent":"                review_count=summary.get('review_count', 0),"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":632,"LineContent":"                review_count=curr_review,"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\backend.py","LineNumber":641,"LineContent":"                \"review_count\": curr_review,"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\database.py","LineNumber":33,"LineContent":"                review_count INTEGER DEFAULT 0,"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":2799,"LineContent":"    const review = stats.review ?? stats.review_count ?? 0;"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\templates\\index.html","LineNumber":3016,"LineContent":"            review: data.review_count || 0"}
+{"File":"D:\\AI_Engineer\\Pharmacy-agy\\desktop_app\\static\\app.js","LineNumber":152,"LineContent":"    const review = stats.review ?? stats.review_count ?? 0;"}

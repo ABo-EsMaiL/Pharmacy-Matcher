@@ -1,0 +1,16 @@
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\match\\coordinator.py","LineNumber":17,"LineContent":"SYSTEM_PROMPT = \"\"\"You are a pharmaceutical matching assistant."}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\match\\coordinator.py","LineNumber":257,"LineContent":"                {\"role\": \"system\", \"content\": SYSTEM_PROMPT},"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\fast_match\\coordinator.py","LineNumber":13,"LineContent":"SYSTEM_PROMPT = \"\"\"You are an expert clinical and Egyptian pharmaceutical matching assistant."}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\dist_production\\src\\fast_match\\coordinator.py","LineNumber":347,"LineContent":"                {\"role\": \"system\", \"content\": SYSTEM_PROMPT},"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_batch3_cure.py","LineNumber":6,"LineContent":"from src.fast_match.coordinator import SYSTEM_PROMPT"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_batch3_cure.py","LineNumber":19,"LineContent":"        {\"role\": \"system\", \"content\": SYSTEM_PROMPT},"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_levanox_llm.py","LineNumber":5,"LineContent":"from src.fast_match.coordinator import SYSTEM_PROMPT"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_levanox_llm.py","LineNumber":18,"LineContent":"        {\"role\": \"system\", \"content\": SYSTEM_PROMPT},"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_llm_parofen.py","LineNumber":5,"LineContent":"from src.fast_match.coordinator import SYSTEM_PROMPT"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_llm_parofen.py","LineNumber":18,"LineContent":"        {\"role\": \"system\", \"content\": SYSTEM_PROMPT},"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_small_parofen.py","LineNumber":7,"LineContent":"from src.fast_match.coordinator import SYSTEM_PROMPT"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\scratch\\test_small_parofen.py","LineNumber":15,"LineContent":"        {\"role\": \"system\", \"content\": SYSTEM_PROMPT},"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":13,"LineContent":"SYSTEM_PROMPT = \"\"\"You are an expert clinical and Egyptian pharmaceutical matching assistant."}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\fast_match\\coordinator.py","LineNumber":347,"LineContent":"                {\"role\": \"system\", \"content\": SYSTEM_PROMPT},"}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py","LineNumber":17,"LineContent":"SYSTEM_PROMPT = \"\"\"You are a pharmaceutical matching assistant."}
+{"File":"d:\\AI_Engineer\\Pharmacy-agy\\src\\match\\coordinator.py","LineNumber":257,"LineContent":"                {\"role\": \"system\", \"content\": SYSTEM_PROMPT},"}

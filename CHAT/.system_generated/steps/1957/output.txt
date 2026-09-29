@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+3f488ed0-7ff1-4db5-910a-9615bc9ca968 JobStatus.PROCESSING السلام شبين.pdf
+6fd5a74b-d942-45a0-a5c8-7f1832666784 JobStatus.FAILED السلام شبين.pdf
+

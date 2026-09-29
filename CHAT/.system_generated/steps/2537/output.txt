@@ -1,0 +1,79 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\src\fast_match\coordinator.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -153,7 +153,7 @@
+                 best_name = top_candidates[0]["name"]
+                 
+                 # Rule 1: Very high confidence -> Auto Match (Bypass API entirely!)
+-                if best_score >= 0.85:
++                if best_score >= 0.88:
+                     matched.append({
+                         "shortage_item": shortage_name,
+                         "warehouse_item": best_name,
+@@ -161,8 +161,8 @@
+                     })
+                     tfidf_match_count += 1
+                 
+-                # Rule 2: Medium confidence -> Ask LLM to decide
+-                elif best_score >= 0.35:
++                # Rule 2: Plausible candidate -> Ask LLM to evaluate with clinical rules
++                elif best_score >= 0.20:
+                     candidates_for_llm = [{"id": c["id"], "name": c["name"]} for c in top_candidates[:3]]
+                     llm_cases.append({
+                         "case_id": f"Q{idx:05}",
+@@ -174,7 +174,7 @@
+                     pass # Not found
+ 
+         print(f"  -> Exact Matches: {exact_count}")
+-        print(f"  -> TF-IDF Auto-Matches (>85%): {tfidf_match_count}")
++        print(f"  -> TF-IDF Auto-Matches (>88%): {tfidf_match_count}")
+         
+         # 3. Batch process via LLM for the ambiguous ones
+         if llm_cases and hasattr(self.config, 'local_api_url'):
+@@ -188,7 +188,6 @@
+                 max_retries = 3
+                 
+                 # Pacing to respect wrapper's 10 req/min (1 req every 6 seconds on average)
+-                # By sleeping 6 seconds per batch, we naturally throttle the workers.
+                 time.sleep(6.5)
+                 
+                 for attempt in range(max_retries):
+@@ -199,6 +199,7 @@
+                             status = decision.get("status", "no_match")
+                             item_id = decision.get("item_id", "")
+                             warehouse_item = catalog_by_id.get(item_id, "")
++                            reason = decision.get("reason", "")
+                             
+                             if status in ("match", "review") and not warehouse_item:
+                                 if case.get("candidates"):
+@@ -208,7 +208,8 @@
+                             parsed.append({
+                                 "shortage_name": shortage_name,
+                                 "status": status,
+-                                "warehouse_item": warehouse_item
++                                "warehouse_item": warehouse_item,
++                                "reason": reason
+                             })
+                         print(f"      [✓] Batch {batch_idx+1}/{len(batches)} done.")
+                         return parsed
+@@ -219,7 +219,7 @@
+                         else:
+                             print(f"      [!] Batch {batch_idx+1} completely failed: {e}")
+                 
+-                return [{"shortage_name": c["requested_name"], "status": "no_match", "warehouse_item": ""} for c in batch_cases]
++                return [{"shortage_name": c["requested_name"], "status": "no_match", "warehouse_item": "", "reason": ""} for c in batch_cases]
+ 
+             # Wrapper says: "Max concurrent: 3". Using 2 to be extremely safe.
+             with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+@@ -236,7 +236,8 @@
+                     elif result["status"] == "review":
+                         needs_review.append({
+                             "shortage_item": result["shortage_name"],
+-                            "warehouse_item": result["warehouse_item"]
++                            "warehouse_item": result["warehouse_item"],
++                            "reason": result.get("reason", "")
+                         })
+ 
+         print(f"  -> Final Warehouse Result: {len(matched)} matched, {len(needs_review)} review")
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

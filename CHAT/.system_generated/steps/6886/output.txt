@@ -1,0 +1,71 @@
+The following changes were made by the replace_file_content tool to: D:\AI_Engineer\MSEMAX-GAIStudio\app.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -695,26 +695,6 @@
+ # ------------------------------------------------------------------------------
+ def format_messages_to_prompt(messages: List[ChatMessage]) -> str:
+     """Combines user/system/assistant messages into a clean prompt string."""
+-    if not CLEAR_CHAT_ON_REQUEST and messages:
+-        # In continuous chat mode, extract the latest user message
+-        last_user = ""
+-        for m in reversed(messages):
+-            if m.role == "user":
+-                content = m.content or ""
+-                if isinstance(content, list):
+-                    content = " ".join([p.get("text", "") for p in content if isinstance(p, dict) and "text" in p])
+-                last_user = str(content).strip()
+-                break
+-
+-        system_lines = [
+-            str(m.content).strip() for m in messages
+-            if m.role == "system" and m.content
+-        ]
+-        if system_lines and len(messages) <= 2:
+-            return f"[System Instructions]\n" + "\n".join(system_lines) + "\n\n" + last_user
+-        if last_user:
+-            return last_user
+-
+     system_lines = []
+     dialogue_lines = []
+ 
+@@ -722,6 +722,8 @@
+         if isinstance(content, list):
+             content = " ".join([p.get("text", "") for p in content if isinstance(p, dict) and "text" in p])
+         content = str(content).strip()
++        if not content:
++            continue
+ 
+         if m.role == "system":
+             system_lines.append(content)
+@@ -729,14 +729,24 @@
+         elif m.role == "assistant":
+             dialogue_lines.append(f"Assistant: {content}")
+ 
+-    if len(dialogue_lines) == 1 and not system_lines:
+-        return dialogue_lines[0].replace("User: ", "", 1)
++    # In continuous chat mode where CLEAR_CHAT_ON_REQUEST is False,
++    # previous assistant/user turns already live in the browser session.
++    # But system instructions must ALWAYS be preserved if provided.
++    if not CLEAR_CHAT_ON_REQUEST and dialogue_lines:
++        last_user = dialogue_lines[-1].replace("User: ", "", 1)
++        if system_lines:
++            return f"[System Instructions]\n" + "\n\n".join(system_lines) + "\n\n" + last_user
++        return last_user
+ 
+     parts = []
+     if system_lines:
+-        parts.append("[System Instructions]\n" + "\n".join(system_lines))
+-    if dialogue_lines:
+-        parts.append("\n".join(dialogue_lines))
++        parts.append("[System Instructions]\n" + "\n\n".join(system_lines))
++
++    if len(dialogue_lines) == 1:
++        # Clean single user prompt without "User:" prefix
++        parts.append(dialogue_lines[0].replace("User: ", "", 1))
++    elif dialogue_lines:
++        parts.append("\n\n".join(dialogue_lines))
+ 
+     return "\n\n".join(parts)
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

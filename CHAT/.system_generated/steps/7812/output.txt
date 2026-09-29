@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+Sheet title: ورقة2
+Row 0: (None, None, None, None)
+Row 1: (None, None, None, None)
+Row 2: (None, None, None, None)
+Row 3: (None, None, None, None)
+Row 4: (None, None, None, None)
+Row 5: ('أسم العميل', 'أسم الصنف', 'التاريخ', 'الكمية')
+Row 6: ('ص وسام محمد شكر/كوم حمادة1', 'افيروكوكسيب90مجم20قرص س ج', datetime.datetime(2026, 9, 13, 0, 0), 3)
+Row 7: ('ص محمد جمال/قليشان 2', 'امبوفير 5امبول س ج', datetime.datetime(2026, 9, 13, 0, 0), 2)
+

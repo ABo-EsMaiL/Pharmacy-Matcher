@@ -1,0 +1,44 @@
+
+The command exited with code 0.
+Output:
+    flex: 1;
+
+    position: relative;
+
+    overflow: hidden; /* NO SCROLLING on main app */
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+.screen {
+
+    display: none;
+
+    padding: 30px;
+
+    animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    background: var(--bg-card);
+
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-md);
+
+    flex: 1;
+
+    overflow-y: auto; /* Screens scroll internally if needed */
+
+}
+
+
+
+.screen.active {
+
+

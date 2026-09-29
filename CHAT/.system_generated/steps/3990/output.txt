@@ -1,0 +1,43 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy\scratch\find_false_negatives.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -18,14 +18,16 @@
+ matched_reqs = set()
+ review_reqs = set()
+ 
++print("Workbook sheet names:", wb.sheetnames)
+ for sheetname in wb.sheetnames:
++    ws = wb[sheetname]
++    # Check if there are columns
++    headers = [cell.value for cell in ws[1]] if ws.max_row >= 1 else []
+     if "مطابقة" in sheetname and "ملخص" not in sheetname:
+-        ws = wb[sheetname]
+         for row in list(ws.iter_rows(values_only=True))[1:]:
+             if row and row[0]:
+                 matched_reqs.add(str(row[0]).strip())
+-    elif "مراجعة" in sheetname:
+-        ws = wb[sheetname]
++    elif "مراجعة" in sheetname or "يحتاج" in sheetname:
+         for row in list(ws.iter_rows(values_only=True))[1:]:
+             if row and row[0]:
+                 review_reqs.add(str(row[0]).strip())
+@@ -33,7 +33,7 @@
+ print(f"Total review requested items across sheets: {len(review_reqs)}")
+ 
+ # 2. Read all shortages from original file
+-shortages_file = Path("data/input/shortages/0913.xlsx")
++shortages_file = Path("data/processes/PROC-001/input_shortages/0913.xlsx")
+ shortage_rows = read_excel(shortages_file)
+ shortage_items = extract_item_names(shortage_rows, name_column="أسم الصنف")
+ all_shortage_names = list({item["item_name_raw"].strip() for item in shortage_items if item["item_name_raw"]})
+@@ -43,7 +43,7 @@
+ print(f"Total unmatched shortages: {len(unmatched_shortages)}")
+ 
+ # 3. Read all warehouse items
+-wh_dir = Path("data/input/warehouses")
++wh_dir = Path("data/processes/PROC-001/input_warehouses")
+ wh_files = list(wh_dir.glob("*.xlsx"))
+ 
+ warehouses_data = {}
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

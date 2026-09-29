@@ -1,0 +1,22 @@
+
+The command exited with code 0.
+Output:
+'DOSKEY' is not recognized as an internal or external command,
+operable program or batch file.
+Total rows: 200
+Unique items: 185
+Duplicate items (13 items, 15 extra rows):
+  جوسبرين اقراص 3شريط: 2 times
+  جينوزول كريم س ج: 2 times
+  ديجستين 20قرص س ج: 2 times
+  ديوراسيف  250مجم شراب س ج: 2 times
+  فورسيجا ١٠مجم س ج: 2 times
+  بيليبوسيس 20 قرص: 3 times
+  دافاليندي5000جم اقراص س ج: 2 times
+  ترايملازما كريم س ج: 2 times
+  جستيكول10مجم 14قرص: 2 times
+  بيتابرونيت بلس كريم: 3 times
+  ريستيبرو نقط: 2 times
+  كارنيفيتا ادفانس للرجال30كيس س ج: 2 times
+  ابيفيناك قطرة س ج: 2 times
+

@@ -1,0 +1,35 @@
+The following changes were made by the replace_file_content tool to: d:\AI_Engineer\Pharmacy-agy-vision\fast_main.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -39,7 +39,13 @@
+     print("\n" + "="*60)
+     print("[*] Processing Shortages files")
+     print("="*60)
+-    shortages_data = read_input_files(shortages_paths, role="shortages")
++    shortages_data = read_input_files(
++        shortages_paths,
++        role="shortages",
++        vision_api_url=getattr(config, "vision_api_url", "http://127.0.0.1:8001/v1/chat/completions"),
++        vision_api_key=getattr(config, "vision_api_key", ""),
++        vision_model=getattr(config, "vision_model", "gemini-3.8-flash"),
++    )
+     
+     all_shortages = []
+     for file_items in shortages_data.values():
+@@ -48,7 +48,13 @@
+     print("="*60)
+     print("[*] Processing Warehouse files")
+     print("="*60)
+-    warehouse_data = read_input_files(warehouse_paths, role="warehouse")
++    warehouse_data = read_input_files(
++        warehouse_paths,
++        role="warehouse",
++        vision_api_url=getattr(config, "vision_api_url", "http://127.0.0.1:8001/v1/chat/completions"),
++        vision_api_key=getattr(config, "vision_api_key", ""),
++        vision_model=getattr(config, "vision_model", "gemini-3.8-flash"),
++    )
+ 
+     # Fast Match Phase
+     coordinator = FastCoordinator(config)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
